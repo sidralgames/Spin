@@ -1,6 +1,6 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
-image_angle+=0.5;
+image_angle-=0.5*global.relativeSpeed;
 image_xscale = scale;
 image_yscale = scale;
 

@@ -15,7 +15,7 @@ theta = 0;
 totalMaxSpeed = 2;
 maxSpeed = 1;
 maxSpeedV = 1.75;
-initialSpeed = 3;
+initialSpeed = 1.3;
 _speed = initialSpeed;
 global._speed = 1;
 
@@ -35,7 +35,7 @@ _vpush =0;
 
 distance = 2;
 
-bossSpin = 0.85;
+bossSpin = -0.5;
 totalPush = 0;
 
 fireRate = 10;

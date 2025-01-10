@@ -1,6 +1,6 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
-image_angle+=.5
+image_angle-=.5*global.relativeSpeed
 if (_hp <= 0)
 {
 	instance_destroy();
@@ -8,10 +8,10 @@ if (_hp <= 0)
 
 if (alarm[0] <= 0) && instance_exists(o_player) && (_hp < 50)
 {
-	anticipatedOffset = o_player.totalPush*30;
+	anticipatedOffset = 40;
 	
 	fireRate = random_range(5,30);
-	dir = point_direction(x,y,o_player.x, o_player.y) + anticipatedOffset + random_range(-10,10)
+	dir = point_direction(x,y,o_player.x, o_player.y) + random_range(-30,30)
 	bullet = instance_create_layer(x,y,"Bullets", o_bulletBoss);
 	bullet.speed = 2;
 	bullet.direction = dir;
