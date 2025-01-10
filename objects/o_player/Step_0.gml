@@ -25,7 +25,7 @@ MovePlayer()
 
 //r = clamp(r, 50, 170);
 
-//r = point_distance(x,y,room_width/2, room_height/2)
+
 
 bossPush = bossSpin;
 
@@ -54,11 +54,8 @@ if (theta >= 360)
 	theta -= 360;
 }
 
-x+= _hpush * global.relativeSpeed;
-y+= _vpush * global.relativeSpeed;
 
-//x = cx + lengthdir_x(r, theta) 
-//y = cy + lengthdir_y(r, theta)  
+ 
 
 if (dirV = 0)
 {
@@ -71,12 +68,18 @@ if (dirH = 0)
 
 	_hpush = lerp(_hpush, 0, 0.05);
 	
-	theta += totalPush;
+	if (alarm[3] < 0)
+	{
+		theta += totalPush;
+	}
 	
 }
 else
 {
-	theta += totalPush;
+	if (alarm[3] < 0)
+	{
+		theta += totalPush;
+	}
 }
 
 
@@ -100,27 +103,40 @@ if (_hp <= 0)
 	instance_destroy();
 }
 
-if (_hpush != 0 && _vpush != 0)
-{
+
 if (place_meeting(x+_hpush*1.5,y,o_wall))
 {
-	_hpush = -2*_hpush * bnc;
-	alarm[3] = 5;
+		_hpush = -_hpush * bnc;
+		alarm[3] = 5;
 }
 
 if (place_meeting(x,y+_vpush*1.5,o_wall))
 {
-	_vpush = -2*_vpush * bnc;
+	_vpush = -_vpush * bnc;
 	alarm[3] = 5;
 }
-}
-else
+
+nextWall = instance_nearest(x,y,o_wall)
+
+if (collision_circle(x,y,15,nextWall, true, true))
 {
-	if (place_meeting(x,y,o_wall))
-	{
-			dir = point_direction(x,y,other.x, other.x);
-	_hpush -= lengthdir_x(20, dir)
-	_vpush -= lengthdir_x(20, dir)
-	}
+	dir = point_direction(nextWall.x, nextWall.y,x,y);
+	alarm[3] = 5;
+	_hpush += nextWall.hspeed*1.2
+	_vpush += nextWall.vspeed*1.2
 }
+
+
+
+x+= _hpush * global.relativeSpeed;
+y+= _vpush * global.relativeSpeed;
+
+
+
+if (alarm[3] < 0)
+{
 	
+	x = cx + lengthdir_x(r, theta) 
+	y = cy + lengthdir_y(r, theta) 
+}
+r = point_distance(x,y,room_width/2, room_height/2)

@@ -17,7 +17,7 @@ maxSpeed = 1;
 maxSpeedV = 1.75;
 initialSpeed = 3;
 _speed = initialSpeed;
-global._speed = 1.5;
+global._speed = 1;
 
 walkSpeedH = global._speed;
 walkSpeedV = global._speed+0.5;
@@ -39,5 +39,5 @@ bossSpin = 0.85;
 totalPush = 0;
 
 fireRate = 10;
-bnc = 5;
+bnc = 1;
 global.relativeSpeed = 1;
