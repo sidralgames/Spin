@@ -1,10 +1,9 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
-_hp --;
-
-if (_hp <= 0)
+if (canBeTouched)
 {
-	instance_destroy();
+	canBeTouched = false;
+	nearBoss.needleAttack = true;
+	contCanBeTouched = 80;
 }
 
-speed = initialSpeed *global.relativeSpeed

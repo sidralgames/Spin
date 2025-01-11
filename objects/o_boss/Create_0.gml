@@ -9,3 +9,4 @@ alarm[0] = 60;
 fireRate = 30;
 
 image_speed = 0.2;
+needleAttack = false

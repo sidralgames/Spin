@@ -8,18 +8,52 @@
 key_x = keyboard_check(ord("X")) || mouse_check_button(mb_left);
 
 key_r2 = gamepad_button_check(0, gp_shoulderrb)
+key_L2 = gamepad_button_check(0, gp_shoulderlb)
 
 if (key_r2)
 {
-	global.relativeSpeed = lerp(global.relativeSpeed, 0.2, 0.03)
+	global.relativeSpeed = lerp(global.relativeSpeed, 0.5, 0.03);
+	
+	songPitchOff = 0.2
+	pitch = min(1,global.relativeSpeed + songPitchOff);
+	audio_emitter_pitch(global.audioEmitter, pitch);
+	slowed = true;
+	
+}
+else if (key_L2)
+{
+	global.relativeSpeed = lerp(global.relativeSpeed, 1.75, 0.03)
+	
+	
+	pitch = min(1.25,global.relativeSpeed);
+	audio_emitter_pitch(global.audioEmitter, pitch);
+	fwd = true;
+	
 }
 else
 {
 	global.relativeSpeed = lerp(global.relativeSpeed, 1, 0.05)
 	
-	if (global.relativeSpeed > 0.85)
+	if (slowed = true)
 	{
-		global.relativeSpeed = 1;
+		if(global.relativeSpeed > 0.8)
+		{
+			pitch = 1;
+			audio_emitter_pitch(global.audioEmitter, pitch);
+			global.relativeSpeed = 1;
+			slowed = false;
+		}
+	}
+	
+	if (fwd = true)
+	{
+		if(global.relativeSpeed < 1.2)
+		{
+			pitch = 1;
+			audio_emitter_pitch(global.audioEmitter, pitch);
+			global.relativeSpeed = 1;
+			fwd = false;
+		}
 	}
 }
 
@@ -39,8 +73,9 @@ else
 //r = clamp(r, 50, 170);
 
 
+dirH = key_left - key_right;
 
-bossPush = bossSpin;
+bossPush = bossSpin * global.relativeSpeed;
 
 //_hpush += dirH * global.walkAccelerationH;
 //_vpush += dirV * global.walkAccelerationV;
@@ -56,10 +91,116 @@ if (theta >= 360)
 	theta -= 360;
 }
 
+if (_hp <= 0)
+{
+	instance_destroy();
+}
 
 
 
 
+
+//x = cx + lengthdir_x(r,theta) * global.relativeSpeed;
+//y = cy + lengthdir_y(r,theta) * global.relativeSpeed;
+
+
+
+//if (alarm[3] < 0)
+//{
+	
+//	x = cx + lengthdir_x(r, theta) 
+//	y = cy + lengthdir_y(r, theta) 
+//}
+
+var haxis = gamepad_axis_value(0, gp_axislh);
+var vaxis = gamepad_axis_value(0, gp_axislv);
+direction = point_direction(0, 0, haxis, vaxis);
+
+switch(state)
+{
+	case "free":
+	{
+		if (gamepad_axis_value(0, gp_axislh) > 0.15 || gamepad_axis_value(0, gp_axislh) < -0.15 || 
+		gamepad_axis_value(0, gp_axislv) > 0.15 || gamepad_axis_value(0, gp_axislv) < -0.15 )
+		{
+	
+			r = point_distance(x,y,room_width/2, room_height/2);
+			theta = point_direction(room_width/2, room_height/2, x, y);
+	
+			if (alarm[3] <= 0)
+			{
+				point_direction0 = point_direction(room_width/2, room_height/2, xprevious, yprevious);
+				point_direction1 = point_direction(room_width/2, room_height/2, x, y);
+		
+				x += hspeed* global.relativeSpeed;
+				y += vspeed* global.relativeSpeed;
+	
+				if point_direction1 > point_direction0
+				{
+					realspeed = lerp(realspeed, point_distance(0 ,0, haxis, vaxis) * (_speed - abs(bossSpin * global.relativeSpeed)), 0.1); // direccionContraria
+				}
+				else
+				{
+					realspeed = lerp(realspeed, point_distance(0 ,0, haxis, vaxis) * (_speed + abs((bossSpin/4) * global.relativeSpeed)), 0.1);
+				}
+	
+				speed = realspeed * min(1, global.relativeSpeed);
+			}
+			else
+			{
+				theta += totalPush * global.relativeSpeed;
+				x = cx + lengthdir_x(r, theta) 
+				y = cy + lengthdir_y(r, theta)
+			}
+	
+			if (place_meeting(x+hspeed*1.5,y,o_wall))
+			{
+				hspeed = -hspeed * bnc;
+				alarm[3] = 5;
+			}
+
+			if (place_meeting(x,y+vspeed*1.5,o_wall))
+			{
+				vspeed = -vspeed * bnc;
+				alarm[3] = 5;
+			}
+		}
+		else
+		{
+			state = "stopped"	
+		}
+	}break;
+	
+	case "stopped":
+	{
+		nextWall = instance_nearest(x,y,o_wall)
+		theta += totalPush * global.relativeSpeed;
+		x = cx + lengthdir_x(r, theta) 
+		y = cy + lengthdir_y(r, theta)
+	
+		if collision_circle(x,y,10,nextWall,true,true)
+		{
+			hspeed += lengthdir_x(5, point_direction(nextWall.x, nextWall.y, x, y))
+			vspeed += lengthdir_y(5, point_direction(nextWall.x, nextWall.y, x, y))
+			state = "free";
+		}
+		
+		if (gamepad_axis_value(0, gp_axislh) > 0.15 || gamepad_axis_value(0, gp_axislh) < -0.15 || 
+		gamepad_axis_value(0, gp_axislv) > 0.15 || gamepad_axis_value(0, gp_axislv) < -0.15 )
+		{
+			state = "free";
+		}
+	
+	}break;
+}
+
+
+	
+	
+
+
+
+//DISPARAR 
 if (key_x)
 {
 	if (alarm[0] <= 0)
@@ -87,119 +228,4 @@ if (gamepad_button_check(0,gp_shoulderr))
 		alarm[0] = fireRate;
 	}
 	
-}
-
-
-
-if (_hp <= 0)
-{
-	instance_destroy();
-}
-
-
-//if (place_meeting(x+_hpush*1.5,y,o_wall))
-//{
-//		_hpush = -_hpush * bnc;
-//		alarm[3] = 5;
-//}
-
-//if (place_meeting(x,y+_vpush*1.5,o_wall))
-//{
-//	_vpush = -_vpush * bnc;
-//	alarm[3] = 5;
-//}
-
-//nextWall = instance_nearest(x,y,o_wall)
-
-//if (collision_circle(x,y,15,nextWall, true, true))
-//{
-//	dir = point_direction(nextWall.x, nextWall.y,x,y);
-//	alarm[3] = 5;
-//	_hpush += nextWall.hspeed*1.2
-//	_vpush += nextWall.vspeed*1.2
-//}
-
-
-
-//x = cx + lengthdir_x(r,theta) * global.relativeSpeed;
-//y = cy + lengthdir_y(r,theta) * global.relativeSpeed;
-
-
-
-//if (alarm[3] < 0)
-//{
-	
-//	x = cx + lengthdir_x(r, theta) 
-//	y = cy + lengthdir_y(r, theta) 
-//}
-
-var haxis = gamepad_axis_value(0, gp_axislh);
-var vaxis = gamepad_axis_value(0, gp_axislv);
-direction = point_direction(0, 0, haxis, vaxis);
-
-
-if (gamepad_axis_value(0, gp_axislh) > 0.1 || gamepad_axis_value(0, gp_axislh) < -0.1 || 
-	gamepad_axis_value(0, gp_axislv) > 0.1 || gamepad_axis_value(0, gp_axislv) < -0.1 )
-{
-	r = point_distance(x,y,room_width/2, room_height/2)
-	
-	x += hspeed* global.relativeSpeed;
-	y += vspeed* global.relativeSpeed;
-	
-	theta = point_direction(room_width/2, room_height/2, x, y);
-	
-	point_direction0 = point_direction(room_width/2, room_height/2, xprevious, yprevious);
-	point_direction1 = point_direction(room_width/2, room_height/2, x, y);
-	
-	if point_direction1 > point_direction0
-	{
-		speed = point_distance(0 ,0, haxis, vaxis) * _speed - abs(bossSpin/1.2); // direccionContraria
-	}
-	else
-	{
-		speed = point_distance(0 ,0, haxis, vaxis) * _speed + abs(bossSpin/4);
-	}
-	
-
-	//if (y > room_height/2)
-	//{
-	//	if x < xprevious
-	//	{
-	//		speed = point_distance(0 ,0, haxis, vaxis) * 2;
-	//	}
-	//	else if x > xprevious
-	//	{	
-	//		speed = point_distance(0 ,0, haxis, vaxis) * 1;
-	//	}
-	//	else
-	//	{
-	//		speed = point_distance(0 ,0, haxis, vaxis) * 1;
-	//	}
-	//}
-	//else
-	//{
-	//	if x < xprevious
-	//	{
-	//		speed = point_distance(0 ,0, haxis, vaxis) * 1;
-	//	}
-	//	else if x > xprevious
-	//	{
-	//		speed = point_distance(0 ,0, haxis, vaxis) * 2;
-	//	}
-	//	else
-	//	{
-	//		speed = point_distance(0 ,0, haxis, vaxis) * 1;
-	//	}
-	//}
-}
-else
-{
-	
-theta += totalPush * global.relativeSpeed;
-
-
-x = cx + lengthdir_x(r, theta) 
-y = cy + lengthdir_y(r, theta)
-
-
 }
