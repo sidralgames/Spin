@@ -13,7 +13,7 @@ key_L2 = gamepad_button_check(0, gp_shoulderlb)
 if (key_r2)
 {
 	global.relativeSpeed = lerp(global.relativeSpeed, 0.5, 0.03);
-	
+	o_aguja.dist-= o_aguja.fac * global.relativeSpeed;
 	songPitchOff = 0.2
 	pitch = min(1,global.relativeSpeed + songPitchOff);
 	audio_emitter_pitch(global.audioEmitter, pitch);
@@ -22,10 +22,10 @@ if (key_r2)
 }
 else if (key_L2)
 {
-	global.relativeSpeed = lerp(global.relativeSpeed, 1.75, 0.03)
+	global.relativeSpeed = lerp(global.relativeSpeed, 1.8, 0.03)
 	
-	
-	pitch = min(1.25,global.relativeSpeed);
+	o_aguja.dist-= o_aguja.fac * (global.relativeSpeed-0.3);
+	pitch = global.relativeSpeed-0.3
 	audio_emitter_pitch(global.audioEmitter, pitch);
 	fwd = true;
 	
@@ -33,6 +33,8 @@ else if (key_L2)
 else
 {
 	global.relativeSpeed = lerp(global.relativeSpeed, 1, 0.05)
+	
+	o_aguja.dist-= o_aguja.fac * global.relativeSpeed;
 	
 	if (slowed = true)
 	{
@@ -75,7 +77,7 @@ else
 
 dirH = key_left - key_right;
 
-bossPush = bossSpin * global.relativeSpeed;
+bossPush = bossSpin * min(1.5, global.relativeSpeed);
 
 //_hpush += dirH * global.walkAccelerationH;
 //_vpush += dirV * global.walkAccelerationV;
@@ -84,7 +86,7 @@ totalPush = bossPush;
 
 totalPush = clamp(totalPush, -totalMaxSpeed, totalMaxSpeed);
 
-
+nextWall = instance_nearest(x,y,o_wall);
 
 if (theta >= 360)
 {
@@ -120,8 +122,8 @@ switch(state)
 {
 	case "free":
 	{
-		if (gamepad_axis_value(0, gp_axislh) > 0.15 || gamepad_axis_value(0, gp_axislh) < -0.15 || 
-		gamepad_axis_value(0, gp_axislv) > 0.15 || gamepad_axis_value(0, gp_axislv) < -0.15 )
+		if (gamepad_axis_value(0, gp_axislh) > 0.1 || gamepad_axis_value(0, gp_axislh) < -0.1 || 
+		gamepad_axis_value(0, gp_axislv) > 0.1 || gamepad_axis_value(0, gp_axislv) < -0.1 )
 		{
 	
 			r = point_distance(x,y,room_width/2, room_height/2);
@@ -129,11 +131,11 @@ switch(state)
 	
 			if (alarm[3] <= 0)
 			{
-				point_direction0 = point_direction(room_width/2, room_height/2, xprevious, yprevious);
-				point_direction1 = point_direction(room_width/2, room_height/2, x, y);
-		
 				x += hspeed* global.relativeSpeed;
 				y += vspeed* global.relativeSpeed;
+				
+				point_direction0 = point_direction(room_width/2, room_height/2, xprevious, yprevious);
+				point_direction1 = point_direction(room_width/2, room_height/2, x, y);
 	
 				if point_direction1 > point_direction0
 				{
@@ -167,26 +169,36 @@ switch(state)
 		}
 		else
 		{
+			
+			if collision_circle(x,y,10,nextWall,true,true)
+			{
+				x += hspeed* global.relativeSpeed;
+				y += vspeed* global.relativeSpeed;
+				
+				hspeed = lengthdir_x(1, point_direction(nextWall.x, nextWall.y, x, y))
+				vspeed = lengthdir_y(1, point_direction(nextWall.x, nextWall.y, x, y))
+			
+			}
+			
 			state = "stopped"	
 		}
 	}break;
 	
 	case "stopped":
 	{
-		nextWall = instance_nearest(x,y,o_wall)
+		
+		
 		theta += totalPush * global.relativeSpeed;
 		x = cx + lengthdir_x(r, theta) 
 		y = cy + lengthdir_y(r, theta)
 	
 		if collision_circle(x,y,10,nextWall,true,true)
 		{
-			hspeed += lengthdir_x(5, point_direction(nextWall.x, nextWall.y, x, y))
-			vspeed += lengthdir_y(5, point_direction(nextWall.x, nextWall.y, x, y))
 			state = "free";
 		}
 		
-		if (gamepad_axis_value(0, gp_axislh) > 0.15 || gamepad_axis_value(0, gp_axislh) < -0.15 || 
-		gamepad_axis_value(0, gp_axislv) > 0.15 || gamepad_axis_value(0, gp_axislv) < -0.15 )
+		if (gamepad_axis_value(0, gp_axislh) > 0.1 || gamepad_axis_value(0, gp_axislh) < -0.1 || 
+		gamepad_axis_value(0, gp_axislv) > 0.1 || gamepad_axis_value(0, gp_axislv) < -0.1 )
 		{
 			state = "free";
 		}

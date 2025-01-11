@@ -11,7 +11,8 @@ if (contCanBeTouched <= 0)
 	canBeTouched = true;
 }
 
-dist-= fac * global.relativeSpeed;
+dist = clamp(dist, 42, 170)
 
-x = nearDisc.x + lengthdir_x(dist, 45);
-y = nearDisc.y + lengthdir_y(dist, 45);
+
+x = nearDisc.x + lengthdir_x(dist, 35);
+y = nearDisc.y + lengthdir_y(dist, 35);

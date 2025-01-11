@@ -1,7 +1,7 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
 audio_stop_all();
-
+trackpos = 0;
 global.audioEmitter = audio_emitter_create();
 
 delay_bus = audio_bus_create();
@@ -18,4 +18,4 @@ delay_bus.effects[0] = _delay_effect;
 
 global.song = snd_song1;
 
-audio_play_sound_on(global.audioEmitter,global.song, true, 100)
+audio_play_sound_on(global.audioEmitter,global.song, false, 100)

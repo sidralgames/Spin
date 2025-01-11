@@ -9,4 +9,15 @@ if instance_exists(o_player)
 if instance_exists(o_boss)
 {
 	draw_text(600,40,"BossHP: " + string(o_boss._hp))
+	
+	
 }
+
+
+
+if keyboard_check_pressed(vk_left)
+{
+trackpos = audio_sound_get_track_position(global.song);
+}
+
+draw_text(80, 320, string(trackpos))
