@@ -46,3 +46,4 @@ fireRate = 10;
 bnc = 1;
 global.relativeSpeed = 1;
 stopped = false;
+bouncedWhileStopped = false;

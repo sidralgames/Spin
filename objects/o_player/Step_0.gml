@@ -24,8 +24,8 @@ else if (key_L2)
 {
 	global.relativeSpeed = lerp(global.relativeSpeed, 1.8, 0.03)
 	
-	o_aguja.dist-= o_aguja.fac * (global.relativeSpeed-0.3);
-	pitch = global.relativeSpeed-0.3
+	o_aguja.dist-= o_aguja.fac * (global.relativeSpeed-0.65);
+	pitch = max(1,global.relativeSpeed-0.65);
 	audio_emitter_pitch(global.audioEmitter, pitch);
 	fwd = true;
 	
@@ -122,18 +122,20 @@ switch(state)
 {
 	case "free":
 	{
-		if (gamepad_axis_value(0, gp_axislh) > 0.1 || gamepad_axis_value(0, gp_axislh) < -0.1 || 
+		r = point_distance(x,y,room_width/2, room_height/2);
+		theta = point_direction(room_width/2, room_height/2, x, y);
+		
+		if (bouncedWhileStopped = false) && (gamepad_axis_value(0, gp_axislh) > 0.1 || gamepad_axis_value(0, gp_axislh) < -0.1 || 
 		gamepad_axis_value(0, gp_axislv) > 0.1 || gamepad_axis_value(0, gp_axislv) < -0.1 )
 		{
-	
-			r = point_distance(x,y,room_width/2, room_height/2);
-			theta = point_direction(room_width/2, room_height/2, x, y);
+			bouncedWhileStopped = false;
+			
+			x += hspeed* global.relativeSpeed;
+			y += vspeed* global.relativeSpeed;
 	
 			if (alarm[3] <= 0)
 			{
-				x += hspeed* global.relativeSpeed;
-				y += vspeed* global.relativeSpeed;
-				
+
 				point_direction0 = point_direction(room_width/2, room_height/2, xprevious, yprevious);
 				point_direction1 = point_direction(room_width/2, room_height/2, x, y);
 	
@@ -150,18 +152,19 @@ switch(state)
 			}
 			else
 			{
+				
 				theta += totalPush * global.relativeSpeed;
 				x = cx + lengthdir_x(r, theta) 
 				y = cy + lengthdir_y(r, theta)
 			}
 	
-			if (place_meeting(x+hspeed*1.5,y,o_wall))
+			if (place_meeting(x+max(sign(hspeed)*1,hspeed*1.5),y,o_wall))
 			{
 				hspeed = -hspeed * bnc;
 				alarm[3] = 5;
 			}
 
-			if (place_meeting(x,y+vspeed*1.5,o_wall))
+			if (place_meeting(x,y+max(sign(vspeed)*1,vspeed*1.5),o_wall))
 			{
 				vspeed = -vspeed * bnc;
 				alarm[3] = 5;
@@ -169,18 +172,37 @@ switch(state)
 		}
 		else
 		{
-			
-			if collision_circle(x,y,10,nextWall,true,true)
+			if (bouncedWhileStopped)
 			{
-				x += hspeed* global.relativeSpeed;
-				y += vspeed* global.relativeSpeed;
+				if (alarm[4] > 0)
+				{
+					hspeed = nextWall.hspeed;
+					vspeed = nextWall.vspeed;
 				
-				hspeed = lengthdir_x(1, point_direction(nextWall.x, nextWall.y, x, y))
-				vspeed = lengthdir_y(1, point_direction(nextWall.x, nextWall.y, x, y))
-			
+					x += hspeed* global.relativeSpeed+0.1;
+					y += vspeed* global.relativeSpeed+0.1;
+				}
+				else
+				{
+					theta += totalPush * global.relativeSpeed;
+					x = cx + lengthdir_x(r, theta) 
+					y = cy + lengthdir_y(r, theta)
+					
+					if !collision_circle(x,y,11,nextWall,true,true)
+					{
+						bouncedWhileStopped = false;
+					}
+					else
+					{
+						alarm[4] = 4;
+					}
+				}
+				
 			}
-			
-			state = "stopped"	
+			else
+			{
+				state = "stopped"	
+			}
 		}
 	}break;
 	
@@ -188,13 +210,26 @@ switch(state)
 	{
 		
 		
-		theta += totalPush * global.relativeSpeed;
-		x = cx + lengthdir_x(r, theta) 
-		y = cy + lengthdir_y(r, theta)
-	
-		if collision_circle(x,y,10,nextWall,true,true)
+		if collision_circle(x,y,10,nextWall,true,true) //distance player al centro y wall al centro para que solo empuje??
 		{
-			state = "free";
+			if (r > point_distance(nextWall.x, nextWall.y, room_width/2, room_height/2))
+			{
+				state = "free";
+				bouncedWhileStopped = true;
+				alarm[4] = 4;
+			}
+			else
+			{
+				theta += -1 * totalPush * global.relativeSpeed;
+				x = cx + lengthdir_x(r, theta) 
+				y = cy + lengthdir_y(r, theta)
+			}
+		}
+		else
+		{	
+			theta += totalPush * global.relativeSpeed;
+			x = cx + lengthdir_x(r, theta) 
+			y = cy + lengthdir_y(r, theta)
 		}
 		
 		if (gamepad_axis_value(0, gp_axislh) > 0.1 || gamepad_axis_value(0, gp_axislh) < -0.1 || 

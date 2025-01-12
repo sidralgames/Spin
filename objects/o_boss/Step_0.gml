@@ -25,19 +25,26 @@ if keyboard_check_pressed(vk_space)
 }
 
 
+
 if (alarm[1] <=0) && instance_exists(o_player)
 {
 	anticipatedOffset = o_player.totalPush*30;
+	for (var i=1; i<2; i++)
+	{
+		offset += i*61;
+		dir = offset + (360 / 1) * i;
+		
+		bullet = instance_create_layer(x + lengthdir_x(20, dir),y + lengthdir_y(20, dir),"Bullets", o_wall);
+		bullet.speed = random_range(0.5, 0.7);
+		bullet.initialSpeed = random_range(0.5, 0.7);
+		bullet.direction = dir;
+		bullet.image_angle = dir-90;
+		bullet._hpush = hspeed;
+		bullet._vpush = vspeed;
+	}
 	
-	dir =random_range(0,359)
-	bullet = instance_create_layer(x + lengthdir_x(20, dir),y + lengthdir_y(20, dir),"Bullets", o_wall);
-	bullet.speed = random_range(0.5, 0.7);
-	bullet.initialSpeed = random_range(0.5, 0.7);
-	bullet.direction = dir;
-	bullet.image_angle = dir-90;
-	bullet._hpush = hspeed;
-	bullet._vpush = vspeed;
-	alarm[1] = 100;
+	
+	alarm[1] = 25 / global.relativeSpeed;
 }
 
 if (needleAttack) && instance_exists(o_player)
