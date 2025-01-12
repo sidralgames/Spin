@@ -176,11 +176,12 @@ switch(state)
 			{
 				if (alarm[4] > 0)
 				{
-					hspeed = nextWall.hspeed;
-					vspeed = nextWall.vspeed;
+					hspeed = nextWall.hspeed / global.relativeSpeed;
+					vspeed = nextWall.vspeed / global.relativeSpeed;
 				
 					x += hspeed* global.relativeSpeed+0.1;
 					y += vspeed* global.relativeSpeed+0.1;
+					
 				}
 				else
 				{
@@ -191,6 +192,7 @@ switch(state)
 					if !collision_circle(x,y,11,nextWall,true,true)
 					{
 						bouncedWhileStopped = false;
+						state = "stopped"	
 					}
 					else
 					{
@@ -212,7 +214,7 @@ switch(state)
 		
 		if collision_circle(x,y,10,nextWall,true,true) //distance player al centro y wall al centro para que solo empuje??
 		{
-			if (r > point_distance(nextWall.x, nextWall.y, room_width/2, room_height/2))
+			if (r - 10 > point_distance(nextWall.x, nextWall.y, room_width/2, room_height/2))
 			{
 				state = "free";
 				bouncedWhileStopped = true;

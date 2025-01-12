@@ -5,5 +5,4 @@ scaled = false;
 _hpTime = 600;
 image_xscale = scale;
 image_yscale = scale;
-image_speed = 0;
 

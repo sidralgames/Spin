@@ -15,9 +15,9 @@ if instance_exists(o_boss)
 
 
 
-if keyboard_check_pressed(vk_left)
-{
-trackpos = audio_sound_get_track_position(global.song);
-}
+//if keyboard_check_pressed(vk_left)
+//{
+//trackpos = audio_sound_get_track_position(global.song);
+//}
 
-draw_text(80, 320, string(trackpos))
+//draw_text(80, 320, string(trackpos))

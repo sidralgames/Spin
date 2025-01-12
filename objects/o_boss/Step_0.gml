@@ -31,10 +31,10 @@ if (alarm[1] <=0) && instance_exists(o_player)
 	anticipatedOffset = o_player.totalPush*30;
 	for (var i=1; i<2; i++)
 	{
-		offset += i*61;
-		dir = offset + (360 / 1) * i;
+		offset -= i*61;
+		dir = offset
 		
-		bullet = instance_create_layer(x + lengthdir_x(20, dir),y + lengthdir_y(20, dir),"Bullets", o_wall);
+		bullet = instance_create_layer(x + lengthdir_x(40, dir),y + lengthdir_y(40, dir),"Bullets", o_wall);
 		bullet.speed = random_range(0.5, 0.7);
 		bullet.initialSpeed = random_range(0.5, 0.7);
 		bullet.direction = dir;
@@ -42,10 +42,9 @@ if (alarm[1] <=0) && instance_exists(o_player)
 		bullet._hpush = hspeed;
 		bullet._vpush = vspeed;
 	}
-	
-	
 	alarm[1] = 25 / global.relativeSpeed;
 }
+
 
 if (needleAttack) && instance_exists(o_player)
 {

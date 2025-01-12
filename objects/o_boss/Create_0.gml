@@ -13,3 +13,4 @@ needleAttack = false
 dir=0;
 totalWall = 6
 offset = 0;
+offset2 = 0;
