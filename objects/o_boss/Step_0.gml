@@ -25,23 +25,28 @@ if keyboard_check_pressed(vk_space)
 }
 
 
-
+totWall = 3
 if (alarm[1] <=0) && instance_exists(o_player)
 {
 	anticipatedOffset = o_player.totalPush*30;
-	for (var i=1; i<2; i++)
+	for (var i=0; i<totWall; i++)
 	{
-		offset -= i*61;
-		dir = offset
-		
+		dir = ((360 / totWall) * i) + offset;
 		bullet = instance_create_layer(x + lengthdir_x(40, dir),y + lengthdir_y(40, dir),"Bullets", o_wall);
-		bullet.speed = random_range(0.5, 0.7);
-		bullet.initialSpeed = random_range(0.5, 0.7);
+		bullet.speed = random_range(0.6, 0.8);
+		bullet.initialSpeed = random_range(0.6, 0.8);
 		bullet.direction = dir;
 		bullet.image_angle = dir-90;
 		bullet._hpush = hspeed;
 		bullet._vpush = vspeed;
+		destroy = irandom(3)
+		if (destroy = 0)
+		{
+			instance_destroy(bullet)
+		}
+		
 	}
+	offset = offset + 50;
 	alarm[1] = 25 / global.relativeSpeed;
 }
 

@@ -31,7 +31,7 @@ diagSpeed = round((global._speed * 0.707));
 diagAcc = round((global.walkAccelerationH * 0.707));
 normlaAcc = global.walkAccelerationH;
 state = "free";
-
+dying = false
 spinDir = 1;
 checkDir = false
 _hpush =0;

@@ -7,10 +7,10 @@
 
 key_x = keyboard_check(ord("X")) || mouse_check_button(mb_left);
 
-key_r2 = gamepad_button_check(0, gp_shoulderrb)
+key_R2 = gamepad_button_check(0, gp_shoulderrb)
 key_L2 = gamepad_button_check(0, gp_shoulderlb)
 
-if (key_r2)
+if (key_L2)
 {
 	global.relativeSpeed = lerp(global.relativeSpeed, 0.5, 0.03);
 	o_aguja.dist-= o_aguja.fac * global.relativeSpeed;
@@ -20,7 +20,7 @@ if (key_r2)
 	slowed = true;
 	
 }
-else if (key_L2)
+else if (key_R2)
 {
 	global.relativeSpeed = lerp(global.relativeSpeed, 1.8, 0.03)
 	
@@ -72,9 +72,25 @@ else
 //	dirV =  key_up - key_down;
 //}
 
-//r = clamp(r, 50, 170);
+r = clamp(r, 50, 190);
 
+if (r >= 182)
+{
+	dying = true;
+	
+}
 
+if (dying = true)
+{
+	image_xscale -= 0.01;
+	image_yscale -= 0.01;	
+	
+	if (image_xscale <= 0.1)
+	{
+		instance_destroy();
+	
+	}
+}
 dirH = key_left - key_right;
 
 bossPush = bossSpin * min(1.5, global.relativeSpeed);
@@ -116,134 +132,148 @@ if (_hp <= 0)
 
 var haxis = gamepad_axis_value(0, gp_axislh);
 var vaxis = gamepad_axis_value(0, gp_axislv);
-direction = point_direction(0, 0, haxis, vaxis);
 
-switch(state)
+if (dying = false)
 {
-	case "free":
+	switch(state)
 	{
-		r = point_distance(x,y,room_width/2, room_height/2);
-		theta = point_direction(room_width/2, room_height/2, x, y);
+		case "free":
+		{
+			r = point_distance(x,y,room_width/2, room_height/2);
+			theta = point_direction(room_width/2, room_height/2, x, y);
 		
-		if (bouncedWhileStopped = false) && (gamepad_axis_value(0, gp_axislh) > 0.1 || gamepad_axis_value(0, gp_axislh) < -0.1 || 
-		gamepad_axis_value(0, gp_axislv) > 0.1 || gamepad_axis_value(0, gp_axislv) < -0.1 )
-		{
-			bouncedWhileStopped = false;
+			if (bouncedWhileStopped = false) && (gamepad_axis_value(0, gp_axislh) > 0.1 || gamepad_axis_value(0, gp_axislh) < -0.1 || 
+			gamepad_axis_value(0, gp_axislv) > 0.1 || gamepad_axis_value(0, gp_axislv) < -0.1 )
+			{
+				direction = point_direction(0, 0, haxis, vaxis);
 			
-			x += hspeed* global.relativeSpeed;
-			y += vspeed* global.relativeSpeed;
-	
-			if (alarm[3] <= 0)
-			{
-
-				point_direction0 = point_direction(room_width/2, room_height/2, xprevious, yprevious);
-				point_direction1 = point_direction(room_width/2, room_height/2, x, y);
-	
-				if point_direction1 > point_direction0
+				bouncedWhileStopped = false;
+			
+				if collision_circle(x,y,10,nextWall,true,true)
 				{
-					realspeed = lerp(realspeed, point_distance(0 ,0, haxis, vaxis) * (_speed - abs(bossSpin * global.relativeSpeed)), 0.1); // direccionContraria
+					bouncedWhileStopped = true
+					alarm[4] = 5;
 				}
-				else
+		
+				if (place_meeting(x+hspeed*2.5,y,o_boss))
 				{
-					realspeed = lerp(realspeed, point_distance(0 ,0, haxis, vaxis) * (_speed + abs((bossSpin/4) * global.relativeSpeed)), 0.1);
+					hspeed = -hspeed * bnc;
+					alarm[3] = 5;
 				}
-	
-				speed = realspeed * min(1, global.relativeSpeed);
-			}
-			else
-			{
-				
-				theta += totalPush * global.relativeSpeed;
-				x = cx + lengthdir_x(r, theta) 
-				y = cy + lengthdir_y(r, theta)
-			}
-	
-			if (place_meeting(x+max(sign(hspeed)*1,hspeed*1.5),y,o_wall))
-			{
-				hspeed = -hspeed * bnc;
-				alarm[3] = 5;
-			}
 
-			if (place_meeting(x,y+max(sign(vspeed)*1,vspeed*1.5),o_wall))
-			{
-				vspeed = -vspeed * bnc;
-				alarm[3] = 5;
-			}
-		}
-		else
-		{
-			if (bouncedWhileStopped)
-			{
-				if (alarm[4] > 0)
+				if (place_meeting(x,y+vspeed*2.5,o_boss))
 				{
-					hspeed = nextWall.hspeed / global.relativeSpeed;
-					vspeed = nextWall.vspeed / global.relativeSpeed;
+					vspeed = -vspeed * bnc;
+					alarm[3] = 5;
+				}
 				
-					x += hspeed* global.relativeSpeed+0.1;
-					y += vspeed* global.relativeSpeed+0.1;
-					
+				x += hspeed* global.relativeSpeed;
+				y += vspeed* global.relativeSpeed;
+	
+				if (alarm[3] <= 0)
+				{
+
+					point_direction0 = point_direction(room_width/2, room_height/2, xprevious, yprevious);
+					point_direction1 = point_direction(room_width/2, room_height/2, x, y);
+	
+					if point_direction1 > point_direction0
+					{
+						realspeed = lerp(realspeed, point_distance(0 ,0, haxis, vaxis) * (_speed - abs(bossSpin * global.relativeSpeed)), 0.1); // direccionContraria
+					}
+					else
+					{
+						realspeed = lerp(realspeed, point_distance(0 ,0, haxis, vaxis) * (_speed + abs((bossSpin/4) * global.relativeSpeed)), 0.1);
+					}
+	
+					speed = realspeed * min(1, global.relativeSpeed);
 				}
 				else
 				{
 					theta += totalPush * global.relativeSpeed;
 					x = cx + lengthdir_x(r, theta) 
 					y = cy + lengthdir_y(r, theta)
-					
-					if !collision_circle(x,y,11,nextWall,true,true)
-					{
-						bouncedWhileStopped = false;
-						state = "stopped"	
-					}
-					else
-					{
-						alarm[4] = 4;
-					}
 				}
-				
+			
 			}
 			else
 			{
-				state = "stopped"	
-			}
-		}
-	}break;
+				if (bouncedWhileStopped)
+				{
+					if (alarm[4] > 0)
+					{
+						direction = point_direction(nextWall.x, nextWall.y, x, y);
+					
+						point_direction0 = point_direction(room_width/2, room_height/2, xprevious, yprevious);
+						point_direction1 = point_direction(room_width/2, room_height/2, x, y);
 	
-	case "stopped":
-	{
-		
-		
-		if collision_circle(x,y,10,nextWall,true,true) //distance player al centro y wall al centro para que solo empuje??
+						if point_direction1 > point_direction0
+						{
+							realspeed = lerp(realspeed, 0.6* (_speed - abs(bossSpin * global.relativeSpeed)), 0.1); // direccionContraria
+						}
+						else
+						{
+							realspeed = lerp(realspeed, 0.6 * (_speed + abs((bossSpin/4) * global.relativeSpeed)), 0.1);
+						}
+					
+						speed = realspeed * min(1, global.relativeSpeed);
+					
+						x += hspeed* global.relativeSpeed+0.1;
+						y += vspeed* global.relativeSpeed+0.1;
+					
+					}
+					else
+					{
+						theta += totalPush * global.relativeSpeed;
+						x = cx + lengthdir_x(r, theta) 
+						y = cy + lengthdir_y(r, theta)
+					
+						if !collision_circle(x,y,11,nextWall,true,true)
+						{
+							bouncedWhileStopped = false;
+							state = "stopped"	
+						}
+						else
+						{
+							alarm[4] = 4;
+						}
+					}
+				}
+				else
+				{
+					state = "stopped"	
+				}
+			}
+		}break;
+	
+		case "stopped":
 		{
-			if (r - 10 > point_distance(nextWall.x, nextWall.y, room_width/2, room_height/2))
+			if collision_circle(x,y,10,nextWall,true,true)
 			{
 				state = "free";
 				bouncedWhileStopped = true;
 				alarm[4] = 4;
 			}
 			else
-			{
-				theta += -1 * totalPush * global.relativeSpeed;
+			{	
+				theta += totalPush * global.relativeSpeed;
 				x = cx + lengthdir_x(r, theta) 
 				y = cy + lengthdir_y(r, theta)
 			}
-		}
-		else
-		{	
-			theta += totalPush * global.relativeSpeed;
-			x = cx + lengthdir_x(r, theta) 
-			y = cy + lengthdir_y(r, theta)
-		}
 		
-		if (gamepad_axis_value(0, gp_axislh) > 0.1 || gamepad_axis_value(0, gp_axislh) < -0.1 || 
-		gamepad_axis_value(0, gp_axislv) > 0.1 || gamepad_axis_value(0, gp_axislv) < -0.1 )
-		{
-			state = "free";
-		}
-	
-	}break;
+			if (gamepad_axis_value(0, gp_axislh) > 0.1 || gamepad_axis_value(0, gp_axislh) < -0.1 || 
+			gamepad_axis_value(0, gp_axislv) > 0.1 || gamepad_axis_value(0, gp_axislv) < -0.1 )
+			{
+				state = "free";
+				direction = point_direction(0, 0, haxis, vaxis);
+			}
+		}break;
+	}
+
 }
-
-
+else
+{
+speed = lerp(speed, 0, 0.05)	
+}
 	
 	
 

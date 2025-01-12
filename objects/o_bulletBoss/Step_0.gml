@@ -6,5 +6,11 @@ if (_hp <= 0)
 {
 	instance_destroy();
 }
-
-speed = initialSpeed *global.relativeSpeed
+if global.relativeSpeed> 1.4
+{
+	speed = initialSpeed * 1.4
+}
+else
+{
+	speed = initialSpeed * global.relativeSpeed
+}

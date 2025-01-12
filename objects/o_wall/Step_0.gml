@@ -2,7 +2,7 @@
 // Puede escribir su código en este editor
 if (scale<=1.5) && (scaled = false)
 {
-	scale+=0.1;
+	scale+=0.2;
 }
 
 if (scaled = false) && scale >=1.5
@@ -12,7 +12,11 @@ if (scaled = false) && scale >=1.5
 }
 if (scaled = true)
 {
-	scale = lerp(scale, 1, 0.05);
+	scale = lerp(scale, 1, 0.2);
+	if (scale < 1.1)
+	{
+		scale = 1;	
+	}
 }
 image_xscale = scale;
 image_yscale = scale;
