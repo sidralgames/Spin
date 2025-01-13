@@ -10,6 +10,14 @@ key_x = keyboard_check(ord("X")) || mouse_check_button(mb_left);
 key_R2 = gamepad_button_check(0, gp_shoulderrb)
 key_L2 = gamepad_button_check(0, gp_shoulderlb)
 
+
+if (!collision_circle(x,y,6,sp1,true,true))
+{
+	dying = true;
+	depth = sp1.depth+3
+	
+}
+
 if (key_L2)
 {
 	global.relativeSpeed = lerp(global.relativeSpeed, 0.5, 0.03);
@@ -22,10 +30,10 @@ if (key_L2)
 }
 else if (key_R2)
 {
-	global.relativeSpeed = lerp(global.relativeSpeed, 1.8, 0.03)
+	global.relativeSpeed = lerp(global.relativeSpeed, 1.5, 0.03)
 	
-	o_aguja.dist-= o_aguja.fac * (global.relativeSpeed-0.65);
-	pitch = max(1,global.relativeSpeed-0.65);
+	o_aguja.dist-= o_aguja.fac * (global.relativeSpeed-0.25);
+	pitch = max(1,global.relativeSpeed-0.25);
 	audio_emitter_pitch(global.audioEmitter, pitch);
 	fwd = true;
 	
@@ -74,11 +82,11 @@ else
 
 r = clamp(r, 50, 190);
 
-if (r >= 182)
-{
-	dying = true;
+//if (r >= 182)
+//{
+//	dying = true;
 	
-}
+//}
 
 if (dying = true)
 {
@@ -104,16 +112,20 @@ totalPush = clamp(totalPush, -totalMaxSpeed, totalMaxSpeed);
 
 nextWall = instance_nearest(x,y,o_wall);
 
-if (theta >= 360)
+
+
+if (theta <= 0)
 {
-	theta -= 360;
+	theta =+ 360;	
 }
+
+
+
 
 if (_hp <= 0)
 {
 	instance_destroy();
 }
-
 
 
 
@@ -169,6 +181,7 @@ if (dying = false)
 				
 				x += hspeed* global.relativeSpeed;
 				y += vspeed* global.relativeSpeed;
+				theta += totalPush * global.relativeSpeed;/////////
 	
 				if (alarm[3] <= 0)
 				{
@@ -217,8 +230,8 @@ if (dying = false)
 					
 						speed = realspeed * min(1, global.relativeSpeed);
 					
-						x += hspeed* global.relativeSpeed+0.1;
-						y += vspeed* global.relativeSpeed+0.1;
+						x += hspeed* global.relativeSpeed;
+						y += vspeed* global.relativeSpeed;
 					
 					}
 					else

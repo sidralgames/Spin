@@ -6,11 +6,12 @@ if (_hp <= 0)
 	instance_destroy();
 }
 
-if (alarm[0] <= 0) && instance_exists(o_player) && (_hp < 50)
+
+if (alarm[0] <= 0) && instance_exists(o_player)
 {
 	anticipatedOffset = 40;
 	
-	fireRate = random_range(5,30);
+	fireRate = random_range(60,120);
 	dir = point_direction(x,y,o_player.x, o_player.y) + random_range(-30,30)
 	bullet = instance_create_layer(x,y,"Bullets", o_bulletBoss);
 	bullet.speed = 2;
@@ -19,13 +20,8 @@ if (alarm[0] <= 0) && instance_exists(o_player) && (_hp < 50)
 	alarm[0] = fireRate;
 }
 
-if keyboard_check_pressed(vk_space)
-{
-	game_restart()
-}
 
 
-totWall = 3
 if (alarm[1] <=0) && instance_exists(o_player)
 {
 	anticipatedOffset = o_player.totalPush*30;
@@ -33,8 +29,8 @@ if (alarm[1] <=0) && instance_exists(o_player)
 	{
 		dir = ((360 / totWall) * i) + offset;
 		bullet = instance_create_layer(x + lengthdir_x(40, dir),y + lengthdir_y(40, dir),"Bullets", o_wall);
-		bullet.speed = random_range(0.6, 0.8);
-		bullet.initialSpeed = random_range(0.6, 0.8);
+		bullet.speed = random_range(0.7, 0.8);
+		bullet.initialSpeed = random_range(0.7, 0.8);
 		bullet.direction = dir;
 		bullet.image_angle = dir-90;
 		bullet._hpush = hspeed;
@@ -46,8 +42,9 @@ if (alarm[1] <=0) && instance_exists(o_player)
 		}
 		
 	}
-	offset = offset + 50;
-	alarm[1] = 25 / global.relativeSpeed;
+	totWall = irandom_range(2,3);
+	offset = offset + 35;
+	alarm[1] = choose(25 / global.relativeSpeed, 50 / global.relativeSpeed)
 }
 
 

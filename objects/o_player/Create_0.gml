@@ -8,10 +8,11 @@ global.walkAccelerationH = 0.2;
 global.walkAccelerationV = 0.4;
 
 global.bossAcceleration = 0.9;
-
+vueltas = 0;
 r = 100;
 theta = 0;
-
+vueltaContadaTime=0;
+vueltaContada = 0;
 totalMaxSpeed = 2;
 maxSpeed = 1;
 maxSpeedV = 1.75;

@@ -10,4 +10,6 @@ draw_set_halign(fa_left)
 //draw_text(20,180,"y: " +  string(y))
 
 //draw_text(20,200,"teta: " +  string(theta))
+//draw_text(20,220,"vueltas: " +  string(vueltas))
+
 draw_self();

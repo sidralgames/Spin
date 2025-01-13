@@ -11,6 +11,6 @@ fireRate = 30;
 image_speed = 0.2;
 needleAttack = false
 dir=0;
-totWall = 6
+totWall = 4
 offset = 0;
 offset2 = 0;

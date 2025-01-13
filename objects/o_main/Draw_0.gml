@@ -13,7 +13,10 @@ if instance_exists(o_boss)
 	
 }
 
-
+if keyboard_check_pressed(vk_space)
+{
+	game_restart()
+}
 
 //if keyboard_check_pressed(vk_left)
 //{
