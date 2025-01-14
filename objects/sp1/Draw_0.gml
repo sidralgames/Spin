@@ -16,6 +16,7 @@ if (surface_exists(surface))
 	{
 		if (getImage = false)
 		{
+			image_angle = 0;
 			surface_set_target(surface);
 			draw_sprite_ext(sprite_index,discImage,x,y,1,1,image_angle, image_blend, image_alpha);
 			surface_reset_target();
@@ -29,7 +30,7 @@ if (surface_exists(surface))
 			gpu_set_blendmode(bm_normal);
 			surface_reset_target();
 			draw_surface(surface,0,0);
-			
+			image_angle = 0;
 			getImage = true;
 			
 		}
@@ -37,19 +38,22 @@ if (surface_exists(surface))
 	else
 	{
 		draw_sprite_ext(sprite_index,discImage,x,y,1,1,image_angle, image_blend, image_alpha);
+		
 	}
 	
 	if (getImage = true)
 	{
+		image_angle = 0;
 		surface_set_target(surface);
-
+		image_angle = 0;
 		spr_custom = sprite_create_from_surface(surface, 0, 0, 640, 360, true, false, 320, 180);
 		sprite_index = spr_custom;
-		image_angle = _angle
+		image_angle = 0
 		spinCreateHole = false;
 		surface_reset_target();
 		surface_free(surface);
 		getImage = false;
+		viniloFake.sprite_index = spr_custom;
 	}
 }
 

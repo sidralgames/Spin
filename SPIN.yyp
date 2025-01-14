@@ -44,6 +44,7 @@
     {"id":{"name":"o_player","path":"objects/o_player/o_player.yy",},},
     {"id":{"name":"o_wall","path":"objects/o_wall/o_wall.yy",},},
     {"id":{"name":"o_wall2","path":"objects/o_wall2/o_wall2.yy",},},
+    {"id":{"name":"oViniloFake","path":"objects/oViniloFake/oViniloFake.yy",},},
     {"id":{"name":"sp1","path":"objects/sp1/sp1.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"GetDirectionAndSpeed","path":"scripts/GetDirectionAndSpeed/GetDirectionAndSpeed.yy",},},

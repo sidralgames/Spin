@@ -24,3 +24,7 @@ spr_custom=-1;
 image_speed = 0;
 image_index=discImage
 bullet = -1
+
+viniloFake = instance_create_layer(x,y,"Instances",oViniloFake)
+viniloFake.sprite_index = sprite_index;
+viniloFake.image_speed = 0;
