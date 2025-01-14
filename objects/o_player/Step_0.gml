@@ -11,11 +11,19 @@ key_R2 = gamepad_button_check(0, gp_shoulderrb)
 key_L2 = gamepad_button_check(0, gp_shoulderlb)
 
 
-if (!collision_circle(x,y,6,sp1,true,true))
+if (!collision_circle(x,y,5,sp1,true,true))
 {
+	contDie --;
+	if (contDie <=0)
+	{
 	dying = true;
 	depth = sp1.depth+3
+	}
 	
+}
+else
+{
+	contDie = 5;
 }
 
 if (key_L2)

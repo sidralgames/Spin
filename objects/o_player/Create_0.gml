@@ -4,6 +4,7 @@ cx = room_width/2;
 cy = room_height/2;
 angle = 0;
 _hp = 3;
+contDie = 0;
 global.walkAccelerationH = 0.2;
 global.walkAccelerationV = 0.4;
 

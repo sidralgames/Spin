@@ -11,7 +11,7 @@ if (alarm[0] <= 0) && instance_exists(o_player)
 {
 	anticipatedOffset = 40;
 	
-	fireRate = random_range(60,120);
+	fireRate = random_range(100,200);
 	dir = point_direction(x,y,o_player.x, o_player.y) + random_range(-30,30)
 	bullet = instance_create_layer(x,y,"Bullets", o_bulletBoss);
 	bullet.speed = 2;
