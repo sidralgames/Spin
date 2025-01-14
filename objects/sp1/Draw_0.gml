@@ -28,7 +28,8 @@ if (surface_exists(surface))
 			draw_sprite_ext(s_roto1,holeImage,x + lengthdir_x(distHole,angleHole),y + lengthdir_y(distHole,angleHole),1,1,image_angle, image_blend, image_alpha);
 			gpu_set_blendmode(bm_normal);
 			surface_reset_target();
-			draw_surface(surface,0,0)
+			draw_surface(surface,0,0);
+			
 			getImage = true;
 			
 		}
@@ -47,6 +48,7 @@ if (surface_exists(surface))
 		image_angle = _angle
 		spinCreateHole = false;
 		surface_reset_target();
+		surface_free(surface);
 		getImage = false;
 	}
 }

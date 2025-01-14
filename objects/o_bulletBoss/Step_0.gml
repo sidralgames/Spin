@@ -29,6 +29,7 @@ image_yscale+=0.1;
 if image_xscale >=1.5
 {
 	_hp = 0;
+	sp1.bullet = self;
 	sp1.spinCreateHole = true;
 	sp1.angleHole = point_direction(o_boss.x, o_boss.y,x,y)
 	sp1.distHole = point_distance(x,y,o_boss.x, o_boss.y)

@@ -23,4 +23,4 @@ blank = -1;
 spr_custom=-1;
 image_speed = 0;
 image_index=discImage
-
+bullet = -1
