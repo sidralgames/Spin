@@ -16,7 +16,7 @@ if (surface_exists(surface))
 	{
 		if (getImage = false)
 		{
-			scaleRoto = random_range(0.8,1.2)
+			scaleRoto = random_range(0.2,0.7)
 			image_angle = 0;
 			draw_set_alpha(0);
 			surface_set_target(surface);

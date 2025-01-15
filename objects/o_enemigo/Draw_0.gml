@@ -1,8 +1,3 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
-_hp = 150;
-timeToExplode = 100;
-
-contDie = 5;
-dying = false;
-scaleReset = false;
+draw_self();

@@ -17,16 +17,16 @@ else
 	
 }
 
+timeToExplode --;
 
-
-if speed <= 0.5
+if (dying = false) && (speed <= 0.5) && (timeToExplode <= 0)
 {
-speed = 0;
-image_xscale+=0.1;
-image_yscale+=0.1;
+	speed = 0;
+	image_xscale+=0.1;
+	image_yscale+=0.1;
 }
 
-if image_xscale >=1.5
+if (image_xscale >= 1.5)
 {
 	_hp = 0;
 	if instance_exists(o_boss) && instance_exists(o_vinilo)
@@ -35,4 +35,37 @@ if image_xscale >=1.5
 	o_vinilo.angleHole = point_direction(o_boss.x, o_boss.y,x,y)
 	o_vinilo.distHole = point_distance(x,y,o_boss.x, o_boss.y)
 	o_vinilo.holeImage = irandom(2)
+}
+
+
+if (!collision_circle(x,y,3,o_vinilo,true,true)) && (speed <= 0.25)
+{
+	contDie --;
+	if (contDie <=0)
+	{
+		dying = true;
+		depth = o_vinilo.depth+3
+	}
+}
+else
+{
+	contDie = 5;
+}
+
+if (dying = true)
+{
+	if (scaleReset = false)
+	{
+		image_xscale = 1;
+		image_yscale = 1;
+		scaleReset = true;
+	}
+
+	image_xscale -= 0.01;
+	image_yscale -= 0.01;	
+
+	if (image_xscale <= 0.1)
+	{
+		instance_destroy();
+	}
 }

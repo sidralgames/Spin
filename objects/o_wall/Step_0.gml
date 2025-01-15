@@ -8,7 +8,6 @@ if (scale<=1.5) && (scaled = false)
 if (scaled = false) && scale >=1.5
 {
 	scaled = true;
-	
 }
 if instance_exists(o_boss)
 {
@@ -28,12 +27,12 @@ if (scaled = true)
 		}
 	}
 	
-	if scale2 = false && (dist > 10)
+	if scale2 = false && (dist > 10) && scale1 = true
 	{
-		scale = lerp(scale, 1.5, 0.02);
-		if (scale > 1.98)
+		scale = lerp(scale, 1.25, 0.02);
+		if (scale > 1.2)
 		{
-			scale = 2;
+			scale = 1.25;
 			scale2 = true
 		}
 	}
