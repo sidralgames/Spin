@@ -18,4 +18,4 @@ delay_bus.effects[0] = _delay_effect;
 
 global.song = snd_song1;
 
-audio_play_sound_on(global.audioEmitter,global.song, false, 100)
+audio_play_sound_on(global.audioEmitter,global.song, false, 100,,65)

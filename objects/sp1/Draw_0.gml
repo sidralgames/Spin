@@ -16,39 +16,44 @@ if (surface_exists(surface))
 	{
 		if (getImage = false)
 		{
+			scaleRoto = random_range(0.8,1.2)
 			image_angle = 0;
+			draw_set_alpha(0);
 			surface_set_target(surface);
 			draw_sprite_ext(sprite_index,discImage,x,y,1,1,image_angle, image_blend, image_alpha);
+			//draw_sprite_ext(sprite_index,discImage,x,y,1,1,image_angle, image_blend, image_alpha);
 			surface_reset_target();
 			draw_surface(surface,0,0)
 			surface_set_target(surface);
 
 			gpu_set_blendmode(bm_subtract);
 
-			draw_set_alpha(1);
-			draw_sprite_ext(s_roto1,holeImage,x + lengthdir_x(distHole,angleHole),y + lengthdir_y(distHole,angleHole),1,1,image_angle, image_blend, image_alpha);
+			draw_set_alpha(0);
+			draw_sprite_ext(s_roto1,holeImage,x + lengthdir_x(distHole,angleHole-_angle),y + lengthdir_y(distHole,angleHole-_angle),scaleRoto,scaleRoto,image_angle, image_blend, image_alpha);
 			gpu_set_blendmode(bm_normal);
 			surface_reset_target();
 			draw_surface(surface,0,0);
-			image_angle = 0;
+
 			getImage = true;
 			
 		}
 	}
-	else
-	{
-		draw_sprite_ext(sprite_index,discImage,x,y,1,1,image_angle, image_blend, image_alpha);
+
+	
 		
-	}
+	
 	
 	if (getImage = true)
 	{
-		image_angle = 0;
+		draw_set_alpha(0);
 		surface_set_target(surface);
-		image_angle = 0;
+		if sprite_exists(spr_custom)
+		{
+			sprite_delete(spr_custom)
+		}
 		spr_custom = sprite_create_from_surface(surface, 0, 0, 640, 360, true, false, 320, 180);
 		sprite_index = spr_custom;
-		image_angle = 0
+		image_angle = _angle;
 		spinCreateHole = false;
 		surface_reset_target();
 		surface_free(surface);
@@ -63,4 +68,4 @@ if (surface_exists(surface))
 
 
 
-	
+	draw_text(x,y+40, string(angleHole))

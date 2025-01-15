@@ -9,9 +9,10 @@ key_x = keyboard_check(ord("X")) || mouse_check_button(mb_left);
 
 key_R2 = gamepad_button_check(0, gp_shoulderrb)
 key_L2 = gamepad_button_check(0, gp_shoulderlb)
+key_L1_Pressed = gamepad_button_check_pressed(0, gp_shoulderl)
 
-
-if (!collision_circle(x,y,5,sp1,true,true))
+image_angle = direction;
+if (!collision_circle(x,y,4,sp1,true,true)) && (inDash = false)
 {
 	contDie --;
 	if (contDie <=0)
@@ -98,6 +99,13 @@ r = clamp(r, 50, 190);
 
 if (dying = true)
 {
+	if (scaleReset = false)
+	{
+		image_xscale = 1;
+		image_yscale = 1;
+		scaleReset = true;
+	}
+	
 	image_xscale -= 0.01;
 	image_yscale -= 0.01;	
 	
@@ -153,6 +161,19 @@ if (_hp <= 0)
 var haxis = gamepad_axis_value(0, gp_axislh);
 var vaxis = gamepad_axis_value(0, gp_axislv);
 
+
+if (dashTime > 0)
+{
+	dashTime --;
+}
+if (dashTime <=0) && (inDash = true)
+{
+	image_xscale = 1;
+	image_yscale = 1;
+	inDash = false;
+}
+
+
 if (dying = false)
 {
 	switch(state)
@@ -165,30 +186,53 @@ if (dying = false)
 			if (bouncedWhileStopped = false) && (gamepad_axis_value(0, gp_axislh) > 0.1 || gamepad_axis_value(0, gp_axislh) < -0.1 || 
 			gamepad_axis_value(0, gp_axislv) > 0.1 || gamepad_axis_value(0, gp_axislv) < -0.1 )
 			{
+				
+				
+					image_xscale = lerp(image_xscale,1.1,0.25);
+					image_yscale = lerp(image_yscale,0.9,0.25);
+				
+				
+				
 				direction = point_direction(0, 0, haxis, vaxis);
+			
+				if (key_L1_Pressed) && (collision_circle(x,y,6,sp1,true,true)) //DASH
+				{
+					image_xscale = 1.75;
+					image_yscale = 0.5;
+					realspeed = 3;
+					inDash = true;
+					dashTime = 60;
+				}
 			
 				bouncedWhileStopped = false;
 			
-				if collision_circle(x,y,10,nextWall,true,true)
+				if collision_circle(x,y,10,nextWall,true,true) && (inDash = false)
 				{
-					bouncedWhileStopped = true
+					bouncedWhileStopped = true;
+					inDash = false;
+					dashTime = 0;
 					alarm[4] = 5;
 				}
 		
-				if (place_meeting(x+hspeed*2.5,y,o_boss))
+				if (place_meeting(x+hspeed*2.5,y,o_boss)) && (inDash = false)
 				{
+					inDash = false;
+					dashTime = 0;
 					hspeed = -hspeed * bnc;
 					alarm[3] = 5;
 				}
 
-				if (place_meeting(x,y+vspeed*2.5,o_boss))
+				if (place_meeting(x,y+vspeed*2.5,o_boss)) && (inDash = false)
 				{
+					inDash = false;
+					dashTime = 0;
 					vspeed = -vspeed * bnc;
 					alarm[3] = 5;
 				}
 				
 				x += hspeed* global.relativeSpeed;
 				y += vspeed* global.relativeSpeed;
+				
 				theta += totalPush * global.relativeSpeed;/////////
 	
 				if (alarm[3] <= 0)
@@ -205,8 +249,23 @@ if (dying = false)
 					{
 						realspeed = lerp(realspeed, point_distance(0 ,0, haxis, vaxis) * (_speed + abs((bossSpin/4) * global.relativeSpeed)), 0.1);
 					}
-	
-					speed = realspeed * min(1, global.relativeSpeed);
+					
+					if (inDash = false)
+					{
+						speed = realspeed * min(1, global.relativeSpeed);
+					}
+					else
+					{
+						image_xscale = lerp(image_xscale,1,0.1);
+						image_yscale = lerp(image_yscale,1,0.1);
+						realspeed = lerp(realspeed,0,0.05)
+						speed = realspeed * min(1, global.relativeSpeed);
+						
+						if (realspeed<=1)
+						{
+							inDash = false;
+						}
+					}
 				}
 				else
 				{
@@ -251,7 +310,10 @@ if (dying = false)
 						if !collision_circle(x,y,11,nextWall,true,true)
 						{
 							bouncedWhileStopped = false;
-							state = "stopped"	
+							state = "stopped";
+							image_xscale = 1;
+							image_yscale = 1;
+							inDash = false;
 						}
 						else
 						{
@@ -261,7 +323,10 @@ if (dying = false)
 				}
 				else
 				{
-					state = "stopped"	
+					state = "stopped";
+					inDash = false;
+					image_xscale = 1;
+					image_yscale = 1;
 				}
 			}
 		}break;

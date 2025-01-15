@@ -2,6 +2,10 @@
 // Puede escribir su código en este editor
 cx = room_width/2;
 cy = room_height/2;
+inDash = false;
+dashTime = 60;
+squashing = false;
+scaleReset = false;
 angle = 0;
 _hp = 3;
 contDie = 0;

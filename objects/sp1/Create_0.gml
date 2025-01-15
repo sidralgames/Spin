@@ -3,8 +3,9 @@
 sprite_index = s_discoVinilo;
 x = room_width/2;
 y = room_height/2
-discImage = 2
-
+discImage = irandom(3);
+scaleRoto = 1;
+contGetImage = 20
 scale = 1;
 nearDisc = instance_nearest(x,y,sp1);
 
@@ -25,6 +26,7 @@ image_speed = 0;
 image_index=discImage
 bullet = -1
 
-viniloFake = instance_create_layer(x,y,"Instances",oViniloFake)
+viniloFake = instance_create_layer(x,y,"Vinyl",oViniloFake)
 viniloFake.sprite_index = sprite_index;
 viniloFake.image_speed = 0;
+viniloFake.image_index = discImage;
