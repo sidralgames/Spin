@@ -2,6 +2,7 @@
 // Puede escribir su código en este editor
 cx = room_width/2;
 cy = room_height/2;
+scaleGunY = 1;
 inDash = false;
 dashTime = 60;
 squashing = false;
@@ -11,7 +12,7 @@ _hp = 3;
 contDie = 0;
 global.walkAccelerationH = 0.2;
 global.walkAccelerationV = 0.4;
-
+off = random_range(-5,5)
 global.bossAcceleration = 0.9;
 vueltas = 0;
 r = 100;

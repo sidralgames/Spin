@@ -7,7 +7,7 @@ discImage = irandom(3);
 scaleRoto = 1;
 contGetImage = 20
 scale = 1;
-nearDisc = instance_nearest(x,y,sp1);
+nearDisc = instance_nearest(x,y,o_vinilo);
 
 surface =-1
 surfaced = false;

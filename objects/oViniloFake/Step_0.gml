@@ -2,7 +2,7 @@
 _angle -=  0.57*global.relativeSpeed
 
 
-image_angle = sp1.image_angle;
+image_angle = o_vinilo.image_angle;
 
 
 

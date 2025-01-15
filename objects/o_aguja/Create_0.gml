@@ -11,7 +11,7 @@ distToCenter = dist - 10;
 
 fac = distToCenter / framesSong
 
-nearDisc = instance_nearest(x,y,sp1);
+nearDisc = instance_nearest(x,y,o_vinilo);
 nearBoss = instance_nearest(x,y,o_boss);
 
 

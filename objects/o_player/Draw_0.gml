@@ -13,3 +13,17 @@ draw_set_halign(fa_left)
 //draw_text(20,220,"vueltas: " +  string(vueltas))
 
 draw_self();
+
+if (aiming) && (dying = false)
+{
+	if (aimDir > 270 || aimDir < 90)
+	{
+		scaleGunY = 1;	
+	}
+	else
+	{
+		scaleGunY = -1;
+	}
+	
+	draw_sprite_ext(s_gun, 0, x + lengthdir_x(12, aimDir), y + lengthdir_y(12, aimDir),1,scaleGunY,aimDir,image_blend,image_alpha)
+}
