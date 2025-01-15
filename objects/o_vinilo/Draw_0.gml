@@ -29,7 +29,7 @@ if (surface_exists(surface))
 			gpu_set_blendmode(bm_subtract);
 
 			draw_set_alpha(0);
-			draw_sprite_ext(s_roto1,holeImage,x + lengthdir_x(distHole,angleHole-_angle),y + lengthdir_y(distHole,angleHole-_angle),scaleRoto,scaleRoto,image_angle, image_blend, image_alpha);
+			draw_sprite_ext(s_roto1,holeImage,x + lengthdir_x(distHole,angleHole-_angle),y + lengthdir_y(distHole,angleHole-_angle),scaleRoto,scaleRoto,irandom(359), image_blend, image_alpha);
 			gpu_set_blendmode(bm_normal);
 			surface_reset_target();
 			draw_surface(surface,0,0);

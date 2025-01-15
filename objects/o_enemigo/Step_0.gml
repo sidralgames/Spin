@@ -42,7 +42,7 @@ if instance_exists(o_player)
 	distToPlayer = point_distance(x,y,o_player.x, o_player.y)
 }
 
-if (chasingPlayer = false) && (distToPlayer <= 100)
+if (chasingPlayer = false) && (distToPlayer <= 180)
 {
 	chasingPlayer = true;
 }
@@ -101,11 +101,11 @@ if (bounced)
 	
 		if point_direction1 > point_direction0
 		{
-			realspeed = lerp(realspeed, 0.8 * (_speed - abs(bossSpin * global.relativeSpeed)), 0.1); // direccionContraria
+			realspeed = lerp(realspeed, 1 * (_speed - abs(bossSpin * global.relativeSpeed)), 0.1); // direccionContraria
 		}
 		else
 		{
-			realspeed = lerp(realspeed, 0.8 * (_speed + abs((bossSpin/4) * global.relativeSpeed)), 0.1);
+			realspeed = lerp(realspeed, 1 * (_speed + abs((bossSpin/4) * global.relativeSpeed)), 0.1);
 		}
 		
 		speed = realspeed * min(1, global.relativeSpeed);
