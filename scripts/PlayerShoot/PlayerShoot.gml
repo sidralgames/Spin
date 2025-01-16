@@ -19,11 +19,17 @@ function PlayerShoot()
 	{
 		if (alarm[0] <= 0)
 		{
-			bullet = instance_create_layer(x + lengthdir_x(25, aimDir), y + lengthdir_y(25, aimDir), "BulletsPlayer", o_bulletPlayer);
+			bullet = instance_create_layer(x + lengthdir_x(distGun+5, aimDir), y + lengthdir_y(distGun+5, aimDir), "BulletsPlayer", o_bulletPlayer);
 			bullet.speed = 3.5;
 			bullet.direction = aimDir+off;
-			off = random_range(-5,5)
+			off = random_range(-15,15)
 			alarm[0] = fireRate;
+			recoil = true;
+			contRecoil = 60;
+			recoilGun = 15;
+			direction = aimDir - 180;
+			speed = 0.5;
+			screenShake(0.5,5);
 		}
 	
 	}

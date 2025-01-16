@@ -16,7 +16,6 @@ if (surface_exists(surface))
 	{
 		if (getImage = false)
 		{
-			scaleRoto = random_range(0.2,0.7)
 			image_angle = 0;
 			draw_set_alpha(0);
 			surface_set_target(surface);
@@ -51,7 +50,7 @@ if (surface_exists(surface))
 		{
 			sprite_delete(spr_custom)
 		}
-		spr_custom = sprite_create_from_surface(surface, 0, 0, 640, 360, true, false, 320, 180);
+		spr_custom = sprite_create_from_surface(surface, 80, 20, 640, 360, true, false, 320, 180);
 		sprite_index = spr_custom;
 		image_angle = _angle;
 		spinCreateHole = false;
@@ -62,10 +61,3 @@ if (surface_exists(surface))
 	}
 }
 
-
-
-
-
-
-
-	draw_text(x,y+40, string(angleHole))

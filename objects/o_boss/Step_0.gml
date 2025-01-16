@@ -7,22 +7,22 @@ if (_hp <= 0)
 }
 
 
-if (alarm[0] <= 0) && instance_exists(o_player)
-{
-	anticipatedOffset = 40;
+//if (alarm[0] <= 0) && instance_exists(o_player)
+//{
+//	anticipatedOffset = 40;
 	
-	fireRate = random_range(100,200);
-	dir = point_direction(x,y,o_player.x, o_player.y) + random_range(-30,30)
-	bullet = instance_create_layer(x,y,"Bullets", o_bulletBoss);
-	bullet.speed = random_range(1.8,3);
-	bullet.initialSpeed = bullet.speed
-	bullet.direction = dir;
-	alarm[0] = fireRate;
-}
+//	fireRate = random_range(100,200);
+//	dir = point_direction(x,y,o_player.x, o_player.y) + random_range(-30,30)
+//	bullet = instance_create_layer(x,y,"Bullets", o_bulletBoss);
+//	bullet.speed = random_range(1.8,3);
+//	bullet.initialSpeed = bullet.speed
+//	bullet.direction = dir;
+//	alarm[0] = fireRate;
+//}
 
 
 
-WallAttack(1,2,35);
+WallAttack(0,2,choose(25,50),35);
 
 
 if (needleAttack) && instance_exists(o_player)

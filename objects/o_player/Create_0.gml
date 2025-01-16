@@ -26,6 +26,8 @@ initialSpeed = 1;
 _speed = initialSpeed;
 global._speed = 1;
 realspeed=0;
+recoil = false;
+contRecoil = 10;
 
 slowed = false;
 fwd = false;
@@ -54,3 +56,5 @@ bnc = 1;
 global.relativeSpeed = 1;
 stopped = false;
 bouncedWhileStopped = false;
+distGun = 24;
+cable = instance_create_layer(x,y,"Cable",o_cable)

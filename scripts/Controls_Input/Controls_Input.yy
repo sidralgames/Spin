@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"Controls_Input",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Controls_Input",
+  "parent":{
+    "name":"SPIN",
+    "path":"SPIN.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

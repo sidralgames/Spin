@@ -11,9 +11,6 @@ key_R2 = gamepad_button_check(0, gp_shoulderrb)
 key_L2 = gamepad_button_check(0, gp_shoulderlb)
 key_L1_Pressed = gamepad_button_check_pressed(0, gp_shoulderl)
 
-image_angle = direction;
-
-
 
 if (key_L2)
 {
@@ -127,11 +124,12 @@ vaxisR = gamepad_axis_value(0, gp_axisrv);
 aiming = (gamepad_axis_value(0, gp_axisrh) > 0.1 || gamepad_axis_value(0, gp_axisrh) < -0.1 || 
 gamepad_axis_value(0, gp_axisrv) > 0.1 || gamepad_axis_value(0, gp_axisrv) < -0.1 );
 
-moving =  (gamepad_axis_value(0, gp_axislh) > 0.1 || gamepad_axis_value(0, gp_axislh) < -0.1 || 
-gamepad_axis_value(0, gp_axislv) > 0.1 || gamepad_axis_value(0, gp_axislv) < -0.1 );
+moving =  (gamepad_axis_value(0, gp_axislh) > 0.4 || gamepad_axis_value(0, gp_axislh) < -0.4 || 
+gamepad_axis_value(0, gp_axislv) > 0.4 || gamepad_axis_value(0, gp_axislv) < -0.4 );
 			
 
 aimDir = point_direction(0, 0, haxisR, vaxisR)
+moveDir = point_direction(0, 0, haxis, vaxis)
 
 
 if (dashTime > 0)
@@ -140,8 +138,7 @@ if (dashTime > 0)
 }
 if (dashTime <=0) && (inDash = true)
 {
-	image_xscale = 1;
-	image_yscale = 1;
+	
 	inDash = false;
 }
 
@@ -154,7 +151,22 @@ if (dying = false)
 		{
 			r = point_distance(x,y,room_width/2, room_height/2);
 			theta = point_direction(room_width/2, room_height/2, x, y);
-		
+			
+			
+			if (recoil)
+				{
+					contRecoil--;
+					x += hspeed* global.relativeSpeed;
+					y += vspeed* global.relativeSpeed;
+
+					if (contRecoil <=0)
+					{
+						recoil = false;
+						r = point_distance(x,y,room_width/2, room_height/2);
+						theta = point_direction(room_width/2, room_height/2, x, y);
+					}
+				}
+			
 			if (bouncedWhileStopped = false) && (moving)
 			{
 
@@ -300,6 +312,9 @@ if (dying = false)
 	
 		case "stopped":
 		{
+			
+			
+			
 			if collision_circle(x,y,10,nextWall,true,true)
 			{
 				state = "free";
@@ -307,10 +322,26 @@ if (dying = false)
 				alarm[4] = 4;
 			}
 			else
-			{	
-				theta += totalPush * global.relativeSpeed;
-				x = cx + lengthdir_x(r, theta) 
-				y = cy + lengthdir_y(r, theta)
+			{
+				if (recoil)
+				{
+					contRecoil--;
+					x += hspeed* global.relativeSpeed;
+					y += vspeed* global.relativeSpeed;
+					speed = lerp(speed, 0, 0.2)
+					if (contRecoil <=0) || (speed <= 0.2)
+					{
+						recoil = false;
+						r = point_distance(x,y,room_width/2, room_height/2);
+						theta = point_direction(room_width/2, room_height/2, x, y);
+					}
+				}
+				else
+				{	
+					theta += totalPush * global.relativeSpeed;
+					x = cx + lengthdir_x(r, theta) 
+					y = cy + lengthdir_y(r, theta)
+				}
 			}
 		
 			if (gamepad_axis_value(0, gp_axislh) > 0.1 || gamepad_axis_value(0, gp_axislh) < -0.1 || 

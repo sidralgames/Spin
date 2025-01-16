@@ -10,6 +10,17 @@ if (theta <= 0)
 	theta =+ 360;	
 }
 
+if (contCanChase >= 0) && (canChase = false)
+{
+	contCanChase--;
+}
+if (contCanChase <= 0)
+{
+	canChase = true;
+}
+
+
+enemyToBounce = collision_circle(x,y,4,o_enemigo,false,true)
 nextWall = instance_nearest(x,y,o_wall);
 if collision_circle(x,y,10,nextWall,true,true)
 {
@@ -20,19 +31,38 @@ if collision_circle(x,y,10,nextWall,true,true)
 if instance_exists(o_boss)
 {
 	if (place_meeting(x+hspeed*2.5,y,o_boss)) 
-	{		
+	{	
+		newDir = point_direction(o_boss.x, o_boss.y, x, y)
 		hspeed = -hspeed * bnc;
 		alarm[3] = 15;
 	}
 
 	if (place_meeting(x,y+vspeed*2.5,o_boss))
 	{
+		newDir = point_direction(o_boss.x, o_boss.y, x, y)
 		vspeed = -vspeed * bnc;
 		alarm[3] = 15;
 	}
-}			
+}
+
+if instance_exists(enemyToBounce)
+{
+	if (place_meeting(x+hspeed*2.5,y,enemyToBounce)) 
+	{	
+		newDir = point_direction(enemyToBounce.x, enemyToBounce.y, x, y)
+		hspeed = -hspeed * bnc;
+		alarm[3] = 15;
+	}
+
+	if (place_meeting(x,y+vspeed*2.5,enemyToBounce))
+	{
+		newDir = point_direction(enemyToBounce.x, enemyToBounce.y, x, y)
+		vspeed = -vspeed * bnc;
+		alarm[3] = 15;
+	}
+}	
 			
-theta += totalPush * global.relativeSpeed;/////////
+
 
 r = point_distance(x,y,room_width/2, room_height/2);
 theta = point_direction(room_width/2, room_height/2, x, y);
@@ -42,7 +72,7 @@ if instance_exists(o_player)
 	distToPlayer = point_distance(x,y,o_player.x, o_player.y)
 }
 
-if (chasingPlayer = false) && (distToPlayer <= 180)
+if (chasingPlayer = false) && (distToPlayer <= 180) && (alarm[3] <= 0) && (canChase)
 {
 	chasingPlayer = true;
 }
@@ -53,28 +83,35 @@ if (chasingPlayer = true) && (distToPlayer >= 200)
 }
 
 
+
+
 if (chasingPlayer) && (alarm[3] <= 0) && (bounced = false)
 {
+
+	
 	x += hspeed* global.relativeSpeed;
 	y += vspeed* global.relativeSpeed;
 		
 	if instance_exists(o_player)
 	{
-		direction = point_direction(x,y,o_player.x, o_player.y);
 		
-		point_directionPrev = point_direction(room_width/2, room_height/2, xprevious, yprevious);
-		point_directionNow = point_direction(room_width/2, room_height/2, x, y);
+		
+			direction = point_direction(x,y,o_player.x, o_player.y);
+		
+			point_directionPrev = point_direction(room_width/2, room_height/2, xprevious, yprevious);
+			point_directionNow = point_direction(room_width/2, room_height/2, x, y);
 
-		if (point_directionNow > point_directionPrev)
-		{
-			realspeed = lerp(realspeed, 1 * (_speed - abs(bossSpin/2 * global.relativeSpeed)), 0.1); // direccionContraria
-		}
-		else
-		{
-			realspeed = lerp(realspeed, 1 * (_speed + abs((bossSpin/4) * global.relativeSpeed)), 0.1);
-		}
+			if (point_directionNow > point_directionPrev)
+			{
+				realspeed = lerp(realspeed, 1 * (_speed - abs(bossSpin/2 * global.relativeSpeed)), 0.1); // direccionContraria
+			}
+			else
+			{
+				realspeed = lerp(realspeed, 1 * (_speed + abs((bossSpin/4) * global.relativeSpeed)), 0.1);
+			}
 		
-		speed = realspeed * min(1, global.relativeSpeed);
+			speed = realspeed * min(1, global.relativeSpeed);
+		
 	}
 	else
 	{
@@ -82,19 +119,41 @@ if (chasingPlayer) && (alarm[3] <= 0) && (bounced = false)
 	}		
 }
 
-if (chasingPlayer = false) || (alarm[3] > 0)
+if (chasingPlayer = false) 
 {
 	speed = lerp(speed, 0, 0.05);
 	theta += totalPush * global.relativeSpeed;
 	x = cx + lengthdir_x(r, theta) 
 	y = cy + lengthdir_y(r, theta)
+	
+}
+
+if (alarm[3] > 0) 
+{
+	contCanChase = 60;
+	canChase = false;
+	direction = newDir + random_range(-30,30);
+	speed = 1.2;
+	
+	if !collision_circle(x,y,20,o_boss,true,true) || !collision_circle(x,y,20,enemyToBounce,true,true)
+	{
+		bounced = false;
+		chasingPlayer = false
+	}
+	else
+	{
+		alarm[3] = 4;
+	}
 }
 
 if (bounced)
 {
 	if (alarm[4] > 0)
 	{
-		direction = point_direction(nextWall.x, nextWall.y, x, y);
+		if instance_exists(nextWall)
+		{
+			direction = point_direction(nextWall.x, nextWall.y, x, y);
+		}
 				
 		point_direction0 = point_direction(room_width/2, room_height/2, xprevious, yprevious);
 		point_direction1 = point_direction(room_width/2, room_height/2, x, y);
@@ -171,10 +230,11 @@ if (_hp <= 0)
 
 contBomb --;
 
-if (contBomb <= 0) && (chasingPlayer)
+if (contBomb <= 0) && (chasingPlayer) && (dying = false)
 {
-	bomb = instance_create_layer(x,y,"Bullets",o_bulletBoss);
-	bomb.initialSpeed = 0;
-	bomb.timeToExplode = 100;
-	contBomb = 60;
+	bomb = instance_create_layer(x + lengthdir_x(5, direction - 180 ),y+ lengthdir_y(5, direction - 180 ),"BulletsDown",o_bulletBomb);
+	bomb.createHole = true;
+	bomb.initialSpeed = 0.25;
+	bomb.direction = direction - 180;
+	contBomb = random_range(120,300);
 }

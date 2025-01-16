@@ -2,8 +2,8 @@
 // Puede escribir su código en este editor
 cx = room_width/2;
 cy = room_height/2;
-r = 100;
-theta = 0;
+r = point_distance(x,y,room_width/2, room_height/2);
+theta = point_direction(room_width/2, room_height/2, x, y);
 
 bossSpin = -0.6;
 totalPush = 0;
@@ -21,3 +21,8 @@ contDie = 5;
 dying = false;
 scaleReset = false;
 contBomb = 60;
+contCanChase = 60;
+canChase = true;
+bounced = false;
+image_xscale = 1.5;
+image_yscale = 1.5;

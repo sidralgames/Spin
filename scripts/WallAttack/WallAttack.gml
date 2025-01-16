@@ -1,6 +1,6 @@
 // Los recursos de Script han cambiado para la v2.3.0 Consulta
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
-function WallAttack(_minWalls, _maxWalls, _offset)
+function WallAttack(_minWalls, _maxWalls, _rate, _offset)
 {
 	if (alarm[1] <=0) && instance_exists(o_player)
 	{
@@ -25,6 +25,6 @@ function WallAttack(_minWalls, _maxWalls, _offset)
 		
 		totWall = irandom_range(_minWalls,_maxWalls);
 		offset = offset + _offset;
-		alarm[1] = choose(25 / global.relativeSpeed, 50 / global.relativeSpeed)
+		alarm[1] = _rate;
 	}
 }
