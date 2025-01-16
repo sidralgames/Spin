@@ -70,6 +70,10 @@ if (image_xscale >= scaleExplo) || (_hp <=0)
 	{
 		if instance_exists(o_boss) && instance_exists(o_vinilo)
 		{
+			exploOrange = instance_create_layer(x, y, "BulletsDown", o_explosion);
+			exploOrange.sprite_index = s_exploOrange;
+			exploOrange.image_xscale = 0.4;
+			exploOrange.image_yscale = 0.4;
 			o_vinilo.bullet = self;
 			o_vinilo.spinCreateHole = true;
 			o_vinilo.angleHole = point_direction(o_boss.x, o_boss.y,x,y)
@@ -101,7 +105,7 @@ if (!collision_circle(x,y,5,o_vinilo,true,true)) && (speed <= 0.25)
 		depth = o_vinilo.depth+3
 	}
 }
-else
+else if (speed > 0.25)
 {
 	contDie = 5;
 }

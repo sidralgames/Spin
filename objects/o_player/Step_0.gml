@@ -121,15 +121,19 @@ haxisR = gamepad_axis_value(0, gp_axisrh);
 vaxisR = gamepad_axis_value(0, gp_axisrv);
 
 
-aiming = (gamepad_axis_value(0, gp_axisrh) > 0.1 || gamepad_axis_value(0, gp_axisrh) < -0.1 || 
-gamepad_axis_value(0, gp_axisrv) > 0.1 || gamepad_axis_value(0, gp_axisrv) < -0.1 );
+aiming = ((gamepad_axis_value(0, gp_axisrh) > 0.1 || gamepad_axis_value(0, gp_axisrh) < -0.1) || 
+(gamepad_axis_value(0, gp_axisrv) > 0.1 || gamepad_axis_value(0, gp_axisrv) < -0.1 ));
 
-moving =  (gamepad_axis_value(0, gp_axislh) > 0.4 || gamepad_axis_value(0, gp_axislh) < -0.4 || 
-gamepad_axis_value(0, gp_axislv) > 0.4 || gamepad_axis_value(0, gp_axislv) < -0.4 );
+moving =  ((gamepad_axis_value(0, gp_axislh) > 0.4 || gamepad_axis_value(0, gp_axislh) < -0.4) || 
+(gamepad_axis_value(0, gp_axislv) > 0.4 || gamepad_axis_value(0, gp_axislv) < -0.4 ));
 			
 
 aimDir = point_direction(0, 0, haxisR, vaxisR)
-moveDir = point_direction(0, 0, haxis, vaxis)
+
+if (moving)
+{
+	moveDir = point_direction(0, 0, haxis, vaxis)
+}
 
 
 if (dashTime > 0)
@@ -142,6 +146,11 @@ if (dashTime <=0) && (inDash = true)
 	inDash = false;
 }
 
+
+if (dashEnergy < 100)
+{
+	dashEnergy += dashEnergyRecover;
+}
 
 if (dying = false)
 {
@@ -172,10 +181,11 @@ if (dying = false)
 
 				direction = point_direction(0, 0, haxis, vaxis);
 			
-				if (key_L1_Pressed) && (collision_circle(x,y,6,o_vinilo,true,true)) //DASH
+				if (key_L1_Pressed) && (collision_circle(x,y,6,o_vinilo,true,true)) && (dashEnergy >= 25) //DASH
 				{
 					image_xscale = 1.75;
 					image_yscale = 0.5;
+					dashEnergy -= 25;
 					realspeed += 3.2;
 					inDash = true;
 					dashTime = 60;

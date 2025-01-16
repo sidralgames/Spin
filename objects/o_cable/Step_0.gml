@@ -5,9 +5,9 @@ if instance_exists(inst)
 	x=inst.x;
 	y=inst.y;
 	
-	rope1.vertexChangeData(first,inst.x + lengthdir_x(4, inst.image_angle+190) * inst.image_yscale,y + lengthdir_y(4, inst.image_angle+190) * inst.image_yscale)
-	rope2.vertexChangeData(first,inst.x + lengthdir_x(4, inst.image_angle+230) * inst.image_yscale,y + lengthdir_y(4, inst.image_angle+230) * inst.image_yscale)
-	rope3.vertexChangeData(first,inst.x + lengthdir_x(4, inst.image_angle+270) * inst.image_yscale,y + lengthdir_y(4, inst.image_angle+270) * inst.image_yscale)
+	rope1.vertexChangeData(first,inst.x + lengthdir_x(4, inst.image_angle+180),y + lengthdir_y(4, inst.image_angle+180) * inst.image_yscale)
+	rope2.vertexChangeData(first,inst.x + lengthdir_x(4, inst.image_angle+130),y + lengthdir_y(4, inst.image_angle+130) * inst.image_yscale)
+	rope3.vertexChangeData(first,inst.x + lengthdir_x(4, inst.image_angle+230),y + lengthdir_y(4, inst.image_angle+230) * inst.image_yscale)
 	
 	if (inst.dying)
 	{

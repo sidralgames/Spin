@@ -13,40 +13,13 @@ draw_set_halign(fa_left)
 //draw_text_color(x,y+40,"yscale: " +  string(image_yscale),c_white,c_white,c_white,c_white,1)
 //draw_text_color(x,y+20,"xscale: " +  string(image_xscale),c_white,c_white,c_white,c_white,1)
 //draw_text_color(x,y+60,"angle: " +  string(image_angle),c_white,c_white,c_white,c_white,1)
+draw_text_color(x,y+60,"dashE: " +  string(dashEnergy),c_white,c_white,c_white,c_white,1)
 
 draw_self();
 
 if (dying = false)
 {
-	if (moving)
-	{
-		image_angle = direction;
 	
-		if (image_angle > 270 || image_angle < 90)
-		{
-			image_yscale = 1;
-		
-		}
-		else
-		{
-			image_yscale = -1;
-		}
-	}
-	else
-	{
-		if (image_angle > 270 || image_angle < 90)
-		{
-			image_yscale = 1;
-		
-		}
-		else
-		{
-			image_yscale = -1;
-		}
-	
-		image_angle = direction;
-	}
-
 	if (aiming) 
 	{
 		image_angle = aimDir;
@@ -65,5 +38,36 @@ if (dying = false)
 		}
 	
 		draw_sprite_ext(s_gun, 0, x + lengthdir_x(distGun - recoilGun, aimDir), y + lengthdir_y(distGun - recoilGun, aimDir),1,scaleGunY,aimDir,image_blend,image_alpha)
+	}
+	else
+	{
+		if (moving)
+		{
+			image_angle = direction;
+	
+			if (image_angle > 270 || image_angle < 90)
+			{
+				image_yscale = 1;
+		
+			}
+			else
+			{
+				image_yscale = -1;
+			}
+		}
+		else ////////////////loco
+		{
+			if (image_angle > 270 || image_angle < 90)
+			{
+				image_yscale = 1;
+		
+			}
+			else
+			{
+				image_yscale = -1;
+			}
+	
+			image_angle = direction;
+		}
 	}
 }

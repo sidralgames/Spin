@@ -6,4 +6,7 @@ if (_hp <= 0)
 {
 	instance_destroy();
 }
-part_particles_create(global.balaP_sys, x, y, global.balaP , 2)
+else
+{
+	part_particles_create(global.balaP_sys, x, y, global.balaP , 2)
+}
