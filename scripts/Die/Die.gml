@@ -5,8 +5,19 @@ function Die()
 	if (!collision_circle(x,y,4,o_vinilo,true,true)) && (inDash = false)
 	{
 		contDie --;
-		if (contDie <=0)
+		if (contDie <=0) && (dying = false)
 		{
+			if (image_angle > 270 || image_angle < 90)
+			{
+				image_yscale = 1;
+		
+			}
+			else
+			{
+				image_yscale = -1;
+			}
+	
+			image_angle = direction;
 			dying = true;
 			depth = o_vinilo.depth+3
 		}
@@ -21,12 +32,20 @@ function Die()
 		if (scaleReset = false)
 		{
 			image_xscale = 1;
-			image_yscale = 1;
+			if (image_angle > 270 || image_angle < 90)
+			{
+				image_yscale = 1;
+		
+			}
+			else
+			{
+				image_yscale = -1;
+			}
 			scaleReset = true;
 		}
 	
 		image_xscale -= 0.01;
-		image_yscale -= 0.01;	
+		image_yscale -= 0.01 * sign(image_yscale);	
 	
 		if (image_xscale <= 0.1)
 		{

@@ -16,51 +16,54 @@ draw_set_halign(fa_left)
 
 draw_self();
 
-if (moving)
+if (dying = false)
 {
-	image_angle = direction;
-	
-	if (image_angle > 270 || image_angle < 90)
+	if (moving)
 	{
-		image_yscale = 1;
+		image_angle = direction;
+	
+		if (image_angle > 270 || image_angle < 90)
+		{
+			image_yscale = 1;
 		
+		}
+		else
+		{
+			image_yscale = -1;
+		}
 	}
 	else
 	{
-		image_yscale = -1;
-	}
-}
-else
-{
-	if (image_angle > 270 || image_angle < 90)
-	{
-		image_yscale = 1;
+		if (image_angle > 270 || image_angle < 90)
+		{
+			image_yscale = 1;
 		
-	}
-	else
-	{
-		image_yscale = -1;
-	}
+		}
+		else
+		{
+			image_yscale = -1;
+		}
 	
-	image_angle = direction;
-}
+		image_angle = direction;
+	}
 
-if (aiming) && (dying = false)
-{
-	image_angle = aimDir;
-	recoilGun = lerp(recoilGun, 0, 0.05)
-	
-	if (aimDir > 270 || aimDir < 90)
+	if (aiming) 
 	{
-		scaleGunY = 1;
-		image_yscale = 1;
+		image_angle = aimDir;
+		recoilGun = lerp(recoilGun, 0, 0.05)
+	
+		if (aimDir > 270 || aimDir < 90)
+		{
+			scaleGunY = 1;
+			image_yscale = 1;
 		
-	}
-	else
-	{
-		scaleGunY = -1;
-		image_yscale = -1;
-	}
+		}
+		else
+		{
+			scaleGunY = -1;
+			image_yscale = -1;
+		}
 	
-	draw_sprite_ext(s_gun, 0, x + lengthdir_x(distGun - recoilGun, aimDir), y + lengthdir_y(distGun - recoilGun, aimDir),1,scaleGunY,aimDir,image_blend,image_alpha)
+		draw_sprite_ext(s_gun, 0, x + lengthdir_x(distGun - recoilGun, aimDir), y + lengthdir_y(distGun - recoilGun, aimDir),1,scaleGunY,aimDir,image_blend,image_alpha)
+	}
 }

@@ -176,7 +176,7 @@ if (dying = false)
 				{
 					image_xscale = 1.75;
 					image_yscale = 0.5;
-					realspeed = 3;
+					realspeed += 3.2;
 					inDash = true;
 					dashTime = 60;
 				}
