@@ -13,9 +13,23 @@ draw_set_halign(fa_left)
 //draw_text_color(x,y+40,"yscale: " +  string(image_yscale),c_white,c_white,c_white,c_white,1)
 //draw_text_color(x,y+20,"xscale: " +  string(image_xscale),c_white,c_white,c_white,c_white,1)
 //draw_text_color(x,y+60,"angle: " +  string(image_angle),c_white,c_white,c_white,c_white,1)
-draw_text_color(x,y+60,"dashE: " +  string(dashEnergy),c_white,c_white,c_white,c_white,1)
+//draw_text_color(x,y+60,"dashE: " +  string(dashEnergy),c_white,c_white,c_white,c_white,1)
 
 draw_self();
+
+if (dashEnergy < dashEnergyTotal)
+{
+	if (dashEnergy > dashEnergyMin)
+	{
+		draw_circular_bar(o_player.x+20, o_player.y-20, dashEnergy, dashEnergyTotal, global.lightBlue, 6,1, 2);
+		draw_circular_bar(o_player.x+20, o_player.y-20, dashEnergy, dashEnergyTotal, c_white, 5,1, 2);
+	}
+	else
+	{
+		draw_circular_bar(o_player.x+20, o_player.y-20, dashEnergy, dashEnergyTotal, global.brightRed, 6,1, 2);
+		draw_circular_bar(o_player.x+20, o_player.y-20, dashEnergy, dashEnergyTotal, global.red, 5,1, 2);
+	}
+}
 
 if (dying = false)
 {

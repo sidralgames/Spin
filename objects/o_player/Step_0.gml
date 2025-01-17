@@ -11,6 +11,14 @@ key_R2 = gamepad_button_check(0, gp_shoulderrb)
 key_L2 = gamepad_button_check(0, gp_shoulderlb)
 key_L1_Pressed = gamepad_button_check_pressed(0, gp_shoulderl)
 
+if (_hp = 2) && instance_exists(o_cable)
+{
+	instance_destroy(o_cable)
+}
+if (_hp = 1) && instance_exists(o_cableYellow)
+{
+	instance_destroy(o_cableYellow)
+}
 
 if (key_L2)
 {
@@ -181,11 +189,11 @@ if (dying = false)
 
 				direction = point_direction(0, 0, haxis, vaxis);
 			
-				if (key_L1_Pressed) && (collision_circle(x,y,6,o_vinilo,true,true)) && (dashEnergy >= 25) //DASH
+				if (key_L1_Pressed) && (collision_circle(x,y,6,o_vinilo,true,true)) && (dashEnergy >= dashEnergyMin) //DASH
 				{
 					image_xscale = 1.75;
 					image_yscale = 0.5;
-					dashEnergy -= 25;
+					dashEnergy -= dashEnergyMin;
 					realspeed += 3.2;
 					inDash = true;
 					dashTime = 60;

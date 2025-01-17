@@ -26,7 +26,7 @@ _segmentLenght = 4;
 _widhtCable = 2
 
 // Create a new rope
-rope1 = verletGroupCreateRope(verletSystem1, x, y, cableColor1, _widhtCable, _segmentLenght, _segments+irandom_range(-1,1), 2, 100,canCollide);
+rope3 = verletGroupCreateRope(verletSystem1, x, y, cableColor3, _widhtCable, _segmentLenght, _segments+irandom_range(-1,1), 2, 100,canCollide);
 
 //rope1 = verletGroupCreateRopeTextured(verletSystem1, x, y, s_tentacle, _segments, 1, 10);
 
@@ -39,10 +39,10 @@ plugged = false;
 pluggedToStrandedShip = false;
 
 		//// Attach an object to its last vertex
-instTope1 = instance_create_layer(x,y,"Player", o_jackWhite);
-instTope1.depth = depth-1;
-rope1.vertexAttachObject(antelast, instTope1, vertexAttachmentType.both);
 
+instTope3 = instance_create_layer(x,y,"Player", o_jackRed);
+instTope3.depth = depth-1;
+rope3.vertexAttachObject(antelast, instTope3, vertexAttachmentType.both);
 
 
 alarm[0] = random_range(10,95);

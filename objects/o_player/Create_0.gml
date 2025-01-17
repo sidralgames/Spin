@@ -1,5 +1,7 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
+tocado = false;
+invincibleTime = 20;
 cx = room_width/2;
 cy = room_height/2;
 scaleGunY = 1;
@@ -58,6 +60,9 @@ stopped = false;
 bouncedWhileStopped = false;
 distGun = 24;
 cable = instance_create_layer(x,y,"Cable",o_cable);
+cableRed = instance_create_layer(x,y,"Cable",o_cableRed);
+cableYellow = instance_create_layer(x,y,"Cable",o_cableYellow);
 dashEnergyTotal = 100;
 dashEnergy = dashEnergyTotal;
 dashEnergyRecover = 0.5;
+dashEnergyMin = 35;
