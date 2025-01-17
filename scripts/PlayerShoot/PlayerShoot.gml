@@ -17,19 +17,30 @@ function PlayerShoot()
 
 	if (gamepad_button_check(0,gp_shoulderr)) || (aiming)
 	{
-		if (alarm[0] <= 0)
+		if (alarm[0] <= 0) && (dashEnergy >= 10)
 		{
+			dashEnergy -= shootEnergy;
 			bullet = instance_create_layer(x + lengthdir_x(distGun+2, aimDir), y + lengthdir_y(distGun+2, aimDir), "BulletsPlayer", o_bulletPlayer);
 			bullet.speed = 3.5;
 			bullet.direction = aimDir+off;
 			off = random_range(-10,10)
-			alarm[0] = fireRate;
+			
 			recoil = true;
 			contRecoil = 60;
 			recoilGun = 15;
 			direction = aimDir - 180;
 			speed = 0.5;
 			screenShake(0.5,5);
+			
+			if (dashEnergy < 10)
+			{
+				alarm[0] = 200;
+			}
+			else
+			{
+				alarm[0] = fireRate;
+			}
+			
 		}
 	
 	}

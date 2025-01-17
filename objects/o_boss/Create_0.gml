@@ -3,7 +3,7 @@
 x = room_width/2;
 y = room_height/2;
 
-_hp = 50;
+_hp = 150;
 
 alarm[0] = 60;
 fireRateSingleBullet = 30;

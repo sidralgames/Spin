@@ -15,7 +15,7 @@ if instance_exists(inst)
 }
 else
 {
-	instance_destroy()
+	instance_destroy();
 }
 
 if (verletSystemExists(verletSystem1))

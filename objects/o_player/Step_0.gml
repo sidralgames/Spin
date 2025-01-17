@@ -15,15 +15,19 @@ key_L1_Pressed = gamepad_button_check_pressed(0, gp_shoulderl)
 
 if (slowedFromAHit = false)
 {
-	if (key_L2) 
+	if (key_L2) && (dashEnergy > 0)
 	{
-		global.relativeSpeed = lerp(global.relativeSpeed, 0.5, 0.03);
+
+			dashEnergy-= 1;
+			
+			global.relativeSpeed = lerp(global.relativeSpeed, 0.5, 0.03);
 	
-		o_aguja.dist-= o_aguja.fac * global.relativeSpeed;
-		songPitchOff = 0.2
-		pitch = min(1,global.relativeSpeed + songPitchOff);
-		audio_emitter_pitch(global.audioEmitter, pitch);
-		slowed = true;
+			o_aguja.dist-= o_aguja.fac * global.relativeSpeed;
+			songPitchOff = 0.2
+			pitch = min(1,global.relativeSpeed + songPitchOff);
+			audio_emitter_pitch(global.audioEmitter, pitch);
+			slowed = true;
+		
 	
 	}
 	else if (key_R2)

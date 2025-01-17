@@ -3,7 +3,7 @@
 slowedFromAHit = false;
 goSlow = false;
 tocado = false;
-invincibleTime = 20;
+invincibleTime = 30;
 cx = room_width/2;
 cy = room_height/2;
 scaleGunY = 1;
@@ -69,5 +69,6 @@ cableRed = instance_create_layer(x,y,"Cable",o_cableRed);
 cableYellow = instance_create_layer(x,y,"Cable",o_cableYellow);
 dashEnergyTotal = 100;
 dashEnergy = dashEnergyTotal;
-dashEnergyRecover = 0.5;
-dashEnergyMin = 35;
+dashEnergyRecover = 0.3;
+shootEnergy = 4;
+dashEnergyMin = 20;

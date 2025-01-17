@@ -14,3 +14,6 @@ contPick = 240;
 contAlpha = 20;
 angle = image_angle
 cableFake = false;
+bounced = false;
+parCol = -1;
+dying = false

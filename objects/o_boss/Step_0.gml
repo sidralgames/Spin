@@ -13,7 +13,14 @@ if (contAttack > 0)
 if (contAttack <= 0)
 {
 	contAttack = random_range(100,200)
-	attack = choose("Pattern1")
+	if (_hp < 100)
+	{
+		attack = choose("SingleBullet", "Pattern1")
+	}
+	else 
+	{
+		attack = choose("SingleBullet")
+	}
 }
 
 BulletAttack(attack);

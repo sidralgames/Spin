@@ -100,9 +100,10 @@ if !instance_exists(o_cableYellow)
 		}
 		else
 		{
-			speed = lerp(speed,0,0.05)
+			speed = lerp(speed,0,0.02)
 			if (speed <= 0.1)
 			{
+				speed = 0;
 				bounced = false;
 				r = point_distance(x,y,room_width/2, room_height/2);
 				theta = point_direction(room_width/2, room_height/2, x, y);

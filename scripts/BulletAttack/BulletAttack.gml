@@ -13,10 +13,10 @@ function BulletAttack(_attack)
 				fireRate = random_range(100,200);
 				dir = point_direction(x,y,o_player.x, o_player.y) + random_range(-30,30)
 				bullet = instance_create_layer(x,y,"Bullets", o_bulletBoss);
-				bullet.speed = random_range(1.8,2.5);
+				bullet.speed = random_range(2,2.5);
 				bullet.initialSpeed = bullet.speed
 				bullet.direction = dir;
-				fireRateSingleBullet = irandom_range(30,120)
+				fireRateSingleBullet = irandom_range(30,40)
 				alarm[0] = fireRateSingleBullet;
 			}
 		}break;
