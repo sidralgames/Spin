@@ -11,14 +11,8 @@ key_R2 = gamepad_button_check(0, gp_shoulderrb)
 key_L2 = gamepad_button_check(0, gp_shoulderlb)
 key_L1_Pressed = gamepad_button_check_pressed(0, gp_shoulderl)
 
-if (_hp = 2) && instance_exists(o_cable)
-{
-	instance_destroy(o_cable)
-}
-if (_hp = 1) && instance_exists(o_cableYellow)
-{
-	instance_destroy(o_cableYellow)
-}
+
+
 
 if (key_L2)
 {
@@ -155,10 +149,13 @@ if (dashTime <=0) && (inDash = true)
 }
 
 
-if (dashEnergy < 100)
+
+if (dashEnergy < dashEnergyTotal)
 {
 	dashEnergy += dashEnergyRecover;
 }
+
+dashEnergy = clamp(dashEnergy, 0, dashEnergyTotal)
 
 if (dying = false)
 {

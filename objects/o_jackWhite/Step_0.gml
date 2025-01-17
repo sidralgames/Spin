@@ -2,6 +2,8 @@
 // Puede escribir su código en este editor
 if !instance_exists(o_cable)
 {
+	image_xscale = 1.2;
+	image_yscale = 1.2;
 	contPick --;
 	
 	if (contPick <=0)

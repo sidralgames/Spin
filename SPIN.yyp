@@ -48,6 +48,7 @@
     {"id":{"name":"o_cableRed","path":"objects/o_cableRed/o_cableRed.yy",},},
     {"id":{"name":"o_cableYellow","path":"objects/o_cableYellow/o_cableYellow.yy",},},
     {"id":{"name":"o_camera","path":"objects/o_camera/o_camera.yy",},},
+    {"id":{"name":"o_dashPickUp","path":"objects/o_dashPickUp/o_dashPickUp.yy",},},
     {"id":{"name":"o_enemigo","path":"objects/o_enemigo/o_enemigo.yy",},},
     {"id":{"name":"o_explosion","path":"objects/o_explosion/o_explosion.yy",},},
     {"id":{"name":"o_jackRed","path":"objects/o_jackRed/o_jackRed.yy",},},

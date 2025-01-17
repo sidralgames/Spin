@@ -3,9 +3,7 @@
 if (canBePicked)
 {
 	instance_destroy();
-	with(other)
-	{
-		_hp +=1;
-		instance_create_layer(x, y,"Cable", o_cable)	
-	}
+	other._hp +=1;
+	instance_create_layer(x, y,"Cable", o_cable);	
+	
 }

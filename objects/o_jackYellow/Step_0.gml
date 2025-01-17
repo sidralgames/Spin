@@ -3,7 +3,8 @@
 if !instance_exists(o_cableYellow)
 {
 	contPick --;
-	
+	image_xscale = 1.2;
+	image_yscale = 1.2;
 	if (contPick <=0)
 	{
 		canBePicked = true;

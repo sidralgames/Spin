@@ -21,13 +21,13 @@ if (dashEnergy < dashEnergyTotal)
 {
 	if (dashEnergy > dashEnergyMin)
 	{
-		draw_circular_bar(o_player.x+20, o_player.y-20, dashEnergy, dashEnergyTotal, global.lightBlue, 6,1, 2);
-		draw_circular_bar(o_player.x+20, o_player.y-20, dashEnergy, dashEnergyTotal, c_white, 5,1, 2);
+		draw_circular_bar(o_player.x+17, o_player.y-17, dashEnergy, dashEnergyTotal, global.lightBlue, 6,1, 2);
+		draw_circular_bar(o_player.x+17, o_player.y-17, dashEnergy, dashEnergyTotal, c_white, 5,1, 2);
 	}
 	else
 	{
-		draw_circular_bar(o_player.x+20, o_player.y-20, dashEnergy, dashEnergyTotal, global.brightRed, 6,1, 2);
-		draw_circular_bar(o_player.x+20, o_player.y-20, dashEnergy, dashEnergyTotal, global.red, 5,1, 2);
+		draw_circular_bar(o_player.x+17, o_player.y-17, dashEnergy, dashEnergyTotal, global.brightRed, 6,1, 2);
+		draw_circular_bar(o_player.x+17, o_player.y-17, dashEnergy, dashEnergyTotal, global.red, 5,1, 2);
 	}
 }
 
