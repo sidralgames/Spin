@@ -24,7 +24,7 @@ function Die()
 	}
 	else
 	{
-		contDie = 5;
+		contDie = contDieMax;
 	}
 
 	if (dying = true)

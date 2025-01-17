@@ -4,23 +4,11 @@ if (tocado = false)
 {
 	tocado = true;
 	_hp -=1;
-	if (_hp = 2) && instance_exists(o_cableYellow)
-	{
-		instance_destroy(o_cableYellow)
-	}
-	else if (_hp = 2) && !instance_exists(o_cableYellow)
-	{
-		instance_destroy(o_cable)
-	}
-
-	if (_hp = 1) && instance_exists(o_cableYellow)
-	{
-		instance_destroy(o_cableYellow)
-	}
-	else if (_hp = 1) && !instance_exists(o_cableYellow)
-	{
-		instance_destroy(o_cable)
-	}
+	
+	CheckCableToDestroy();
+	screenShake(3,30,2);
+	
+	slowedFromAHit = true;
 	alarm[1] = invincibleTime;
 }
 

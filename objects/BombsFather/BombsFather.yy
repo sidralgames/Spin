@@ -1,7 +1,9 @@
 {
   "$GMObject":"",
   "%Name":"BombsFather",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"BombsFather",
   "overriddenProperties":[],
@@ -9,7 +11,10 @@
     "name":"SPIN",
     "path":"SPIN.yyp",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"o_parCollision",
+    "path":"objects/o_parCollision/o_parCollision.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

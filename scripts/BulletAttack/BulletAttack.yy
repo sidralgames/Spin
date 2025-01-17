@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"BulletAttack",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"BulletAttack",
+  "parent":{
+    "name":"SPIN",
+    "path":"SPIN.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

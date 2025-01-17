@@ -39,3 +39,4 @@ global.screenshakeIsOn = true;
 
 global.superShot = 1;
 instance_create_layer(0,0,"Main", o_bulletPart);
+instance_create_layer(0,0,"Main", o_bulletBossPart);

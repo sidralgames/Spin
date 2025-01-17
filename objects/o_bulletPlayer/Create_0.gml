@@ -3,3 +3,4 @@
 _hp = 150;
 image_speed = 0;
 destroying = false;
+type = collisionType.custom;

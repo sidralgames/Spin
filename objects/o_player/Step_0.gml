@@ -13,52 +13,89 @@ key_L1_Pressed = gamepad_button_check_pressed(0, gp_shoulderl)
 
 
 
-
-if (key_L2)
+if (slowedFromAHit = false)
 {
-	global.relativeSpeed = lerp(global.relativeSpeed, 0.5, 0.03);
-	o_aguja.dist-= o_aguja.fac * global.relativeSpeed;
-	songPitchOff = 0.2
-	pitch = min(1,global.relativeSpeed + songPitchOff);
-	audio_emitter_pitch(global.audioEmitter, pitch);
-	slowed = true;
+	if (key_L2) 
+	{
+		global.relativeSpeed = lerp(global.relativeSpeed, 0.5, 0.03);
 	
-}
-else if (key_R2)
-{
-	global.relativeSpeed = lerp(global.relativeSpeed, 1.5, 0.03)
+		o_aguja.dist-= o_aguja.fac * global.relativeSpeed;
+		songPitchOff = 0.2
+		pitch = min(1,global.relativeSpeed + songPitchOff);
+		audio_emitter_pitch(global.audioEmitter, pitch);
+		slowed = true;
 	
-	o_aguja.dist-= o_aguja.fac * (global.relativeSpeed-0.25);
-	pitch = max(1,global.relativeSpeed-0.25);
-	audio_emitter_pitch(global.audioEmitter, pitch);
-	fwd = true;
+	}
+	else if (key_R2)
+	{
+		global.relativeSpeed = lerp(global.relativeSpeed, 1.5, 0.03)
 	
+		o_aguja.dist-= o_aguja.fac * (global.relativeSpeed-0.25);
+		pitch = max(1,global.relativeSpeed-0.25);
+		audio_emitter_pitch(global.audioEmitter, pitch);
+		fwd = true;
+	
+	}
+	else
+	{
+		o_aguja.dist-= o_aguja.fac * global.relativeSpeed;
+	
+		if (slowed = true)
+		{
+			global.relativeSpeed = lerp(global.relativeSpeed, 1, 0.05)
+			if(global.relativeSpeed > 0.8)
+			{
+				pitch = 1;
+				audio_emitter_pitch(global.audioEmitter, pitch);
+				global.relativeSpeed = 1;
+				slowed = false;
+			}
+		}
+	
+		if (fwd = true)
+		{
+			global.relativeSpeed = lerp(global.relativeSpeed, 1, 0.05)
+			if(global.relativeSpeed < 1.2)
+			{
+				pitch = 1;
+				audio_emitter_pitch(global.audioEmitter, pitch);
+				global.relativeSpeed = 1;
+				fwd = false;
+			}
+		}
+	}
 }
 else
 {
-	global.relativeSpeed = lerp(global.relativeSpeed, 1, 0.05)
-	
-	o_aguja.dist-= o_aguja.fac * global.relativeSpeed;
-	
-	if (slowed = true)
+	if (goSlow = false)
 	{
-		if(global.relativeSpeed > 0.8)
-		{
-			pitch = 1;
-			audio_emitter_pitch(global.audioEmitter, pitch);
-			global.relativeSpeed = 1;
-			slowed = false;
-		}
+		global.relativeSpeed = lerp(global.relativeSpeed, 0.2, 0.2)
+		o_aguja.dist-= o_aguja.fac * global.relativeSpeed;
+		songPitchOff = 0.2
+		pitch = min(1,global.relativeSpeed + songPitchOff);
+		audio_emitter_pitch(global.audioEmitter, pitch);
+		
 	}
 	
-	if (fwd = true)
+	if (global.relativeSpeed <= 0.3)
 	{
-		if(global.relativeSpeed < 1.2)
+		goSlow = true;
+	}
+	
+	if (goSlow)
+	{
+		global.relativeSpeed = lerp(global.relativeSpeed, 1, 0.05)
+		o_aguja.dist-= o_aguja.fac * global.relativeSpeed;
+		pitch = min(1,global.relativeSpeed);
+		audio_emitter_pitch(global.audioEmitter, pitch);
+		
+		if(global.relativeSpeed > 0.9)
 		{
 			pitch = 1;
 			audio_emitter_pitch(global.audioEmitter, pitch);
 			global.relativeSpeed = 1;
-			fwd = false;
+			goSlow = false;
+			slowedFromAHit = false;
 		}
 	}
 }
@@ -123,8 +160,8 @@ haxisR = gamepad_axis_value(0, gp_axisrh);
 vaxisR = gamepad_axis_value(0, gp_axisrv);
 
 
-aiming = ((gamepad_axis_value(0, gp_axisrh) > 0.1 || gamepad_axis_value(0, gp_axisrh) < -0.1) || 
-(gamepad_axis_value(0, gp_axisrv) > 0.1 || gamepad_axis_value(0, gp_axisrv) < -0.1 ));
+aiming = ((gamepad_axis_value(0, gp_axisrh) > 0.3 || gamepad_axis_value(0, gp_axisrh) < -0.3) || 
+(gamepad_axis_value(0, gp_axisrv) > 0.3 || gamepad_axis_value(0, gp_axisrv) < -0.3 ));
 
 moving =  ((gamepad_axis_value(0, gp_axislh) > 0.4 || gamepad_axis_value(0, gp_axislh) < -0.4) || 
 (gamepad_axis_value(0, gp_axislv) > 0.4 || gamepad_axis_value(0, gp_axislv) < -0.4 ));
@@ -167,23 +204,37 @@ if (dying = false)
 			theta = point_direction(room_width/2, room_height/2, x, y);
 			
 			
-			if (recoil)
+			if (inDash)
+			{
+				if collision_circle(x,y,10,o_boss,true,true)
 				{
-					contRecoil--;
-					x += hspeed* global.relativeSpeed;
-					y += vspeed* global.relativeSpeed;
-
-					if (contRecoil <=0)
-					{
-						recoil = false;
-						r = point_distance(x,y,room_width/2, room_height/2);
-						theta = point_direction(room_width/2, room_height/2, x, y);
-					}
+					direction = point_direction(o_boss.x, o_boss.y, x, y);
+					alarm[3] = 5;
+					inDash = false;
+					dashTime = 0;
+					realspeed = 2;
+					speed = realspeed;
+					bouncedWhileStopped = true;
 				}
+					
+			}
+			
+			if (recoil)
+			{
+				contRecoil--;
+				x += hspeed* global.relativeSpeed;
+				y += vspeed* global.relativeSpeed;
+
+				if (contRecoil <=0)
+				{
+					recoil = false;
+					r = point_distance(x,y,room_width/2, room_height/2);
+					theta = point_direction(room_width/2, room_height/2, x, y);
+				}
+			}
 			
 			if (bouncedWhileStopped = false) && (moving)
 			{
-
 				direction = point_direction(0, 0, haxis, vaxis);
 			
 				if (key_L1_Pressed) && (collision_circle(x,y,6,o_vinilo,true,true)) && (dashEnergy >= dashEnergyMin) //DASH
@@ -195,6 +246,7 @@ if (dying = false)
 					inDash = true;
 					dashTime = 60;
 				}
+				
 			
 				bouncedWhileStopped = false;
 			

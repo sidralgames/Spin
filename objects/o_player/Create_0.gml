@@ -1,5 +1,7 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
+slowedFromAHit = false;
+goSlow = false;
 tocado = false;
 invincibleTime = 20;
 cx = room_width/2;
@@ -11,7 +13,10 @@ squashing = false;
 scaleReset = false;
 angle = 0;
 _hp = 3;
-contDie = 0;
+
+contDieMax = 7;
+contDie = contDieMax;
+
 global.walkAccelerationH = 0.2;
 global.walkAccelerationV = 0.4;
 off = random_range(-5,5)

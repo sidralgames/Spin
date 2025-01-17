@@ -14,7 +14,10 @@
     "name":"SPIN",
     "path":"SPIN.yyp",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"o_parCollision",
+    "path":"objects/o_parCollision/o_parCollision.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

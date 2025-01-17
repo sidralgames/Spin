@@ -1,6 +1,6 @@
 {
   "$GMObject":"",
-  "%Name":"o_enemigo",
+  "%Name":"o_enemy",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
@@ -11,13 +11,16 @@
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":8,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"o_enemigo",
+  "name":"o_enemy",
   "overriddenProperties":[],
   "parent":{
     "name":"SPIN",
     "path":"SPIN.yyp",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"o_enemyFather",
+    "path":"objects/o_enemyFather/o_enemyFather.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

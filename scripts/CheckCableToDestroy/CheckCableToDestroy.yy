@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"CheckCableToDestroy",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CheckCableToDestroy",
+  "parent":{
+    "name":"SPIN",
+    "path":"SPIN.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

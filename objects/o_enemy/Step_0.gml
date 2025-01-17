@@ -20,7 +20,7 @@ if (contCanChase <= 0)
 }
 
 
-enemyToBounce = collision_circle(x,y,4,o_enemigo,false,true)
+enemyToBounce = collision_circle(x,y,4,o_enemy,false,true)
 nextWall = instance_nearest(x,y,o_wall);
 if collision_circle(x,y,10,nextWall,true,true)
 {
