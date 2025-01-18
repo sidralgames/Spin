@@ -1,19 +1,25 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
-
-switch(spriteBoss)
+if !instance_exists(o_MainMenu)
 {
-	case s_bossNacho:
+	switch(spriteBoss)
 	{
-		BossNachoStep();
-	}
-	break;
+		case s_bossNacho:
+		{
+			BossNachoStep();
+		}
+		break;
 	
-	case s_bossDemon:
-	{
-		BossDemonStep();
+		case s_bossDemon:
+		{
+			BossDemonStep();
+		}
+		break;
 	}
-	break;
+}
+else
+{
+	image_angle -= rotSpeedBoss*global.relativeSpeed;
 }
 
 	

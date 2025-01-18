@@ -72,10 +72,13 @@ cableYellow = instance_create_layer(x,y,"Cable",o_cableYellow);
 dashEnergyTotal = 100;
 dashEnergy = dashEnergyTotal;
 
-dashEnergyRecover = 0.4;
+dashEnergyRecover = 0.45;
 
-shootEnergy = 3;
+shootEnergy = 2;
 dashEnergyMin = 25;
 reloading = false;
 
 slowMoEnergy = 0.6;
+
+aiming = false;
+moving = false;

@@ -50,7 +50,7 @@ if (surface_exists(surface))
 		{
 			sprite_delete(spr_custom)
 		}
-		spr_custom = sprite_create_from_surface(surface, 80, 20, 640, 360, true, false, 320, 180);
+		spr_custom = sprite_create_from_surface(surface, 380, 20, 640, 360, true, false, 320, 180);
 		sprite_index = spr_custom;
 		image_angle = _angle;
 		spinCreateHole = false;
