@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"BossNachoStep",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"BossNachoStep",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

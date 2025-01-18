@@ -5,13 +5,18 @@ if !instance_exists(o_cable)
 	if !collision_circle(x,y,5, o_vinilo,true,false)
 	{
 		dying = true;
+	}
+	
+	if (dying)
+	{
 		image_xscale -=0.1;
 		image_yscale -=0.1;
+		
 		if image_xscale <= 0.1
 		{
-			instance_destroy();
+			instance_destroy(cableFake)
+			instance_destroy()
 		}
-		
 	}
 	
 	

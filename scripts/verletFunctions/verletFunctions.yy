@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"verletFunctions",
   "parent":{
-    "name":"SPIN",
-    "path":"SPIN.yyp",
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

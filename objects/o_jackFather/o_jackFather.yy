@@ -6,8 +6,8 @@
   "name":"o_jackFather",
   "overriddenProperties":[],
   "parent":{
-    "name":"SPIN",
-    "path":"SPIN.yyp",
+    "name":"Objetos",
+    "path":"folders/Objetos.yy",
   },
   "parentObjectId":null,
   "persistent":false,

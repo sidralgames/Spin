@@ -12,3 +12,19 @@ image_yscale = scale;
 image_speed = 0;
 
 type = collisionType.custom;
+
+switch(o_boss.spriteBoss)
+{
+	case s_bossNacho:
+	{
+		sprite_index = s_wallNacho;
+	}
+	break;
+	
+	case s_bossDemon:
+	{
+		sprite_index = s_wallDemon;
+	}
+	break;
+	
+}

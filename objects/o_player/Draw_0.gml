@@ -14,7 +14,14 @@ draw_set_halign(fa_left)
 //draw_text_color(x,y+20,"xscale: " +  string(image_xscale),c_white,c_white,c_white,c_white,1)
 //draw_text_color(x,y+60,"angle: " +  string(image_angle),c_white,c_white,c_white,c_white,1)
 //draw_text_color(x,y+60,"dashE: " +  string(dashEnergy),c_white,c_white,c_white,c_white,1)
-
+if (inDash)
+{
+	image_blend = c_aqua;
+}
+else
+{
+	image_blend = c_white;
+}
 draw_self();
 
 if (dashEnergy < dashEnergyTotal)

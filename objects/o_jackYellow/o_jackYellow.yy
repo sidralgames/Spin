@@ -13,8 +13,8 @@
   "name":"o_jackYellow",
   "overriddenProperties":[],
   "parent":{
-    "name":"SPIN",
-    "path":"SPIN.yyp",
+    "name":"Objetos",
+    "path":"folders/Objetos.yy",
   },
   "parentObjectId":{
     "name":"o_jackFather",

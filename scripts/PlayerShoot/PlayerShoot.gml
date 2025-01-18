@@ -2,6 +2,12 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function PlayerShoot()
 {
+	
+	if (dashEnergy > dashEnergyMin)
+	{
+		reloading = false;
+	}
+	
 	if (key_x)
 	{
 		if (alarm[0] <= 0)
@@ -15,7 +21,7 @@ function PlayerShoot()
 	
 	}
 
-	if (gamepad_button_check(0,gp_shoulderr)) || (aiming)
+	if (aiming) && (reloading = false)
 	{
 		if (alarm[0] <= 0) && (dashEnergy >= 10)
 		{
@@ -34,11 +40,13 @@ function PlayerShoot()
 			
 			if (dashEnergy < 10)
 			{
-				alarm[0] = 200;
+				alarm[0] = fireRate + 60;
+				reloading = true;
 			}
 			else
 			{
 				alarm[0] = fireRate;
+				reloading = false;
 			}
 			
 		}

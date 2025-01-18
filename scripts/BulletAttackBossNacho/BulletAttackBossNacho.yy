@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"BulletAttack",
+  "%Name":"BulletAttackBossNacho",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"BulletAttack",
+  "name":"BulletAttackBossNacho",
   "parent":{
-    "name":"SPIN",
-    "path":"SPIN.yyp",
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

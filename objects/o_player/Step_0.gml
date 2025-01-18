@@ -18,7 +18,7 @@ if (slowedFromAHit = false)
 	if (key_L2) && (dashEnergy > 0)
 	{
 
-			dashEnergy-= 1;
+			dashEnergy-= slowMoEnergy;
 			
 			global.relativeSpeed = lerp(global.relativeSpeed, 0.5, 0.03);
 	
@@ -191,7 +191,7 @@ if (dashTime <=0) && (inDash = true)
 
 
 
-if (dashEnergy < dashEnergyTotal)
+if (dashEnergy < dashEnergyTotal) && (alarm[0] <= 0)
 {
 	dashEnergy += dashEnergyRecover;
 }
@@ -200,6 +200,12 @@ dashEnergy = clamp(dashEnergy, 0, dashEnergyTotal)
 
 if (dying = false)
 {
+	if (inDash = false)
+	{
+		image_xscale = lerp(image_xscale, 1, 0.05);
+		image_yscale = lerp(image_yscale, 1, 0.05);
+	}
+	
 	switch(state)
 	{
 		case "free":
@@ -291,10 +297,12 @@ if (dying = false)
 	
 					if point_direction1 > point_direction0
 					{
+						runningAgainstDisc = true;
 						realspeed = lerp(realspeed, point_distance(0 ,0, haxis, vaxis) * (_speed - abs(bossSpin * global.relativeSpeed)), 0.1); // direccionContraria
 					}
 					else
 					{
+						runningAgainstDisc = false;
 						realspeed = lerp(realspeed, point_distance(0 ,0, haxis, vaxis) * (_speed + abs((bossSpin/4) * global.relativeSpeed)), 0.1);
 					}
 					
@@ -331,7 +339,10 @@ if (dying = false)
 				{
 					if (alarm[4] > 0)
 					{
-						direction = point_direction(nextWall.x, nextWall.y, x, y);
+						if instance_exists(nextWall)
+						{
+							direction = point_direction(nextWall.x, nextWall.y, x, y);
+						}
 					
 						point_direction0 = point_direction(room_width/2, room_height/2, xprevious, yprevious);
 						point_direction1 = point_direction(room_width/2, room_height/2, x, y);
@@ -383,8 +394,7 @@ if (dying = false)
 	
 		case "stopped":
 		{
-			
-			
+			runningAgainstDisc = false;
 			
 			if collision_circle(x,y,10,nextWall,true,true)
 			{

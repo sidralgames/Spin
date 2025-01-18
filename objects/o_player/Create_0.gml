@@ -1,5 +1,6 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
+runningAgainstDisc = false;
 slowedFromAHit = false;
 goSlow = false;
 tocado = false;
@@ -67,8 +68,14 @@ distGun = 24;
 cable = instance_create_layer(x,y,"Cable",o_cable);
 cableRed = instance_create_layer(x,y,"Cable",o_cableRed);
 cableYellow = instance_create_layer(x,y,"Cable",o_cableYellow);
+
 dashEnergyTotal = 100;
 dashEnergy = dashEnergyTotal;
-dashEnergyRecover = 0.3;
-shootEnergy = 4;
-dashEnergyMin = 20;
+
+dashEnergyRecover = 0.4;
+
+shootEnergy = 3;
+dashEnergyMin = 25;
+reloading = false;
+
+slowMoEnergy = 0.6;
