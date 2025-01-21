@@ -1,4 +1,5 @@
 draw_set_color(c_white);
+global.CRTIsOn = true;
 //show_debug_overlay(true);
 
 ///MUST!!! disable automatic drawing of the application surface.

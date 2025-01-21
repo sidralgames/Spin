@@ -20,14 +20,14 @@ if (alarm[0] <= 0)
 		}
 		
 
-			if (selected > 2)
+			if (selected > 4)
 			{
 				selected = 0;	
 			}
 
 			if (selected < 0)
 			{
-				selected = 2;	
+				selected = 4;	
 			}
 
 			if (key_x)
@@ -46,12 +46,27 @@ if (alarm[0] <= 0)
 					
 					case 1:
 					{
-						instance_create_layer(x,y,"Menu", o_OptionsMenu);
-						_visible = false;
+						//global.level = -2;
+						//audio_play_sound_on(global.audioEmitter,snd_playMenu,false, 50);
+						//room_goto(Sala_Tutorial);
 		
 					}break;
 					
 					case 2:
+					{
+						//instance_create(x,y,o_menuOptions);
+						//instance_destroy();
+						//_visible = false;
+		
+					}break;
+					
+					case 3:
+					{
+						game_end();
+		
+					}break;
+					
+					case 4:
 					{
 						game_end();
 		

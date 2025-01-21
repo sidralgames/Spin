@@ -5,8 +5,8 @@ _visible = true;
 
 factor = 0.08;
 
-initialPlay =300;
-//initialTut = 170;
-initialOption = 330;
-//initialStat = 280;
-initialQuit = 360;
+initialPlay =160;
+initialTut = 170;
+initialOption = 240;
+initialStat = 280;
+initialQuit = 310;

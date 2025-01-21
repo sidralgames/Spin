@@ -4,4 +4,4 @@ _hp = 0;
 other.corrupted = true;
 other.contCorrupted = 300;
 global.tempoCorrupted = true;
-
+screenShake(5,50,3)

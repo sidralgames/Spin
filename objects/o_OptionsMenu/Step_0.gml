@@ -37,23 +37,27 @@ if (alarm[0] <= 0)
 				{
 					case 0:
 					{
-						instance_destroy()
-						//o_nextRoom.alarm[0] = 60;
-						//o_nextRoom.canSelectShip = true;
-						//Stats._visible = true;
-						//_visible = false;
+						with (obj_CRT_controller)
+						{
+							crt_shader_enabled = !crt_shader_enabled; 
+						}
+						global.CRTIsOn = !global.CRTIsOn;
 					}break;
 					
 					case 1:
 					{
-						instance_create_layer(x,y,"Menu", o_OptionsMenu);
-						_visible = false;
+						global.screenshakeIsOn = !global.screenshakeIsOn;
+						if global.screenshakeIsOn
+						{
+							screenShake(5,60,3)
+						}
 		
 					}break;
 					
 					case 2:
 					{
-						game_end();
+						instance_destroy();
+						o_MainMenu._visible = true;
 		
 					}break;
 				}

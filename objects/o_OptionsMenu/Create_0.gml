@@ -5,8 +5,17 @@ _visible = true;
 
 factor = 0.08;
 
-initialPlay =300;
+initialCRT = 300;
 //initialTut = 170;
-initialOption = 330;
+initialScreen = 330;
 //initialStat = 280;
-initialQuit = 360;
+initialBack = 360;
+
+if (global.screenshakeIsOn)
+{
+	spriteShake = s_screenshakeON;
+}
+else
+{
+	spriteShake = s_screenshakeOFF;
+}

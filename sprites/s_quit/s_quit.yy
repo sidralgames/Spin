@@ -4,7 +4,7 @@
   "bboxMode":0,
   "bbox_bottom":27,
   "bbox_left":0,
-  "bbox_right":95,
+  "bbox_right":81,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"6b8f6e6d-115a-49e7-833d-432b220f8712","name":"6b8f6e6d-115a-49e7-833d-432b220f8712","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"f024cc79-950f-4007-8e39-fc41c25134c8","name":"f024cc79-950f-4007-8e39-fc41c25134c8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -69,13 +69,13 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6b8f6e6d-115a-49e7-833d-432b220f8712","path":"sprites/s_quit/s_quit.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"812fb601-7f3e-4781-99dd-48df3d68bbe0","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f024cc79-950f-4007-8e39-fc41c25134c8","path":"sprites/s_quit/s_quit.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"04bcb88a-d92c-49ea-a761-4347ad87b858","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":48,
+    "xorigin":41,
     "yorigin":14,
   },
   "swatchColours":null,
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":96,
+  "width":82,
 }
