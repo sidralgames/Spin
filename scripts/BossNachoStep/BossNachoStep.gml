@@ -24,7 +24,7 @@ function BossNachoStep()
 		}
 		else 
 		{
-			attack = choose("BulletRound","BulletRound","DobleBullet")
+			attack = choose("BulletTempo","BulletRound","DobleBullet")
 		}
 	}
 

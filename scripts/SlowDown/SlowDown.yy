@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"SlowDown",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"SlowDown",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

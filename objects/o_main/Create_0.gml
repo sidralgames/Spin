@@ -1,6 +1,6 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
-
+global.tempoCorrupted = false;
 
 //-------COLORS--------//
 global.red = make_color_rgb(228, 59, 68); 

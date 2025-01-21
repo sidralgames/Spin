@@ -15,56 +15,43 @@ key_L1_Pressed = gamepad_button_check_pressed(0, gp_shoulderl)
 
 if (slowedFromAHit = false)
 {
-	if (key_L2) && (dashEnergy > 0)
+	if (global.tempoCorrupted = false)
 	{
-
+		if (key_L2) && (dashEnergy > 0) && !(key_R2)
+		{
 			dashEnergy-= slowMoEnergy;
-			
-			global.relativeSpeed = lerp(global.relativeSpeed, 0.5, 0.03);
-	
-			o_aguja.dist-= o_aguja.fac * global.relativeSpeed;
-			songPitchOff = 0.2
-			pitch = min(1,global.relativeSpeed + songPitchOff);
-			audio_emitter_pitch(global.audioEmitter, pitch);
-			slowed = true;
-		
-	
-	}
-	else if (key_R2)
-	{
-		global.relativeSpeed = lerp(global.relativeSpeed, 1.5, 0.03)
-	
-		o_aguja.dist-= o_aguja.fac * (global.relativeSpeed-0.25);
-		pitch = max(1,global.relativeSpeed-0.25);
-		audio_emitter_pitch(global.audioEmitter, pitch);
-		fwd = true;
-	
-	}
-	else
-	{
-		o_aguja.dist-= o_aguja.fac * global.relativeSpeed;
-	
-		if (slowed = true)
-		{
-			global.relativeSpeed = lerp(global.relativeSpeed, 1, 0.05)
-			if(global.relativeSpeed > 0.8)
-			{
-				pitch = 1;
-				audio_emitter_pitch(global.audioEmitter, pitch);
-				global.relativeSpeed = 1;
-				slowed = false;
-			}
+			SlowDown();
 		}
-	
-		if (fwd = true)
+		else if (key_R2)  && !(key_L2)
 		{
-			global.relativeSpeed = lerp(global.relativeSpeed, 1, 0.05)
-			if(global.relativeSpeed < 1.2)
+			FWD();
+		}
+		else
+		{
+			o_aguja.dist-= o_aguja.fac * global.relativeSpeed;
+	
+			if (global.slowed = true)
 			{
-				pitch = 1;
-				audio_emitter_pitch(global.audioEmitter, pitch);
-				global.relativeSpeed = 1;
-				fwd = false;
+				global.relativeSpeed = lerp(global.relativeSpeed, 1, 0.05)
+				if(global.relativeSpeed > 0.8)
+				{
+					pitch = 1;
+					audio_emitter_pitch(global.audioEmitter, pitch);
+					global.relativeSpeed = 1;
+					global.slowed = false;
+				}
+			}
+	
+			if (global.fwd = true)
+			{
+				global.relativeSpeed = lerp(global.relativeSpeed, 1, 0.05)
+				if(global.relativeSpeed < 1.2)
+				{
+					pitch = 1;
+					audio_emitter_pitch(global.audioEmitter, pitch);
+					global.relativeSpeed = 1;
+					global.fwd = false;
+				}
 			}
 		}
 	}
@@ -73,21 +60,35 @@ else
 {
 	if (goSlow = false)
 	{
+		
+		if (tempoCorrupted = true)
+		{
+			global.tempoCorrupted = false;
+			o_tempo.corrupted = false;
+		}
+		
 		global.relativeSpeed = lerp(global.relativeSpeed, 0.2, 0.2)
 		o_aguja.dist-= o_aguja.fac * global.relativeSpeed;
 		songPitchOff = 0.2
 		pitch = min(1,global.relativeSpeed + songPitchOff);
 		audio_emitter_pitch(global.audioEmitter, pitch);
+		global.slowed = true;
 		
 	}
 	
 	if (global.relativeSpeed <= 0.3)
 	{
+		
 		goSlow = true;
 	}
 	
 	if (goSlow)
 	{
+		if (tempoCorrupted = true)
+		{
+			global.tempoCorrupted = false;
+			o_tempo.corrupted = false;
+		}
 		global.relativeSpeed = lerp(global.relativeSpeed, 1, 0.05)
 		o_aguja.dist-= o_aguja.fac * global.relativeSpeed;
 		pitch = min(1,global.relativeSpeed);
@@ -100,6 +101,12 @@ else
 			global.relativeSpeed = 1;
 			goSlow = false;
 			slowedFromAHit = false;
+			global.slowed = false;
+			if (tempoCorrupted = true)
+			{
+				global.tempoCorrupted = true;
+				o_tempo.corrupted = true;
+			}
 		}
 	}
 }

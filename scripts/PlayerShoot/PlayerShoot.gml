@@ -2,54 +2,103 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function PlayerShoot()
 {
-	
 	if (dashEnergy > dashEnergyMin)
 	{
 		reloading = false;
 	}
 	
-	if (key_x)
+	switch(weapon)
 	{
-		if (alarm[0] <= 0)
+		case "Gun":
 		{
-			dir = point_direction(x,y,mouse_x, mouse_y);
-			bullet = instance_create_layer(x + lengthdir_x(25, aimDir), y + lengthdir_y(25, aimDir), "BulletsPlayer", o_bulletPlayer);
-			bullet.speed = 3.5;
-			bullet.direction = dir;
-			alarm[0] = fireRate;
-		}
+			if (key_x)
+			{
+				if (alarm[0] <= 0)
+				{
+					dir = point_direction(x,y,mouse_x, mouse_y);
+					bullet = instance_create_layer(x + lengthdir_x(25, aimDir), y + lengthdir_y(25, aimDir), "BulletsPlayer", o_bulletPlayer);
+					bullet.speed = 3.5;
+					bullet.direction = dir;
+					alarm[0] = fireRate;
+				}
 	
-	}
+			}
 
-	if (aiming) && (reloading = false)
-	{
-		if (alarm[0] <= 0) && (dashEnergy >= 10)
-		{
-			dashEnergy -= shootEnergy;
-			bullet = instance_create_layer(x + lengthdir_x(distGun+2, aimDir), y + lengthdir_y(distGun+2, aimDir), "BulletsPlayer", o_bulletPlayer);
-			bullet.speed = 3.5;
-			bullet.direction = aimDir+off;
-			off = random_range(-10,10)
-			
-			recoil = true;
-			contRecoil = 60;
-			recoilGun = 15;
-			direction = aimDir - 180;
-			speed = 0.5;
-			screenShake(0.5,5);
-			
-			if (dashEnergy < 10)
+			if (aiming) && (reloading = false)
 			{
-				alarm[0] = fireRate + 60;
-				reloading = true;
-			}
-			else
-			{
-				alarm[0] = fireRate;
-				reloading = false;
+				if (alarm[0] <= 0) && (dashEnergy >= 10)
+				{
+					dashEnergy -= shootEnergy;
+					bullet = instance_create_layer(x + lengthdir_x(distGun+2, aimDir), y + lengthdir_y(distGun+2, aimDir), "BulletsPlayer", o_bulletPlayer);
+					bullet.speed = 3.75;
+					bullet.direction = aimDir+off;
+					off = random_range(-10,10)
+			
+					recoil = true;
+					contRecoil = 60;
+					recoilGun = 15;
+					direction = aimDir - 180;
+					speed = 0.5;
+					screenShake(0.5,5);
+			
+					if (dashEnergy < 10)
+					{
+						alarm[0] = fireRate + 60;
+						reloading = true;
+					}
+					else
+					{
+						alarm[0] = fireRate;
+						reloading = false;
+					}
+			
+				}
+	
 			}
 			
 		}
+		break;
+		
+		case "Shotgun":
+		{
+			if (aiming) && (reloading = false)
+			{
+				if (alarm[0] <= 0) && (dashEnergy >= 10)
+				{
+					dashEnergy -= shotgunEnergy;
+					for (var i=0; i<3; i++)
+					{
+						offShotgun +=10;
+						bullet[i] = instance_create_layer(x + lengthdir_x(distGun+2, aimDir), y + lengthdir_y(distGun+2, aimDir), "BulletsPlayer", o_bulletPlayer);
+						bullet[i].speed = 3.15;
+						bullet[i].direction = aimDir+offShotgun;
+						
+					}
+			
+					recoil = true;
+					contRecoil = 60;
+					recoilGun = 15;
+					direction = aimDir - 180;
+					speed = 0.5;
+					screenShake(0.5,5);
+			
+					if (dashEnergy < 10)
+					{
+						alarm[0] = fireRateShotgun + 60;
+						reloading = true;
+						offShotgun = -10;
+					}
+					else
+					{
+						alarm[0] = fireRateShotgun;
+						reloading = false;
+						offShotgun = -10;
+					}
+			
+				}
 	
+			}
+		}
+		break;
 	}
 }

@@ -37,8 +37,8 @@ realspeed=0;
 recoil = false;
 contRecoil = 10;
 
-slowed = false;
-fwd = false;
+global.slowed = false;
+global.fwd = false;
 
 walkSpeedH = global._speed;
 walkSpeedV = global._speed+0.5;
@@ -59,7 +59,7 @@ distance = 2;
 bossSpin = -0.6;
 totalPush = 0;
 
-fireRate = 10;
+
 bnc = 1;
 global.relativeSpeed = 1;
 stopped = false;
@@ -74,11 +74,18 @@ dashEnergy = dashEnergyTotal;
 
 dashEnergyRecover = 0.45;
 
+fireRate = 10;
+fireRateShotgun = 30;
+
 shootEnergy = 2;
+shotgunEnergy = 5;
 dashEnergyMin = 25;
 reloading = false;
 
 slowMoEnergy = 0.6;
-
+tempoCorrupted = false;
 aiming = false;
 moving = false;
+
+offShotgun = -10;
+weapon = "Gun"
