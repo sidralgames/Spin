@@ -46,16 +46,16 @@ if (crt_gui_bezel_enabled) { draw_sprite_stretched(spr_CRT_nes_bezel, -1, 0, 0, 
 
 ///Draw some text with the demo variables we're using.
 ///Just for demonstration purposes, can be removed.
-//draw_set_halign(fa_left)
-//draw_rectangle_color(0,0, 450, 148, c_black,c_black,c_black,c_black, false);
-//draw_text(50,12, "CRT shader enabled = " +	  string(crt_shader_enabled) +            " press D to change");
-//draw_text(50,24, "Distortion enabled = " +     string(var_use_radial_distortion) +	  " press F to change");
-//draw_text(50,36, "Distortion amount = " +      string(var_radial_distortion_ammount) + " press W/S to change");
-//draw_text(50,48, "Border enabled = " +         string(var_use_border) +                " press B to change");
-//draw_text(50,60, "RGB separation enabled = " + string(var_use_RGB_separation) +        " press R to change");
-//draw_text(50,72, "Scanlines enabled = " +      string(var_use_scanlines) +             " press Q to change");
-//draw_text(50,84, "CRT on/off state = " +       string(_crt_on_off_state) +             " press E to change");
-//draw_text(50,96, "Noise enabled = " +          string(var_use_noise) +				  " press A to change");
-//draw_text(50,108,"Random noise strength = " +  string(var_noise_strength) +			  " press T,G to change");
-//draw_text(50,120,"Brightness = " +			  string(var_brightness) +				  " press Y,H to change");
+draw_set_halign(fa_left)
+draw_rectangle_color(0,0, 450, 148, c_black,c_black,c_black,c_black, false);
+draw_text(50,12, "CRT shader enabled = " +	  string(crt_shader_enabled) +            " press D to change");
+draw_text(50,24, "Distortion enabled = " +     string(var_use_radial_distortion) +	  " press F to change");
+draw_text(50,36, "Distortion amount = " +      string(var_radial_distortion_ammount) + " press W/S to change");
+draw_text(50,48, "Border enabled = " +         string(var_use_border) +                " press B to change");
+draw_text(50,60, "RGB separation enabled = " + string(var_use_RGB_separation) +        " press R to change");
+draw_text(50,72, "Scanlines enabled = " +      string(var_use_scanlines) +             " press Q to change");
+draw_text(50,84, "CRT on/off state = " +       string(_crt_on_off_state) +             " press E to change");
+draw_text(50,96, "Noise enabled = " +          string(var_use_noise) +				  " press A to change");
+draw_text(50,108,"Random noise strength = " +  string(var_noise_strength) +			  " press T,G to change");
+draw_text(50,120,"Brightness = " +			  string(var_brightness) +				  " press Y,H to change");
 //draw_text(50,132,"GUI bezel enabled = " +	  string(crt_gui_bezel_enabled) +		  " press SPACE to change");
