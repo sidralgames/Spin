@@ -190,19 +190,25 @@ if (bounced)
 
 
 
-
-if (!collision_circle(x,y,4,o_vinilo,true,true))
+if instance_exists(o_vinilo)
 {
-	contDie --;
-	if (contDie <=0)
+	if (!collision_circle(x,y,4,o_vinilo,true,true))
 	{
-		dying = true;
-		depth = o_vinilo.depth+3
+		contDie --;
+		if (contDie <=0)
+		{
+			dying = true;
+			depth = o_vinilo.depth+3
+		}
+	}
+	else
+	{
+		contDie = 5;
 	}
 }
 else
 {
-	contDie = 5;
+	_hp = 0;
 }
 
 if (dying = true)

@@ -2,6 +2,8 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function Die()
 {
+	if instance_exists(o_vinilo)
+{
 	if (!collision_circle(x,y,4,o_vinilo,true,true)) && (inDash = false)
 	{
 		contDie --;
@@ -52,6 +54,7 @@ function Die()
 			instance_destroy();
 		}
 	}
+}
 	
 	if (_hp <= 0)
 	{

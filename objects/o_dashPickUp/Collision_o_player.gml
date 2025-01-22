@@ -2,5 +2,5 @@
 // Puede escribir su código en este editor
 with(other)
 {
-	dashEnergy += 35;
+	global.energy += 35;
 }

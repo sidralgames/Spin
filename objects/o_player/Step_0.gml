@@ -17,9 +17,9 @@ if (slowedFromAHit = false)
 {
 	if (global.tempoCorrupted = false)
 	{
-		if (key_L2) && (dashEnergy > 0) && !(key_R2)
+		if (key_L2) && (global.energy > 0) && !(key_R2)
 		{
-			dashEnergy-= slowMoEnergy;
+			global.energy-= slowMoEnergy;
 			SlowDown();
 		}
 		else if (key_R2)  && !(key_L2)
@@ -134,6 +134,7 @@ r = clamp(r, 50, 190);
 
 dirH = key_left - key_right;
 
+bossSpin = global.vinylSpin;
 bossPush = bossSpin * min(1.5, global.relativeSpeed);
 
 //_hpush += dirH * global.walkAccelerationH;
@@ -198,12 +199,12 @@ if (dashTime <=0) && (inDash = true)
 
 
 
-if (dashEnergy < dashEnergyTotal) && (alarm[0] <= 0)
+if (global.energy < global.energyTotal) && (alarm[0] <= 0)
 {
-	dashEnergy += dashEnergyRecover;
+	global.energy += dashEnergyRecover;
 }
 
-dashEnergy = clamp(dashEnergy, 0, dashEnergyTotal)
+global.energy = clamp(global.energy, 0, global.energyTotal)
 
 if (dying = false)
 {
@@ -254,11 +255,11 @@ if (dying = false)
 			{
 				direction = point_direction(0, 0, haxis, vaxis);
 			
-				if (key_L1_Pressed) && (collision_circle(x,y,6,o_vinilo,true,true)) && (dashEnergy >= dashEnergyMin) //DASH
+				if (key_L1_Pressed) && (collision_circle(x,y,6,o_Floor,true,true)) && (global.energy >= dashEnergyMin) //DASH
 				{
 					image_xscale = 1.75;
 					image_yscale = 0.5;
-					dashEnergy -= dashEnergyMin;
+					global.energy -= dashEnergyMin;
 					realspeed += 3.2;
 					inDash = true;
 					dashTime = 60;
@@ -294,7 +295,7 @@ if (dying = false)
 				x += hspeed* global.relativeSpeed;
 				y += vspeed* global.relativeSpeed;
 				
-				theta += totalPush * global.relativeSpeed;/////////
+				//theta += totalPush * global.relativeSpeed;/////////
 	
 				if (alarm[3] <= 0)
 				{
@@ -334,7 +335,7 @@ if (dying = false)
 				}
 				else
 				{
-					theta += totalPush * global.relativeSpeed;
+					theta += totalPush;
 					x = cx + lengthdir_x(r, theta) 
 					y = cy + lengthdir_y(r, theta)
 				}

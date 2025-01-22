@@ -2,9 +2,12 @@
 // Puede escribir su código en este editor
 if !instance_exists(o_cable)
 {
-	if !collision_circle(x,y,5, o_vinilo,true,false)
+	if instance_exists(o_vinilo)
 	{
-		dying = true;
+		if !collision_circle(x,y,5, o_vinilo,true,false)
+		{
+			dying = true;
+		}
 	}
 	
 	if (dying)

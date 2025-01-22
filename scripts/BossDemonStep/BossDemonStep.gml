@@ -4,11 +4,6 @@ function BossDemonStep()
 {
 	image_angle -= rotSpeedBoss*global.relativeSpeed;
 
-	if (_hp <= 0)
-	{
-		instance_destroy();
-	}
-
 	if (contAttack > 0)
 	{
 		contAttack --;

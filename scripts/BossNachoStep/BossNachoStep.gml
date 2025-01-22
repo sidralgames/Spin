@@ -4,11 +4,6 @@ function BossNachoStep()
 {
 	image_angle -= rotSpeedBoss*global.relativeSpeed;
 
-	if (_hp <= 0)
-	{
-		instance_destroy();
-	}
-
 	if (contAttack > 0)
 	{
 		contAttack --;
@@ -18,9 +13,10 @@ function BossNachoStep()
 		bulletsCreated = 0;
 		contAttack = random_range(100,200);
 		
+		
 		if (_hp < 100)
 		{
-			attack = choose("SingleBullet", "DobleBullet", "Pattern1");
+			attack = choose("BulletTempo","SingleBullet", "DobleBullet", "Pattern1");
 		}
 		else 
 		{

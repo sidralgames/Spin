@@ -56,7 +56,7 @@ _vpush =0;
 
 distance = 2;
 
-bossSpin = -0.6;
+bossSpin = global.vinylSpin;
 totalPush = 0;
 
 
@@ -69,8 +69,8 @@ cable = instance_create_layer(x,y,"Cable",o_cable);
 cableRed = instance_create_layer(x,y,"Cable",o_cableRed);
 cableYellow = instance_create_layer(x,y,"Cable",o_cableYellow);
 
-dashEnergyTotal = 100;
-dashEnergy = dashEnergyTotal;
+gunSprite = s_gun;
+global.energy = global.energyTotal;
 
 dashEnergyRecover = 0.45;
 
@@ -88,4 +88,4 @@ aiming = false;
 moving = false;
 
 offShotgun = -10;
-weapon = "Gun"
+weapon = global.weapon

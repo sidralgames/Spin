@@ -20,3 +20,6 @@ contCanBeTouched = 200;
 
 x = nearDisc.x + lengthdir_x(dist, 35);
 y = nearDisc.y + lengthdir_y(dist, 35);
+
+xIni = x;
+yIni = y;

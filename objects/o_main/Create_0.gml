@@ -1,7 +1,9 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
 global.tempoCorrupted = false;
-
+global.vinylSpin = -0.2;
+global.weapon = "Gun";
+global.energyTotal = 100;
 //-------COLORS--------//
 global.red = make_color_rgb(228, 59, 68); 
 global.brightRed = make_colour_rgb(255,0,68);

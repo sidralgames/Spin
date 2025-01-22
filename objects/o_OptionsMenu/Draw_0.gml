@@ -23,8 +23,11 @@ else
 
 if (_visible)
 {
-	
-		draw_set_halign(fa_center)
+	xscale = random_range(0.9,1.1);
+	yscale = random_range(0.9,1.1);
+	initialOptions = lerp(initialOptions, 150,factor+0.05);
+	draw_sprite_ext(s_options, 1,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialOptions,1,1,0,image_blend, image_alpha)
+	draw_set_halign(fa_center)
 		switch(selected)
 		{
 			case 0:

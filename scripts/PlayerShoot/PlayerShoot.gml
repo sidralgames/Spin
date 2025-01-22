@@ -2,15 +2,17 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function PlayerShoot()
 {
-	if (dashEnergy > dashEnergyMin)
+	if (global.energy > dashEnergyMin)
 	{
 		reloading = false;
 	}
 	
-	switch(weapon)
+	switch(global.weapon)
 	{
 		case "Gun":
 		{
+			gunSprite = s_gun;
+			
 			if (key_x)
 			{
 				if (alarm[0] <= 0)
@@ -26,9 +28,9 @@ function PlayerShoot()
 
 			if (aiming) && (reloading = false)
 			{
-				if (alarm[0] <= 0) && (dashEnergy >= 10)
+				if (alarm[0] <= 0) && (global.energy >= 10)
 				{
-					dashEnergy -= shootEnergy;
+					global.energy -= shootEnergy;
 					bullet = instance_create_layer(x + lengthdir_x(distGun+2, aimDir), y + lengthdir_y(distGun+2, aimDir), "BulletsPlayer", o_bulletPlayer);
 					bullet.speed = 3.75;
 					bullet.direction = aimDir+off;
@@ -41,7 +43,7 @@ function PlayerShoot()
 					speed = 0.5;
 					screenShake(0.5,5);
 			
-					if (dashEnergy < 10)
+					if (global.energy < 10)
 					{
 						alarm[0] = fireRate + 60;
 						reloading = true;
@@ -61,11 +63,13 @@ function PlayerShoot()
 		
 		case "Shotgun":
 		{
+			gunSprite = s_shotgun;
+			
 			if (aiming) && (reloading = false)
 			{
-				if (alarm[0] <= 0) && (dashEnergy >= 10)
+				if (alarm[0] <= 0) && (global.energy >= 10)
 				{
-					dashEnergy -= shotgunEnergy;
+					global.energy -= shotgunEnergy;
 					for (var i=0; i<3; i++)
 					{
 						offShotgun +=10;
@@ -82,7 +86,7 @@ function PlayerShoot()
 					speed = 0.5;
 					screenShake(0.5,5);
 			
-					if (dashEnergy < 10)
+					if (global.energy < 10)
 					{
 						alarm[0] = fireRateShotgun + 60;
 						reloading = true;

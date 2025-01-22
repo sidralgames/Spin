@@ -1,8 +1,8 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
 
-	image_angle -= 0.57*global.relativeSpeed
-	_angle -=  0.57*global.relativeSpeed
+	image_angle += global.vinylSpin*global.relativeSpeed
+	_angle +=  global.vinylSpin*global.relativeSpeed
 	if (_angle <= 0)
 	{
 		_angle+=360;

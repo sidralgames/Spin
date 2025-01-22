@@ -12,7 +12,7 @@ if (scaled = false) && scale >=1.5
 if instance_exists(o_boss)
 {
 	dist = point_distance(x,y,o_boss.x, o_boss.y)
-}
+
 
 
 if (scaled = true)
@@ -36,6 +36,11 @@ if (scaled = true)
 			scale2 = true
 		}
 	}
+}
+}
+else
+{
+	instance_destroy();
 }
 
 image_xscale = scale;

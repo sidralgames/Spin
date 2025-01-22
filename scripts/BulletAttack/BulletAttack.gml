@@ -10,19 +10,26 @@ function BulletAttack(_attack)
 			{
 				case "BulletTempo":
 				{
-					if (alarm[0] <= 0) && instance_exists(o_player)
+					if (o_tempo.contCorrupted <= 0)
 					{
+						if (alarm[0] <= 0) && instance_exists(o_player)
+						{
 	
-						dir = point_direction(x,y,o_tempo.x, o_tempo.y+random_range(20,-20))
-						bullet1 = instance_create_layer(x,y,"Bullets", o_bulletPitch);
-						bullet1.speed = random_range(0.75,1);
-						bullet1.initialSpeed = bullet1.speed
-						bullet1.direction = dir;
+							dir = point_direction(x,y,o_tempo.x, o_tempo.y+random_range(20,-20))
+							bullet1 = instance_create_layer(x,y,"Bullets", o_bulletPitch);
+							bullet1.speed = random_range(0.75,1);
+							bullet1.initialSpeed = bullet1.speed
+							bullet1.direction = dir;
 						
-						fireRatePitchBullet = irandom_range(360,420)
-						alarm[0] = fireRatePitchBullet;
-						contAttack = 0;
-						canChangeAttack = true;
+							fireRatePitchBullet = irandom_range(360,420)
+							alarm[0] = fireRatePitchBullet;
+							contAttack = 0;
+							canChangeAttack = true;
+						}
+					}
+					else
+					{
+						_attack = choose("SingleBullet", "DobleBullet", "BulletRound")
 					}
 				}break;
 				

@@ -1,5 +1,5 @@
 
-_angle -=  0.57*global.relativeSpeed
+_angle +=  global.vinylSpin*global.relativeSpeed
 
 
 image_angle = o_vinilo.image_angle;

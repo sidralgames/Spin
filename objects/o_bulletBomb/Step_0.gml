@@ -92,24 +92,37 @@ if (image_xscale >= scaleExplo) || (_hp <=0)
 			}
 		
 		}
+		else
+		{
+			instance_destroy();
+			exploOrange = instance_create_layer(x, y, "BulletsDown", o_explosion);
+			exploOrange.sprite_index = s_exploOrange;
+			exploOrange.image_xscale = 0.4;
+			exploOrange.image_yscale = 0.4;
+		}
 	}
 }
 
-
-if (!collision_circle(x,y,5,o_vinilo,true,true)) && (speed <= 0.25)
+if instance_exists(o_vinilo)
 {
-	contDie --;
-	if (contDie <=0)
+	if (!collision_circle(x,y,5,o_vinilo,true,true)) && (speed <= 0.25)
 	{
-		dying = true;
-		depth = o_vinilo.depth+3
+		contDie --;
+		if (contDie <=0)
+		{
+			dying = true;
+			depth = o_vinilo.depth+3
+		}
+	}
+	else if (speed > 0.25)
+	{
+		contDie = 5;
 	}
 }
-else if (speed > 0.25)
+else
 {
-	contDie = 5;
+	instance_destroy()
 }
-
 
 if (speed <=0.25)
 {

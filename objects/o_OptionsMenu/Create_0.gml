@@ -19,3 +19,5 @@ else
 {
 	spriteShake = s_screenshakeOFF;
 }
+
+initialOptions = 270;

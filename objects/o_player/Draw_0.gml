@@ -13,7 +13,8 @@ draw_set_halign(fa_left)
 //draw_text_color(x,y+40,"yscale: " +  string(image_yscale),c_white,c_white,c_white,c_white,1)
 //draw_text_color(x,y+20,"xscale: " +  string(image_xscale),c_white,c_white,c_white,c_white,1)
 //draw_text_color(x,y+60,"angle: " +  string(image_angle),c_white,c_white,c_white,c_white,1)
-//draw_text_color(x,y+60,"dashE: " +  string(dashEnergy),c_white,c_white,c_white,c_white,1)
+draw_text_color(x,y+60,"dashE: " +  string(global.energy),c_white,c_white,c_white,c_white,1)
+draw_text_color(x,y+80,"dashE: " +  string(global.energyTotal),c_white,c_white,c_white,c_white,1)
 if (inDash)
 {
 	image_blend = c_aqua;
@@ -24,17 +25,17 @@ else
 }
 draw_self();
 
-if (dashEnergy < dashEnergyTotal)
+if (global.energy < global.energyTotal)
 {
-	if (dashEnergy > dashEnergyMin)
+	if (global.energy > dashEnergyMin)
 	{
-		draw_circular_bar(o_player.x+17, o_player.y-17, dashEnergy, dashEnergyTotal, global.lightBlue, 7,1, 2);
-		draw_circular_bar(o_player.x+17, o_player.y-17, dashEnergy, dashEnergyTotal, c_white, 6,1, 2);
+		draw_circular_bar(o_player.x+17, o_player.y-17, global.energy, global.energyTotal, global.lightBlue, 7,1, 2);
+		draw_circular_bar(o_player.x+17, o_player.y-17, global.energy, global.energyTotal, c_white, 6,1, 2);
 	}
 	else
 	{
-		draw_circular_bar(o_player.x+17, o_player.y-17, dashEnergy, dashEnergyTotal, global.brightRed, 6,1, 2);
-		draw_circular_bar(o_player.x+17, o_player.y-17, dashEnergy, dashEnergyTotal, global.red, 5,1, 2);
+		draw_circular_bar(o_player.x+17, o_player.y-17, global.energy, global.energyTotal, global.brightRed, 6,1, 2);
+		draw_circular_bar(o_player.x+17, o_player.y-17, global.energy, global.energyTotal, global.red, 5,1, 2);
 	}
 }
 
@@ -58,7 +59,7 @@ if (dying = false)
 			image_yscale = -1;
 		}
 	
-		draw_sprite_ext(s_gun, 0, x + lengthdir_x(distGun - recoilGun, aimDir), y + lengthdir_y(distGun - recoilGun, aimDir),1,scaleGunY,aimDir,image_blend,image_alpha)
+		draw_sprite_ext(gunSprite, 0, x + lengthdir_x(distGun - recoilGun, aimDir), y + lengthdir_y(distGun - recoilGun, aimDir),1,scaleGunY,aimDir,image_blend,image_alpha)
 	}
 	else
 	{
