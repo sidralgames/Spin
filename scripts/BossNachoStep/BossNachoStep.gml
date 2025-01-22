@@ -14,20 +14,20 @@ function BossNachoStep()
 		contAttack = random_range(100,200);
 		
 		
-		if (_hp < 100)
+		if (_hp < 75)
 		{
 			attack = choose("BulletTempo","SingleBullet", "DobleBullet", "Pattern1");
 		}
 		else 
 		{
-			attack = choose("BulletTempo","BulletRound","DobleBullet")
+			attack = choose("BulletTempo","DobleBullet","BulletRound","DobleBullet")
 		}
 	}
 
 	BulletAttack(attack);
 
 
-	WallAttack(0,1,choose(50,75),35);
+	WallAttack(0,2,choose(50,75),35);
 
 
 	if (needleAttack) && instance_exists(o_player)

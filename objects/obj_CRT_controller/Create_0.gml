@@ -44,8 +44,8 @@ full screen and the monitor is eg: 16:9 then the distortion and RGB separation w
 */
 view_visible[0] = true;
 view_enabled = true;
-view_wport[0] = 1280;
-view_hport[0] = 720;
+view_wport[0] = 1440;
+view_hport[0] = 900;
 window_set_size(view_wport[0], view_hport[0]);
 window_set_position(10,40)
 
@@ -63,4 +63,4 @@ crt_shader_enabled = true;
 crt_gui_bezel_enabled = false;
 
 ///Setup the CRT shaders variables and shader uniforms
-scr_CRT_init_shader(view_camera[0], true, 0.02, true, false, true, 0.03, 80.0, 1.0, false, 0.175);
+scr_CRT_init_shader(view_camera[0], true, 0.00, true, true, true, 0.03, 80.0, 1.1, false, 0.175);

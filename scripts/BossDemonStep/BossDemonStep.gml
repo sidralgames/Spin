@@ -13,11 +13,11 @@ function BossDemonStep()
 		contAttack = random_range(100,200)
 		if (_hp < 100)
 		{
-			attack = choose("SingleBullet", "Pattern1")
+			attack = choose("BulletTempo","SingleBullet", "DobleBullet", "Pattern1", "SingleBullet", "DobleBullet", "Pattern1");
 		}
 		else 
 		{
-			attack = choose("SingleBullet")
+			attack = choose("BulletTempo","BulletRound","DobleBullet","BulletRound","DobleBullet")
 		}
 	}
 

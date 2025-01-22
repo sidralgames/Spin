@@ -6,6 +6,11 @@ if !instance_exists(o_MainMenu)
 	{
 		createHP = true;
 		bossHP = instance_create_layer(x-230,y-120,"Main", o_bossHP);
+		if spriteBoss = s_bossDemon
+		{
+			 instance_create_layer(x+100,y,"Enemies", o_enemy);
+			  instance_create_layer(x-100,y,"Enemies", o_enemy);
+		}
 	}
 	switch(spriteBoss)
 	{
@@ -36,6 +41,7 @@ _angle = image_angle;
 
 if (_hp <= 0)
 {
+	global.level+=1;
 	instance_destroy(bossHP);
 	screenShake(6,120,4)
 	exploOrange = instance_create_layer(x, y, "BulletsDown", o_explosion);

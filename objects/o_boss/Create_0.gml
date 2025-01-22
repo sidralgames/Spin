@@ -4,7 +4,14 @@ surfaceGalleta =-1
 surfaced = false;
 createHP = false
 offsetRound = 0;
-spriteBoss = choose(s_bossNacho,s_bossDemon);
+if (global.level = 1)
+{
+	spriteBoss = choose(s_bossNacho);
+}
+else
+{
+	spriteBoss = choose(s_bossNacho,s_bossDemon);
+}
 sprite_index = spriteBoss;
 image_speed = 0;
 bulletsCreated = 0;

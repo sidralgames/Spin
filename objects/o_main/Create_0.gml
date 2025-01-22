@@ -4,6 +4,7 @@ global.tempoCorrupted = false;
 global.vinylSpin = -0.2;
 global.weapon = "Gun";
 global.energyTotal = 100;
+global.level = 1;
 //-------COLORS--------//
 global.red = make_color_rgb(228, 59, 68); 
 global.brightRed = make_colour_rgb(255,0,68);
@@ -35,7 +36,7 @@ delay_bus.effects[0] = _delay_effect;
 
 global.song = snd_song1;
 
-audio_play_sound_on(global.audioEmitter,global.song, false, 100,,65)
+audio_play_sound_on(global.audioEmitter,global.song, true, 100,,65)
 global.standardAngleShake = 0.5;
 global.screenshakeIsOn = true;
 
