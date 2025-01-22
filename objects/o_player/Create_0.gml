@@ -75,7 +75,7 @@ global.energy = global.energyTotal;
 dashEnergyRecover = 0.45;
 
 fireRate = 10;
-fireRateShotgun = 30;
+fireRateShotgun = 25;
 
 shootEnergy = 2;
 shotgunEnergy = 5;

@@ -36,8 +36,16 @@ _angle = image_angle;
 
 if (_hp <= 0)
 {
+	instance_destroy(bossHP);
+	screenShake(6,120,4)
+	exploOrange = instance_create_layer(x, y, "BulletsDown", o_explosion);
+	exploOrange.sprite_index = s_exploOrange;
+	exploOrange.image_xscale = 1.2;
+	exploOrange.image_yscale = 1.2;
 	upgradeVinyl = instance_create_layer(x,y,"Vinyl", o_viniloUpgrades);
 	upgradeGalleta = instance_create_layer(x,y,"Boss", o_upgrades);
+	upgradeGalleta.image_xscale = 0.2;
+	upgradeGalleta.image_yscale = 0.2;
 	instance_destroy(o_vinilo);
 	instance_destroy(oViniloFake);
 	instance_destroy();

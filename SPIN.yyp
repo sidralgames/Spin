@@ -144,6 +144,7 @@
     {"id":{"name":"s_enemy","path":"sprites/s_enemy/s_enemy.yy",},},
     {"id":{"name":"s_exploBlue","path":"sprites/s_exploBlue/s_exploBlue.yy",},},
     {"id":{"name":"s_exploOrange","path":"sprites/s_exploOrange/s_exploOrange.yy",},},
+    {"id":{"name":"s_galletaUpgrades","path":"sprites/s_galletaUpgrades/s_galletaUpgrades.yy",},},
     {"id":{"name":"s_gun","path":"sprites/s_gun/s_gun.yy",},},
     {"id":{"name":"s_hpMete_1","path":"sprites/s_hpMete_1/s_hpMete_1.yy",},},
     {"id":{"name":"s_hpMete","path":"sprites/s_hpMete/s_hpMete.yy",},},

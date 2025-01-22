@@ -19,7 +19,7 @@ function PlayerShoot()
 				{
 					dir = point_direction(x,y,mouse_x, mouse_y);
 					bullet = instance_create_layer(x + lengthdir_x(25, aimDir), y + lengthdir_y(25, aimDir), "BulletsPlayer", o_bulletPlayer);
-					bullet.speed = 3.5;
+					bullet.initialSpeed = 3.5;
 					bullet.direction = dir;
 					alarm[0] = fireRate;
 				}
@@ -32,7 +32,7 @@ function PlayerShoot()
 				{
 					global.energy -= shootEnergy;
 					bullet = instance_create_layer(x + lengthdir_x(distGun+2, aimDir), y + lengthdir_y(distGun+2, aimDir), "BulletsPlayer", o_bulletPlayer);
-					bullet.speed = 3.75;
+					bullet.initialSpeed = 3.75;
 					bullet.direction = aimDir+off;
 					off = random_range(-10,10)
 			
@@ -74,7 +74,7 @@ function PlayerShoot()
 					{
 						offShotgun +=10;
 						bullet[i] = instance_create_layer(x + lengthdir_x(distGun+2, aimDir), y + lengthdir_y(distGun+2, aimDir), "BulletsPlayer", o_bulletPlayer);
-						bullet[i].speed = 3.15;
+						bullet[i].initialSpeed = 3.15;
 						bullet[i].direction = aimDir+offShotgun;
 						
 					}

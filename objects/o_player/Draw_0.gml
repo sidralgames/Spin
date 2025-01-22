@@ -13,8 +13,8 @@ draw_set_halign(fa_left)
 //draw_text_color(x,y+40,"yscale: " +  string(image_yscale),c_white,c_white,c_white,c_white,1)
 //draw_text_color(x,y+20,"xscale: " +  string(image_xscale),c_white,c_white,c_white,c_white,1)
 //draw_text_color(x,y+60,"angle: " +  string(image_angle),c_white,c_white,c_white,c_white,1)
-draw_text_color(x,y+60,"dashE: " +  string(global.energy),c_white,c_white,c_white,c_white,1)
-draw_text_color(x,y+80,"dashE: " +  string(global.energyTotal),c_white,c_white,c_white,c_white,1)
+//draw_text_color(x,y+60,"E: " +  string(global.energy),c_white,c_white,c_white,c_white,1)
+//draw_text_color(x,y+80,"TotalE: " +  string(global.energyTotal),c_white,c_white,c_white,c_white,1)
 if (inDash)
 {
 	image_blend = c_aqua;

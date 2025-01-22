@@ -23,7 +23,7 @@ switch(spriteBoss)
 	case s_bossNacho:
 	{
 		rotSpeedBoss = 0.5;
-		_hp = 2;
+		_hp = 150;
 
 		alarm[0] = 60;
 

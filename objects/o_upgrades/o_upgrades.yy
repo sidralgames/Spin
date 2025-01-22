@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"s_upgradesGalleta",
-    "path":"sprites/s_upgradesGalleta/s_upgradesGalleta.yy",
+    "name":"s_galletaUpgrades",
+    "path":"sprites/s_galletaUpgrades/s_galletaUpgrades.yy",
   },
   "spriteMaskId":null,
   "visible":true,
