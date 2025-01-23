@@ -4,9 +4,14 @@ surfaceGalleta =-1
 surfaced = false;
 createHP = false
 offsetRound = 0;
+contToStart = 200;
 if (global.level = 1)
 {
 	spriteBoss = choose(s_bossNacho);
+}
+else if (global.level = 2)
+{
+	spriteBoss = choose(s_bossDemon);
 }
 else
 {
@@ -29,8 +34,9 @@ switch(spriteBoss)
 {
 	case s_bossNacho:
 	{
+		_hpMax = 20;
 		rotSpeedBoss = 0.5;
-		_hp = 150;
+		_hp = _hpMax;
 
 		alarm[0] = 60;
 
@@ -42,7 +48,7 @@ switch(spriteBoss)
 
 		needleAttack = false
 		dir=0;
-		totWall = 4
+		totWall = 2
 		offset = 0;
 		contAttack = 60;
 		attack = choose("SingleBullet")
@@ -53,8 +59,9 @@ switch(spriteBoss)
 	
 	case s_bossDemon:
 	{
+		_hpMax = 200;
 		rotSpeedBoss = 0.5;
-		_hp = 250;
+		_hp = _hpMax;
 
 		alarm[0] = 60;
 			fireRateSingleBullet =  irandom_range(60,120);

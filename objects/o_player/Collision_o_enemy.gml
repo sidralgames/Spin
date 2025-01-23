@@ -1,15 +1,18 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
-if (tocado = false)
+if (other.dying = false)
 {
-	tocado = true;
-	_hp -=1;
+	if (tocado = false)
+	{
+		tocado = true;
+		_hp -=1;
 	
-	CheckCableToDestroy();
-	screenShake(3,30,2);
+		CheckCableToDestroy();
+		screenShake(3,30,2);
 
-	slowedFromAHit = true;
-	alarm[1] = invincibleTime;
+		slowedFromAHit = true;
+		alarm[1] = invincibleTime;
+	}
+
+	other._hp = 0;
 }
-
-other._hp = 0;

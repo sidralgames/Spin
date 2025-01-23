@@ -1,9 +1,20 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
+drawflash = false;
+
+drawflashCont = 3;
+global.autoPitch = false;
+isPaused = false;
+
+global.lives = 3;
+lastX = x;
+lastY = y;
+newPosX = lastX+random_range(40,-40)
+newPosY = lastY+random_range(40,-40)
 global.tempoCorrupted = false;
 global.vinylSpin = -0.2;
 global.weapon = "Gun";
-global.energyTotal = 100;
+global.energyTotal = 150;
 global.level = 1;
 //-------COLORS--------//
 global.red = make_color_rgb(228, 59, 68); 
@@ -13,6 +24,39 @@ global.lightBlue = make_color_rgb(44,232, 245);
 global.blue = make_color_rgb(0,149,233);
 global.dark = make_color_rgb(38,43,68);
 global.darkPalette = make_color_rgb(38,43,68);// 
+global.pink = make_color_rgb(255,0,203);// 
+
+
+
+//DemonColor
+global.yellowArray = [254/255, 255/255, 1/255, 1]; 
+global.BlueArray = [0/255, 106/255, 244/255, 1];
+
+//NachoColor
+global.pinkArray = [255/255, 0/255, 203/255, 1]; 
+global.lightBlueArray = [0/255, 199/255, 255/255, 1];
+
+global.lighPinkArray = [255/255, 0/255, 203/255, 1];
+global.brightArray = [255/255, 255/255, 255/255, 1];
+
+changingLevel = false;
+
+
+
+// Store the FX struct, and its parameters struct, in variables
+color_fx = layer_get_fx("EffectColor");
+color_fx_params = fx_get_parameters(color_fx);
+
+noise_fx = layer_get_fx("Noise");
+noise_fx_params = fx_get_parameters(noise_fx);
+//15 235 247
+//0 106 244
+//254 255 1
+
+alarm[0] = 20;
+
+
+
 
 
 

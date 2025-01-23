@@ -18,10 +18,11 @@ else
 		image_xscale =1;
 		image_yscale =1;
 		
-		if (creatingUpgrades = false)
+		if (creatingUpgrades = false) && (alarm[0] <= 0)
 		{
-			instance_create_layer(x+100, y+20, "BulletsDown", o_upgradeGun);
-			instance_create_layer(x-100, y, "BulletsDown", o_upgradeEnergy);
+			screenShake(2,20,1)
+			instance_create_layer(x+130, y, "BulletsDown", o_upgradeGun);
+			instance_create_layer(x-130, y, "BulletsDown", o_upgradeEnergy);
 			creatingUpgrades = true;
 		}
 	}
@@ -37,6 +38,10 @@ if instance_exists(o_viniloUpgrades)
 
 if !instance_exists(o_upgradesFather) && (creatingUpgrades = true)
 {
+	with(o_main)
+	{
+		changingLevel = true;
+	}
 	screenShake(6,120,4)
 	exploOrange = instance_create_layer(x, y, "BulletsDown", o_explosion);
 	exploOrange.sprite_index = s_exploOrange;

@@ -26,6 +26,8 @@ function Die()
 	}
 	else
 	{
+		lastTouchedX = x;
+		lastTouchedY = y;
 		contDie = contDieMax;
 	}
 
@@ -51,6 +53,10 @@ function Die()
 	
 		if (image_xscale <= 0.1)
 		{
+			
+			o_main.lastX = lastTouchedX;
+			o_main.lastY = lastTouchedY;
+			global.lives -=1;
 			instance_destroy();
 		}
 	}
@@ -58,6 +64,9 @@ function Die()
 	
 	if (_hp <= 0)
 	{
+		o_main.lastX = x;
+		o_main.lastY = y;
+		global.lives -=1;
 		instance_destroy();
 	}
 }

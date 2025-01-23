@@ -58,4 +58,3 @@ if (crt_gui_bezel_enabled) { draw_sprite_stretched(spr_CRT_nes_bezel, -1, 0, 0, 
 //draw_text(50,96, "Noise enabled = " +          string(var_use_noise) +				  " press A to change");
 //draw_text(50,108,"Random noise strength = " +  string(var_noise_strength) +			  " press T,G to change");
 //draw_text(50,120,"Brightness = " +			  string(var_brightness) +				  " press Y,H to change");
-////draw_text(50,132,"GUI bezel enabled = " +	  string(crt_gui_bezel_enabled) +		  " press SPACE to change");

@@ -12,3 +12,5 @@ theta = 0;
 checkPos = false;
 contPick = 50;
 contAlpha = 6;
+canBePicked = false;
+instance_create_layer(x,y,"BulletsDown", o_upgradeEffect);

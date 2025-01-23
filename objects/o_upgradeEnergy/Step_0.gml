@@ -13,23 +13,7 @@ if (checkPos = false)
 	
 	contPick --;
 	
-	if (contPick > 0)
-	{
-		contAlpha --;
-		if (contAlpha > 3)
-		{
-			image_alpha = 0.8;
-		}
-		else
-		{
-			image_alpha = 0.3;
-		}
-		
-		if (contAlpha<=0)
-		{
-			contAlpha = 10
-		}
-	}
+	
 	
 	if (contPick <=0)
 	{

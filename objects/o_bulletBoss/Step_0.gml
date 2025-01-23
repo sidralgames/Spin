@@ -67,7 +67,7 @@ if (image_xscale >= scaleExplo)
 }
 
 
-if (!collision_circle(x,y,3,o_vinilo,true,true)) && (speed <= 0.25)
+if (!collision_circle(x,y,3,o_vinilo,true,true)) && (speed <= 0.25) && instance_exists(o_vinilo)
 {
 	contDie --;
 	if (contDie <=0)

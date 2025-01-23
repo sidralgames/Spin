@@ -24,7 +24,7 @@ if instance_exists(follow) && !instance_exists(o_MainMenu)
 }
 else if instance_exists(o_MainMenu)
 {
-		x_point_to_move_camera_to= room_width/2 - 310;
+		x_point_to_move_camera_to= room_width/2 - 320;
 		y_point_to_move_camera_to= room_height/2;
 		x=lerp(x,x_point_to_move_camera_to,0.05);
 		y=lerp(y,y_point_to_move_camera_to,0.05);

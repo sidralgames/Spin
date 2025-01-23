@@ -1,5 +1,9 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
+comesFromDeath = false;
+contComesFromDeath = 120;
+lastTouchedX = x;
+lastTouchedY = y;
 runningAgainstDisc = false;
 slowedFromAHit = false;
 goSlow = false;

@@ -1,19 +1,22 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
-with(other)
+if (dying = false)
 {
-	if (tocado = false)
+	with(other)
 	{
-		tocado = true;
-		_hp -=1;
+		if (tocado = false)
+		{
+			tocado = true;
+			_hp -=1;
 	
-		CheckCableToDestroy();
-		screenShake(3,30,2);
+			CheckCableToDestroy();
+			screenShake(3,30,2);
 	
-		slowedFromAHit = true;
-		alarm[1] = invincibleTime;
+			slowedFromAHit = true;
+			alarm[1] = invincibleTime;
+		}
+
 	}
 
+	image_xscale = scaleExplo;
 }
-
-image_xscale = scaleExplo;

@@ -11,7 +11,18 @@ key_R2 = gamepad_button_check(0, gp_shoulderrb)
 key_L2 = gamepad_button_check(0, gp_shoulderlb)
 key_L1_Pressed = gamepad_button_check_pressed(0, gp_shoulderl)
 
-
+if (comesFromDeath)
+{
+	image_alpha = random_range(0.2,0.8);
+	tocado = true;
+	contComesFromDeath --;
+	if (contComesFromDeath <= 0)
+	{
+		comesFromDeath = false;
+		tocado = false;
+		image_alpha = 1;
+	}
+}
 
 if (slowedFromAHit = false)
 {
@@ -20,20 +31,22 @@ if (slowedFromAHit = false)
 		if (key_L2) && (global.energy > 0) && !(key_R2)
 		{
 			global.energy-= slowMoEnergy;
-			SlowDown();
+			SlowDown(0.5, 0.03);
 		}
 		else if (key_R2)  && !(key_L2)
 		{
 			FWD();
 		}
-		else
+		else if (global.autoPitch = false)
 		{
 			o_aguja.dist-= o_aguja.fac * global.relativeSpeed;
 	
 			if (global.slowed = true)
 			{
-				global.relativeSpeed = lerp(global.relativeSpeed, 1, 0.05)
-				if(global.relativeSpeed > 0.8)
+				global.relativeSpeed = lerp(global.relativeSpeed, 1, 0.05);
+				pitch = min(1,global.relativeSpeed + songPitchOff);
+				audio_emitter_pitch(global.audioEmitter, pitch);
+				if(global.relativeSpeed > 0.9)
 				{
 					pitch = 1;
 					audio_emitter_pitch(global.audioEmitter, pitch);
@@ -45,6 +58,8 @@ if (slowedFromAHit = false)
 			if (global.fwd = true)
 			{
 				global.relativeSpeed = lerp(global.relativeSpeed, 1, 0.05)
+				pitch = max(1,global.relativeSpeed-0.25);
+				audio_emitter_pitch(global.audioEmitter, pitch);
 				if(global.relativeSpeed < 1.2)
 				{
 					pitch = 1;
