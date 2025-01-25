@@ -156,6 +156,7 @@
     {"id":{"name":"s_discoVinilo","path":"sprites/s_discoVinilo/s_discoVinilo.yy",},},
     {"id":{"name":"s_discoViniloTribal","path":"sprites/s_discoViniloTribal/s_discoViniloTribal.yy",},},
     {"id":{"name":"s_enemy","path":"sprites/s_enemy/s_enemy.yy",},},
+    {"id":{"name":"s_enemyDisc","path":"sprites/s_enemyDisc/s_enemyDisc.yy",},},
     {"id":{"name":"s_exploBlue","path":"sprites/s_exploBlue/s_exploBlue.yy",},},
     {"id":{"name":"s_exploOrange","path":"sprites/s_exploOrange/s_exploOrange.yy",},},
     {"id":{"name":"s_galletaUpgrades","path":"sprites/s_galletaUpgrades/s_galletaUpgrades.yy",},},

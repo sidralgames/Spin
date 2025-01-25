@@ -34,7 +34,7 @@ if instance_exists(o_boss)
 		
 		case s_bossDemon:
 		{
-			global.vinylAlpha = 0.75;
+			global.vinylAlpha = 0.85;
 			global.vinylColor = global.lightBlue;
 		}break;
 		

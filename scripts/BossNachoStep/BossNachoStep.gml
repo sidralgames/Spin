@@ -15,7 +15,14 @@ function BossNachoStep()
 		
 		if (_hp < 75)
 		{
-			attack = choose("BulletTempo","SingleBullet", "DobleBullet", "Pattern1", "Roto");
+			if (canRoto)
+			{
+				attack = choose("BulletTempo","SingleBullet", "DobleBullet", "Pattern1", "Roto");
+			}
+			else
+			{
+				attack = choose("BulletTempo","SingleBullet", "DobleBullet", "Pattern1");
+			}
 		}
 		else 
 		{

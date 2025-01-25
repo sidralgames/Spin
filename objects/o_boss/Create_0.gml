@@ -15,7 +15,8 @@ angleRotoBoss = irandom(360)
 warning = false;
 anglePicked = 0;
 contRotoTime = 0;
-
+angleOff = random_range(-10,10);
+distOff = random_range(-20,60);
 canRoto = true;
 switch(global.level)
 {

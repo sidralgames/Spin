@@ -69,7 +69,7 @@ if (changingLevel = true)
 	}
 }
 
-if !instance_exists(o_player)
+if !instance_exists(o_player) && (global.lives > 0)
 {
 	newPosX = lastX+random_range(100,-100)
 	newPosY = lastY+random_range(100,-100)
@@ -81,7 +81,9 @@ if !instance_exists(o_player)
 		DestroyCablesAndJacks();
 		newPlayer = instance_create_layer(newPosX, newPosY, "Player", o_player);
 		newPlayer.comesFromDeath = true;
-
 	}
-
+}
+else
+{
+	global.gameOver = true;
 }

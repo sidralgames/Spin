@@ -39,8 +39,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"s_enemy",
-    "path":"sprites/s_enemy/s_enemy.yy",
+    "name":"s_enemyDisc",
+    "path":"sprites/s_enemyDisc/s_enemyDisc.yy",
   },
   "spriteMaskId":null,
   "visible":true,

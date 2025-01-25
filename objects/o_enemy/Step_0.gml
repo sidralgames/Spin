@@ -1,13 +1,21 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
 bossPush = bossSpin * min(1.5, global.relativeSpeed);
-
+image_angle+=spinSpeed;
 totalPush = bossPush;
 totalPush = clamp(totalPush, -totalMaxSpeed, totalMaxSpeed);
 
 if (theta <= 0)
 {
 	theta =+ 360;	
+}
+if (image_angle <= 0)
+{
+	image_angle =+ 360;	
+}
+if (image_angle >= 360)
+{
+	image_angle = 0;	
 }
 
 if (contCanChase >= 0) && (canChase = false)
@@ -88,7 +96,7 @@ if (chasingPlayer = true) && (distToPlayer >= 200)
 if (chasingPlayer) && (alarm[3] <= 0) && (bounced = false)
 {
 
-	
+	spinSpeed = lerp(spinSpeed, 10, 0.05)* global.relativeSpeed;
 	x += hspeed* global.relativeSpeed;
 	y += vspeed* global.relativeSpeed;
 		
@@ -121,6 +129,7 @@ if (chasingPlayer) && (alarm[3] <= 0) && (bounced = false)
 
 if (chasingPlayer = false) 
 {
+	spinSpeed = lerp(spinSpeed, global.vinylSpin, 0.05) * global.relativeSpeed;
 	speed = lerp(speed, 0, 0.05);
 	theta += totalPush;
 	x = cx + lengthdir_x(r, theta) 
@@ -130,6 +139,7 @@ if (chasingPlayer = false)
 
 if (alarm[3] > 0) 
 {
+	spinSpeed = lerp(spinSpeed, 10, 0.05);
 	contCanChase = 60;
 	canChase = false;
 	direction = newDir + random_range(-30,30);
@@ -148,6 +158,7 @@ if (alarm[3] > 0)
 
 if (bounced)
 {
+	spinSpeed = lerp(spinSpeed, 10, 0.05);
 	if (alarm[4] > 0)
 	{
 		if instance_exists(nextWall)

@@ -20,6 +20,7 @@ function BulletAttack(_attack)
 							{
 								pickAngle = true;
 								anglePicked = irandom(360);
+								angleRotoBoss = anglePicked + image_angle;
 							}
 						
 						
@@ -32,13 +33,27 @@ function BulletAttack(_attack)
 					
 						angleRotoBoss = anglePicked + image_angle;
 					
-						if (warning = false)
+						if (warning = false) && (contWarning <= 2)
 						{
+							
 							createRoto = true;
 						
 							screenShake(5,60,2)
 							if (contWarning <= 0)
 							{
+								for (var i=0; i<10; i++)
+								{
+									angleOff = random_range(-10,10);
+									distOff = random_range(-20,60);
+									scaleExplo = random_range(0.3,0.6);
+									exploRoto = instance_create_layer(x+ lengthdir_x(100+distOff, angleRotoBoss-90+angleOff),y + lengthdir_y(100+distOff, angleRotoBoss-90+angleOff), "Boss", o_explosion)
+									exploRoto.sprite_index = s_exploOrange;
+									exploRoto.image_xscale = scaleExplo;
+									exploRoto.image_yscale = scaleExplo;
+									
+								}
+								
+								
 								pickAngle = false;
 								contAttack = 0;
 								canChangeAttack = true;
@@ -50,6 +65,7 @@ function BulletAttack(_attack)
 					}
 					else
 					{	
+						createRoto = false;
 						drawflashRoto = false;
 						drawflashCont = 0;
 						_attack = choose("SingleBullet", "DobleBullet", "BulletRound")
@@ -209,6 +225,7 @@ function BulletAttack(_attack)
 							{
 								pickAngle = true;
 								anglePicked = irandom(360);
+								angleRotoBoss = anglePicked + image_angle;
 							}
 						
 						
@@ -221,13 +238,27 @@ function BulletAttack(_attack)
 					
 						angleRotoBoss = anglePicked + image_angle;
 					
-						if (warning = false)
+						if (warning = false) && (contWarning <= 2)
 						{
+							
 							createRoto = true;
 						
 							screenShake(5,60,2)
 							if (contWarning <= 0)
 							{
+								for (var i=0; i<10; i++)
+								{
+									angleOff = random_range(-10,10);
+									distOff = random_range(-20,60);
+									scaleExplo = random_range(0.3,0.6);
+									exploRoto = instance_create_layer(x+ lengthdir_x(100+distOff, angleRotoBoss-90+angleOff),y + lengthdir_y(100+distOff, angleRotoBoss-90+angleOff), "Boss", o_explosion)
+									exploRoto.sprite_index = s_exploOrange;
+									exploRoto.image_xscale = scaleExplo;
+									exploRoto.image_yscale = scaleExplo;
+									
+								}
+								
+								
 								pickAngle = false;
 								contAttack = 0;
 								canChangeAttack = true;
@@ -239,6 +270,7 @@ function BulletAttack(_attack)
 					}
 					else
 					{	
+						createRoto = false;
 						drawflashRoto = false;
 						drawflashCont = 0;
 						_attack = choose("SingleBullet", "DobleBullet", "BulletRound")
@@ -398,6 +430,7 @@ function BulletAttack(_attack)
 							{
 								pickAngle = true;
 								anglePicked = irandom(360);
+								angleRotoBoss = anglePicked + image_angle;
 							}
 						
 						
@@ -410,13 +443,27 @@ function BulletAttack(_attack)
 					
 						angleRotoBoss = anglePicked + image_angle;
 					
-						if (warning = false)
+						if (warning = false) && (contWarning <= 2)
 						{
+							
 							createRoto = true;
 						
 							screenShake(5,60,2)
 							if (contWarning <= 0)
 							{
+								for (var i=0; i<10; i++)
+								{
+									angleOff = random_range(-10,10);
+									distOff = random_range(-20,60);
+									scaleExplo = random_range(0.3,0.6);
+									exploRoto = instance_create_layer(x+ lengthdir_x(100+distOff, angleRotoBoss-90+angleOff),y + lengthdir_y(100+distOff, angleRotoBoss-90+angleOff), "Boss", o_explosion)
+									exploRoto.sprite_index = s_exploOrange;
+									exploRoto.image_xscale = scaleExplo;
+									exploRoto.image_yscale = scaleExplo;
+									
+								}
+								
+								
 								pickAngle = false;
 								contAttack = 0;
 								canChangeAttack = true;
@@ -428,11 +475,13 @@ function BulletAttack(_attack)
 					}
 					else
 					{	
+						createRoto = false;
 						drawflashRoto = false;
 						drawflashCont = 0;
 						_attack = choose("SingleBullet", "DobleBullet", "BulletRound")
 					}
 				}break;
+				
 				case "BulletTempo":
 				{
 					if (o_tempo.contCorrupted <= 0)

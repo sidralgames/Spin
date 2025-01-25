@@ -9,9 +9,12 @@ draw_set_halign(fa_right)
 
 //if instance_exists(o_boss)
 //{
-//	draw_text_color(600,40,"BossHP: " + string(o_boss._hp),c_white,c_white,c_white,c_white,1)
+	//draw_text_color(600,40,"drawflash" + string(drawflash),c_white,c_white,c_white,c_white,1)
+	//draw_text_color(600,60,"drawflashPlayerHitted" + string(drawflashPlayerHitted),c_white,c_white,c_white,c_white,1)
+	//draw_text_color(600,80,"drawflashRoto" + string(drawflashRoto),c_white,c_white,c_white,c_white,1)
+	//draw_text_color(600,100,"drawflashCont" + string(drawflashCont),c_white,c_white,c_white,c_white,1)
 	
-	
+	draw_text_color(600,30,"Lives: " + string(global.lives),c_white,c_white,c_white,c_white,1)
 //}
 
 if keyboard_check_pressed(vk_space)
@@ -41,11 +44,12 @@ if (drawflashPlayerHitted = true)
 
 if (drawflashRoto=true)
 {
-	DrawFlashAndSlow(0.025, 0.7, 0.3, c_white);
+	DrawFlashAndSlow(0.03, 0.7, 0.3, c_white);
 }
 
 if (drawflashCont <=0)
 {
+	drawflashCont = 0;
 	if (drawflash)
 	{
 		drawflash=false;

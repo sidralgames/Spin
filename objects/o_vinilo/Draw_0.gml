@@ -56,16 +56,17 @@ if (surface_exists(surface))
 
 				draw_set_alpha(0);
 				draw_sprite_ext(o_boss.rotoSprite,0,x,y,1,1,o_boss.angleRotoBoss - _angle, image_blend, image_alpha);
+				
 				gpu_set_blendmode(bm_normal);
 				surface_reset_target();
 				draw_surface(surface,0,0);
-
-				getImage = true;
 				with(o_main)
 				{
 					drawflashRoto = true;
 					drawflashCont = 20;
 				}
+				getImage = true;
+				
 			
 			}
 		}
