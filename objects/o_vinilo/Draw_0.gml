@@ -37,11 +37,48 @@ if (surface_exists(surface))
 			
 		}
 	}
+	if instance_exists(o_boss)
+	{
+		if (o_boss.createRoto)
+		{
+			if (getImage = false)
+			{
+				image_angle = 0;
+				draw_set_alpha(0);
+				surface_set_target(surface);
+				draw_sprite_ext(sprite_index,discImage,x,y,1,1,image_angle, image_blend, image_alpha);
+				//draw_sprite_ext(sprite_index,discImage,x,y,1,1,image_angle, image_blend, image_alpha);
+				surface_reset_target();
+				draw_surface(surface,0,0)
+				surface_set_target(surface);
 
-	
-		
-	
-	
+				gpu_set_blendmode(bm_subtract);
+
+				draw_set_alpha(0);
+				draw_sprite_ext(o_boss.rotoSprite,0,x,y,1,1,o_boss.angleRotoBoss - _angle, image_blend, image_alpha);
+				gpu_set_blendmode(bm_normal);
+				surface_reset_target();
+				draw_surface(surface,0,0);
+
+				getImage = true;
+				with(o_main)
+				{
+					drawflashRoto = true;
+					drawflashCont = 20;
+				}
+			
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+//SAVE NEW SPRITE
 	if (getImage = true)
 	{
 		draw_set_alpha(0);
@@ -54,6 +91,10 @@ if (surface_exists(surface))
 		sprite_index = spr_custom;
 		image_angle = _angle;
 		spinCreateHole = false;
+		if (instance_exists(o_boss))
+		{
+			o_boss.createRoto = false;
+		}
 		surface_reset_target();
 		surface_free(surface);
 		getImage = false;

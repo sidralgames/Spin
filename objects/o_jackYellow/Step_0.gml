@@ -96,7 +96,7 @@ if !instance_exists(o_cableYellow)
 	if (alarm[0] <= 0)
 	{
 		
-		theta += totalPush * global.relativeSpeed;
+		theta += totalPush;
 		x = cx + lengthdir_x(r, theta) 
 		y = cy + lengthdir_y(r, theta)
 	

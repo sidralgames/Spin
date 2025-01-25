@@ -2,7 +2,6 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function BossNachoStep()
 {
-	image_angle -= rotSpeedBoss*global.relativeSpeed;
 
 	if (contAttack > 0)
 	{
@@ -16,18 +15,34 @@ function BossNachoStep()
 		
 		if (_hp < 75)
 		{
-			attack = choose("BulletTempo","SingleBullet", "DobleBullet", "Pattern1");
+			attack = choose("BulletTempo","SingleBullet", "DobleBullet", "Pattern1", "Roto");
 		}
 		else 
 		{
-			attack = choose("BulletTempo","DobleBullet","BulletRound","DobleBullet")
+			attack = choose("DobleBullet","BulletRound","DobleBullet")
+		}
+		
+		if (attack = "Roto") && (canRoto)
+		{
+			warning = true;
+			rotoSprite = choose(s_rotoBoss1,s_rotoBoss2,s_rotoBoss3);
 		}
 	}
-
+	
+	if (contRotoTime >= 0)
+	{
+		contRotoTime--;	
+		if contRotoTime <= 0
+		{
+			canRoto = true;
+		}
+	}
+	
 	BulletAttack(attack);
 
 
 	WallAttack(0,2,choose(50,75),35);
+
 
 
 	if (needleAttack) && instance_exists(o_player)

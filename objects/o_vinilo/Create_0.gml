@@ -1,9 +1,30 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
 sprite_index = s_discoVinilo;
+
 x = room_width/2;
 y = room_height/2
-discImage = irandom(3);
+
+switch(global.level)
+{
+	case 1:
+	{
+		discImage = 0;
+	}break;
+	case 2:
+	{
+		discImage = irandom(1);
+	}break;
+	case 3:
+	{
+		discImage = irandom(3);
+	}break;
+	
+	default: 
+	{
+		discImage = irandom(3);
+	}break;
+}
 scaleRoto = 1;
 contGetImage = 20
 scale = 1;
@@ -30,3 +51,5 @@ viniloFake = instance_create_layer(x,y,"Vinyl",oViniloFake)
 viniloFake.sprite_index = sprite_index;
 viniloFake.image_speed = 0;
 viniloFake.image_index = discImage;
+viniloFake.image_alpha = global.vinylAlpha;
+viniloFake.image_blend = global.vinylColor;

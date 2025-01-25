@@ -1,7 +1,7 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
 
-global.vinylSpin = -0.2;
+global.vinylSpin = -0.1;
 sprite_index = s_discoVinilo;
 x = room_width/2;
 y = room_height/2

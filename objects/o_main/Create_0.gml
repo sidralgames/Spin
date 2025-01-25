@@ -1,6 +1,16 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
+global.vinylAlpha = 1;
+global.vinylColor = c_white;
+global.howToPlay = false;
+
+display_reset(0, false);
+global.customFont16= font_add("ChubbyChoo-SemiBold.ttf", 16, false, false, 32, 128);
+global.fireRateAux = 0;
+
 drawflash = false;
+drawflashRoto = false;
+drawflashPlayerHitted = false;
 
 drawflashCont = 3;
 global.autoPitch = false;
@@ -27,7 +37,7 @@ global.darkPalette = make_color_rgb(38,43,68);//
 global.pink = make_color_rgb(255,0,203);// 
 
 
-
+global.darkBlueArray = [1/255,19/255,143/255,1]
 //DemonColor
 global.yellowArray = [254/255, 255/255, 1/255, 1]; 
 global.BlueArray = [0/255, 106/255, 244/255, 1];
@@ -39,7 +49,10 @@ global.lightBlueArray = [0/255, 199/255, 255/255, 1];
 global.lighPinkArray = [255/255, 0/255, 203/255, 1];
 global.brightArray = [255/255, 255/255, 255/255, 1];
 
-changingLevel = false;
+global.yellowArray2 = [255/255, 255/255 ,1/255,1];
+
+changingLevel = true;
+
 
 
 

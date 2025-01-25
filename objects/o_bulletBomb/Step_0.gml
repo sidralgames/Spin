@@ -126,7 +126,7 @@ else
 
 if (speed <=0.25)
 {
-	theta += totalPush * global.relativeSpeed;
+	theta += totalPush;
 	x = cx + lengthdir_x(r, theta) 
 	y = cy + lengthdir_y(r, theta)
 }

@@ -2,22 +2,39 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function BossDemonStep()
 {
-	image_angle -= rotSpeedBoss*global.relativeSpeed;
 
 	if (contAttack > 0)
 	{
 		contAttack --;
 	}
-	if (contAttack <= 0)
+	if (contAttack <= 0) && (canChangeAttack)
 	{
-		contAttack = random_range(100,200)
+		bulletsCreated = 0;
+		contAttack = random_range(100,200);
+		
+		
 		if (_hp < 100)
 		{
-			attack = choose("BulletTempo","SingleBullet", "DobleBullet", "Pattern1", "SingleBullet", "DobleBullet", "Pattern1");
+			attack = choose("BulletTempo","SingleBullet", "DobleBullet", "Pattern1", "Roto");
 		}
 		else 
 		{
-			attack = choose("BulletTempo","BulletRound","DobleBullet","BulletRound","DobleBullet")
+			attack = choose("DobleBullet","BulletRound","DobleBullet")
+		}
+		
+		if (attack = "Roto") && (canRoto)
+		{
+			warning = true;
+			rotoSprite = choose(s_rotoBoss1,s_rotoBoss2,s_rotoBoss3);
+		}
+	}
+	
+	if (contRotoTime >= 0)
+	{
+		contRotoTime--;	
+		if contRotoTime <= 0
+		{
+			canRoto = true;
 		}
 	}
 

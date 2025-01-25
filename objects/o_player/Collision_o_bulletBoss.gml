@@ -6,7 +6,11 @@ if (inDash = false)
 	{
 		tocado = true;
 		_hp -=1;
-	
+		with(o_main)
+		{
+			drawflashPlayerHitted = true;
+			drawflashCont = 30;
+		}
 		CheckCableToDestroy();
 		screenShake(3,30,2);
 	

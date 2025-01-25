@@ -122,7 +122,7 @@ if (chasingPlayer) && (alarm[3] <= 0) && (bounced = false)
 if (chasingPlayer = false) 
 {
 	speed = lerp(speed, 0, 0.05);
-	theta += totalPush * global.relativeSpeed;
+	theta += totalPush;
 	x = cx + lengthdir_x(r, theta) 
 	y = cy + lengthdir_y(r, theta)
 	
@@ -173,7 +173,7 @@ if (bounced)
 	else
 	{
 		speed = 0;
-		theta += totalPush * global.relativeSpeed;
+		theta += totalPush;
 		x = cx + lengthdir_x(r, theta) 
 		y = cy + lengthdir_y(r, theta)
 				

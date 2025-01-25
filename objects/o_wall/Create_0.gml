@@ -27,4 +27,10 @@ switch(o_boss.spriteBoss)
 	}
 	break;
 	
+	case s_bossTribal:
+	{
+		sprite_index = s_wallTribal;
+	}
+	break;
+	
 }

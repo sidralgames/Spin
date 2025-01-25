@@ -8,7 +8,7 @@ function WallAttack(_minWalls, _maxWalls, _rate, _offset)
 		for (var i=0; i<totWall; i++)
 		{
 			dir = ((360 / totWall) * i) + offset;
-			bullet = instance_create_layer(x + lengthdir_x(40, dir),y + lengthdir_y(40, dir),"Bullets", o_wall);
+			bullet = instance_create_layer(x + lengthdir_x(43, dir),y + lengthdir_y(43, dir),"Bullets", o_wall);
 			bullet.speed = random_range(0.7, 0.8);
 			bullet.initialSpeed = random_range(0.7, 0.8);
 			bullet.direction = dir;
@@ -19,6 +19,10 @@ function WallAttack(_minWalls, _maxWalls, _rate, _offset)
 			if (destroy = 0)
 			{
 				instance_destroy(bullet)
+			}
+			else
+			{
+				scale = 1.15;
 			}
 		
 		}

@@ -81,17 +81,9 @@ else
 			global.tempoCorrupted = false;
 			o_tempo.corrupted = false;
 		}
-		
-		global.relativeSpeed = lerp(global.relativeSpeed, 0.2, 0.2)
-		o_aguja.dist-= o_aguja.fac * global.relativeSpeed;
-		songPitchOff = 0.2
-		pitch = min(1,global.relativeSpeed + songPitchOff);
-		audio_emitter_pitch(global.audioEmitter, pitch);
-		global.slowed = true;
-		
 	}
 	
-	if (global.relativeSpeed <= 0.3)
+	if (global.relativeSpeed <= 0.35)
 	{
 		
 		goSlow = true;
@@ -150,7 +142,7 @@ r = clamp(r, 50, 190);
 dirH = key_left - key_right;
 
 bossSpin = global.vinylSpin;
-bossPush = bossSpin * min(1.5, global.relativeSpeed);
+bossPush = bossSpin * global.relativeSpeed;
 
 //_hpush += dirH * global.walkAccelerationH;
 //_vpush += dirV * global.walkAccelerationV;
@@ -379,7 +371,7 @@ if (dying = false)
 							realspeed = lerp(realspeed, 0.6 * (_speed + abs((bossSpin/4) * global.relativeSpeed)), 0.1);
 						}
 					
-						speed = realspeed * min(1, global.relativeSpeed);
+						speed = 1 * min(1, global.relativeSpeed);
 					
 						x += hspeed* global.relativeSpeed;
 						y += vspeed* global.relativeSpeed;
@@ -387,7 +379,7 @@ if (dying = false)
 					}
 					else
 					{
-						theta += totalPush * global.relativeSpeed;
+						theta += totalPush;
 						x = cx + lengthdir_x(r, theta) 
 						y = cy + lengthdir_y(r, theta)
 					
@@ -442,7 +434,7 @@ if (dying = false)
 				}
 				else
 				{	
-					theta += totalPush * global.relativeSpeed;
+					theta += totalPush;
 					x = cx + lengthdir_x(r, theta) 
 					y = cy + lengthdir_y(r, theta)
 				}
@@ -467,7 +459,8 @@ else
 }
 
 Die();
-	
+
+
 
 
 

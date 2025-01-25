@@ -20,3 +20,32 @@ if (image_angle <= 0)
 {
 	image_angle+=360;
 }
+
+
+if instance_exists(o_boss)
+{
+	switch(o_boss.spriteBoss)
+	{
+		case s_bossNacho:
+		{
+			global.vinylAlpha = 1;
+			global.vinylColor = global.pink;
+		}break;
+		
+		case s_bossDemon:
+		{
+			global.vinylAlpha = 0.75;
+			global.vinylColor = global.lightBlue;
+		}break;
+		
+		case s_bossTribal:
+		{
+			global.vinylAlpha = 0.95;
+			global.vinylColor = global.yellow
+		}break;
+				
+	}
+}
+
+image_alpha = global.vinylAlpha;
+image_blend = global.vinylColor;

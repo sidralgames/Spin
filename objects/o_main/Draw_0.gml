@@ -28,21 +28,37 @@ if keyboard_check_pressed(vk_space)
 
 //draw_text(80, 320, string(trackpos))
 
+
 if (drawflash=true)
 {
-	global.autoPitch = true;
-	with(o_player)
-	{
-		SlowDown(0, 0.6);
-	}
-	drawflashCont --;
-	draw_set_alpha(drawflashCont * 0.02)
-	draw_set_color(c_white)
-	draw_rectangle(__view_get( e__VW.XView, 0 )+0,__view_get( e__VW.YView, 0 )+0,__view_get( e__VW.XView, 0 )+640,__view_get( e__VW.YView, 0 )+360,false)	
+	DrawFlashAndSlow(0.02, 0, 0.6, c_white);
+}
+
+if (drawflashPlayerHitted = true)
+{
+	DrawFlashAndSlow(0.025, 0.3, 0.15, c_red);
+}
+
+if (drawflashRoto=true)
+{
+	DrawFlashAndSlow(0.025, 0.7, 0.3, c_white);
 }
 
 if (drawflashCont <=0)
 {
-	drawflash=false;
+	if (drawflash)
+	{
+		drawflash=false;
+	}
+	if (drawflashRoto)
+	{
+		drawflashRoto = false
+	}
+	
+	if (drawflashPlayerHitted)
+	{
+		drawflashPlayerHitted = false
+	}
+	
 	global.autoPitch = false;
 }

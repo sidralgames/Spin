@@ -6,7 +6,7 @@ _visible = true;
 factor = 0.08;
 
 initialPlay =300;
-//initialTut = 170;
-initialOption = 330;
+initialHow = 330;
+initialOption = 360;
 //initialStat = 280;
-initialQuit = 360;
+initialQuit = 390;

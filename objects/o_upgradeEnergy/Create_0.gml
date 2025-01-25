@@ -2,7 +2,7 @@
 // Puede escribir su código en este editor
 cx = room_width/2;
 cy = room_height/2;
-
+nameUp = "Energy"
 bossSpin = global.vinylSpin;
 totalPush = 0;
 totalMaxSpeed = 3;

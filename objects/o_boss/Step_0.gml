@@ -1,11 +1,24 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
-if !instance_exists(o_MainMenu)
+image_yscale = scale;
+image_xscale = scale;
+
+if (scale > 1)
+{
+	scale = lerp(scale,1,0.05);	
+	
+	if (scale < 1.03)
+	{
+		scale = 1;
+	}
+}
+if !instance_exists(o_MainMenu) && (global.howToPlay = false)
 {
 	if (contToStart >= 0)
 	{
 		contToStart --;
 	}
+	
 	if (contToStart <= 0) || (_hp < _hpMax)
 	{
 	
@@ -19,6 +32,9 @@ if !instance_exists(o_MainMenu)
 				  instance_create_layer(x-100,y,"Enemies", o_enemy);
 			}
 		}
+		
+		image_angle -= -global.vinylSpin*global.relativeSpeed;
+		
 		switch(spriteBoss)
 		{
 			case s_bossNacho:
@@ -32,16 +48,22 @@ if !instance_exists(o_MainMenu)
 				BossDemonStep();
 			}
 			break;
+			
+			case s_bossTribal:
+			{
+				BossTribalStep();
+			}
+			break;
 		}
 	}
 	else
 	{
-		image_angle -= rotSpeedBoss*global.relativeSpeed;
+		image_angle -= -global.vinylSpin*global.relativeSpeed;
 	}
 }
 else
 {
-	image_angle -= rotSpeedBoss*global.relativeSpeed;
+	image_angle -= -global.vinylSpin*global.relativeSpeed;
 }
 
 if (image_angle <= 0)
