@@ -1,5 +1,15 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
+if (changeSongCollection = false)
+{
+	if (global.song != snd_upgrade)
+	{
+		audio_stop_sound(global.song);
+		global.song = snd_upgrade;
+		audio_play_sound_on(global.audioEmitter,global.song, true, 100,,37);
+		changeSongCollection = true;
+		}
+}
 
 if (image_xscale <=1.2) && (scaled = false)
 {

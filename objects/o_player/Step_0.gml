@@ -206,7 +206,7 @@ if (dashTime <=0) && (inDash = true)
 
 
 
-if (global.energy < global.energyTotal) && (alarm[0] <= 0)
+if (global.energy < global.energyTotal) && (alarm[0] <= 0) && (!key_L2)
 {
 	global.energy += dashEnergyRecover;
 }

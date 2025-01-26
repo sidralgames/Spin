@@ -142,12 +142,14 @@ if (global.collection)
 	{
 			//audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 		selectedVinyl -=1;	
+		changeSongCollection = false;
 	}
 
 	if (key_rightP)
 	{
 			//audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
-		selectedVinyl +=1;	
+		selectedVinyl +=1;
+		changeSongCollection = false;
 	}
 		
 
@@ -173,6 +175,16 @@ if (global.collection)
 			}
 			else
 			{
+				if (changeSongCollection = false)
+				{
+					if (global.song != snd_song1)
+					{
+						audio_stop_sound(global.song);
+						global.song = snd_song1;
+						audio_play_sound_on(global.audioEmitter,global.song, true, 100,,65);
+						changeSongCollection = true;
+					}
+				}
 				image_blend = c_white;
 				global.vinylAlpha = 1;
 				global.vinylColor = global.pink;
@@ -195,6 +207,16 @@ if (global.collection)
 			}
 			else
 			{
+				if (changeSongCollection = false)
+				{
+					if (global.song != snd_songDemon)
+					{
+						audio_stop_sound(global.song);
+						global.song = snd_songDemon;
+						audio_play_sound_on(global.audioEmitter,global.song, true, 100,,0);
+						changeSongCollection = true;
+					}
+				}
 				image_blend = c_white;
 				global.vinylAlpha = 0.75;
 				global.vinylColor = global.lightBlue;

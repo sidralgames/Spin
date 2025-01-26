@@ -1,5 +1,6 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
+changeSongCollection = false;
 drawLocked = false;
 selectedVinyl = 0;
 rotoSprite = choose(s_rotoBoss1,s_rotoBoss2,s_rotoBoss3);
@@ -25,11 +26,18 @@ switch(global.level)
 {
 	case 1:
 	{
+		if (global.song != snd_song1)
+		{
+			audio_stop_sound(global.song);
+			global.song = snd_song1;
+			audio_play_sound_on(global.audioEmitter,global.song, true, 100,,65);
+		}
+		
 		spriteBoss = choose(s_bossNacho);
 		
 		bossIsInCollection = global.bossNachoCollection;
 		
-		_hpMax = 75;
+		_hpMax = 80;
 		rotSpeedBoss = 0.5;
 		_hp = _hpMax;
 
@@ -51,10 +59,17 @@ switch(global.level)
 	
 	case 2:
 	{
+		if (global.song != snd_songDemon)
+		{
+			audio_stop_sound(global.song);
+			global.song = snd_songDemon;
+			audio_play_sound_on(global.audioEmitter,global.song, true, 100,,0);
+		}
+		
 		spriteBoss = choose(s_bossDemon);
 		
 		bossIsInCollection = global.bossDemonCollection;
-		_hpMax = 100;
+		_hpMax = 110;
 		rotSpeedBoss = 0.5;
 		_hp = _hpMax;
 
@@ -77,7 +92,7 @@ switch(global.level)
 	{
 		spriteBoss = choose(s_bossTribal);
 		bossIsInCollection = global.bossTribalCollection;
-		_hpMax = 150;
+		_hpMax = 160;
 		rotSpeedBoss = 0.5;
 		_hp = _hpMax;
 

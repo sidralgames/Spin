@@ -63,7 +63,7 @@ if (alarm[0] <= 0)
 					case 3:
 					{
 						global.collection = true;
-						instance_destroy();
+						_visible = false;
 		
 					}break;
 					

@@ -145,6 +145,8 @@
     {"id":{"name":"WallAttack","path":"scripts/WallAttack/WallAttack.yy",},},
     {"id":{"name":"shd_CRT_Shader","path":"shaders/shd_CRT_Shader/shd_CRT_Shader.yy",},},
     {"id":{"name":"snd_song1","path":"sounds/snd_song1/snd_song1.yy",},},
+    {"id":{"name":"snd_songDemon","path":"sounds/snd_songDemon/snd_songDemon.yy",},},
+    {"id":{"name":"snd_upgrade","path":"sounds/snd_upgrade/snd_upgrade.yy",},},
     {"id":{"name":"s_Back","path":"sprites/s_Back/s_Back.yy",},},
     {"id":{"name":"s_bolaPithc","path":"sprites/s_bolaPithc/s_bolaPithc.yy",},},
     {"id":{"name":"s_bossAle","path":"sprites/s_bossAle/s_bossAle.yy",},},

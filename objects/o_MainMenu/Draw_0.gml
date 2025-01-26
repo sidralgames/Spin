@@ -66,8 +66,8 @@ if (_visible)
 				draw_sprite_ext(s_play, 0,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialPlay,0.6,0.6,0,image_blend,  0.8)
 				draw_sprite_ext(s_howTo, 0,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialHow,0.6,0.6,0,image_blend,  0.8)	
 				draw_sprite_ext(s_options, 0,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialOption,0.7,0.7,0,image_blend,  0.8)	
-				draw_sprite_ext(s_collection, 0,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialCollection,1.2,1.2,0,image_blend,  0.8)
-				draw_sprite_ext(s_quit, 1,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialQuit,0.7,0.7,0,image_blend, image_alpha)		
+				draw_sprite_ext(s_collection, 0,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialCollection,1.2,1.2,0,image_blend,  image_alpha)
+				draw_sprite_ext(s_quit, 1,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialQuit,0.7,0.7,0,image_blend, 0.8)		
 			}break;
 			
 			case 4:
@@ -87,5 +87,10 @@ if (_visible)
 		}
 }
 
-
+if (global.collection)
+{
+	initialCollection =  lerp(initialCollection, 50,factor);
+	initialCollectionX = lerp(initialCollectionX, 120,factor);
+	draw_sprite_ext(s_collection, 0,  __view_get( e__VW.XView, 0 )+ initialCollectionX,__view_get( e__VW.YView, 0 )+initialCollection,1,1,0,image_blend,  1)	
+}
 

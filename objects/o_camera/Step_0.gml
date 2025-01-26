@@ -2,7 +2,7 @@
 // Puede escribir su código en este editor
 Controls_Input()
 
-if instance_exists(follow) && !instance_exists(o_MainMenu)
+if instance_exists(follow) && (global.playing = true) || (global.collection = true)
 {
 	var axisrh = gamepad_axis_value(0, gp_axisrh);
 	var axisrv = gamepad_axis_value(0, gp_axisrv);
