@@ -22,7 +22,7 @@ if (image_angle <= 0)
 }
 
 
-if instance_exists(o_boss)
+if instance_exists(o_boss) && (global.collection = false)
 {
 	switch(o_boss.spriteBoss)
 	{

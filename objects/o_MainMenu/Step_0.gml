@@ -20,14 +20,14 @@ if (alarm[0] <= 0)
 		}
 		
 
-			if (selected > 3)
+			if (selected > 4)
 			{
 				selected = 0;	
 			}
 
 			if (selected < 0)
 			{
-				selected = 3;	
+				selected = 4;	
 			}
 
 			if (key_x)
@@ -37,6 +37,7 @@ if (alarm[0] <= 0)
 				{
 					case 0:
 					{
+						global.playing = true;
 						instance_destroy();
 						//o_nextRoom.alarm[0] = 60;
 						//o_nextRoom.canSelectShip = true;
@@ -60,6 +61,13 @@ if (alarm[0] <= 0)
 					}break;
 					
 					case 3:
+					{
+						global.collection = true;
+						instance_destroy();
+		
+					}break;
+					
+					case 4:
 					{
 						game_end();
 		

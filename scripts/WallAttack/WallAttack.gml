@@ -1,6 +1,6 @@
 // Los recursos de Script han cambiado para la v2.3.0 Consulta
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
-function WallAttack(_minWalls, _maxWalls, _rate, _offset)
+function WallAttack(_minWalls, _maxWalls, _rate, _offset, _destroyRate)
 {
 	if (alarm[1] <=0) && instance_exists(o_player)
 	{
@@ -15,7 +15,7 @@ function WallAttack(_minWalls, _maxWalls, _rate, _offset)
 			bullet.image_angle = dir-90;
 			bullet._hpush = hspeed;
 			bullet._vpush = vspeed;
-			destroy = irandom(3)
+			destroy = irandom(_destroyRate)
 			if (destroy = 0)
 			{
 				instance_destroy(bullet)

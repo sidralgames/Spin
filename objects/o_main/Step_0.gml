@@ -69,21 +69,29 @@ if (changingLevel = true)
 	}
 }
 
-if !instance_exists(o_player) && (global.lives > 0)
+if (global.playing)
 {
-	newPosX = lastX+random_range(100,-100)
-	newPosY = lastY+random_range(100,-100)
-	
-	if collision_circle(newPosX, newPosY , 2, o_Floor, true, true) && 
-	point_distance(o_Floor.x, o_Floor.y, newPosX, newPosY) < 150 && 
-	point_distance(o_Floor.x, o_Floor.y, newPosX, newPosY) > 70
+	if !instance_exists(o_player) && (global.lives > 0)
 	{
-		DestroyCablesAndJacks();
-		newPlayer = instance_create_layer(newPosX, newPosY, "Player", o_player);
-		newPlayer.comesFromDeath = true;
+		newPosX = lastX+random_range(100,-100)
+		newPosY = lastY+random_range(100,-100)
+	
+		if collision_circle(newPosX, newPosY , 2, o_Floor, true, true) && 
+		point_distance(o_Floor.x, o_Floor.y, newPosX, newPosY) < 150 && 
+		point_distance(o_Floor.x, o_Floor.y, newPosX, newPosY) > 70
+		{
+			DestroyCablesAndJacks();
+			newPlayer = instance_create_layer(newPosX, newPosY, "Player", o_player);
+			newPlayer.comesFromDeath = true;
+		}
 	}
-}
-else
-{
-	global.gameOver = true;
+	if !instance_exists(o_player) && (global.lives <= 0)
+	{
+		global.gameOver = true;
+		if (gameOverCreated = false)
+		{
+			instance_create_layer(x, y, "Menu", o_gameOver)
+			gameOverCreated = true;
+		}
+	}
 }

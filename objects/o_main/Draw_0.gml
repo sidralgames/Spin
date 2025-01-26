@@ -66,3 +66,17 @@ if (drawflashCont <=0)
 	
 	global.autoPitch = false;
 }
+
+
+//COLLECTION
+	
+if (global.collection)
+{
+	with(o_boss)
+	{
+		if (drawLocked)	
+		{
+			draw_sprite_ext(s_locked, 0, o_boss.x, o_boss.y, 1,1,0,c_white,1)	
+		}
+	}
+}

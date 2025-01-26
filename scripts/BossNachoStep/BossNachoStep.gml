@@ -13,11 +13,11 @@ function BossNachoStep()
 		contAttack = random_range(100,200);
 		
 		
-		if (_hp < 75)
+		if (_hp < 25)
 		{
 			if (canRoto)
 			{
-				attack = choose("BulletTempo","SingleBullet", "DobleBullet", "Pattern1", "Roto");
+				attack = choose("BulletTempo","BulletRound", "DobleBullet", "Pattern1", "Roto");
 			}
 			else
 			{
@@ -26,7 +26,7 @@ function BossNachoStep()
 		}
 		else 
 		{
-			attack = choose("DobleBullet","BulletRound","DobleBullet")
+			attack = choose("SingleBullet", "DobleBullet", "Pattern1",)
 		}
 		
 		if (attack = "Roto") && (canRoto)
@@ -48,7 +48,7 @@ function BossNachoStep()
 	BulletAttack(attack);
 
 
-	WallAttack(0,2,choose(50,75),35);
+	WallAttack(0,2,choose(50,75),35,3);
 
 
 

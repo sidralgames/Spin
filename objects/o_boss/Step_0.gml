@@ -12,7 +12,7 @@ if (scale > 1)
 		scale = 1;
 	}
 }
-if !instance_exists(o_MainMenu) && (global.howToPlay = false)
+if !instance_exists(o_MainMenu) && (global.howToPlay = false) && (global.collection = false)
 {
 	if (contToStart >= 0)
 	{
@@ -81,19 +81,151 @@ if (_hp <= 0)
 		drawflash = true;
 		drawflashCont = 40;
 	}
+	
 	global.level+=1;
 	instance_destroy(bossHP);
+	instance_destroy(o_enemyFather);
+	instance_destroy(o_bulletEnemyFather);
 	screenShake(6,100,4);
 	exploOrange = instance_create_layer(x, y, "BulletsDown", o_explosion);
 	exploOrange.sprite_index = s_exploOrange;
 	exploOrange.image_xscale = 1.2;
 	exploOrange.image_yscale = 1.2;
-	upgradeVinyl = instance_create_layer(x,y,"Vinyl", o_viniloUpgrades);
-	upgradeGalleta = instance_create_layer(x,y,"Boss", o_upgrades);
-	upgradeGalleta.image_xscale = 0.12;
-	upgradeGalleta.image_yscale = 0.12;
-	instance_destroy(o_vinilo);
-	instance_destroy(oViniloFake);
-	instance_destroy();
 	
+	if (bossIsInCollection = 1)
+	{
+		upgradeVinyl = instance_create_layer(x,y,"Vinyl", o_viniloUpgrades);
+		upgradeGalleta = instance_create_layer(x,y,"Boss", o_upgrades);
+		upgradeGalleta.image_xscale = 0.12;
+		upgradeGalleta.image_yscale = 0.12;
+		instance_destroy(o_vinilo);
+		instance_destroy(oViniloFake);
+		instance_destroy();
+	}
+	else
+	{
+		bossIsInCollection = 1;
+		switch(spriteBoss)
+		{
+			case s_bossNacho:
+			{
+				global.bossNachoCollection = 1;
+			}
+			break;
+			
+			case s_bossDemon:
+			{
+				global.bossDemonCollection = 1;
+			}
+			break;
+			
+			case s_bossTribal:
+			{
+				global.bossTribalCollection = 1;
+			}
+			break;
+		}
+		SaveGame();
+		bossDef = instance_create_layer(x,y,"Menu", o_bossDefeated);
+		instance_destroy();
+	}
+	
+}
+
+key_leftP = keyboard_check_pressed(vk_left) || keyboard_check_pressed(ord("A")) || gamepad_button_check_pressed(0, gp_padl);
+key_rightP = keyboard_check_pressed(vk_right) || keyboard_check_pressed(ord("D")) || gamepad_button_check_pressed(0, gp_padr);
+	
+if (global.collection)
+{
+	
+	if (key_leftP)
+	{
+			//audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
+		selectedVinyl -=1;	
+	}
+
+	if (key_rightP)
+	{
+			//audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
+		selectedVinyl +=1;	
+	}
+		
+
+	if (selectedVinyl > 2)
+	{
+		selectedVinyl = 0;	
+	}
+
+	if (selectedVinyl < 0)
+	{
+		selectedVinyl = 2;	
+	}
+	switch(selectedVinyl)
+	{
+		case 0:
+		{
+			if (global.bossNachoCollection = 0)
+			{
+				image_blend = c_dkgray;
+				global.vinylAlpha = 0.85
+				global.vinylColor = c_dkgray;
+				drawLocked = true;
+			}
+			else
+			{
+				image_blend = c_white;
+				global.vinylAlpha = 1;
+				global.vinylColor = global.pink;
+				drawLocked = false;
+			}
+			
+			sprite_index = s_bossNacho;
+			spriteBoss = s_bossNacho;
+			
+		}break;
+		
+		case 1:
+		{
+			if (global.bossDemonCollection = 0)
+			{
+				image_blend = c_dkgray;
+				global.vinylAlpha = 0.75;
+				global.vinylColor = c_dkgray;
+				drawLocked = true;
+			}
+			else
+			{
+				image_blend = c_white;
+				global.vinylAlpha = 0.75;
+				global.vinylColor = global.lightBlue;
+				drawLocked = false;
+			}
+			
+			sprite_index = s_bossDemon;
+			spriteBoss = s_bossDemon;
+			
+		}break;
+		
+		case 2:
+		{
+			if (global.bossTribalCollection = 0)
+			{
+				image_blend = c_dkgray;
+				global.vinylAlpha = 0.95
+				global.vinylColor = c_dkgray;
+				drawLocked = true;
+			}
+			else
+			{
+				image_blend = c_white;
+				global.vinylAlpha = 0.95;
+				global.vinylColor = global.yellow;
+				drawLocked = false;
+			}
+			
+			sprite_index = s_bossTribal;
+			spriteBoss = s_bossTribal;
+			
+		}break;
+	}
 }

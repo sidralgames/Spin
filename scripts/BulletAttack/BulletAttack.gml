@@ -332,7 +332,7 @@ function BulletAttack(_attack)
 				{
 					if (alarm[0] <= 0) && instance_exists(o_player)
 					{
-						offsetRound -=7;
+						offsetRound -=10;
 						dir = image_angle;
 						
 						bullet1 = instance_create_layer(x,y,"Bullets", o_bulletBoss);
@@ -343,7 +343,7 @@ function BulletAttack(_attack)
 						fireRateSingleBullet = irandom_range(60,120);
 						bulletsCreated +=1;
 						
-						if (bulletsCreated >= 38)
+						if (bulletsCreated >= 16)
 						{
 							contAttack = 0;
 							canChangeAttack = true;
@@ -404,7 +404,7 @@ function BulletAttack(_attack)
 				
 						offsetPattern1+=5;
 						fireRatePattern1 = irandom_range(60,180);
-						TotBulletsP1 = irandom_range(4,8);
+						TotBulletsP1 = irandom_range(4,6);
 						alarm[0] = fireRatePattern1;
 						
 					}

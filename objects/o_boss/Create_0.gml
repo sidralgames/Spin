@@ -1,5 +1,7 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
+drawLocked = false;
+selectedVinyl = 0;
 rotoSprite = choose(s_rotoBoss1,s_rotoBoss2,s_rotoBoss3);
 surfaceGalleta =-1
 surfaced = false;
@@ -18,13 +20,16 @@ contRotoTime = 0;
 angleOff = random_range(-10,10);
 distOff = random_range(-20,60);
 canRoto = true;
+
 switch(global.level)
 {
 	case 1:
 	{
 		spriteBoss = choose(s_bossNacho);
-
-		_hpMax = 50;
+		
+		bossIsInCollection = global.bossNachoCollection;
+		
+		_hpMax = 75;
 		rotSpeedBoss = 0.5;
 		_hp = _hpMax;
 
@@ -47,8 +52,9 @@ switch(global.level)
 	case 2:
 	{
 		spriteBoss = choose(s_bossDemon);
-
-		_hpMax = 70;
+		
+		bossIsInCollection = global.bossDemonCollection;
+		_hpMax = 100;
 		rotSpeedBoss = 0.5;
 		_hp = _hpMax;
 
@@ -70,6 +76,7 @@ switch(global.level)
 	case 3:
 	{
 		spriteBoss = choose(s_bossTribal);
+		bossIsInCollection = global.bossTribalCollection;
 		_hpMax = 150;
 		rotSpeedBoss = 0.5;
 		_hp = _hpMax;
@@ -101,4 +108,5 @@ y = room_height/2;
 _angle = image_angle;
 //galletaFake = instance_create_layer(x,y,"Boss",oBossFake);
 //galletaFake.depth = depth - 1;
-global.vinylSpin = -0.6
+global.vinylSpin = -0.6;
+global.spriteBoss = spriteBoss;

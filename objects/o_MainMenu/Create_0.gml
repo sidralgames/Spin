@@ -8,5 +8,5 @@ factor = 0.08;
 initialPlay =300;
 initialHow = 330;
 initialOption = 360;
-//initialStat = 280;
-initialQuit = 390;
+initialCollection = 390
+initialQuit = 420;

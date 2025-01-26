@@ -1,5 +1,9 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
+global.collection = false;
+gameOverCreated = false;
+global.spriteBoss = -1;
+global.playing = false;
 global.vinylAlpha = 1;
 global.vinylColor = c_white;
 global.howToPlay = false;
