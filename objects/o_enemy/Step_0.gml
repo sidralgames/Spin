@@ -242,6 +242,11 @@ if (dying = true)
 
 if (_hp <= 0)
 {
+	exploEnemy = instance_create_layer(x+lengthdir_x(5,direction - 180),y+lengthdir_y(5,direction - 180),"Bullets", o_explosion);
+	exploEnemy.image_xscale = 0.2;
+	exploEnemy.image_yscale = 0.2;
+	exploEnemy.image_speed = 0.9;
+	exploEnemy.sprite_index = s_exploBlue;
 	instance_destroy();
 }
 

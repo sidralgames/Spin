@@ -40,12 +40,18 @@ if (alarm[0] <= 0)
 			{
 				case 0:
 				{
-					game_restart();
+					ResetGame(true);
+					instance_destroy();
+					instance_create_layer(o_boss.x + 100, o_boss.y, "Player", o_player);
+					
 				}break;
 				
 				case 1:
 				{
-					game_restart();
+					instance_create_layer(global.mainMenuX,global.mainMenuY,"Menu", o_MainMenu);
+					ResetGame(false);
+					instance_destroy();
+					
 				}break;
 			}
 		}

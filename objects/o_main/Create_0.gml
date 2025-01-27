@@ -3,7 +3,7 @@
 
 
 
-
+global.initialLives = 3;
 global.collection = false;
 gameOverCreated = false;
 global.spriteBoss = -1;
@@ -23,8 +23,8 @@ drawflashPlayerHitted = false;
 drawflashCont = 3;
 global.autoPitch = false;
 isPaused = false;
-
-global.lives = 3;
+global.bossesDefeatedInRun = 0;
+global.lives = 1;
 lastX = x;
 lastY = y;
 newPosX = lastX+random_range(40,-40)
@@ -33,6 +33,7 @@ global.tempoCorrupted = false;
 global.vinylSpin = -0.2;
 global.weapon = "Gun";
 global.energyTotal = 150;
+global.superShot = 1;
 global.level = 1;
 //-------COLORS--------//
 global.red = make_color_rgb(228, 59, 68); 
@@ -105,7 +106,7 @@ audio_play_sound_on(global.audioEmitter,global.song, true, 100,,65)
 global.standardAngleShake = 0.5;
 global.screenshakeIsOn = true;
 
-global.superShot = 1;
+
 instance_create_layer(0,0,"Main", o_bulletPart);
 instance_create_layer(0,0,"Main", o_bulletBossPart);
 

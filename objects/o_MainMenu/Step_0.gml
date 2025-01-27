@@ -81,5 +81,5 @@ if (alarm[0] <= 0)
 
 if !instance_exists(o_player)
 {
-	instance_create_layer(x,y,"Player",o_player);	
+	instance_create_layer(o_boss.x - 100,o_boss.y,"Player",o_player);	
 }

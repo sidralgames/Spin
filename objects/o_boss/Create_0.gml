@@ -38,7 +38,7 @@ switch(global.level)
 		
 		bossIsInCollection = global.bossNachoCollection;
 		
-		_hpMax = 80;
+		_hpMax = 8;
 		rotSpeedBoss = 0.5;
 		_hp = _hpMax;
 
@@ -70,7 +70,7 @@ switch(global.level)
 		spriteBoss = choose(s_bossDemon);
 		bossNumber = 1;
 		bossIsInCollection = global.bossDemonCollection;
-		_hpMax = 110;
+		_hpMax = 11;
 		rotSpeedBoss = 0.5;
 		_hp = _hpMax;
 
@@ -95,7 +95,7 @@ switch(global.level)
 		bossNumber = 2;
 		
 		bossIsInCollection = global.bossTribalCollection;
-		_hpMax = 160;
+		_hpMax = 16;
 		rotSpeedBoss = 0.5;
 		_hp = _hpMax;
 
@@ -113,6 +113,31 @@ switch(global.level)
 		contAttack = 60;
 		attack = choose("SingleBullet", "Pattern1")
 	}break;
+	
+	//case 4:
+	//{
+	//	spriteBoss = choose(s_bossCantando);
+	//	bossNumber = 3;
+		
+	//	bossIsInCollection = global.bossTribalCollection;
+	//	_hpMax = 16;
+	//	rotSpeedBoss = 0.5;
+	//	_hp = _hpMax;
+
+	//	alarm[0] = 60;
+	//	fireRateSingleBullet =  irandom_range(60,120);
+		
+	//	fireRatePattern1 = irandom_range(60,180);
+	//	TotBulletsP1 = irandom_range(4,8);
+	//	offsetPattern1 = 0;
+
+	//	needleAttack = false
+	//	dir=0;
+	//	totWall = 4
+	//	offset = 0;
+	//	contAttack = 60;
+	//	attack = choose("SingleBullet", "Pattern1")
+	//}break;
 	
 	default:
 	{

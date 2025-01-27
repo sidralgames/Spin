@@ -3,3 +3,4 @@
 meterY = y;
 corrupted = false;
 contCorrupted = 0;
+imageExclamation = 0;

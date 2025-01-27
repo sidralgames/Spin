@@ -14,7 +14,10 @@
     "name":"SPIN",
     "path":"SPIN.yyp",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"o_bulletEnemyFather",
+    "path":"objects/o_bulletEnemyFather/o_bulletEnemyFather.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

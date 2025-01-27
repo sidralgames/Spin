@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"s_bossDef",
   "bboxMode":0,
-  "bbox_bottom":326,
+  "bbox_bottom":328,
   "bbox_left":0,
   "bbox_right":639,
   "bbox_top":0,

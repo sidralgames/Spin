@@ -56,7 +56,10 @@ function Die()
 			
 			o_main.lastX = lastTouchedX;
 			o_main.lastY = lastTouchedY;
-			global.lives -=1;
+			if (global.playing)
+			{
+				global.lives -=1;
+			}
 			instance_destroy();
 		}
 	}
@@ -66,7 +69,10 @@ function Die()
 	{
 		o_main.lastX = x;
 		o_main.lastY = y;
-		global.lives -=1;
+		if (global.playing)
+		{
+			global.lives -=1;
+		}
 		instance_destroy();
 	}
 }

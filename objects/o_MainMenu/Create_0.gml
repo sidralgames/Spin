@@ -1,5 +1,7 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
+global.mainMenuX = x;
+global.mainMenuY = y;
 selected = 0;
 _visible = true;
 

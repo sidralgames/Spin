@@ -20,14 +20,14 @@ if (alarm[0] <= 0)
 		}
 		
 
-			if (selected > 2)
+			if (selected > 3)
 			{
 				selected = 0;	
 			}
 
 			if (selected < 0)
 			{
-				selected = 2;	
+				selected = 3;	
 			}
 
 			if (key_x)
@@ -49,12 +49,19 @@ if (alarm[0] <= 0)
 						global.screenshakeIsOn = !global.screenshakeIsOn;
 						if global.screenshakeIsOn
 						{
-							screenShake(5,60,3)
+							screenShake(4,40,2)
 						}
 		
 					}break;
 					
 					case 2:
+					{
+						instance_destroy();
+						o_MainMenu._visible = true;
+		
+					}break;
+					
+					case 3:
 					{
 						instance_destroy();
 						o_MainMenu._visible = true;

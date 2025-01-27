@@ -8,8 +8,8 @@ factor = 0.08;
 initialCRT = 300;
 //initialTut = 170;
 initialScreen = 330;
-//initialStat = 280;
-initialBack = 360;
+initialCredits = 360;
+initialBack = 390;
 
 if (global.screenshakeIsOn)
 {
