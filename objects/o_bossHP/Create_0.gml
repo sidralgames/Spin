@@ -3,5 +3,5 @@
 meterYInitial = y;
 meterX = x;
 scale = 1;
-fac = o_boss._hp / 120;
-a = y-60;
+fac = o_boss._hp / 110;
+a = y-50;

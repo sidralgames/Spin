@@ -1,5 +1,7 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
+
+type = collisionType.custom;
 cx = room_width/2;
 cy = room_height/2;
 r = point_distance(x,y,room_width/2, room_height/2);

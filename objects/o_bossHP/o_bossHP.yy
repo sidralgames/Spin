@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"s_tempo",
-    "path":"sprites/s_tempo/s_tempo.yy",
+    "name":"s_tempo_1",
+    "path":"sprites/s_tempo_1/s_tempo_1.yy",
   },
   "spriteMaskId":null,
   "visible":true,

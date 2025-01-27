@@ -2,7 +2,7 @@
 // Puede escribir su código en este editor
 if instance_exists(o_boss)
 {
-	a = (y-60 + 120) - o_boss._hp/fac;
+	a = (y-50 + 110) - o_boss._hp/fac;
 }
 
 	

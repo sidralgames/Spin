@@ -50,7 +50,7 @@ function PlayerShoot()
 					}
 					else
 					{
-						alarm[0] = max(3,fireRate - global.fireRateAux);
+						alarm[0] = max(5,fireRate - global.fireRateAux);
 						reloading = false;
 					}
 			
@@ -94,7 +94,7 @@ function PlayerShoot()
 					}
 					else
 					{
-						alarm[0] = max(3,fireRateShotgun - global.fireRateAux);
+						alarm[0] = max(5,fireRateShotgun - global.fireRateAux);
 						reloading = false;
 						offShotgun = -10;
 					}

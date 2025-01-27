@@ -19,7 +19,7 @@ scaleReset = false;
 angle = 0;
 _hp = 3;
 
-contDieMax = 7;
+contDieMax = 10;
 contDie = contDieMax;
 
 global.walkAccelerationH = 0.2;

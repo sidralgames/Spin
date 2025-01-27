@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"s_bulletBoss",
-    "path":"sprites/s_bulletBoss/s_bulletBoss.yy",
+    "name":"s_bulletBossNacho",
+    "path":"sprites/s_bulletBossNacho/s_bulletBossNacho.yy",
   },
   "spriteMaskId":null,
   "visible":true,

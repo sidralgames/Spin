@@ -1,7 +1,7 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
 _hp --;
-
+image_angle +=35;
 bossPush = bossSpin * min(1.5, global.relativeSpeed);
 
 totalPush = bossPush;
