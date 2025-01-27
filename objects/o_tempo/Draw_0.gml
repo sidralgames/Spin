@@ -16,5 +16,7 @@ if instance_exists(o_bulletPitch)
 	draw_sprite_ext(s_exclamations,imageExclamation,x-3,y-80,1,1,0,image_blend, image_alpha)
 }
 
+
+//draw_text_color(x,y+80,string(y),c_white,c_white,c_white,c_white,1)
 draw_self();
 draw_sprite_ext(s_tempoMeter,0,x,meterY,scale,scale,0,image_blend, image_alpha)

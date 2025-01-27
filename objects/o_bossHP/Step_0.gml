@@ -2,10 +2,7 @@
 // Puede escribir su código en este editor
 if instance_exists(o_boss)
 {
-	meterX = meterXInitial+(o_boss._hp/fac);
+	a = (y-60 + 120) - o_boss._hp/fac;
 }
-else
-{
-	meterX = x-60;
-}
+
 	

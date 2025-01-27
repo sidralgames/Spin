@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"s_bossHP",
-    "path":"sprites/s_bossHP/s_bossHP.yy",
+    "name":"s_tempo",
+    "path":"sprites/s_tempo/s_tempo.yy",
   },
   "spriteMaskId":null,
   "visible":true,
