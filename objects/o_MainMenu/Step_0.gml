@@ -37,7 +37,7 @@ if (alarm[0] <= 0)
 				{
 					case 0:
 					{
-						global.playing = true;
+						PlayGame(true);
 						instance_destroy();
 						//o_nextRoom.alarm[0] = 60;
 						//o_nextRoom.canSelectShip = true;

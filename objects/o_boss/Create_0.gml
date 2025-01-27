@@ -38,7 +38,7 @@ switch(global.level)
 		
 		bossIsInCollection = global.bossNachoCollection;
 		
-		_hpMax = 8;
+		_hpMax = 80;
 		rotSpeedBoss = 0.5;
 		_hp = _hpMax;
 
@@ -70,7 +70,7 @@ switch(global.level)
 		spriteBoss = choose(s_bossDemon);
 		bossNumber = 1;
 		bossIsInCollection = global.bossDemonCollection;
-		_hpMax = 11;
+		_hpMax = 110;
 		rotSpeedBoss = 0.5;
 		_hp = _hpMax;
 
@@ -95,7 +95,7 @@ switch(global.level)
 		bossNumber = 2;
 		
 		bossIsInCollection = global.bossTribalCollection;
-		_hpMax = 16;
+		_hpMax = 160;
 		rotSpeedBoss = 0.5;
 		_hp = _hpMax;
 
