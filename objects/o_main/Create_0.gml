@@ -1,5 +1,9 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
+
+
+
+
 global.collection = false;
 gameOverCreated = false;
 global.spriteBoss = -1;
@@ -104,3 +108,10 @@ global.screenshakeIsOn = true;
 global.superShot = 1;
 instance_create_layer(0,0,"Main", o_bulletPart);
 instance_create_layer(0,0,"Main", o_bulletBossPart);
+
+global.collectionList = ds_map_create();
+
+global.totalNumberOfVinyls = 0;
+AddBossNachoCollection();
+AddBossDemonCollection();
+AddBossTribalCollection();

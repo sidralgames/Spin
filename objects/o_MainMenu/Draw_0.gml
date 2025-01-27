@@ -7,6 +7,11 @@
 if (_visible)
 {
 	
+	//draw_set_alpha(0.25)
+	//draw_set_color(global.darkPalette)
+	//draw_rectangle(__view_get( e__VW.XView, 0 )+0,__view_get( e__VW.YView, 0 )+0,__view_get( e__VW.XView, 0 )+640,__view_get( e__VW.YView, 0 )+360,false)	
+	//draw_set_alpha(1)
+	
 		draw_set_halign(fa_center)
 		switch(selected)
 		{
@@ -89,8 +94,32 @@ if (_visible)
 
 if (global.collection)
 {
+	
 	initialCollection =  lerp(initialCollection, 50,factor);
-	initialCollectionX = lerp(initialCollectionX, 120,factor);
-	draw_sprite_ext(s_collection, 0,  __view_get( e__VW.XView, 0 )+ initialCollectionX,__view_get( e__VW.YView, 0 )+initialCollection,1,1,0,image_blend,  1)	
+	initialCollectionX = lerp(initialCollectionX, 110,factor);
+	initialBackX =  lerp(initialBackX, 80,factor);
+	initialBackY = lerp(initialBackY, 50,factor);
+	//draw_sprite_ext(s_collection, 0,  __view_get( e__VW.XView, 0 )+ initialCollectionX,__view_get( e__VW.YView, 0 )+initialCollection,0.8,0.8,0,image_blend,  1)	
+	draw_sprite_ext(s_Back, 0,  __view_get( e__VW.XView, 0 )+ initialBackX,__view_get( e__VW.YView, 0 )+initialBackY,0.8,0.8,0,image_blend,  1)	
+
+	if (initialBackY < 60)
+	{
+		if (key_x)
+		{
+			global.collection = false;
+			_visible = true;
+			factor = 0.08;
+
+			initialPlay =300;
+			initialHow = 330;
+			initialOption = 360;
+			initialCollection = 390
+			initialQuit = 420;
+			initialCollectionX = 320
+			initialBackX =  320
+			initialBackY = 300
+		}
+	}
+
 }
 

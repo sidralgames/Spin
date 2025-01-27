@@ -11,3 +11,5 @@ initialOption = 360;
 initialCollection = 390
 initialQuit = 420;
 initialCollectionX = 320
+initialBackX =  320
+initialBackY = 300

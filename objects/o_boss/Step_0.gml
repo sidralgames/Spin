@@ -75,6 +75,9 @@ _angle = image_angle;
 
 if (_hp <= 0)
 {
+	thisBoss = ds_map_find_value(global.collectionList, bossNumber);
+	thisBoss.defeatedInRun = 1;
+	
 	with(o_main)
 	{
 		changingLevel = true
@@ -86,7 +89,7 @@ if (_hp <= 0)
 	instance_destroy(bossHP);
 	instance_destroy(o_enemyFather);
 	instance_destroy(o_bulletEnemyFather);
-	screenShake(6,100,4);
+	screenShake(8,120,5);
 	exploOrange = instance_create_layer(x, y, "BulletsDown", o_explosion);
 	exploOrange.sprite_index = s_exploOrange;
 	exploOrange.image_xscale = 1.2;
@@ -185,10 +188,12 @@ if (global.collection)
 						changeSongCollection = true;
 					}
 				}
+				
 				image_blend = c_white;
 				global.vinylAlpha = 1;
 				global.vinylColor = global.pink;
 				drawLocked = false;
+				//global.level = 1;
 			}
 			
 			sprite_index = s_bossNacho;
@@ -217,10 +222,12 @@ if (global.collection)
 						changeSongCollection = true;
 					}
 				}
+				
 				image_blend = c_white;
 				global.vinylAlpha = 0.75;
 				global.vinylColor = global.lightBlue;
 				drawLocked = false;
+				//global.level = 2;
 			}
 			
 			sprite_index = s_bossDemon;
@@ -243,6 +250,7 @@ if (global.collection)
 				global.vinylAlpha = 0.95;
 				global.vinylColor = global.yellow;
 				drawLocked = false;
+				//global.level = 3;
 			}
 			
 			sprite_index = s_bossTribal;
