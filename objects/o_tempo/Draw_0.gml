@@ -13,7 +13,7 @@ if instance_exists(o_bulletPitch)
 {
 	imageExclamation+=0.25;
 	
-	draw_sprite_ext(s_exclamations,imageExclamation,x-3,y-80,1,1,0,image_blend, image_alpha)
+	draw_sprite_ext(s_exclamations,imageExclamation,x,y-80,1,1,0,image_blend, image_alpha)
 }
 
 

@@ -67,6 +67,8 @@ if !instance_exists(o_cableYellow)
 		image_alpha = 1;
 	}
 	
+	bossSpin = global.vinylSpin;
+	
 	bossPush = bossSpin * min(1.5, global.relativeSpeed);
 	totalPush = bossPush;
 	totalPush = clamp(totalPush, -totalMaxSpeed, totalMaxSpeed);

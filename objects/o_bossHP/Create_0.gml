@@ -5,3 +5,4 @@ meterX = x;
 scale = 1;
 fac = o_boss._hp / 110;
 a = y-50;
+imageExclamation = 0;

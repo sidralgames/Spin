@@ -2,6 +2,16 @@
 // Puede escribir su código en este editor
 draw_self();
 draw_set_halign(fa_right)
+
+if (global.playing)
+{
+	draw_sprite_ext(s_playerHP, 0, __view_get( e__VW.XView, 0 )+100,__view_get( e__VW.YView, 0 )+50,1,1,0,c_white,image_alpha)
+	
+	for (var i = 0; i< global.lives; i++;)
+	{
+		draw_sprite_ext(s_playerHPFill, 0, __view_get( e__VW.XView, 0 )+100 + 19*i,__view_get( e__VW.YView, 0 )+50,1,1,0,c_white,image_alpha)
+	}
+}
 //if instance_exists(o_player)
 //{
 //	draw_text_color(600,20,"PlayerHP: " + string(o_player._hp),c_white,c_white,c_white,c_white,1)
@@ -14,7 +24,7 @@ draw_set_halign(fa_right)
 	//draw_text_color(600,80,"drawflashRoto" + string(drawflashRoto),c_white,c_white,c_white,c_white,1)
 	//draw_text_color(600,100,"drawflashCont" + string(drawflashCont),c_white,c_white,c_white,c_white,1)
 	
-	draw_text_color(600,30,"Lives: " + string(global.lives),c_white,c_white,c_white,c_white,1)
+	//draw_text_color(600,30,"Lives: " + string(global.lives),c_white,c_white,c_white,c_white,1)
 //}
 
 if keyboard_check_pressed(vk_space)

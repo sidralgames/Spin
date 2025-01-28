@@ -25,7 +25,7 @@ if !instance_exists(o_MainMenu) && (global.howToPlay = false) && (global.collect
 		if (createHP = false)
 		{
 			createHP = true;
-			bossHP = instance_create_layer(x-250,206,"Main", o_bossHP);
+			bossHP = instance_create_layer(x-255,200,"Main", o_bossHP);
 			if spriteBoss = s_bossDemon
 			{
 				 instance_create_layer(x+100,y,"Enemies", o_enemy);
