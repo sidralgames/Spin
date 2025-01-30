@@ -59,6 +59,9 @@ global.lighPinkArray = [255/255, 0/255, 203/255, 1];
 global.brightArray = [255/255, 255/255, 255/255, 1];
 
 global.yellowArray2 = [255/255, 255/255 ,1/255,1];
+global.purpleArray = [195/255, 53/255 ,225/255,1];
+
+global.yellowGirlArray = [224/355, 205/255, 64/255, 1] 
 
 changingLevel = true;
 

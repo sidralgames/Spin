@@ -50,6 +50,21 @@ if (changingLevel = true)
 				changingLevel = false;
 			}
 			break;
+			
+			case s_bossGirl:
+			{
+				color_fx_params.g_TintCol = global.purpleArray;
+				noise_fx_params.g_FractalNoiseTintColour = global.yellowGirlArray;
+
+				fx_set_parameters(color_fx, color_fx_params);
+				fx_set_parameters(noise_fx, noise_fx_params);
+
+				layer_set_fx("EffectColor", color_fx);
+				layer_set_fx("Noise", noise_fx);
+	
+				changingLevel = false;
+			}
+			break;
 		}
 	}
 	

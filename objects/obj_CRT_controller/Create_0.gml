@@ -44,8 +44,8 @@ full screen and the monitor is eg: 16:9 then the distortion and RGB separation w
 */
 view_visible[0] = true;
 view_enabled = true;
-view_wport[0] = 1440; //window_get_width(); 1440; 
-view_hport[0] = 900; //window_get_height(); 900
+view_wport[0] = window_get_width(); //window_get_width(); 1440; 
+view_hport[0] = window_get_height(); //window_get_height(); 900
 window_set_size(view_wport[0], view_hport[0]);
 window_set_position(10,40)
 

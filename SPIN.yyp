@@ -160,6 +160,7 @@
     {"id":{"name":"s_bossDef","path":"sprites/s_bossDef/s_bossDef.yy",},},
     {"id":{"name":"s_bossDemon","path":"sprites/s_bossDemon/s_bossDemon.yy",},},
     {"id":{"name":"s_bossesDefeated","path":"sprites/s_bossesDefeated/s_bossesDefeated.yy",},},
+    {"id":{"name":"s_bossGirl","path":"sprites/s_bossGirl/s_bossGirl.yy",},},
     {"id":{"name":"s_bossHP","path":"sprites/s_bossHP/s_bossHP.yy",},},
     {"id":{"name":"s_bossHPMeter","path":"sprites/s_bossHPMeter/s_bossHPMeter.yy",},},
     {"id":{"name":"s_bossHPTempo","path":"sprites/s_bossHPTempo/s_bossHPTempo.yy",},},
