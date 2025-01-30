@@ -37,7 +37,7 @@ if !instance_exists(o_MainMenu) && (global.howToPlay = false) && (global.collect
 		
 		switch(spriteBoss)
 		{
-			case s_bossNacho:
+			case spritePurple:
 			{
 				BossNachoStep();
 			}

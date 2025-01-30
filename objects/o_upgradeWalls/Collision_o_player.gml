@@ -2,7 +2,7 @@
 // Puede escribir su código en este editor
 if (canBePicked)
 {
-	global.slowmotionPicked = true;
+	global._hpUpgradeWall += 3;
 	instance_destroy();
 	instance_destroy(o_upgradesFather);
 }

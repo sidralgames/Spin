@@ -31,7 +31,7 @@ else
 		if (creatingUpgrades = false) && (alarm[0] <= 0)
 		{
 			screenShake(2,20,1)
-			set = irandom(3);
+			set = irandom(7);
 			if (set = 0)
 			{
 				instance_create_layer(x+90, y, "BulletsDown", o_upgradeGun);
@@ -51,6 +51,26 @@ else
 			{
 				instance_create_layer(x+90, y, "BulletsDown", o_upgradeSlowMotion);
 				instance_create_layer(x-90, y, "BulletsDown", o_upgradeEnergy);
+			}
+			if (set = 4)
+			{
+				instance_create_layer(x+90, y, "BulletsDown", o_upgradeWalls);
+				instance_create_layer(x-90, y, "BulletsDown", o_upgradeFireRate);
+			}
+			if (set = 5)
+			{
+				instance_create_layer(x+90, y, "BulletsDown", o_upgradeWalls);
+				instance_create_layer(x-90, y, "BulletsDown", o_upgradeGun);
+			}
+			if (set = 6)
+			{
+				instance_create_layer(x+90, y, "BulletsDown", o_upgradeSuperShot);
+				instance_create_layer(x-90, y, "BulletsDown", o_upgradeWalls);
+			}
+			if (set = 7)
+			{
+				instance_create_layer(x+90, y, "BulletsDown", o_upgradeSuperShot);
+				instance_create_layer(x-90, y, "BulletsDown", o_upgradeSlowMotion);
 			}
 			creatingUpgrades = true;
 		}

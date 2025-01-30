@@ -1,7 +1,8 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
 
-
+global._hpUpgradeWall = 0;
+global.slowmotionPicked = false;
 
 global.initialLives = 3;
 global.collection = false;
@@ -33,7 +34,7 @@ global.tempoCorrupted = false;
 global.vinylSpin = -0.2;
 global.weapon = "Gun";
 global.energyTotal = 150;
-global.superShot = 1;
+global.superShot = 0;
 global.level = 1;
 //-------COLORS--------//
 global.red = make_color_rgb(228, 59, 68); 

@@ -4,7 +4,7 @@ scale = 0.5;
 scale1 = false;
 scale2= false;
 scale3= false;
-_hp = 5;
+_hp = 5 + (global.level * 2) - global._hpUpgradeWall;
 scaled = false;
 _hpTime = 600;
 image_xscale = scale;
@@ -32,5 +32,9 @@ switch(o_boss.spriteBoss)
 		sprite_index = s_wallTribal;
 	}
 	break;
+	default:
+	{
+		sprite_index = s_wallNacho;
+	}break;
 	
 }

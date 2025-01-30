@@ -13,7 +13,7 @@ function BossNachoStep()
 		contAttack = random_range(100,200);
 		
 		
-		if (_hp < 25)
+		if (_hp < 70)
 		{
 			if (canRoto)
 			{
@@ -48,7 +48,7 @@ function BossNachoStep()
 	BulletAttack(attack);
 
 
-	WallAttack(0,2,choose(50,75),35,3);
+	WallAttack(1,2,choose(50,75),35,3);
 
 
 
@@ -61,7 +61,9 @@ function BossNachoStep()
 			bullet.initialSpeed = 2;
 			bullet.direction = (360 / 12) *i;	
 		}
+		
 		needleAttack = false;
+		
 	
 	}
 }

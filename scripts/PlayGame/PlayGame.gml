@@ -6,6 +6,7 @@ function PlayGame(_playing)
 	instance_destroy(o_enemyFather);
 	instance_destroy(o_wall);
 	instance_destroy(o_bulletEnemyFather);
+	instance_destroy(o_BulletPitchFather);
 	instance_destroy(BombsFather);
 	o_main.gameOverCreated = false;
 	global.playing = _playing;
@@ -14,7 +15,7 @@ function PlayGame(_playing)
 	global.tempoCorrupted = false;
 	global.weapon = "Gun";
 	global.energyTotal = 150;
-	global.superShot = 1;
+	global.superShot = 0;
 	o_boss.image_blend = c_white;
 	global.vinylAlpha = 1;
 	global.vinylColor = global.pink;

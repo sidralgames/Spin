@@ -4,7 +4,7 @@ function BulletAttack(_attack)
 {
 	switch(spriteBoss)
 	{
-		case s_bossNacho:
+		case spritePurple:
 		{
 			switch(_attack)
 			{

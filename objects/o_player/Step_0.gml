@@ -28,7 +28,7 @@ if (slowedFromAHit = false)
 {
 	if (global.tempoCorrupted = false)
 	{
-		if (key_L2) && (global.energy > 0) && !(key_R2)
+		if (key_L2) && (global.energy > 0) && !(key_R2) && (global.slowmotionPicked = true)
 		{
 			global.energy-= slowMoEnergy;
 			SlowDown(0.5, 0.03);

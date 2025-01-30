@@ -1,5 +1,6 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
+spritePurple = -1;
 changeSongCollection = false;
 drawLocked = false;
 selectedVinyl = 0;
@@ -32,13 +33,13 @@ switch(global.level)
 			global.song = snd_song1;
 			audio_play_sound_on(global.audioEmitter,global.song, true, 100,,65);
 		}
-		
-		spriteBoss = choose(s_bossNacho);
+		spritePurple = choose(s_bossGirl, s_bossNacho);
+		spriteBoss = spritePurple
 		bossNumber = 0;
 		
 		bossIsInCollection = global.bossNachoCollection;
 		
-		_hpMax = 100;
+		_hpMax = 130;
 		rotSpeedBoss = 0.5;
 		_hp = _hpMax;
 
@@ -70,7 +71,7 @@ switch(global.level)
 		spriteBoss = choose(s_bossDemon);
 		bossNumber = 1;
 		bossIsInCollection = global.bossDemonCollection;
-		_hpMax = 150;
+		_hpMax = 180;
 		rotSpeedBoss = 0.5;
 		_hp = _hpMax;
 
@@ -95,7 +96,7 @@ switch(global.level)
 		bossNumber = 2;
 		
 		bossIsInCollection = global.bossTribalCollection;
-		_hpMax = 200;
+		_hpMax = 250;
 		rotSpeedBoss = 0.5;
 		_hp = _hpMax;
 
@@ -147,13 +148,13 @@ switch(global.level)
 			global.song = snd_song1;
 			audio_play_sound_on(global.audioEmitter,global.song, true, 100,,65);
 		}
-		
-		spriteBoss = choose(s_bossNacho, s_bossDemon, s_bossTribal);
+		spritePurple = choose(s_bossGirl, s_bossNacho, s_bossDemon, s_bossTribal);
+		spriteBoss = spritePurple;
 		bossNumber = 0;
 		
 		bossIsInCollection = global.bossNachoCollection;
 		
-		_hpMax = 250;
+		_hpMax = 250 + global.level*30;
 		rotSpeedBoss = 0.5;
 		_hp = _hpMax;
 

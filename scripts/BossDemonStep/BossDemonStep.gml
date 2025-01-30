@@ -13,7 +13,7 @@ function BossDemonStep()
 		contAttack = random_range(100,200);
 		
 		
-		if (_hp < 50)
+		if (_hp < 80)
 		{
 			attack = choose("BulletTempo","BulletRound", "DobleBullet", "Pattern1", "Roto");
 		}
@@ -41,7 +41,7 @@ function BossDemonStep()
 	BulletAttack(attack);
 
 
-	WallAttack(0,2,choose(25,50),35,2);
+	WallAttack(1,2,choose(25,50),35,3);
 
 
 	if (needleAttack) && instance_exists(o_player)
