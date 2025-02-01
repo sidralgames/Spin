@@ -32,6 +32,18 @@ switch(o_boss.spriteBoss)
 		sprite_index = s_wallTribal;
 	}
 	break;
+	
+	case s_bossGirl:
+	{
+		sprite_index = s_wallGirl;
+	}
+	break;
+	
+	case s_bossRata:
+	{
+		sprite_index = s_wallRata;
+	}
+	break;
 	default:
 	{
 		sprite_index = s_wallNacho;

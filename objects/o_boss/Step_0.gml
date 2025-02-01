@@ -60,6 +60,12 @@ if !instance_exists(o_MainMenu) && (global.howToPlay = false) && (global.collect
 				BossGirlStep();
 			}
 			break;
+			
+			case s_bossRata:
+			{
+				BossRataStep();
+			}
+			break;
 		}
 	}
 	else
@@ -132,6 +138,18 @@ if (_hp <= 0)
 			case s_bossTribal:
 			{
 				global.bossTribalCollection = 1;
+			}
+			break;
+			
+			case s_bossGirl:
+			{
+				global.bossGirlCollection = 1;
+			}
+			break;
+			
+			case s_bossRata:
+			{
+				global.bossRataCollection = 1;
 			}
 			break;
 		}
@@ -247,7 +265,7 @@ if (global.collection)
 			if (global.bossTribalCollection = 0)
 			{
 				image_blend = c_dkgray;
-				global.vinylAlpha = 0.95
+				global.vinylAlpha = 0.90
 				global.vinylColor = c_dkgray;
 				drawLocked = true;
 			}
@@ -270,7 +288,7 @@ if (global.collection)
 			if (global.bossGirlCollection = 0)
 			{
 				image_blend = c_dkgray;
-				global.vinylAlpha = 0.95
+				global.vinylAlpha = 0.90
 				global.vinylColor = c_dkgray;
 				drawLocked = true;
 			}
@@ -285,6 +303,29 @@ if (global.collection)
 			
 			sprite_index = s_bossGirl;
 			spriteBoss = s_bossGirl;
+			
+		}break;
+		
+		case 4:
+		{
+			if (global.bossRataCollection = 0)
+			{
+				image_blend = c_dkgray;
+				global.vinylAlpha = 0.95
+				global.vinylColor = c_dkgray;
+				drawLocked = true;
+			}
+			else
+			{
+				image_blend = c_white;
+				global.vinylAlpha = 0.95;
+				global.vinylColor = global.greenRat;
+				drawLocked = false;
+				//global.level = 3;
+			}
+			
+			sprite_index = s_bossRata;
+			spriteBoss = s_bossRata;
 			
 		}break;
 	}

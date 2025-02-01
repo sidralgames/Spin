@@ -121,6 +121,33 @@ switch(global.level)
 		bossNumber = 3;
 		
 		bossIsInCollection = global.bossGirlCollection;
+		_hpMax = 200;
+		rotSpeedBoss = 0.5;
+		_hp = _hpMax;
+
+		alarm[0] = 60;
+		fireRateSingleBullet =  irandom_range(60,120);
+		
+		fireRatePattern1 = irandom_range(60,180);
+		TotBulletsP1 = irandom_range(4,8);
+		offsetPattern1 = 0;
+
+		needleAttack = false
+		dir=0;
+		totWall = 4
+		offset = 0;
+		contAttack = 60;
+		attack = choose("SingleBullet", "Pattern1")
+	}break;
+	
+	case 5:
+	{
+		spriteBoss = choose(s_bossRata);
+		image_speed = 0;
+		image_index = 1;
+		bossNumber = 4;
+		
+		bossIsInCollection = global.bossRataCollection;
 		_hpMax = 250;
 		rotSpeedBoss = 0.5;
 		_hp = _hpMax;

@@ -62,7 +62,13 @@ global.brightArray = [255/255, 255/255, 255/255, 1];
 global.yellowArray2 = [255/255, 255/255 ,1/255,1];
 global.purpleArray = [195/255, 53/255 ,225/255,1];
 
-global.yellowGirlArray = [224/355, 205/255, 64/255, 1] 
+global.yellowGirlArray = [224/255, 205/255, 64/255, 1]
+
+global.greenRatArray = [139/255, 255/255, 164/255, 1] 
+
+global.greenOscRatArray = [32/255, 153/255, 164/255, 1] 
+global.greenRat= make_color_rgb(32, 153, 164)
+global.greenOscRat= make_color_rgb(139, 255, 164)
 
 changingLevel = true;
 
@@ -121,3 +127,4 @@ AddBossNachoCollection();
 AddBossDemonCollection();
 AddBossTribalCollection();
 AddBossGirlCollection();
+AddBossRataCollection();

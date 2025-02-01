@@ -6,4 +6,5 @@ function LoadDefaultData()
 	global.bossDemonCollection = 0;
 	global.bossTribalCollection = 0;
 	global.bossGirlCollection = 0;
+	global.bossRataCollection = 0;
 }

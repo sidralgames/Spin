@@ -47,7 +47,7 @@ if (alarm[0] <= 0)
 					
 					case 1:
 					{
-						instance_destroy();
+						_visible = false;
 						instance_create_layer(o_boss.x-200,o_boss.y,"Main",o_HowToPlay)
 						global.howToPlay = true;
 		

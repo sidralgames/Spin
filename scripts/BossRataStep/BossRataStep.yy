@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"BossRataStep",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"BossRataStep",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

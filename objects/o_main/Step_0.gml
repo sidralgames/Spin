@@ -65,6 +65,21 @@ if (changingLevel = true)
 				changingLevel = false;
 			}
 			break;
+			
+			case s_bossRata:
+			{
+				color_fx_params.g_TintCol = global.greenOscRatArray;
+				noise_fx_params.g_FractalNoiseTintColour = global.greenRatArray;
+
+				fx_set_parameters(color_fx, color_fx_params);
+				fx_set_parameters(noise_fx, noise_fx_params);
+
+				layer_set_fx("EffectColor", color_fx);
+				layer_set_fx("Noise", noise_fx);
+	
+				changingLevel = false;
+			}
+			break;
 		}
 	}
 	

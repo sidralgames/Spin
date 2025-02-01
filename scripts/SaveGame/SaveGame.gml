@@ -9,6 +9,7 @@ function SaveGame()
 	ini_write_real("bossesCollection","bossDemon", global.bossDemonCollection );
 	ini_write_real("bossesCollection","bossTribal", global.bossTribalCollection );
 	ini_write_real("bossesCollection","bossGirl", global.bossGirlCollection );
+	ini_write_real("bossesCollection","bossRata", global.bossRataCollection );
 	
 	ini_close();
 }

@@ -2,7 +2,7 @@
 // Puede escribir su código en este editor
 selected = 0;
 _visible = true;
-
+creditsShowing = false;
 factor = 0.08;
 
 initialCRT = 300;
@@ -10,6 +10,7 @@ initialCRT = 300;
 initialScreen = 330;
 initialCredits = 360;
 initialBack = 390;
+contCred = 20;
 
 if (global.screenshakeIsOn)
 {

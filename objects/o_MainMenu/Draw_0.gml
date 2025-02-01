@@ -123,3 +123,7 @@ if (global.collection)
 
 }
 
+if instance_exists(o_HowToPlay)
+{
+	draw_sprite_ext(s_Back, 1,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+320,0.8,0.8,0,image_blend, 0.8)		
+}

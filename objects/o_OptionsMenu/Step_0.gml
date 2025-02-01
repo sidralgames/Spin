@@ -5,7 +5,7 @@ Controls_Input();
 if (alarm[0] <= 0)
 {
 	
-	if (_visible)
+	if (_visible) 
 	{
 		if (key_downP)
 		{
@@ -56,8 +56,9 @@ if (alarm[0] <= 0)
 					
 					case 2:
 					{
-						instance_destroy();
-						o_MainMenu._visible = true;
+						creditsShowing = !creditsShowing;
+						_visible = !_visible;
+						contCred = 20;
 		
 					}break;
 					
@@ -74,6 +75,19 @@ if (alarm[0] <= 0)
 
 }
 
+if (contCred >= 0)
+{
+	contCred --;
+}
+
+if (creditsShowing) && _visible = false && (contCred < 0)
+{
+	if (key_x)
+	{
+		creditsShowing = !creditsShowing;
+		_visible = !_visible;
+	}
+}
 if !instance_exists(o_player)
 {
 	instance_create_layer(x,y,"Player",o_player);	
