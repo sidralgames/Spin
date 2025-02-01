@@ -275,7 +275,7 @@ if (dying = false)
 			
 				bouncedWhileStopped = false;
 			
-				if collision_circle(x,y,10,nextWall,true,true) && (inDash = false)
+				if collision_circle(x,y,8,nextWall,true,true) && (inDash = false)
 				{
 					bouncedWhileStopped = true;
 					inDash = false;
@@ -383,7 +383,7 @@ if (dying = false)
 						x = cx + lengthdir_x(r, theta) 
 						y = cy + lengthdir_y(r, theta)
 					
-						if !collision_circle(x,y,11,nextWall,true,true)
+						if !collision_circle(x,y,8,nextWall,true,true)
 						{
 							bouncedWhileStopped = false;
 							state = "stopped";

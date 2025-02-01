@@ -33,7 +33,7 @@ newPosY = lastY+random_range(40,-40)
 global.tempoCorrupted = false;
 global.vinylSpin = -0.2;
 global.weapon = "Gun";
-global.energyTotal = 150;
+global.energyTotal = 200;
 global.superShot = 0;
 global.level = 1;
 //-------COLORS--------//

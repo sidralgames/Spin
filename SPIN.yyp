@@ -166,6 +166,7 @@
     {"id":{"name":"WallAttack","path":"scripts/WallAttack/WallAttack.yy",},},
     {"id":{"name":"shd_CRT_Shader","path":"shaders/shd_CRT_Shader/shd_CRT_Shader.yy",},},
     {"id":{"name":"snd_acceptMenu","path":"sounds/snd_acceptMenu/snd_acceptMenu.yy",},},
+    {"id":{"name":"snd_chino","path":"sounds/snd_chino/snd_chino.yy",},},
     {"id":{"name":"snd_e4u","path":"sounds/snd_e4u/snd_e4u.yy",},},
     {"id":{"name":"snd_gameOver","path":"sounds/snd_gameOver/snd_gameOver.yy",},},
     {"id":{"name":"snd_hit","path":"sounds/snd_hit/snd_hit.yy",},},

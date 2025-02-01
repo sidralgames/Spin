@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":165.11694,
+  "duration":365.4008,
   "name":"snd_songDemon",
   "parent":{
     "name":"Sonidos",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_songDemon.wav",
+  "soundFile":"snd_songDemon.mp3",
   "type":0,
   "volume":1.0,
 }

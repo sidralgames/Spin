@@ -3,8 +3,11 @@
 /// @description Insert description here
 // You can write your code in this editor
 initialTitle = lerp(initialTitle, 80,factor);
-draw_sprite_ext(s_title, 1,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialTitle,1,1,0,image_blend, image_alpha)
 
+if (global.collection = false)
+{
+	draw_sprite_ext(s_title, 1,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialTitle,1,1,0,image_blend, image_alpha)
+}
 if (_visible)
 {
 	

@@ -7,15 +7,15 @@ if (global.playing)
 {
 	if global.initialLives = 3
 	{
-		draw_sprite_ext(s_playerHP, 0, __view_get( e__VW.XView, 0 )+100,__view_get( e__VW.YView, 0 )+50,1,1,0,c_white,image_alpha)
+		draw_sprite_ext(s_playerHP, 0, __view_get( e__VW.XView, 0 )+100,__view_get( e__VW.YView, 0 )+45,1,1,0,c_white,image_alpha)
 	}
 	else
 	{
-		draw_sprite_ext(s_playerFill4HP, 0, __view_get( e__VW.XView, 0 )+100,__view_get( e__VW.YView, 0 )+50,1,1,0,c_white,image_alpha)
+		draw_sprite_ext(s_playerFill4HP, 0, __view_get( e__VW.XView, 0 )+100,__view_get( e__VW.YView, 0 )+45,1,1,0,c_white,image_alpha)
 	}
 	for (var i = 0; i< global.lives; i++;)
 	{
-		draw_sprite_ext(s_playerHPFill, 0, __view_get( e__VW.XView, 0 )+100 + 19*i,__view_get( e__VW.YView, 0 )+50,1,1,0,c_white,image_alpha)
+		draw_sprite_ext(s_playerHPFill, 0, __view_get( e__VW.XView, 0 )+100 + 19*i,__view_get( e__VW.YView, 0 )+45,1,1,0,c_white,image_alpha)
 	}
 }
 //if instance_exists(o_player)
