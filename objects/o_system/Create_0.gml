@@ -1,5 +1,11 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
-
-LoadDefaultData();
+if file_exists("SpinData.ini")
+{
+	LoadGame();
+}
+else
+{
+	LoadDefaultData();
+}
 

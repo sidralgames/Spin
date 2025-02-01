@@ -2,7 +2,8 @@
 // Puede escribir su código en este editor
 /// @description Insert description here
 // You can write your code in this editor
-
+initialTitle = lerp(initialTitle, 80,factor);
+draw_sprite_ext(s_title, 1,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialTitle,1,1,0,image_blend, image_alpha)
 
 if (_visible)
 {
@@ -107,6 +108,13 @@ if (global.collection)
 		if (key_x)
 		{
 			global.collection = false;
+			instance_destroy(o_boss);
+			instance_destroy(o_bossHP);
+			instance_destroy(o_vinilo);
+			instance_destroy(oViniloFake);
+			instance_create_layer(room_width/2, room_height/2, "Boss", o_boss);
+			instance_create_layer(room_width/2, room_height/2, "Vinyl", o_vinilo);
+			o_main.changingLevel = true;
 			_visible = true;
 			factor = 0.08;
 

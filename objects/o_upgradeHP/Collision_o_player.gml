@@ -1,0 +1,9 @@
+/// @description Inserte aquí la descripción
+// Puede escribir su código en este editor
+if (canBePicked)
+{
+	global.initialLives +=1;
+	global.lives+=1;
+	instance_destroy();
+	instance_destroy(o_upgradesFather);
+}

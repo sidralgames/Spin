@@ -65,6 +65,7 @@ if (surface_exists(surface))
 					drawflashRoto = true;
 					drawflashCont = 20;
 				}
+				audio_play_sound_on(global.audioEmitter,snd_roto,false, 50,0.2,,random_range(1,1.1));
 				getImage = true;
 				
 			

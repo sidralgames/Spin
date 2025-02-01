@@ -5,6 +5,7 @@ if (inDash = false)
 	if (tocado = false) 
 	{
 		tocado = true;
+		audio_play_sound_on(global.audioEmitter,snd_hit,false, 50,0.5,,random_range(0.8,0.9));
 		_hp -=1;
 		with(o_main)
 		{

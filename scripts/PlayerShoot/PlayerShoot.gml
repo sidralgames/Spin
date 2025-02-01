@@ -30,6 +30,8 @@ function PlayerShoot()
 			{
 				if (alarm[0] <= 0) && (global.energy >= 10)
 				{
+					audio_play_sound_on(global.audioEmitter,snd_shoot,false, 50,0.15,,random_range(0.7,0.8));
+					
 					global.energy -= shootEnergy;
 					bullet = instance_create_layer(x + lengthdir_x(distGun+2, aimDir), y + lengthdir_y(distGun+2, aimDir), "BulletsPlayer", o_bulletPlayer);
 					bullet.initialSpeed = 3.75;
@@ -69,6 +71,7 @@ function PlayerShoot()
 			{
 				if (alarm[0] <= 0) && (global.energy >= 10)
 				{
+					audio_play_sound_on(global.audioEmitter,snd_shoot,false, 50,0.2,,random_range(1,1.1));
 					global.energy -= shotgunEnergy;
 					for (var i=0; i<3; i++)
 					{

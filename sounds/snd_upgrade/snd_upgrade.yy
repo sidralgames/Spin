@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":105.931046,
+  "duration":268.4604,
   "name":"snd_upgrade",
   "parent":{
     "name":"SPIN",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_upgrade.wav",
+  "soundFile":"snd_upgrade.mp3",
   "type":0,
   "volume":1.0,
 }

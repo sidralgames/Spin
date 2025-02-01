@@ -19,4 +19,13 @@ if instance_exists(o_bulletPitch)
 
 //draw_text_color(x,y+80,string(y),c_white,c_white,c_white,c_white,1)
 draw_self();
-draw_sprite_ext(s_tempoMeter,0,x,meterY,scale,scale,0,image_blend, image_alpha)
+
+if (global.slowmotionPicked)
+{
+	draw_sprite_ext(s_tempoMeterSlow,0,x,meterY,scale,scale,0,image_blend, image_alpha)
+}
+else
+{
+	
+	draw_sprite_ext(s_tempoMeter,0,x,meterY,scale,scale,0,image_blend, image_alpha)
+}

@@ -12,6 +12,19 @@ if (scale > 1)
 		scale = 1;
 	}
 }
+
+if (global.playing = true) && ((spriteBoss = s_bossDemon) || (spriteBoss = s_bossRata))
+{
+	contEnemies --;
+	
+	if (contEnemies <= 0)
+	{
+		contEnemies = random_range(1000,1200);
+		instance_create_layer(x+choose(75, -75),y+choose(75, -75),"Enemies", o_alert);
+	}
+}
+
+
 if !instance_exists(o_MainMenu) && (global.howToPlay = false) && (global.collection = false)
 {
 	if (contToStart >= 0)
@@ -26,11 +39,8 @@ if !instance_exists(o_MainMenu) && (global.howToPlay = false) && (global.collect
 		{
 			createHP = true;
 			bossHP = instance_create_layer(x-255,200,"Main", o_bossHP);
-			if spriteBoss = s_bossDemon
-			{
-				 instance_create_layer(x+100,y,"Enemies", o_enemy);
-				  instance_create_layer(x-100,y,"Enemies", o_enemy);
-			}
+			
+			
 		}
 		
 		image_angle -= -global.vinylSpin*global.relativeSpeed;
@@ -171,6 +181,7 @@ if (global.collection)
 			//audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 		selectedVinyl -=1;	
 		changeSongCollection = false;
+		o_main.changingLevel = true;
 	}
 
 	if (key_rightP)
@@ -178,6 +189,7 @@ if (global.collection)
 			//audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 		selectedVinyl +=1;
 		changeSongCollection = false;
+		o_main.changingLevel = true;
 	}
 		
 

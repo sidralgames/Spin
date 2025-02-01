@@ -9,13 +9,13 @@ if (alarm[0] <= 0)
 	{
 		if (key_downP)
 		{
-			//audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
+			audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 			selected +=1;	
 		}
 
 		if (key_upP)
 		{
-			//audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
+			audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 			selected -=1;	
 		}
 		
@@ -32,11 +32,12 @@ if (alarm[0] <= 0)
 
 			if (key_x)
 			{
-				//audio_play_sound_on(global.audioEmitter,snd_acceptMenu,false, 50);
+				
 				switch(selected)
 				{
 					case 0:
 					{
+						audio_play_sound_on(global.audioEmitter,snd_acceptMenu,false, 50);
 						PlayGame(true);
 						instance_destroy();
 						//o_nextRoom.alarm[0] = 60;
@@ -47,6 +48,7 @@ if (alarm[0] <= 0)
 					
 					case 1:
 					{
+						audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 						_visible = false;
 						instance_create_layer(o_boss.x-200,o_boss.y,"Main",o_HowToPlay)
 						global.howToPlay = true;
@@ -55,6 +57,7 @@ if (alarm[0] <= 0)
 					
 					case 2:
 					{
+						audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 						instance_create_layer(x,y,"Menu", o_OptionsMenu);
 						_visible = false;
 		
@@ -62,6 +65,7 @@ if (alarm[0] <= 0)
 					
 					case 3:
 					{
+						audio_play_sound_on(global.audioEmitter,snd_acceptMenu,false, 50);
 						global.collection = true;
 						_visible = false;
 		

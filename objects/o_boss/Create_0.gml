@@ -1,5 +1,6 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
+contEnemies = 200;
 spritePurple = -1;
 changeSongCollection = false;
 drawLocked = false;

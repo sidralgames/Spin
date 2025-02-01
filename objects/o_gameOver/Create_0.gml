@@ -4,6 +4,7 @@ initialGameOver = 160;
 factor = 0.05;
 numBossesDefeated = 0;
 rot = 0;
+audio_play_sound_on(global.audioEmitter,snd_gameOver,false, 50);
 
 for (var i = 0; i < global.totalNumberOfVinyls; i++)
 {

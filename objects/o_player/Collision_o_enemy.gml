@@ -6,7 +6,7 @@ if (other.dying = false)
 	{
 		tocado = true;
 		_hp -=1;
-		
+		audio_play_sound_on(global.audioEmitter,snd_hit,false, 50,0.5,,random_range(0.8,0.9));
 		with(o_main)
 		{
 			drawflashPlayerHitted = true;

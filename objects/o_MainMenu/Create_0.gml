@@ -15,3 +15,4 @@ initialQuit = 420;
 initialCollectionX = 320
 initialBackX =  320
 initialBackY = 300
+initialTitle = -30

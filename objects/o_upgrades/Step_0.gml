@@ -5,7 +5,7 @@ if (changeSongCollection = false)
 	if (global.song != snd_upgrade)
 	{
 		audio_stop_sound(global.song);
-		global.song = snd_upgrade;
+		global.song = snd_e4u;
 		audio_play_sound_on(global.audioEmitter,global.song, true, 100,,37);
 		changeSongCollection = true;
 		}
@@ -31,7 +31,7 @@ else
 		if (creatingUpgrades = false) && (alarm[0] <= 0)
 		{
 			screenShake(2,20,1)
-			set = irandom(7);
+			set = irandom(10);
 			if (set = 0)
 			{
 				instance_create_layer(x+90, y, "BulletsDown", o_upgradeGun);
@@ -71,6 +71,45 @@ else
 			{
 				instance_create_layer(x+90, y, "BulletsDown", o_upgradeSuperShot);
 				instance_create_layer(x-90, y, "BulletsDown", o_upgradeSlowMotion);
+			}
+			
+			if (set = 8)
+			{
+				instance_create_layer(x+90, y, "BulletsDown", o_upgradeGun);
+				if (global.initialLives < 4)
+				{
+					instance_create_layer(x-90, y, "BulletsDown", o_upgradeHP);
+				}
+				else
+				{
+					instance_create_layer(x-90, y, "BulletsDown", o_upgradeSuperShot);
+				}
+			}
+			
+			if (set = 9)
+			{
+				instance_create_layer(x+90, y, "BulletsDown", o_upgradeSlowMotion);
+				if (global.initialLives < 4)
+				{
+					instance_create_layer(x-90, y, "BulletsDown", o_upgradeHP);
+				}
+				else
+				{
+					instance_create_layer(x-90, y, "BulletsDown", o_upgradeEnergy);
+				}
+			}
+			
+			if (set = 10)
+			{
+				instance_create_layer(x+90, y, "BulletsDown", o_upgradeFireRate);
+				if (global.initialLives < 4)
+				{
+					instance_create_layer(x-90, y, "BulletsDown", o_upgradeHP);
+				}
+				else
+				{
+					instance_create_layer(x-90, y, "BulletsDown", o_upgradeWalls);
+				}
 			}
 			creatingUpgrades = true;
 		}
