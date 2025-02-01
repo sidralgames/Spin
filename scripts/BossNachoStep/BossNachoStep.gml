@@ -13,15 +13,15 @@ function BossNachoStep()
 		contAttack = random_range(100,200);
 		
 		
-		if (_hp < 70)
+		if (_hp < 50)
 		{
 			if (canRoto)
 			{
-				attack = choose("BulletTempo","BulletRound", "DobleBullet", "Pattern1", "Roto");
+				attack = choose("BulletTempo","BulletBurst", "DobleBullet", "Pattern1", "Roto");
 			}
 			else
 			{
-				attack = choose("BulletTempo","SingleBullet", "DobleBullet", "Pattern1");
+				attack = choose("BulletBurst","SingleBullet", "DobleBullet", "Pattern1");
 			}
 		}
 		else 

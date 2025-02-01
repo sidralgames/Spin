@@ -43,6 +43,12 @@ if instance_exists(o_boss) && (global.collection = false)
 			global.vinylAlpha = 0.95;
 			global.vinylColor = global.yellow
 		}break;
+		
+		case s_bossGirl:
+		{
+			global.vinylAlpha = 0.90;
+			global.vinylColor = global.pink
+		}break;
 				
 	}
 }

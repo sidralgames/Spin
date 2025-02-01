@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"s_bulletBossNacho",
-    "path":"sprites/s_bulletBossNacho/s_bulletBossNacho.yy",
+    "name":"s_upgradeSuperShot",
+    "path":"sprites/s_upgradeSuperShot/s_upgradeSuperShot.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -1,7 +1,7 @@
 // Los recursos de Script han cambiado para la v2.3.0 Consulta
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
-function BossDemonStep()
-{
+function BossGirlStep(){
+
 
 	if (contAttack > 0)
 	{
@@ -13,13 +13,13 @@ function BossDemonStep()
 		contAttack = random_range(100,200);
 		
 		
-		if (_hp < 80)
+		if (_hp < 150)
 		{
-			attack = choose("BulletTempo","BulletBurst", "DobleBullet", "Pattern1", "Roto");
+			attack = choose("BulletBurst", "BulletTempo","BulletBurst", "Pattern1", "Roto");
 		}
 		else 
 		{
-			attack = choose("SingleBullet","DobleBullet","BulletBurst", "Pattern1", "Roto")
+			attack = choose("Pattern1","DobleBullet", "BulletBurst","Roto", "Pattern1", "Roto")
 		}
 		
 		if (attack = "Roto") && (canRoto)
@@ -40,8 +40,14 @@ function BossDemonStep()
 
 	BulletAttack(attack);
 
-
-	WallAttack(1,2,choose(25,50),35,3);
+	if (attack) != "BulletBurst"
+	{
+		WallAttack(2,4,choose(25,50),40,2);
+	}
+	else
+	{
+		WallAttack(0,2,choose(25,50),40,2);
+	}
 
 
 	if (needleAttack) && instance_exists(o_player)

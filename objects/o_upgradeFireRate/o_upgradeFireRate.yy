@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"s_shotgun",
-    "path":"sprites/s_shotgun/s_shotgun.yy",
+    "name":"s_fireRateUpgrade",
+    "path":"sprites/s_fireRateUpgrade/s_fireRateUpgrade.yy",
   },
   "spriteMaskId":null,
   "visible":true,

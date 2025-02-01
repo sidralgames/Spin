@@ -5,4 +5,5 @@ function LoadDefaultData()
 	global.bossNachoCollection = 0;
 	global.bossDemonCollection = 0;
 	global.bossTribalCollection = 0;
+	global.bossGirlCollection = 0;
 }

@@ -8,6 +8,7 @@ function LoadGame()
 	global.bossNachoCollection = ini_read_real("bossesCollection","bossNacho", 0);
 	global.bossDemonCollection = ini_read_real("bossesCollection","bossDemon", 0);
 	global.bossTribalCollection = ini_read_real("bossesCollection","bossTribal", 0);
+	global.bossGirlCollection = ini_read_real("bossesCollection","bossGirl", 0);
 	
 	ini_close();
 }

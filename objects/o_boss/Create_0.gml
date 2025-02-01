@@ -33,13 +33,13 @@ switch(global.level)
 			global.song = snd_song1;
 			audio_play_sound_on(global.audioEmitter,global.song, true, 100,,65);
 		}
-		spritePurple = choose(s_bossGirl, s_bossNacho);
-		spriteBoss = spritePurple
+		
+		spriteBoss = s_bossNacho;
 		bossNumber = 0;
 		
 		bossIsInCollection = global.bossNachoCollection;
 		
-		_hpMax = 130;
+		_hpMax = 80;
 		rotSpeedBoss = 0.5;
 		_hp = _hpMax;
 
@@ -71,7 +71,7 @@ switch(global.level)
 		spriteBoss = choose(s_bossDemon);
 		bossNumber = 1;
 		bossIsInCollection = global.bossDemonCollection;
-		_hpMax = 180;
+		_hpMax = 100;
 		rotSpeedBoss = 0.5;
 		_hp = _hpMax;
 
@@ -96,6 +96,31 @@ switch(global.level)
 		bossNumber = 2;
 		
 		bossIsInCollection = global.bossTribalCollection;
+		_hpMax = 150;
+		rotSpeedBoss = 0.5;
+		_hp = _hpMax;
+
+		alarm[0] = 60;
+		fireRateSingleBullet =  irandom_range(60,120);
+		
+		fireRatePattern1 = irandom_range(60,180);
+		TotBulletsP1 = irandom_range(4,8);
+		offsetPattern1 = 0;
+
+		needleAttack = false
+		dir=0;
+		totWall = 4
+		offset = 0;
+		contAttack = 60;
+		attack = choose("SingleBullet", "Pattern1")
+	}break;
+	
+	case 4:
+	{
+		spriteBoss = choose(s_bossGirl);
+		bossNumber = 3;
+		
+		bossIsInCollection = global.bossGirlCollection;
 		_hpMax = 250;
 		rotSpeedBoss = 0.5;
 		_hp = _hpMax;
@@ -148,8 +173,8 @@ switch(global.level)
 			global.song = snd_song1;
 			audio_play_sound_on(global.audioEmitter,global.song, true, 100,,65);
 		}
-		spritePurple = choose(s_bossGirl, s_bossNacho, s_bossDemon, s_bossTribal);
-		spriteBoss = spritePurple;
+		
+		spriteBoss = choose(s_bossGirl, s_bossNacho, s_bossDemon, s_bossTribal);
 		bossNumber = 0;
 		
 		bossIsInCollection = global.bossNachoCollection;
@@ -172,8 +197,10 @@ switch(global.level)
 		offset = 0;
 		contAttack = 60;
 		attack = choose("SingleBullet")
-	}
+	}break;
 }
+
+
 sprite_index = spriteBoss;
 image_speed = 0;
 bulletsCreated = 0;

@@ -19,7 +19,7 @@ function BossTribalStep(){
 		}
 		else 
 		{
-			attack = choose("DobleBullet","BulletRound","DobleBullet")
+			attack = choose("DobleBullet","BulletBurst","DobleBullet")
 		}
 		
 		if (attack = "Roto") && (canRoto)

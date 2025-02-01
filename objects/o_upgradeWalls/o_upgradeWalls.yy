@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"s_upgradeEnergy",
-    "path":"sprites/s_upgradeEnergy/s_upgradeEnergy.yy",
+    "name":"s_wallNachoUpgrade",
+    "path":"sprites/s_wallNachoUpgrade/s_wallNachoUpgrade.yy",
   },
   "spriteMaskId":null,
   "visible":true,

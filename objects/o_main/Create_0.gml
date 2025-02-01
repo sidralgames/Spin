@@ -120,3 +120,4 @@ global.totalNumberOfVinyls = 0;
 AddBossNachoCollection();
 AddBossDemonCollection();
 AddBossTribalCollection();
+AddBossGirlCollection();

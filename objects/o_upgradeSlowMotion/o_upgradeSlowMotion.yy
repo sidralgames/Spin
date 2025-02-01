@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"s_upgradeEnergy",
-    "path":"sprites/s_upgradeEnergy/s_upgradeEnergy.yy",
+    "name":"s_upgradeSlowMo",
+    "path":"sprites/s_upgradeSlowMo/s_upgradeSlowMo.yy",
   },
   "spriteMaskId":null,
   "visible":true,

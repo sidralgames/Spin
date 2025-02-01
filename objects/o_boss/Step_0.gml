@@ -37,7 +37,7 @@ if !instance_exists(o_MainMenu) && (global.howToPlay = false) && (global.collect
 		
 		switch(spriteBoss)
 		{
-			case spritePurple:
+			case s_bossNacho:
 			{
 				BossNachoStep();
 			}
@@ -52,6 +52,12 @@ if !instance_exists(o_MainMenu) && (global.howToPlay = false) && (global.collect
 			case s_bossTribal:
 			{
 				BossTribalStep();
+			}
+			break;
+			
+			case s_bossGirl:
+			{
+				BossGirlStep();
 			}
 			break;
 		}
@@ -157,14 +163,14 @@ if (global.collection)
 	}
 		
 
-	if (selectedVinyl > 2)
+	if (selectedVinyl > global.totalNumberOfVinyls-1)
 	{
 		selectedVinyl = 0;	
 	}
 
 	if (selectedVinyl < 0)
 	{
-		selectedVinyl = 2;	
+		selectedVinyl = global.totalNumberOfVinyls-1;	
 	}
 	switch(selectedVinyl)
 	{
@@ -256,6 +262,29 @@ if (global.collection)
 			
 			sprite_index = s_bossTribal;
 			spriteBoss = s_bossTribal;
+			
+		}break;
+		
+		case 3:
+		{
+			if (global.bossGirlCollection = 0)
+			{
+				image_blend = c_dkgray;
+				global.vinylAlpha = 0.95
+				global.vinylColor = c_dkgray;
+				drawLocked = true;
+			}
+			else
+			{
+				image_blend = c_white;
+				global.vinylAlpha = 0.95;
+				global.vinylColor = global.pink;
+				drawLocked = false;
+				//global.level = 3;
+			}
+			
+			sprite_index = s_bossGirl;
+			spriteBoss = s_bossGirl;
 			
 		}break;
 	}
