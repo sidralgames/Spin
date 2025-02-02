@@ -2,11 +2,11 @@
 // Puede escribir su código en este editor
 if (changeSongCollection = false)
 {
-	if (global.song != snd_upgrade)
+	if (global.song != snd_upgradesLoop)
 	{
 		audio_stop_sound(global.song);
-		global.song = snd_e4u;
-		audio_play_sound_on(global.audioEmitter,global.song, true, 100,,37);
+		global.song = snd_upgradesLoop;
+		audio_play_sound_on(global.audioEmitter,global.song, true, 100,,0);
 		changeSongCollection = true;
 		}
 }
@@ -126,6 +126,9 @@ if instance_exists(o_viniloUpgrades)
 
 if !instance_exists(o_upgradesFather) && (creatingUpgrades = true)
 {
+	global.bossUpgradesCollection+=1;
+	SaveGame();
+	
 	with(o_main)
 	{
 		changingLevel = true;

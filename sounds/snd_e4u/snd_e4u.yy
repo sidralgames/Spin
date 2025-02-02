@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":105.931046,
+  "duration":239.90857,
   "name":"snd_e4u",
   "parent":{
     "name":"SPIN",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_e4u.wav",
+  "soundFile":"snd_e4u.mp3",
   "type":0,
   "volume":1.0,
 }

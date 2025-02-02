@@ -24,6 +24,8 @@ angleOff = random_range(-10,10);
 distOff = random_range(-20,60);
 canRoto = true;
 
+
+
 switch(global.level)
 {
 	case 1:
@@ -40,7 +42,7 @@ switch(global.level)
 		
 		bossIsInCollection = global.bossNachoCollection;
 		
-		_hpMax = 80;
+		_hpMax = 8;
 		rotSpeedBoss = 0.5;
 		_hp = _hpMax;
 
@@ -66,13 +68,13 @@ switch(global.level)
 		{
 			audio_stop_sound(global.song);
 			global.song = snd_songDemon;
-			audio_play_sound_on(global.audioEmitter,global.song, true, 100,,0);
+			audio_play_sound_on(global.audioEmitter,global.song, true, 100,,1);
 		}
 		
 		spriteBoss = choose(s_bossDemon);
 		bossNumber = 1;
 		bossIsInCollection = global.bossDemonCollection;
-		_hpMax = 100;
+		_hpMax = 10;
 		rotSpeedBoss = 0.5;
 		_hp = _hpMax;
 
@@ -95,6 +97,13 @@ switch(global.level)
 	{
 		spriteBoss = choose(s_bossTribal);
 		bossNumber = 2;
+		
+		if (global.song != snd_tribal)
+		{
+			audio_stop_sound(global.song);
+			global.song = snd_tribal;
+			audio_play_sound_on(global.audioEmitter,global.song, true, 100,,135);
+		}
 		
 		bossIsInCollection = global.bossTribalCollection;
 		_hpMax = 150;
@@ -121,11 +130,11 @@ switch(global.level)
 		spriteBoss = choose(s_bossGirl);
 		bossNumber = 3;
 		
-		if (global.song != snd_chino)
+		if (global.song != snd_e4u)
 		{
 			audio_stop_sound(global.song);
-			global.song = snd_chino;
-			audio_play_sound_on(global.audioEmitter,global.song, true, 100,,65);
+			global.song = snd_e4u;
+			audio_play_sound_on(global.audioEmitter,global.song, true, 100,,40);
 		}
 		
 		bossIsInCollection = global.bossGirlCollection;
@@ -154,6 +163,13 @@ switch(global.level)
 		image_speed = 0;
 		image_index = 1;
 		bossNumber = 4;
+		
+		if (global.song != snd_chino)
+		{
+			audio_stop_sound(global.song);
+			global.song = snd_chino;
+			audio_play_sound_on(global.audioEmitter,global.song, true, 100,,5);
+		}
 		
 		bossIsInCollection = global.bossRataCollection;
 		_hpMax = 250;
@@ -250,3 +266,5 @@ _angle = image_angle;
 //galletaFake.depth = depth - 1;
 global.vinylSpin = -0.6;
 global.spriteBoss = spriteBoss;
+
+

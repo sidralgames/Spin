@@ -80,6 +80,21 @@ if (changingLevel = true)
 				changingLevel = false;
 			}
 			break;
+			
+			case s_galletaUpgrades:
+			{
+				color_fx_params.g_TintCol = global.brightArray;
+				noise_fx_params.g_FractalNoiseTintColour = global.lighPinkArray
+
+				fx_set_parameters(color_fx, color_fx_params);
+				fx_set_parameters(noise_fx, noise_fx_params);
+
+				layer_set_fx("EffectColor", color_fx);
+				layer_set_fx("Noise", noise_fx);
+	
+				changingLevel = false;
+			}
+			break;
 		}
 	}
 	
@@ -125,3 +140,4 @@ if (global.playing)
 		}
 	}
 }
+

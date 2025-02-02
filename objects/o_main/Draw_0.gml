@@ -92,6 +92,14 @@ if (global.collection)
 	{
 		if (drawLocked)	
 		{
+			if (o_boss.spriteBoss = s_galletaUpgrades)
+			&& (global.bossUpgradesCollection < 5)
+			{
+				draw_set_halign(fa_center)
+				draw_text_color(o_boss.x, o_boss.y+73, string(global.bossUpgradesCollection) + " / 5\nUpgrades picked", global.lightBlue, global.lightBlue, global.lightBlue, global.lightBlue,1)
+				draw_text_color(o_boss.x, o_boss.y+72, string(global.bossUpgradesCollection) + " / 5\nUpgrades picked", global.yellow, global.yellow, global.yellow, global.yellow,1)
+				draw_text_color(o_boss.x, o_boss.y+70, string(global.bossUpgradesCollection) + " / 5\nUpgrades picked", global.pink, global.pink, global.pink, global.pink,1)
+			}
 			draw_sprite_ext(s_locked, 0, o_boss.x, o_boss.y, 1,1,0,c_white,1)	
 		}
 	}

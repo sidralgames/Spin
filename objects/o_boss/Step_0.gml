@@ -40,6 +40,33 @@ if !instance_exists(o_MainMenu) && (global.howToPlay = false) && (global.collect
 			createHP = true;
 			bossHP = instance_create_layer(x-255,200,"Main", o_bossHP);
 			
+			with(o_aguja)
+		{
+			songDuration = audio_sound_length(global.song);
+
+			framesSong = songDuration * room_speed;
+
+			initialDist = 170;
+
+			dist = initialDist;
+
+			distToCenter = dist - 10;
+
+			fac = distToCenter / framesSong
+
+			nearDisc = instance_nearest(x,y,o_vinilo);
+			nearBoss = instance_nearest(x,y,o_boss);
+
+
+			canBeTouched= true;
+			contCanBeTouched = 200;
+
+			x = nearDisc.x + lengthdir_x(dist, 35);
+			y = nearDisc.y + lengthdir_y(dist, 35);
+
+			xIni = x;
+			yIni = y;
+		}
 			
 		}
 		
@@ -182,6 +209,34 @@ if (global.collection)
 		selectedVinyl -=1;	
 		changeSongCollection = false;
 		o_main.changingLevel = true;
+		
+		with(o_aguja)
+		{
+			songDuration = audio_sound_length(global.song);
+
+			framesSong = songDuration * room_speed;
+
+			initialDist = 170;
+
+			dist = initialDist;
+
+			distToCenter = dist - 10;
+
+			fac = distToCenter / framesSong
+
+			nearDisc = instance_nearest(x,y,o_vinilo);
+			nearBoss = instance_nearest(x,y,o_boss);
+
+
+			canBeTouched= true;
+			contCanBeTouched = 200;
+
+			x = nearDisc.x + lengthdir_x(dist, 35);
+			y = nearDisc.y + lengthdir_y(dist, 35);
+
+			xIni = x;
+			yIni = y;
+		}
 	}
 
 	if (key_rightP)
@@ -190,6 +245,34 @@ if (global.collection)
 		selectedVinyl +=1;
 		changeSongCollection = false;
 		o_main.changingLevel = true;
+		
+		with(o_aguja)
+		{
+			songDuration = audio_sound_length(global.song);
+
+			framesSong = songDuration * room_speed;
+
+			initialDist = 170;
+
+			dist = initialDist;
+
+			distToCenter = dist - 10;
+
+			fac = distToCenter / framesSong
+
+			nearDisc = instance_nearest(x,y,o_vinilo);
+			nearBoss = instance_nearest(x,y,o_boss);
+
+
+			canBeTouched= true;
+			contCanBeTouched = 200;
+
+			x = nearDisc.x + lengthdir_x(dist, 35);
+			y = nearDisc.y + lengthdir_y(dist, 35);
+
+			xIni = x;
+			yIni = y;
+		}
 	}
 		
 
@@ -221,7 +304,7 @@ if (global.collection)
 					{
 						audio_stop_sound(global.song);
 						global.song = snd_song1;
-						audio_play_sound_on(global.audioEmitter,global.song, true, 100,,65);
+						audio_play_sound_on(global.audioEmitter,global.song, true, 100,,0);
 						changeSongCollection = true;
 					}
 				}
@@ -261,7 +344,7 @@ if (global.collection)
 				}
 				
 				image_blend = c_white;
-				global.vinylAlpha = 0.75;
+				global.vinylAlpha = 0.8;
 				global.vinylColor = global.lightBlue;
 				drawLocked = false;
 				//global.level = 2;
@@ -283,6 +366,17 @@ if (global.collection)
 			}
 			else
 			{
+				if (changeSongCollection = false)
+				{
+					if (global.song != snd_tribal)
+					{
+						audio_stop_sound(global.song);
+						global.song = snd_tribal;
+						audio_play_sound_on(global.audioEmitter,global.song, true, 100,,0);
+						changeSongCollection = true;
+					}
+				}
+				
 				image_blend = c_white;
 				global.vinylAlpha = 0.95;
 				global.vinylColor = global.yellow;
@@ -309,10 +403,10 @@ if (global.collection)
 				
 				if (changeSongCollection = false)
 				{
-					if (global.song != snd_chino)
+					if (global.song != snd_e4u)
 					{
 						audio_stop_sound(global.song);
-						global.song = snd_chino;
+						global.song = snd_e4u;
 						audio_play_sound_on(global.audioEmitter,global.song, true, 100,,0);
 						changeSongCollection = true;
 					}
@@ -341,6 +435,17 @@ if (global.collection)
 			}
 			else
 			{
+				if (changeSongCollection = false)
+				{
+					if (global.song != snd_chino)
+					{
+						audio_stop_sound(global.song);
+						global.song = snd_chino;
+						audio_play_sound_on(global.audioEmitter,global.song, true, 100,,0);
+						changeSongCollection = true;
+					}
+				}
+				
 				image_blend = c_white;
 				global.vinylAlpha = 0.95;
 				global.vinylColor = global.greenRat;
@@ -355,7 +460,7 @@ if (global.collection)
 		
 		case 5:
 		{
-			if (global.bossUpgradesCollection = 0)
+			if (global.bossUpgradesCollection < 5)
 			{
 				image_blend = c_dkgray;
 				global.vinylAlpha = 0.95
@@ -364,6 +469,17 @@ if (global.collection)
 			}
 			else
 			{
+				if (changeSongCollection = false)
+				{
+					if (global.song != snd_LoveSpell)
+					{
+						audio_stop_sound(global.song);
+						global.song = snd_LoveSpell;
+						audio_play_sound_on(global.audioEmitter,global.song, true, 100,,0);
+						changeSongCollection = true;
+					}
+				}
+				
 				image_blend = c_white;
 				global.vinylAlpha = 0.95;
 				global.vinylColor = c_white;

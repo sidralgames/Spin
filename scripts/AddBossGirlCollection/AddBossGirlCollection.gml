@@ -6,7 +6,7 @@ function AddBossGirlCollection()
 	{ 
 		alias: "Girl",
 		keyKilledBy :"killedByGirl",
-		sprite: s_bossTribal,
+		sprite: s_bossGirl,
 		spriteVinyl: s_discoVinilo,
 		vinylAlpha : 0.95,
 		vinylColor : global.pink,

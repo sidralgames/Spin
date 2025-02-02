@@ -4,8 +4,9 @@ songDuration = audio_sound_length(global.song);
 
 framesSong = songDuration * room_speed;
 
+initialDist = 170;
 
-dist = 170;
+dist = initialDist;
 
 distToCenter = dist - 10;
 

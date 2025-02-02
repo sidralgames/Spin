@@ -39,6 +39,7 @@ if (slowedFromAHit = false)
 		}
 		else if (global.autoPitch = false)
 		{
+			
 			o_aguja.dist-= o_aguja.fac * global.relativeSpeed;
 	
 			if (global.slowed = true)

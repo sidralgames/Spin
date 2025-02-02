@@ -54,8 +54,7 @@ if instance_exists(o_boss) && (global.collection = false)
 		{
 			global.vinylAlpha = 0.90;
 			global.vinylColor = global.greenRat;
-		}break;
-				
+		}break;		
 	}
 }
 

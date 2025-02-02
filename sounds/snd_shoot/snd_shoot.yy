@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.261225,
+  "duration":2.504172,
   "name":"snd_shoot",
   "parent":{
     "name":"SPIN",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_shoot.mp3",
+  "soundFile":"snd_shoot.wav",
   "type":0,
   "volume":1.0,
 }

@@ -103,7 +103,6 @@ if (chasingPlayer) && (alarm[3] <= 0) && (bounced = false)
 	if instance_exists(o_player)
 	{
 		
-		
 			direction = point_direction(x,y,o_player.x, o_player.y);
 		
 			point_directionPrev = point_direction(room_width/2, room_height/2, xprevious, yprevious);
@@ -129,7 +128,7 @@ if (chasingPlayer) && (alarm[3] <= 0) && (bounced = false)
 
 if (chasingPlayer = false) 
 {
-	spinSpeed = lerp(spinSpeed, global.vinylSpin, 0.05) * global.relativeSpeed;
+	spinSpeed = lerp(spinSpeed, global.vinylSpin*2, 0.05) * global.relativeSpeed;
 	speed = lerp(speed, 0, 0.05);
 	theta += totalPush;
 	x = cx + lengthdir_x(r, theta) 
