@@ -105,6 +105,9 @@ if (global.collection)
 	initialBackY = lerp(initialBackY, 50,factor);
 	//draw_sprite_ext(s_collection, 0,  __view_get( e__VW.XView, 0 )+ initialCollectionX,__view_get( e__VW.YView, 0 )+initialCollection,0.8,0.8,0,image_blend,  1)	
 	draw_sprite_ext(s_Back, 0,  __view_get( e__VW.XView, 0 )+ initialBackX,__view_get( e__VW.YView, 0 )+initialBackY,0.8,0.8,0,image_blend,  1)	
+	draw_sprite_ext(s_flechas, 0, o_boss.x - 212 ,__view_get( e__VW.YView, 0 )+180,1,1,0,image_blend,  1)	
+	draw_sprite_ext(s_flechas, 1, o_boss.x + 212 ,__view_get( e__VW.YView, 0 )+180,1,1,0,image_blend,  1)	
+
 
 	if (initialBackY < 60)
 	{

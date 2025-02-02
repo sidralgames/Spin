@@ -24,8 +24,6 @@ angleOff = random_range(-10,10);
 distOff = random_range(-20,60);
 canRoto = true;
 
-
-
 switch(global.level)
 {
 	case 1:
@@ -42,7 +40,7 @@ switch(global.level)
 		
 		bossIsInCollection = global.bossNachoCollection;
 		
-		_hpMax = 8;
+		_hpMax = 90;
 		rotSpeedBoss = 0.5;
 		_hp = _hpMax;
 
@@ -74,7 +72,7 @@ switch(global.level)
 		spriteBoss = choose(s_bossDemon);
 		bossNumber = 1;
 		bossIsInCollection = global.bossDemonCollection;
-		_hpMax = 10;
+		_hpMax = 130;
 		rotSpeedBoss = 0.5;
 		_hp = _hpMax;
 
@@ -106,7 +104,7 @@ switch(global.level)
 		}
 		
 		bossIsInCollection = global.bossTribalCollection;
-		_hpMax = 150;
+		_hpMax = 170;
 		rotSpeedBoss = 0.5;
 		_hp = _hpMax;
 
@@ -138,7 +136,7 @@ switch(global.level)
 		}
 		
 		bossIsInCollection = global.bossGirlCollection;
-		_hpMax = 200;
+		_hpMax = 210;
 		rotSpeedBoss = 0.5;
 		_hp = _hpMax;
 
@@ -172,7 +170,7 @@ switch(global.level)
 		}
 		
 		bossIsInCollection = global.bossRataCollection;
-		_hpMax = 250;
+		_hpMax = 260;
 		rotSpeedBoss = 0.5;
 		_hp = _hpMax;
 

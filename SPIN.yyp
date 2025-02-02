@@ -214,6 +214,7 @@
     {"id":{"name":"s_exploBlue","path":"sprites/s_exploBlue/s_exploBlue.yy",},},
     {"id":{"name":"s_exploOrange","path":"sprites/s_exploOrange/s_exploOrange.yy",},},
     {"id":{"name":"s_fireRateUpgrade","path":"sprites/s_fireRateUpgrade/s_fireRateUpgrade.yy",},},
+    {"id":{"name":"s_flechas","path":"sprites/s_flechas/s_flechas.yy",},},
     {"id":{"name":"s_galletaUpgrades","path":"sprites/s_galletaUpgrades/s_galletaUpgrades.yy",},},
     {"id":{"name":"s_gameOver","path":"sprites/s_gameOver/s_gameOver.yy",},},
     {"id":{"name":"s_gun","path":"sprites/s_gun/s_gun.yy",},},
