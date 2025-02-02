@@ -121,6 +121,13 @@ switch(global.level)
 		spriteBoss = choose(s_bossGirl);
 		bossNumber = 3;
 		
+		if (global.song != snd_chino)
+		{
+			audio_stop_sound(global.song);
+			global.song = snd_chino;
+			audio_play_sound_on(global.audioEmitter,global.song, true, 100,,65);
+		}
+		
 		bossIsInCollection = global.bossGirlCollection;
 		_hpMax = 200;
 		rotSpeedBoss = 0.5;

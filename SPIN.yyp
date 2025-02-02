@@ -128,6 +128,7 @@
     {"id":{"name":"AddBossNachoCollection","path":"scripts/AddBossNachoCollection/AddBossNachoCollection.yy",},},
     {"id":{"name":"AddBossRataCollection","path":"scripts/AddBossRataCollection/AddBossRataCollection.yy",},},
     {"id":{"name":"AddBossTribalCollection","path":"scripts/AddBossTribalCollection/AddBossTribalCollection.yy",},},
+    {"id":{"name":"AddBossUpgradesCollection","path":"scripts/AddBossUpgradesCollection/AddBossUpgradesCollection.yy",},},
     {"id":{"name":"BossDemonStep","path":"scripts/BossDemonStep/BossDemonStep.yy",},},
     {"id":{"name":"BossGirlStep","path":"scripts/BossGirlStep/BossGirlStep.yy",},},
     {"id":{"name":"BossNachoStep","path":"scripts/BossNachoStep/BossNachoStep.yy",},},

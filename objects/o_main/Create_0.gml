@@ -128,3 +128,4 @@ AddBossDemonCollection();
 AddBossTribalCollection();
 AddBossGirlCollection();
 AddBossRataCollection();
+AddBossUpgradesCollection();

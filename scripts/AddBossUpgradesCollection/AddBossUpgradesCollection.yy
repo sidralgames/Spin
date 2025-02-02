@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"AddBossUpgradesCollection",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"AddBossUpgradesCollection",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -306,6 +306,18 @@ if (global.collection)
 			}
 			else
 			{
+				
+				if (changeSongCollection = false)
+				{
+					if (global.song != snd_chino)
+					{
+						audio_stop_sound(global.song);
+						global.song = snd_chino;
+						audio_play_sound_on(global.audioEmitter,global.song, true, 100,,0);
+						changeSongCollection = true;
+					}
+				}
+				
 				image_blend = c_white;
 				global.vinylAlpha = 0.95;
 				global.vinylColor = global.pink;
@@ -338,6 +350,29 @@ if (global.collection)
 			
 			sprite_index = s_bossRata;
 			spriteBoss = s_bossRata;
+			
+		}break;
+		
+		case 5:
+		{
+			if (global.bossUpgradesCollection = 0)
+			{
+				image_blend = c_dkgray;
+				global.vinylAlpha = 0.95
+				global.vinylColor = c_dkgray;
+				drawLocked = true;
+			}
+			else
+			{
+				image_blend = c_white;
+				global.vinylAlpha = 0.95;
+				global.vinylColor = c_white;
+				drawLocked = false;
+				//global.level = 3;
+			}
+			
+			sprite_index = s_galletaUpgrades;
+			spriteBoss = s_galletaUpgrades;
 			
 		}break;
 	}

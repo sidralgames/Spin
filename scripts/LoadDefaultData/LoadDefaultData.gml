@@ -7,4 +7,5 @@ function LoadDefaultData()
 	global.bossTribalCollection = 0;
 	global.bossGirlCollection = 0;
 	global.bossRataCollection = 0;
+	global.bossUpgradesCollection = 0;
 }
