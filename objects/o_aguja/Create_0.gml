@@ -1,16 +1,19 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
+initialAngleAguja = 32;
+angleAguja = initialAngleAguja
+image_angle = angleAguja;
 songDuration = audio_sound_length(global.song);
 
 framesSong = songDuration * room_speed;
 
-initialDist = 170;
+initialDist = 250;
 
 dist = initialDist;
 
 distToCenter = dist - 10;
-
-fac = distToCenter / framesSong
+angleFac = 0.1
+fac = (distToCenter / framesSong) * angleFac
 
 nearDisc = instance_nearest(x,y,o_vinilo);
 nearBoss = instance_nearest(x,y,o_boss);

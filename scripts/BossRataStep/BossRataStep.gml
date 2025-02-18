@@ -42,7 +42,7 @@ function BossRataStep(){
 
 	if (attack) != "BulletBurst"
 	{
-		WallAttack(2,4,choose(25,50),40,2);
+		WallAttack(2,3,choose(25,50),40,3);
 	}
 	else
 	{

@@ -11,15 +11,5 @@ if (contCanBeTouched <= 0)
 	canBeTouched = true;
 }
 
-dist = clamp(dist, 42, 170)
-
-if instance_exists(nearDisc)
-{
-	x = nearDisc.x + lengthdir_x(dist, 35);
-	y = nearDisc.y + lengthdir_y(dist, 35);
-}
-else
-{
-	x =	xIni;
-	y = yIni;
-}
+image_angle = angleAguja;
+angleAguja = clamp(angleAguja, 5, 33)

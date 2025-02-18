@@ -1,5 +1,7 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
+//vstick_init(0, __view_get( e__VW.XView, 0 )+80 ,__view_get( e__VW.YView, 0 )+305,40,true,noone,Sprite1_1)
+
 
 global._hpUpgradeWall = 0;
 global.slowmotionPicked = false;
@@ -116,7 +118,7 @@ audio_play_sound_on(global.audioEmitter,global.song, true, 100,,65)
 global.standardAngleShake = 0.5;
 global.screenshakeIsOn = true;
 
-
+global.vibration=0;
 instance_create_layer(0,0,"Main", o_bulletPart);
 instance_create_layer(0,0,"Main", o_bulletBossPart);
 

@@ -19,7 +19,15 @@ if (global.playing = true) && ((spriteBoss = s_bossDemon) || (spriteBoss = s_bos
 	
 	if (contEnemies <= 0)
 	{
-		contEnemies = random_range(1000,1200);
+		if (spriteBoss = s_bossDemon)
+		{
+			contEnemies = random_range(1500,1800);
+		}
+		else if (spriteBoss = s_bossRata)
+		{
+			contEnemies = random_range(1000,1200);
+		}
+		
 		instance_create_layer(x+choose(75, -75),y+choose(75, -75),"Enemies", o_alert);
 	}
 }
@@ -41,32 +49,26 @@ if !instance_exists(o_MainMenu) && (global.howToPlay = false) && (global.collect
 			bossHP = instance_create_layer(x-255,200,"Main", o_bossHP);
 			
 			with(o_aguja)
-		{
-			songDuration = audio_sound_length(global.song);
+			{
+				songDuration = audio_sound_length(global.song);
 
-			framesSong = songDuration * room_speed;
+				framesSong = songDuration * room_speed;
 
-			initialDist = 170;
+				fac = (distToCenter / framesSong) * angleFac
 
-			dist = initialDist;
-
-			distToCenter = dist - 10;
-
-			fac = distToCenter / framesSong
-
-			nearDisc = instance_nearest(x,y,o_vinilo);
-			nearBoss = instance_nearest(x,y,o_boss);
+				nearDisc = instance_nearest(x,y,o_vinilo);
+				nearBoss = instance_nearest(x,y,o_boss);
 
 
-			canBeTouched= true;
-			contCanBeTouched = 200;
+				canBeTouched= true;
+				contCanBeTouched = 200;
 
-			x = nearDisc.x + lengthdir_x(dist, 35);
-			y = nearDisc.y + lengthdir_y(dist, 35);
+				x = nearDisc.x + lengthdir_x(dist, 35);
+				y = nearDisc.y + lengthdir_y(dist, 35);
 
-			xIni = x;
-			yIni = y;
-		}
+				xIni = x;
+				yIni = y;
+			}
 			
 		}
 		
@@ -140,6 +142,11 @@ if (_hp <= 0)
 	instance_destroy(o_enemyFather);
 	instance_destroy(o_bulletEnemyFather);
 	screenShake(8,120,5);
+	if instance_exists(o_player)
+	{
+		o_player.alarm[10] = 30
+		gamepad_set_vibration(0,0.5,0.5)
+	}
 	exploOrange = instance_create_layer(x, y, "BulletsDown", o_explosion);
 	exploOrange.sprite_index = s_exploOrange;
 	exploOrange.image_xscale = 1.2;
@@ -197,8 +204,8 @@ if (_hp <= 0)
 	
 }
 
-key_leftP = keyboard_check_pressed(vk_left) || keyboard_check_pressed(ord("A")) || gamepad_button_check_pressed(0, gp_padl);
-key_rightP = keyboard_check_pressed(vk_right) || keyboard_check_pressed(ord("D")) || gamepad_button_check_pressed(0, gp_padr);
+key_leftP = keyboard_check_pressed(vk_left)  || gamepad_button_check_pressed(0, gp_padl);
+key_rightP = keyboard_check_pressed(vk_right) || gamepad_button_check_pressed(0, gp_padr);
 	
 if (global.collection)
 {
@@ -216,13 +223,14 @@ if (global.collection)
 
 			framesSong = songDuration * room_speed;
 
-			initialDist = 170;
+			initialDist = 250;
+			angleAguja = initialAngleAguja;
 
 			dist = initialDist;
 
 			distToCenter = dist - 10;
 
-			fac = distToCenter / framesSong
+			fac = (distToCenter / framesSong) * angleFac
 
 			nearDisc = instance_nearest(x,y,o_vinilo);
 			nearBoss = instance_nearest(x,y,o_boss);
@@ -252,13 +260,14 @@ if (global.collection)
 
 			framesSong = songDuration * room_speed;
 
-			initialDist = 170;
+			initialDist = 250;
+			angleAguja = initialAngleAguja;
 
 			dist = initialDist;
 
 			distToCenter = dist - 10;
 
-			fac = distToCenter / framesSong
+			fac = (distToCenter / framesSong) * angleFac
 
 			nearDisc = instance_nearest(x,y,o_vinilo);
 			nearBoss = instance_nearest(x,y,o_boss);

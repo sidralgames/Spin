@@ -22,3 +22,11 @@ else
 {
 	image_index = 5
 }
+
+if instance_exists(o_aguja)
+{
+	with(o_aguja)
+	{
+		angleAguja = initialAngleAguja;
+	}
+}

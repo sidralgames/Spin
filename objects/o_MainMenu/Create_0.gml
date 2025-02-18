@@ -2,6 +2,7 @@
 // Puede escribir su código en este editor
 global.mainMenuX = x;
 global.mainMenuY = y;
+
 selected = 0;
 _visible = true;
 
@@ -16,3 +17,4 @@ initialCollectionX = 320
 initialBackX =  320
 initialBackY = 300
 initialTitle = -30
+initialConfirm = 370;

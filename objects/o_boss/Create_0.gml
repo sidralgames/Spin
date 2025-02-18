@@ -1,5 +1,7 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
+vibrationRotoTime = 10;
+vibrationRoto = 0.4;
 contEnemies = 200;
 spritePurple = -1;
 changeSongCollection = false;
@@ -23,7 +25,7 @@ contRotoTime = 0;
 angleOff = random_range(-10,10);
 distOff = random_range(-20,60);
 canRoto = true;
-
+//global.level = 4
 switch(global.level)
 {
 	case 1:
@@ -265,4 +267,35 @@ _angle = image_angle;
 global.vinylSpin = -0.6;
 global.spriteBoss = spriteBoss;
 
+if instance_exists(o_aguja)
+{
+		with(o_aguja)
+		{
+			songDuration = audio_sound_length(global.song);
+
+			framesSong = songDuration * room_speed;
+
+			initialDist = 250;
+			angleAguja = initialAngleAguja;
+
+			dist = initialDist;
+
+			distToCenter = dist - 10;
+
+			fac = (distToCenter / framesSong) * angleFac
+
+			nearDisc = instance_nearest(x,y,o_boss);
+			nearBoss = instance_nearest(x,y,o_boss);
+
+
+			canBeTouched= true;
+			contCanBeTouched = 200;
+
+			x = nearDisc.x + lengthdir_x(dist, 35);
+			y = nearDisc.y + lengthdir_y(dist, 35);
+
+			xIni = x;
+			yIni = y;
+		}
+}
 

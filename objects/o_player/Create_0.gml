@@ -1,5 +1,8 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
+aiming = false;
+recoilGun = 0;
+movingController = false;
 comesFromDeath = false;
 contComesFromDeath = 120;
 lastTouchedX = x;
@@ -18,7 +21,9 @@ squashing = false;
 scaleReset = false;
 angle = 0;
 _hp = 3;
-
+moveDir = 0;
+haxis = 0;
+vaxis = 0;
 contDieMax = 10;
 contDie = contDieMax;
 

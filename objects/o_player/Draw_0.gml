@@ -1,10 +1,11 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
 draw_set_halign(fa_left)
-//draw_text(20,100,"playerSPEED: " +  string(speed))
-//draw_text(20,120,"playerHspeed: " +  string(hspeed))
-//draw_text(20,140,"playerVspeed: " +  string(vspeed))
-//draw_text(20,80,"realSpeed: " +  string(realspeed))
+//draw_text(x,100,"dirH: " +  string(dirH))
+//draw_text(x,120,"dirV: " +  string(dirV))
+//draw_text(x,140,"moveDir: " +  string(moveDir))
+//draw_text(x,200,"moving: " +  string(moving))
+
 
 //draw_text(20,160,"x: " +  string(x))
 //draw_text(20,180,"y: " +  string(y))
@@ -25,6 +26,7 @@ else
 }
 draw_self();
 
+draw_set_alpha(0.8);
 if (global.energy < global.energyTotal)
 {
 	if (global.energy > dashEnergyMin)
@@ -38,7 +40,7 @@ if (global.energy < global.energyTotal)
 		draw_circular_bar(o_player.x+17, o_player.y-17, global.energy, global.energyTotal, global.red, 5,1, 2);
 	}
 }
-
+draw_set_alpha(1);
 if (dying = false)
 {
 	
@@ -58,8 +60,14 @@ if (dying = false)
 			scaleGunY = -1;
 			image_yscale = -1;
 		}
-	
-		draw_sprite_ext(gunSprite, 0, x + lengthdir_x(distGun - recoilGun, aimDir), y + lengthdir_y(distGun - recoilGun, aimDir),1,scaleGunY,aimDir,image_blend,image_alpha)
+		if gamepad_is_connected(0)
+		{
+			draw_sprite_ext(gunSprite, 0, x + lengthdir_x(distGun - recoilGun, aimDir), y + lengthdir_y(distGun - recoilGun, aimDir),1,scaleGunY,aimDir,image_blend,image_alpha)
+		}
+		else
+		{
+			draw_sprite_ext(gunSprite, 0, x + lengthdir_x(distGun - recoilGun, aimDir), y + lengthdir_y(distGun - recoilGun, aimDir),1,scaleGunY,aimDir,image_blend,image_alpha)
+		}
 	}
 	else
 	{

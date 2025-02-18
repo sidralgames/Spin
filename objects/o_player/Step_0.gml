@@ -5,11 +5,18 @@
 	key_up = keyboard_check(vk_up) || keyboard_check(ord("W")) || gamepad_button_check(0, gp_padu) || gamepad_axis_value(0, gp_axislv) < -0.5;
 	key_down = keyboard_check(vk_down) || keyboard_check(ord("S")) || gamepad_button_check(0, gp_padd) || gamepad_axis_value(0, gp_axislv) > 0.5;
 
-key_x = keyboard_check(ord("X")) || mouse_check_button(mb_left);
+key_x = keyboard_check(ord("X"));
+key_shoot = mouse_check_button(mb_left);
 
 key_R2 = gamepad_button_check(0, gp_shoulderrb)
 key_L2 = gamepad_button_check(0, gp_shoulderlb)
-key_L1_Pressed = gamepad_button_check_pressed(0, gp_shoulderl)
+key_L1_Pressed = gamepad_button_check_pressed(0, gp_shoulderl) || keyboard_check_pressed(vk_space) ||  mouse_check_button_pressed(mb_right);
+
+//gamepad_set_vibration(0, global.vibration, global.vibration);
+
+//global.vibration = clamp(global.vibration, 0, 50);
+
+//global.vibration = lerp(global.vibration, 0, 0.05)
 
 if (comesFromDeath)
 {
@@ -40,7 +47,7 @@ if (slowedFromAHit = false)
 		else if (global.autoPitch = false)
 		{
 			
-			o_aguja.dist-= o_aguja.fac * global.relativeSpeed;
+			o_aguja.angleAguja-= o_aguja.fac * global.relativeSpeed;
 	
 			if (global.slowed = true)
 			{
@@ -98,7 +105,7 @@ else
 			o_tempo.corrupted = false;
 		}
 		global.relativeSpeed = lerp(global.relativeSpeed, 1, 0.05)
-		o_aguja.dist-= o_aguja.fac * global.relativeSpeed;
+		o_aguja.angleAguja-= o_aguja.fac * global.relativeSpeed;
 		pitch = min(1,global.relativeSpeed);
 		audio_emitter_pitch(global.audioEmitter, pitch);
 		
@@ -140,7 +147,8 @@ r = clamp(r, 50, 190);
 	
 //}
 
-dirH = key_left - key_right;
+dirH = key_right - key_left;
+dirV = key_down - key_up;
 
 bossSpin = global.vinylSpin;
 bossPush = bossSpin * global.relativeSpeed;
@@ -172,26 +180,58 @@ if (theta <= 0)
 //	x = cx + lengthdir_x(r, theta) 
 //	y = cy + lengthdir_y(r, theta) 
 //}
-
-var haxis = gamepad_axis_value(0, gp_axislh);
-var vaxis = gamepad_axis_value(0, gp_axislv);
-
-haxisR = gamepad_axis_value(0, gp_axisrh);
-vaxisR = gamepad_axis_value(0, gp_axisrv);
+if gamepad_is_connected(0)
+{
+	var haxis = gamepad_axis_value(0, gp_axislh);
+	var vaxis = gamepad_axis_value(0, gp_axislv);
 
 
-aiming = ((gamepad_axis_value(0, gp_axisrh) > 0.3 || gamepad_axis_value(0, gp_axisrh) < -0.3) || 
-(gamepad_axis_value(0, gp_axisrv) > 0.3 || gamepad_axis_value(0, gp_axisrv) < -0.3 ));
+	haxisR = gamepad_axis_value(0, gp_axisrh);
+	vaxisR = gamepad_axis_value(0, gp_axisrv);
 
-moving =  ((gamepad_axis_value(0, gp_axislh) > 0.4 || gamepad_axis_value(0, gp_axislh) < -0.4) || 
-(gamepad_axis_value(0, gp_axislv) > 0.4 || gamepad_axis_value(0, gp_axislv) < -0.4 ));
+
+	aiming = ((gamepad_axis_value(0, gp_axisrh) > 0.3 || gamepad_axis_value(0, gp_axisrh) < -0.3) || 
+	(gamepad_axis_value(0, gp_axisrv) > 0.3 || gamepad_axis_value(0, gp_axisrv) < -0.3 ));
+
+	moving =  ((gamepad_axis_value(0, gp_axislh) > 0.4 || gamepad_axis_value(0, gp_axislh) < -0.4) || 
+	(gamepad_axis_value(0, gp_axislv) > 0.4 || gamepad_axis_value(0, gp_axislv) < -0.4 ));
 			
 
-aimDir = point_direction(0, 0, haxisR, vaxisR)
+	aimDir = point_direction(0, 0, haxisR, vaxisR)
 
-if (moving)
+	if (moving)
+	{
+		moveDir = point_direction(0, 0, haxis, vaxis)
+	}
+}
+else
 {
-	moveDir = point_direction(0, 0, haxis, vaxis)
+	var haxis = dirH
+	var vaxis = dirV;
+
+	if (dirH != 0) || (dirV != 0)
+	{
+		moving = true 
+	}
+	else
+	{
+		moving = false
+	}
+			
+	if (key_shoot)
+	{
+		aiming = true;
+	}
+	else
+	{
+		aiming = false;
+	}
+	aimDir = point_direction(x, y, mouse_x, mouse_y)
+
+	if (moving)
+	{
+		moveDir = point_direction(0, 0, haxis, vaxis)
+	}
 }
 
 
@@ -441,8 +481,7 @@ if (dying = false)
 				}
 			}
 		
-			if (gamepad_axis_value(0, gp_axislh) > 0.1 || gamepad_axis_value(0, gp_axislh) < -0.1 || 
-			gamepad_axis_value(0, gp_axislv) > 0.1 || gamepad_axis_value(0, gp_axislv) < -0.1 )
+			if (moving)
 			{
 				state = "free";
 				direction = point_direction(0, 0, haxis, vaxis);

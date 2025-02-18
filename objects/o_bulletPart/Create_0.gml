@@ -4,7 +4,7 @@
 
 global.balaP_sys = part_system_create();
 
-part_system_depth(global.balaP_sys,layer_get_depth("Part"));	
+part_system_depth(global.balaP_sys,layer_get_depth("BulletsPlayer"));	
 
 
 //Particle

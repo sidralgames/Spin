@@ -21,20 +21,20 @@ if (keyboard_check(vk_down))           { _yy += 0.5; }
 */
 
 //if (keyboard_check_released(vk_space)) { crt_gui_bezel_enabled = !crt_gui_bezel_enabled; }
-if (keyboard_check(vk_escape))		   { game_end(); }
-if (keyboard_check_released(ord("A"))) { var_use_noise = !var_use_noise; }
-if (keyboard_check_released(ord("B"))) { var_use_border = !var_use_border; }
-if (keyboard_check_released(ord("D"))) { crt_shader_enabled = !crt_shader_enabled; }
-if (keyboard_check_released(ord("E"))) { alarm[0]=1; alarm[1]=1; } //Play the on or off animation
-if (keyboard_check_released(ord("F"))) { var_use_radial_distortion = !var_use_radial_distortion; }
-if (keyboard_check(ord("G")))		   { var_noise_strength -= 0.01;}
-if (keyboard_check(ord("H")))		   { var_brightness -= 0.01;}
-if (keyboard_check_released(ord("Q"))) { var_use_scanlines = !var_use_scanlines; }
-if (keyboard_check_released(ord("R"))) { var_use_RGB_separation = !var_use_RGB_separation; }
-if (keyboard_check(ord("S")))		   { var_radial_distortion_ammount += 0.005;}
-if (keyboard_check(ord("T")))		   { var_noise_strength += 0.01;}
-if (keyboard_check(ord("W")))          { var_radial_distortion_ammount -= 0.005;} 
-if (keyboard_check(ord("Y")))		   { var_brightness += 0.01;}
+//if (keyboard_check(vk_escape))		   { game_end(); }
+//if (keyboard_check_released(ord("A"))) { var_use_noise = !var_use_noise; }
+//if (keyboard_check_released(ord("B"))) { var_use_border = !var_use_border; }
+//if (keyboard_check_released(ord("D"))) { crt_shader_enabled = !crt_shader_enabled; }
+//if (keyboard_check_released(ord("E"))) { alarm[0]=1; alarm[1]=1; } //Play the on or off animation
+//if (keyboard_check_released(ord("F"))) { var_use_radial_distortion = !var_use_radial_distortion; }
+//if (keyboard_check(ord("G")))		   { var_noise_strength -= 0.01;}
+//if (keyboard_check(ord("H")))		   { var_brightness -= 0.01;}
+//if (keyboard_check_released(ord("Q"))) { var_use_scanlines = !var_use_scanlines; }
+//if (keyboard_check_released(ord("R"))) { var_use_RGB_separation = !var_use_RGB_separation; }
+//if (keyboard_check(ord("S")))		   { var_radial_distortion_ammount += 0.005;}
+//if (keyboard_check(ord("T")))		   { var_noise_strength += 0.01;}
+//if (keyboard_check(ord("W")))          { var_radial_distortion_ammount -= 0.005;} 
+//if (keyboard_check(ord("Y")))		   { var_brightness += 0.01;}
 
 ///Reset GUI layer back to the window size so we can draw text, etc.
 display_set_gui_size(window_get_width(), window_get_height());

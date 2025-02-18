@@ -42,7 +42,7 @@ function BossGirlStep(){
 
 	if (attack) != "BulletBurst"
 	{
-		WallAttack(2,4,choose(25,50),40,2);
+		WallAttack(1,4,choose(25,50),40,2);
 	}
 	else
 	{

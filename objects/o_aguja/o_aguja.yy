@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite4",
-    "path":"sprites/Sprite4/Sprite4.yy",
+    "name":"s_aguja",
+    "path":"sprites/s_aguja/s_aguja.yy",
   },
   "spriteMaskId":null,
   "visible":true,
