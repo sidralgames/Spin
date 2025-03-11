@@ -40,7 +40,10 @@ if (alarm[0] <= 0)
 						
 						with (obj_CRT_controller)
 						{
-							crt_shader_enabled = !crt_shader_enabled; 
+							//crt_shader_enabled = !crt_shader_enabled;
+							var_use_scanlines = !var_use_scanlines;
+							var_use_RGB_separation = !var_use_RGB_separation;
+							var_use_radial_distortion = !var_use_radial_distortion;
 						}
 						global.CRTIsOn = !global.CRTIsOn;
 					}break;

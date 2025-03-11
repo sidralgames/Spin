@@ -46,7 +46,7 @@ if !instance_exists(o_MainMenu) && (global.howToPlay = false) && (global.collect
 		if (createHP = false)
 		{
 			createHP = true;
-			bossHP = instance_create_layer(x-255,200,"Main", o_bossHP);
+			bossHP = instance_create_layer(x-255,120,"Main", o_bossHP);
 			
 			with(o_aguja)
 			{

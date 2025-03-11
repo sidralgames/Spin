@@ -1,6 +1,6 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
-//vstick_step(0);
+
 if (changingLevel = true)
 {
 	if instance_exists(o_boss)

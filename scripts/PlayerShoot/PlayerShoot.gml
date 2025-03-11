@@ -51,7 +51,7 @@ function PlayerShoot()
 			}
 			else
 			{
-				if (key_shoot) && (reloading = false)
+				if (aiming) && (reloading = false)
 				{
 					if (alarm[0] <= 0) && (global.energy >= 10)
 					{
@@ -135,7 +135,7 @@ function PlayerShoot()
 			}
 			else
 			{
-				if (key_shoot) && (reloading = false)
+				if (aiming) && (reloading = false)
 				{
 					if (alarm[0] <= 0) && (global.energy >= 10)
 					{

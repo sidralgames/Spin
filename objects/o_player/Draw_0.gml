@@ -4,7 +4,7 @@ draw_set_halign(fa_left)
 //draw_text(x,100,"dirH: " +  string(dirH))
 //draw_text(x,120,"dirV: " +  string(dirV))
 //draw_text(x,140,"moveDir: " +  string(moveDir))
-//draw_text(x,200,"moving: " +  string(moving))
+//draw_text(x,200,"stickdir_x: " +  string(stickDir_x))
 
 
 //draw_text(20,160,"x: " +  string(x))

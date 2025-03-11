@@ -8,7 +8,7 @@ function DrawFlashAndSlow(_aplhaFactor, _slow, _factorSlow, _color)
 		SlowDown(_slow, _factorSlow);
 	}
 	drawflashCont --;
-	draw_set_alpha(min(1,drawflashCont * _aplhaFactor))
+	draw_set_alpha(abs(min(1,drawflashCont * _aplhaFactor)))
 	draw_set_color(_color)
 	draw_rectangle(__view_get( e__VW.XView, 0 )+0,__view_get( e__VW.YView, 0 )+0,__view_get( e__VW.XView, 0 )+640,__view_get( e__VW.YView, 0 )+360,false)	
 }

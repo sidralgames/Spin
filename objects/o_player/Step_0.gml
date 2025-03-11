@@ -180,36 +180,16 @@ if (theta <= 0)
 //	x = cx + lengthdir_x(r, theta) 
 //	y = cy + lengthdir_y(r, theta) 
 //}
-if gamepad_is_connected(0)
+if instance_exists(o_joystick_L)
 {
-	var haxis = gamepad_axis_value(0, gp_axislh);
-	var vaxis = gamepad_axis_value(0, gp_axislv);
 
-
-	haxisR = gamepad_axis_value(0, gp_axisrh);
-	vaxisR = gamepad_axis_value(0, gp_axisrv);
-
-
-	aiming = ((gamepad_axis_value(0, gp_axisrh) > 0.3 || gamepad_axis_value(0, gp_axisrh) < -0.3) || 
-	(gamepad_axis_value(0, gp_axisrv) > 0.3 || gamepad_axis_value(0, gp_axisrv) < -0.3 ));
-
-	moving =  ((gamepad_axis_value(0, gp_axislh) > 0.4 || gamepad_axis_value(0, gp_axislh) < -0.4) || 
-	(gamepad_axis_value(0, gp_axislv) > 0.4 || gamepad_axis_value(0, gp_axislv) < -0.4 ));
-			
-
-	aimDir = point_direction(0, 0, haxisR, vaxisR)
-
-	if (moving)
-	{
-		moveDir = point_direction(0, 0, haxis, vaxis)
-	}
-}
-else
-{
-	var haxis = dirH
-	var vaxis = dirV;
-
-	if (dirH != 0) || (dirV != 0)
+	var haxis = vstick_get_xaxis(0);
+	var vaxis =  vstick_get_yaxis(0);;
+	
+	var haxisAim = vstick_get_xaxis(1);
+	var vaxisAim =  vstick_get_yaxis(1);;
+	
+	if (haxis !=0) || (vaxis !=0)
 	{
 		moving = true 
 	}
@@ -218,7 +198,7 @@ else
 		moving = false
 	}
 			
-	if (key_shoot)
+	if (haxisAim != 0) || (vaxisAim != 0)
 	{
 		aiming = true;
 	}
@@ -226,13 +206,73 @@ else
 	{
 		aiming = false;
 	}
-	aimDir = point_direction(x, y, mouse_x, mouse_y)
+		aimDir = point_direction(0, 0, haxisAim, vaxisAim)
 
 	if (moving)
 	{
-		moveDir = point_direction(0, 0, haxis, vaxis)
+		moveDir = point_direction(0, 0,haxis, vaxis) 
 	}
 }
+else
+{
+	if gamepad_is_connected(0)
+	{
+		var haxis = gamepad_axis_value(0, gp_axislh);
+		var vaxis = gamepad_axis_value(0, gp_axislv);
+
+
+		haxisR = gamepad_axis_value(0, gp_axisrh);
+		vaxisR = gamepad_axis_value(0, gp_axisrv);
+
+
+		aiming = ((gamepad_axis_value(0, gp_axisrh) > 0.3 || gamepad_axis_value(0, gp_axisrh) < -0.3) || 
+		(gamepad_axis_value(0, gp_axisrv) > 0.3 || gamepad_axis_value(0, gp_axisrv) < -0.3 ));
+
+		moving =  ((gamepad_axis_value(0, gp_axislh) > 0.4 || gamepad_axis_value(0, gp_axislh) < -0.4) || 
+		(gamepad_axis_value(0, gp_axislv) > 0.4 || gamepad_axis_value(0, gp_axislv) < -0.4 ));
+			
+
+		aimDir = point_direction(0, 0, haxisR, vaxisR)
+
+		if (moving)
+		{
+			moveDir = point_direction(0, 0, haxis, vaxis)
+		}
+	}
+	else
+	{
+		var haxis = dirH
+		var vaxis = dirV;
+
+		var stickDir_x = vstick_get_xaxis(0);
+		var stickDir_y = vstick_get_yaxis(0);
+	
+		if stickDir_x !=0
+		{
+			moving = true 
+		}
+		else
+		{
+			moving = false
+		}
+			
+		if (key_shoot)
+		{
+			aiming = true;
+		}
+		else
+		{
+			aiming = false;
+		}
+		aimDir = point_direction(x, y, mouse_x, mouse_y)
+
+		if (moving)
+		{
+			moveDir = point_direction(0, 0,stickDir_x, stickDir_y) 
+		}
+	}
+}
+
 
 
 if (dashTime > 0)
@@ -301,7 +341,7 @@ if (dying = false)
 			
 			if (bouncedWhileStopped = false) && (moving)
 			{
-				direction = point_direction(0, 0, haxis, vaxis);
+				direction = moveDir
 			
 				if (key_L1_Pressed) && (collision_circle(x,y,6,o_Floor,true,true)) && (global.energy >= dashEnergyMin) //DASH
 				{
@@ -484,7 +524,7 @@ if (dying = false)
 			if (moving)
 			{
 				state = "free";
-				direction = point_direction(0, 0, haxis, vaxis);
+				direction = moveDir;
 			}
 		}break;
 	}

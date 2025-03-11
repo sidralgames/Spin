@@ -63,4 +63,4 @@ crt_shader_enabled = true;
 crt_gui_bezel_enabled = false;
 
 ///Setup the CRT shaders variables and shader uniforms
-scr_CRT_init_shader(view_camera[0], true, 0.00, true, false, true, 0.03, 80.0, 1.1, false, 0.175);
+scr_CRT_init_shader(view_camera[0], false, 0.00, true, false, false, 0.03, 80.0, 1.1, false, 0.175);
