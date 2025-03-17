@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"AddUpgradeFireRate",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"AddUpgradeFireRate",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

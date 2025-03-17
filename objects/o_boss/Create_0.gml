@@ -25,7 +25,8 @@ contRotoTime = 0;
 angleOff = random_range(-10,10);
 distOff = random_range(-20,60);
 canRoto = true;
-global.level = 6
+
+
 switch(global.level)
 {
 	case 1:

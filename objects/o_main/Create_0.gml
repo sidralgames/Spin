@@ -2,6 +2,8 @@
 // Puede escribir su código en este editor
 //vstick_init(0, __view_get( e__VW.XView, 0 )+80 ,__view_get( e__VW.YView, 0 )+305,40,true,noone,Sprite1_1)
 
+
+
 global.speedAux = 0;
 global._hpUpgradeWall = 0;
 global.slowmotionPicked = false;
@@ -135,3 +137,12 @@ AddBossGirlCollection();
 AddBossRataCollection();
 AddBossMixtapeCollection();
 AddBossUpgradesCollection();
+
+global.upgradesList = ds_map_create();
+global.totalNumberOfUpgrades = 0;
+
+AddUpgradeEnergy();
+AddUpgradeShotgun();
+AddUpgradeFireRate();
+AddUpgradeSpeed();
+AddUpgradeWalls();

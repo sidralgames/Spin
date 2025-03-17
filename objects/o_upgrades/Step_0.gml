@@ -27,94 +27,38 @@ else
 	{
 		image_xscale =1;
 		image_yscale =1;
-		
-		if (creatingUpgrades = false) && (alarm[0] <= 0)
-		{
-			screenShake(2,20,1)
-			set = irandom(10);
-			if (set = 0)
-			{
-				instance_create_layer(x+90, y, "BulletsDown", o_upgradeGun);
-				instance_create_layer(x-90, y, "BulletsDown", o_upgradeEnergy);
-			}
-			if (set = 1)
-			{
-				instance_create_layer(x+90, y, "BulletsDown", o_upgradeGun);
-				instance_create_layer(x-90, y, "BulletsDown", o_upgradeFireRate);
-			}
-			if (set = 2)
-			{
-				instance_create_layer(x+90, y, "BulletsDown", o_upgradeFireRate);
-				instance_create_layer(x-90, y, "BulletsDown", o_upgradeEnergy);
-			}
-			if (set = 3)
-			{
-				instance_create_layer(x+90, y, "BulletsDown", o_upgradeSlowMotion);
-				instance_create_layer(x-90, y, "BulletsDown", o_upgradeEnergy);
-			}
-			if (set = 4)
-			{
-				instance_create_layer(x+90, y, "BulletsDown", o_upgradeWalls);
-				instance_create_layer(x-90, y, "BulletsDown", o_upgradeFireRate);
-			}
-			if (set = 5)
-			{
-				instance_create_layer(x+90, y, "BulletsDown", o_upgradeWalls);
-				instance_create_layer(x-90, y, "BulletsDown", o_upgradeGun);
-			}
-			if (set = 6)
-			{
-				instance_create_layer(x+90, y, "BulletsDown", o_upgradeSuperShot);
-				instance_create_layer(x-90, y, "BulletsDown", o_upgradeWalls);
-			}
-			if (set = 7)
-			{
-				instance_create_layer(x+90, y, "BulletsDown", o_upgradeSuperShot);
-				instance_create_layer(x-90, y, "BulletsDown", o_upgradeSlowMotion);
-			}
-			
-			if (set = 8)
-			{
-				instance_create_layer(x+90, y, "BulletsDown", o_upgradeGun);
-				if (global.initialLives < 4)
-				{
-					instance_create_layer(x-90, y, "BulletsDown", o_upgradeHP);
-				}
-				else
-				{
-					instance_create_layer(x-90, y, "BulletsDown", o_upgradeSuperShot);
-				}
-			}
-			
-			if (set = 9)
-			{
-				instance_create_layer(x+90, y, "BulletsDown", o_upgradeSlowMotion);
-				if (global.initialLives < 4)
-				{
-					instance_create_layer(x-90, y, "BulletsDown", o_upgradeHP);
-				}
-				else
-				{
-					instance_create_layer(x-90, y, "BulletsDown", o_upgradeEnergy);
-				}
-			}
-			
-			if (set = 10)
-			{
-				instance_create_layer(x+90, y, "BulletsDown", o_upgradeFireRate);
-				if (global.initialLives < 4)
-				{
-					instance_create_layer(x-90, y, "BulletsDown", o_upgradeHP);
-				}
-				else
-				{
-					instance_create_layer(x-90, y, "BulletsDown", o_upgradeWalls);
-				}
-			}
-			creatingUpgrades = true;
-		}
 	}
 	
+}
+
+if (scaled && image_xscale = 1)
+{
+	if (alarm[0] <= 0) && (upgradesCreated <2)
+		{
+			screenShake(2,20,1)
+			
+			upgrade = ds_map_find_value(global.upgradesList, irandom(global.totalNumberOfUpgrades-1))
+			
+			if (upgrade.canAppear) && (upgrade.choosedThisTime = false) && (upgradesCreated = 0)
+			{
+				instance_create_layer(x+90, y, "BulletsDown", upgrade.obj);
+				upgradesCreated +=1;
+				upgrade.choosedThisTime = true;
+			}
+			else if (upgrade.canAppear) && (upgrade.choosedThisTime = false) && (upgradesCreated = 1)
+			{
+				instance_create_layer(x-90, y, "BulletsDown", upgrade.obj)
+				upgradesCreated+=1;
+				upgrade.choosedThisTime = true;
+				creatingUpgrades = true;
+			}
+			
+			if (upgrade.unique = true) && (upgrade.choosedThisTime = true)
+			{
+				upgrade.canAppear = false;
+			}
+
+		}
 }
 
 
@@ -133,6 +77,13 @@ if !instance_exists(o_upgradesFather) && (creatingUpgrades = true)
 	{
 		changingLevel = true;
 	}
+	
+	for (var i = 0; i<global.totalNumberOfUpgrades; i++)
+	{
+		upgradeToChange = ds_map_find_value(global.upgradesList,i)
+		upgradeToChange.choosedThisTime = false;
+	}
+	
 	screenShake(6,120,4)
 	exploOrange = instance_create_layer(x, y, "BulletsDown", o_explosion);
 	exploOrange.sprite_index = s_exploOrange;

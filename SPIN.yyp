@@ -45,7 +45,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.8.0.169",
+    "IDEVersion":"2024.11.0.179",
   },
   "name":"SPIN",
   "resources":[
@@ -136,6 +136,11 @@
     {"id":{"name":"AddBossRataCollection","path":"scripts/AddBossRataCollection/AddBossRataCollection.yy",},},
     {"id":{"name":"AddBossTribalCollection","path":"scripts/AddBossTribalCollection/AddBossTribalCollection.yy",},},
     {"id":{"name":"AddBossUpgradesCollection","path":"scripts/AddBossUpgradesCollection/AddBossUpgradesCollection.yy",},},
+    {"id":{"name":"AddUpgradeEnergy","path":"scripts/AddUpgradeEnergy/AddUpgradeEnergy.yy",},},
+    {"id":{"name":"AddUpgradeFireRate","path":"scripts/AddUpgradeFireRate/AddUpgradeFireRate.yy",},},
+    {"id":{"name":"AddUpgradeShotgun","path":"scripts/AddUpgradeShotgun/AddUpgradeShotgun.yy",},},
+    {"id":{"name":"AddUpgradeSpeed","path":"scripts/AddUpgradeSpeed/AddUpgradeSpeed.yy",},},
+    {"id":{"name":"AddUpgradeWalls","path":"scripts/AddUpgradeWalls/AddUpgradeWalls.yy",},},
     {"id":{"name":"BossDemonStep","path":"scripts/BossDemonStep/BossDemonStep.yy",},},
     {"id":{"name":"BossGirlStep","path":"scripts/BossGirlStep/BossGirlStep.yy",},},
     {"id":{"name":"BossNachoStep","path":"scripts/BossNachoStep/BossNachoStep.yy",},},

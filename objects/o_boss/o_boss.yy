@@ -37,8 +37,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"s_bossDemon",
-    "path":"sprites/s_bossDemon/s_bossDemon.yy",
+    "name":"s_bossNacho",
+    "path":"sprites/s_bossNacho/s_bossNacho.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -3,7 +3,7 @@
 changeSongCollection = false;
 
 
-
+upgradesCreated = 0;
 
 creatingUpgrades = false;
 scaled = false;

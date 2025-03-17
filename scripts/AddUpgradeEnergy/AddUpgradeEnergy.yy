@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"AddUpgradeEnergy",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"AddUpgradeEnergy",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
