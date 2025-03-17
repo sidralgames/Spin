@@ -55,6 +55,12 @@ if instance_exists(o_boss) && (global.collection = false)
 			global.vinylAlpha = 0.90;
 			global.vinylColor = global.greenRat;
 		}break;		
+		
+		case s_bossMixtape:
+		{
+			global.vinylAlpha = 0.90;
+			global.vinylColor = global.lightPink;
+		}break;
 	}
 }
 

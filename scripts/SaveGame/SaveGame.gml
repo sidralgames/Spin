@@ -11,6 +11,7 @@ function SaveGame()
 	ini_write_real("bossesCollection","bossGirl", global.bossGirlCollection);
 	ini_write_real("bossesCollection","bossRata", global.bossRataCollection);
 	ini_write_real("bossesCollection","bossUpgrades", global.bossUpgradesCollection);
+	ini_write_real("bossesCollection","bossMixtape", global.bossMixtapeCollection);
 	
 	ini_close();
 }

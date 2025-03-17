@@ -44,6 +44,13 @@ switch(o_boss.spriteBoss)
 		sprite_index = s_wallRata;
 	}
 	break;
+	
+	case s_bossMixtape:
+	{
+		sprite_index = s_wallMixtape;
+	}
+	break;
+	
 	default:
 	{
 		sprite_index = s_wallNacho;

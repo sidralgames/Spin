@@ -11,6 +11,7 @@ function LoadGame()
 	global.bossGirlCollection = ini_read_real("bossesCollection","bossGirl", 0);
 	global.bossRataCollection = ini_read_real("bossesCollection","bossRata", 0);
 	global.bossUpgradesCollection = ini_read_real("bossesCollection","bossUpgrades", 0);
+	global.bossMixtapeCollection  = ini_read_real("bossesCollection","bossMixtape", 0);
 	
 	ini_close();
 }

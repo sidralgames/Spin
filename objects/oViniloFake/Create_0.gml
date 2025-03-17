@@ -23,6 +23,8 @@ if instance_exists(o_boss)
 			global.vinylAlpha = 0.85;
 			global.vinylColor = global.pink;
 		}break;
+		
+
 				
 	}
 }

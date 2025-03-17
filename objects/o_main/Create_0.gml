@@ -2,7 +2,7 @@
 // Puede escribir su código en este editor
 //vstick_init(0, __view_get( e__VW.XView, 0 )+80 ,__view_get( e__VW.YView, 0 )+305,40,true,noone,Sprite1_1)
 
-
+global.speedAux = 0;
 global._hpUpgradeWall = 0;
 global.slowmotionPicked = false;
 
@@ -72,6 +72,9 @@ global.greenOscRatArray = [32/255, 153/255, 164/255, 1]
 global.greenRat= make_color_rgb(32, 153, 164)
 global.greenOscRat= make_color_rgb(139, 255, 164)
 
+//Mixtape
+global.lightPink = make_color_rgb(246,188,236);
+
 changingLevel = true;
 
 
@@ -130,4 +133,5 @@ AddBossDemonCollection();
 AddBossTribalCollection();
 AddBossGirlCollection();
 AddBossRataCollection();
+AddBossMixtapeCollection();
 AddBossUpgradesCollection();

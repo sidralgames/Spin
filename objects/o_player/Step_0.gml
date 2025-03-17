@@ -288,8 +288,7 @@ if (dying = false)
 			if (recoil)
 			{
 				contRecoil--;
-				x += hspeed* global.relativeSpeed;
-				y += vspeed* global.relativeSpeed;
+				//realspeed = lerp(realspeed, point_distance(0 ,0, haxis, vaxis) * (_speed - abs(bossSpin * global.relativeSpeed)), 0.1);
 
 				if (contRecoil <=0)
 				{

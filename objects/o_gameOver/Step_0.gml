@@ -5,6 +5,7 @@ Controls_Input();
 
 rot += global.vinylSpin;
 
+
 if (alarm[0] <= 0)
 {
 	

@@ -105,6 +105,12 @@ if !instance_exists(o_MainMenu) && (global.howToPlay = false) && (global.collect
 				BossRataStep();
 			}
 			break;
+			
+			default:
+			{
+				BossGirlStep();
+			}
+			break;
 		}
 	}
 	else
@@ -194,6 +200,12 @@ if (_hp <= 0)
 			case s_bossRata:
 			{
 				global.bossRataCollection = 1;
+			}
+			break;
+			
+			case s_bossMixtape:
+			{
+				global.bossMixtapeCollection = 1;
 			}
 			break;
 		}
@@ -498,6 +510,40 @@ if (global.collection)
 			
 			sprite_index = s_galletaUpgrades;
 			spriteBoss = s_galletaUpgrades;
+			
+		}break;
+		
+		case 6:
+		{
+			if (global.bossMixtapeCollection = 0)
+			{
+				image_blend = c_dkgray;
+				global.vinylAlpha = 0.95
+				global.vinylColor = c_dkgray;
+				drawLocked = true;
+			}
+			else
+			{
+				if (changeSongCollection = false)
+				{
+					if (global.song != snd_chino)
+					{
+						audio_stop_sound(global.song);
+						global.song = snd_chino;
+						audio_play_sound_on(global.audioEmitter,global.song, true, 100,,0);
+						changeSongCollection = true;
+					}
+				}
+				
+				image_blend = c_white;
+				global.vinylAlpha = 0.90;
+				global.vinylColor = global.pink;
+				drawLocked = false;
+				//global.level = 3;
+			}
+			
+			sprite_index = s_bossMixtape;
+			spriteBoss = s_bossMixtape;
 			
 		}break;
 	}

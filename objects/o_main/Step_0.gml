@@ -82,6 +82,21 @@ if (changingLevel = true)
 			}
 			break;
 			
+			case s_bossMixtape:
+			{
+				color_fx_params.g_TintCol = global.yellowGirlArray;
+				noise_fx_params.g_FractalNoiseTintColour = global.lighPinkArray;
+
+				fx_set_parameters(color_fx, color_fx_params);
+				fx_set_parameters(noise_fx, noise_fx_params);
+
+				layer_set_fx("EffectColor", color_fx);
+				layer_set_fx("Noise", noise_fx);
+	
+				changingLevel = false;
+			}
+			break;
+			
 			case s_galletaUpgrades:
 			{
 				color_fx_params.g_TintCol = global.brightArray;
@@ -141,4 +156,15 @@ if (global.playing)
 		}
 	}
 }
+
+
+if (global.playing) && !instance_exists(o_MainMenu)
+{
+	if keyboard_check_pressed(ord("R"))
+	{
+		ResetGame(false);
+		instance_create_layer(x,y,"Menu",o_MainMenu);
+	}
+}
+
 

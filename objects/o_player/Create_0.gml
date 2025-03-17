@@ -39,9 +39,9 @@ vueltaContada = 0;
 totalMaxSpeed = 2;
 maxSpeed = 1;
 maxSpeedV = 1.75;
-initialSpeed = 1;
-_speed = initialSpeed;
-global._speed = 1;
+initialSpeed = 1.15;
+_speed = initialSpeed + global.speedAux;
+
 realspeed=0;
 recoil = false;
 contRecoil = 10;
@@ -49,13 +49,6 @@ contRecoil = 10;
 global.slowed = false;
 global.fwd = false;
 
-walkSpeedH = global._speed;
-walkSpeedV = global._speed+0.5;
-
-diagSpeed = round((global._speed * 0.707));
-
-diagAcc = round((global.walkAccelerationH * 0.707));
-normlaAcc = global.walkAccelerationH;
 state = "free";
 dying = false
 spinDir = 1;

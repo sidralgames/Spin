@@ -24,4 +24,7 @@ initialRetry = 300;
 //initialTut = 170;
 initialMainMenu = 330;
 //initialStat = 280;
+global.slowed = false;
+global.fwd = false;
+pitch = 0;
 

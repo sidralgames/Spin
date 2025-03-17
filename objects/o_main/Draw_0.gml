@@ -3,21 +3,21 @@
 draw_self();
 draw_set_halign(fa_right)
 
-//if (global.playing)
-//{
-//	if global.initialLives = 3
-//	{
-//		draw_sprite_ext(s_playerHP, 0, __view_get( e__VW.XView, 0 )+100,__view_get( e__VW.YView, 0 )+45,1,1,0,c_white,image_alpha)
-//	}
-//	else
-//	{
-//		draw_sprite_ext(s_playerFill4HP, 0, __view_get( e__VW.XView, 0 )+100,__view_get( e__VW.YView, 0 )+45,1,1,0,c_white,image_alpha)
-//	}
-//	for (var i = 0; i< global.lives; i++;)
-//	{
-//		draw_sprite_ext(s_playerHPFill, 0, __view_get( e__VW.XView, 0 )+100 + 19*i,__view_get( e__VW.YView, 0 )+45,1,1,0,c_white,image_alpha)
-//	}
-//}
+if (global.playing)
+{
+	if global.initialLives = 3
+	{
+		draw_sprite_ext(s_playerHP, 0, __view_get( e__VW.XView, 0 )+100,__view_get( e__VW.YView, 0 )+45,1,1,0,c_white,image_alpha)
+	}
+	else
+	{
+		draw_sprite_ext(s_playerFill4HP, 0, __view_get( e__VW.XView, 0 )+100,__view_get( e__VW.YView, 0 )+45,1,1,0,c_white,image_alpha)
+	}
+	for (var i = 0; i< global.lives; i++;)
+	{
+		draw_sprite_ext(s_playerHPFill, 0, __view_get( e__VW.XView, 0 )+100 + 19*i,__view_get( e__VW.YView, 0 )+45,1,1,0,c_white,image_alpha)
+	}
+}
 
 //vstick_draw(0)
 //if instance_exists(o_player)
@@ -34,13 +34,6 @@ draw_set_halign(fa_right)
 	
 	//draw_text_color(600,30,"Lives: " + string(global.lives),c_white,c_white,c_white,c_white,1)
 //}
-
-if keyboard_check_pressed(ord("R"))
-{
-	instance_destroy(all);
-	game_restart()
-}
-
 
 //if keyboard_check_pressed(vk_left)
 //{

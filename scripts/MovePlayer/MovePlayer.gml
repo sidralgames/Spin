@@ -4,17 +4,7 @@ function MovePlayer()
 {
 	dirH = key_right - key_left;
 	dirV = key_down - key_up;
-	
-	if (abs(_hpush) + abs(_vpush) < round(global._speed*1.8))
-	{
-		_hpush = clamp(_hpush, -walkSpeedH, walkSpeedH);
-		_vpush = clamp(_vpush, -walkSpeedV, walkSpeedV);
-	}
-	else
-	{
-		_hpush = clamp(_hpush, -diagSpeed, diagSpeed);
-		_vpush = clamp(_vpush, -diagSpeed, diagSpeed);
-	}
+
 	
 	if (abs(dirH) >= 0.3)
 	{
