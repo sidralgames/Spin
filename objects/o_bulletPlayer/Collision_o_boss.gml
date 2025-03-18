@@ -2,7 +2,7 @@
 // Puede escribir su código en este editor
 if (global.playing)
 {
-	other._hp -=(1 + global.superShot);
+	other._hp -=(bulletDamage + global.superShot);
 	instance_destroy();
 	other.spinCreateHole = true;
 	other.bullethole = point_distance(x,y,other.x, other.y);

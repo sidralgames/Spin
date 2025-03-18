@@ -1,7 +1,10 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
+
 if (canBePicked)
 {
+	CheckLimitedAndUniqueUpgrades();
+	
 	global.energyTotal += 50;
 	global.energy += 50;
 	instance_destroy();

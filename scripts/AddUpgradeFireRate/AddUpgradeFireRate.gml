@@ -9,7 +9,9 @@ function AddUpgradeFireRate()
 		obj: o_upgradeFireRate,
 		canAppear: true,
 		choosedThisTime: false,
-		unique: false
+		unique: false,
+		timesInitial: 3,
+		times: 3
 	})
 
 	global.totalNumberOfUpgrades +=1;

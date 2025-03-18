@@ -3,5 +3,5 @@
 if (dying = false)
 {
 	other._hp = 0;
-	_hp-=(1 + global.superShot);;
+	_hp-=(other.bulletDamage + global.superShot);
 }

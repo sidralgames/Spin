@@ -2,13 +2,19 @@
 // Puede escribir su código en este editor
 //vstick_init(0, __view_get( e__VW.XView, 0 )+80 ,__view_get( e__VW.YView, 0 )+305,40,true,noone,Sprite1_1)
 
+global.dashEnergyMin = 25;
+global.shootingEnergyMin = 25;
+global.luckyShot = false;
+global.strongConnection = false;
+global.oddsStrongConnection = 5;
 
+global.bossHPLimiter = false;
 
 global.speedAux = 0;
 global._hpUpgradeWall = 0;
 global.slowmotionPicked = false;
 
-global.initialLives = 3;
+global.maxLives = 3;
 global.collection = false;
 gameOverCreated = false;
 global.spriteBoss = -1;
@@ -146,3 +152,11 @@ AddUpgradeShotgun();
 AddUpgradeFireRate();
 AddUpgradeSpeed();
 AddUpgradeWalls();
+AddUpgradeSlowMo();
+AddUpgradeSuperShot();
+AddUpgradeMaxHP();
+AddUpgradeCheaperDash();
+AddUpgradeBossLimiter();
+AddUpgradeLuckyShot();
+AddUpgradeRecoverLives();
+AddUpgradeStrongConnection();

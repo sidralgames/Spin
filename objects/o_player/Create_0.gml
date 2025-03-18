@@ -71,6 +71,10 @@ cable = instance_create_layer(x,y,"Cable",o_cable);
 cableRed = instance_create_layer(x,y,"Cable",o_cableRed);
 cableYellow = instance_create_layer(x,y,"Cable",o_cableYellow);
 
+tocadoVibrationTime = 10;
+loseHP = true;
+thisHitHitted = irandom(2);
+
 gunSprite = s_gun;
 global.energy = global.energyTotal;
 
@@ -81,7 +85,7 @@ fireRateShotgun = 20;
 
 shootEnergy = 2;
 shotgunEnergy = 5;
-dashEnergyMin = 25;
+
 reloading = false;
 
 slowMoEnergy = 0.6;

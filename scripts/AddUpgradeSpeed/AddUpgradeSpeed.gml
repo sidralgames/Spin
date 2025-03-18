@@ -9,7 +9,9 @@ function AddUpgradeSpeed()
 		obj: o_upgradeSpeed,
 		canAppear: true,
 		choosedThisTime: false,
-		unique: true
+		unique: false,
+		timesInitial: 3,
+		times: 3
 	})
 
 	global.totalNumberOfUpgrades +=1;

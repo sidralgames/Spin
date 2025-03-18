@@ -37,7 +37,8 @@ function BulletAttack(_attack)
 						{
 							
 							createRoto = true;
-						
+							alarm[9] = vibrationRotoTime;
+							gamepad_set_vibration(0,vibrationRoto,vibrationRoto);
 							screenShake(5,60,2);
 							global.vibration+=5;
 							if (contWarning <= 0)
@@ -251,7 +252,8 @@ function BulletAttack(_attack)
 						{
 							
 							createRoto = true;
-						global.vibration+=5;
+							alarm[9] = vibrationRotoTime;
+							gamepad_set_vibration(0,vibrationRoto,vibrationRoto);
 							screenShake(5,60,2)
 							if (contWarning <= 0)
 							{
@@ -463,6 +465,8 @@ function BulletAttack(_attack)
 						{
 							
 							createRoto = true;
+							alarm[9] = vibrationRotoTime;
+							gamepad_set_vibration(0,vibrationRoto,vibrationRoto);
 						global.vibration+=5;
 							screenShake(5,60,2)
 							if (contWarning <= 0)
@@ -675,6 +679,8 @@ function BulletAttack(_attack)
 						{
 							
 							createRoto = true;
+							alarm[9] = vibrationRotoTime;
+							gamepad_set_vibration(0,vibrationRoto,vibrationRoto);
 						global.vibration+=5;
 							screenShake(5,60,2)
 							if (contWarning <= 0)
@@ -1110,6 +1116,8 @@ function BulletAttack(_attack)
 						{
 							
 							createRoto = true;
+							alarm[9] = vibrationRotoTime;
+							gamepad_set_vibration(0,vibrationRoto,vibrationRoto);
 						global.vibration+=5;
 							screenShake(5,60,2)
 							if (contWarning <= 0)

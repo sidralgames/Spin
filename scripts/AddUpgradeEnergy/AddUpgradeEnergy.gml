@@ -9,7 +9,9 @@ function AddUpgradeEnergy()
 		obj: o_upgradeEnergy,
 		canAppear: true,
 		choosedThisTime: false,
-		unique: false
+		unique: false,
+		timesInitial: -1,
+		times: -1
 	})
 
 	global.totalNumberOfUpgrades +=1;

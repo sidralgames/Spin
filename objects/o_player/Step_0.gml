@@ -302,11 +302,11 @@ if (dying = false)
 			{
 				direction = point_direction(0, 0, haxis, vaxis);
 			
-				if (key_L1_Pressed) && (collision_circle(x,y,6,o_Floor,true,true)) && (global.energy >= dashEnergyMin) //DASH
+				if (key_L1_Pressed) && (collision_circle(x,y,6,o_Floor,true,true)) && (global.energy >= global.dashEnergyMin) //DASH
 				{
 					image_xscale = 1.75;
 					image_yscale = 0.5;
-					global.energy -= dashEnergyMin;
+					global.energy -= global.dashEnergyMin;
 					realspeed += 3.2;
 					inDash = true;
 					dashTime = 60;

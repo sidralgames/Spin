@@ -4,12 +4,14 @@ function AddUpgradeWalls()
 {
 	ds_map_add(global.upgradesList, global.totalNumberOfUpgrades,
 	{ 
-		alias: "Weaker Walls",
+		alias: "WeakerWalls",
 		sprite: s_wallNachoUpgrade,
 		obj: o_upgradeWalls,
 		canAppear: true,
 		choosedThisTime: false,
-		unique: false
+		unique: false,
+		timesInitial: 3,
+		times: 3
 	})
 
 	global.totalNumberOfUpgrades +=1;

@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function PlayerShoot()
 {
-	if (global.energy > dashEnergyMin)
+	if (global.energy > global.shootingEnergyMin)
 	{
 		reloading = false;
 	}

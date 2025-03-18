@@ -3,6 +3,6 @@
 meterYInitial = y;
 meterX = x;
 scale = 1;
-fac = o_boss._hp / 110;
+fac = o_boss._hpMax / 110;
 a = y-50;
 imageExclamation = 0;

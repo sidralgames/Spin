@@ -11,7 +11,7 @@ function PlayGame(_playing)
 	o_main.gameOverCreated = false;
 	global.playing = _playing;
 	global.level = 1;
-	global.lives = global.initialLives;
+	global.lives = global.maxLives;
 	global.tempoCorrupted = false;
 	global.weapon = "Gun";
 	global.energyTotal = 150;

@@ -29,7 +29,7 @@ draw_self();
 draw_set_alpha(0.8);
 if (global.energy < global.energyTotal)
 {
-	if (global.energy > dashEnergyMin)
+	if (global.energy > global.dashEnergyMin)
 	{
 		draw_circular_bar(o_player.x+17, o_player.y-17, global.energy, global.energyTotal, global.lightBlue, 7,1, 2);
 		draw_circular_bar(o_player.x+17, o_player.y-17, global.energy, global.energyTotal, c_white, 6,1, 2);

@@ -19,3 +19,4 @@ totalPush = 0;
 totalMaxSpeed = 2;
 scaleExplo = random_range(1.4,1.6);
 createHole = false;
+bulletDamage = 1;

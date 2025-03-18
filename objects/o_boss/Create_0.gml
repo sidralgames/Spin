@@ -1,5 +1,6 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
+checkLimiter = false;
 vibrationRotoTime = 10;
 vibrationRoto = 0.4;
 contEnemies = 200;
@@ -43,7 +44,7 @@ switch(global.level)
 		
 		bossIsInCollection = global.bossNachoCollection;
 		
-		_hpMax = 90;
+		_hpMax = 9;
 		rotSpeedBoss = 0.5;
 		_hp = _hpMax;
 

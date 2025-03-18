@@ -3,6 +3,17 @@
 image_yscale = scale;
 image_xscale = scale;
 
+if (checkLimiter = false)
+{
+	if (global.bossHPLimiter)
+	{
+		_hp = 0.85 *_hpMax;
+	}
+	
+	checkLimiter = true;
+}
+
+
 if (scale > 1)
 {
 	scale = lerp(scale,1,0.05);	
@@ -526,10 +537,10 @@ if (global.collection)
 			{
 				if (changeSongCollection = false)
 				{
-					if (global.song != snd_chino)
+					if (global.song != snd_mixtape)
 					{
 						audio_stop_sound(global.song);
-						global.song = snd_chino;
+						global.song = snd_mixtape;
 						audio_play_sound_on(global.audioEmitter,global.song, true, 100,,0);
 						changeSongCollection = true;
 					}
