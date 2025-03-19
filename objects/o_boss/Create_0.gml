@@ -44,7 +44,7 @@ switch(global.level)
 		
 		bossIsInCollection = global.bossNachoCollection;
 		
-		_hpMax = 9;
+		_hpMax = 80;
 		rotSpeedBoss = 0.5;
 		_hp = _hpMax;
 

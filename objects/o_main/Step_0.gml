@@ -158,7 +158,7 @@ if (global.playing)
 }
 
 
-if (global.playing) && !instance_exists(o_MainMenu)
+if (global.playing) && !instance_exists(o_MainMenu) && !instance_exists(o_gameOver)
 {
 	if keyboard_check_pressed(ord("R"))
 	{

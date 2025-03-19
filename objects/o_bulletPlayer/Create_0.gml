@@ -6,6 +6,7 @@ destroying = false;
 type = collisionType.custom;
 initialSpeed = 0;
 speed = initialSpeed;
+
 if (global.luckyShot)
 {
 	damage = irandom(100);

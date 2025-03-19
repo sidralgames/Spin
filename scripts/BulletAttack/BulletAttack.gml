@@ -91,7 +91,16 @@ function BulletAttack(_attack)
 							}
 						
 							bullet1 = instance_create_layer(x,y,"Bullets", bulletToShoot);
-							bullet1.speed = random_range(0.75,1);
+							
+							if (bulletToShoot = o_bulletPitch)
+							{
+								bullet1.speed = random_range(0.75,1);
+							}
+							else
+							{
+								bullet1.speed = random_range(0.5,75);
+							}
+							
 							bullet1.initialSpeed = bullet1.speed
 							bullet1.direction = dir;
 						
@@ -105,6 +114,7 @@ function BulletAttack(_attack)
 					{
 						_attack = choose("SingleBullet", "DobleBullet", "BulletBurst")
 					}
+					
 				}break;
 				
 				case "SingleBullet":

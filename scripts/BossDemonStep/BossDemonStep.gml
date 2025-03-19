@@ -41,7 +41,7 @@ function BossDemonStep()
 	BulletAttack(attack);
 
 
-	WallAttack(1,2,choose(25,50),35,3);
+	WallAttack(0,2,choose(25,50),35,2);
 
 
 	if (needleAttack) && instance_exists(o_player)

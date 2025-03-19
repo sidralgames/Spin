@@ -41,7 +41,7 @@ function BossTribalStep(){
 	BulletAttack(attack);
 
 
-	WallAttack(1,2,choose(25,25),40,3);
+	WallAttack(0,2,choose(25,25),40,3);
 
 
 	if (needleAttack) && instance_exists(o_player)

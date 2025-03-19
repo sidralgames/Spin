@@ -4,11 +4,12 @@ _hp = 0;
 
 if (instance_exists(o_boss))
 {
-	o_boss._hp += 10 + (global.level*15);
+	o_boss._hp += 10 + (global.level*5);
 	
 	if (o_boss._hp >= o_boss._hpMax)
 	{
 		o_boss._hp = o_boss._hpMax;
 	}
 }
+
 screenShake(5,50,3)

@@ -45,6 +45,7 @@ function ResetGame(_playing)
 	global.luckyShot = false;
 	global.strongConnection = false;
 	
+	
 	//Reset Tempo
 	with(o_tempo)
 	{
