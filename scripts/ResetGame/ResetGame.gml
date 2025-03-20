@@ -44,6 +44,7 @@ function ResetGame(_playing)
 	global.fireRateAux = 0;
 	global.luckyShot = false;
 	global.strongConnection = false;
+	global.energyRecharge = 0.45;
 	
 	
 	//Reset Tempo

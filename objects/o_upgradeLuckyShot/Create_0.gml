@@ -4,7 +4,7 @@ event_inherited();
 cx = room_width/2;
 cy = room_height/2;
 alias = "Lucky Shot";
-nameUp = "Lucky Shot\nBullets have 1/100 of\ndoing 50 damage"
+nameUp = "Lucky Shot\nBullets have 1/100 of\ndoing x25 damage"
 bossSpin = global.vinylSpin;
 totalPush = 0;
 totalMaxSpeed = 3;

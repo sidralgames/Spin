@@ -30,15 +30,14 @@ else
 
 
 
-if global.relativeSpeed> 1.4
+if (global.relativeSpeed > 1.1)
 {
-	speed = initialSpeed * 1.4
+	speed = initialSpeed * 1.1;
 }
 else
 {
 	//initialSpeed = lerp(initialSpeed ,0, 0.015)
 	speed = initialSpeed * global.relativeSpeed
-	
 }
 
 timeToExplode --;

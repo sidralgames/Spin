@@ -98,7 +98,7 @@ function BulletAttack(_attack)
 							}
 							else
 							{
-								bullet1.speed = random_range(0.5,75);
+								bullet1.speed = random_range(0.5,0.75);
 							}
 							
 							bullet1.initialSpeed = bullet1.speed
@@ -314,7 +314,16 @@ function BulletAttack(_attack)
 								dir = point_direction(x,y,o_bossHP.x, o_bossHP.y+random_range(20,-20))
 							}
 							bullet1 = instance_create_layer(x,y,"Bullets", bulletToShoot);
-							bullet1.speed = random_range(0.75,1);
+							
+							if (bulletToShoot = o_bulletPitch)
+							{
+								bullet1.speed = random_range(0.75,1);
+							}
+							else
+							{
+								bullet1.speed = random_range(0.5,0.75);
+							}
+							
 							bullet1.initialSpeed = bullet1.speed
 							bullet1.direction = dir;
 						
@@ -529,7 +538,14 @@ function BulletAttack(_attack)
 								dir = point_direction(x,y,o_bossHP.x, o_bossHP.y+random_range(20,-20))
 							}
 							bullet1 = instance_create_layer(x,y,"Bullets", bulletToShoot);
-							bullet1.speed = random_range(0.75,1);
+							if (bulletToShoot = o_bulletPitch)
+							{
+								bullet1.speed = random_range(0.75,1);
+							}
+							else
+							{
+								bullet1.speed = random_range(0.5,0.75);
+							}
 							bullet1.initialSpeed = bullet1.speed
 							bullet1.direction = dir;
 						
@@ -743,7 +759,14 @@ function BulletAttack(_attack)
 								dir = point_direction(x,y,o_bossHP.x, o_bossHP.y+random_range(20,-20))
 							}
 							bullet1 = instance_create_layer(x,y,"Bullets", bulletToShoot);
-							bullet1.speed = random_range(0.75,1);
+							if (bulletToShoot = o_bulletPitch)
+							{
+								bullet1.speed = random_range(0.75,1);
+							}
+							else
+							{
+								bullet1.speed = random_range(0.5,0.75);
+							}
 							bullet1.initialSpeed = bullet1.speed
 							bullet1.direction = dir;
 						
@@ -961,7 +984,14 @@ function BulletAttack(_attack)
 								dir = point_direction(x,y,o_bossHP.x, o_bossHP.y+random_range(20,-20))
 							}
 							bullet1 = instance_create_layer(x,y,"Bullets", bulletToShoot);
-							bullet1.speed = random_range(0.75,1);
+							if (bulletToShoot = o_bulletPitch)
+							{
+								bullet1.speed = random_range(0.75,1);
+							}
+							else
+							{
+								bullet1.speed = random_range(0.5,0.75);
+							}
 							bullet1.initialSpeed = bullet1.speed
 							bullet1.direction = dir;
 						
@@ -1180,7 +1210,14 @@ function BulletAttack(_attack)
 								dir = point_direction(x,y,o_bossHP.x, o_bossHP.y+random_range(20,-20))
 							}
 							bullet1 = instance_create_layer(x,y,"Bullets", bulletToShoot);
-							bullet1.speed = random_range(0.75,1);
+							if (bulletToShoot = o_bulletPitch)
+							{
+								bullet1.speed = random_range(0.75,1);
+							}
+							else
+							{
+								bullet1.speed = random_range(0.5,0.75);
+							}
 							bullet1.initialSpeed = bullet1.speed
 							bullet1.direction = dir;
 						

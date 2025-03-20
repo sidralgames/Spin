@@ -16,6 +16,23 @@ draw_set_halign(fa_left)
 //draw_text_color(x,y+60,"angle: " +  string(image_angle),c_white,c_white,c_white,c_white,1)
 //draw_text_color(x,y+60,"E: " +  string(global.energy),c_white,c_white,c_white,c_white,1)
 //draw_text_color(x,y+80,"TotalE: " +  string(global.energyTotal),c_white,c_white,c_white,c_white,1)
+
+if (comesFromDeath)
+{
+	spotRad --;
+	
+	if (spotRad <=0)
+	{
+		spotRad = spotRadInitial;
+	}
+	draw_set_alpha(1);
+	
+	draw_circle(x,y,spotRad, true)
+	draw_circle(x,y,spotRad+4, true)
+	
+}
+
+
 if (inDash)
 {
 	image_blend = c_aqua;

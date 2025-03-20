@@ -4,7 +4,7 @@ _hp = 0;
 
 if (instance_exists(o_boss))
 {
-	o_boss._hp += 10 + (global.level*5);
+	o_boss._hp += 15 + (global.level*5);
 	
 	if (o_boss._hp >= o_boss._hpMax)
 	{

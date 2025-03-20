@@ -18,11 +18,22 @@ key_L1_Pressed = gamepad_button_check_pressed(0, gp_shoulderl) || keyboard_check
 
 //global.vibration = lerp(global.vibration, 0, 0.05)
 
+
+//REAPPEAR AFTER LOSING A LIFE
 if (comesFromDeath)
 {
-	image_alpha = random_range(0.2,0.8);
-	tocado = true;
 	contComesFromDeath --;
+	
+	if (contComesFromDeath > 90)
+	{
+		instance_destroy(o_wall);
+		instance_destroy(o_bulletBoss);
+	}
+	
+	global.vinylSpin = lerp(global.vinylSpin, 0, 0.04);
+	tocado = true;
+	image_alpha = random_range(0.75,1);
+	
 	if (contComesFromDeath <= 0)
 	{
 		comesFromDeath = false;
@@ -30,6 +41,41 @@ if (comesFromDeath)
 		image_alpha = 1;
 	}
 }
+
+if (tocado = true)
+{
+	image_alpha = random_range(0.25,1);
+}
+
+//STOP VINYL AFTER LOSING A LIFE
+if (contComesFromDeath <= 0) && (checkVinylSpin = false)
+{
+	if (global.vinylSpin > -0.55)
+	{
+		if instance_exists(o_boss)
+		{
+			global.vinylSpin = lerp(global.vinylSpin, o_boss.bossVinylSpin, 0.03)
+		}
+		else
+		{
+			global.vinylSpin = lerp(global.vinylSpin, -0.6, 0.03)
+		}
+	}
+	else
+	{
+		if instance_exists(o_boss) && !instance_exists(o_upgrades)
+		{
+			global.vinylSpin = o_boss.bossVinylSpin;
+		}
+		if !instance_exists(o_boss) && instance_exists(o_upgrades)
+		{
+			global.vinylSpin = -0.25;  //upgradeSpin
+		}
+		
+		checkVinylSpin = true;
+	}
+}
+
 
 if (slowedFromAHit = false)
 {
@@ -247,9 +293,9 @@ if (dashTime <=0) && (inDash = true)
 
 
 
-if (global.energy < global.energyTotal) && (alarm[0] <= 0) && (!key_L2)
+if (global.energy < global.energyTotal) && (alarm[0] <= 0) && (!key_L2) && (!aiming)
 {
-	global.energy += dashEnergyRecover;
+	global.energy += global.energyRecharge;
 }
 
 global.energy = clamp(global.energy, 0, global.energyTotal)

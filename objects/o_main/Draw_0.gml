@@ -5,17 +5,17 @@ draw_set_halign(fa_right)
 
 if (global.playing)
 {
-	if global.maxLives = 3
+
+	draw_sprite_ext(s_livesText, 0, __view_get( e__VW.XView, 0 )+80,__view_get( e__VW.YView, 0 )+45,1,1,0,c_white,image_alpha)
+	
+	for (var i = 0; i< global.maxLives; i++;)
 	{
-		draw_sprite_ext(s_playerHP, 0, __view_get( e__VW.XView, 0 )+100,__view_get( e__VW.YView, 0 )+45,1,1,0,c_white,image_alpha)
+		draw_sprite_ext(s_playerHPOut, 0, __view_get( e__VW.XView, 0 )+90 + 19*i,__view_get( e__VW.YView, 0 )+45,1,1,0,c_white,image_alpha)
 	}
-	else
-	{
-		draw_sprite_ext(s_playerFill4HP, 0, __view_get( e__VW.XView, 0 )+100,__view_get( e__VW.YView, 0 )+45,1,1,0,c_white,image_alpha)
-	}
+	
 	for (var i = 0; i< global.lives; i++;)
 	{
-		draw_sprite_ext(s_playerHPFill, 0, __view_get( e__VW.XView, 0 )+100 + 19*i,__view_get( e__VW.YView, 0 )+45,1,1,0,c_white,image_alpha)
+		draw_sprite_ext(s_playerHPFill, 0, __view_get( e__VW.XView, 0 )+90 + 19*i,__view_get( e__VW.YView, 0 )+45,1,1,0,c_white,image_alpha)
 	}
 }
 

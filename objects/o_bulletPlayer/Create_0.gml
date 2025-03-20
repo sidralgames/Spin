@@ -11,9 +11,9 @@ if (global.luckyShot)
 {
 	damage = irandom(100);
 	
-	if damage = 100
+	if damage = 0
 	{
-		bulletDamage = 50
+		bulletDamage = 25
 	}
 	else
 	{

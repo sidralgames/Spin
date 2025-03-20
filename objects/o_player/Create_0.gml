@@ -3,15 +3,25 @@
 aiming = false;
 recoilGun = 0;
 movingController = false;
+
+//--REAPPERAR AFTER DEATH--//
+gamepad_set_vibration(0,0,0);
+image_alpha = 1;
 comesFromDeath = false;
-contComesFromDeath = 120;
+contComesFromDeath = 100;
+spotRadInitial = 25;
+spotRad = spotRadInitial;
 lastTouchedX = x;
 lastTouchedY = y;
+checkVinylSpin = false;
+
 runningAgainstDisc = false;
 slowedFromAHit = false;
 goSlow = false;
 tocado = false;
-invincibleTime = 30;
+
+invincibleTime = 60;
+
 cx = room_width/2;
 cy = room_height/2;
 scaleGunY = 1;
@@ -57,8 +67,14 @@ _hpush =0;
 _vpush =0;
 
 distance = 2;
-
-bossSpin = global.vinylSpin;
+if instance_exists(o_boss)
+{
+	bossSpin = global.vinylSpin;
+}
+else
+{
+	bossSpin = -0.6
+}
 totalPush = 0;
 
 
@@ -77,8 +93,6 @@ thisHitHitted = irandom(2);
 
 gunSprite = s_gun;
 global.energy = global.energyTotal;
-
-dashEnergyRecover = 0.45;
 
 fireRate = 10;
 fireRateShotgun = 20;

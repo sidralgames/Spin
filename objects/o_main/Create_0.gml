@@ -1,10 +1,11 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
 //vstick_init(0, __view_get( e__VW.XView, 0 )+80 ,__view_get( e__VW.YView, 0 )+305,40,true,noone,Sprite1_1)
+global.energyRecharge = 0.45;
 
 global.dashEnergyMin = 25;
 global.shootingEnergyMin = 25;
-global.luckyShot = false;
+global.luckyShot = true;
 global.strongConnection = false;
 global.oddsStrongConnection = 5;
 
@@ -160,3 +161,4 @@ AddUpgradeBossLimiter();
 AddUpgradeLuckyShot();
 AddUpgradeRecoverLives();
 AddUpgradeStrongConnection();
+AddUpgradeFasterCharge();

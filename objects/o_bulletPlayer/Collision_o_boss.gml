@@ -4,6 +4,11 @@ if (global.playing)
 {
 	other._hp -=(bulletDamage + global.superShot);
 	instance_destroy();
+	if (bulletDamage > 1)
+	{
+		lucky = instance_create_layer(x,y,"Menu", o_lucky);
+		lucky.image_angle = direction-90;
+	}
 	other.spinCreateHole = true;
 	other.bullethole = point_distance(x,y,other.x, other.y);
 	other.angleHole = point_direction(other.x, other.y, x, y);

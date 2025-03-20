@@ -28,4 +28,4 @@ canChase = true;
 bounced = false;
 image_xscale = 1;
 image_yscale = 1;
-spinSpeed = 0;
+spinSpeed = 2;

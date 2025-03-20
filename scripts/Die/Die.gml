@@ -3,76 +3,78 @@
 function Die()
 {
 	if instance_exists(o_vinilo)
-{
-	if (!collision_circle(x,y,4,o_vinilo,true,true)) && (inDash = false)
 	{
-		contDie --;
-		if (contDie <=0) && (dying = false)
+		if (!collision_circle(x,y,4,o_vinilo,true,true)) && (inDash = false)
 		{
-			if (image_angle > 270 || image_angle < 90)
+			contDie --;
+			if (contDie <=0) && (dying = false)
 			{
-				image_yscale = 1;
-		
-			}
-			else
-			{
-				image_yscale = -1;
-			}
+				if (image_angle > 270 || image_angle < 90)
+				{
+					image_yscale = 1;
+				}
+				else
+				{
+					image_yscale = -1;
+				}
 	
-			image_angle = direction;
-			dying = true;
-			depth = o_vinilo.depth+3
+				image_angle = direction;
+				dying = true;
+				depth = o_vinilo.depth+3
+			}
 		}
-	}
-	else
-	{
-		lastTouchedX = x;
-		lastTouchedY = y;
-		contDie = contDieMax;
-	}
+		else
+		{
+			lastTouchedX = x;
+			lastTouchedY = y;
+			contDie = contDieMax;
+		}
 
-	if (dying = true)
-	{
-		if (scaleReset = false)
+		if (dying = true)
 		{
-			image_xscale = 1;
-			if (image_angle > 270 || image_angle < 90)
-			{
-				image_yscale = 1;
+			tocado = true;
 		
-			}
-			else
+			if (scaleReset = false)
 			{
-				image_yscale = -1;
+				image_xscale = 1;
+				if (image_angle > 270 || image_angle < 90)
+				{
+					image_yscale = 1;
+				}
+				else
+				{
+					image_yscale = -1;
+				}
+				scaleReset = true;
 			}
-			scaleReset = true;
-		}
 	
-		image_xscale -= 0.01;
-		image_yscale -= 0.01 * sign(image_yscale);	
+			image_xscale -= 0.01;
+			image_yscale -= 0.01 * sign(image_yscale);	
 	
-		if (image_xscale <= 0.1)
-		{
-			
-			o_main.lastX = lastTouchedX;
-			o_main.lastY = lastTouchedY;
-			if (global.playing)
+			if (image_xscale <= 0.1)
 			{
-				global.lives -=1;
+				o_main.lastX = lastTouchedX;
+				o_main.lastY = lastTouchedY;
+				if (global.playing)
+				{
+					global.lives -=1;
+				}
+				
+				instance_destroy();
 			}
-			instance_destroy();
 		}
 	}
-}
 	
 	if (_hp <= 0)
 	{
 		o_main.lastX = x;
 		o_main.lastY = y;
+		
 		if (global.playing)
 		{
 			global.lives -=1;
 		}
+		
 		instance_destroy();
 	}
 }

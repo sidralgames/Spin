@@ -96,7 +96,7 @@ if (chasingPlayer = true) && (distToPlayer >= 200)
 if (chasingPlayer) && (alarm[3] <= 0) && (bounced = false)
 {
 
-	spinSpeed = lerp(spinSpeed, 10, 0.05)* global.relativeSpeed;
+	spinSpeed = lerp(spinSpeed, 10, 0.05);
 	x += hspeed* global.relativeSpeed;
 	y += vspeed* global.relativeSpeed;
 		
@@ -128,7 +128,7 @@ if (chasingPlayer) && (alarm[3] <= 0) && (bounced = false)
 
 if (chasingPlayer = false) 
 {
-	spinSpeed = lerp(spinSpeed, global.vinylSpin*2, 0.05) * global.relativeSpeed;
+	//spinSpeed = min(2, lerp(spinSpeed, global.vinylSpin*2, 0.05) * global.relativeSpeed);
 	speed = lerp(speed, 0, 0.05);
 	theta += totalPush;
 	x = cx + lengthdir_x(r, theta) 

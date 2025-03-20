@@ -44,7 +44,7 @@ switch(global.level)
 		
 		bossIsInCollection = global.bossNachoCollection;
 		
-		_hpMax = 80;
+		_hpMax = 85;
 		rotSpeedBoss = 0.5;
 		_hp = _hpMax;
 
@@ -301,6 +301,7 @@ _angle = image_angle;
 //galletaFake = instance_create_layer(x,y,"Boss",oBossFake);
 //galletaFake.depth = depth - 1;
 global.vinylSpin = -0.6;
+bossVinylSpin = global.vinylSpin;
 global.spriteBoss = spriteBoss;
 
 if instance_exists(o_aguja)
