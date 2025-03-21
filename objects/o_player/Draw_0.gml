@@ -117,4 +117,34 @@ if (dying = false)
 			image_angle = direction;
 		}
 	}
+	
+	if (global.shieldUpgrade)
+	{
+		if (key_escudo)
+		{
+			if (global.energy <=0)
+			{
+				shieldBurned = true;
+				haveShield = false;
+			}
+			
+			if (shieldBurned = false)
+			{
+				ActivateShield();
+			}
+			else
+			{
+				if (global.energy > 60)
+				{
+					shieldBurned = false;
+					
+					ActivateShield();
+				}
+			}
+		}
+		else
+		{
+			haveShield = false;
+		}
+	}
 }

@@ -1,15 +1,15 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
-	key_left = keyboard_check(vk_left) || keyboard_check(ord("A")) || gamepad_button_check(0, gp_padl) || gamepad_axis_value(0, gp_axislh) < -0.5;
-	key_right = keyboard_check(vk_right) || keyboard_check(ord("D")) || gamepad_button_check(0, gp_padr) || gamepad_axis_value(0, gp_axislh) > 0.5;
-	key_up = keyboard_check(vk_up) || keyboard_check(ord("W")) || gamepad_button_check(0, gp_padu) || gamepad_axis_value(0, gp_axislv) < -0.5;
-	key_down = keyboard_check(vk_down) || keyboard_check(ord("S")) || gamepad_button_check(0, gp_padd) || gamepad_axis_value(0, gp_axislv) > 0.5;
+key_left = keyboard_check(vk_left) || keyboard_check(ord("A")) || gamepad_button_check(0, gp_padl) || gamepad_axis_value(0, gp_axislh) < -0.5;
+key_right = keyboard_check(vk_right) || keyboard_check(ord("D")) || gamepad_button_check(0, gp_padr) || gamepad_axis_value(0, gp_axislh) > 0.5;
+key_up = keyboard_check(vk_up) || keyboard_check(ord("W")) || gamepad_button_check(0, gp_padu) || gamepad_axis_value(0, gp_axislv) < -0.5;
+key_down = keyboard_check(vk_down) || keyboard_check(ord("S")) || gamepad_button_check(0, gp_padd) || gamepad_axis_value(0, gp_axislv) > 0.5;
 
 key_x = keyboard_check(ord("X"));
 key_shoot = mouse_check_button(mb_left);
 
-key_R2 = gamepad_button_check(0, gp_shoulderrb)
-key_L2 = gamepad_button_check(0, gp_shoulderlb)
+key_escudo = gamepad_button_check(0, gp_shoulderlb)
+key_slowmo = gamepad_button_check(0, gp_shoulderrb)
 key_L1_Pressed = gamepad_button_check_pressed(0, gp_shoulderl) || keyboard_check_pressed(vk_space) ||  mouse_check_button_pressed(mb_right);
 
 //gamepad_set_vibration(0, global.vibration, global.vibration);
@@ -81,15 +81,15 @@ if (slowedFromAHit = false)
 {
 	if (global.tempoCorrupted = false)
 	{
-		if (key_L2) && (global.energy > 0) && !(key_R2) && (global.slowmotionPicked = true)
+		if (key_slowmo) && (global.energy > 0) && (global.slowmotionPicked = true)
 		{
 			global.energy-= slowMoEnergy;
 			SlowDown(0.5, 0.03);
 		}
-		else if (key_R2)  && !(key_L2)
-		{
-			FWD();
-		}
+		//else if (key_escudo)  && !(key_slowmo)
+		//{
+		//	FWD();
+		//}
 		else if (global.autoPitch = false)
 		{
 			
@@ -293,7 +293,7 @@ if (dashTime <=0) && (inDash = true)
 
 
 
-if (global.energy < global.energyTotal) && (alarm[0] <= 0) && (!key_L2) && (!aiming)
+if (global.energy < global.energyTotal) && (alarm[0] <= 0) && (!key_slowmo) && (!aiming) && (!haveShield)
 {
 	global.energy += global.energyRecharge;
 }

@@ -45,7 +45,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.8.0.169",
+    "IDEVersion":"2024.11.0.179",
   },
   "name":"SPIN",
   "resources":[
@@ -136,6 +136,7 @@
     {"id":{"name":"__view_get","path":"scripts/__view_get/__view_get.yy",},},
     {"id":{"name":"__view_set_internal","path":"scripts/__view_set_internal/__view_set_internal.yy",},},
     {"id":{"name":"__view_set","path":"scripts/__view_set/__view_set.yy",},},
+    {"id":{"name":"ActivateShield","path":"scripts/ActivateShield/ActivateShield.yy",},},
     {"id":{"name":"AddBossDemonCollection","path":"scripts/AddBossDemonCollection/AddBossDemonCollection.yy",},},
     {"id":{"name":"AddBossGirlCollection","path":"scripts/AddBossGirlCollection/AddBossGirlCollection.yy",},},
     {"id":{"name":"AddBossMixtapeCollection","path":"scripts/AddBossMixtapeCollection/AddBossMixtapeCollection.yy",},},
@@ -304,6 +305,7 @@
     {"id":{"name":"s_rotoBossCirc","path":"sprites/s_rotoBossCirc/s_rotoBossCirc.yy",},},
     {"id":{"name":"s_screenshakeOFF","path":"sprites/s_screenshakeOFF/s_screenshakeOFF.yy",},},
     {"id":{"name":"s_screenshakeON","path":"sprites/s_screenshakeON/s_screenshakeON.yy",},},
+    {"id":{"name":"s_shield","path":"sprites/s_shield/s_shield.yy",},},
     {"id":{"name":"s_shotgun","path":"sprites/s_shotgun/s_shotgun.yy",},},
     {"id":{"name":"s_tempo","path":"sprites/s_tempo/s_tempo.yy",},},
     {"id":{"name":"s_tempoMeter","path":"sprites/s_tempoMeter/s_tempoMeter.yy",},},
