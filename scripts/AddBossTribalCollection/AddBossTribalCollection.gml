@@ -5,14 +5,17 @@ function AddBossTribalCollection()
 	ds_map_add(global.collectionList, global.totalNumberOfVinyls,
 	{ 
 		alias: "Tribal",
+		song: snd_tribal,
+		offsetSong: 135,
 		keyKilledBy :"killedByTribal",
 		sprite: s_bossTribal,
 		spriteVinyl: s_discoVinilo,
+		hpMax: 170,
 		vinylAlpha : 0.95,
 		vinylColor : global.yellow,
 		number: 2,
 		defeatedInRun: 0,
-		unlocked: global.bossTribalCollection
+		collection: global.bossTribalCollection
 	})
 
 	global.totalNumberOfVinyls +=1;

@@ -5,14 +5,17 @@ function AddBossGirlCollection()
 	ds_map_add(global.collectionList, global.totalNumberOfVinyls,
 	{ 
 		alias: "Girl",
+		song: snd_e4u,
+		offsetSong: 40,
 		keyKilledBy :"killedByGirl",
 		sprite: s_bossGirl,
 		spriteVinyl: s_discoVinilo,
+		hpMax: 210,
 		vinylAlpha : 0.95,
 		vinylColor : global.pink,
 		number: 3,
 		defeatedInRun: 0,
-		unlocked: global.bossGirlCollection
+		collection: global.bossGirlCollection
 	})
 
 	global.totalNumberOfVinyls +=1;

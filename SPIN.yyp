@@ -186,6 +186,7 @@
     {"id":{"name":"PlayerShoot","path":"scripts/PlayerShoot/PlayerShoot.yy",},},
     {"id":{"name":"PlayGame","path":"scripts/PlayGame/PlayGame.yy",},},
     {"id":{"name":"ResetGame","path":"scripts/ResetGame/ResetGame.yy",},},
+    {"id":{"name":"ResetNeedle","path":"scripts/ResetNeedle/ResetNeedle.yy",},},
     {"id":{"name":"ResetUpgrades","path":"scripts/ResetUpgrades/ResetUpgrades.yy",},},
     {"id":{"name":"SaveGame","path":"scripts/SaveGame/SaveGame.yy",},},
     {"id":{"name":"scr_CRT_appy_to_surface","path":"scripts/scr_CRT_appy_to_surface/scr_CRT_appy_to_surface.yy",},},

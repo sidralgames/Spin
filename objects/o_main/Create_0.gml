@@ -5,13 +5,15 @@ global.energyRecharge = 0.45;
 
 global.dashEnergyMin = 25;
 global.shootingEnergyMin = 25;
-global.luckyShot = true;
+global.luckyShot = false;
 global.strongConnection = false;
 global.oddsStrongConnection = 5;
 
 global.bossHPLimiter = false;
 
 global.speedAux = 0;
+global.fireRateAux = 0;
+
 global._hpUpgradeWall = 0;
 global.slowmotionPicked = false;
 
@@ -26,7 +28,7 @@ global.howToPlay = false;
 
 display_reset(0, false);
 global.customFont16= font_add("ChubbyChoo-SemiBold.ttf", 16, false, false, 32, 128);
-global.fireRateAux = 0;
+
 
 drawflash = false;
 drawflashRoto = false;

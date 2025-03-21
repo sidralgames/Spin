@@ -5,14 +5,17 @@ function AddBossMixtapeCollection()
 	ds_map_add(global.collectionList, global.totalNumberOfVinyls,
 	{ 
 		alias: "Mixtape",
+		song: snd_mixtape,
+		offsetSong: 0,
 		keyKilledBy :"killedByMixtape",
 		sprite: s_bossMixtape,
 		spriteVinyl: s_discoVinilo,
+		hpMax: 200,
 		vinylAlpha : 0.9,
 		vinylColor : global.lightPink,
 		number: 5,
 		defeatedInRun: 0,
-		unlocked: global.bossMixtapeCollection
+		collection: global.bossMixtapeCollection
 	})
 
 	global.totalNumberOfVinyls +=1;

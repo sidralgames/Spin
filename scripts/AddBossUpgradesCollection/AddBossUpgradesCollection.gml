@@ -2,17 +2,20 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function AddBossUpgradesCollection()
 {
-ds_map_add(global.collectionList, global.totalNumberOfVinyls,
+	ds_map_add(global.collectionList, global.totalNumberOfVinyls,
 	{ 
 		alias: "Upgrades",
+		song: snd_upgrade,
+		offsetSong: 0,
 		keyKilledBy :"killedByUpgrades",
 		sprite: s_galletaUpgrades,
 		spriteVinyl: s_discoVinilo,
+		hpMax: 100,
 		vinylAlpha : 0.95,
 		vinylColor : c_white,
-		number: 2,
+		number: 6,
 		defeatedInRun: 0,
-		unlocked: global.bossUpgradesCollection
+		collection: global.bossUpgradesCollection
 	})
 
 	global.totalNumberOfVinyls +=1;

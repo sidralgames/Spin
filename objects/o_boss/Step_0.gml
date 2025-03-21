@@ -232,82 +232,24 @@ key_rightP = keyboard_check_pressed(vk_right) || gamepad_button_check_pressed(0,
 	
 if (global.collection)
 {
-	
 	if (key_leftP)
 	{
-			//audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
+		//audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 		selectedVinyl -=1;	
 		changeSongCollection = false;
 		o_main.changingLevel = true;
-		
-		with(o_aguja)
-		{
-			songDuration = audio_sound_length(global.song);
-
-			framesSong = songDuration * room_speed;
-
-			initialDist = 250;
-			angleAguja = initialAngleAguja;
-
-			dist = initialDist;
-
-			distToCenter = dist - 10;
-
-			fac = (distToCenter / framesSong) * angleFac
-
-			nearDisc = instance_nearest(x,y,o_vinilo);
-			nearBoss = instance_nearest(x,y,o_boss);
-
-
-			canBeTouched= true;
-			contCanBeTouched = 200;
-
-			x = nearDisc.x + lengthdir_x(dist, 35);
-			y = nearDisc.y + lengthdir_y(dist, 35);
-
-			xIni = x;
-			yIni = y;
-		}
+		ResetNeedle();
 	}
-
+	
 	if (key_rightP)
 	{
-			//audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
+		//audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 		selectedVinyl +=1;
 		changeSongCollection = false;
 		o_main.changingLevel = true;
-		
-		with(o_aguja)
-		{
-			songDuration = audio_sound_length(global.song);
-
-			framesSong = songDuration * room_speed;
-
-			initialDist = 250;
-			angleAguja = initialAngleAguja;
-
-			dist = initialDist;
-
-			distToCenter = dist - 10;
-
-			fac = (distToCenter / framesSong) * angleFac
-
-			nearDisc = instance_nearest(x,y,o_vinilo);
-			nearBoss = instance_nearest(x,y,o_boss);
-
-
-			canBeTouched= true;
-			contCanBeTouched = 200;
-
-			x = nearDisc.x + lengthdir_x(dist, 35);
-			y = nearDisc.y + lengthdir_y(dist, 35);
-
-			xIni = x;
-			yIni = y;
-		}
+		ResetNeedle();
 	}
 		
-
 	if (selectedVinyl > global.totalNumberOfVinyls-1)
 	{
 		selectedVinyl = 0;	
@@ -317,245 +259,36 @@ if (global.collection)
 	{
 		selectedVinyl = global.totalNumberOfVinyls-1;	
 	}
-	switch(selectedVinyl)
+	
+	vinylToPlay = ds_map_find_value(global.collectionList, selectedVinyl);
+	
+	if (vinylToPlay.collection = 0)
 	{
-		case 0:
-		{
-			if (global.bossNachoCollection = 0)
-			{
-				image_blend = c_dkgray;
-				global.vinylAlpha = 0.85
-				global.vinylColor = c_dkgray;
-				drawLocked = true;
-			}
-			else
-			{
-				if (changeSongCollection = false)
-				{
-					if (global.song != snd_song1)
-					{
-						audio_stop_sound(global.song);
-						global.song = snd_song1;
-						audio_play_sound_on(global.audioEmitter,global.song, true, 100,,0);
-						changeSongCollection = true;
-					}
-				}
-				
-				image_blend = c_white;
-				global.vinylAlpha = 1;
-				global.vinylColor = global.pink;
-				drawLocked = false;
-				//global.level = 1;
-			}
-			
-			sprite_index = s_bossNacho;
-			spriteBoss = s_bossNacho;
-			
-		}break;
-		
-		case 1:
-		{
-			if (global.bossDemonCollection = 0)
-			{
-				image_blend = c_dkgray;
-				global.vinylAlpha = 0.75;
-				global.vinylColor = c_dkgray;
-				drawLocked = true;
-			}
-			else
-			{
-				if (changeSongCollection = false)
-				{
-					if (global.song != snd_songDemon)
-					{
-						audio_stop_sound(global.song);
-						global.song = snd_songDemon;
-						audio_play_sound_on(global.audioEmitter,global.song, true, 100,,0);
-						changeSongCollection = true;
-					}
-				}
-				
-				image_blend = c_white;
-				global.vinylAlpha = 0.8;
-				global.vinylColor = global.lightBlue;
-				drawLocked = false;
-				//global.level = 2;
-			}
-			
-			sprite_index = s_bossDemon;
-			spriteBoss = s_bossDemon;
-			
-		}break;
-		
-		case 2:
-		{
-			if (global.bossTribalCollection = 0)
-			{
-				image_blend = c_dkgray;
-				global.vinylAlpha = 0.90
-				global.vinylColor = c_dkgray;
-				drawLocked = true;
-			}
-			else
-			{
-				if (changeSongCollection = false)
-				{
-					if (global.song != snd_tribal)
-					{
-						audio_stop_sound(global.song);
-						global.song = snd_tribal;
-						audio_play_sound_on(global.audioEmitter,global.song, true, 100,,0);
-						changeSongCollection = true;
-					}
-				}
-				
-				image_blend = c_white;
-				global.vinylAlpha = 0.95;
-				global.vinylColor = global.yellow;
-				drawLocked = false;
-				//global.level = 3;
-			}
-			
-			sprite_index = s_bossTribal;
-			spriteBoss = s_bossTribal;
-			
-		}break;
-		
-		case 3:
-		{
-			if (global.bossGirlCollection = 0)
-			{
-				image_blend = c_dkgray;
-				global.vinylAlpha = 0.90
-				global.vinylColor = c_dkgray;
-				drawLocked = true;
-			}
-			else
-			{
-				
-				if (changeSongCollection = false)
-				{
-					if (global.song != snd_e4u)
-					{
-						audio_stop_sound(global.song);
-						global.song = snd_e4u;
-						audio_play_sound_on(global.audioEmitter,global.song, true, 100,,0);
-						changeSongCollection = true;
-					}
-				}
-				
-				image_blend = c_white;
-				global.vinylAlpha = 0.95;
-				global.vinylColor = global.pink;
-				drawLocked = false;
-				//global.level = 3;
-			}
-			
-			sprite_index = s_bossGirl;
-			spriteBoss = s_bossGirl;
-			
-		}break;
-		
-		case 4:
-		{
-			if (global.bossRataCollection = 0)
-			{
-				image_blend = c_dkgray;
-				global.vinylAlpha = 0.95
-				global.vinylColor = c_dkgray;
-				drawLocked = true;
-			}
-			else
-			{
-				if (changeSongCollection = false)
-				{
-					if (global.song != snd_chino)
-					{
-						audio_stop_sound(global.song);
-						global.song = snd_chino;
-						audio_play_sound_on(global.audioEmitter,global.song, true, 100,,0);
-						changeSongCollection = true;
-					}
-				}
-				
-				image_blend = c_white;
-				global.vinylAlpha = 0.95;
-				global.vinylColor = global.greenRat;
-				drawLocked = false;
-				//global.level = 3;
-			}
-			
-			sprite_index = s_bossRata;
-			spriteBoss = s_bossRata;
-			
-		}break;
-		
-		case 5:
-		{
-			if (global.bossUpgradesCollection < 5)
-			{
-				image_blend = c_dkgray;
-				global.vinylAlpha = 0.95
-				global.vinylColor = c_dkgray;
-				drawLocked = true;
-			}
-			else
-			{
-				if (changeSongCollection = false)
-				{
-					if (global.song != snd_LoveSpell)
-					{
-						audio_stop_sound(global.song);
-						global.song = snd_LoveSpell;
-						audio_play_sound_on(global.audioEmitter,global.song, true, 100,,0);
-						changeSongCollection = true;
-					}
-				}
-				
-				image_blend = c_white;
-				global.vinylAlpha = 0.95;
-				global.vinylColor = c_white;
-				drawLocked = false;
-				//global.level = 3;
-			}
-			
-			sprite_index = s_galletaUpgrades;
-			spriteBoss = s_galletaUpgrades;
-			
-		}break;
-		
-		case 6:
-		{
-			if (global.bossMixtapeCollection = 0)
-			{
-				image_blend = c_dkgray;
-				global.vinylAlpha = 0.95
-				global.vinylColor = c_dkgray;
-				drawLocked = true;
-			}
-			else
-			{
-				if (changeSongCollection = false)
-				{
-					if (global.song != snd_mixtape)
-					{
-						audio_stop_sound(global.song);
-						global.song = snd_mixtape;
-						audio_play_sound_on(global.audioEmitter,global.song, true, 100,,0);
-						changeSongCollection = true;
-					}
-				}
-				
-				image_blend = c_white;
-				global.vinylAlpha = 0.90;
-				global.vinylColor = global.pink;
-				drawLocked = false;
-				//global.level = 3;
-			}
-			
-			sprite_index = s_bossMixtape;
-			spriteBoss = s_bossMixtape;
-			
-		}break;
+		image_blend = c_dkgray;
+		global.vinylAlpha = 0.85
+		global.vinylColor = c_dkgray;
+		drawLocked = true;
 	}
+	else
+	{
+		if (changeSongCollection = false)
+		{
+			
+			if (global.song != vinylToPlay.song)
+			{
+				audio_stop_sound(global.song);
+				global.song = vinylToPlay.song;
+				audio_play_sound_on(global.audioEmitter,global.song, true, 100,,0);
+				changeSongCollection = true;
+			}
+		}
+		
+		image_blend = c_white;
+		global.vinylAlpha = vinylToPlay.vinylAlpha;
+		global.vinylColor = vinylToPlay.vinylColor;
+		drawLocked = false;
+	}
+			
+	sprite_index = vinylToPlay.sprite;
+	spriteBoss = vinylToPlay.sprite;;
 }
