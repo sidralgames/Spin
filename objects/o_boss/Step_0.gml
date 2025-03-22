@@ -227,11 +227,15 @@ if (_hp <= 0)
 	
 }
 
-key_leftP = keyboard_check_pressed(vk_left)  || gamepad_button_check_pressed(0, gp_padl);
-key_rightP = keyboard_check_pressed(vk_right) || gamepad_button_check_pressed(0, gp_padr);
-	
+
+
 if (global.collection)
 {
+	
+	key_leftP = keyboard_check_pressed(vk_left)  || gamepad_button_check_pressed(0, gp_padl);
+	key_rightP = keyboard_check_pressed(vk_right) || gamepad_button_check_pressed(0, gp_padr);
+	key_x = keyboard_check_pressed(ord("X")) || gamepad_button_check_pressed(0, gp_face1);
+
 	if (key_leftP)
 	{
 		//audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
@@ -290,5 +294,11 @@ if (global.collection)
 	}
 			
 	sprite_index = vinylToPlay.sprite;
-	spriteBoss = vinylToPlay.sprite;;
+	spriteBoss = vinylToPlay.sprite;
+	
+	if (key_x)
+	{
+		global.level = vinylToPlay.number +1;
+		o_player.levelSelector = true;
+	}
 }

@@ -12,6 +12,31 @@ key_escudo = gamepad_button_check(0, gp_shoulderlb)
 key_slowmo = gamepad_button_check(0, gp_shoulderrb)
 key_L1_Pressed = gamepad_button_check_pressed(0, gp_shoulderl) || keyboard_check_pressed(vk_space) ||  mouse_check_button_pressed(mb_right);
 
+
+if (levelSelector)
+{
+	for (var i = 0; i< global.level; i++)
+	{
+		if (alarm[2] <= 0)
+		{
+			upgToCreate = ds_map_find_value(global.upgradesList,  irandom(global.totalNumberOfUpgrades-1));
+		
+			if (upgToCreate.canAppear) && (upgToCreate.choosedThisTime = false)
+			{
+				instance_create_layer(x, y, "BulletsDown", upgToCreate.obj);
+				upgToCreate.choosedThisTime = true;
+				upgsCreated+=1;
+			}
+			alarm[2] = 30;
+		}
+		
+	}
+	if (upgsCreated >= global.level)
+	{
+		levelSelector = false;
+	}
+}
+
 //gamepad_set_vibration(0, global.vibration, global.vibration);
 
 //global.vibration = clamp(global.vibration, 0, 50);

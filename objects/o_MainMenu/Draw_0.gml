@@ -126,14 +126,15 @@ if (global.collection)
 		if (key_x)
 		{
 			global.collection = false;
-			instance_destroy(o_boss);
-			instance_destroy(o_bossHP);
-			instance_destroy(o_vinilo);
-			instance_destroy(oViniloFake);
-			instance_create_layer(room_width/2, room_height/2, "Boss", o_boss);
-			instance_create_layer(room_width/2, room_height/2, "Vinyl", o_vinilo);
+			global.playing = true;
+			//instance_destroy(o_boss);
+			//instance_destroy(o_bossHP);
+			//instance_destroy(o_vinilo);
+			//instance_destroy(oViniloFake);
+			//instance_create_layer(room_width/2, room_height/2, "Boss", o_boss);
+			//instance_create_layer(room_width/2, room_height/2, "Vinyl", o_vinilo);
 			o_main.changingLevel = true;
-			_visible = true;
+			//_visible = true;
 			factor = 0.08;
 
 			initialPlay =300;
@@ -144,6 +145,7 @@ if (global.collection)
 			initialCollectionX = 320
 			initialBackX =  320
 			initialBackY = 300
+			instance_destroy();
 		}
 	}
 
