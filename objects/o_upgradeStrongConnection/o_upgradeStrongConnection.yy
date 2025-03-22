@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"s_upgradeEnergy",
-    "path":"sprites/s_upgradeEnergy/s_upgradeEnergy.yy",
+    "name":"s_jackWhite",
+    "path":"sprites/s_jackWhite/s_jackWhite.yy",
   },
   "spriteMaskId":null,
   "visible":true,

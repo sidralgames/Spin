@@ -17,7 +17,9 @@ draw_set_halign(fa_left)
 //draw_text_color(x,y+60,"E: " +  string(global.energy),c_white,c_white,c_white,c_white,1)
 //draw_text_color(x,y+80,"TotalE: " +  string(global.energyTotal),c_white,c_white,c_white,c_white,1)
 
-if (comesFromDeath)
+
+
+if (comeFromDeath)
 {
 	spotRad --;
 	
@@ -58,33 +60,22 @@ if (global.energy < global.energyTotal)
 	}
 }
 draw_set_alpha(1);
+
 if (dying = false)
 {
+	if (haveShield = true)
+	{
+		draw_sprite_ext(s_shield, 0, x, y ,0.6,0.6,0,c_white,image_alpha)
+	}
+	
+	if (global.haloUpgrade)
+	{
+		draw_sprite_ext(s_halo, 0, x, y-12 ,1,1,0,c_white,0.9);
+	}
 	
 	if (aiming) 
 	{
-		image_angle = aimDir;
-		recoilGun = lerp(recoilGun, 0, 0.05)
-	
-		if (aimDir > 270 || aimDir < 90)
-		{
-			scaleGunY = 1;
-			image_yscale = 1;
-		
-		}
-		else
-		{
-			scaleGunY = -1;
-			image_yscale = -1;
-		}
-		if gamepad_is_connected(0)
-		{
-			draw_sprite_ext(gunSprite, 0, x + lengthdir_x(distGun - recoilGun, aimDir), y + lengthdir_y(distGun - recoilGun, aimDir),1,scaleGunY,aimDir,image_blend,image_alpha)
-		}
-		else
-		{
-			draw_sprite_ext(gunSprite, 0, x + lengthdir_x(distGun - recoilGun, aimDir), y + lengthdir_y(distGun - recoilGun, aimDir),1,scaleGunY,aimDir,image_blend,image_alpha)
-		}
+		PlayerDrawGun();
 	}
 	else
 	{
@@ -117,34 +108,5 @@ if (dying = false)
 			image_angle = direction;
 		}
 	}
-	
-	if (global.shieldUpgrade)
-	{
-		if (key_escudo)
-		{
-			if (global.energy <=0)
-			{
-				shieldBurned = true;
-				haveShield = false;
-			}
-			
-			if (shieldBurned = false)
-			{
-				ActivateShield();
-			}
-			else
-			{
-				if (global.energy > 60)
-				{
-					shieldBurned = false;
-					
-					ActivateShield();
-				}
-			}
-		}
-		else
-		{
-			haveShield = false;
-		}
-	}
 }
+

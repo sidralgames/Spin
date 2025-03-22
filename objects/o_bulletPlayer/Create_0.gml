@@ -9,7 +9,7 @@ speed = initialSpeed;
 
 if (global.luckyShot)
 {
-	damage = irandom(100);
+	damage = irandom(global.luckyShotOdds);
 	
 	if damage = 0
 	{

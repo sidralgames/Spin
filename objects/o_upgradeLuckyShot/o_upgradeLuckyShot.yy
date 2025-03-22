@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"s_upgradeSuperShot",
-    "path":"sprites/s_upgradeSuperShot/s_upgradeSuperShot.yy",
+    "name":"s_lucky",
+    "path":"sprites/s_lucky/s_lucky.yy",
   },
   "spriteMaskId":null,
   "visible":true,

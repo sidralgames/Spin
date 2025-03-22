@@ -20,8 +20,8 @@ movingController = false;
 //--REAPPERAR AFTER DEATH--//
 gamepad_set_vibration(0,0,0);
 image_alpha = 1;
-comesFromDeath = false;
-contComesFromDeath = 100;
+comeFromDeath = false;
+contComeFromDeath = 100;
 spotRadInitial = 25;
 spotRad = spotRadInitial;
 lastTouchedX = x;

@@ -5,7 +5,7 @@ if (canBePicked)
 {
 	CheckLimitedAndUniqueUpgrades();
 	
-	global.bossHPLimiter = true;
+	global.bossHpLimiterUpgrade = true;
 	instance_destroy();
 	instance_destroy(o_upgradesFather);
 }

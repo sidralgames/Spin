@@ -5,7 +5,7 @@ if (canBePicked)
 {
 	CheckLimitedAndUniqueUpgrades();
 	
-	global.strongConnection = true;
+	global.strongConnectionUpgrade = true;
 	instance_destroy();
 	instance_destroy(o_upgradesFather);
 }

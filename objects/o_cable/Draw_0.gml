@@ -2,7 +2,7 @@
 // Puede escribir su código en este editor
 if instance_exists(o_player)
 {
-	if (o_player.comesFromDeath)
+	if (o_player.comeFromDeath)
 	{
 		draw_set_alpha(0.3);
 	}

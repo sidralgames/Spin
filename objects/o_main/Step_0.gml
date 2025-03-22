@@ -143,7 +143,7 @@ if (global.playing)
 		{
 			DestroyCablesAndJacks();
 			newPlayer = instance_create_layer(newPosX, newPosY, "Player", o_player);
-			newPlayer.comesFromDeath = true;
+			newPlayer.comeFromDeath = true;
 		}
 	}
 	if !instance_exists(o_player) && (global.lives <= 0)

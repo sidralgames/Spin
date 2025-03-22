@@ -27,7 +27,7 @@ function ResetGame(_playing)
 	global.playing = _playing;
 	
 	//Reset GLOBALS
-	global.bossHPLimiter = false;
+	global.bossHpLimiterUpgrade = false;
 	global.bossesDefeatedInRun = 0;
 	global.level = 1;
 	global.maxLives = 3;
@@ -43,8 +43,11 @@ function ResetGame(_playing)
 	global.superShot = 0;
 	global.fireRateAux = 0;
 	global.luckyShot = false;
-	global.strongConnection = false;
+	global.strongConnectionUpgrade = false;
 	global.energyRecharge = 0.45;
+	global.haloUpgrade = false;
+	global.shieldUpgrade = false;
+	global.slowmoUpgrade = false;
 	
 	
 	//Reset Tempo

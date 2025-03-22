@@ -4,6 +4,8 @@
 
 
 
+
+
 if !surface_exists(surface)
 {
 surface = surface_create(room_width, room_height);
@@ -103,4 +105,3 @@ if (surface_exists(surface))
 		viniloFake.sprite_index = spr_custom;
 	}
 }
-

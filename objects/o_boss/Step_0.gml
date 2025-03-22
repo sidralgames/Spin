@@ -5,7 +5,7 @@ image_xscale = scale;
 
 if (checkLimiter = false)
 {
-	if (global.bossHPLimiter)
+	if (global.bossHpLimiterUpgrade)
 	{
 		_hp = 0.85 *_hpMax;
 	}

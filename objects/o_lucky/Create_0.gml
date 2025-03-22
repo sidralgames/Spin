@@ -1,5 +1,5 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
-
-_hp = 60;
+contAlpha = 10;
+_hp = 50;
 image_speed = 0.5;

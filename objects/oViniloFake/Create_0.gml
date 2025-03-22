@@ -4,29 +4,18 @@ depth = depth -2
 
 if instance_exists(o_boss)
 {
-	switch(o_boss.spriteBoss)
+	for (var i = 0; i < global.totalNumberOfVinyls; i++)
 	{
-		case s_bossNacho:
-		{
-			global.vinylAlpha = 0.8;
-			global.vinylColor = global.pink;
-		}break;
-		
-		case s_bossDemon:
-		{
-			global.vinylAlpha = 0.85;
-			global.vinylColor = global.pink;
-		}break;
-		
-		case s_bossTribal:
-		{
-			global.vinylAlpha = 0.85;
-			global.vinylColor = global.pink;
-		}break;
-		
-
-				
+		bossToCreate = ds_map_find_value(global.collectionList, global.level -1);
+		global.vinylColor = bossToCreate.vinylColor;
+		global.vinylAlpha = bossToCreate.vinylAlpha;
 	}
 }
+
+vinylSet = false;
+
 image_alpha = global.vinylAlpha
 image_blend = global.vinylColor;
+
+drawAlert = false;
+drawAlertSprite = -1;

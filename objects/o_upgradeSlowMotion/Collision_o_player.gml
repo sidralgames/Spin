@@ -5,7 +5,7 @@ if (canBePicked)
 {
 	CheckLimitedAndUniqueUpgrades();
 	
-	global.slowmotionPicked = true;
+	global.slowmoUpgrade = true;
 	instance_destroy();
 	instance_destroy(o_upgradesFather);
 }

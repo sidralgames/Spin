@@ -17,3 +17,6 @@ contAlpha = 6;
 canBePicked = false;
 instance_create_layer(x,y,"BulletsDown", o_upgradeEffect);
 thisUpgrade = instance_nearest(x,y,o_upgradesFather);
+
+image_xscale = 2;
+image_yscale = 2;

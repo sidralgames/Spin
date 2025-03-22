@@ -57,7 +57,14 @@ function Die()
 				o_main.lastY = lastTouchedY;
 				if (global.playing)
 				{
-					global.lives -=1;
+					if (global.haloUpgrade = true)
+					{
+						global.haloUpgrade = false;
+					}
+					else
+					{
+						global.lives -=1;
+					}
 				}
 				
 				instance_destroy();
@@ -72,7 +79,14 @@ function Die()
 		
 		if (global.playing)
 		{
-			global.lives -=1;
+			if (global.haloUpgrade = true)
+			{
+				global.haloUpgrade = false;
+			}
+			else
+			{
+				global.lives -=1;
+			}
 		}
 		
 		instance_destroy();

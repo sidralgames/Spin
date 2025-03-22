@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"SetColors",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"SetColors",
+  "parent":{
+    "name":"SPIN",
+    "path":"SPIN.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
