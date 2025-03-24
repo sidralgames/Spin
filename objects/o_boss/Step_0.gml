@@ -3,16 +3,7 @@
 image_yscale = scale;
 image_xscale = scale;
 
-if (checkLimiter = false)
-{
-	if (global.bossHpLimiterUpgrade)
-	{
-		_hp = 0.85 *_hpMax;
-	}
-	
-	checkLimiter = true;
-}
-
+GetBossHpLimiter();
 
 if (scale > 1)
 {
@@ -295,10 +286,4 @@ if (global.collection)
 			
 	sprite_index = vinylToPlay.sprite;
 	spriteBoss = vinylToPlay.sprite;
-	
-	if (key_x)
-	{
-		global.level = vinylToPlay.number +1;
-		o_player.levelSelector = true;
-	}
 }

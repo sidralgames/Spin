@@ -13,9 +13,9 @@ key_slowmo = gamepad_button_check(0, gp_shoulderrb)
 key_L1_Pressed = gamepad_button_check_pressed(0, gp_shoulderl) || keyboard_check_pressed(vk_space) ||  mouse_check_button_pressed(mb_right);
 
 
-if (levelSelector)
+if (levelSelector) && (global.level > 1)
 {
-	for (var i = 0; i< global.level; i++)
+	for (var i = 0; i < global.level-1; i++)
 	{
 		if (alarm[2] <= 0)
 		{
@@ -23,18 +23,34 @@ if (levelSelector)
 		
 			if (upgToCreate.canAppear) && (upgToCreate.choosedThisTime = false)
 			{
-				instance_create_layer(x, y, "BulletsDown", upgToCreate.obj);
 				upgToCreate.choosedThisTime = true;
+				thisUp = instance_create_layer(x, y, "BulletsDown", upgToCreate.obj);
+				up = [thisUp.alias];
 				upgsCreated+=1;
+				thisUp.canBePicked = true;
+				thisUp.image_alpha = 1;
+				
+				if (upgToCreate.unique = true)
+				{
+					upgToCreate.canAppear = false;
+				}
+				
 			}
+			
 			alarm[2] = 30;
 		}
-		
 	}
-	if (upgsCreated >= global.level)
+}
+
+if (upgsCreated >= global.level-1) && (levelSelector = true)
+{	
+	for (var i = 0; i<global.totalNumberOfUpgrades; i++)
 	{
-		levelSelector = false;
+		upgradeToChange = ds_map_find_value(global.upgradesList,i)
+		upgradeToChange.choosedThisTime = false;
 	}
+	
+	levelSelector = false;
 }
 
 //gamepad_set_vibration(0, global.vibration, global.vibration);

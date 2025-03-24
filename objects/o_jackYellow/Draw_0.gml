@@ -8,7 +8,11 @@ if instance_exists(o_player)
 	}
 	else
 	{
-		image_alpha = 1;
+		if (cableFake = false)
+		{
+			image_alpha = 1;
+		}
 	}
 }
+
 draw_self();

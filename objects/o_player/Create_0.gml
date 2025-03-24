@@ -18,6 +18,7 @@ recoilGun = 0;
 movingController = false;
 upgsCreated = 0;
 levelSelector = false;
+upgradesInPlayer = 0;
 
 //--REAPPERAR AFTER DEATH--//
 gamepad_set_vibration(0,0,0);

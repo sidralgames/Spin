@@ -17,3 +17,5 @@ cableFake = false;
 bounced = false;
 parCol = -1;
 dying = false
+spotRadInitial = 10;
+spotRad = spotRadInitial;

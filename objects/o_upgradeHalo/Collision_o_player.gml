@@ -5,7 +5,7 @@ if (canBePicked)
 {
 	CheckLimitedAndUniqueUpgrades();
 	
-	global.shieldUpgrade = true;
+	global.haloUpgrade = true;
 	instance_destroy();
 	instance_destroy(o_upgradesFather);
 }

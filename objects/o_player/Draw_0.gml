@@ -17,7 +17,13 @@ draw_set_halign(fa_left)
 //draw_text_color(x,y+60,"E: " +  string(global.energy),c_white,c_white,c_white,c_white,1)
 //draw_text_color(x,y+80,"TotalE: " +  string(global.energyTotal),c_white,c_white,c_white,c_white,1)
 
-
+if (upgsCreated > 0) 
+{
+	for (var i = 0; i < upgsCreated; i++)
+	{
+		draw_text(x, y+20*i, up)	
+	}
+}
 
 if (comeFromDeath)
 {
