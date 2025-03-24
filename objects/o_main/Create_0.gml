@@ -16,7 +16,9 @@ global.shieldUpgrade = false;
 global.slowmoUpgrade = false;
 global.bossHpLimiterUpgrade = false;
 global.hpWallUpgrade = 0;
+global.smartBulletUpgrade = false;
 global.strongConnectionUpgrade = false;
+global.dobleShotUpgrade = true;
 global.oddsStrongConnection = 4;
 
 global.energyRecharge = 0.45;
@@ -150,3 +152,9 @@ AddUpgradeStrongConnection();
 AddUpgradeFasterCharge();
 AddUpgradeShield();//15
 AddUpgradeHalo();
+AddUpgradeSmartBullets();
+
+
+global.playerUpgradesList = ds_map_create();
+
+global.numberOfUpgradesPlayer = 0;

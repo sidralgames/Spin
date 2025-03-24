@@ -4,7 +4,7 @@ event_inherited();
 cx = room_width/2;
 cy = room_height/2;
 alias = "SlowMo";
-nameUp = "SlowMo\nPress L2 to use.\nConsume energy"
+nameUp = "SlowMo\nPress R2 to use.\nConsume energy"
 bossSpin = global.vinylSpin;
 totalPush = 0;
 totalMaxSpeed = 3;

@@ -1,6 +1,8 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
-if (checkPos = false)
+event_inherited();
+
+if(checkPos = false)
 {
 	checkPos = true;
 	image_xscale = 1;

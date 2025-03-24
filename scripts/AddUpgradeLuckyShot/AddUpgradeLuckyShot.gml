@@ -5,7 +5,7 @@ function AddUpgradeLuckyShot()
 	ds_map_add(global.upgradesList, global.totalNumberOfUpgrades,
 	{ 
 		alias: "Lucky Shot",
-		sprite: s_upgradeSuperShot,
+		sprite: s_upgradeSmartBullets,
 		obj: o_upgradeLuckyShot,
 		canAppear: true,
 		choosedThisTime: false,

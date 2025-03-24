@@ -12,7 +12,7 @@ global.balaP = part_type_create();
 part_type_scale(global.balaP,1,1);
 
 
-part_type_size(global.balaP, 1+global.superShot-0.25, 1+global.superShot,-0.075,0);
+part_type_size(global.balaP, max(0.87,0.87+global.superShot-0.65), max(1,1+global.superShot-0.5),-0.075,0);
 
 part_type_sprite(global.balaP, s_bulletPlayer,true,false,true)
 part_type_orientation(global.balaP,0,359,0,0,0)

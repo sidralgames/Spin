@@ -5,7 +5,7 @@ function AddUpgradeSuperShot()
 	ds_map_add(global.upgradesList, global.totalNumberOfUpgrades,
 	{ 
 		alias: "SuperShot",
-		sprite: s_upgradeSuperShot,
+		sprite: s_upgradeSmartBullets,
 		obj: o_upgradeSuperShot,
 		canAppear: true,
 		choosedThisTime: false,

@@ -1,10 +1,11 @@
 /// @description Inserte aquí la descripción
-// Puede escribir su código en este editor
+// Puede escri,bir su código en este editor
+tocado = false;
 scale = 0.5;
 scale1 = false;
 scale2= false;
 scale3= false;
-_hp =  max(2, 4 + global.level - global.hpWallUpgrade);
+_hp =  max(2, 6 + global.level - global.hpWallUpgrade);
 scaled = false;
 _hpTime = 600;
 image_xscale = scale;

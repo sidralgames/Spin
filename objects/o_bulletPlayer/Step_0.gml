@@ -1,5 +1,16 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
+
+if (global.dobleShotUpgrade) && (cancreateDoble) && (oddsDoble = irandom(oddsDoble))
+{
+	bulletDoble = instance_create_layer(x,y,"Bullets", o_bulletPlayer)
+	bulletDoble.initialSpeed = initialSpeed;
+	bulletDoble.cancreateDoble = false;
+	bulletDoble.direction = direction+10
+	direction = direction-10;
+	cancreateDoble = false;
+}
+
 _hp --;
 
 if (_hp <= 0)
@@ -21,3 +32,12 @@ else
 	speed = initialSpeed * global.relativeSpeed
 }
 
+if (global.smartBulletUpgrade = true)
+{
+	nextBoss = instance_nearest(x,y,o_boss);
+	if (instance_exists(nextBoss)) && (point_distance(x,y, nextBoss.x, nextBoss.y) < 100)
+	{
+		var a = point_direction(x,y, nextBoss.x, nextBoss.y);
+		direction += sign(dsin(a - direction)) * (precision * min(1, global.relativeSpeed+0.2));
+	}
+}

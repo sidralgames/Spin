@@ -15,7 +15,7 @@ if instance_exists(o_player)
 	}
 }
 
-//if (canBePicked)
+//if (canBePicked) 
 //{
 //	spotRad --;
 	

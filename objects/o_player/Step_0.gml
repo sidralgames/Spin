@@ -21,12 +21,22 @@ if (levelSelector) && (global.level > 1)
 		{
 			upgToCreate = ds_map_find_value(global.upgradesList,  irandom(global.totalNumberOfUpgrades-1));
 		
-			if (upgToCreate.canAppear) && (upgToCreate.choosedThisTime = false)
+			if (upgToCreate.canAppear) && ( (upgToCreate.times > 0) || (upgToCreate.times = -1))
 			{
 				upgToCreate.choosedThisTime = true;
+				
 				thisUp = instance_create_layer(x, y, "BulletsDown", upgToCreate.obj);
-				up = [thisUp.alias];
+				
+				
+				ds_map_add(global.playerUpgradesList, global.numberOfUpgradesPlayer,
+				{ 
+					upgrade: thisUp.alias,
+				})
+
+				global.numberOfUpgradesPlayer +=1;
+
 				upgsCreated+=1;
+				thisUp.autoPicked = true;
 				thisUp.canBePicked = true;
 				thisUp.image_alpha = 1;
 				
@@ -44,6 +54,7 @@ if (levelSelector) && (global.level > 1)
 
 if (upgsCreated >= global.level-1) && (levelSelector = true)
 {	
+	
 	for (var i = 0; i<global.totalNumberOfUpgrades; i++)
 	{
 		upgradeToChange = ds_map_find_value(global.upgradesList,i)

@@ -2,7 +2,7 @@
 // Puede escribir su código en este editor
 if instance_exists(o_player)
 {
-	if (point_distance(x,y,o_player.x, o_player.y) < 70)
+	if (point_distance(x,y,o_player.x, o_player.y) < 90)
 	{
 		draw_set_alpha(1);
 		draw_set_halign(fa_center);

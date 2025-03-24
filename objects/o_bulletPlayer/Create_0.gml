@@ -1,5 +1,10 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
+
+randomize();
+
+oddsDoble = 20;
+precision =3.25
 _hp = 150;
 image_speed = 0;
 destroying = false;
@@ -24,3 +29,6 @@ else
 {
 	bulletDamage = 1;
 }
+
+image_xscale = 1 + (global.superShot * 0.5);
+image_yscale = 1 + (global.superShot * 0.5);

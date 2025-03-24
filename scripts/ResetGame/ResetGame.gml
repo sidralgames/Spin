@@ -48,6 +48,9 @@ function ResetGame(_playing)
 	global.haloUpgrade = false;
 	global.shieldUpgrade = false;
 	global.slowmoUpgrade = false;
+	global.smartBulletUpgrade = false;
+	global.hpWallUpgrade = 0;
+	global.dobleShotUpgrade = false;
 	
 	
 	//Reset Tempo
@@ -72,4 +75,14 @@ function ResetGame(_playing)
 	
 	//Reset Main
 	o_main.gameOverCreated = false;
+	
+	for (var i=0; i<global.numberOfUpgradesPlayer; i++)
+	{
+		ds_map_delete(global.playerUpgradesList, i)
+	}
+	
+	ds_map_destroy(global.playerUpgradesList);
+	
+	global.playerUpgradesList = ds_map_create();
+	global.numberOfUpgradesPlayer = 0;
 }

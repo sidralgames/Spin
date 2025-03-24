@@ -87,3 +87,49 @@ if !instance_exists(o_player)
 {
 	instance_create_layer(o_boss.x - 100,o_boss.y,"Player",o_player);	
 }
+
+if (global.collection)
+{
+	if (initialBackY < 60)
+	{
+		vinylToPlay = ds_map_find_value(global.collectionList, o_boss.selectedVinyl);
+		if (key_x) && (vinylToPlay.collection = 1)
+		{
+			o_main.changingLevel = true;
+
+			with(o_boss)
+			{
+				SetLevelSelectorFight()
+			}
+			
+			global.collection = false;
+			global.playing = true;
+			
+			instance_destroy();
+		}
+		
+		if (key_back)
+		{
+			global.collection = false;
+			instance_destroy(o_boss);
+			instance_destroy(o_bossHP);
+			instance_destroy(o_vinilo);
+			instance_destroy(oViniloFake);
+			instance_create_layer(room_width/2, room_height/2, "Boss", o_boss);
+			instance_create_layer(room_width/2, room_height/2, "Vinyl", o_vinilo);
+			
+			o_main.changingLevel = true;
+			
+			_visible = true;
+			factor = 0.08;
+			initialPlay =300;
+			initialHow = 330;
+			initialOption = 360;
+			initialCollection = 390
+			initialQuit = 420;
+			initialCollectionX = 320
+			initialBackX =  320
+			initialBackY = 300
+		}
+	}
+}
