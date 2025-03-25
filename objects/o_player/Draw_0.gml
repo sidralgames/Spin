@@ -16,18 +16,7 @@ draw_set_halign(fa_left)
 //draw_text_color(x,y+60,"angle: " +  string(image_angle),c_white,c_white,c_white,c_white,1)
 //draw_text_color(x,y+60,"E: " +  string(global.energy),c_white,c_white,c_white,c_white,1)
 //draw_text_color(x,y+80,"TotalE: " +  string(global.energyTotal),c_white,c_white,c_white,c_white,1)
-draw_set_font(global.customFont16)
 
-if (upgsCreated > 0) 
-{
-	for (var i = 0; i < global.numberOfUpgradesPlayer; ++i)
-	{
-		upgradeToDraw = ds_map_find_value(global.playerUpgradesList, i)
-		
-		draw_text(__view_get( e__VW.XView, 0 )+30,__view_get( e__VW.YView, 0 )+280+(20*i), upgradeToDraw.upgrade)	
-	}
-		
-}
 
 if (comeFromDeath)
 {

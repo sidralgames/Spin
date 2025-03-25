@@ -5,7 +5,7 @@ function AddUpgradeCheaperDash()
 	ds_map_add(global.upgradesList, global.totalNumberOfUpgrades,
 	{ 
 		alias: "Cheaper Dash",
-		sprite: s_upgradeEnergy,
+		sprite: s_upgradeCheaperDash,
 		obj: o_upgradeCheaperDash,
 		canAppear: true,
 		choosedThisTime: false,

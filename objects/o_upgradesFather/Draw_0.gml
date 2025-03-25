@@ -6,10 +6,10 @@ if instance_exists(o_player)
 	{
 		draw_set_alpha(1);
 		draw_set_halign(fa_center);
-		draw_set_font(global.customFont16);
+		draw_set_font(global.customFont14);
 		draw_set_color(global.lightBlue);
-		draw_text(x,y+30,string(nameUp));
+		draw_text(x,y+31,string(nameUp));
 		draw_set_color(c_white);
-		draw_text(x+1,y+31,string(nameUp));
+		draw_text(x+1,y+30,string(nameUp));
 	}
 }

@@ -5,7 +5,7 @@ function AddUpgradeDobleShot()
 	ds_map_add(global.upgradesList, global.totalNumberOfUpgrades,
 	{ 
 		alias: "DobleShot",
-		sprite: s_fireRateUpgrade,
+		sprite: s_upgradeDobleShot,
 		obj: o_upgradeDobleShot,
 		canAppear: true,
 		choosedThisTime: false,

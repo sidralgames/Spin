@@ -3,7 +3,7 @@
 
 randomize();
 
-oddsDoble = 20;
+
 precision =3.25
 _hp = 150;
 image_speed = 0;
@@ -14,9 +14,9 @@ speed = initialSpeed;
 
 if (global.luckyShot)
 {
-	damage = irandom(global.luckyShotOdds);
 	
-	if damage = 0
+	
+	if (global.luckyShotOdds = irandom(global.luckyShotOdds))
 	{
 		bulletDamage = 25
 	}

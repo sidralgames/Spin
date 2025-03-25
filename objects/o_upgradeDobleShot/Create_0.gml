@@ -3,8 +3,8 @@
 event_inherited();
 cx = room_width/2;
 cy = room_height/2;
-alias = "SuperShot";
-nameUp = "Super Shot"
+alias = "DobleShot";
+nameUp = "Doble Shot\nShooted bullets have 1/10 of splitting"
 bossSpin = global.vinylSpin;
 totalPush = 0;
 totalMaxSpeed = 3;

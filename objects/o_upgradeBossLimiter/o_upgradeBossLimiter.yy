@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"s_upgradeSlowMo",
-    "path":"sprites/s_upgradeSlowMo/s_upgradeSlowMo.yy",
+    "name":"s_upgradeBossLimiter",
+    "path":"sprites/s_upgradeBossLimiter/s_upgradeBossLimiter.yy",
   },
   "spriteMaskId":null,
   "visible":true,

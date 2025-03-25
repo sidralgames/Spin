@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"s_upgradeSuperShot",
-    "path":"sprites/s_upgradeSuperShot/s_upgradeSuperShot.yy",
+    "name":"s_upgradeDobleShot",
+    "path":"sprites/s_upgradeDobleShot/s_upgradeDobleShot.yy",
   },
   "spriteMaskId":null,
   "visible":true,

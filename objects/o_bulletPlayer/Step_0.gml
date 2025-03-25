@@ -1,14 +1,20 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
-
-if (global.dobleShotUpgrade) && (cancreateDoble) && (oddsDoble = irandom(oddsDoble))
+if (global.dobleShotUpgrade)
 {
-	bulletDoble = instance_create_layer(x,y,"Bullets", o_bulletPlayer)
-	bulletDoble.initialSpeed = initialSpeed;
-	bulletDoble.cancreateDoble = false;
-	bulletDoble.direction = direction+10
-	direction = direction-10;
-	cancreateDoble = false;
+	if (cancreateDoble)
+	{
+		if (global.dobleShotOdds = irandom(global.dobleShotOdds))
+		{
+			bulletDoble = instance_create_layer(x,y,"Bullets", o_bulletPlayer)
+			bulletDoble.initialSpeed = initialSpeed;
+			bulletDoble.cancreateDoble = false;
+			bulletDoble.direction = direction+10
+			direction = direction-10;
+		}
+	
+		cancreateDoble = false;
+	}
 }
 
 _hp --;

@@ -5,7 +5,7 @@ function AddUpgradeBossLimiter()
 	ds_map_add(global.upgradesList, global.totalNumberOfUpgrades,
 	{ 
 		alias: "Boss Limiter",
-		sprite: s_upgradeSlowMo,
+		sprite: s_upgradeBossLimiter,
 		obj: o_upgradeBossLimiter,
 		canAppear: true,
 		choosedThisTime: false,

@@ -8,7 +8,11 @@
 
 //----- FONT ----//
 display_reset(0, false);
-global.customFont16= font_add("ChubbyChoo-SemiBold.ttf", 16, false, false, 32, 128);
+global.customFont16= font_add("chubby-choo-semi-bold.ttf", 16, false, false, 32, 128);
+global.customFont14= font_add("chubby-choo-semi-bold.ttf", 14, false, false, 32, 128);
+global.customFont12= font_add("chubby-choo-semi-bold.ttf", 14, false, false, 32, 128);
+global.customFont10= font_add("chubby-choo-semi-bold.ttf", 10, false, false, 32, 128);
+
 
 //---- INIT GLOBALS ----// 
 global.haloUpgrade = false;
@@ -18,7 +22,7 @@ global.bossHpLimiterUpgrade = false;
 global.hpWallUpgrade = 0;
 global.smartBulletUpgrade = false;
 global.strongConnectionUpgrade = false;
-global.dobleShotUpgrade = true;
+
 global.oddsStrongConnection = 4;
 
 global.energyRecharge = 0.45;
@@ -29,6 +33,9 @@ global.dashEnergyMin = 25;
 global.shootingEnergyMin = 25;
 global.luckyShot = false;
 global.luckyShotOdds = 100;
+
+global.dobleShotUpgrade = false;
+global.dobleShotOdds = 10;
 
 
 global.maxLives = 3;

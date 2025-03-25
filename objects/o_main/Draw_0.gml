@@ -17,6 +17,20 @@ if (global.playing)
 	{
 		draw_sprite_ext(s_playerHPFill, 0, __view_get( e__VW.XView, 0 )+90 + 19*i,__view_get( e__VW.YView, 0 )+45,1,1,0,c_white,image_alpha)
 	}
+	
+	
+	
+	if (global.numberOfUpgradesPlayer > 1)
+	{
+		for (var i = 0; i < global.numberOfUpgradesPlayer; ++i)
+		{
+			upgradeToDraw = ds_map_find_value(global.playerUpgradesList, i)
+			
+			draw_sprite_ext(upgradeToDraw.sprite,0,__view_get( e__VW.XView, 0 )+620-(30*i),__view_get( e__VW.YView, 0 )+330,0.8,0.8,0,c_white,1)	
+		}	
+	}
+
+	
 }
 
 //vstick_draw(0)

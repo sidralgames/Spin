@@ -10,7 +10,7 @@ function AddBossMixtapeCollection()
 		keyKilledBy :"killedByMixtape",
 		sprite: s_bossMixtape,
 		spriteVinyl: s_discoVinilo,
-		hpMax: 200,
+		hpMax: 300,
 		vinylAlpha : 0.9,
 		vinylColor : global.lightPink,
 		number: 5,

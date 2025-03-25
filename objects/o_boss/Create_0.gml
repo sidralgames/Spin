@@ -27,7 +27,7 @@ angleOff = random_range(-10,10);
 distOff = random_range(-20,60);
 canRoto = true;
 
-if (global.level < global.totalNumberOfVinyls)
+if (global.level < global.totalNumberOfVinyls-1)
 {
 	for (var i = 0; i < global.totalNumberOfVinyls; i++)
 	{

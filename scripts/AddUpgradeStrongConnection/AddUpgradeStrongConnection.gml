@@ -5,7 +5,7 @@ function AddUpgradeStrongConnection()
 	ds_map_add(global.upgradesList, global.totalNumberOfUpgrades,
 	{ 
 		alias: "StrongConnection",
-		sprite: s_upgradeEnergy,
+		sprite: s_upgradeStrongConnection,
 		obj: o_upgradeStrongConnection,
 		canAppear: true,
 		choosedThisTime: false,

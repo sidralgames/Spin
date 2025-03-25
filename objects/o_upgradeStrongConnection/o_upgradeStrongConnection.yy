@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"s_jackWhite",
-    "path":"sprites/s_jackWhite/s_jackWhite.yy",
+    "name":"s_upgradeStrongConnection",
+    "path":"sprites/s_upgradeStrongConnection/s_upgradeStrongConnection.yy",
   },
   "spriteMaskId":null,
   "visible":true,
