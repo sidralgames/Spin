@@ -27,7 +27,7 @@ angleOff = random_range(-10,10);
 distOff = random_range(-20,60);
 canRoto = true;
 
-if (global.level < global.totalNumberOfVinyls-1)
+if (global.level < global.totalNumberOfVinyls)
 {
 	for (var i = 0; i < global.totalNumberOfVinyls; i++)
 	{
@@ -51,7 +51,7 @@ if (global.level < global.totalNumberOfVinyls-1)
 }
 else
 {
-	bossToCreate = ds_map_find_value(global.collectionList, irandom(global.totalNumberOfVinyls));
+	bossToCreate = ds_map_find_value(global.collectionList, irandom(global.totalNumberOfVinyls-1));
 	
 	if (global.song != bossToCreate.song) 
 	{
@@ -63,7 +63,7 @@ else
 	spriteBoss = bossToCreate.sprite;
 	bossNumber = bossToCreate.number;
 	bossIsInCollection = bossToCreate.collection;
-	_hpMax = bossToCreate.hpMax;
+	_hpMax = bossToCreate.hpMax + 20*global.level;
 	_hp = _hpMax
 }
 

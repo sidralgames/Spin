@@ -335,7 +335,7 @@ if (dying = false)
 					image_xscale = 1.75;
 					image_yscale = 0.5;
 					global.energy -= global.dashEnergyMin;
-					realspeed += 3.2;
+					realspeed += global.dashSpeed;
 					inDash = true;
 					dashTime = 60;
 				}

@@ -4,8 +4,8 @@ event_inherited();
 cx = room_width/2;
 cy = room_height/2;
 alias = "Shield";
-nameUp = "Shield"
-nameDown = "Shield\nL2 - Consume Energy"
+upgradeName = "Shield"
+upgradeDesc = "L2\n \nConsume\nEnergy"
 bossSpin = global.vinylSpin;
 totalPush = 0;
 totalMaxSpeed = 3;

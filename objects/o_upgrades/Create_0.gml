@@ -1,7 +1,7 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
 changeSongCollection = false;
-
+global.vinylSpin = global.vinylSpinUpgrades; 
 
 upgradesCreated = 0;
 
@@ -11,8 +11,10 @@ alarm[0] = 80;
 textToDraw ="";
 drawText = false;
 set = irandom(3);
-
+contChangeInitial= 300;
+contChange = contChangeInitial;
 image_speed = 0;
+image_angle = 0;
 
 if (global.level < 5)
 {

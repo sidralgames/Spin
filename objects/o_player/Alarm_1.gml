@@ -7,6 +7,7 @@ if instance_exists(o_boss)
 }
 else
 {
-	global.vinylSpin = -0.25; 
+	global.vinylSpin = global.vinylSpinUpgrades; 
 }
+
 image_alpha = 1;

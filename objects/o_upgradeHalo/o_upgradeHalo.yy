@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"s_halo",
-    "path":"sprites/s_halo/s_halo.yy",
+    "name":"s_upgradeHalo",
+    "path":"sprites/s_upgradeHalo/s_upgradeHalo.yy",
   },
   "spriteMaskId":null,
   "visible":true,

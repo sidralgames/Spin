@@ -4,8 +4,8 @@ event_inherited();
 cx = room_width/2;
 cy = room_height/2;
 alias = "+1 MaxHP";
-nameUp = "+1 MaxHP"
-nameDown = "Pure Love\nGain 1 maxHP";
+upgradeName = "Pure Love"
+upgradeDesc = "Gain\n+1 maxHP";
 bossSpin = global.vinylSpin;
 totalPush = 0;
 totalMaxSpeed = 3;

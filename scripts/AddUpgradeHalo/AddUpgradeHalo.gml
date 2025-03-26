@@ -5,7 +5,7 @@ function AddUpgradeHalo()
 	ds_map_add(global.upgradesList, global.totalNumberOfUpgrades,
 	{ 
 		alias: "Halo",
-		sprite: s_halo,
+		sprite: s_upgradeHalo,
 		obj: o_upgradeHalo,
 		icon: s_iconUpgradeHalo,
 		canAppear: true,

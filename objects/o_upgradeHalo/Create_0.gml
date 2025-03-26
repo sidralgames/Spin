@@ -4,8 +4,8 @@ event_inherited();
 cx = room_width/2;
 cy = room_height/2;
 alias = "Halo";
-nameUp = "Halo"
-nameDown = "Halo\nPrevents death once";
+upgradeName = "Halo"
+upgradeDesc = "Prevents\ndeath\nonce";
 bossSpin = global.vinylSpin;
 totalPush = 0;
 totalMaxSpeed = 3;

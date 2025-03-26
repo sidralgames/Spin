@@ -4,8 +4,8 @@ event_inherited();
 cx = room_width/2;
 cy = room_height/2;
 alias = "SmartBullets";
-nameUp = "Smart & Piercing"
-nameDown = "Smart & Piercing\nBullets are smart AND piercing"
+upgradeName = "Sharp B's"
+upgradeDesc = "Bullets are\nSmart\nAND\nPiercing"
 bossSpin = global.vinylSpin;
 totalPush = 0;
 totalMaxSpeed = 3;

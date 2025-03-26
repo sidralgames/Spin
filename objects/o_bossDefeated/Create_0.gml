@@ -1,6 +1,6 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
-global.vinylSpin = -0.25;
+global.vinylSpin = global.vinylSpinUpgrades;
 image_speed = 0;
 _alpha = 0;
 image_alpha = _alpha;

@@ -52,6 +52,7 @@ function ResetGame(_playing)
 	global.hpWallUpgrade = 0;
 	global.dobleShotUpgrade = false;
 	global.luckAuxUpgrade = 1;
+	global.dashSpeed = 3.2;
 	
 	
 	//Reset Tempo

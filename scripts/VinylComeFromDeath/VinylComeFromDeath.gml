@@ -21,7 +21,7 @@ function VinylComeFromDeath()
 		}
 		if !instance_exists(o_boss) && instance_exists(o_upgrades)
 		{
-			global.vinylSpin = -0.25;  //upgradeSpin
+			global.vinylSpin = global.vinylSpinUpgrades;  //upgradeSpin
 		}
 		
 		checkVinylSpin = true;

@@ -31,6 +31,15 @@ else
 	
 }
 
+contChange --;
+
+if (contChange <=0 )
+{
+	contChange = contChangeInitial*2;
+	global.vinylSpin = -global.vinylSpin;
+	o_upgradesFather.bossSpin = -o_upgradesFather.bossSpin;
+}
+
 if (scaled && image_xscale = 1)
 {
 	if (alarm[0] <= 0) && (upgradesCreated <3)
@@ -43,21 +52,21 @@ if (scaled && image_xscale = 1)
 		//1ST
 		if (upgrade.canAppear) && (upgrade.choosedThisTime = false) && (upgradesCreated = 0)
 		{
-			instance_create_layer(x+115, y, "Bullets", upgrade.obj);
+			instance_create_layer(x+120, y, "Main", upgrade.obj);
 			upgradesCreated +=1;
 			upgrade.choosedThisTime = true;
 				
 		}//2ND
 		else if (upgrade.canAppear) && (upgrade.choosedThisTime = false) && (upgradesCreated = 1)
 		{
-			instance_create_layer(x-115, y, "Bullets", upgrade.obj)
+			instance_create_layer(x-120, y, "Main", upgrade.obj)
 			upgradesCreated+=1;
 			upgrade.choosedThisTime = true;
 			creatingUpgrades = true;
 		}//3RD
 		else if (upgrade.canAppear) && (upgrade.choosedThisTime = false) && (upgradesCreated = 2)
 		{
-			instance_create_layer(x, y-115, "Bullets", upgrade.obj)
+			instance_create_layer(x, y-120, "Main", upgrade.obj)
 			upgradesCreated+=1;
 			upgrade.choosedThisTime = true;
 			creatingUpgrades = true;

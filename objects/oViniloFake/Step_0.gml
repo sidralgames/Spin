@@ -5,13 +5,17 @@ if (vinylSet = false)
 	{
 		for (var i = 0; i < global.totalNumberOfVinyls; i++)
 		{
-			bossToCreate = ds_map_find_value(global.collectionList, global.level -1);
-			global.vinylColor = bossToCreate.vinylColor;
-			global.vinylAlpha = bossToCreate.vinylAlpha;
+			bossToCreate = ds_map_find_value(global.collectionList, i);
+			
+			if (bossToCreate.sprite = o_boss.spriteBoss)
+			{
+				global.vinylColor = bossToCreate.vinylColor;
+				global.vinylAlpha = bossToCreate.vinylAlpha;
+				
+				vinylSet = true;
+			}
 		}
 	}
-	
-	vinylSet = true;
 }
 
 _angle +=  global.vinylSpin*global.relativeSpeed

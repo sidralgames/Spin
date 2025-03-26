@@ -30,6 +30,7 @@ global.luckAuxUpgrade = 1;
 global.energyRecharge = 0.45;
 global.speedAux = 0;
 global.fireRateAux = 0;
+global.dashSpeed = 3.2;
 
 global.dashEnergyMin = 25;
 global.shootingEnergyMin = 25;
@@ -56,6 +57,7 @@ global.bossesDefeatedInRun = 0;
 
 global.tempoCorrupted = false;
 global.vinylSpin = -0.2;
+global.vinylSpinUpgrades = -0.09;
 global.weapon = "Gun";
 global.energyTotal = 200;
 global.superShot = 0;
@@ -164,6 +166,7 @@ AddUpgradeHalo();
 AddUpgradeSmartBullets();
 AddUpgradeDobleShot();
 AddUpgradeMoreLuck();
+AddUpgradeFasterDash();
 
 
 global.playerUpgradesList = ds_map_create();
