@@ -51,6 +51,7 @@ function ResetGame(_playing)
 	global.smartBulletUpgrade = false;
 	global.hpWallUpgrade = 0;
 	global.dobleShotUpgrade = false;
+	global.luckAuxUpgrade = 1;
 	
 	
 	//Reset Tempo
@@ -85,4 +86,10 @@ function ResetGame(_playing)
 	
 	global.playerUpgradesList = ds_map_create();
 	global.numberOfUpgradesPlayer = 0;
+	
+	instance_destroy(o_bulletPart);
+	with(o_main)
+	{
+		instance_create_layer(0,0,"Main", o_bulletPart);
+	}
 }

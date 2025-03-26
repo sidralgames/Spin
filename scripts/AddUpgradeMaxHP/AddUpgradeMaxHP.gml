@@ -6,6 +6,7 @@ function AddUpgradeMaxHP()
 	{ 
 		alias: "+1 MaxHP",
 		sprite: s_upgradeHP,
+		icon: s_iconUpgradeMaxHp,
 		obj: o_upgradeHP,
 		canAppear: true,
 		choosedThisTime: false,

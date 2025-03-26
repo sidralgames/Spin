@@ -6,6 +6,7 @@ function AddUpgradeBossLimiter()
 	{ 
 		alias: "Boss Limiter",
 		sprite: s_upgradeBossLimiter,
+		icon: s_iconUpgradeBossLimiter,
 		obj: o_upgradeBossLimiter,
 		canAppear: true,
 		choosedThisTime: false,

@@ -6,6 +6,7 @@ function AddUpgradeCheaperDash()
 	{ 
 		alias: "Cheaper Dash",
 		sprite: s_upgradeCheaperDash,
+		icon: s_iconUpgradeCheaperDash,
 		obj: o_upgradeCheaperDash,
 		canAppear: true,
 		choosedThisTime: false,

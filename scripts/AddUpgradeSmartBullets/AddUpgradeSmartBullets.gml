@@ -5,7 +5,8 @@ function AddUpgradeSmartBullets()
 	ds_map_add(global.upgradesList, global.totalNumberOfUpgrades,
 	{ 
 		alias: "SmartBullets",
-		sprite: s_shotgun,
+		sprite: s_upgradeSmartBullets,
+		icon: s_iconUpgradeSmartBullets,
 		obj: o_upgradeSmart,
 		canAppear: true,
 		choosedThisTime: false,

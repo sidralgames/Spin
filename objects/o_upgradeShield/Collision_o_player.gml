@@ -3,6 +3,8 @@
 
 if ( (canBePicked) && (key_x) ) || ((canBePicked) && (autoPicked) )
 {
+	
+	
 	CheckLimitedAndUniqueUpgrades();
 	
 	global.shieldUpgrade = true;

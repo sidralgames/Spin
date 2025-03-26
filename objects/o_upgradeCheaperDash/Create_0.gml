@@ -5,6 +5,7 @@ cx = room_width/2;
 cy = room_height/2;
 alias = "Cheaper Dash";
 nameUp = "Cheaper Dash";
+nameDown = "Cheaper Dash\nDash cost less Energy";
 bossSpin = global.vinylSpin;
 totalPush = 0;
 totalMaxSpeed = 3;

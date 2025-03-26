@@ -6,6 +6,7 @@ function AddUpgradeStrongConnection()
 	{ 
 		alias: "StrongConnection",
 		sprite: s_upgradeStrongConnection,
+		icon: s_iconUpgradeStrongConnection,
 		obj: o_upgradeStrongConnection,
 		canAppear: true,
 		choosedThisTime: false,

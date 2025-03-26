@@ -5,7 +5,8 @@ function AddUpgradeShotgun()
 	ds_map_add(global.upgradesList, global.totalNumberOfUpgrades,
 	{ 
 		alias: "ShotGun",
-		sprite: s_shotgun,
+		sprite: s_upgradeShotgun,
+		icon: s_iconUpgradeShotgun,
 		obj: o_upgradeGun,
 		canAppear: true,
 		choosedThisTime: false,

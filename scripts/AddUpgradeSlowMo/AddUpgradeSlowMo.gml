@@ -6,6 +6,7 @@ function AddUpgradeSlowMo()
 	{ 
 		alias: "SlowMo",
 		sprite: s_upgradeSlowMo,
+		icon: s_iconUpgradeSlowMo,
 		obj: o_upgradeSlowMotion,
 		canAppear: true,
 		choosedThisTime: false,

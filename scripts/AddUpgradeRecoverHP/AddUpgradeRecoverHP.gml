@@ -5,7 +5,8 @@ function AddUpgradeRecoverLives()
 	ds_map_add(global.upgradesList, global.totalNumberOfUpgrades,
 	{ 
 		alias: "RecoverLives",
-		sprite: s_upgradeHP,
+		sprite: s_iconUpgradeRecoverHP,
+		icon: s_iconUpgradeRecoverHP,
 		obj: o_upgradeRecoverLives,
 		canAppear: true,
 		choosedThisTime: false,

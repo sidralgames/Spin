@@ -1,7 +1,16 @@
 ///// @description Inserte aquí la descripción
 //// Puede escribir su código en este editor
 draw_self();
-draw_sprite_ext(s_hpMete,0,x,a,scale,scale,0,image_blend, image_alpha);
+
+if (global.bossHpLimiterUpgrade)
+{
+	draw_sprite_ext(s_upgradeBossLimiter,0,x,a,scale,scale,0,image_blend, image_alpha);
+}
+else
+{
+	draw_sprite_ext(s_hpMete,0,x,a,scale,scale,0,image_blend, image_alpha);
+}
+
 
 if instance_exists(o_bulletHPBoss)
 {

@@ -5,7 +5,7 @@ if ( (canBePicked) && (key_x) ) || ((canBePicked) && (autoPicked) )
 {
 	CheckLimitedAndUniqueUpgrades();
 	
-	global.energyRecharge+=0.5;
+	global.energyRecharge+=0.25;
 	
 	instance_destroy();
 	instance_destroy(o_upgradesFather);

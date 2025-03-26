@@ -6,6 +6,7 @@ function AddUpgradeWalls()
 	{ 
 		alias: "WeakerWalls",
 		sprite: s_wallNachoUpgrade,
+		icon: s_iconUpgradeWeakerWalls,
 		obj: o_upgradeWalls,
 		canAppear: true,
 		choosedThisTime: false,

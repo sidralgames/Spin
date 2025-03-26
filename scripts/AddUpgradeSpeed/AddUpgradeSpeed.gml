@@ -5,7 +5,8 @@ function AddUpgradeSpeed()
 	ds_map_add(global.upgradesList, global.totalNumberOfUpgrades,
 	{ 
 		alias: "Speed Up",
-		sprite: s_upgradeEnergy,
+		sprite: s_upgradeSpeed,
+		icon: s_iconUpgradeSpeed,
 		obj: o_upgradeSpeed,
 		canAppear: true,
 		choosedThisTime: false,

@@ -6,6 +6,7 @@ function AddUpgradeDobleShot()
 	{ 
 		alias: "DobleShot",
 		sprite: s_upgradeDobleShot,
+		icon: s_iconUpgradeDobleShot,
 		obj: o_upgradeDobleShot,
 		canAppear: true,
 		choosedThisTime: false,

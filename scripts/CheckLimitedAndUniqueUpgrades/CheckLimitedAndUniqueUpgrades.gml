@@ -10,7 +10,20 @@ function CheckLimitedAndUniqueUpgrades()
 			
 			if (upgrade.alias = alias)
 			{
-				//CHECK LIMITED TIMES
+				//---- ADD TO PLAYER UPGRADES ----//
+				if (!autoPicked)
+				{
+					ds_map_add(global.playerUpgradesList, global.numberOfUpgradesPlayer,
+					{ 
+						upgrade: upgrade.alias,
+						sprite: upgrade.sprite,
+						icon: upgrade.icon
+					
+					})
+					global.numberOfUpgradesPlayer +=1;
+				}
+				
+				//---- CHECK LIMITED TIMES ----//
 				if (upgrade.choosedThisTime = true) && (upgrade.times != -1) && (upgrade.times > 0)
 				{
 					upgrade.times -=1;
@@ -21,7 +34,7 @@ function CheckLimitedAndUniqueUpgrades()
 					}
 				}
 			
-				//CHECK UNIQUES
+				//---- CHECK UNIQUES ----//
 				if (upgrade.choosedThisTime = true) && (upgrade.unique = true)
 				{
 					upgrade.canAppear = false;

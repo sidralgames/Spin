@@ -4,7 +4,8 @@ event_inherited();
 cx = room_width/2;
 cy = room_height/2;
 alias = "DobleShot";
-nameUp = "Doble Shot\nShooted bullets have 1/10 of splitting"
+nameUp = "Doble Shot"
+nameDown = "Mitosis\nBullets have 1/2 odds of splitting";
 bossSpin = global.vinylSpin;
 totalPush = 0;
 totalMaxSpeed = 3;

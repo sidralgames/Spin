@@ -4,7 +4,7 @@
 randomize();
 
 
-precision =3.25
+precision =3.35
 _hp = 150;
 image_speed = 0;
 destroying = false;
@@ -16,7 +16,7 @@ if (global.luckyShot)
 {
 	
 	
-	if (global.luckyShotOdds = irandom(global.luckyShotOdds))
+	if ( global.luckyShotOdds = irandom(global.luckyShotOdds) )
 	{
 		bulletDamage = 25
 	}

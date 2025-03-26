@@ -4,7 +4,8 @@ event_inherited();
 cx = room_width/2;
 cy = room_height/2;
 alias = "Boss Limiter";
-nameUp = "Limiter\nBosses have 15% less HP"
+nameUp = "Limiter"
+nameDown = "Limiter\nBosses have 15% less HP";
 bossSpin = global.vinylSpin;
 totalPush = 0;
 totalMaxSpeed = 3;

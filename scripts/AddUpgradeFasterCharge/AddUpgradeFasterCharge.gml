@@ -5,7 +5,8 @@ function AddUpgradeFasterCharge()
 	ds_map_add(global.upgradesList, global.totalNumberOfUpgrades,
 	{ 
 		alias: "Faster Charge",
-		sprite: s_upgradeEnergy,
+		sprite: s_upgradeFasterCharge,
+		icon: s_iconUpgradeFasterCharge,
 		obj: o_upgradeFasterCharge,
 		canAppear: true,
 		choosedThisTime: false,

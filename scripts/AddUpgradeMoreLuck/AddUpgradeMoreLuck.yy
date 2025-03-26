@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"AddUpgradeMoreLuck",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"AddUpgradeMoreLuck",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

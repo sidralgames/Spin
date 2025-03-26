@@ -1,7 +1,7 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
 
-
+iconsInLine = 4;
 //---- VIRTUAL JOYSTICK ----//
 //vstick_init(0, __view_get( e__VW.XView, 0 )+80 ,__view_get( e__VW.YView, 0 )+305,40,true,noone,Sprite1_1)
 
@@ -10,7 +10,8 @@
 display_reset(0, false);
 global.customFont16= font_add("chubby-choo-semi-bold.ttf", 16, false, false, 32, 128);
 global.customFont14= font_add("chubby-choo-semi-bold.ttf", 14, false, false, 32, 128);
-global.customFont12= font_add("chubby-choo-semi-bold.ttf", 14, false, false, 32, 128);
+global.customFont12= font_add("chubby-choo-semi-bold.ttf", 12, false, false, 32, 128);
+global.customFont11= font_add("chubby-choo-semi-bold.ttf", 11, false, false, 32, 128);
 global.customFont10= font_add("chubby-choo-semi-bold.ttf", 10, false, false, 32, 128);
 
 
@@ -24,6 +25,7 @@ global.smartBulletUpgrade = false;
 global.strongConnectionUpgrade = false;
 
 global.oddsStrongConnection = 4;
+global.luckAuxUpgrade = 1;
 
 global.energyRecharge = 0.45;
 global.speedAux = 0;
@@ -35,7 +37,7 @@ global.luckyShot = false;
 global.luckyShotOdds = 100;
 
 global.dobleShotUpgrade = false;
-global.dobleShotOdds = 10;
+global.dobleShotOdds = 2;
 
 
 global.maxLives = 3;
@@ -160,6 +162,8 @@ AddUpgradeFasterCharge();
 AddUpgradeShield();//15
 AddUpgradeHalo();
 AddUpgradeSmartBullets();
+AddUpgradeDobleShot();
+AddUpgradeMoreLuck();
 
 
 global.playerUpgradesList = ds_map_create();

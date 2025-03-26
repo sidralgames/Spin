@@ -10,7 +10,7 @@ function AddBossNachoCollection()
 		keyKilledBy :"killedByNacho",
 		sprite: s_bossNacho,
 		spriteVinyl: s_discoVinilo,
-		hpMax: 85,
+		hpMax: 8,
 		vinylAlpha : 1,
 		vinylColor : global.pink,
 		number: 0,

@@ -6,6 +6,7 @@ function AddUpgradeEnergy()
 	{ 
 		alias: "Energy",
 		sprite: s_upgradeEnergy,
+		icon: s_iconUpgradeEnergy,
 		obj: o_upgradeEnergy,
 		canAppear: true,
 		choosedThisTime: false,

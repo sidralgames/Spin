@@ -3,8 +3,9 @@
 event_inherited();
 cx = room_width/2;
 cy = room_height/2;
-alias = "Energy";
-nameUp = "Energy";
+alias = "Faster Charge";
+nameUp = "N2FAO Charger";
+nameDown = "N2FAO Charger\nRecharge Energy Faster";
 bossSpin = global.vinylSpin;
 totalPush = 0;
 totalMaxSpeed = 3;
@@ -17,3 +18,5 @@ contAlpha = 6;
 canBePicked = false;
 instance_create_layer(x,y,"BulletsDown", o_upgradeEffect);
 thisUpgrade = instance_nearest(x,y,o_upgradesFather);
+image_xscale = 2;
+image_yscale = 2;

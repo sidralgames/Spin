@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"s_iconUpgradeStrongConnection",
   "bboxMode":0,
-  "bbox_bottom":18,
+  "bbox_bottom":20,
   "bbox_left":0,
   "bbox_right":20,
   "bbox_top":0,
@@ -12,11 +12,11 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"71a9a5bb-4435-491d-9101-1d2847a1d2f7","name":"71a9a5bb-4435-491d-9101-1d2847a1d2f7","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"29d6798e-a5b5-4424-9c18-a2539aef94e3","name":"29d6798e-a5b5-4424-9c18-a2539aef94e3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":19,
+  "height":21,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"d24b86a7-7a76-4e89-ad10-f50a7a02e7d0","blendMode":0,"displayName":"default","isLocked":false,"name":"d24b86a7-7a76-4e89-ad10-f50a7a02e7d0","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -69,14 +69,14 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"71a9a5bb-4435-491d-9101-1d2847a1d2f7","path":"sprites/s_iconUpgradeStrongConnection/s_iconUpgradeStrongConnection.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"a45795cd-4948-4854-b3b2-84cfee3f54fe","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"29d6798e-a5b5-4424-9c18-a2539aef94e3","path":"sprites/s_iconUpgradeStrongConnection/s_iconUpgradeStrongConnection.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"fd5272a7-6c60-43c0-b173-a42db2065317","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
     "volume":1.0,
     "xorigin":10,
-    "yorigin":9,
+    "yorigin":10,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

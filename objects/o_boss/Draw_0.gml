@@ -13,4 +13,5 @@ if (warning)
 //draw_text_color(x,y+140,string(global.bossNachoCollection),c_white,c_white,c_white,c_white,1)
 //draw_text_color(x,y+160,string(global.bossTribalCollection),c_white,c_white,c_white,c_white,1)
 draw_self();
+draw_set_font(global.customFont16)
 

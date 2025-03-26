@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"s_upgradeHP",
-    "path":"sprites/s_upgradeHP/s_upgradeHP.yy",
+    "name":"s_iconUpgradeRecoverHP",
+    "path":"sprites/s_iconUpgradeRecoverHP/s_iconUpgradeRecoverHP.yy",
   },
   "spriteMaskId":null,
   "visible":true,

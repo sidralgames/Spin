@@ -5,6 +5,7 @@ cx = room_width/2;
 cy = room_height/2;
 alias = "Energy";
 nameUp = "Energy";
+nameDown = "Energy\nMore Energy Capacity";
 bossSpin = global.vinylSpin;
 totalPush = 0;
 totalMaxSpeed = 3;

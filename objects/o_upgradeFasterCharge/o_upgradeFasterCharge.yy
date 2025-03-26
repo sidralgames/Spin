@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"s_upgradeEnergy",
-    "path":"sprites/s_upgradeEnergy/s_upgradeEnergy.yy",
+    "name":"s_upgradeFasterCharge",
+    "path":"sprites/s_upgradeFasterCharge/s_upgradeFasterCharge.yy",
   },
   "spriteMaskId":null,
   "visible":true,

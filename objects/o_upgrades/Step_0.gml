@@ -43,21 +43,21 @@ if (scaled && image_xscale = 1)
 		//1ST
 		if (upgrade.canAppear) && (upgrade.choosedThisTime = false) && (upgradesCreated = 0)
 		{
-			instance_create_layer(x+100, y, "BulletsDown", upgrade.obj);
+			instance_create_layer(x+115, y, "Bullets", upgrade.obj);
 			upgradesCreated +=1;
 			upgrade.choosedThisTime = true;
 				
 		}//2ND
 		else if (upgrade.canAppear) && (upgrade.choosedThisTime = false) && (upgradesCreated = 1)
 		{
-			instance_create_layer(x-100, y, "BulletsDown", upgrade.obj)
+			instance_create_layer(x-115, y, "Bullets", upgrade.obj)
 			upgradesCreated+=1;
 			upgrade.choosedThisTime = true;
 			creatingUpgrades = true;
 		}//3RD
 		else if (upgrade.canAppear) && (upgrade.choosedThisTime = false) && (upgradesCreated = 2)
 		{
-			instance_create_layer(x, y-100, "BulletsDown", upgrade.obj)
+			instance_create_layer(x, y-115, "Bullets", upgrade.obj)
 			upgradesCreated+=1;
 			upgrade.choosedThisTime = true;
 			creatingUpgrades = true;

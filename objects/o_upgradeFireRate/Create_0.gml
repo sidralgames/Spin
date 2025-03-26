@@ -4,7 +4,8 @@ event_inherited();
 cx = room_width/2;
 cy = room_height/2;
 alias = "Fire Rate";
-nameUp = "FireRate"
+nameUp = "FireRate";
+nameDown = "Fire Rate\nShoot Faster";
 bossSpin = global.vinylSpin;
 totalPush = 0;
 totalMaxSpeed = 3;

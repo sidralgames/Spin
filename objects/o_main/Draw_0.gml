@@ -5,30 +5,53 @@ draw_set_halign(fa_right)
 
 if (global.playing)
 {
+	
+if instance_exists(o_boss)
+{
+	draw_text(__view_get( e__VW.XView, 0 )+80,__view_get( e__VW.YView, 0 )+255, string(o_boss._hpMax))
+	draw_text(__view_get( e__VW.XView, 0 )+80,__view_get( e__VW.YView, 0 )+275, string(o_boss._hp))
+}
 
-	draw_sprite_ext(s_livesText, 0, __view_get( e__VW.XView, 0 )+80,__view_get( e__VW.YView, 0 )+45,1,1,0,c_white,image_alpha)
+	draw_sprite_ext(s_livesText, 0, __view_get( e__VW.XView, 0 )+80,__view_get( e__VW.YView, 0 )+40,1,1,0,c_white,image_alpha)
+	//draw_sprite_ext(s_iconUpgradeStrongConnection, 0, __view_get( e__VW.XView, 0 )+80,__view_get( e__VW.YView, 0 )+65,1,1,0,c_white,image_alpha)
 	
 	for (var i = 0; i< global.maxLives; i++;)
 	{
-		draw_sprite_ext(s_playerHPOut, 0, __view_get( e__VW.XView, 0 )+90 + 19*i,__view_get( e__VW.YView, 0 )+45,1,1,0,c_white,image_alpha)
+		draw_sprite_ext(s_playerHPOut, 0, __view_get( e__VW.XView, 0 )+90 + 19*i,__view_get( e__VW.YView, 0 )+40,1,1,0,c_white,image_alpha)
 	}
 	
 	for (var i = 0; i< global.lives; i++;)
 	{
-		draw_sprite_ext(s_playerHPFill, 0, __view_get( e__VW.XView, 0 )+90 + 19*i,__view_get( e__VW.YView, 0 )+45,1,1,0,c_white,image_alpha)
+		draw_sprite_ext(s_playerHPFill, 0, __view_get( e__VW.XView, 0 )+90 + 19*i,__view_get( e__VW.YView, 0 )+40,1,1,0,c_white,image_alpha)
 	}
 	
 	
 	
-	if (global.numberOfUpgradesPlayer > 1)
+	if (global.numberOfUpgradesPlayer > 0) && (global.numberOfUpgradesPlayer < iconsInLine) 
 	{
 		for (var i = 0; i < global.numberOfUpgradesPlayer; ++i)
 		{
 			upgradeToDraw = ds_map_find_value(global.playerUpgradesList, i)
-			
-			draw_sprite_ext(upgradeToDraw.sprite,0,__view_get( e__VW.XView, 0 )+620-(30*i),__view_get( e__VW.YView, 0 )+330,0.8,0.8,0,c_white,1)	
+			draw_sprite_ext(upgradeToDraw.icon,0,__view_get( e__VW.XView, 0 )+30 + (i*25),__view_get( e__VW.YView, 0 )+65,1,1,0,c_white,1)	
 		}	
 	}
+	
+	if (global.numberOfUpgradesPlayer >= iconsInLine)
+	{
+		
+		for (var i = 0; i < iconsInLine; ++i)
+		{
+			upgradeToDraw = ds_map_find_value(global.playerUpgradesList, i)
+			draw_sprite_ext(upgradeToDraw.icon,0,__view_get( e__VW.XView, 0 )+30 + (i*25),__view_get( e__VW.YView, 0 )+65,1,1,0,c_white,1)	
+		}	
+		
+		for (var i = 0; i < global.numberOfUpgradesPlayer - iconsInLine; ++i)
+		{
+			upgradeToDraw = ds_map_find_value(global.playerUpgradesList, i + iconsInLine)
+			draw_sprite_ext(upgradeToDraw.icon,0,__view_get( e__VW.XView, 0 )+30 + (i*23),__view_get( e__VW.YView, 0 )+89,1,1,0,c_white,1)	
+		}	
+	}
+	
 
 	
 }

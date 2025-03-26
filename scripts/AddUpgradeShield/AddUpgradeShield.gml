@@ -6,6 +6,7 @@ function AddUpgradeShield()
 	{ 
 		alias: "Shield",
 		sprite: s_shield,
+		icon: s_iconUpgradeShield,
 		obj: o_upgradeShield,
 		canAppear: true,
 		choosedThisTime: false,

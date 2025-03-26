@@ -4,12 +4,15 @@ event_inherited();
 cx = room_width/2;
 cy = room_height/2;
 alias = "RecoverLives";
-nameUp = "Recover 2 Lives"
+nameUp = "2 Lives"
+nameDown = "Just 2 Lives\nRecover up to 2 Lives";
 bossSpin = global.vinylSpin;
 totalPush = 0;
 totalMaxSpeed = 3;
 r = 100;
 theta = 0;
+image_xscale = 2;
+image_yscale = 2;
 
 checkPos = false;
 contPick = 50;

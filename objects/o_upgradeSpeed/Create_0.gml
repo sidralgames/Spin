@@ -5,6 +5,7 @@ cx = room_width/2;
 cy = room_height/2;
 alias = "Speed Up";
 nameUp = "Speed Up"
+nameDown = "Speed Up\nMove faster"
 bossSpin = global.vinylSpin;
 totalPush = 0;
 totalMaxSpeed = 3;

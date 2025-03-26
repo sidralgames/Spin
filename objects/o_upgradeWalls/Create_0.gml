@@ -4,7 +4,8 @@ event_inherited();
 cx = room_width/2;
 cy = room_height/2;
 alias = "WeakerWalls";
-nameUp = "Weaker Walls"
+nameUp = "Weaker Walls";
+nameDown = "Weaker Walls\nWalls have less HP";
 bossSpin = global.vinylSpin;
 totalPush = 0;
 totalMaxSpeed = 3;

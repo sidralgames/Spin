@@ -6,6 +6,7 @@ function AddUpgradeFireRate()
 	{ 
 		alias: "Fire Rate",
 		sprite: s_fireRateUpgrade,
+		icon: s_iconUpgradeFireRate,
 		obj: o_upgradeFireRate,
 		canAppear: true,
 		choosedThisTime: false,

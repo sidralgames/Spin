@@ -30,8 +30,10 @@ if (levelSelector) && (global.level > 1)
 				
 				ds_map_add(global.playerUpgradesList, global.numberOfUpgradesPlayer,
 				{ 
-					upgrade: thisUp.alias,
-					sprite: thisUp.sprite_index
+					upgrade: upgToCreate.alias,
+					sprite: upgToCreate.sprite,
+					icon: upgToCreate.icon
+					
 				})
 
 				global.numberOfUpgradesPlayer +=1;

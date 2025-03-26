@@ -7,6 +7,7 @@ function AddUpgradeHalo()
 		alias: "Halo",
 		sprite: s_halo,
 		obj: o_upgradeHalo,
+		icon: s_iconUpgradeHalo,
 		canAppear: true,
 		choosedThisTime: false,
 		unique: true,

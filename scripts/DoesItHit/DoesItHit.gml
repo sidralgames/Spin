@@ -4,9 +4,7 @@ function DoesItHit()
 {
 	if (global.strongConnectionUpgrade)
 	{
-		thisHitHitted = irandom(global.oddsStrongConnection);
-		
-		if (thisHitHitted = 0)
+		if ( global.oddsStrongConnection = irandom(global.oddsStrongConnection) )
 		{
 			loseHP = false;
 		}
@@ -23,6 +21,7 @@ function DoesItHit()
 	if (loseHP = true)
 	{
 		_hp -=1;
+		
 		CheckCableToDestroy();
 	}
 }
