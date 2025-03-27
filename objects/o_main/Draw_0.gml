@@ -6,11 +6,11 @@ draw_set_halign(fa_right)
 if (global.playing)
 {
 	
-if instance_exists(o_boss)
-{
-	draw_text(__view_get( e__VW.XView, 0 )+80,__view_get( e__VW.YView, 0 )+255, string(o_boss._hpMax))
-	draw_text(__view_get( e__VW.XView, 0 )+80,__view_get( e__VW.YView, 0 )+275, string(o_boss._hp))
-}
+//if instance_exists(o_boss)
+//{
+//	draw_text(__view_get( e__VW.XView, 0 )+80,__view_get( e__VW.YView, 0 )+255, string(o_boss._hpMax))
+//	draw_text(__view_get( e__VW.XView, 0 )+80,__view_get( e__VW.YView, 0 )+275, string(o_boss._hp))
+//}
 
 	draw_sprite_ext(s_livesText, 0, __view_get( e__VW.XView, 0 )+80,__view_get( e__VW.YView, 0 )+40,1,1,0,c_white,image_alpha)
 	//draw_sprite_ext(s_iconUpgradeStrongConnection, 0, __view_get( e__VW.XView, 0 )+80,__view_get( e__VW.YView, 0 )+65,1,1,0,c_white,image_alpha)
