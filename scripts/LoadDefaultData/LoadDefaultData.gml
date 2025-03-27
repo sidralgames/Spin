@@ -8,5 +8,7 @@ function LoadDefaultData()
 	global.bossGirlCollection = 0;
 	global.bossRataCollection = 0;
 	global.bossMixtapeCollection = 0;
+	global.bossPentagovonCollection = 0;
+	
 	global.bossUpgradesCollection = 0;
 }

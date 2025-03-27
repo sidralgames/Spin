@@ -27,6 +27,23 @@ angleOff = random_range(-10,10);
 distOff = random_range(-20,60);
 canRoto = true;
 
+
+contMiniDemonsInitial = 20;
+contMiniDemons = contMiniDemonsInitial;
+creatingMiniDemons = false;
+miniDemonsTotalInitial = 5;
+miniDemonsTotal = miniDemonsTotalInitial;
+miniDemonsCreated = 0
+contToNextDemons = 500;
+sDist = random_range(60,70);
+mDist = random_range(90,110);
+lDist = random_range(140,160);
+distDemon = choose(sDist,mDist,lDist);
+distPrev = 0;
+angleDemon = irandom(360);
+alertMiniDemons = false;
+dangerImg = 0;
+
 if (global.level < global.totalNumberOfVinyls)
 {
 	for (var i = 0; i < global.totalNumberOfVinyls; i++)
@@ -65,9 +82,12 @@ else
 	bossIsInCollection = bossToCreate.collection;
 	_hpMax = bossToCreate.hpMax + 20*global.level;
 	_hp = _hpMax
+
+	
 }
 
 alarm[0] = 60;
+bulletsToCreate = 5
 fireRateSingleBullet =  irandom_range(60,120);	
 fireRatePattern1 = irandom_range(60,180);
 TotBulletsP1 = irandom_range(4,8);

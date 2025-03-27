@@ -13,9 +13,10 @@ function AddBossUpgradesCollection()
 		hpMax: 100,
 		vinylAlpha : 0.95,
 		vinylColor : c_white,
-		number: 6,
+		number: 7,
 		defeatedInRun: 0,
-		collection: global.bossUpgradesCollection
+		collection: global.bossUpgradesCollection,
+		unlocked: 0
 	})
 
 	global.totalNumberOfVinyls +=1;

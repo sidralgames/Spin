@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"AddBossPentagovonCollection",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"AddBossPentagovonCollection",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

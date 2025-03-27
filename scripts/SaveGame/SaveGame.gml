@@ -5,13 +5,11 @@ function SaveGame()
 	ini_open("SpinData.ini");
 	
 	//-------- BOSS COLLECTION --------//
-	ini_write_real("bossesCollection","bossNacho", global.bossNachoCollection);
-	ini_write_real("bossesCollection","bossDemon", global.bossDemonCollection);
-	ini_write_real("bossesCollection","bossTribal", global.bossTribalCollection);
-	ini_write_real("bossesCollection","bossGirl", global.bossGirlCollection);
-	ini_write_real("bossesCollection","bossRata", global.bossRataCollection);
-	ini_write_real("bossesCollection","bossUpgrades", global.bossUpgradesCollection);
-	ini_write_real("bossesCollection","bossMixtape", global.bossMixtapeCollection);
+	for (var i=0; i<global.totalNumberOfVinyls-1; i++)
+	{	
+		thisBoss = ds_map_find_value(global.collectionList, i);
+		ini_write_real("bossesCollection",thisBoss.alias, thisBoss.collection);
+	}
 	
 	ini_close();
 }

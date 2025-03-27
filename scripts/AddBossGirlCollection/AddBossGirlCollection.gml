@@ -15,7 +15,8 @@ function AddBossGirlCollection()
 		vinylColor : global.pink,
 		number: 3,
 		defeatedInRun: 0,
-		collection: global.bossGirlCollection
+		collection: global.bossGirlCollection,
+		unlocked: 0
 	})
 
 	global.totalNumberOfVinyls +=1;

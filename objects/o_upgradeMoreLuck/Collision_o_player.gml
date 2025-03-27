@@ -7,9 +7,9 @@ if ( (canBePicked) && (key_x) ) || ((canBePicked) && (autoPicked) )
 	
 	global.luckAuxUpgrade = 2;
 	
-	global.dobleShotOdds = global.dobleShotOdds / global.luckAuxUpgrade;
-	global.luckyShotOdds = global.luckyShotOdds / global.luckAuxUpgrade;
-	global.oddsStrongConnection = global.oddsStrongConnection / global.luckAuxUpgrade;
+	global.dobleShotOdds = round(global.dobleShotOdds / 2);
+	global.luckyShotOdds = round(global.luckyShotOdds / 2);
+	global.oddsStrongConnection = round(global.oddsStrongConnection / 2);
 	
 	instance_destroy();
 	instance_destroy(o_upgradesFather);

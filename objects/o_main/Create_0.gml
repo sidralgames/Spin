@@ -38,7 +38,7 @@ global.luckyShot = false;
 global.luckyShotOdds = 100;
 
 global.dobleShotUpgrade = false;
-global.dobleShotOdds = 2;
+global.dobleShotOdds = 1;
 
 
 global.maxLives = 3;
@@ -128,7 +128,7 @@ audio_play_sound_on(global.audioEmitter,global.song, true, 100,,65)
 instance_create_layer(0,0,"Main", o_bulletPart);
 instance_create_layer(0,0,"Main", o_bulletBossPart);
 
-
+load = false
 //---- COLLECTION TRACKS - BOSSES ----//
 global.collectionList = ds_map_create();
 
@@ -139,6 +139,7 @@ AddBossTribalCollection();
 AddBossGirlCollection();
 AddBossRataCollection();
 AddBossMixtapeCollection();
+AddBossPentagovonCollection();
 AddBossUpgradesCollection();
 
 

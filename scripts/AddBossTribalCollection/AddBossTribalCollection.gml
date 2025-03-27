@@ -15,7 +15,8 @@ function AddBossTribalCollection()
 		vinylColor : global.yellow,
 		number: 2,
 		defeatedInRun: 0,
-		collection: global.bossTribalCollection
+		collection: global.bossTribalCollection,
+		unlocked: 0
 	})
 
 	global.totalNumberOfVinyls +=1;

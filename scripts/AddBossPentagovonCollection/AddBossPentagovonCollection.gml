@@ -1,0 +1,23 @@
+// Los recursos de Script han cambiado para la v2.3.0 Consulta
+// https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
+function AddBossPentagovonCollection()
+{
+	ds_map_add(global.collectionList, global.totalNumberOfVinyls,
+	{ 
+		alias: "Pentagovon",
+		song: snd_mixtape,
+		offsetSong: 0,
+		keyKilledBy :"killedByPentagovon",
+		sprite: s_bossPentagovon,
+		spriteVinyl: s_discoVinilo,
+		hpMax: 300,
+		vinylAlpha : 0.85,
+		vinylColor : global.brightRed,
+		number: 6,
+		defeatedInRun: 0,
+		collection: global.bossPentagovonCollection,
+		unlocked: 0
+	})
+
+	global.totalNumberOfVinyls +=1;
+}

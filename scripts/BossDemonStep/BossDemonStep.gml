@@ -3,30 +3,17 @@
 function BossDemonStep()
 {
 
-	if (contAttack > 0)
+	if (contAttack >= 0)
 	{
 		contAttack --;
 	}
+	
 	if (contAttack <= 0) && (canChangeAttack)
 	{
+		//---- ATTACKING TIME ---//
+		contAttack = random_range(400,800);
 		bulletsCreated = 0;
-		contAttack = random_range(100,200);
-		
-		
-		if (_hp < 80)
-		{
-			attack = choose("BulletTempo","BulletBurst", "DobleBullet", "Pattern1", "Roto");
-		}
-		else 
-		{
-			attack = choose("SingleBullet","DobleBullet","BulletBurst", "Pattern1", "Roto")
-		}
-		
-		if (attack = "Roto") && (canRoto)
-		{
-			warning = true;
-			rotoSprite = choose(s_rotoBoss1,s_rotoBoss2,s_rotoBoss3);
-		}
+		BossChooseAttack(80)
 	}
 	
 	if (contRotoTime >= 0)
@@ -37,23 +24,16 @@ function BossDemonStep()
 			canRoto = true;
 		}
 	}
-
-	BulletAttack(attack);
-
-
-	WallAttack(0,2,choose(25,50),35,2);
-
-
-	if (needleAttack) && instance_exists(o_player)
-	{
-		for (var i=0; i<12; i++)
-		{
-			bullet = instance_create_layer(x,y,"Bullets", o_bulletBoss);
-			bullet.speed = 2;
-			bullet.initialSpeed = 2;
-			bullet.direction = (360 / 12) *i;	
-		}
-		needleAttack = false;
 	
+	//---- ACTUAL ATTACKING TIME ---//
+	if (contAttack > 200)
+	{
+		BulletAttack(attack);
 	}
+	
+	CreateMiniDemons();
+	
+	WallAttack(0,2,choose(25,50),35,2);
+	
+	NeedleAttack();
 }

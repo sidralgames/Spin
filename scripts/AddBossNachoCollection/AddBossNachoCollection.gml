@@ -15,7 +15,8 @@ function AddBossNachoCollection()
 		vinylColor : global.pink,
 		number: 0,
 		defeatedInRun: 0,
-		collection: global.bossNachoCollection
+		collection: global.bossNachoCollection,
+		unlocked: 0
 	})
 
 	global.totalNumberOfVinyls +=1;

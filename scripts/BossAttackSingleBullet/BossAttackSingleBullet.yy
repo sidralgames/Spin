@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"BossAttackSingleBullet",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"BossAttackSingleBullet",
+  "parent":{
+    "name":"Sprites",
+    "path":"folders/Sprites.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

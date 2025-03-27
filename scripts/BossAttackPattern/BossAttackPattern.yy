@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"BossAttackPattern",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"BossAttackPattern",
+  "parent":{
+    "name":"SPIN",
+    "path":"SPIN.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

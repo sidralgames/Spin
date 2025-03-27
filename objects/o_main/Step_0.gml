@@ -1,6 +1,13 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
 //vstick_step(0);
+
+if (load = false)
+{
+	LoadCollection();
+	load = true;
+}
+
 if (changingLevel = true)
 {
 	if instance_exists(o_boss)
