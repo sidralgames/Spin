@@ -2,6 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function BossChooseAttack(_hpMin)
 {
+	//---- CHOOSE ATTACK ---//
 	if (_hp < _hpMin)
 	{
 		attack = choose("BulletTempo","BulletBurst", "DobleBullet", "Pattern1", "Roto");
@@ -10,7 +11,8 @@ function BossChooseAttack(_hpMin)
 	{
 		attack = choose("SingleBullet","DobleBullet","BulletBurst", "Pattern1", "Roto")
 	}
-		
+	
+	//---- WARNING ROTO ---//
 	if (attack = "Roto") && (canRoto)
 	{
 		warning = true;

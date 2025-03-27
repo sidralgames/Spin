@@ -58,11 +58,13 @@ if (global.level < global.totalNumberOfVinyls)
 			audio_play_sound_on(global.audioEmitter,global.song, true, 100,,bossToCreate.offsetSong);
 		}
 	
-		spriteBoss = bossToCreate.sprite;
+		//spriteBoss = choose(bossToCreate.sprite, bossToCreate.bside);
+		spriteBoss = bossToCreate.sprite
 		bossNumber = bossToCreate.number;
 		bossIsInCollection = bossToCreate.collection;
 		_hpMax = bossToCreate.hpMax;
-		_hp = _hpMax
+		_hp = _hpMax;
+		bossStep = bossToCreate.step;
 
 	}
 }

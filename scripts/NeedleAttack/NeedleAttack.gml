@@ -12,6 +12,5 @@ function NeedleAttack()
 			bullet.direction = (360 / 12) *i;	
 		}
 		needleAttack = false;
-	
 	}
 }

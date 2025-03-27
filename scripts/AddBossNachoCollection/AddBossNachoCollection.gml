@@ -4,11 +4,12 @@ function AddBossNachoCollection()
 {
 	ds_map_add(global.collectionList, global.totalNumberOfVinyls,
 	{ 
-		alias: "Nacho",
+		alias: "bossNacho",
 		song: snd_song1,
 		offsetSong: 65,
 		keyKilledBy :"killedByNacho",
 		sprite: s_bossNacho,
+		bside: s_bossNacho_B,
 		spriteVinyl: s_discoVinilo,
 		hpMax: 8,
 		vinylAlpha : 1,
@@ -16,7 +17,8 @@ function AddBossNachoCollection()
 		number: 0,
 		defeatedInRun: 0,
 		collection: global.bossNachoCollection,
-		unlocked: 0
+		unlocked: 0,
+		step:  BossNachoStep
 	})
 
 	global.totalNumberOfVinyls +=1;

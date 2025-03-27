@@ -2,7 +2,6 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function BossDemonStep()
 {
-
 	if (contAttack >= 0)
 	{
 		contAttack --;
@@ -10,7 +9,7 @@ function BossDemonStep()
 	
 	if (contAttack <= 0) && (canChangeAttack)
 	{
-		//---- ATTACKING TIME ---//
+		//---- BULLET ATTACKING TIME ---//
 		contAttack = random_range(400,800);
 		bulletsCreated = 0;
 		BossChooseAttack(80)
@@ -25,15 +24,15 @@ function BossDemonStep()
 		}
 	}
 	
-	//---- ACTUAL ATTACKING TIME ---//
+	//---- ACTUAL BULLET ATTACKING TIME ---//
 	if (contAttack > 200)
 	{
 		BulletAttack(attack);
 	}
 	
-	CreateMiniDemons();
-	
+	//---- WALL ATTACK ----//
 	WallAttack(0,2,choose(25,50),35,2);
 	
-	NeedleAttack();
+	//---- MINI DEMONS ----//
+	CreateMiniDemons();
 }

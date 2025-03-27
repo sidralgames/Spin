@@ -5,18 +5,7 @@ image_xscale = scale;
 
 GetBossHpLimiter();
 
-if (scale > 1)
-{
-	scale = lerp(scale,1,0.05);	
-	
-	if (scale < 1.03)
-	{
-		scale = 1;
-	}
-}
-
-BossCreateEnemyDisc();
-
+BossReturnToScale();
 
 if !instance_exists(o_MainMenu) && (global.howToPlay = false) && (global.collection = false)
 {
@@ -27,47 +16,15 @@ if !instance_exists(o_MainMenu) && (global.howToPlay = false) && (global.collect
 	
 	if (contToStart <= 0) || (_hp < _hpMax)
 	{
+		//----- BOSS HP & AGUJA ----//
 		BossCreateHPandResetAguja();
 		image_angle -= -global.vinylSpin*global.relativeSpeed;
 		
-		switch(spriteBoss)
-		{
-			case s_bossNacho:
-			{
-				BossNachoStep();
-			}
-			break;
-	
-			case s_bossDemon:
-			{
-				BossDemonStep();
-			}
-			break;
-			
-			case s_bossTribal:
-			{
-				BossTribalStep();
-			}
-			break;
-			
-			case s_bossGirl:
-			{
-				BossGirlStep();
-			}
-			break;
-			
-			case s_bossRata:
-			{
-				BossRataStep();
-			}
-			break;
-			
-			default:
-			{
-				BossGirlStep();
-			}
-			break;
-		}
+		//----- BOSS STEP ----//
+		script_execute(bossStep);
+		
+		//---- NEEDEL HIT ---//
+		NeedleAttack();
 	}
 	else
 	{
@@ -145,39 +102,7 @@ if (_hp <= 0)
 }
 
 
-
 if (global.collection)
 {
-	ControlsCollection();
-	
-	vinylToPlay = ds_map_find_value(global.collectionList, selectedVinyl);
-	
-	if (vinylToPlay.collection = 1)
-	{
-		if (changeSongCollection = false)
-		{
-			if (global.song != vinylToPlay.song)
-			{
-				audio_stop_sound(global.song);
-				global.song = vinylToPlay.song;
-				audio_play_sound_on(global.audioEmitter,global.song, true, 100,,0);
-				changeSongCollection = true;
-			}
-		}
-		
-		image_blend = c_white;
-		global.vinylAlpha = vinylToPlay.vinylAlpha;
-		global.vinylColor = vinylToPlay.vinylColor;
-		drawLocked = false;
-	}
-	else
-	{
-		image_blend = c_dkgray;
-		global.vinylAlpha = 0.85
-		global.vinylColor = c_dkgray;
-		drawLocked = true;
-	}
-			
-	sprite_index = vinylToPlay.sprite;
-	spriteBoss = vinylToPlay.sprite;
+	BossCollection();
 }

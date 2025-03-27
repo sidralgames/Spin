@@ -4,11 +4,12 @@ function AddBossGirlCollection()
 {
 	ds_map_add(global.collectionList, global.totalNumberOfVinyls,
 	{ 
-		alias: "Girl",
+		alias: "bossGirl",
 		song: snd_e4u,
 		offsetSong: 40,
 		keyKilledBy :"killedByGirl",
 		sprite: s_bossGirl,
+		bside: s_bossNacho_B,
 		spriteVinyl: s_discoVinilo,
 		hpMax: 210,
 		vinylAlpha : 0.95,
@@ -16,7 +17,8 @@ function AddBossGirlCollection()
 		number: 3,
 		defeatedInRun: 0,
 		collection: global.bossGirlCollection,
-		unlocked: 0
+		unlocked: 0,
+		step: BossGirlStep
 	})
 
 	global.totalNumberOfVinyls +=1;

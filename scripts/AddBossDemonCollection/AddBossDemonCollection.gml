@@ -4,11 +4,12 @@ function AddBossDemonCollection()
 {
 	ds_map_add(global.collectionList, global.totalNumberOfVinyls,
 	{ 
-		alias: "Demon",
+		alias: "bossDemon",
 		song: snd_songDemon,
 		offsetSong: 0,
 		keyKilledBy :"killedByDemon",
 		sprite: s_bossDemon,
+		bside: s_bossNacho_B,
 		spriteVinyl: s_discoVinilo,
 		hpMax: 130,
 		vinylAlpha : 0.85,
@@ -16,7 +17,8 @@ function AddBossDemonCollection()
 		number: 1,
 		defeatedInRun: 0,
 		collection: global.bossDemonCollection,
-		unlocked: 0
+		unlocked: 0,
+		step:  BossDemonStep
 	})
 
 	global.totalNumberOfVinyls +=1;

@@ -37,7 +37,9 @@ function BossRataStep(){
 			canRoto = true;
 		}
 	}
-
+	
+	BossCreateEnemyDisc();
+	
 	BulletAttack(attack);
 
 	if (attack) != "BulletBurst"
@@ -49,17 +51,4 @@ function BossRataStep(){
 		WallAttack(1,2,choose(25,50),40,2);
 	}
 
-
-	if (needleAttack) && instance_exists(o_player)
-	{
-		for (var i=0; i<12; i++)
-		{
-			bullet = instance_create_layer(x,y,"Bullets", o_bulletBoss);
-			bullet.speed = 2;
-			bullet.initialSpeed = 2;
-			bullet.direction = (360 / 12) *i;	
-		}
-		needleAttack = false;
-	
-	}
 }

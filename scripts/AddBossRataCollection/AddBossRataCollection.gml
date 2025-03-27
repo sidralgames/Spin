@@ -4,11 +4,12 @@ function AddBossRataCollection()
 {
 	ds_map_add(global.collectionList, global.totalNumberOfVinyls,
 	{ 
-		alias: "Rata",
+		alias: "bossRata",
 		song: snd_chino,
 		offsetSong: 5,
 		keyKilledBy :"killedByRata",
 		sprite: s_bossRata,
+		bside: s_bossNacho_B,
 		spriteVinyl: s_discoVinilo,
 		hpMax: 260,
 		vinylAlpha : 0.85,
@@ -16,7 +17,8 @@ function AddBossRataCollection()
 		number: 4,
 		defeatedInRun: 0,
 		collection: global.bossRataCollection,
-		unlocked: 0
+		unlocked: 0,
+		step: BossRataStep
 	})
 
 	global.totalNumberOfVinyls +=1;

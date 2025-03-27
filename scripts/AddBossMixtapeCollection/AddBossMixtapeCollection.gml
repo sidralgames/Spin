@@ -4,11 +4,12 @@ function AddBossMixtapeCollection()
 {
 	ds_map_add(global.collectionList, global.totalNumberOfVinyls,
 	{ 
-		alias: "Mixtape",
+		alias: "bossMixtape",
 		song: snd_mixtape,
 		offsetSong: 0,
 		keyKilledBy :"killedByMixtape",
 		sprite: s_bossMixtape,
+		bside: s_bossNacho_B,
 		spriteVinyl: s_discoVinilo,
 		hpMax: 300,
 		vinylAlpha : 0.9,
@@ -16,7 +17,8 @@ function AddBossMixtapeCollection()
 		number: 5,
 		defeatedInRun: 0,
 		collection: global.bossMixtapeCollection,
-		unlocked: 0
+		unlocked: 0,
+		step: BossGirlStep
 	})
 
 	global.totalNumberOfVinyls +=1;

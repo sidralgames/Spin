@@ -4,11 +4,12 @@ function AddBossPentagovonCollection()
 {
 	ds_map_add(global.collectionList, global.totalNumberOfVinyls,
 	{ 
-		alias: "Pentagovon",
+		alias: "bossPentagovon",
 		song: snd_mixtape,
 		offsetSong: 0,
 		keyKilledBy :"killedByPentagovon",
 		sprite: s_bossPentagovon,
+		bside: s_bossNacho_B,
 		spriteVinyl: s_discoVinilo,
 		hpMax: 300,
 		vinylAlpha : 0.85,
@@ -16,7 +17,8 @@ function AddBossPentagovonCollection()
 		number: 6,
 		defeatedInRun: 0,
 		collection: global.bossPentagovonCollection,
-		unlocked: 0
+		unlocked: 0,
+		step: BossGirlStep
 	})
 
 	global.totalNumberOfVinyls +=1;

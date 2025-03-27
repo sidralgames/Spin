@@ -4,11 +4,12 @@ function AddBossUpgradesCollection()
 {
 	ds_map_add(global.collectionList, global.totalNumberOfVinyls,
 	{ 
-		alias: "Upgrades",
+		alias: "bossUpgrades",
 		song: snd_upgrade,
 		offsetSong: 0,
 		keyKilledBy :"killedByUpgrades",
 		sprite: s_galletaUpgrades,
+		bside: s_bossNacho_B,
 		spriteVinyl: s_discoVinilo,
 		hpMax: 100,
 		vinylAlpha : 0.95,
@@ -16,7 +17,8 @@ function AddBossUpgradesCollection()
 		number: 7,
 		defeatedInRun: 0,
 		collection: global.bossUpgradesCollection,
-		unlocked: 0
+		unlocked: 0,
+		step: BossGirlStep
 	})
 
 	global.totalNumberOfVinyls +=1;
