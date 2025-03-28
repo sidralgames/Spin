@@ -10,9 +10,9 @@ function BossDemonStep()
 	if (contAttack <= 0) && (canChangeAttack)
 	{
 		//---- BULLET ATTACKING TIME ---//
-		contAttack = random_range(400,800);
+		contAttack = random_range(400,600);
 		bulletsCreated = 0;
-		BossChooseAttack(80)
+		BossChooseAttackDemon(80)
 	}
 	
 	if (contRotoTime >= 0)
@@ -25,9 +25,9 @@ function BossDemonStep()
 	}
 	
 	//---- ACTUAL BULLET ATTACKING TIME ---//
-	if (contAttack > 200)
+	if (contAttack > 200) || (canRoto)
 	{
-		BulletAttack(attack);
+		BossDemonBulletAttack(attack);
 	}
 	
 	//---- WALL ATTACK ----//

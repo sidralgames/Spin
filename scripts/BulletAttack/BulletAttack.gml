@@ -229,48 +229,6 @@ function BulletAttack(_attack)
 		}
 		break;
 		
-		case s_bossDemon:
-		{
-			switch(_attack)
-			{
-				case "Roto":
-				{
-					if (canRoto)
-					{
-						BossAttackRoto();
-					}
-					else
-					{	
-						createRoto = false;
-						drawflashRoto = false;
-						drawflashCont = 0;
-						_attack = choose("SingleBullet", "DobleBullet", "BulletBurst")
-					}
-				}break;
-				
-				case "BulletTempo":
-				{
-					if (o_tempo.contCorrupted <= 0)
-					{
-						BossAttackTempo();
-					}
-					else
-					{
-						_attack = choose("SingleBullet", "DobleBullet", "BulletBurst")
-					}
-				}break;
-				
-				case "SingleBullet":{ BossAttackSingleBullet(random_range(60,120)); }break;
-				
-				case "BulletBurst":{ BossAttackBulletBurst(8, 16, 10); }break;
-				
-				case "DobleBullet":{ BossAttackMultiBullet(random_range(60,120), irandom_range(2,3)); }break;
-		
-				case "Pattern1": { BossAttackPattern(random_range(60,120), irandom_range(4,6)); }break;
-			}
-		}
-		break;
-		
 		case s_bossTribal:
 		{
 			switch(_attack)
@@ -628,39 +586,14 @@ function BulletAttack(_attack)
 				}break;
 				
 				
+				case "BulletSpread":
+				{
+					BossAttackBulletSpread(choose(20, -20), 50, 8, irandom_range(60,120));
+				}break;
+				
 				case "BulletBurst":
 				{
-					if (alarm[0] <= 0) && instance_exists(o_player)
-					{
-						offsetRound -=choose(20, -20);
-						dir = image_angle;
-						
-						bullet1 = instance_create_layer(x,y,"Bullets", o_bulletBoss);
-						bullet1.speed = random_range(2,2.5);
-						bullet1.initialSpeed = bullet1.speed
-						bullet1.direction = dir + offsetRound;
-						
-						bullet2 = instance_create_layer(x,y,"Bullets", o_bulletBoss);
-						bullet2.speed = -random_range(2,2.5);
-						bullet2.initialSpeed = bullet2.speed
-						bullet2.direction = dir + offsetRound;
-						
-						fireRateSingleBullet = irandom_range(60,120);
-						bulletsCreated +=1;
-						
-						if (bulletsCreated >= 50)
-						{
-							contAttack = 0;
-							canChangeAttack = true;
-							offsetRound = 0;
-						}
-						else
-						{
-							alarm[0] = 8;
-							canChangeAttack = false;
-						}
-						
-					}
+					BossAttackBulletBurst(choose(20, -20), 50, 8, irandom_range(60,120));
 				}break;
 				
 				

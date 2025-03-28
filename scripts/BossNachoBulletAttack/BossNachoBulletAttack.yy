@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"BossNachoBulletAttack",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"BossNachoBulletAttack",
+  "parent":{
+    "name":"SPIN",
+    "path":"SPIN.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

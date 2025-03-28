@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"s_lucky",
-    "path":"sprites/s_lucky/s_lucky.yy",
+    "name":"s_luckyHit",
+    "path":"sprites/s_luckyHit/s_luckyHit.yy",
   },
   "spriteMaskId":null,
   "visible":true,

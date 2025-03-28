@@ -5,8 +5,21 @@ function BossCreateHPandResetAguja()
 	if (createHP = false)
 	{
 		createHP = true;
+		
+		//---- GET BOSS IS IN COLLECTION ---//
+		for (var i = 0; i < global.totalNumberOfVinyls; i++)
+		{
+			thisBoss = ds_map_find_value(global.collectionList, i);
+			if (thisBoss.alias = alias)
+			{
+				bossIsInCollection = thisBoss.unlocked;
+			}
+		}
+		
+		//--- CREATE BOSS HP ---//
 		bossHP = instance_create_layer(x-255,210,"Main", o_bossHP);
-			
+		
+		//---- RESET AGUJA ---//
 		with(o_aguja)
 		{
 			songDuration = audio_sound_length(global.song);

@@ -2,6 +2,7 @@
 // Puede escribir su código en este editor
 
 
+
 if (warning)
 {
 	var _alphaWarning = random_range(0.3, 0.5)
@@ -21,3 +22,5 @@ if (alertMiniDemons)
 	dangerImg+=0.75;
 	draw_sprite_ext(s_danger,dangerImg,x+lengthdir_x(distDemon, angleDemon),y+lengthdir_y(distDemon, angleDemon),0.8,0.8,0, c_white, 1);
 }
+
+

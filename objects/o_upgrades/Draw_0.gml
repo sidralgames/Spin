@@ -8,7 +8,7 @@ if instance_exists(o_player) && instance_exists(nextUp)
 {
 	if point_distance(o_player.x, o_player.y, nextUp.x, nextUp.y) < 50
 	{
-		draw_sprite_ext(sprite_index,image_index,x,y,image_xscale, image_yscale,image_angle,c_gray,0.8)
+		draw_sprite_ext(sprite_index,image_index,x,y,image_xscale, image_yscale,image_angle,c_gray,0.95)
 		image_blend = global.lightPink;
 	}
 	else

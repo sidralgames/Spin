@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"BossChooseAttackTribal",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"BossChooseAttackTribal",
+  "parent":{
+    "name":"Sprites",
+    "path":"folders/Sprites.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

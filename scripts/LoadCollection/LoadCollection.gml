@@ -5,10 +5,10 @@ function LoadCollection()
 	ini_open("SpinData.ini");
 		
 	//-------- Collection Bosses --------//
-	for (var i=0; i<global.totalNumberOfVinyls-1; i++)
+	for (var i=0; i<global.totalNumberOfVinyls; i++)
 	{	
 		thisBoss = ds_map_find_value(global.collectionList, i);
-		thisBoss.collection = ini_read_real("bossesCollection", thisBoss.alias, 0);
+		thisBoss.unlocked = ini_read_real("bossesCollection", thisBoss.alias, 0);
 	}
 		
 	ini_close();

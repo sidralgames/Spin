@@ -87,6 +87,19 @@ if instance_exists(o_viniloUpgrades)
 if !instance_exists(o_upgradesFather) && (creatingUpgrades = true)
 {
 	global.bossUpgradesCollection+=1;
+	
+	for (var i=0; i<global.totalNumberOfVinyls; i++)
+	{	
+		thisBoss = ds_map_find_value(global.collectionList, i);
+		if (thisBoss.alias = alias)
+		{
+			thisBoss.unlocked+=1;
+			ini_open("SpinData.ini");
+			ini_write_real("bossesCollection",thisBoss.alias, thisBoss.unlocked);
+			ini_close();
+		}
+	}
+	
 	SaveGame();
 	
 	with(o_main)

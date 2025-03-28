@@ -90,7 +90,7 @@ if (_hp <= 0)
 			thisBoss = ds_map_find_value(global.collectionList, i);
 			if (thisBoss.sprite = spriteBoss)
 			{
-				thisBoss.collection = bossIsInCollection;
+				thisBoss.unlocked = bossIsInCollection;
 			}
 		}
 	

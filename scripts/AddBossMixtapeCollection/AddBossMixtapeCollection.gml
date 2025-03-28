@@ -6,7 +6,7 @@ function AddBossMixtapeCollection()
 	{ 
 		alias: "bossMixtape",
 		song: snd_mixtape,
-		offsetSong: 0,
+		offsetSong: 80,
 		keyKilledBy :"killedByMixtape",
 		sprite: s_bossMixtape,
 		bside: s_bossNacho_B,
@@ -18,7 +18,9 @@ function AddBossMixtapeCollection()
 		defeatedInRun: 0,
 		collection: global.bossMixtapeCollection,
 		unlocked: 0,
-		step: BossGirlStep
+		step: BossDefaultStep,
+		tintCol: global.yellowGirlArray,
+		noiseTintCol: global.lightPinkArray
 	})
 
 	global.totalNumberOfVinyls +=1;

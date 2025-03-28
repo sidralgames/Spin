@@ -21,6 +21,7 @@ function SetColors()
 
 	//---- ARRAYS ---//
 	global.darkBlueArray = [1/255,19/255,143/255,1]
+	global.redArray = [228/255, 59/255, 68/255 ,1]; 
 	//DemonColor
 	global.yellowArray = [254/255, 255/255, 1/255, 1]; 
 	global.BlueArray = [0/255, 106/255, 244/255, 1];
@@ -29,7 +30,7 @@ function SetColors()
 	global.pinkArray = [255/255, 0/255, 203/255, 1]; 
 	global.lightBlueArray = [0/255, 199/255, 255/255, 1];
 
-	global.lighPinkArray = [255/255, 0/255, 203/255, 1];
+	global.lightPinkArray = [255/255, 0/255, 203/255, 1];
 	global.brightArray = [255/255, 255/255, 255/255, 1];
 
 	global.yellowArray2 = [255/255, 255/255 ,1/255,1];

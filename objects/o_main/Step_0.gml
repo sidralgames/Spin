@@ -4,6 +4,7 @@
 
 if (load = false)
 {
+	LoadAllUnlocked();
 	LoadCollection();
 	load = true;
 }
@@ -12,27 +13,14 @@ if (changingLevel = true)
 {
 	if instance_exists(o_boss)
 	{
-		switch(o_boss.spriteBoss)
-		{
-			case s_bossNacho:
-			{
-				color_fx_params.g_TintCol = global.lightBlueArray;
-				noise_fx_params.g_FractalNoiseTintColour = global.pinkArray
-
-				fx_set_parameters(color_fx, color_fx_params);
-				fx_set_parameters(noise_fx, noise_fx_params);
-
-				layer_set_fx("EffectColor", color_fx);
-				layer_set_fx("Noise", noise_fx);
-	
-				changingLevel = false;
-			}
-			break;
+		for (var i=0; i<global.totalNumberOfVinyls; i++)
+		{	
+			thisBoss = ds_map_find_value(global.collectionList, i);
 			
-			case s_bossDemon:
+			if (thisBoss.alias = o_boss.alias)
 			{
-				color_fx_params.g_TintCol = global.yellowArray;
-				noise_fx_params.g_FractalNoiseTintColour = global.BlueArray
+				color_fx_params.g_TintCol = thisBoss.tintCol;
+				noise_fx_params.g_FractalNoiseTintColour = thisBoss.noiseTintCol
 
 				fx_set_parameters(color_fx, color_fx_params);
 				fx_set_parameters(noise_fx, noise_fx_params);
@@ -42,90 +30,15 @@ if (changingLevel = true)
 	
 				changingLevel = false;
 			}
-			break;
-			
-			case s_bossTribal:
-			{
-				color_fx_params.g_TintCol = [0,0,0,1]
-				noise_fx_params.g_FractalNoiseTintColour = global.yellowArray2;
-
-				fx_set_parameters(color_fx, color_fx_params);
-				fx_set_parameters(noise_fx, noise_fx_params);
-
-				layer_set_fx("EffectColor", color_fx);
-				layer_set_fx("Noise", noise_fx);
-	
-				changingLevel = false;
-			}
-			break;
-			
-			case s_bossGirl:
-			{
-				color_fx_params.g_TintCol = global.purpleArray;
-				noise_fx_params.g_FractalNoiseTintColour = global.yellowGirlArray;
-
-				fx_set_parameters(color_fx, color_fx_params);
-				fx_set_parameters(noise_fx, noise_fx_params);
-
-				layer_set_fx("EffectColor", color_fx);
-				layer_set_fx("Noise", noise_fx);
-	
-				changingLevel = false;
-			}
-			break;
-			
-			case s_bossRata:
-			{
-				color_fx_params.g_TintCol = global.greenOscRatArray;
-				noise_fx_params.g_FractalNoiseTintColour = global.greenRatArray;
-
-				fx_set_parameters(color_fx, color_fx_params);
-				fx_set_parameters(noise_fx, noise_fx_params);
-
-				layer_set_fx("EffectColor", color_fx);
-				layer_set_fx("Noise", noise_fx);
-	
-				changingLevel = false;
-			}
-			break;
-			
-			case s_bossMixtape:
-			{
-				color_fx_params.g_TintCol = global.yellowGirlArray;
-				noise_fx_params.g_FractalNoiseTintColour = global.lighPinkArray;
-
-				fx_set_parameters(color_fx, color_fx_params);
-				fx_set_parameters(noise_fx, noise_fx_params);
-
-				layer_set_fx("EffectColor", color_fx);
-				layer_set_fx("Noise", noise_fx);
-	
-				changingLevel = false;
-			}
-			break;
-			
-			case s_galletaUpgrades:
-			{
-				color_fx_params.g_TintCol = global.brightArray;
-				noise_fx_params.g_FractalNoiseTintColour = global.lighPinkArray
-
-				fx_set_parameters(color_fx, color_fx_params);
-				fx_set_parameters(noise_fx, noise_fx_params);
-
-				layer_set_fx("EffectColor", color_fx);
-				layer_set_fx("Noise", noise_fx);
-	
-				changingLevel = false;
-			}
-			break;
 		}
+		
 	}
 	
 	if instance_exists(o_upgrades)
 	{
 		
 		color_fx_params.g_TintCol = global.brightArray;
-		noise_fx_params.g_FractalNoiseTintColour = global.lighPinkArray
+		noise_fx_params.g_FractalNoiseTintColour = global.lightPinkArray
 
 		fx_set_parameters(color_fx, color_fx_params);
 		fx_set_parameters(noise_fx, noise_fx_params);

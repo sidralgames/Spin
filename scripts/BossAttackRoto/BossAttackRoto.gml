@@ -1,6 +1,6 @@
 // Los recursos de Script han cambiado para la v2.3.0 Consulta
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
-function BossAttackRoto()
+function BossAttackRoto(_contWarning, _contRotoTime)
 {
 	contWarning--;
 					
@@ -44,9 +44,9 @@ function BossAttackRoto()
 			pickAngle = false;
 			contAttack = 0;
 			canChangeAttack = true;
-			contWarning = 100;
+			contWarning = _contWarning;
 			canRoto = false;
-			contRotoTime = 500;
+			contRotoTime = _contRotoTime;
 		}
 	}
 }

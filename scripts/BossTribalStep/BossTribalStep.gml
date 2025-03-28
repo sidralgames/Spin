@@ -1,32 +1,18 @@
 // Los recursos de Script han cambiado para la v2.3.0 Consulta
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
-function BossTribalStep(){
-
-
-	if (contAttack > 0)
+function BossTribalStep()
+{
+	if (contAttack >= 0)
 	{
 		contAttack --;
 	}
+	
 	if (contAttack <= 0) && (canChangeAttack)
 	{
+		//---- BULLET ATTACKING TIME ---//
+		contAttack = random_range(300,500);
 		bulletsCreated = 0;
-		contAttack = random_range(100,200);
-		
-		
-		if (_hp < 100)
-		{
-			attack = choose("BulletTempo","SingleBullet", "DobleBullet", "Pattern1", "Roto");
-		}
-		else 
-		{
-			attack = choose("DobleBullet","BulletBurst","DobleBullet")
-		}
-		
-		if (attack = "Roto") && (canRoto)
-		{
-			warning = true;
-			rotoSprite = choose(s_rotoBoss1,s_rotoBoss2,s_rotoBoss3);
-		}
+		BossChooseAttackTribal(100)
 	}
 	
 	if (contRotoTime >= 0)
@@ -37,10 +23,14 @@ function BossTribalStep(){
 			canRoto = true;
 		}
 	}
-
-	BulletAttack(attack);
-
-
+	
+	//---- ACTUAL BULLET ATTACKING TIME ---//
+	if (contAttack > 200) || (canRoto)
+	{
+		BossTribalBulletAttack(attack);
+	}
+	
+	//---- WALL ATTACK ----//
 	WallAttack(0,2,choose(25,25),40,3);
 
 }

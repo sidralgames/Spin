@@ -6,7 +6,9 @@ function BossCollection()
 	
 	vinylToPlay = ds_map_find_value(global.collectionList, selectedVinyl);
 	
-	if (vinylToPlay.collection = 1)
+	alias = vinylToPlay.alias;
+	
+	if (vinylToPlay.unlocked >= 1)
 	{
 		if (changeSongCollection = false)
 		{

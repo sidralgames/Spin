@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"BossChooseAttackRata",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"BossChooseAttackRata",
+  "parent":{
+    "name":"Sprites",
+    "path":"folders/Sprites.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

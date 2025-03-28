@@ -18,7 +18,9 @@ function AddBossRataCollection()
 		defeatedInRun: 0,
 		collection: global.bossRataCollection,
 		unlocked: 0,
-		step: BossRataStep
+		step: BossRataStep,
+		tintCol: global.greenOscRatArray,
+		noiseTintCol: global.greenRatArray
 	})
 
 	global.totalNumberOfVinyls +=1;

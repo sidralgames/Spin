@@ -5,10 +5,10 @@ function SaveGame()
 	ini_open("SpinData.ini");
 	
 	//-------- BOSS COLLECTION --------//
-	for (var i=0; i<global.totalNumberOfVinyls-1; i++)
+	for (var i=0; i<global.totalNumberOfVinyls; i++)
 	{	
 		thisBoss = ds_map_find_value(global.collectionList, i);
-		ini_write_real("bossesCollection",thisBoss.alias, thisBoss.collection);
+		ini_write_real("bossesCollection",thisBoss.alias, thisBoss.unlocked);
 	}
 	
 	ini_close();

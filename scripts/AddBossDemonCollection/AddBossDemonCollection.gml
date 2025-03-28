@@ -18,7 +18,9 @@ function AddBossDemonCollection()
 		defeatedInRun: 0,
 		collection: global.bossDemonCollection,
 		unlocked: 0,
-		step:  BossDemonStep
+		step:  BossDemonStep,
+		tintCol: global.yellowArray,
+		noiseTintCol: global.BlueArray
 	})
 
 	global.totalNumberOfVinyls +=1;

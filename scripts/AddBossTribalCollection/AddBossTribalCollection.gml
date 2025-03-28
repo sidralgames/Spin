@@ -18,7 +18,9 @@ function AddBossTribalCollection()
 		defeatedInRun: 0,
 		collection: global.bossTribalCollection,
 		unlocked: 0,
-		step: BossTribalStep
+		step: BossTribalStep,
+		tintCol: [0, 0, 0, 1],
+		noiseTintCol: global.yellowArray2
 	})
 
 	global.totalNumberOfVinyls +=1;

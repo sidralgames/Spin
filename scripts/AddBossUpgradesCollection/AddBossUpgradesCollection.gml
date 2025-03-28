@@ -17,8 +17,10 @@ function AddBossUpgradesCollection()
 		number: 7,
 		defeatedInRun: 0,
 		collection: global.bossUpgradesCollection,
-		unlocked: 0,
-		step: BossGirlStep
+		unlocked: -4,
+		step: BossGirlStep,
+		tintCol: global.brightArray,
+		noiseTintCol: global.lightPinkArray
 	})
 
 	global.totalNumberOfVinyls +=1;

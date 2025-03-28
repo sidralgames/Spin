@@ -18,7 +18,7 @@ scale =1;
 angleRotoBoss = 270;
 createRoto = false;
 pickAngle = false;
-contWarning = 100;
+contWarning = 120;
 angleRotoBoss = irandom(360)
 warning = false;
 anglePicked = 0;
@@ -59,9 +59,10 @@ if (global.level < global.totalNumberOfVinyls)
 		}
 	
 		//spriteBoss = choose(bossToCreate.sprite, bossToCreate.bside);
+		alias = bossToCreate.alias;
 		spriteBoss = bossToCreate.sprite
 		bossNumber = bossToCreate.number;
-		bossIsInCollection = bossToCreate.collection;
+		bossIsInCollection = bossToCreate.unlocked;
 		_hpMax = bossToCreate.hpMax;
 		_hp = _hpMax;
 		bossStep = bossToCreate.step;
@@ -79,9 +80,10 @@ else
 		audio_play_sound_on(global.audioEmitter,global.song, true, 100,,bossToCreate.offsetSong);
 	}
 	
+	alias = bossToCreate.alias;
 	spriteBoss = bossToCreate.sprite;
 	bossNumber = bossToCreate.number;
-	bossIsInCollection = bossToCreate.collection;
+	bossIsInCollection = bossToCreate.unlocked;
 	_hpMax = bossToCreate.hpMax + 20*global.level;
 	_hp = _hpMax
 

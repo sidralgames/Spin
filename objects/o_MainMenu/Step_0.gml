@@ -64,7 +64,7 @@ if (global.collection)
 	if (initialBackY < 60)
 	{
 		vinylToPlay = ds_map_find_value(global.collectionList, o_boss.selectedVinyl);
-		if (key_x) && (vinylToPlay.collection = 1)
+		if (key_x) && (vinylToPlay.unlocked >= 1)
 		{
 			o_main.changingLevel = true;
 

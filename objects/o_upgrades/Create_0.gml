@@ -4,7 +4,7 @@ changeSongCollection = false;
 global.vinylSpin = global.vinylSpinUpgrades; 
 
 upgradesCreated = 0;
-
+alias = "bossUpgrades"
 creatingUpgrades = false;
 scaled = false;
 alarm[0] = 80;

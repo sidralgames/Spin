@@ -116,23 +116,34 @@ if (drawflashCont <=0)
 }
 
 
-//COLLECTION
-	
+
+//---- COLLECTION ---//
 if (global.collection)
 {
-	with(o_boss)
+	if instance_exists(o_boss)
 	{
-		if (drawLocked)	
+		with(o_boss)
 		{
-			if (o_boss.spriteBoss = s_galletaUpgrades)
-			&& (global.bossUpgradesCollection < 5)
+			if (drawLocked)
 			{
-				draw_set_halign(fa_center)
-				draw_text_color(o_boss.x, o_boss.y+73, string(global.bossUpgradesCollection) + " / 5\nUpgrades picked", global.lightBlue, global.lightBlue, global.lightBlue, global.lightBlue,1)
-				draw_text_color(o_boss.x, o_boss.y+72, string(global.bossUpgradesCollection) + " / 5\nUpgrades picked", global.yellow, global.yellow, global.yellow, global.yellow,1)
-				draw_text_color(o_boss.x, o_boss.y+70, string(global.bossUpgradesCollection) + " / 5\nUpgrades picked", global.pink, global.pink, global.pink, global.pink,1)
+				draw_set_font(global.customFont16);
+				if (vinylToPlay.alias = "bossUpgrades")
+				{
+					draw_set_halign(fa_center)
+					draw_text_color(o_boss.x, o_boss.y+73, string(vinylToPlay.unlocked+4) + " / 5\nUpgrades picked", global.lightBlue, global.lightBlue, global.lightBlue, global.lightBlue,1)
+					draw_text_color(o_boss.x, o_boss.y+72, string(vinylToPlay.unlocked+4) + " / 5\nUpgrades picked", global.yellow, global.yellow, global.yellow, global.yellow,1)
+					draw_text_color(o_boss.x, o_boss.y+70, string(vinylToPlay.unlocked+4) + " / 5\nUpgrades picked", global.pink, global.pink, global.pink, global.pink,1)
+				}
+				else
+				{
+					draw_set_halign(fa_center)
+					draw_text_color(o_boss.x, o_boss.y+73, "Defeat This Track", global.lightBlue, global.lightBlue, global.lightBlue, global.lightBlue,1)
+					draw_text_color(o_boss.x, o_boss.y+72, "Defeat This Track", global.yellow, global.yellow, global.yellow, global.yellow,1)
+					draw_text_color(o_boss.x, o_boss.y+70, "Defeat This Track", global.pink, global.pink, global.pink, global.pink,1)
+				}
+	
+				draw_sprite_ext(s_locked, 0, o_boss.x, o_boss.y, 1,1,0,c_white,1)	
 			}
-			draw_sprite_ext(s_locked, 0, o_boss.x, o_boss.y, 1,1,0,c_white,1)	
 		}
 	}
 }

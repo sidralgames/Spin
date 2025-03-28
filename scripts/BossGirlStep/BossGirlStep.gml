@@ -1,32 +1,19 @@
 // Los recursos de Script han cambiado para la v2.3.0 Consulta
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
-function BossGirlStep(){
+function BossGirlStep()
+{
 
-
-	if (contAttack > 0)
+if (contAttack >= 0)
 	{
 		contAttack --;
 	}
+	
 	if (contAttack <= 0) && (canChangeAttack)
 	{
+		//---- BULLET ATTACKING TIME ---//
+		contAttack = random_range(200,400);
 		bulletsCreated = 0;
-		contAttack = random_range(100,200);
-		
-		
-		if (_hp < 150)
-		{
-			attack = choose("BulletBurst", "BulletTempo","BulletBurst", "Pattern1", "Roto");
-		}
-		else 
-		{
-			attack = choose("Pattern1","DobleBullet", "BulletBurst","Roto", "Pattern1", "Roto")
-		}
-		
-		if (attack = "Roto") && (canRoto)
-		{
-			warning = true;
-			rotoSprite = choose(s_rotoBoss1,s_rotoBoss2,s_rotoBoss3);
-		}
+		BossChooseAttackGirl(150);
 	}
 	
 	if (contRotoTime >= 0)
@@ -37,10 +24,15 @@ function BossGirlStep(){
 			canRoto = true;
 		}
 	}
-
-	BulletAttack(attack);
-
-	if (attack) != "BulletBurst"
+	
+	//---- ACTUAL BULLET ATTACKING TIME ---//
+	if (contAttack > 200)  || (canRoto)
+	{
+		BossGirlBulletAttack(attack);
+	}
+	
+	//---- WALL ATTACK ----//
+	if (attack) != "BulletSpread"
 	{
 		WallAttack(1,4,choose(25,50),40,2);
 	}
