@@ -16,6 +16,9 @@ global.customFont10= font_add("chubby-choo-semi-bold.ttf", 10, false, false, 32,
 
 
 //---- INIT GLOBALS ----// 
+global.warningEnergy = 30;
+
+//--- Upgrade Globals ---//
 global.haloUpgrade = false;
 global.shieldUpgrade = false;
 global.slowmoUpgrade = false;
@@ -23,8 +26,9 @@ global.bossHpLimiterUpgrade = false;
 global.hpWallUpgrade = 0;
 global.smartBulletUpgrade = false;
 global.strongConnectionUpgrade = false;
+global.cableUpgrade = false;
 
-global.oddsStrongConnection = 4;
+global.oddsStrongConnection = 3;
 global.luckAuxUpgrade = 1;
 
 global.energyRecharge = 0.45;
@@ -43,6 +47,7 @@ global.dobleShotOdds = 1;
 
 global.maxLives = 3;
 global.lives = global.maxLives;
+global.warningEnergy = 30;
 
 global.collection = false;
 
@@ -143,9 +148,8 @@ AddBossPentagovonCollection();
 AddBossUpgradesCollection();
 
 
-//---- UPGRADES ----//
+//---- UPGRADES LIST----//
 global.upgradesList = ds_map_create();
-
 global.totalNumberOfUpgrades = 0;
 
 AddUpgradeEnergy();
@@ -167,9 +171,18 @@ AddUpgradeHalo();
 AddUpgradeSmartBullets();
 AddUpgradeDobleShot();
 AddUpgradeMoreLuck();
-AddUpgradeFasterDash();
+AddUpgradeFasterDash();//20
+AddUpgradeCable();
 
 
+//------ UPGRADES PLAYER LIST -------//
 global.playerUpgradesList = ds_map_create();
-
 global.numberOfUpgradesPlayer = 0;
+
+//------ CABLES PLAYER LIST -------//
+global.cablePlayerList = ds_map_create();
+global.numberOfCablesPlayer = 0;
+AddCableWhite();
+AddCableYellow();
+AddCableRed();
+//AddCablePurple(); -> UPGRADE

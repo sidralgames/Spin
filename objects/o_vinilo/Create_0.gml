@@ -1,7 +1,9 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
-sprite_index = s_discoVinilo;
-
+if instance_exists(o_boss)
+{
+	sprite_index = o_boss.spriteVinyl;	
+}
 x = room_width/2;
 y = room_height/2
 

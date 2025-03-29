@@ -21,7 +21,6 @@ function DoesItHit()
 	if (loseHP = true)
 	{
 		_hp -=1;
-		
 		CheckCableToDestroy();
 	}
 }

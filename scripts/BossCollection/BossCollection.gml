@@ -36,4 +36,5 @@ function BossCollection()
 			
 	sprite_index = vinylToPlay.sprite;
 	spriteBoss = vinylToPlay.sprite;
+	thisVinyl.sprite_index = vinylToPlay.spriteVinyl;
 }

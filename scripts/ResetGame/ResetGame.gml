@@ -51,6 +51,7 @@ function ResetGame(_playing)
 	global.smartBulletUpgrade = false;
 	global.hpWallUpgrade = 0;
 	global.dobleShotUpgrade = false;
+	global.cableUpgrade = false;
 	global.luckAuxUpgrade = 1;
 	global.dashSpeed = 3.2;
 	
@@ -65,12 +66,14 @@ function ResetGame(_playing)
 	//Reset Boss
 	instance_destroy(o_boss);
 	instance_destroy(o_upgrades)
+	instance_destroy(o_viniloUpgrades);
 	instance_destroy(o_upgradesFather)
 	instance_destroy(o_bossHP);
 	instance_destroy(o_vinilo);
 	instance_destroy(oViniloFake);
 	instance_create_layer(room_width/2, room_height/2, "Boss", o_boss);
 	instance_create_layer(room_width/2, room_height/2, "Vinyl", o_vinilo);
+	
 	
 	//Reset Backgrouds
 	o_main.changingLevel = true;
@@ -82,11 +85,23 @@ function ResetGame(_playing)
 	{
 		ds_map_delete(global.playerUpgradesList, i)
 	}
-	
 	ds_map_destroy(global.playerUpgradesList);
 	
 	global.playerUpgradesList = ds_map_create();
 	global.numberOfUpgradesPlayer = 0;
+	
+	for (var i=0; i<global.numberOfCablesPlayer; i++)
+	{
+		ds_map_delete(global.cablePlayerList, i)
+	}
+	ds_map_destroy(global.cablePlayerList);
+	
+	global.cablePlayerList = ds_map_create();
+	global.numberOfCablesPlayer = 0;
+	AddCableWhite();
+	AddCableYellow();
+	AddCableRed();
+	
 	
 	instance_destroy(o_bulletPart);
 	with(o_main)

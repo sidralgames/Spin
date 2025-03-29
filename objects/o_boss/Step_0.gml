@@ -3,6 +3,17 @@
 image_yscale = scale;
 image_xscale = scale;
 
+if (checkVinylForm = false)
+{
+	if instance_exists(o_vinilo)
+	{
+		o_vinilo.sprite_index = spriteVinyl;
+		thisVinyl = instance_nearest(x,y,oViniloFake);
+		thisVinyl.sprite_index = spriteVinyl;
+		checkVinylForm = true;
+	}
+}
+
 GetBossHpLimiter();
 
 BossReturnToScale();

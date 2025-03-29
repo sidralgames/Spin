@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"CheckUpgradesFromLevelSelector",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CheckUpgradesFromLevelSelector",
+  "parent":{
+    "name":"SPIN",
+    "path":"SPIN.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

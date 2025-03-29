@@ -12,7 +12,8 @@ function SetColors()
 	global.darkPalette = make_color_rgb(38,43,68);// 
 	global.pink = make_color_rgb(255,0,203);// 
 	global.greenRat= make_color_rgb(32, 153, 164)
-	global.greenOscRat= make_color_rgb(139, 255, 164)
+	global.greenOscRat= make_color_rgb(139, 255, 164);
+	global.purple = make_color_rgb(181, 80, 136);
 
 	//Mixtape
 	global.lightPink = make_color_rgb(246,188,236);

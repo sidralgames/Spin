@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"AddCableRed",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"AddCableRed",
+  "parent":{
+    "name":"SPIN",
+    "path":"SPIN.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

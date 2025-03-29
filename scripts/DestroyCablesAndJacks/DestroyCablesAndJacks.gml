@@ -5,6 +5,7 @@ function DestroyCablesAndJacks()
 	instance_destroy(o_cable);
 	instance_destroy(o_cableRed);
 	instance_destroy(o_cableYellow);
+	instance_destroy(o_cableBlue);
 	instance_destroy(o_cableFake);
 	instance_destroy(o_jackFather);
 }

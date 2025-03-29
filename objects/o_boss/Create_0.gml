@@ -66,6 +66,8 @@ if (global.level < global.totalNumberOfVinyls)
 		_hpMax = bossToCreate.hpMax;
 		_hp = _hpMax;
 		bossStep = bossToCreate.step;
+		spriteVinyl = bossToCreate.spriteVinyl;
+		
 
 	}
 }
@@ -86,7 +88,9 @@ else
 	bossIsInCollection = bossToCreate.unlocked;
 	_hpMax = bossToCreate.hpMax + 20*global.level;
 	_hp = _hpMax
-
+	bossStep = bossToCreate.step;
+	spriteVinyl = bossToCreate.spriteVinyl;
+	
 	
 }
 
@@ -119,29 +123,31 @@ global.vinylSpin = -0.6;
 bossVinylSpin = global.vinylSpin;
 global.spriteBoss = spriteBoss;
 
-if instance_exists(o_aguja)
-{
-	with(o_aguja)
-	{
-		songDuration = audio_sound_length(global.song);
-		framesSong = songDuration * room_speed;
-		initialDist = 250;
-		angleAguja = initialAngleAguja;
+checkVinylForm = false;
 
-		dist = initialDist;
-		distToCenter = dist - 10;
-		fac = (distToCenter / framesSong) * angleFac
+//if instance_exists(o_aguja)
+//{
+//	with(o_aguja)
+//	{
+//		songDuration = audio_sound_length(global.song);
+//		framesSong = songDuration * room_speed;
+//		initialDist = 250;
+//		angleAguja = initialAngleAguja;
 
-		nearDisc = instance_nearest(x,y,o_boss);
-		nearBoss = instance_nearest(x,y,o_boss);
+//		dist = initialDist;
+//		distToCenter = dist - 10;
+//		fac = (distToCenter / framesSong) * angleFac
 
-		canBeTouched= true;
-		contCanBeTouched = 200;
-		x = nearDisc.x + lengthdir_x(dist, 35);
-		y = nearDisc.y + lengthdir_y(dist, 35);
+//		nearDisc = instance_nearest(x,y,o_boss);
+//		nearBoss = instance_nearest(x,y,o_boss);
 
-		xIni = x;
-		yIni = y;
-	}
-}
+//		canBeTouched= true;
+//		contCanBeTouched = 200;
+//		x = nearDisc.x + lengthdir_x(dist, 35);
+//		y = nearDisc.y + lengthdir_y(dist, 35);
+
+//		xIni = x;
+//		yIni = y;
+//	}
+//}
 

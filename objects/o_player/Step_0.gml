@@ -12,69 +12,10 @@ key_escudo = gamepad_button_check(0, gp_shoulderlb)
 key_slowmo = gamepad_button_check(0, gp_shoulderrb)
 key_L1_Pressed = gamepad_button_check_pressed(0, gp_shoulderl) || keyboard_check_pressed(vk_space) ||  mouse_check_button_pressed(mb_right);
 
+//--- CHECK LEVEL SELECTOR UPGRADES ---//
+CheckUpgradesFromLevelSelector();
 
-if (levelSelector) && (global.level > 1)
-{
-	for (var i = 0; i < global.level-1; i++)
-	{
-		if (alarm[2] <= 0)
-		{
-			upgToCreate = ds_map_find_value(global.upgradesList,  irandom(global.totalNumberOfUpgrades-1));
-		
-			if (upgToCreate.canAppear) && ( (upgToCreate.times > 0) || (upgToCreate.times = -1))
-			{
-				upgToCreate.choosedThisTime = true;
-				
-				thisUp = instance_create_layer(x, y, "BulletsDown", upgToCreate.obj);
-				
-				
-				ds_map_add(global.playerUpgradesList, global.numberOfUpgradesPlayer,
-				{ 
-					upgrade: upgToCreate.alias,
-					sprite: upgToCreate.sprite,
-					icon: upgToCreate.icon
-					
-				})
-
-				global.numberOfUpgradesPlayer +=1;
-
-				upgsCreated+=1;
-				thisUp.autoPicked = true;
-				thisUp.canBePicked = true;
-				thisUp.image_alpha = 1;
-				
-				if (upgToCreate.unique = true)
-				{
-					upgToCreate.canAppear = false;
-				}
-				
-			}
-			
-			alarm[2] = 30;
-		}
-	}
-}
-
-if (upgsCreated >= global.level-1) && (levelSelector = true)
-{	
-	
-	for (var i = 0; i<global.totalNumberOfUpgrades; i++)
-	{
-		upgradeToChange = ds_map_find_value(global.upgradesList,i)
-		upgradeToChange.choosedThisTime = false;
-	}
-	
-	levelSelector = false;
-}
-
-//gamepad_set_vibration(0, global.vibration, global.vibration);
-
-//global.vibration = clamp(global.vibration, 0, 50);
-
-//global.vibration = lerp(global.vibration, 0, 0.05)
-
-
-//REAPPEAR AFTER LOSING A LIFE
+//--- REAPPEAR AFTER LOSING A LIFE ---//
 if (comeFromDeath)
 {
 	PlayerComeFromDeath()

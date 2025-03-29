@@ -46,7 +46,7 @@ dashTime = 60;
 squashing = false;
 scaleReset = false;
 angle = 0;
-_hp = 3;
+
 moveDir = 0;
 haxis = 0;
 vaxis = 0;
@@ -99,9 +99,7 @@ global.relativeSpeed = 1;
 stopped = false;
 bouncedWhileStopped = false;
 distGun = 24;
-cable = instance_create_layer(x,y,"Cable",o_cable);
-cableRed = instance_create_layer(x,y,"Cable",o_cableRed);
-cableYellow = instance_create_layer(x,y,"Cable",o_cableYellow);
+
 
 tocadoVibrationTime = 10;
 loseHP = true;
@@ -127,3 +125,13 @@ offShotgun = -10;
 weapon = global.weapon;
 
 shieldBurned = false;
+
+
+for (var i = 0; i< global.numberOfCablesPlayer; i++)
+{
+	cableToCreate = ds_map_find_value(global.cablePlayerList, i)
+	instance_create_layer(x,y,"Cable",cableToCreate.cable);
+}
+
+_hpMax = global.numberOfCablesPlayer;
+_hp = _hpMax;
