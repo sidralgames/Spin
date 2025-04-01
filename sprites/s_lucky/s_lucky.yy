@@ -25,7 +25,7 @@
   "height":17,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"bd4ba4fe-56bb-4eaf-bb7b-97d1a71ddb35","blendMode":0,"displayName":"default","isLocked":false,"name":"bd4ba4fe-56bb-4eaf-bb7b-97d1a71ddb35","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"cf58f368-082e-48ba-88c9-6a26d5158043","blendMode":0,"displayName":"default (2)","isLocked":false,"name":"cf58f368-082e-48ba-88c9-6a26d5158043","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"s_lucky",
   "nineSlice":null,
