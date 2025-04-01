@@ -52,8 +52,12 @@ function ResetGame(_playing)
 	global.hpWallUpgrade = 0;
 	global.dobleShotUpgrade = false;
 	global.cableUpgrade = false;
-	global.luckAuxUpgrade = 1;
 	global.dashSpeed = 3.2;
+	global.luckAuxUpgrade = 1;
+	global.oddsStrongConnection = 3;
+	global.dobleShotOdds = 1;
+	global.luckyShotOdds = 100;
+	
 	
 	
 	//Reset Tempo

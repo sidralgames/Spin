@@ -52,6 +52,12 @@ switch(o_boss.spriteBoss)
 	}
 	break;
 	
+	case s_bossPentagovon:
+	{
+		sprite_index = s_wallPentagovon;
+	}
+	break;
+	
 	default:
 	{
 		sprite_index = s_wallNacho;

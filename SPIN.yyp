@@ -45,7 +45,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.8.0.169",
+    "IDEVersion":"2024.11.0.179",
   },
   "name":"SPIN",
   "resources":[
@@ -429,6 +429,7 @@
     {"id":{"name":"s_wallMixtape","path":"sprites/s_wallMixtape/s_wallMixtape.yy",},},
     {"id":{"name":"s_wallNacho","path":"sprites/s_wallNacho/s_wallNacho.yy",},},
     {"id":{"name":"s_wallNachoUpgrade","path":"sprites/s_wallNachoUpgrade/s_wallNachoUpgrade.yy",},},
+    {"id":{"name":"s_wallPentagovon","path":"sprites/s_wallPentagovon/s_wallPentagovon.yy",},},
     {"id":{"name":"s_wallRata","path":"sprites/s_wallRata/s_wallRata.yy",},},
     {"id":{"name":"s_wallTribal","path":"sprites/s_wallTribal/s_wallTribal.yy",},},
     {"id":{"name":"s_xConfirm","path":"sprites/s_xConfirm/s_xConfirm.yy",},},

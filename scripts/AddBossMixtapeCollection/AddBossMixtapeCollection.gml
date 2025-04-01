@@ -11,7 +11,7 @@ function AddBossMixtapeCollection()
 		sprite: s_bossMixtape,
 		bside: s_bossNacho_B,
 		spriteVinyl: s_discoVinilo,
-		hpMax: 300,
+		hpMax: 350,
 		vinylAlpha : 0.9,
 		vinylColor : global.lightPink,
 		number: 5,

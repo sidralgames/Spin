@@ -125,29 +125,29 @@ global.spriteBoss = spriteBoss;
 
 checkVinylForm = false;
 
-//if instance_exists(o_aguja)
-//{
-//	with(o_aguja)
-//	{
-//		songDuration = audio_sound_length(global.song);
-//		framesSong = songDuration * room_speed;
-//		initialDist = 250;
-//		angleAguja = initialAngleAguja;
+if instance_exists(o_aguja)
+{
+	with(o_aguja)
+	{
+		songDuration = audio_sound_length(global.song);
+		framesSong = songDuration * room_speed;
+		initialDist = 250;
+		angleAguja = initialAngleAguja;
 
-//		dist = initialDist;
-//		distToCenter = dist - 10;
-//		fac = (distToCenter / framesSong) * angleFac
+		dist = initialDist;
+		distToCenter = dist - 10;
+		fac = (distToCenter / framesSong) * angleFac
 
-//		nearDisc = instance_nearest(x,y,o_boss);
-//		nearBoss = instance_nearest(x,y,o_boss);
+		nearDisc = instance_nearest(x,y,o_boss);
+		nearBoss = instance_nearest(x,y,o_boss);
 
-//		canBeTouched= true;
-//		contCanBeTouched = 200;
-//		x = nearDisc.x + lengthdir_x(dist, 35);
-//		y = nearDisc.y + lengthdir_y(dist, 35);
+		canBeTouched= true;
+		contCanBeTouched = 200;
+		x = nearDisc.x + lengthdir_x(dist, 35);
+		y = nearDisc.y + lengthdir_y(dist, 35);
 
-//		xIni = x;
-//		yIni = y;
-//	}
-//}
+		xIni = x;
+		yIni = y;
+	}
+}
 

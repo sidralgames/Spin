@@ -11,7 +11,7 @@ function AddBossGirlCollection()
 		sprite: s_bossGirl,
 		bside: s_bossNacho_B,
 		spriteVinyl: s_discoVinilo,
-		hpMax: 210,
+		hpMax: 240,
 		vinylAlpha : 0.95,
 		vinylColor : global.pink,
 		number: 3,
