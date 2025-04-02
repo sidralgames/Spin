@@ -12,7 +12,14 @@ function BossCreateHPandResetAguja()
 			thisBoss = ds_map_find_value(global.collectionList, i);
 			if (thisBoss.alias = alias)
 			{
+				bossStep = thisBoss.step; //Load Step
 				bossIsInCollection = thisBoss.unlocked;
+				
+				//if thisBoss.sprite = s_bossTribal
+				//{
+				//	layer_set_fx("Boss", global._fx_distort);
+				//	layer_set_fx("Walls", global._fx_distort);
+				//}
 			}
 		}
 		

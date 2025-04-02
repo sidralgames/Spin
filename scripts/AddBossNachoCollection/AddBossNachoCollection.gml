@@ -11,7 +11,7 @@ function AddBossNachoCollection()
 		sprite: s_bossNacho,
 		bside: s_bossNacho_B,
 		spriteVinyl: s_discoVinilo,
-		hpMax: 85,//85
+		hpMax: 5,//85
 		vinylAlpha : 1,
 		vinylColor : global.pink,
 		number: 0,
@@ -20,7 +20,8 @@ function AddBossNachoCollection()
 		unlocked: 0,
 		step:  BossNachoStep,
 		tintCol: global.lightBlueArray,
-		noiseTintCol: global.pinkArray
+		noiseTintCol: global.pinkArray,
+		wallSprite: s_wallNacho
 	})
 
 	global.totalNumberOfVinyls +=1;

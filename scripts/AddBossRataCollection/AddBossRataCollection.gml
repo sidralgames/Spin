@@ -20,7 +20,8 @@ function AddBossRataCollection()
 		unlocked: 0,
 		step: BossRataStep,
 		tintCol: global.greenOscRatArray,
-		noiseTintCol: global.greenRatArray
+		noiseTintCol: global.greenRatArray,
+		wallSprite: s_wallRata
 	})
 
 	global.totalNumberOfVinyls +=1;

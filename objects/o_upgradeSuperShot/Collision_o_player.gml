@@ -5,7 +5,7 @@ if ( (canBePicked) && (key_x) ) || ((canBePicked) && (autoPicked) )
 {
 	CheckLimitedAndUniqueUpgrades();
 	
-	global.superShot += 0.75;
+	global.superShot += 0.5;
 	instance_destroy(o_bulletPart);
 	with(o_main)
 	{

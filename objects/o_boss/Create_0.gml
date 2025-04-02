@@ -1,5 +1,8 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
+
+
+
 checkLimiter = false;
 vibrationRotoTime = 10;
 vibrationRoto = 0.4;
@@ -27,7 +30,8 @@ angleOff = random_range(-10,10);
 distOff = random_range(-20,60);
 canRoto = true;
 
-
+precision = 2;
+anglePlayer = 0
 contMiniDemonsInitial = 20;
 contMiniDemons = contMiniDemonsInitial;
 creatingMiniDemons = false;
@@ -43,6 +47,7 @@ distPrev = 0;
 angleDemon = irandom(360);
 alertMiniDemons = false;
 dangerImg = 0;
+distEye = 5;
 
 if (global.level < global.totalNumberOfVinyls)
 {
@@ -67,8 +72,6 @@ if (global.level < global.totalNumberOfVinyls)
 		_hp = _hpMax;
 		bossStep = bossToCreate.step;
 		spriteVinyl = bossToCreate.spriteVinyl;
-		
-
 	}
 }
 else
@@ -95,6 +98,8 @@ else
 }
 
 alarm[0] = 60;
+alarm[1] = 60;
+
 bulletsToCreate = 5
 fireRateSingleBullet =  irandom_range(60,120);	
 fireRatePattern1 = irandom_range(60,180);

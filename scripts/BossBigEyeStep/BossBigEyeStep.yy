@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"BossBigEyeStep",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"BossBigEyeStep",
+  "parent":{
+    "name":"SPIN",
+    "path":"SPIN.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

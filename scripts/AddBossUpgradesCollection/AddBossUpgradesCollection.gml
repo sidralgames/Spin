@@ -11,7 +11,7 @@ function AddBossUpgradesCollection()
 		sprite: s_galletaUpgrades,
 		bside: s_bossNacho_B,
 		spriteVinyl: s_discoVinilo,
-		hpMax: 100,
+		hpMax: 777,
 		vinylAlpha : 0.95,
 		vinylColor : c_white,
 		number: 7,
@@ -20,7 +20,8 @@ function AddBossUpgradesCollection()
 		unlocked: -4,
 		step: BossGirlStep,
 		tintCol: global.brightArray,
-		noiseTintCol: global.lightPinkArray
+		noiseTintCol: global.lightPinkArray,
+		wallSprite: s_wallNacho
 	})
 
 	global.totalNumberOfVinyls +=1;

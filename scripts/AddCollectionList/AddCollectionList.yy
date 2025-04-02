@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"AddCollectionList",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"AddCollectionList",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

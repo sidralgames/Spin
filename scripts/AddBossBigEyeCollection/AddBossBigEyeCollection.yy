@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"AddBossBigEyeCollection",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"AddBossBigEyeCollection",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

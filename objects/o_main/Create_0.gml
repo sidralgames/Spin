@@ -1,7 +1,29 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
 
-iconsInLine = 4;
+
+//global._fx_tint = fx_create("_filter_tintfilter");
+//fx_set_parameter(global._fx_tint, "g_TintCol", [1, 0, 0, 1]);
+
+
+//global._fx_distort = fx_create("_filter_heathaze");
+//fx_set_single_layer(global._fx_distort, true);
+//fx_set_parameter(global._fx_distort, "g_Distort1Speed", 0.1);
+//fx_set_parameter(global._fx_distort, "g_Distort2Speed",  0.1);
+//fx_set_parameter(global._fx_distort, "g_Distort1Scale",  13.3);
+//fx_set_parameter(global._fx_distort, "g_Distort2Scale",  13.3);
+//fx_set_parameter(global._fx_distort, "g_Distort1Amount", 12);
+//fx_set_parameter(global._fx_distort, "g_Distort2Amount",  14);
+//fx_set_parameter(global._fx_distort, "g_ChromaSpreadAmount",  0.5);
+
+
+
+
+iconsInLine = 6;
+iconsInLine2 = 5;
+iconsInLine3 = 5;
+
+iconsTotal = iconsInLine + iconsInLine2 + iconsInLine3
 //---- VIRTUAL JOYSTICK ----//
 //vstick_init(0, __view_get( e__VW.XView, 0 )+80 ,__view_get( e__VW.YView, 0 )+305,40,true,noone,Sprite1_1)
 
@@ -10,6 +32,7 @@ iconsInLine = 4;
 display_reset(0, false);
 global.customFont16= font_add("chubby-choo-semi-bold.ttf", 16, false, false, 32, 128);
 global.customFont14= font_add("chubby-choo-semi-bold.ttf", 14, false, false, 32, 128);
+global.customFont13= font_add("chubby-choo-semi-bold.ttf", 13, false, false, 32, 128);
 global.customFont12= font_add("chubby-choo-semi-bold.ttf", 12, false, false, 32, 128);
 global.customFont11= font_add("chubby-choo-semi-bold.ttf", 11, false, false, 32, 128);
 global.customFont10= font_add("chubby-choo-semi-bold.ttf", 10, false, false, 32, 128);
@@ -67,6 +90,7 @@ global.weapon = "Gun";
 global.energyTotal = 200;
 global.superShot = 0;
 global.level = 1;
+global.wallSprite = s_wallNacho;
 
 //----- OPTIONS ----//
 global.standardAngleShake = 0.5;
@@ -138,41 +162,14 @@ load = false
 global.collectionList = ds_map_create();
 
 global.totalNumberOfVinyls = 0;
-AddBossNachoCollection();
-AddBossDemonCollection();
-AddBossTribalCollection();
-AddBossGirlCollection();
-AddBossRataCollection();
-AddBossMixtapeCollection();
-AddBossPentagovonCollection();
-AddBossUpgradesCollection();
+AddCollectionList();
 
 
 //---- UPGRADES LIST----//
 global.upgradesList = ds_map_create();
 global.totalNumberOfUpgrades = 0;
 
-AddUpgradeEnergy();
-AddUpgradeShotgun();
-AddUpgradeFireRate();
-AddUpgradeSpeed();
-AddUpgradeWalls();//5
-AddUpgradeSlowMo();
-AddUpgradeSuperShot();
-AddUpgradeMaxHP();
-AddUpgradeCheaperDash();
-AddUpgradeBossLimiter();//10
-AddUpgradeLuckyShot();
-AddUpgradeRecoverLives();
-AddUpgradeStrongConnection();
-AddUpgradeFasterCharge();
-AddUpgradeShield();//15
-AddUpgradeHalo();
-AddUpgradeSmartBullets();
-AddUpgradeDobleShot();
-AddUpgradeMoreLuck();
-AddUpgradeFasterDash();//20
-AddUpgradeCable();
+AddUpgradesList();
 
 
 //------ UPGRADES PLAYER LIST -------//

@@ -13,10 +13,31 @@ if (warning)
 //draw_text_color(x,y+120,string(global.bossDemonCollection),c_white,c_white,c_white,c_white,1)
 //draw_text_color(x,y+140,string(global.bossNachoCollection),c_white,c_white,c_white,c_white,1)
 //draw_text_color(x,y+150,string(distDemon),c_white,c_white,c_white,c_white,1)
+if sprite_index = s_bossBigEye
+{
+	if instance_exists(o_player)
+	{
+		var a = point_direction(x,y,o_player.x, o_player.y)
+		anglePlayer += sign(dsin(a - anglePlayer)) * (precision * min(1, global.relativeSpeed+0.2));
+	}
+	if (attack = "BulletSpread")
+	{
+		distEye = lerp(distEye, 20, 0.5)
+		draw_sprite_ext(s_bigEye,0,x+lengthdir_x(distEye, anglePlayer),y+lengthdir_y(distEye, anglePlayer),1,1,anglePlayer, c_white, 1);
+	}
+	else
+	{
+		distEye = lerp(distEye, 5, 0.04)
+		draw_sprite_ext(s_bigEye,0,x+lengthdir_x(distEye, anglePlayer),y+lengthdir_y(distEye, anglePlayer),1,1,anglePlayer, c_white, 1);
+	}
+}
 
 draw_self();
 draw_set_font(global.customFont16)
-
+if instance_exists(o_bossHP)
+{
+	draw_text(x,y+50, string(bossToCreate.step))
+}
 if (alertMiniDemons)
 {
 	dangerImg+=0.75;

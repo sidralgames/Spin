@@ -16,6 +16,7 @@ function SetLevelSelectorFight()
 	spriteBoss = bossToCreate.sprite;
 	bossNumber = bossToCreate.number;
 	bossIsInCollection = bossToCreate.unlocked;
+	step = bossToCreate.step
 	_hpMax = bossToCreate.hpMax;
 	_hp = _hpMax
 		

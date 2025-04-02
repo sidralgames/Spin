@@ -255,7 +255,5 @@ if (contBomb <= 0) && (chasingPlayer) && (dying = false)
 {
 	bomb = instance_create_layer(x + lengthdir_x(5, direction - 180 ),y+ lengthdir_y(5, direction - 180 ),"BulletsDown",o_bulletBomb);
 	bomb.createHole = true;
-	bomb.initialSpeed = 0.25;
-	bomb.direction = direction - 180;
 	contBomb = random_range(120,300);
 }

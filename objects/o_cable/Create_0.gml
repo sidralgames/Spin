@@ -26,7 +26,7 @@ _segmentLenght = 4;
 _widhtCable = 2
 
 // Create a new rope
-rope1 = verletGroupCreateRope(verletSystem1, x, y, cableColor1, _widhtCable, _segmentLenght, _segments+irandom_range(-1,1), 2, 100,canCollide);
+rope1 = verletGroupCreateRope(verletSystem1, x, y, cableColor1, _widhtCable, _segmentLenght, _segments+irandom_range(-1,1), 1, 100,canCollide);
 
 //rope1 = verletGroupCreateRopeTextured(verletSystem1, x, y, s_tentacle, _segments, 1, 10);
 

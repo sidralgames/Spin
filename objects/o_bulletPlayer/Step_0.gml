@@ -27,7 +27,7 @@ if (_hp <= 0)
 }
 else
 {
-	part_particles_create(global.balaP_sys, x, y, global.balaP , 2)
+	part_particles_create(global.balaP_sys, x, y, global.balaP , 1)
 }
 
 if (global.relativeSpeed > 1.1)

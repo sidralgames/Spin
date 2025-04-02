@@ -20,7 +20,8 @@ function AddBossGirlCollection()
 		unlocked: 0,
 		step: BossGirlStep,
 		tintCol: global.purpleArray,
-		noiseTintCol: global.yellowGirlArray
+		noiseTintCol: global.yellowGirlArray,
+		wallSprite: s_wallGirl
 	})
 
 	global.totalNumberOfVinyls +=1;

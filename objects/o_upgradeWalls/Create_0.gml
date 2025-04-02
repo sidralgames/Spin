@@ -5,7 +5,14 @@ cx = room_width/2;
 cy = room_height/2;
 alias = "WeakerWalls";
 upgradeName = "Degradation";
-upgradeDesc = "Walls have\nless HP";
+if (global.hpWallUpgrade = 0)
+{
+	upgradeDesc = "Walls have\nless HP";
+}
+else
+{
+	upgradeDesc = "Walls have\neven\nless HP";
+}
 bossSpin = global.vinylSpin;
 totalPush = 0;
 totalMaxSpeed = 3;

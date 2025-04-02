@@ -36,17 +36,6 @@ if (theta <= 0)
 
 
 
-if global.relativeSpeed> 1.4
-{
-	speed = initialSpeed * 1.4
-}
-else
-{
-	initialSpeed = lerp(initialSpeed ,0, 0.015)
-	speed = initialSpeed * global.relativeSpeed
-	
-}
-
 timeToExplode --;
 
 if (timeToExplode <= timeToExplodeInitial/2) 
@@ -55,7 +44,7 @@ if (timeToExplode <= timeToExplodeInitial/2)
 }
 
 
-exploding = (dying = false) && (speed <= 0.5) && (timeToExplode <= 0)
+exploding = (dying = false) && (timeToExplode <= 0)
 
 if (exploding)
 {
@@ -127,12 +116,10 @@ else
 	instance_destroy()
 }
 
-if (speed <=0.25)
-{
-	theta += totalPush;
-	x = cx + lengthdir_x(r, theta) 
-	y = cy + lengthdir_y(r, theta)
-}
+theta += totalPush;
+x = cx + lengthdir_x(r, theta) 
+y = cy + lengthdir_y(r, theta)
+
 
 
 

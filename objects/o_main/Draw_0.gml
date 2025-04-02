@@ -2,6 +2,7 @@
 // Puede escribir su código en este editor
 draw_self();
 draw_set_halign(fa_right)
+//draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+175, "inst: " + string(instance_count))
 
 if (global.playing)
 {
@@ -13,7 +14,6 @@ if (global.playing)
 //}
 
 	draw_sprite_ext(s_livesText, 0, __view_get( e__VW.XView, 0 )+80,__view_get( e__VW.YView, 0 )+40,1,1,0,c_white,image_alpha)
-	//draw_sprite_ext(s_iconUpgradeStrongConnection, 0, __view_get( e__VW.XView, 0 )+80,__view_get( e__VW.YView, 0 )+65,1,1,0,c_white,image_alpha)
 	
 	for (var i = 0; i< global.maxLives; i++;)
 	{
@@ -38,7 +38,6 @@ if (global.playing)
 	
 	if (global.numberOfUpgradesPlayer >= iconsInLine)
 	{
-		
 		for (var i = 0; i < iconsInLine; ++i)
 		{
 			upgradeToDraw = ds_map_find_value(global.playerUpgradesList, i)

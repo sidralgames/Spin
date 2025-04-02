@@ -59,6 +59,7 @@ if (_hp <= 0)
 	global.bossesDefeatedInRun +=1;
 	thisBoss = ds_map_find_value(global.collectionList, bossNumber);
 	thisBoss.defeatedInRun = 1;
+	layer_enable_fx("Boss", false)
 	
 	with(o_main)
 	{

@@ -9,8 +9,7 @@ contDie = 5;
 dying = false;
 scaleReset = false;
 
-cx = room_width/2;
-cy = room_height/2;
+
 r = 100;
 theta = 0;
 

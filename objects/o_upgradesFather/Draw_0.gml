@@ -26,7 +26,7 @@ if instance_exists(o_player)
 		draw_text(x,y+23,string(upgradeName));
 		
 		draw_set_valign(fa_center);
-		draw_set_font(global.customFont12);
+		draw_set_font(global.customFont13);
 		draw_set_color(c_black);
 		draw_text(o_upgrades.x,o_upgrades.y-3,string(upgradeDesc));
 		draw_set_color(c_black);

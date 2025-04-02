@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"BossAttackBulletSpreadBigEye",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"BossAttackBulletSpreadBigEye",
+  "parent":{
+    "name":"SPIN",
+    "path":"SPIN.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

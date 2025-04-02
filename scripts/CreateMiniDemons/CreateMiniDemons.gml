@@ -22,8 +22,6 @@ function CreateMiniDemons()
 	{
 		contMiniDemons--;
 		
-	
-		
 		for (var i=0; i<=miniDemonsTotal; i++)
 		{
 			if (contMiniDemons <= 0) 

@@ -19,6 +19,9 @@ if (changingLevel = true)
 			
 			if (thisBoss.alias = o_boss.alias)
 			{
+				
+				global.wallSprite = thisBoss.wallSprite;
+				
 				color_fx_params.g_TintCol = thisBoss.tintCol;
 				noise_fx_params.g_FractalNoiseTintColour = thisBoss.noiseTintCol
 
@@ -31,7 +34,6 @@ if (changingLevel = true)
 				changingLevel = false;
 			}
 		}
-		
 	}
 	
 	if instance_exists(o_upgrades)

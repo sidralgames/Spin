@@ -24,7 +24,7 @@ if (_hp <= 0)
 }
 else
 {
-	part_particles_create(global.balaPBoss_sys, x, y, global.balaPBoss , 2)
+	part_particles_create(global.balaPBoss_sys, x, y, global.balaPBoss , 1)
 }
 
 
@@ -81,12 +81,6 @@ else
 }
 
 
-if (speed <=0.25)
-{
-	theta += totalPush * global.relativeSpeed;
-	x = cx + lengthdir_x(r, theta) 
-	y = cy + lengthdir_y(r, theta)
-}
 
 
 
