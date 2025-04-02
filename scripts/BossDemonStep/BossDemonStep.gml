@@ -10,6 +10,7 @@ function BossDemonStep()
 	if (contAttack <= 0) && (canChangeAttack)
 	{
 		//---- BULLET ATTACKING TIME ---//
+		alarm[0] = 0;
 		contAttack = random_range(400,600);
 		bulletsCreated = 0;
 		BossChooseAttackDemon(80)

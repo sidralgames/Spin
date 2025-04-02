@@ -12,7 +12,7 @@ initialDist = 250;
 dist = initialDist;
 
 distToCenter = dist - 10;
-angleFac = 0.1
+angleFac = 0.075
 fac = (distToCenter / framesSong) * angleFac
 
 nearDisc = instance_nearest(x,y,o_vinilo);

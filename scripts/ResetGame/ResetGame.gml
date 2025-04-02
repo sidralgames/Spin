@@ -23,6 +23,7 @@ function ResetGame(_playing)
 	
 	//---- DESTROY INSTANCES ----//
 	instance_destroy(o_alert);
+	instance_destroy(o_spawnersFather);
 	instance_destroy(o_enemyFather);
 	instance_destroy(o_wall);
 	instance_destroy(o_bulletEnemyFather);

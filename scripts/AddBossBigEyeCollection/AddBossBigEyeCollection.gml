@@ -5,8 +5,8 @@ function AddBossBigEyeCollection()
 	ds_map_add(global.collectionList, global.totalNumberOfVinyls,
 	{ 
 		alias: "bossBigEye",
-		song: snd_satansVomit,
-		offsetSong: 0,
+		song: snd_EyeSeeU,
+		offsetSong: 14,
 		keyKilledBy :"killedByBigEye",
 		sprite: s_bossBigEye,
 		bside: s_bossNacho_B,
@@ -21,7 +21,7 @@ function AddBossBigEyeCollection()
 		step: BossBigEyeStep,
 		tintCol: global.brightArray,
 		noiseTintCol: global.purpleArray,
-		wallSprite: s_wallGirl
+		wallSprite: s_wallBigEye
 	})
 
 	global.totalNumberOfVinyls +=1;

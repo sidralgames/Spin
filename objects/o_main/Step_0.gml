@@ -2,6 +2,10 @@
 // Puede escribir su código en este editor
 //vstick_step(0);
 
+
+
+
+
 if (load = false)
 {
 	LoadAllUnlocked();

@@ -14,7 +14,7 @@ function AddBossPentagovonCollection()
 		hpMax: 400,
 		vinylAlpha : 0.85,
 		vinylColor : global.brightRed,
-		number: 7,
+		number: 8,
 		defeatedInRun: 0,
 		collection: global.bossPentagovonCollection,
 		unlocked: 0,

@@ -2,7 +2,6 @@
 // Puede escribir su código en este editor
 
 
-
 checkLimiter = false;
 vibrationRotoTime = 10;
 vibrationRoto = 0.4;
@@ -30,7 +29,11 @@ angleOff = random_range(-10,10);
 distOff = random_range(-20,60);
 canRoto = true;
 
-precision = 2;
+cocoSpawner = false;
+contCoco = 0;
+distCoco = irandom_range(60, 160);
+angleCoco = irandom(359)
+precision = 1.5;
 anglePlayer = 0
 contMiniDemonsInitial = 20;
 contMiniDemons = contMiniDemonsInitial;
@@ -155,4 +158,4 @@ if instance_exists(o_aguja)
 		yIni = y;
 	}
 }
-
+image_speed = 0.4;

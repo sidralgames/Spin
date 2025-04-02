@@ -32,11 +32,11 @@ function BossNachoBulletAttack(_attack)
 			}
 		}break;
 			
-		case "SingleBullet":{ BossAttackSingleBullet(random_range(80,140)); }break;
+		case "SingleBullet":{ BossAttackSingleBullet(random_range(80,140), 0, 0); }break;
 				
 		case "BulletBurst":{ BossAttackBulletBurst(10, 12, 8); }break;
 		
-		case "DobleBullet":{ BossAttackMultiBullet(random_range(80,140), irandom_range(1,2)); }break;
+		case "DobleBullet":{ BossAttackMultiBullet(random_range(80,140), irandom_range(1,2), 0, 0); }break;
 	
 		case "Pattern1": { BossAttackPattern(random_range(60,120), irandom_range(3,5)); }break;
 	}

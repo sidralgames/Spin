@@ -10,6 +10,7 @@ function BossTribalStep()
 	if (contAttack <= 0) && (canChangeAttack)
 	{
 		//---- BULLET ATTACKING TIME ---//
+		alarm[0] = 0;
 		contAttack = random_range(300,500);
 		bulletsCreated = 0;
 		BossChooseAttackTribal(100)

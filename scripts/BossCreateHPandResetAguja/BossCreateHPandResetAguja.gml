@@ -12,6 +12,7 @@ function BossCreateHPandResetAguja()
 			thisBoss = ds_map_find_value(global.collectionList, i);
 			if (thisBoss.alias = alias)
 			{
+				
 				bossStep = thisBoss.step; //Load Step
 				bossIsInCollection = thisBoss.unlocked;
 				

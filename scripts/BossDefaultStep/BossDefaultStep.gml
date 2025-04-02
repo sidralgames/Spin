@@ -10,6 +10,7 @@ function BossDefaultStep()
 	if (contAttack <= 0) && (canChangeAttack)
 	{
 		//---- BULLET ATTACKING TIME ---//
+		alarm[0] = 0;
 		contAttack = random_range(200,400);
 		bulletsCreated = 0;
 		BossChooseAttackGirl(150);

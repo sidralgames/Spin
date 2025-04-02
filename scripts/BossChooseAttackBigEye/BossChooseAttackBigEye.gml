@@ -5,11 +5,13 @@ function BossChooseAttackBigEye(_hpMin)
 	//---- CHOOSE ATTACK ---//
 	if (_hp < _hpMin)
 	{
-		attack = choose("BulletTempo","BulletSpread", ,"BulletSpread", "DobleBullet", "Pattern1", "Roto");
+		precision = 2;
+		attack = choose("BulletTempo","BulletSpread", ,"BulletSpread", "MultiBullet", "Pattern1", "Roto");
 	}
 	else 
 	{
-		attack = choose("DobleBullet","BulletSpread", "Pattern1", "Roto")
+		precision = 1.5;
+		attack = choose("MultiBullet","BulletSpread", "Pattern1", "Roto")
 	}
 	
 	//---- WARNING ROTO ---//

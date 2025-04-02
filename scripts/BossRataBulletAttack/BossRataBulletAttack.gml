@@ -32,11 +32,11 @@ function BossRataBulletAttack(_attack)
 			}
 		}break;
 			
-		case "SingleBullet":{ BossAttackSingleBullet(random_range(60,120)); }break;
+		case "SingleBullet":{ BossAttackSingleBullet(random_range(60,120), 0, 0); }break;
 				
 		case "BulletBurst":{ BossAttackBulletBurst(8, 20, 12); }break;
 		
-		case "DobleBullet":{ BossAttackMultiBullet(random_range(60,120), irandom_range(2,3)); }break;
+		case "DobleBullet":{ BossAttackMultiBullet(random_range(60,120), irandom_range(2,3), 0, 0); }break;
 		
 		case "BulletSpread":{ BossAttackBulletSpread(choose(25, -25), 60, 8, irandom_range(60,120)); }break;
 	

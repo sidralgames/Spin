@@ -32,11 +32,11 @@ function BossDemonBulletAttack(_attack)
 			}
 		}break;
 			
-		case "SingleBullet":{ BossAttackSingleBullet(random_range(60,120)); }break;
+		case "SingleBullet":{ BossAttackSingleBullet(random_range(60,120), 0, 0); }break;
 				
 		case "BulletBurst":{ BossAttackBulletBurst(8, 16, 10); }break;
 		
-		case "DobleBullet":{ BossAttackMultiBullet(random_range(60,120), irandom_range(2,3)); }break;
+		case "DobleBullet":{ BossAttackMultiBullet(random_range(60,120), irandom_range(2,3), 0, 0); }break;
 	
 		case "Pattern1": { BossAttackPattern(random_range(60,120), irandom_range(4,6)); }break;
 	}

@@ -2,6 +2,12 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function BossBigEyeStep()
 {
+	if (cocoSpawner = false)
+	{
+		instance_create_layer(x,y,"BulletsDown", o_cocoSpawner)
+		cocoSpawner = true;
+	}
+	
 	if (contAttack >= 0)
 		{
 			contAttack --;
@@ -10,7 +16,8 @@ function BossBigEyeStep()
 		if (contAttack <= 0) && (canChangeAttack)
 		{
 			//---- BULLET ATTACKING TIME ---//
-			contAttack = random_range(200,300);
+			alarm[0] = 0;
+			contAttack = random_range(300,400);
 			bulletsCreated = 0;
 			BossChooseAttackBigEye(80)
 		}
@@ -25,7 +32,7 @@ function BossBigEyeStep()
 		}
 	
 		//---- ACTUAL BULLET ATTACKING TIME ---//
-		if (contAttack > 200) || (canRoto)
+		if (contAttack > 50) || (canRoto)
 		{
 			BossBigEyeBulletAttack(attack);
 		}
