@@ -9,6 +9,8 @@ function LoadDefaultData()
 	global.bossRataCollection = 0;
 	global.bossMixtapeCollection = 0;
 	global.bossPentagovonCollection = 0;
+	global.bossBigEyeCollection = 0;
+	global.bossRombossCollection = 0;
 	
 	global.bossUpgradesCollection = 0;
 }

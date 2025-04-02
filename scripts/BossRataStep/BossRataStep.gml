@@ -35,11 +35,11 @@ if (contAttack >= 0)
 	//---- WALL ATTACK ----//
 	if (attack) != "BulletSpread"
 	{
-		WallAttack(2,3,choose(25,50),40,3);
+		WallAttack(2,3,choose(25,50),40,2);
 	}
 	else
 	{
-		WallAttack(1,2,choose(25,50),40,2);
+		WallAttack(1,2,choose(25,50),40,1);
 	}
 	
 	//--- ENEMY DISC ---//

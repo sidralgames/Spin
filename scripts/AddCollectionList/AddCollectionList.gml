@@ -9,7 +9,7 @@ function AddCollectionList()
 	AddBossRataCollection();
 	AddBossMixtapeCollection();
 	AddBossBigEyeCollection();
-	AddBossRombossCollection();
+	//AddBossRombossCollection();
 	AddBossPentagovonCollection();
 	AddBossUpgradesCollection();
 }

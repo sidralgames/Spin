@@ -45,10 +45,10 @@ if alias = "bossBigEye"
 
 draw_self();
 draw_set_font(global.customFont16)
-if instance_exists(o_bossHP)
-{
-	draw_text(x,y+50, string(bossToCreate.step))
-}
+//if instance_exists(o_bossHP)
+//{
+//	draw_text(x,y+50, string(bossToCreate.step))
+//}
 if (alertMiniDemons)
 {
 	dangerImg+=0.75;

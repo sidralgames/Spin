@@ -16,7 +16,7 @@ function AddBossRombossCollection()
 		vinylColor : global.brightRed,
 		number: 7,
 		defeatedInRun: 0,
-		collection: global.bossPentagovonCollection,
+		collection: global.bossRombossCollection,
 		unlocked: 0,
 		step: BossDefaultStep,
 		tintCol: global.redArray,

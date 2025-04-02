@@ -2,11 +2,11 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function BossBigEyeStep()
 {
-	if (cocoSpawner = false)
-	{
-		instance_create_layer(x,y,"BulletsDown", o_cocoSpawner)
-		cocoSpawner = true;
-	}
+	//if (cocoSpawner = false)
+	//{
+	//	instance_create_layer(x,y,"BulletsDown", o_cocoSpawner)
+	//	cocoSpawner = true;
+	//}
 	
 	if (contAttack >= 0)
 		{

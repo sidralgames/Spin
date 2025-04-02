@@ -16,7 +16,7 @@ function WallAttack(_minWalls, _maxWalls, _rate, _offset, _destroyRate)
 			bullet._hpush = hspeed;
 			bullet._vpush = vspeed;
 			destroy = irandom(_destroyRate)
-			if (destroy = 0)
+			if (destroy = _destroyRate)
 			{
 				instance_destroy(bullet)
 			}
