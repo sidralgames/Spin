@@ -41,6 +41,7 @@ if (alarm[0] <= 0)
 					audio_play_sound_on(global.audioEmitter,snd_acceptMenu,false, 50);
 					global.collection = true;
 					_visible = false;
+					o_main.changingLevel = true;
 	
 				}break;
 				
@@ -81,6 +82,12 @@ if (global.collection)
 		
 		if (key_back)
 		{
+			//--- STOP & RESET SOUNDS ---//
+			audio_stop_all();
+			audio_stop_sound(global.song);
+			global.song = snd_obsession;
+			audio_play_sound_on(global.audioEmitter,global.song, true, 100);
+		
 			global.collection = false;
 			instance_destroy(o_boss);
 			instance_destroy(o_bossHP);

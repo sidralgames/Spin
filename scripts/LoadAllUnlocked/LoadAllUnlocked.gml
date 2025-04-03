@@ -11,5 +11,7 @@ function LoadAllUnlocked()
 		ini_write_real("bossesCollection",thisBoss.alias, 1);
 	}
 	
+	ini_write_real("stats","maxLevel", global.totalNumberOfVinyls);
+	
 	ini_close();
 }

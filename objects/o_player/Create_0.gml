@@ -38,8 +38,7 @@ tocado = false;
 
 invincibleTime = 60;
 
-cx = room_width/2;
-cy = room_height/2;
+
 scaleGunY = 1;
 inDash = false;
 dashTime = 60;

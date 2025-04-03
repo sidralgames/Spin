@@ -1,9 +1,14 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
+
 draw_self();
 draw_set_halign(fa_right)
-//draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+175, "inst: " + string(instance_count))
-
+//draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+175, "lvl: " + string(global.level))
+//draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+195, "numberof: " + string(global.totalNumberOfVinyls))
+//if instance_exists(o_boss)
+//{
+//	draw_text(__view_get( e__VW.XView, 0 )+320,__view_get( e__VW.YView, 0 )+215, "numbervin: " + string(o_boss.bossNumber))
+//}
 if (global.playing)
 {
 	

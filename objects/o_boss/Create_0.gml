@@ -1,7 +1,10 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
+x = room_width/2;
+y = room_height/2;
 
-
+canCreateNewBoss = true;
+createBossRomboss = false;
 checkLimiter = false;
 vibrationRotoTime = 10;
 vibrationRoto = 0.4;
@@ -52,18 +55,20 @@ alertMiniDemons = false;
 dangerImg = 0;
 distEye = 5;
 
-if (global.level < global.totalNumberOfVinyls)
+if (global.level <= global.totalNumberOfVinyls)
 {
 	for (var i = 0; i < global.totalNumberOfVinyls; i++)
 	{
 
 		bossToCreate = ds_map_find_value(global.collectionList, global.level -1);
-	
-		if (global.song != bossToCreate.song) 
+		if (global.playing)
 		{
-			audio_stop_sound(global.song);
-			global.song = bossToCreate.song;
-			audio_play_sound_on(global.audioEmitter,global.song, true, 100,,bossToCreate.offsetSong);
+			if (global.song != bossToCreate.song) 
+			{
+				audio_stop_sound(global.song);
+				global.song = bossToCreate.song;
+				audio_play_sound_on(global.audioEmitter,global.song, true, 100,,bossToCreate.offsetSong);
+			}
 		}
 	
 		//spriteBoss = choose(bossToCreate.sprite, bossToCreate.bside);
@@ -81,11 +86,14 @@ else
 {
 	bossToCreate = ds_map_find_value(global.collectionList, irandom(global.totalNumberOfVinyls-1));
 	
-	if (global.song != bossToCreate.song) 
+	if (global.playing)
 	{
-		audio_stop_sound(global.song);
-		global.song = bossToCreate.song;
-		audio_play_sound_on(global.audioEmitter,global.song, true, 100,,bossToCreate.offsetSong);
+		if (global.song != bossToCreate.song) 
+		{
+			audio_stop_sound(global.song);
+			global.song = bossToCreate.song;
+			audio_play_sound_on(global.audioEmitter,global.song, true, 100,,bossToCreate.offsetSong);
+		}
 	}
 	
 	alias = bossToCreate.alias;

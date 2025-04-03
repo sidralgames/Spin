@@ -234,8 +234,8 @@ if (dying = false)
 	{
 		case "free":
 		{
-			r = point_distance(x,y,room_width/2, room_height/2);
-			theta = point_direction(room_width/2, room_height/2, x, y);
+			r = point_distance(x,y,global.cx, global.cy);
+			theta = point_direction(global.cx, global.cy, x, y);
 			
 			
 			if (inDash)
@@ -261,8 +261,8 @@ if (dying = false)
 				if (contRecoil <=0)
 				{
 					recoil = false;
-					r = point_distance(x,y,room_width/2, room_height/2);
-					theta = point_direction(room_width/2, room_height/2, x, y);
+					r = point_distance(x,y,global.cx, global.cy);
+					theta = point_direction(global.cx, global.cy, x, y);
 				}
 			}
 			
@@ -316,8 +316,8 @@ if (dying = false)
 				if (alarm[3] <= 0)
 				{
 
-					point_direction0 = point_direction(room_width/2, room_height/2, xprevious, yprevious);
-					point_direction1 = point_direction(room_width/2, room_height/2, x, y);
+					point_direction0 = point_direction(global.cx, global.cy, xprevious, yprevious);
+					point_direction1 = point_direction(global.cx, global.cy, x, y);
 	
 					if point_direction1 > point_direction0
 					{
@@ -352,8 +352,8 @@ if (dying = false)
 				else
 				{
 					theta += totalPush;
-					x = cx + lengthdir_x(r, theta) 
-					y = cy + lengthdir_y(r, theta)
+					x = global.cx + lengthdir_x(r, theta) 
+					y = global.cy + lengthdir_y(r, theta)
 				}
 			
 			}
@@ -368,8 +368,8 @@ if (dying = false)
 							direction = point_direction(nextWall.x, nextWall.y, x, y);
 						}
 					
-						point_direction0 = point_direction(room_width/2, room_height/2, xprevious, yprevious);
-						point_direction1 = point_direction(room_width/2, room_height/2, x, y);
+						point_direction0 = point_direction(global.cx, global.cy, xprevious, yprevious);
+						point_direction1 = point_direction(global.cx, global.cy, x, y);
 	
 						if point_direction1 > point_direction0
 						{
@@ -389,8 +389,8 @@ if (dying = false)
 					else
 					{
 						theta += totalPush;
-						x = cx + lengthdir_x(r, theta) 
-						y = cy + lengthdir_y(r, theta)
+						x = global.cx + lengthdir_x(r, theta) 
+						y = global.cy + lengthdir_y(r, theta)
 					
 						if !collision_circle(x,y,8,nextWall,true,true)
 						{
@@ -437,15 +437,15 @@ if (dying = false)
 					if (contRecoil <=0) || (speed <= 0.2)
 					{
 						recoil = false;
-						r = point_distance(x,y,room_width/2, room_height/2);
-						theta = point_direction(room_width/2, room_height/2, x, y);
+						r = point_distance(x,y,global.cx, global.cy);
+						theta = point_direction(global.cx, global.cy, x, y);
 					}
 				}
 				else
 				{	
 					theta += totalPush;
-					x = cx + lengthdir_x(r, theta) 
-					y = cy + lengthdir_y(r, theta)
+					x = global.cx + lengthdir_x(r, theta) 
+					y = global.cy + lengthdir_y(r, theta)
 				}
 			}
 		

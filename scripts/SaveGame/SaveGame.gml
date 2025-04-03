@@ -11,5 +11,11 @@ function SaveGame()
 		ini_write_real("bossesCollection",thisBoss.alias, thisBoss.unlocked);
 	}
 	
+	if (global.level > global.maxLevelReached)
+	{
+		global.maxLevelReached = global.level;
+		ini_write_real("stats","maxLevel", global.maxLevelReached);
+	}
+	
 	ini_close();
 }

@@ -57,10 +57,19 @@ _angle = image_angle;
 if (_hp <= 0)
 {
 	global.bossesDefeatedInRun +=1;
-	thisBoss = ds_map_find_value(global.collectionList, bossNumber);
-	thisBoss.defeatedInRun = 1;
+	
+	for (var i=0; i<global.totalNumberOfVinyls-1; i++)
+	{	
+		thisBoss = ds_map_find_value(global.collectionList, i);
+		if (thisBoss.sprite = spriteBoss)
+		{
+			thisBoss.defeatedInRun = 1;
+		}
+	}
+	
 	layer_enable_fx("Boss", false);
 	instance_destroy(o_spawnersFather);
+	instance_destroy(o_pickUpFather);
 	
 	with(o_main)
 	{

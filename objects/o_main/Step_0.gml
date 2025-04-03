@@ -56,6 +56,18 @@ if (changingLevel = true)
 	}
 }
 
+if instance_exists(o_boss)
+{
+	global.cx = o_boss.x;
+	global.cy = o_boss.y;
+}
+else
+{	
+	global.cx = room_width/2;
+	global.cy = room_height/2;
+}
+
+
 if (global.playing)
 {
 	if !instance_exists(o_player) && (global.lives > 0)

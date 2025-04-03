@@ -10,7 +10,19 @@ function PlayGame(_playing)
 	instance_destroy(BombsFather);
 	o_main.gameOverCreated = false;
 	global.playing = _playing;
+	
 	global.level = 1;
+	//---- RESET BOSS ---//
+	instance_destroy(o_boss);
+	instance_destroy(o_upgrades)
+	instance_destroy(o_viniloUpgrades);
+	instance_destroy(o_upgradesFather)
+	instance_destroy(o_bossHP);
+	instance_destroy(o_vinilo);
+	instance_destroy(oViniloFake);
+	instance_create_layer(room_width/2, room_height/2, "Boss", o_boss);
+	instance_create_layer(room_width/2, room_height/2, "Vinyl", o_vinilo);
+	
 	global.lives = global.maxLives;
 	global.tempoCorrupted = false;
 	global.weapon = "Gun";

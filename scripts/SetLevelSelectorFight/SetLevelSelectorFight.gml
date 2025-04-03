@@ -19,6 +19,7 @@ function SetLevelSelectorFight()
 	step = bossToCreate.step
 	_hpMax = bossToCreate.hpMax;
 	_hp = _hpMax
+	spriteVinyl = bossToCreate.spriteVinyl;
 		
 	GetBossHpLimiter();
 		

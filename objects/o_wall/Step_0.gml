@@ -13,30 +13,28 @@ if instance_exists(o_boss)
 {
 	dist = point_distance(x,y,o_boss.x, o_boss.y)
 
-
-
-if (scaled = true)
-{
-	if scale1 = false
+	if (scaled = true)
 	{
-		scale = lerp(scale, 1, 0.2);
-		if (scale < 1.1)
+		if scale1 = false
 		{
-			scale = 1;
-			scale1 = true
+			scale = lerp(scale, 1, 0.2);
+			if (scale < 1.1)
+			{
+				scale = 1;
+				scale1 = true
+			}
 		}
-	}
 	
-	if scale2 = false && (dist > 10) && scale1 = true
-	{
-		scale = lerp(scale, 1.25, 0.02);
-		if (scale > 1.2)
+		if scale2 = false && (dist > 10) && scale1 = true
 		{
-			scale = 1.25;
-			scale2 = true
+			scale = lerp(scale, 1.25, 0.02);
+			if (scale > 1.2)
+			{
+				scale = 1.25;
+				scale2 = true
+			}
 		}
 	}
-}
 }
 else
 {
@@ -50,7 +48,7 @@ speed = initialSpeed *global.relativeSpeed
 
 _hpTime--;
 
-if (_hpTime <= 0) || (point_distance(x,y,room_width/2, room_height/2) > 180)
+if (_hpTime <= 0) || (point_distance(x,y,global.cx, global.cy) > 180)
 {
 	instance_destroy();	
 }

@@ -14,7 +14,7 @@ function AddBossBigEyeCollection()
 		hpMax: 400,
 		vinylAlpha : 0.90,
 		vinylColor : global.purple,
-		number: 6,
+		number: 7,
 		defeatedInRun: 0,
 		collection: global.bossBigEyeCollection,
 		unlocked: 0,

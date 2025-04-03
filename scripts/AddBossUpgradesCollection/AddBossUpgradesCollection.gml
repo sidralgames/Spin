@@ -14,7 +14,7 @@ function AddBossUpgradesCollection()
 		hpMax: 777,
 		vinylAlpha : 0.95,
 		vinylColor : c_white,
-		number: 7,
+		number: 6,
 		defeatedInRun: 0,
 		collection: global.bossUpgradesCollection,
 		unlocked: -4,

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"RotateOnVinyl",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"RotateOnVinyl",
+  "parent":{
+    "name":"SPIN",
+    "path":"SPIN.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

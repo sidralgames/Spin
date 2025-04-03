@@ -45,7 +45,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.11.0.179",
+    "IDEVersion":"2024.8.0.169",
   },
   "name":"SPIN",
   "resources":[
@@ -98,6 +98,7 @@
     {"id":{"name":"o_OptionsMenu","path":"objects/o_OptionsMenu/o_OptionsMenu.yy",},},
     {"id":{"name":"o_parCollision","path":"objects/o_parCollision/o_parCollision.yy",},},
     {"id":{"name":"o_pause","path":"objects/o_pause/o_pause.yy",},},
+    {"id":{"name":"o_pickUpFather","path":"objects/o_pickUpFather/o_pickUpFather.yy",},},
     {"id":{"name":"o_player","path":"objects/o_player/o_player.yy",},},
     {"id":{"name":"o_spawnersFather","path":"objects/o_spawnersFather/o_spawnersFather.yy",},},
     {"id":{"name":"o_system","path":"objects/o_system/o_system.yy",},},
@@ -261,6 +262,7 @@
     {"id":{"name":"ResetGame","path":"scripts/ResetGame/ResetGame.yy",},},
     {"id":{"name":"ResetNeedle","path":"scripts/ResetNeedle/ResetNeedle.yy",},},
     {"id":{"name":"ResetUpgrades","path":"scripts/ResetUpgrades/ResetUpgrades.yy",},},
+    {"id":{"name":"RotateOnVinyl","path":"scripts/RotateOnVinyl/RotateOnVinyl.yy",},},
     {"id":{"name":"SaveGame","path":"scripts/SaveGame/SaveGame.yy",},},
     {"id":{"name":"scr_CRT_appy_to_surface","path":"scripts/scr_CRT_appy_to_surface/scr_CRT_appy_to_surface.yy",},},
     {"id":{"name":"scr_CRT_init_shader","path":"scripts/scr_CRT_init_shader/scr_CRT_init_shader.yy",},},
@@ -305,6 +307,7 @@
     {"id":{"name":"snd_LoveSpell","path":"sounds/snd_LoveSpell/snd_LoveSpell.yy",},},
     {"id":{"name":"snd_mixtape","path":"sounds/snd_mixtape/snd_mixtape.yy",},},
     {"id":{"name":"snd_moveMenu","path":"sounds/snd_moveMenu/snd_moveMenu.yy",},},
+    {"id":{"name":"snd_obsession","path":"sounds/snd_obsession/snd_obsession.yy",},},
     {"id":{"name":"snd_roto","path":"sounds/snd_roto/snd_roto.yy",},},
     {"id":{"name":"snd_satansVomit","path":"sounds/snd_satansVomit/snd_satansVomit.yy",},},
     {"id":{"name":"snd_shoot","path":"sounds/snd_shoot/snd_shoot.yy",},},

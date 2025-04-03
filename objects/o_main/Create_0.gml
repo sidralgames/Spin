@@ -148,9 +148,15 @@ _delay_effect.damp = 0.8;
 _delay_effect.bypass = true;
 delay_bus.effects[0] = _delay_effect;
 
-global.song = snd_song1;
+// Delay effect
+LPF2 = audio_effect_create(AudioEffectType.LPF2);
+LPF2.cutoff = 80;
+LPF2.q = 0;
+LPF2.bypass = true;
+delay_bus.effects[1] = LPF2;
 
-audio_play_sound_on(global.audioEmitter,global.song, true, 100,,65)
+global.song = snd_obsession;
+audio_play_sound_on(global.audioEmitter,global.song, true, 100);
 
 
 //--- PARTS ---//

@@ -4,6 +4,7 @@ if instance_exists(o_boss)
 {
 	sprite_index = o_boss.spriteVinyl;	
 }
+
 x = room_width/2;
 y = room_height/2
 

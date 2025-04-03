@@ -1,24 +1,14 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
-if (goToBossHp)
+if instance_exists(o_boss) && instance_exists(o_bossHP)
 {
-	direction = point_direction(x,y,o_bossHP.x, o_bossHP.y)
-	speed = 2;
-}
-else
-{
-	bossSpin = global.vinylSpin;
-	
-	bossPush = bossSpin * min(1.5, global.relativeSpeed);
-	totalPush = bossPush;
-	totalPush = clamp(totalPush, -totalMaxSpeed, totalMaxSpeed);
-	
-	if (theta <= 0)
+	if (goToBossHp)
 	{
-		theta =+ 360;	
+		direction = point_direction(x,y,o_bossHP.x, o_bossHP.y + random_range(-30,30))
+		speed = 2;
 	}
-	
-	theta += totalPush;
-	x = cx + lengthdir_x(r, theta) 
-	y = cy + lengthdir_y(r, theta)
+	else
+	{
+		RotateOnVinyl();
+	}
 }

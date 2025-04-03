@@ -10,18 +10,18 @@ function AddBossRombossCollection()
 		keyKilledBy :"killedByPentagovon",
 		sprite: s_bossRomboss,
 		bside: s_bossNacho_B,
-		spriteVinyl: s_discoVinilo,
+		spriteVinyl: s_vinylEP,
 		hpMax: 400,
 		vinylAlpha : 0.85,
-		vinylColor : global.brightRed,
-		number: 7,
+		vinylColor : global.blue,
+		number: 9,
 		defeatedInRun: 0,
 		collection: global.bossRombossCollection,
 		unlocked: 0,
 		step: BossDefaultStep,
-		tintCol: global.redArray,
-		noiseTintCol: global.yellowArray2,
-		wallSprite: s_wallPentagovon
+		tintCol: global.darkBlueArray,
+		noiseTintCol: global.lightBlue,
+		wallSprite: s_wallDemon
 	})
 
 	global.totalNumberOfVinyls +=1;

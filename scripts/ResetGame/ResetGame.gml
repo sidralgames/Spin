@@ -13,8 +13,8 @@ function ResetGame(_playing)
 	//--- STOP & RESET SOUNDS ---//
 	audio_stop_all();
 	audio_stop_sound(global.song);
-	global.song = snd_song1;
-	audio_play_sound_on(global.audioEmitter,global.song, true, 100,,65);
+	global.song = snd_obsession;
+	audio_play_sound_on(global.audioEmitter,global.song, true, 100);
 	
 	
 	//---- DESTROY CABLES ----//
@@ -24,6 +24,7 @@ function ResetGame(_playing)
 	//---- DESTROY INSTANCES ----//
 	instance_destroy(o_alert);
 	instance_destroy(o_spawnersFather);
+	instance_destroy(o_pickUpFather);
 	instance_destroy(o_enemyFather);
 	instance_destroy(o_wall);
 	instance_destroy(o_bulletEnemyFather);
@@ -41,7 +42,7 @@ function ResetGame(_playing)
 	global.wallSprite = s_wallNacho;
 	global.bossHpLimiterUpgrade = false;
 	global.bossesDefeatedInRun = 0;
-	global.level = 1;
+	global.level = irandom_range(1, global.maxLevelReached)
 	global.maxLives = 3;
 	global.lives = global.maxLives;
 	global.speedAux = 0;
