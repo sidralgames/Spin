@@ -24,7 +24,7 @@ function BossNachoBulletAttack(_attack)
 		{
 			if (o_tempo.contCorrupted <= 0)
 			{
-				BossAttackTempo(irandom_range(400,500), random_range(0.5,0.75), random_range(0.5,0.65));
+				BossAttackTempo(irandom_range(300,400), random_range(0.5,0.75), random_range(0.5,0.65));
 			}
 			else
 			{

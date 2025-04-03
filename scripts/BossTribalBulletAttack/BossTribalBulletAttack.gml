@@ -24,7 +24,7 @@ function BossTribalBulletAttack(_attack)
 		{
 			if (o_tempo.contCorrupted <= 0)
 			{
-				BossAttackTempo(irandom_range(360,420), random_range(0.75,1), random_range(0.5,0.75));
+				BossAttackTempo(irandom_range(300,400), random_range(0.75,1), random_range(0.5,0.75));
 			}
 			else
 			{

@@ -420,6 +420,7 @@
     {"id":{"name":"s_rotoBoss2","path":"sprites/s_rotoBoss2/s_rotoBoss2.yy",},},
     {"id":{"name":"s_rotoBoss3","path":"sprites/s_rotoBoss3/s_rotoBoss3.yy",},},
     {"id":{"name":"s_rotoBossCirc","path":"sprites/s_rotoBossCirc/s_rotoBossCirc.yy",},},
+    {"id":{"name":"s_rotoOblong","path":"sprites/s_rotoOblong/s_rotoOblong.yy",},},
     {"id":{"name":"s_screenshakeOFF","path":"sprites/s_screenshakeOFF/s_screenshakeOFF.yy",},},
     {"id":{"name":"s_screenshakeON","path":"sprites/s_screenshakeON/s_screenshakeON.yy",},},
     {"id":{"name":"s_shield","path":"sprites/s_shield/s_shield.yy",},},

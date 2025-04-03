@@ -7,10 +7,9 @@ if (contAttack >= 0)
 		contAttack --;
 	}
 	
-	if (contAttack <= 0) && (canChangeAttack)
+	if (contAttack <= 0) && (canChangeAttack) && (alarm[0] <= 0)
 	{
 		//---- BULLET ATTACKING TIME ---//
-		alarm[0] = 0;
 		contAttack = random_range(400,800);
 		bulletsCreated = 0;
 		BossChooseAttackNacho(50)
@@ -26,7 +25,7 @@ if (contAttack >= 0)
 	}
 	
 	//---- ACTUAL BULLET ATTACKING TIME ---//
-	if (contAttack > 200) || (canRoto)
+	if (contAttack > 100) || (canRoto)
 	{
 		BossNachoBulletAttack(attack);
 	}

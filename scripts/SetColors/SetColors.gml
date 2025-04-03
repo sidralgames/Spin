@@ -18,8 +18,8 @@ function SetColors()
 	//Mixtape
 	global.lightPink = make_color_rgb(246,188,236);
 	
-	
-
+	global.salmon =  make_color_rgb(246, 117, 122)
+	global.salmonArray = [246/255, 117/255, 122/255, 1]
 	//---- ARRAYS ---//
 	global.darkBlueArray = [1/255,19/255,143/255,1]
 	global.redArray = [228/255, 59/255, 68/255 ,1]; 
@@ -36,6 +36,9 @@ function SetColors()
 
 	global.yellowArray2 = [255/255, 255/255 ,1/255,1];
 	global.purpleArray = [195/255, 53/255 ,225/255,1];
+	global.purpleArray2 = [181/255, 80/255, 136/255,1];
+	global.purpleArray3 = [104/255, 56/255, 108/255,1];
+	global.darkPaletteArray = [38/255, 43/255, 68/255,1];
 
 	global.yellowGirlArray = [224/255, 205/255, 64/255, 1]
 

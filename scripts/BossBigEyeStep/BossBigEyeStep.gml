@@ -13,10 +13,9 @@ function BossBigEyeStep()
 			contAttack --;
 		}
 	
-		if (contAttack <= 0) && (canChangeAttack)
+		if (contAttack <= 0) && (canChangeAttack) && (alarm[0] <= 0)
 		{
 			//---- BULLET ATTACKING TIME ---//
-			alarm[0] = 0;
 			contAttack = random_range(300,400);
 			bulletsCreated = 0;
 			BossChooseAttackBigEye(80)

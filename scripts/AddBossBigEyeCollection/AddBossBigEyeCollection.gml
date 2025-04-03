@@ -12,15 +12,15 @@ function AddBossBigEyeCollection()
 		bside: s_bossNacho_B,
 		spriteVinyl: s_discoVinilo,
 		hpMax: 400,
-		vinylAlpha : 0.90,
-		vinylColor : global.purple,
+		vinylAlpha : 0.95,
+		vinylColor : global.lightPink,
 		number: 7,
 		defeatedInRun: 0,
 		collection: global.bossBigEyeCollection,
 		unlocked: 0,
 		step: BossBigEyeStep,
-		tintCol: global.brightArray,
-		noiseTintCol: global.purpleArray,
+		tintCol: global.purpleArray3,
+		noiseTintCol: global.salmonArray,
 		wallSprite: s_wallBigEye
 	})
 

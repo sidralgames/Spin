@@ -12,7 +12,7 @@ function CreateMiniDemons()
 	{
 		contToNextDemons--;
 			
-		if (contToNextDemons > 0 && contToNextDemons <= 180)
+		if (contToNextDemons > 0 && contToNextDemons <= 140)
 		{
 			alertMiniDemons = true;
 		}
