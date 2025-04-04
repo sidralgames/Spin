@@ -3,6 +3,15 @@
 image_yscale = scale;
 image_xscale = scale;
 
+
+contScaleEye --;
+	
+if (contScaleEye <= 0)
+{
+	scaleEye = 1.25;
+	contScaleEye = random_range(20,60)
+}
+
 if (checkVinylForm = false)
 {
 	if instance_exists(o_vinilo)

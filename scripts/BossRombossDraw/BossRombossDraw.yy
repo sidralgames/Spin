@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"BossRombossDraw",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"BossRombossDraw",
+  "parent":{
+    "name":"AddBoss",
+    "path":"folders/Scripts/AddBoss.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

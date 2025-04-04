@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"BossAttackSingleBullet",
   "parent":{
-    "name":"Sprites",
-    "path":"folders/Sprites.yy",
+    "name":"BossAttack",
+    "path":"folders/Scripts/BossAttack.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

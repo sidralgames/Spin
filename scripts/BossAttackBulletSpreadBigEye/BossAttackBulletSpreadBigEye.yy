@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"BossAttackBulletSpreadBigEye",
   "parent":{
-    "name":"SPIN",
-    "path":"SPIN.yyp",
+    "name":"BossAttack",
+    "path":"folders/Scripts/BossAttack.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

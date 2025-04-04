@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"SPIN",
-    "path":"SPIN.yyp",
+    "name":"Bosses",
+    "path":"folders/Sprites/Bosses.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

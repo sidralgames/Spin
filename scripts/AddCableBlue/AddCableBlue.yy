@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"AddCableBlue",
   "parent":{
-    "name":"SPIN",
-    "path":"SPIN.yyp",
+    "name":"AddCable",
+    "path":"folders/Scripts/AddCable.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

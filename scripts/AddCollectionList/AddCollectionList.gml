@@ -15,7 +15,8 @@ function AddCollectionList()
 	
 	//----- EL GANCHO DLC ----//
 	AddBossBigEyeCollection();
-	//AddBossRombossCollection();
+	AddBossRombossCollection();
+	AddBossOblongCollection();
 	AddBossPentagovonCollection();
 	
 }

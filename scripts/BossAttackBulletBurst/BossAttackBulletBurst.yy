@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"BossAttackBulletBurst",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"BossAttack",
+    "path":"folders/Scripts/BossAttack.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

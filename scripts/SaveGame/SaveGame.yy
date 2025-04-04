@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"SaveGame",
   "parent":{
-    "name":"SPIN",
-    "path":"SPIN.yyp",
+    "name":"DATA",
+    "path":"folders/Scripts/DATA.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

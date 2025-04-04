@@ -2,6 +2,27 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function BossBigEyeStep()
 {
+	
+	if (firstAttack = false)
+	{
+		warning = true;
+		firstAttack = true;
+		attack = "Roto";
+		rotoSprite = s_rotoBossBigEye;
+		canRoto = true;
+		contAttack = 400;
+	}
+	
+	contScaleEye --;
+	
+	if (contScaleEye <= 0)
+	{
+		scaleEye = 1.25;
+		contScaleEye = random_range(20,60)
+	}
+	
+	scaleEye = lerp(scaleEye, 1, 0.15)
+	
 	if (cocoSpawner = false)
 	{
 		instance_create_layer(x,y,"BulletsDown", o_cocoSpawner)

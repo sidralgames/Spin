@@ -3,6 +3,12 @@
 x = room_width/2;
 y = room_height/2;
 
+
+//----boss big eye & oblong ---//
+scaleEye = 1.15;
+contScaleEye = random_range(30,90);
+
+
 canCreateNewBoss = true;
 createBossRomboss = false;
 checkLimiter = false;
@@ -110,6 +116,8 @@ else
 
 alarm[0] = 60;
 alarm[1] = 60;
+
+firstAttack = false;
 
 bulletsToCreate = 5
 fireRateSingleBullet =  irandom_range(60,120);	

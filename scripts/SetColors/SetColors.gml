@@ -14,6 +14,7 @@ function SetColors()
 	global.greenRat= make_color_rgb(32, 153, 164)
 	global.greenOscRat= make_color_rgb(139, 255, 164);
 	global.purple = make_color_rgb(181, 80, 136);
+	global.orange = make_color_rgb(254, 174, 52);
 
 	//Mixtape
 	global.lightPink = make_color_rgb(246,188,236);
@@ -39,6 +40,8 @@ function SetColors()
 	global.purpleArray2 = [181/255, 80/255, 136/255,1];
 	global.purpleArray3 = [104/255, 56/255, 108/255,1];
 	global.darkPaletteArray = [38/255, 43/255, 68/255,1];
+	
+	global.orangeArray = [254/255, 174/255, 52/255, 1];
 
 	global.yellowGirlArray = [224/255, 205/255, 64/255, 1]
 

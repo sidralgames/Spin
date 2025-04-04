@@ -14,11 +14,11 @@ function AddBossPentagovonCollection()
 		hpMax: 500,
 		vinylAlpha : 0.85,
 		vinylColor : global.brightRed,
-		number: 8,
+		number: 10,
 		defeatedInRun: 0,
 		collection: global.bossPentagovonCollection,
 		unlocked: 0,
-		step: BossDefaultStep,
+		step: BossPentagovonStep,
 		tintCol: global.redArray,
 		noiseTintCol: global.yellowArray2,
 		wallSprite: s_wallPentagovon

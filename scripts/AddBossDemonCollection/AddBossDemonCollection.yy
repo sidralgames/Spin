@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"AddBossDemonCollection",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"AddBoss",
+    "path":"folders/Scripts/AddBoss.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

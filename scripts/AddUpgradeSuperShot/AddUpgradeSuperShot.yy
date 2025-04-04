@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"AddUpgradeSuperShot",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"AddUpgrade",
+    "path":"folders/Scripts/AddUpgrade.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

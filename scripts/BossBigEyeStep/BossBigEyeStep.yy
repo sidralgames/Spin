@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"BossBigEyeStep",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"BossStep",
+    "path":"folders/Scripts/BossStep.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
