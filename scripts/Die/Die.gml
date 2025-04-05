@@ -4,7 +4,7 @@ function Die()
 {
 	if instance_exists(o_vinilo)
 	{
-		if (!collision_circle(x,y,4,o_vinilo,true,true)) && (inDash = false)
+		if (!collision_circle(x,y,5,o_vinilo,true,true)) && (inDash = false)
 		{
 			contDie --;
 			if (contDie <=0) && (dying = false)

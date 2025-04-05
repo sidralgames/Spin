@@ -25,7 +25,7 @@ function BossDemonStep()
 	}
 	
 	//---- ACTUAL BULLET ATTACKING TIME ---//
-	if (contAttack > 100) || (canRoto)
+	if (contAttack > 100) || (isBreakingVinyl)
 	{
 		BossDemonBulletAttack(attack);
 	}

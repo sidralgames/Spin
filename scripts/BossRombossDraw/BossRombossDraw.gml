@@ -6,8 +6,8 @@ function BossRombossDraw()
 	{
 		var a = point_direction(x,y,o_player.x, o_player.y)
 		anglePlayer += sign(dsin(a - anglePlayer)) * (precision * min(1, global.relativeSpeed+0.2));
-	
 		distEye = 3;
-		draw_sprite_ext(s_bossRombossEye,0,x+lengthdir_x(distEye, anglePlayer),y+lengthdir_y(distEye, anglePlayer),scale-0.1,scale-0.1,0, c_white, 1);
 	}
+	
+	draw_sprite_ext(s_bossRombossEye,0,x+lengthdir_x(distEye, anglePlayer),y+lengthdir_y(distEye, anglePlayer),scale-0.1,scale-0.1,0, c_white, 1);
 }

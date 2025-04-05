@@ -52,7 +52,7 @@ function BossBigEyeStep()
 		}
 	
 		//---- ACTUAL BULLET ATTACKING TIME ---//
-		if (contAttack > 50) || (canRoto)
+		if (contAttack > 50) || (isBreakingVinyl)
 		{
 			BossBigEyeBulletAttack(attack);
 		}

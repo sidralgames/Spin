@@ -47,6 +47,7 @@ function BossAttackRoto(_contWarning, _contRotoTime)
 			contWarning = _contWarning;
 			canRoto = false;
 			contRotoTime = _contRotoTime;
+			isBreakingVinyl = false;
 		}
 	}
 }

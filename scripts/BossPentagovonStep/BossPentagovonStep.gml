@@ -38,7 +38,7 @@ function BossPentagovonStep()
 	}
 	
 	//---- ACTUAL BULLET ATTACKING TIME ---//
-	if (contAttack > 100)  || (canRoto)
+	if (contAttack > 100) || (isBreakingVinyl)
 	{
 		BossGirlBulletAttack(attack);
 	}

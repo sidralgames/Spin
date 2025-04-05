@@ -162,6 +162,10 @@ audio_play_sound_on(global.audioEmitter,global.song, true, 100);
 //--- PARTS ---//
 instance_create_layer(0,0,"Main", o_bulletPart);
 instance_create_layer(0,0,"Main", o_bulletBossPart);
+instance_create_layer(0,0,"Main", o_misilYellowPart);
+instance_create_layer(0,0,"Main", o_misilBluePart);
+instance_create_layer(0,0,"Main", o_misilGreenPart);
+instance_create_layer(0,0,"Main", o_misilRedPart);
 
 load = false
 //---- COLLECTION TRACKS - BOSSES ----//

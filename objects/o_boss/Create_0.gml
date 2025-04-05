@@ -7,8 +7,12 @@ y = room_height/2;
 //----boss big eye & oblong ---//
 scaleEye = 1.15;
 contScaleEye = random_range(30,90);
+contMisil = 90;
+misilRacimoOdds = 3;
+misilToCreate = -1;
 
 
+isBreakingVinyl = false;
 canCreateNewBoss = true;
 createBossRomboss = false;
 checkLimiter = false;

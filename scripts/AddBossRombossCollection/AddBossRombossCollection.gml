@@ -5,8 +5,8 @@ function AddBossRombossCollection()
 	ds_map_add(global.collectionList, global.totalNumberOfVinyls,
 	{ 
 		alias: "bossRomboss",
-		song: snd_satansVomit,
-		offsetSong: 0,
+		song: snd_Romboss,
+		offsetSong: 36,
 		keyKilledBy :"killedByRomboss",
 		sprite: s_bossRomboss,
 		bside: s_bossNacho_B,

@@ -11,14 +11,16 @@ function BossAttackBulletSpread(_offset, _maxBullets, _fireRate, _fireRateRound)
 		bullet1.speed = random_range(2,2.5);
 		bullet1.initialSpeed = bullet1.speed
 		bullet1.direction = dir + offsetRound;
+		bulletsCreated +=1;
 						
 		bullet2 = instance_create_layer(x,y,"Bullets", o_bulletBoss);
 		bullet2.speed = -random_range(2,2.5);
 		bullet2.initialSpeed = bullet2.speed
 		bullet2.direction = dir + offsetRound;
+		bulletsCreated +=1;
 						
 		fireRateSingleBullet = _fireRateRound;
-		bulletsCreated +=1;
+		
 						
 		if (bulletsCreated >= _maxBullets)
 		{

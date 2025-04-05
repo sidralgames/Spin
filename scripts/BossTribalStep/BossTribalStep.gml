@@ -25,7 +25,7 @@ function BossTribalStep()
 	}
 	
 	//---- ACTUAL BULLET ATTACKING TIME ---//
-	if (contAttack > 100) || (canRoto)
+	if (contAttack > 100) || (isBreakingVinyl)
 	{
 		BossTribalBulletAttack(attack);
 	}

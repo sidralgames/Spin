@@ -5,6 +5,7 @@ function BossRombossStep()
 	
 	if (firstAttack = false)
 	{
+		isBreakingVinyl = true;
 		warning = true;
 		firstAttack = true;
 		attack = "Roto";
@@ -23,9 +24,10 @@ function BossRombossStep()
 	{
 		//---- BULLET ATTACKING TIME ---//
 		
-		contAttack = random_range(200,400);
+		contAttack = random_range(700,800);
 		bulletsCreated = 0;
 		BossChooseAttackGirl(150);
+		
 	}
 	
 	if (contRotoTime >= 0)
@@ -38,19 +40,22 @@ function BossRombossStep()
 	}
 	
 	//---- ACTUAL BULLET ATTACKING TIME ---//
-	if (contAttack > 100)  || (canRoto)
+	if (contAttack < 50) || (isBreakingVinyl)
 	{
-		BossGirlBulletAttack(attack);
+		BossRombossBulletAttack(attack);
 	}
 	
 	//---- WALL ATTACK ----//
 	if (attack) != "BulletSpread"
 	{
-		WallAttack(0,2,choose(25,50),40,2);
+		WallAttack(0,2,choose(25,50),40,1);
 	}
 	else
 	{
-		WallAttack(0,2,choose(25,50),40,2);
+		WallAttack(0,2,choose(25,50),40,1);
 	}
+	
+	
+	CreateMisilEnemy(5, irandom(2));
 
 }
