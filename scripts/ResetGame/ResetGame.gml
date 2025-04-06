@@ -22,6 +22,7 @@ function ResetGame(_playing)
 	
 	
 	//---- DESTROY INSTANCES ----//
+	instance_destroy(o_laserBossOblong_L)
 	instance_destroy(o_alert);
 	instance_destroy(o_spawnersFather);
 	instance_destroy(o_pickUpFather);

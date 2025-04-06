@@ -4,10 +4,11 @@ function PlayerComeFromDeath()
 {
 	contComeFromDeath --;
 	
-	if (contComeFromDeath > 90)
+	if (contComeFromDeath > 30)
 	{
 		instance_destroy(o_wall);
-		instance_destroy(o_bulletBoss);
+		//instance_destroy(o_bulletBoss);
+		instance_destroy(o_bulletEnemyFather);
 	}
 	
 	global.vinylSpin = lerp(global.vinylSpin, 0, 0.04);

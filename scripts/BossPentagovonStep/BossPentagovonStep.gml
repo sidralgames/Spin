@@ -5,12 +5,13 @@ function BossPentagovonStep()
 	
 	if (firstAttack = false)
 	{
+		isBreakingVinyl = true;
 		warning = true;
 		firstAttack = true;
 		attack = "Roto";
-		rotoSprite = s_rotoPentagovon;
 		canRoto = true;
 		contAttack = 400;
+		rotoSprite = s_rotoPentagovon;
 	}
 	
 	

@@ -20,11 +20,13 @@ upgsCreated = 0;
 levelSelector = false;
 upgradesInPlayer = 0;
 
+destroyOther = true;
+
 //--REAPPERAR AFTER DEATH--//
 gamepad_set_vibration(0,0,0);
 image_alpha = 1;
 comeFromDeath = false;
-contComeFromDeath = 100;
+contComeFromDeath = 120;
 spotRadInitial = 25;
 spotRad = spotRadInitial;
 lastTouchedX = x;

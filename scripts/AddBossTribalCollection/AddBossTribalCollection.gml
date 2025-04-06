@@ -21,7 +21,9 @@ function AddBossTribalCollection()
 		step: BossTribalStep,
 		tintCol: [0, 0, 0, 1],
 		noiseTintCol: global.yellowArray2,
-		wallSprite: s_wallTribal
+		wallSprite: s_wallTribal,
+		isDLC: false,
+		spriteDLCTitle: s_elGancho_title
 	})
 
 	global.totalNumberOfVinyls +=1;

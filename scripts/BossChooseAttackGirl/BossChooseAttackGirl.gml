@@ -19,4 +19,8 @@ function BossChooseAttackGirl(_hpMin)
 		isBreakingVinyl = true;
 		rotoSprite = choose(s_rotoBoss1,s_rotoBoss2,s_rotoBoss3);
 	}
+	else
+	{
+		isBreakingVinyl = false;
+	}
 }

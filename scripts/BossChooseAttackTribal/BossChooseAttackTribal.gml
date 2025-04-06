@@ -16,6 +16,11 @@ function BossChooseAttackTribal(_hpMin)
 	if (attack = "Roto") && (canRoto)
 	{
 		warning = true;
+		isBreakingVinyl = true;
 		rotoSprite = choose(s_rotoBoss1,s_rotoBoss2,s_rotoBoss3);
+	}
+	else
+	{
+		isBreakingVinyl = false;
 	}
 }

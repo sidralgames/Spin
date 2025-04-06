@@ -7,7 +7,7 @@ selected = 0;
 _visible = true;
 
 factor = 0.08;
-
+imgBack = 0;
 initialPlay =300;
 initialHow = 330;
 initialOption = 360;

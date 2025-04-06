@@ -21,7 +21,9 @@ function AddBossNachoCollection()
 		step:  BossNachoStep,
 		tintCol: global.lightBlueArray,
 		noiseTintCol: global.pinkArray,
-		wallSprite: s_wallNacho
+		wallSprite: s_wallNacho,
+		isDLC: false,
+		spriteDLCTitle: s_elGancho_title
 	})
 
 	global.totalNumberOfVinyls +=1;

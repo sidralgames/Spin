@@ -21,7 +21,9 @@ function AddBossMixtapeCollection()
 		step: BossDefaultStep,
 		tintCol: global.yellowGirlArray,
 		noiseTintCol: global.lightPinkArray,
-		wallSprite: s_wallMixtape
+		wallSprite: s_wallMixtape,
+		isDLC: false,
+		spriteDLCTitle: s_elGancho_title
 	})
 
 	global.totalNumberOfVinyls +=1;

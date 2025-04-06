@@ -21,7 +21,9 @@ function AddBossUpgradesCollection()
 		step: BossGirlStep,
 		tintCol: global.brightArray,
 		noiseTintCol: global.lightPinkArray,
-		wallSprite: s_wallNacho
+		wallSprite: s_wallNacho,
+		isDLC: false,
+		spriteDLCTitle: s_elGancho_title
 	})
 
 	global.totalNumberOfVinyls +=1;

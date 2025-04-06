@@ -93,7 +93,7 @@ else
 		}
 	}
 	
-	if (global.relativeSpeed <= 0.35)
+	if (global.relativeSpeed <= 0.5)
 	{
 		
 		goSlow = true;

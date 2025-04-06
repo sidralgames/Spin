@@ -21,7 +21,9 @@ function AddBossGirlCollection()
 		step: BossGirlStep,
 		tintCol: global.purpleArray,
 		noiseTintCol: global.yellowGirlArray,
-		wallSprite: s_wallGirl
+		wallSprite: s_wallGirl,
+		isDLC: false,
+		spriteDLCTitle: s_elGancho_title
 	})
 
 	global.totalNumberOfVinyls +=1;

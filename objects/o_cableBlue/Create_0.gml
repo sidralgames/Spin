@@ -7,7 +7,7 @@
 
 cableRoto = false;
 
-
+changingData = false;
 contUnplugging = 0;
 deattached = false;
 _alpha = 1;
@@ -35,6 +35,7 @@ rope2 = verletGroupCreateRope(verletSystem1, x, y, cableColor5, _widhtCable, _se
 
  //Attach its first vertex to an object
 inst = instance_nearest(x,y,o_player)
+rope2.vertexAttachTo(first, inst);
 
 
 

@@ -62,7 +62,7 @@ if !instance_exists(o_player)
 
 if (global.collection)
 {
-	if (initialBackY < 60)
+	if (initialBackY > 300)
 	{
 		vinylToPlay = ds_map_find_value(global.collectionList, o_boss.selectedVinyl);
 		if (key_x) && (vinylToPlay.unlocked >= 1)

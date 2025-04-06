@@ -17,7 +17,12 @@ function BossChooseAttackBigEye(_hpMin)
 	//---- WARNING ROTO ---//
 	if (attack = "Roto") && (canRoto)
 	{
+		isBreakingVinyl = true;
 		warning = true;
 		rotoSprite = choose(s_rotoBoss1,s_rotoBoss2,s_rotoBoss3);
+	}
+	else
+	{
+		isBreakingVinyl = false;
 	}
 }

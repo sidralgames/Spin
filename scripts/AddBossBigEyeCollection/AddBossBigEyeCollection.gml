@@ -21,7 +21,9 @@ function AddBossBigEyeCollection()
 		step: BossBigEyeStep,
 		tintCol: global.purpleArray3,
 		noiseTintCol: global.salmonArray,
-		wallSprite: s_wallBigEye
+		wallSprite: s_wallBigEye,
+		isDLC: true,
+		spriteDLCTitle: s_elGancho_title
 	})
 
 	global.totalNumberOfVinyls +=1;

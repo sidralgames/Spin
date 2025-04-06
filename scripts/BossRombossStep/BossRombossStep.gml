@@ -9,9 +9,9 @@ function BossRombossStep()
 		warning = true;
 		firstAttack = true;
 		attack = "Roto";
-		rotoSprite = s_rotoRomboss;
 		canRoto = true;
 		contAttack = 400;
+		rotoSprite = s_rotoRomboss;
 	}
 	
 	

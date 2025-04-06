@@ -21,7 +21,9 @@ function AddBossOblongCollection()
 		step: BossOblongStep,
 		tintCol: global.yellowArray2,
 		noiseTintCol: global.orangeArray,
-		wallSprite: s_wallOblong
+		wallSprite: s_wallOblong,
+		isDLC: true,
+		spriteDLCTitle: s_elGancho_title
 	})
 
 	global.totalNumberOfVinyls +=1;

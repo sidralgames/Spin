@@ -12,7 +12,7 @@ function AddBossPentagovonCollection()
 		bside: s_bossNacho_B,
 		spriteVinyl: s_discoVinilo,
 		hpMax: 500,
-		vinylAlpha : 0.85,
+		vinylAlpha : 0.95,
 		vinylColor : global.brightRed,
 		number: 10,
 		defeatedInRun: 0,
@@ -20,8 +20,10 @@ function AddBossPentagovonCollection()
 		unlocked: 0,
 		step: BossPentagovonStep,
 		tintCol: global.redArray,
-		noiseTintCol: global.yellowArray2,
-		wallSprite: s_wallPentagovon
+		noiseTintCol: global.yellowArray,
+		wallSprite: s_wallPentagovon,
+		isDLC: true,
+		spriteDLCTitle: s_elGancho_title
 	})
 
 	global.totalNumberOfVinyls +=1;

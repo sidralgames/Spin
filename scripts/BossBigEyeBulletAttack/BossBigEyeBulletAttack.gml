@@ -15,7 +15,6 @@ function BossBigEyeBulletAttack(_attack)
 				createRoto = false;
 				drawflashRoto = false;
 				drawflashCont = 0;
-				
 				_attack = choose("SingleBullet", "DobleBullet", "BulletBurst")
 			}
 		}break;

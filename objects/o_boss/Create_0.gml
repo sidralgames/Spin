@@ -10,10 +10,29 @@ contScaleEye = random_range(30,90);
 contMisil = 90;
 misilRacimoOdds = 3;
 misilToCreate = -1;
+lasersCreated = false;
+laserCont = 700;
+isAttackingLaser = false;
+isWarningLaser = false;
+angleLaserChoose = false;
+_angleLaser_L = irandom(360)
+_angleLaser_R = irandom(360)
+isLaser = false;
+laserNum = 1 + irandom(5);
+
+for (var i=0; i<laserNum; i++)
+{
+	_angleLaser_L[i] = irandom(360)
+}
+
 
 
 isBreakingVinyl = false;
+
 canCreateNewBoss = true;
+
+
+
 createBossRomboss = false;
 checkLimiter = false;
 vibrationRotoTime = 10;

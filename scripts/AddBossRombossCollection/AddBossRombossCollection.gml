@@ -21,7 +21,9 @@ function AddBossRombossCollection()
 		step: BossRombossStep,
 		tintCol: global.BlueArray,
 		noiseTintCol: global.lightBlueArray,
-		wallSprite: s_wallDemon
+		wallSprite: s_wallDemon,
+		isDLC: true,
+		spriteDLCTitle: s_elGancho_title
 	})
 
 	global.totalNumberOfVinyls +=1;

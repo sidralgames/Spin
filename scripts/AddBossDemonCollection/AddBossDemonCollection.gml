@@ -21,7 +21,9 @@ function AddBossDemonCollection()
 		step:  BossDemonStep,
 		tintCol: global.yellowArray,
 		noiseTintCol: global.BlueArray,
-		wallSprite: s_wallDemon
+		wallSprite: s_wallDemon,
+		isDLC: false,
+		spriteDLCTitle: s_elGancho_title
 	})
 
 	global.totalNumberOfVinyls +=1;

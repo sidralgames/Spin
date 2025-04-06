@@ -5,12 +5,13 @@ function BossBigEyeStep()
 	
 	if (firstAttack = false)
 	{
+		isBreakingVinyl = true;
 		warning = true;
 		firstAttack = true;
 		attack = "Roto";
-		rotoSprite = s_rotoBossBigEye;
 		canRoto = true;
 		contAttack = 400;
+		rotoSprite = s_rotoBossBigEye;
 	}
 	
 	contScaleEye --;
@@ -28,35 +29,38 @@ function BossBigEyeStep()
 		instance_create_layer(x,y,"BulletsDown", o_cocoSpawner)
 		cocoSpawner = true;
 	}
-	
 	if (contAttack >= 0)
-		{
-			contAttack --;
-		}
+	{
+		contAttack --;
+	}
 	
-		if (contAttack <= 0) && (canChangeAttack) && (alarm[0] <= 0)
-		{
-			//---- BULLET ATTACKING TIME ---//
-			contAttack = random_range(300,400);
-			bulletsCreated = 0;
-			BossChooseAttackBigEye(80)
-		}
+	if (contAttack <= 0) && (canChangeAttack) && (alarm[0] <= 0)
+	{
+		//---- BULLET ATTACKING TIME ---//
+		
+		contAttack = random_range(400,500);
+		bulletsCreated = 0;
+		BossChooseAttackBigEye(150);
+		
+	}
 	
-		if (contRotoTime >= 0)
+	if (contRotoTime >= 0)
+	{
+		contRotoTime--;	
+		if contRotoTime <= 0
 		{
-			contRotoTime--;	
-			if contRotoTime <= 0
-			{
-				canRoto = true;
-			}
+			canRoto = true;
 		}
+	}
 	
-		//---- ACTUAL BULLET ATTACKING TIME ---//
-		if (contAttack > 50) || (isBreakingVinyl)
-		{
-			BossBigEyeBulletAttack(attack);
-		}
+	//---- ACTUAL BULLET ATTACKING TIME ---//
+	if (contAttack < 200) || (isBreakingVinyl)
+	{
+		BossBigEyeBulletAttack(attack);
+	}
 	
-		//---- WALL ATTACK ----//
-		WallAttack(1,3,choose(25,50),35,4);
+	//---- WALL ATTACK ----//
+	WallAttack(1,3,choose(25,50),35,4);
+	
+
 }
