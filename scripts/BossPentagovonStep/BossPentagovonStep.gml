@@ -24,7 +24,7 @@ function BossPentagovonStep()
 	{
 		//---- BULLET ATTACKING TIME ---//
 		
-		contAttack = random_range(200,400);
+		contAttack = random_range(400,800);
 		bulletsCreated = 0;
 		BossChooseAttackGirl(150);
 	}

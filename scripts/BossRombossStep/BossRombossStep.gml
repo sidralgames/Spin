@@ -40,7 +40,7 @@ function BossRombossStep()
 	}
 	
 	//---- ACTUAL BULLET ATTACKING TIME ---//
-	if (contAttack < 50) || (isBreakingVinyl)
+	if (contAttack < 150) || (isBreakingVinyl)
 	{
 		BossRombossBulletAttack(attack);
 	}
