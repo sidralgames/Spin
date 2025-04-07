@@ -16,12 +16,22 @@ function PlayerDrawGun()
 		scaleGunY = -1;
 		image_yscale = -1;
 	}
-	if gamepad_is_connected(0)
+	
+	if (global.energy < global.warningEnergy)
 	{
-		draw_sprite_ext(gunSprite, 0, x + lengthdir_x(distGun - recoilGun, aimDir), y + lengthdir_y(distGun - recoilGun, aimDir),1,scaleGunY,aimDir,image_blend,image_alpha)
+		gunImage = 1;
 	}
 	else
 	{
-		draw_sprite_ext(gunSprite, 0, x + lengthdir_x(distGun - recoilGun, aimDir), y + lengthdir_y(distGun - recoilGun, aimDir),1,scaleGunY,aimDir,image_blend,image_alpha)
+		gunImage = 0;
+	}
+	
+	if gamepad_is_connected(0)
+	{
+		draw_sprite_ext(gunSprite, gunImage, x + lengthdir_x(distGun - recoilGun, aimDir), y + lengthdir_y(distGun - recoilGun, aimDir),1,scaleGunY,aimDir,c_white,image_alpha)
+	}
+	else
+	{
+		draw_sprite_ext(gunSprite, 0, x + lengthdir_x(distGun - recoilGun, aimDir), y + lengthdir_y(distGun - recoilGun, aimDir),1,scaleGunY,aimDir,colorGun,image_alpha)
 	}
 }

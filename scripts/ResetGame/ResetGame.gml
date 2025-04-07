@@ -37,13 +37,20 @@ function ResetGame(_playing)
 	//---- RETRY OR GO TO MENU? ----//
 	global.playing = _playing;
 	
-	
+	if (global.playing = true)
+	{
+		global.level = 1;
+	}
+	else
+	{
+		global.level = irandom_range(1, global.maxLevelReached)	
+	}
 	//--- RESET GLOBALS ---//
 	global.relativeSpeed = 1;
 	global.wallSprite = s_wallNacho;
 	global.bossHpLimiterUpgrade = false;
 	global.bossesDefeatedInRun = 0;
-	global.level = irandom_range(1, global.maxLevelReached)
+	
 	global.maxLives = 3;
 	global.lives = global.maxLives;
 	global.speedAux = 0;

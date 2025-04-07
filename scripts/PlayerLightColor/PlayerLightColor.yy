@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"PlayerLightColor",
   "parent":{
-    "name":"SPIN",
-    "path":"SPIN.yyp",
+    "name":"Player",
+    "path":"folders/Scripts/Player.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

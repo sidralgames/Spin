@@ -165,10 +165,10 @@ if (bounced)
 			direction = point_direction(nextWall.x, nextWall.y, x, y);
 		}
 				
-		point_direction0 = point_direction(room_width/2, room_height/2, xprevious, yprevious);
-		point_direction1 = point_direction(room_width/2, room_height/2, x, y);
+		point_directionPrev = point_direction(room_width/2, room_height/2, xprevious, yprevious);
+		point_directionActual = point_direction(room_width/2, room_height/2, x, y);
 	
-		if point_direction1 > point_direction0
+		if point_directionActual > point_directionPrev
 		{
 			realspeed = lerp(realspeed, 1 * (_speed - abs(bossSpin * global.relativeSpeed)), 0.1); // direccionContraria
 		}

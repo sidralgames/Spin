@@ -3,7 +3,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 initialTitle = lerp(initialTitle, 80,factor);
-initialConfirm = lerp(initialConfirm, 310,factor);
+initialConfirm = lerp(initialConfirm, 340,factor);
 draw_sprite_ext(s_xConfirm, 0,  __view_get( e__VW.XView, 0 )+ 530,__view_get( e__VW.YView, 0 )+initialConfirm,1,1,0,image_blend, image_alpha)
 
 if (global.collection = false) && (global.howToPlay = false) 
@@ -129,8 +129,10 @@ if (global.collection)
 	initialCollectionX = lerp(initialCollectionX, 110,factor);
 	initialBackX =  lerp(initialBackX, 530,factor);
 	initialBackY = lerp(initialBackY, 330,factor);
+	initialBackCol = lerp(initialBackCol, 340, factor)
+	initialConfirm = lerp(initialConfirm, 300,factor);
 	//draw_sprite_ext(s_collection, 0,  __view_get( e__VW.XView, 0 )+ initialCollectionX,__view_get( e__VW.YView, 0 )+initialCollection,0.8,0.8,0,image_blend,  1)	
-	draw_sprite_ext(s_backCollection, imgBack,  __view_get( e__VW.XView, 0 )+ initialBackX,__view_get( e__VW.YView, 0 )+initialBackY,1,1,0,image_blend,  1)	
+	draw_sprite_ext(s_backCollection, imgBack,  __view_get( e__VW.XView, 0 )+ 530,__view_get( e__VW.YView, 0 )+initialBackCol,1,1,0,image_blend,  1)	
 	draw_sprite_ext(s_flechas, 0, o_boss.x - 214 ,__view_get( e__VW.YView, 0 )+180,1,1,0,image_blend,  1)	
 	draw_sprite_ext(s_flechas, 1, o_boss.x + 214 ,__view_get( e__VW.YView, 0 )+180,1,1,0,image_blend,  1)	
 
@@ -138,5 +140,8 @@ if (global.collection)
 
 if instance_exists(o_HowToPlay)
 {
-	draw_sprite_ext(s_Back, 1,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+320,0.8,0.8,0,image_blend, 1)		
+	initialConfirm = lerp(initialConfirm, 300, factor)
+	initialBackCol = lerp(initialBackCol, 345, factor)
+	draw_sprite_ext(s_backCollection, imgBack,  __view_get( e__VW.XView, 0 )+ 530,__view_get( e__VW.YView, 0 )+initialBackCol,1,1,0,image_blend,  1)	
+	
 }

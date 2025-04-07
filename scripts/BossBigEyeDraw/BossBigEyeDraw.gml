@@ -10,20 +10,20 @@ function BossBigEyeDraw()
 	if (attack = "BulletSpread")
 	{
 		distEye = lerp(distEye, 20, 0.5)
-		draw_sprite_ext(s_bigEye,0,x+lengthdir_x(distEye, anglePlayer),y+lengthdir_y(distEye, anglePlayer),scaleEye,scaleEye,anglePlayer, c_white, 1);
-		draw_sprite_ext(s_Eye,0,x+lengthdir_x(distEye+8, anglePlayer),y+lengthdir_y(distEye+8, anglePlayer),scaleEye,scaleEye,anglePlayer, c_white, 1);
+		draw_sprite_ext(s_bigEye,0,x+lengthdir_x(distEye, anglePlayer),y+lengthdir_y(distEye, anglePlayer),scaleEye,scaleEye,anglePlayer, image_blend, 1);
+		draw_sprite_ext(s_Eye,0,x+lengthdir_x(distEye+8, anglePlayer),y+lengthdir_y(distEye+8, anglePlayer),scaleEye,scaleEye,anglePlayer, image_blend, 1);
 
 	}
 	else if (attack = "Pattern1")
 	{
 		distEye = lerp(distEye, 0, 0.04)
-		draw_sprite_ext(s_bigEye,0,x+lengthdir_x(distEye, anglePlayer),y+lengthdir_y(distEye, anglePlayer),scaleEye,scaleEye,anglePlayer, c_white, 1);
-		draw_sprite_ext(s_Eye,0,x+lengthdir_x(distEye, anglePlayer),y+lengthdir_y(distEye, anglePlayer),scaleEye,scaleEye,anglePlayer, c_white, 1);
+		draw_sprite_ext(s_bigEye,0,x+lengthdir_x(distEye, anglePlayer),y+lengthdir_y(distEye, anglePlayer),scaleEye,scaleEye,anglePlayer, image_blend, 1);
+		draw_sprite_ext(s_Eye,0,x+lengthdir_x(distEye, anglePlayer),y+lengthdir_y(distEye, anglePlayer),scaleEye,scaleEye,anglePlayer, image_blend, 1);
 	}
 	else 
 	{
 		distEye = lerp(distEye, 10, 0.04)
-		draw_sprite_ext(s_bigEye,0,x+lengthdir_x(distEye, anglePlayer),y+lengthdir_y(distEye, anglePlayer),scaleEye,scaleEye,anglePlayer, c_white, 1);
-		draw_sprite_ext(s_Eye,0,x+lengthdir_x(distEye+5, anglePlayer),y+lengthdir_y(distEye+5, anglePlayer),scaleEye,scaleEye,anglePlayer, c_white, 1);
+		draw_sprite_ext(s_bigEye,0,x+lengthdir_x(distEye, anglePlayer),y+lengthdir_y(distEye, anglePlayer),scaleEye,scaleEye,anglePlayer, image_blend, 1);
+		draw_sprite_ext(s_Eye,0,x+lengthdir_x(distEye+5, anglePlayer),y+lengthdir_y(distEye+5, anglePlayer),scaleEye,scaleEye,anglePlayer, image_blend, 1);
 	}
 }

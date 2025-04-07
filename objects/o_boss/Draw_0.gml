@@ -1,8 +1,5 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
-
-
-
 if (warning)
 {
 	var _alphaWarning = random_range(0.3, 0.5)
@@ -35,7 +32,8 @@ if (alias = "bossBigEye")
 	BossBigEyeDraw();
 }
 
-draw_self();
+draw_sprite_ext(spriteBoss,image_index,x,y,scale,scale,image_angle, image_blend, 1);
+
 
 if (alertMiniDemons)
 {

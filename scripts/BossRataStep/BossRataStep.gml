@@ -3,7 +3,7 @@
 function BossRataStep()
 {
 
-if (contAttack >= 0)
+	if (contAttack >= 0)
 	{
 		contAttack --;
 	}
@@ -11,7 +11,7 @@ if (contAttack >= 0)
 	if (contAttack <= 0) && (canChangeAttack) && (alarm[0] <= 0)
 	{
 		//---- BULLET ATTACKING TIME ---//
-		contAttack = random_range(200,300);
+		contAttack = random_range(400,500);
 		bulletsCreated = 0;
 		BossChooseAttackRata(200);
 	}
@@ -26,7 +26,7 @@ if (contAttack >= 0)
 	}
 	
 	//---- ACTUAL BULLET ATTACKING TIME ---//
-	if (contAttack > 100) || (isBreakingVinyl)
+	if (contAttack > 300) || (isBreakingVinyl)
 	{
 		BossRataBulletAttack(attack);
 	}

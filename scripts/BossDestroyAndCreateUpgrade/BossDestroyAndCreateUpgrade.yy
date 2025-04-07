@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"BossDestroyAndCreateUpgrade",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"BossDestroyAndCreateUpgrade",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

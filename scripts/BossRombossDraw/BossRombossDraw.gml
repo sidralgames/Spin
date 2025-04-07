@@ -9,5 +9,5 @@ function BossRombossDraw()
 		distEye = 3;
 	}
 	
-	draw_sprite_ext(s_bossRombossEye,0,x+lengthdir_x(distEye, anglePlayer),y+lengthdir_y(distEye, anglePlayer),scale-0.1,scale-0.1,0, c_white, 1);
+	draw_sprite_ext(s_bossRombossEye,0,x+lengthdir_x(distEye, anglePlayer),y+lengthdir_y(distEye, anglePlayer),scale-0.1,scale-0.1,0, image_blend, 1);
 }

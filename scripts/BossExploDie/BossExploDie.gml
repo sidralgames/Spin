@@ -2,6 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function BossExploDie()
 {
+	screenShake(8,120,5);
 	exploOrange = instance_create_layer(x, y, "BulletsDown", o_explosion);
 	exploOrange.sprite_index = s_exploOrange;
 	exploOrange.image_xscale = 1.2;

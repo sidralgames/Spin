@@ -44,5 +44,8 @@ if instance_exists(o_player)
 		//draw_text(x,y-44,string(upgradeName));
 		//draw_set_color(c_white);
 		//draw_text(x+1,y-45,string(upgradeName));
+	
+	draw_sprite_ext(s_xConfirm, 0,  __view_get( e__VW.XView, 0 )+ 530,__view_get( e__VW.YView, 0 )+335,1,1,0,image_blend, image_alpha)
+
 	}
 }

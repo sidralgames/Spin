@@ -11,7 +11,8 @@ initialScreen = 330;
 initialCredits = 360;
 initialBack = 390;
 contCred = 20;
-
+initialConfirm = 290;
+initialBackCol = 400;
 if (global.screenshakeIsOn)
 {
 	spriteShake = s_screenshakeON;

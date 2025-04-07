@@ -31,6 +31,12 @@ if (alarm[0] <=0)
 	draw_self();
 	
 	draw_sprite_ext(s_discoVinilo,0,x,y+16,0.45,0.45,_angle,global.vinylColor,global.vinylAlpha);
+	
+	if (global.haveEye = true)
+	{
+		draw_sprite_ext(global.spriteBossEye,0,x,y+16,0.45,0.45,_angle,c_white,1);
+	}
+	
 	draw_sprite_ext(global.spriteBoss,0,x,y+16,0.45,0.45,_angle,c_white,1);
 
 	if (image_index >= 17)
@@ -44,6 +50,7 @@ if (alarm[0] <=0)
 	
 		if (_alpha <= 0.1)
 		{
+			global.haveEye = false;
 			upgradeVinyl = instance_create_layer(x,y,"Vinyl", o_viniloUpgrades);
 			upgradeGalleta = instance_create_layer(x,y,"Boss", o_upgrades);
 			upgradeGalleta.image_xscale = 0.12;

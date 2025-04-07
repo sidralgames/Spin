@@ -108,6 +108,7 @@ if (global.collection)
 			initialCollectionX = 320
 			initialBackX =  320
 			initialBackY = 300
+			initialBackCol = 380;
 		}
 	}
 }

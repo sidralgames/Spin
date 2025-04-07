@@ -1,13 +1,14 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
 type = collisionType.custom;
-
+scale = 0;
+scaled = false
 timeDying = false;
 bulletDamage = 1;
 rotSpeed = 35;
-anglePlayer = 0;
-precision = 2;
-initialSpeed = 2.25;
+
+
+
 image_speed = 0;
 setMisil = false;
 switch(image_index)

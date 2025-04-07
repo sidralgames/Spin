@@ -2,7 +2,13 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function BossOblongStep()
 {
-
+	if (bossSet = false)
+	{
+		global.haveEye = true;
+		spriteEyeBoss = s_bossOblongEye;
+		global.spriteBossEye = spriteEyeBoss;	
+	}
+	
 	if (firstAttack = false)
 	{
 		isBreakingVinyl = true;

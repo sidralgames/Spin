@@ -17,4 +17,5 @@ initialCollectionX = 320
 initialBackX =  320
 initialBackY = 300
 initialTitle = -30
-initialConfirm = 370;
+initialConfirm = 350;
+initialBackCol = 380;

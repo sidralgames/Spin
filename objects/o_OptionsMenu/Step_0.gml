@@ -20,63 +20,68 @@ if (alarm[0] <= 0)
 		}
 		
 
-			if (selected > 3)
-			{
-				selected = 0;	
-			}
+		if (selected > 3)
+		{
+			selected = 0;	
+		}
 
-			if (selected < 0)
-			{
-				selected = 3;	
-			}
+		if (selected < 0)
+		{
+			selected = 3;	
+		}
 
-			if (key_x)
+		if (key_x)
+		{
+			audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
+			switch(selected)
 			{
-				audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
-				switch(selected)
+				case 0:
 				{
-					case 0:
+					with (obj_CRT_controller)
 					{
-						
-						with (obj_CRT_controller)
-						{
-							//var_use_border = !var_use_border;
-							var_use_radial_distortion = !var_use_radial_distortion;
-							var_use_scanlines = !var_use_scanlines;
-							var_use_RGB_separation = !var_use_RGB_separation;
-						}
-						global.CRTIsOn = !global.CRTIsOn;
-					}break;
+						//var_use_border = !var_use_border;
+						var_use_radial_distortion = !var_use_radial_distortion;
+						var_use_scanlines = !var_use_scanlines;
+						var_use_RGB_separation = !var_use_RGB_separation;
+					}
+					global.CRTIsOn = !global.CRTIsOn;
 					
-					case 1:
-					{
-						global.screenshakeIsOn = !global.screenshakeIsOn;
-						if global.screenshakeIsOn
-						{
-							screenShake(4,40,2)
-						}
-		
-					}break;
+				}break;
+				
+				case 1:
+				{
+					global.screenshakeIsOn = !global.screenshakeIsOn;
 					
-					case 2:
+					if (global.screenshakeIsOn)
 					{
-						creditsShowing = !creditsShowing;
-						_visible = !_visible;
-						contCred = 20;
+						screenShake(4,40,2)
+					}
+				}break;
+				
+				case 2:
+				{
+					creditsShowing = !creditsShowing;
+					_visible = !_visible;
+					contCred = 20;
 		
-					}break;
+				}break;
 					
-					case 3:
-					{
-						instance_destroy();
-						o_MainMenu._visible = true;
-		
-					}break;
-				}
+				case 3:
+				{
+					instance_destroy();
+					o_MainMenu._visible = true;
+					
+				}break;
 			}
-	
+		}
+		
+		if (key_back)
+		{
+			instance_destroy();
+			o_MainMenu._visible = true;
+		}
+		
 	}
-
 }
 
 if (contCred >= 0)
@@ -91,8 +96,4 @@ if (creditsShowing) && _visible = false && (contCred < 0)
 		creditsShowing = !creditsShowing;
 		_visible = !_visible;
 	}
-}
-if !instance_exists(o_player)
-{
-	instance_create_layer(x,y,"Player",o_player);	
 }

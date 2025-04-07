@@ -5,8 +5,11 @@ function SlowDown(_slowSpeed, _slowFactor)
 	global.relativeSpeed = lerp(global.relativeSpeed, _slowSpeed, _slowFactor);
 	
 	o_aguja.angleAguja-= o_aguja.fac * global.relativeSpeed;
+	
 	songPitchOff = 0.2
 	pitch = min(1,global.relativeSpeed + songPitchOff);
+	
 	audio_emitter_pitch(global.audioEmitter, pitch);
+	
 	global.slowed = true;
 }

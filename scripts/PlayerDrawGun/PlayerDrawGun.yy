@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"PlayerDrawGun",
   "parent":{
-    "name":"SPIN",
-    "path":"SPIN.yyp",
+    "name":"Player",
+    "path":"folders/Scripts/Player.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -169,6 +169,8 @@ _angle = image_angle;
 global.vinylSpin = -0.6;
 bossVinylSpin = global.vinylSpin;
 global.spriteBoss = spriteBoss;
+global.haveEye = false;
+
 
 checkVinylForm = false;
 

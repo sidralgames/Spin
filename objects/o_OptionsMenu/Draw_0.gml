@@ -95,9 +95,11 @@ if (_visible)
 if (creditsShowing)
 {
 	draw_sprite_ext(s_creditsText, 1,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+170,1,1,0,image_blend, image_alpha)		
-	draw_sprite_ext(s_Back, 1,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialBack,0.7,0.7,0,image_blend, image_alpha)		
+	//draw_sprite_ext(s_Back, 1,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialBack,0.7,0.7,0,image_blend, image_alpha)		
 }
 
-	
+initialBackCol = lerp(initialBackCol, 345, factor)
+o_MainMenu.initialConfirm = lerp(o_MainMenu.initialConfirm, 300, factor)
+draw_sprite_ext(s_backCollection, o_MainMenu.imgBack,  __view_get( e__VW.XView, 0 )+ 530,__view_get( e__VW.YView, 0 )+initialBackCol,1,1,0,image_blend,  1)	
 
 

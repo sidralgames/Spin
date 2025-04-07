@@ -33,7 +33,21 @@ if (contComeFromDeath <= 0) && (checkVinylSpin = false)
 }
 
 
-if (slowedFromAHit = false)
+if (inDash)
+{
+	image_blend = c_aqua;
+}
+else
+{
+	image_blend = c_white;
+}
+
+
+if (slowedFromAHit)
+{
+	PlayerSlowedFromAHit()
+}
+else
 {
 	if (global.tempoCorrupted = false)
 	{
@@ -56,6 +70,7 @@ if (slowedFromAHit = false)
 				global.relativeSpeed = lerp(global.relativeSpeed, 1, 0.05);
 				pitch = min(1,global.relativeSpeed + songPitchOff);
 				audio_emitter_pitch(global.audioEmitter, pitch);
+				
 				if(global.relativeSpeed > 0.9)
 				{
 					pitch = 1;
@@ -77,52 +92,6 @@ if (slowedFromAHit = false)
 					global.relativeSpeed = 1;
 					global.fwd = false;
 				}
-			}
-		}
-	}
-}
-else
-{
-	if (goSlow = false)
-	{
-		
-		if (tempoCorrupted = true)
-		{
-			global.tempoCorrupted = false;
-			o_tempo.corrupted = false;
-		}
-	}
-	
-	if (global.relativeSpeed <= 0.5)
-	{
-		
-		goSlow = true;
-	}
-	
-	if (goSlow)
-	{
-		if (tempoCorrupted = true)
-		{
-			global.tempoCorrupted = false;
-			o_tempo.corrupted = false;
-		}
-		global.relativeSpeed = lerp(global.relativeSpeed, 1, 0.05)
-		o_aguja.angleAguja-= o_aguja.fac * global.relativeSpeed;
-		pitch = min(1,global.relativeSpeed);
-		audio_emitter_pitch(global.audioEmitter, pitch);
-		
-		if(global.relativeSpeed > 0.9)
-		{
-			pitch = 1;
-			audio_emitter_pitch(global.audioEmitter, pitch);
-			global.relativeSpeed = 1;
-			goSlow = false;
-			slowedFromAHit = false;
-			global.slowed = false;
-			if (tempoCorrupted = true)
-			{
-				global.tempoCorrupted = true;
-				o_tempo.corrupted = true;
 			}
 		}
 	}
@@ -240,7 +209,7 @@ if (dying = false)
 			
 			if (inDash)
 			{
-				if collision_circle(x,y,10,o_boss,true,true)
+				if collision_circle(x,y,12,o_boss,true,true)
 				{
 					direction = point_direction(o_boss.x, o_boss.y, x, y);
 					alarm[3] = 5;
@@ -296,7 +265,7 @@ if (dying = false)
 				{
 					inDash = false;
 					dashTime = 0;
-					hspeed = -hspeed * bnc;
+					hspeed = -hspeed;
 					alarm[3] = 5;
 				}
 
@@ -304,7 +273,7 @@ if (dying = false)
 				{
 					inDash = false;
 					dashTime = 0;
-					vspeed = -vspeed * bnc;
+					vspeed = -vspeed;
 					alarm[3] = 5;
 				}
 				
@@ -316,10 +285,10 @@ if (dying = false)
 				if (alarm[3] <= 0)
 				{
 
-					point_direction0 = point_direction(global.cx, global.cy, xprevious, yprevious);
-					point_direction1 = point_direction(global.cx, global.cy, x, y);
+					point_directionPrev = point_direction(global.cx, global.cy, xprevious, yprevious);
+					point_directionActual = point_direction(global.cx, global.cy, x, y);
 	
-					if point_direction1 > point_direction0
+					if (point_directionActual > point_directionPrev)
 					{
 						runningAgainstDisc = true;
 						realspeed = lerp(realspeed, point_distance(0 ,0, haxis, vaxis) * (_speed - abs(bossSpin * global.relativeSpeed)), 0.1); // direccionContraria
@@ -368,10 +337,10 @@ if (dying = false)
 							direction = point_direction(nextWall.x, nextWall.y, x, y);
 						}
 					
-						point_direction0 = point_direction(global.cx, global.cy, xprevious, yprevious);
-						point_direction1 = point_direction(global.cx, global.cy, x, y);
+						point_directionPrev = point_direction(global.cx, global.cy, xprevious, yprevious);
+						point_directionActual = point_direction(global.cx, global.cy, x, y);
 	
-						if point_direction1 > point_direction0
+						if point_directionActual > point_directionPrev
 						{
 							realspeed = lerp(realspeed, 0.6* (_speed - abs(bossSpin * global.relativeSpeed)), 0.1); // direccionContraria
 						}

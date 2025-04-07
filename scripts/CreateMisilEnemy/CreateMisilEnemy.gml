@@ -15,9 +15,11 @@ function CreateMisilEnemy(_racimoOdds, _spriteMisil)
 			misilToCreate = o_enemyMisil;
 		}
 		
-		misil = instance_create_layer(x + lengthdir_x(distEye, anglePlayer), y + lengthdir_y(distEye, anglePlayer), "BulletsDown", misilToCreate)
-		misil.anglePlayer = anglePlayer+random_range(-90,90);
+		misil = instance_create_layer(x + lengthdir_x(2, anglePlayer), y + lengthdir_y(2, anglePlayer), "BulletsDown", misilToCreate)
+		misil.direction = anglePlayer+random_range(-90,90);
+		misil.anglePlayer = misil.direction;
+		misil.image_angle = misil.direction;
 		misil.image_index = _spriteMisil
-		contMisil = max(20, _hp/2);
+		contMisil = max(20, _hp/1.5);
 	}
 }

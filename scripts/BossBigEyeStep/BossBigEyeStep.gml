@@ -2,6 +2,12 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function BossBigEyeStep()
 {
+	if (bossSet = false)
+	{
+		global.haveEye = true;
+		spriteEyeBoss = s_Eye;
+		global.spriteBossEye = spriteEyeBoss;	
+	}
 	
 	if (firstAttack = false)
 	{

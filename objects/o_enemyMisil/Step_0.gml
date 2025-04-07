@@ -1,5 +1,9 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
+
+direction = anglePlayer;
+image_angle = direction;
+
 if (setMisil = false)
 {
 	switch(image_index)
@@ -35,12 +39,23 @@ if (setMisil = false)
 	setMisil = true;
 }
 
+if (scaled = false)
+{
+	scale = lerp(scale, 1, 0.07)
+	
+	if (scale > 0.9)
+	{
+		scale = 1;
+		scaled = true
+	}
+}
 
+image_xscale = scale;
+image_yscale = scale;
 
 _hpTime --;
 
-direction = anglePlayer;
-image_angle = direction;
+
 
 if (_hp <= 0) || (_hpTime <= 0)
 {
