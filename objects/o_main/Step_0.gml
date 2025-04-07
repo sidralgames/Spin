@@ -8,7 +8,7 @@
 
 if (load = false)
 {
-	//LoadAllUnlocked();
+	LoadAllUnlocked();
 	LoadCollection();
 	load = true;
 }

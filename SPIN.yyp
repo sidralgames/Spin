@@ -53,7 +53,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.8.0.169",
+    "IDEVersion":"2024.11.0.179",
   },
   "name":"SPIN",
   "resources":[
@@ -363,6 +363,7 @@
     {"id":{"name":"s_bossBigEye","path":"sprites/s_bossBigEye/s_bossBigEye.yy",},},
     {"id":{"name":"s_bossCantando","path":"sprites/s_bossCantando/s_bossCantando.yy",},},
     {"id":{"name":"s_bossDef","path":"sprites/s_bossDef/s_bossDef.yy",},},
+    {"id":{"name":"s_bossDemon_B","path":"sprites/s_bossDemon_B/s_bossDemon_B.yy",},},
     {"id":{"name":"s_bossDemon","path":"sprites/s_bossDemon/s_bossDemon.yy",},},
     {"id":{"name":"s_bossesDefeated","path":"sprites/s_bossesDefeated/s_bossesDefeated.yy",},},
     {"id":{"name":"s_bossGirl","path":"sprites/s_bossGirl/s_bossGirl.yy",},},

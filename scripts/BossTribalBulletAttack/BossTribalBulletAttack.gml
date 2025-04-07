@@ -8,7 +8,7 @@ function BossTribalBulletAttack(_attack)
 		{
 			if (canRoto)
 			{
-				BossAttackRoto(120,500);
+				BossAttackRoto(120,300);
 			}
 			else
 			{	

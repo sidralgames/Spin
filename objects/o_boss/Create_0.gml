@@ -19,6 +19,7 @@ _angleLaser_L = irandom(360)
 _angleLaser_R = irandom(360)
 isLaser = false;
 laserNum = 1 + irandom(5);
+bossSet = false;
 
 for (var i=0; i<laserNum; i++)
 {

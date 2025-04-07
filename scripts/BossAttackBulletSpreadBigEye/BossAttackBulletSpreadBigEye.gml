@@ -17,7 +17,7 @@ function BossAttackBulletSpreadBigEye(_offset, _maxBullets, _fireRate, _fireRate
 						
 		if (bulletsCreated >= _maxBullets)
 		{
-			contAttack = 0;
+			//contAttack = 0;
 			canChangeAttack = true;
 			offsetRound = 0;
 		}

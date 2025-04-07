@@ -7,7 +7,7 @@ function BossGirlStep()
 		contAttack --;
 	}
 	
-	if (contAttack <= 0) && (canChangeAttack) && (alarm[0] <= 0)
+	if (contAttack <= 0) //&& (canChangeAttack) && (alarm[0] <= 0)
 	{
 		//---- BULLET ATTACKING TIME ---//
 		
