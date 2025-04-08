@@ -7,6 +7,8 @@ function BossCollection()
 	vinylToPlay = ds_map_find_value(global.collectionList, selectedVinyl);
 	
 	alias = vinylToPlay.alias;
+	kills = vinylToPlay.kills;
+	deaths = vinylToPlay.deaths;
 	
 	if (vinylToPlay.unlocked >= 1)
 	{

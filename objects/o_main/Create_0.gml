@@ -31,6 +31,7 @@ iconsTotal = iconsInLine + iconsInLine2 + iconsInLine3
 //----- FONT ----//
 display_reset(0, false);
 global.customFont16= font_add("chubby-choo-semi-bold.ttf", 16, false, false, 32, 128);
+global.customFont15= font_add("chubby-choo-semi-bold.ttf", 15, false, false, 32, 128);
 global.customFont14= font_add("chubby-choo-semi-bold.ttf", 14, false, false, 32, 128);
 global.customFont13= font_add("chubby-choo-semi-bold.ttf", 13, false, false, 32, 128);
 global.customFont12= font_add("chubby-choo-semi-bold.ttf", 12, false, false, 32, 128);

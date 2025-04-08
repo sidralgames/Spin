@@ -23,7 +23,14 @@ function AddBossTribalCollection()
 		noiseTintCol: global.yellowArray2,
 		wallSprite: s_wallTribal,
 		isDLC: false,
-		spriteDLCTitle: s_elGancho_title
+		spriteDLCTitle: s_elGancho_title,
+		songName: "Nothing Inside You",
+		albumName: "SPYYN OST",
+		artistName: "ESE UVE",
+		killsName: "bossTribalKills",
+		deathsName: "bossTribalDeaths",
+		kills: 0,
+		deaths: 0
 	})
 
 	global.totalNumberOfVinyls +=1;

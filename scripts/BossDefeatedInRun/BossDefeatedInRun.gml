@@ -4,12 +4,13 @@ function BossDefeatedInRun()
 {
 	global.bossesDefeatedInRun +=1;
 	
-	for (var i=0; i<global.totalNumberOfVinyls-1; i++)
+	for (var i=0; i<global.totalNumberOfVinyls; i++)
 	{	
 		thisBoss = ds_map_find_value(global.collectionList, i);
 		if (thisBoss.sprite = spriteBoss)
 		{
 			thisBoss.defeatedInRun = 1;
+			thisBoss.kills += 1
 		}
 	}
 }

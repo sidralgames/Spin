@@ -3,7 +3,7 @@
 initialAngleAguja = 32;
 angleAguja = initialAngleAguja
 image_angle = angleAguja;
-songDuration = audio_sound_length(global.song);
+songDuration = audio_sound_length(snd_song1);
 
 framesSong = songDuration * room_speed;
 

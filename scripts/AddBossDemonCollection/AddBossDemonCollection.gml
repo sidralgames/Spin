@@ -23,7 +23,14 @@ function AddBossDemonCollection()
 		noiseTintCol: global.BlueArray,
 		wallSprite: s_wallDemon,
 		isDLC: false,
-		spriteDLCTitle: s_elGancho_title
+		spriteDLCTitle: s_elGancho_title,
+		songName: "Ay Ay Ay (No Tomorrow)",
+		albumName: "SPYYN OST",
+		artistName: "ESE UVE",
+		killsName: "bossDemonKills",
+		deathsName: "bossDemonDeaths",
+		kills: 0,
+		deaths: 0
 	})
 
 	global.totalNumberOfVinyls +=1;

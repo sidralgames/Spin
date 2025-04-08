@@ -9,6 +9,8 @@ function LoadAllLocked()
 	{	
 		thisBoss = ds_map_find_value(global.collectionList, i);
 		ini_write_real("bossesCollection",thisBoss.alias, 0);
+		ini_write_real("stats",thisBoss.killsName, 0);
+		ini_write_real("stats",thisBoss.deathsName, 0);
 	}
 	
 	ini_write_real("stats","maxLevel", 1);

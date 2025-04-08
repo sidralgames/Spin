@@ -23,7 +23,14 @@ function AddBossUpgradesCollection()
 		noiseTintCol: global.lightPinkArray,
 		wallSprite: s_wallNacho,
 		isDLC: false,
-		spriteDLCTitle: s_elGancho_title
+		spriteDLCTitle: s_elGancho_title,
+		songName: "Love Spell",
+		albumName: "Paradxse",
+		artistName: "SV",
+		killsName: "bossUpgradesKills",
+		deathsName: "bossUpgradesDeaths",
+		kills: 0,
+		deaths: 0
 	})
 
 	global.totalNumberOfVinyls +=1;

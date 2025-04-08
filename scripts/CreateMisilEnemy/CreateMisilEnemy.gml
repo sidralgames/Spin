@@ -20,6 +20,6 @@ function CreateMisilEnemy(_racimoOdds, _spriteMisil)
 		misil.anglePlayer = misil.direction;
 		misil.image_angle = misil.direction;
 		misil.image_index = _spriteMisil
-		contMisil = max(30, _hp/1.5);
+		contMisil = max(60, _hp/2);
 	}
 }

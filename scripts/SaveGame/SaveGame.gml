@@ -9,7 +9,10 @@ function SaveGame()
 	{	
 		thisBoss = ds_map_find_value(global.collectionList, i);
 		ini_write_real("bossesCollection",thisBoss.alias, thisBoss.unlocked);
+		ini_write_real("stats",thisBoss.killsName, thisBoss.kills);
+		ini_write_real("stats",thisBoss.deathsName, thisBoss.deaths);
 	}
+	
 	
 	if (global.level > global.maxLevelReached)
 	{

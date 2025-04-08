@@ -23,7 +23,14 @@ function AddBossMixtapeCollection()
 		noiseTintCol: global.lightPinkArray,
 		wallSprite: s_wallMixtape,
 		isDLC: false,
-		spriteDLCTitle: s_elGancho_title
+		spriteDLCTitle: s_elGancho_title,
+		songName: "Aries - Sayonara (SV Remix)",
+		albumName: "SPYYN OST",
+		artistName: "ESE UVE",
+		killsName: "bossMixtapeKills",
+		deathsName: "bossMixtapeDeaths",
+		kills: 0,
+		deaths: 0
 	})
 
 	global.totalNumberOfVinyls +=1;

@@ -20,6 +20,8 @@ if (global.collection = false) && (global.howToPlay = false)
 		draw_sprite_ext(s_title, 1,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialTitle,1,1,0,image_blend, image_alpha)
 	}
 }
+
+
 if (_visible)
 {
 	
@@ -108,40 +110,94 @@ if (_visible)
 		}
 }
 
-if (global.collection)
-{
-	if (initialBackY > 305)
+	if (global.collection)
 	{
-		if (vinylToPlay.isDLC = true)
+		if (_visibleCollection)
 		{
-			draw_sprite_ext(vinylToPlay.spriteDLCTitle, 0,  __view_get( e__VW.XView, 0 )+ 120,__view_get( e__VW.YView, 0 )+90,1,1,0,image_blend,  1)	
+		if (initialBackY > 305)
+		{
+			if (vinylToPlay.isDLC = true)
+			{
+				draw_sprite_ext(vinylToPlay.spriteDLCTitle, 0,  __view_get( e__VW.XView, 0 )+ 120,__view_get( e__VW.YView, 0 )+90,1,1,0,image_blend,  1)	
+			}
+		
+			if (vinylToPlay.unlocked >= 1)
+			{
+				
+				draw_set_halign(fa_left)
+				draw_set_font(global.customFont15)
+		
+				draw_set_color(global.lightBlue)
+				draw_text( __view_get( e__VW.XView, 0 )+ 35,__view_get( e__VW.YView, 0 )+202, string(vinylToPlay.number + 1) + ". " + string(vinylToPlay.songName) + "\n" + string(vinylToPlay.albumName) + "\n" + string(vinylToPlay.artistName))
+				draw_set_color(global.yellow)
+				draw_text( __view_get( e__VW.XView, 0 )+ 35,__view_get( e__VW.YView, 0 )+201, string(vinylToPlay.number + 1) + ". " + string(vinylToPlay.songName) + "\n" + string(vinylToPlay.albumName) + "\n" + string(vinylToPlay.artistName))
+				draw_set_color(global.pink)
+				draw_text( __view_get( e__VW.XView, 0 )+ 35,__view_get( e__VW.YView, 0 )+200, string(vinylToPlay.number + 1) + ". " + string(vinylToPlay.songName) + "\n" + string(vinylToPlay.albumName) + "\n" + string(vinylToPlay.artistName))
+
+
+				draw_set_font(global.customFont14)
+				draw_set_halign(fa_left)
+				draw_set_color(global.lightBlue)
+				draw_text( __view_get( e__VW.XView, 0 )+ 35,__view_get( e__VW.YView, 0 )+292, "Kills: " + string(vinylToPlay.kills))
+				draw_set_color(global.yellow)
+				draw_text( __view_get( e__VW.XView, 0 )+ 35,__view_get( e__VW.YView, 0 )+291, "Kills: " + string(vinylToPlay.kills))
+				draw_set_color(global.pink)
+				draw_text( __view_get( e__VW.XView, 0 )+ 35,__view_get( e__VW.YView, 0 )+290, "Kills: " + string(vinylToPlay.kills))
+		
+	
+				draw_set_color(global.lightBlue)
+				draw_text( __view_get( e__VW.XView, 0 )+ 35,__view_get( e__VW.YView, 0 )+312, "Deaths: " + string(vinylToPlay.deaths))
+				draw_set_color(global.yellow)
+				draw_text( __view_get( e__VW.XView, 0 )+ 35,__view_get( e__VW.YView, 0 )+311, "Deaths: " + string(vinylToPlay.deaths))
+				draw_set_color(global.pink)
+				draw_text( __view_get( e__VW.XView, 0 )+ 35,__view_get( e__VW.YView, 0 )+310, "Deaths: " + string(vinylToPlay.deaths))
+			}
+			else
+			{
+				draw_set_halign(fa_left)
+				draw_set_font(global.customFont15)
+		
+				draw_set_color(global.lightBlue)
+				draw_text( __view_get( e__VW.XView, 0 )+ 30,__view_get( e__VW.YView, 0 )+237, string(vinylToPlay.number + 1) + ". " + "?????" + "\n" + string(vinylToPlay.albumName))
+				draw_set_color(global.yellow)
+				draw_text( __view_get( e__VW.XView, 0 )+ 30,__view_get( e__VW.YView, 0 )+236, string(vinylToPlay.number + 1) + ". " + "?????" + "\n" + string(vinylToPlay.albumName))
+				draw_set_color(global.pink)
+				draw_text( __view_get( e__VW.XView, 0 )+ 30,__view_get( e__VW.YView, 0 )+235, string(vinylToPlay.number + 1) + ". " + "?????" + "\n" + string(vinylToPlay.albumName))
+			}
+
+		}
+	
+	
+		if gamepad_is_connected(0)
+		{
+			imgBack = 0;
+		}
+		else
+		{
+			imgBack = 1;
+		}
+	
+	
+		initialCollection =  lerp(initialCollection, 50,factor);
+		initialCollectionX = lerp(initialCollectionX, 110,factor);
+		initialBackX =  lerp(initialBackX, 530,factor);
+		initialBackY = lerp(initialBackY, 330,factor);
+		initialBackCol = lerp(initialBackCol, 340, factor)
+		initialConfirm = lerp(initialConfirm, 300,factor);
+		//draw_sprite_ext(s_collection, 0,  __view_get( e__VW.XView, 0 )+ initialCollectionX,__view_get( e__VW.YView, 0 )+initialCollection,0.8,0.8,0,image_blend,  1)	
+		draw_sprite_ext(s_backCollection, imgBack,  __view_get( e__VW.XView, 0 )+ 530,__view_get( e__VW.YView, 0 )+initialBackCol,1,1,0,image_blend,  1)	
+		initialFlechaL= lerp(initialFlechaL, 223,factor);
+		initialFlechaR= lerp(initialFlechaR, 223,factor);
+		draw_sprite_ext(s_flechas, 0, o_boss.x - initialFlechaL ,__view_get( e__VW.YView, 0 )+180,1,1,0,image_blend,  1)	
+		draw_sprite_ext(s_flechas, 1, o_boss.x + initialFlechaR ,__view_get( e__VW.YView, 0 )+180,1,1,0,image_blend,  1)	
+		
 		}
 	}
-	if gamepad_is_connected(0)
-	{
-		imgBack = 0;
-	}
-	else
-	{
-		imgBack = 1;
-	}
-	initialCollection =  lerp(initialCollection, 50,factor);
-	initialCollectionX = lerp(initialCollectionX, 110,factor);
-	initialBackX =  lerp(initialBackX, 530,factor);
-	initialBackY = lerp(initialBackY, 330,factor);
-	initialBackCol = lerp(initialBackCol, 340, factor)
-	initialConfirm = lerp(initialConfirm, 300,factor);
-	//draw_sprite_ext(s_collection, 0,  __view_get( e__VW.XView, 0 )+ initialCollectionX,__view_get( e__VW.YView, 0 )+initialCollection,0.8,0.8,0,image_blend,  1)	
-	draw_sprite_ext(s_backCollection, imgBack,  __view_get( e__VW.XView, 0 )+ 530,__view_get( e__VW.YView, 0 )+initialBackCol,1,1,0,image_blend,  1)	
-	draw_sprite_ext(s_flechas, 0, o_boss.x - 214 ,__view_get( e__VW.YView, 0 )+180,1,1,0,image_blend,  1)	
-	draw_sprite_ext(s_flechas, 1, o_boss.x + 214 ,__view_get( e__VW.YView, 0 )+180,1,1,0,image_blend,  1)	
-
-}
 
 if instance_exists(o_HowToPlay)
 {
 	initialConfirm = lerp(initialConfirm, 300, factor)
 	initialBackCol = lerp(initialBackCol, 345, factor)
 	draw_sprite_ext(s_backCollection, imgBack,  __view_get( e__VW.XView, 0 )+ 530,__view_get( e__VW.YView, 0 )+initialBackCol,1,1,0,image_blend,  1)	
-	
+
 }

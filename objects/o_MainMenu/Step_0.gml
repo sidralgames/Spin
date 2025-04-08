@@ -53,6 +53,7 @@ if (alarm[0] <= 0)
 			}
 		}
 	}
+	
 }
 
 if !instance_exists(o_player)
@@ -62,9 +63,16 @@ if !instance_exists(o_player)
 
 if (global.collection)
 {
+	
+	if (key_buttonUP)
+	{
+		_visibleCollection = !_visibleCollection
+	}
+	
 	if (initialBackY > 300)
 	{
 		vinylToPlay = ds_map_find_value(global.collectionList, o_boss.selectedVinyl);
+		
 		if (key_x) && (vinylToPlay.unlocked >= 1)
 		{
 			o_main.changingLevel = true;

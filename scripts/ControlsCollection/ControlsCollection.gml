@@ -12,6 +12,7 @@ function ControlsCollection()
 		selectedVinyl -=1;	
 		changeSongCollection = false;
 		o_main.changingLevel = true;
+		o_MainMenu.initialFlechaL = 240;
 		ResetNeedle();
 	}
 	
@@ -21,6 +22,7 @@ function ControlsCollection()
 		selectedVinyl +=1;
 		changeSongCollection = false;
 		o_main.changingLevel = true;
+		o_MainMenu.initialFlechaR = 240;
 		ResetNeedle();
 	}
 		

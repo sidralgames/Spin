@@ -7,6 +7,7 @@ function AddBossNachoCollection()
 		alias: "bossNacho",
 		song: snd_song1,
 		offsetSong: 65,
+		deaths: 0,
 		keyKilledBy :"killedByNacho",
 		sprite: s_bossNacho,
 		bside: s_bossNacho_B,
@@ -23,7 +24,14 @@ function AddBossNachoCollection()
 		noiseTintCol: global.pinkArray,
 		wallSprite: s_wallNacho,
 		isDLC: false,
-		spriteDLCTitle: s_elGancho_title
+		spriteDLCTitle: s_elGancho_title,
+		songName: "NotReallyHere",
+		albumName: "SPYYN OST",
+		artistName: "ESE UVE",
+		killsName: "bossNachoKills",
+		deathsName: "bossNachoDeaths",
+		kills: 0,
+		
 	})
 
 	global.totalNumberOfVinyls +=1;

@@ -9,6 +9,8 @@ function LoadCollection()
 	{	
 		thisBoss = ds_map_find_value(global.collectionList, i);
 		thisBoss.unlocked = ini_read_real("bossesCollection", thisBoss.alias, 0);
+		thisBoss.kills = ini_read_real("stats", thisBoss.killsName, 0);
+		thisBoss.deaths = ini_read_real("stats", thisBoss.deathsName, 0);
 	}
 	
 	global.maxLevelReached = ini_read_real("stats", "maxLevel", 0);

@@ -5,7 +5,7 @@ function AddBossOblongCollection()
 	ds_map_add(global.collectionList, global.totalNumberOfVinyls,
 	{ 
 		alias: "bossOblong",
-		song: snd_EyeSeeU,
+		song: snd_Reset3,
 		offsetSong: 14,
 		keyKilledBy :"killedByOblong",
 		sprite: s_bossOblong,
@@ -23,7 +23,14 @@ function AddBossOblongCollection()
 		noiseTintCol: global.orangeArray,
 		wallSprite: s_wallOblong,
 		isDLC: true,
-		spriteDLCTitle: s_elGancho_title
+		spriteDLCTitle: s_elGancho_title,
+		songName: "Reset.3",
+		albumName: "El Gancho OST",
+		artistName: "Ingala",
+		killsName: "bossOblongKills",
+		deathsName: "bossOblongDeaths",
+		kills: 0,
+		deaths: 0
 	})
 
 	global.totalNumberOfVinyls +=1;

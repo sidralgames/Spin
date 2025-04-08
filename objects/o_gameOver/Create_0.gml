@@ -15,6 +15,9 @@ for (var i = 0; i < global.totalNumberOfVinyls; i++)
 	}
 }
 
+getBossDeath = false;
+
+
 selected = 0;
 _visible = true;
 

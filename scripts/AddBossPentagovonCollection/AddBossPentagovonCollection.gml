@@ -23,7 +23,14 @@ function AddBossPentagovonCollection()
 		noiseTintCol: global.yellowArray,
 		wallSprite: s_wallPentagovon,
 		isDLC: true,
-		spriteDLCTitle: s_elGancho_title
+		spriteDLCTitle: s_elGancho_title,
+		songName: "Satan's Vomit",
+		albumName: "El Gancho OST",
+		artistName: "Ingala",
+		killsName: "bossPentagovonKills",
+		deathsName: "bossPentagovonDeaths",
+		kills: 0,
+		deaths: 0
 	})
 
 	global.totalNumberOfVinyls +=1;

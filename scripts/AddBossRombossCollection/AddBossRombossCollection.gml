@@ -23,7 +23,14 @@ function AddBossRombossCollection()
 		noiseTintCol: global.lightBlueArray,
 		wallSprite: s_wallDemon,
 		isDLC: true,
-		spriteDLCTitle: s_elGancho_title
+		spriteDLCTitle: s_elGancho_title,
+		songName: "Crystal Boss",
+		albumName: "El Gancho OST",
+		artistName: "Ingala",
+		killsName: "bossRombossKills",
+		deathsName: "bossRombossDeaths",
+		kills: 0,
+		deaths: 0
 	})
 
 	global.totalNumberOfVinyls +=1;

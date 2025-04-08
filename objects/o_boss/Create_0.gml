@@ -103,6 +103,8 @@ if (global.level <= global.totalNumberOfVinyls)
 	
 		//spriteBoss = choose(bossToCreate.sprite, bossToCreate.bside);
 		alias = bossToCreate.alias;
+		killsName = bossToCreate.killsName;
+		deathsName = bossToCreate.deathsName;
 		spriteBoss = bossToCreate.sprite
 		bossNumber = bossToCreate.number;
 		bossIsInCollection = bossToCreate.unlocked;
@@ -134,6 +136,8 @@ else
 	_hp = _hpMax
 	bossStep = bossToCreate.step;
 	spriteVinyl = bossToCreate.spriteVinyl;
+	killsName = bossToCreate.killsName;
+	deathsName = bossToCreate.deathsName;
 	
 	
 }

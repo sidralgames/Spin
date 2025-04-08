@@ -44,7 +44,7 @@ function BossBigEyeStep()
 	{
 		//---- BULLET ATTACKING TIME ---//
 		
-		contAttack = random_range(400,500);
+		contAttack = random_range(400,550);
 		bulletsCreated = 0;
 		BossChooseAttackBigEye(150);
 		
@@ -60,7 +60,7 @@ function BossBigEyeStep()
 	}
 	
 	//---- ACTUAL BULLET ATTACKING TIME ---//
-	if (contAttack < 200) || (isBreakingVinyl)
+	if (contAttack < 300) || (isBreakingVinyl)
 	{
 		BossBigEyeBulletAttack(attack);
 	}

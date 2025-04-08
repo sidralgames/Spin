@@ -19,3 +19,7 @@ initialBackY = 300
 initialTitle = -30
 initialConfirm = 350;
 initialBackCol = 380;
+initialFlechaL = 254;
+initialFlechaR = 254;
+
+_visibleCollection = true;

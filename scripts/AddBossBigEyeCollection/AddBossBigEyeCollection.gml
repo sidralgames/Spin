@@ -23,7 +23,14 @@ function AddBossBigEyeCollection()
 		noiseTintCol: global.salmonArray,
 		wallSprite: s_wallBigEye,
 		isDLC: true,
-		spriteDLCTitle: s_elGancho_title
+		spriteDLCTitle: s_elGancho_title,
+		songName: "Eye See U",
+		albumName: "El Gancho OST",
+		artistName: "Ingala",
+		killsName: "bossBigEyeKills",
+		deathsName: "bossBigEyeDeaths",
+		kills: 0,
+		deaths: 0
 	})
 
 	global.totalNumberOfVinyls +=1;

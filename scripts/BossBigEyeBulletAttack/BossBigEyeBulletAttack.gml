@@ -8,7 +8,7 @@ function BossBigEyeBulletAttack(_attack)
 		{
 			if (canRoto)
 			{
-				BossAttackRoto(100,300);
+				BossAttackRoto(100,250);
 			}
 			else
 			{	

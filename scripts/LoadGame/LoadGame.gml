@@ -16,5 +16,6 @@ function LoadGame()
 	global.bossMixtapeCollection  = ini_read_real("bossesCollection","bossMixtape", 0);
 	global.bossPentagovonCollection  = ini_read_real("bossesCollection","bossPentagovon", 0);
 	
+	
 	ini_close();
 }

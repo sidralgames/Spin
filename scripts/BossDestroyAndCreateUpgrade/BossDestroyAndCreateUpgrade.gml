@@ -2,6 +2,8 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function BossDestroyAndCreateUpgrade()
 {
+	SaveGame();
+	
 	//--- CREATE UPGRADE VINYL ---//
 	upgradeVinyl = instance_create_layer(x,y,"Vinyl", o_viniloUpgrades);
 	upgradeGalleta = instance_create_layer(x,y,"Boss", o_upgrades);

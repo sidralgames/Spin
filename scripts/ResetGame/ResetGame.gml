@@ -43,7 +43,7 @@ function ResetGame(_playing)
 	}
 	else
 	{
-		global.level = irandom_range(1, global.maxLevelReached)	
+		global.level = irandom_range(1, global.maxLevelReached-1)	
 	}
 	//--- RESET GLOBALS ---//
 	global.relativeSpeed = 1;

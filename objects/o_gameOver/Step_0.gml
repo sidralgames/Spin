@@ -5,6 +5,21 @@ Controls_Input();
 
 rot += global.vinylSpin;
 
+if (getBossDeath = false)
+{
+	for (var i = 0; i < global.totalNumberOfVinyls; i++)
+	{
+		thisBossDeath = ds_map_find_value(global.collectionList, i);
+		if (thisBossDeath.alias = o_boss.alias)
+		{
+			thisBossDeath.deaths += 1;
+		}
+	}
+	
+	SaveGame();
+	getBossDeath = true;
+}
+
 if (alarm[0] <= 0)
 {
 	if (_visible)

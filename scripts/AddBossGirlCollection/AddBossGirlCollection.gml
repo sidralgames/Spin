@@ -23,7 +23,14 @@ function AddBossGirlCollection()
 		noiseTintCol: global.yellowGirlArray,
 		wallSprite: s_wallGirl,
 		isDLC: false,
-		spriteDLCTitle: s_elGancho_title
+		spriteDLCTitle: s_elGancho_title,
+		songName: "Enough 4 U",
+		albumName: "SPYYN OST",
+		artistName: "ESE UVE",
+		killsName: "bossGirlKills",
+		deathsName: "bossGirlDeaths",
+		kills: 0,
+		deaths: 0
 	})
 
 	global.totalNumberOfVinyls +=1;

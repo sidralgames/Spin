@@ -23,7 +23,14 @@ function AddBossRataCollection()
 		noiseTintCol: global.greenRatArray,
 		wallSprite: s_wallRata,
 		isDLC: false,
-		spriteDLCTitle: s_elGancho_title
+		spriteDLCTitle: s_elGancho_title,
+		songName: "ratrat",
+		albumName: "SPYYN OST",
+		artistName: "ESE UVE",
+		killsName: "bossRataKills",
+		deathsName: "bossRataDeaths",
+		kills: 0,
+		deaths: 0
 	})
 
 	global.totalNumberOfVinyls +=1;

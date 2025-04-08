@@ -53,7 +53,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.11.0.179",
+    "IDEVersion":"2024.8.0.169",
   },
   "name":"SPIN",
   "resources":[
@@ -343,6 +343,7 @@
     {"id":{"name":"snd_mixtape","path":"sounds/snd_mixtape/snd_mixtape.yy",},},
     {"id":{"name":"snd_moveMenu","path":"sounds/snd_moveMenu/snd_moveMenu.yy",},},
     {"id":{"name":"snd_obsession","path":"sounds/snd_obsession/snd_obsession.yy",},},
+    {"id":{"name":"snd_Reset3","path":"sounds/snd_Reset3/snd_Reset3.yy",},},
     {"id":{"name":"snd_Romboss","path":"sounds/snd_Romboss/snd_Romboss.yy",},},
     {"id":{"name":"snd_roto","path":"sounds/snd_roto/snd_roto.yy",},},
     {"id":{"name":"snd_satansVomit","path":"sounds/snd_satansVomit/snd_satansVomit.yy",},},
