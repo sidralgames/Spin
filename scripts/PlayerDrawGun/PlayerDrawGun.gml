@@ -32,6 +32,6 @@ function PlayerDrawGun()
 	}
 	else
 	{
-		draw_sprite_ext(gunSprite, 0, x + lengthdir_x(distGun - recoilGun, aimDir), y + lengthdir_y(distGun - recoilGun, aimDir),1,scaleGunY,aimDir,colorGun,image_alpha)
+		draw_sprite_ext(gunSprite, 0, x + lengthdir_x(distGun - recoilGun, aimDir), y + lengthdir_y(distGun - recoilGun, aimDir),1,scaleGunY,aimDir,c_white,image_alpha)
 	}
 }

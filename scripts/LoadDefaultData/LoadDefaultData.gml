@@ -13,5 +13,4 @@ function LoadDefaultData()
 	global.bossRombossCollection = 0;
 	
 	global.bossUpgradesCollection = 0;
-	global.maxLevelReached = 1;
 }

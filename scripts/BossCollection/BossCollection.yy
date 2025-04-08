@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"BossCollection",
   "parent":{
-    "name":"SPIN",
-    "path":"SPIN.yyp",
+    "name":"Boss",
+    "path":"folders/Scripts/Boss.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

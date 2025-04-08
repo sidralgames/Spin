@@ -10,8 +10,8 @@
   "name":"o_bossHP",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Boss",
+    "path":"folders/Objetos/Boss.yy",
   },
   "parentObjectId":null,
   "persistent":false,

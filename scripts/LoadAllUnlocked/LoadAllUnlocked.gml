@@ -14,7 +14,7 @@ function LoadAllUnlocked()
 	}
 	
 	ini_write_real("stats","maxLevel", global.totalNumberOfVinyls);
-	global.maxLevelReached = ini_read_real("stats", "maxLevel", 0);
+	
 	
 	ini_close();
 	

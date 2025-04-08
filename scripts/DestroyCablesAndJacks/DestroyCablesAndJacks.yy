@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"DestroyCablesAndJacks",
   "parent":{
-    "name":"SPIN",
-    "path":"SPIN.yyp",
+    "name":"Other",
+    "path":"folders/Scripts/Other.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

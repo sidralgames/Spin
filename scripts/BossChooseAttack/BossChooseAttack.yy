@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"BossChooseAttack",
   "parent":{
-    "name":"Sprites",
-    "path":"folders/Sprites.yy",
+    "name":"BossChooseAttack",
+    "path":"folders/Scripts/BossChooseAttack.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

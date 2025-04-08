@@ -5,8 +5,8 @@ if ( (canBePicked) && (key_x) ) || ((canBePicked) && (autoPicked) )
 {
 	CheckLimitedAndUniqueUpgrades();
 	
-	global.lives+=2;
-	global.lives = min(global.maxLives, global.lives)
+	global.lives = global.maxLives;
+	//global.lives = min(global.maxLives, global.lives)
 	instance_destroy();
 	instance_destroy(o_upgradesFather);
 }

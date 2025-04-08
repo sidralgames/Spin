@@ -12,7 +12,7 @@ function AddBossNachoCollection()
 		sprite: s_bossNacho,
 		bside: s_bossNacho_B,
 		spriteVinyl: s_discoVinilo,
-		hpMax: 85,//85
+		hpMax: 5,//85
 		vinylAlpha : 1,
 		vinylColor : global.pink,
 		number: 0,
@@ -21,11 +21,11 @@ function AddBossNachoCollection()
 		unlocked: 0,
 		step:  BossNachoStep,
 		tintCol: global.lightBlueArray,
-		noiseTintCol: global.pinkArray,
+		noiseTintCol: global.lightPinkArray,
 		wallSprite: s_wallNacho,
 		isDLC: false,
 		spriteDLCTitle: s_elGancho_title,
-		songName: "NotReallyHere",
+		songName: "Not-Really-Here",
 		albumName: "SPYYN OST",
 		artistName: "ESE UVE",
 		killsName: "bossNachoKills",

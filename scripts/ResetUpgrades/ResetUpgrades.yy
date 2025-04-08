@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"ResetUpgrades",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"MainFunctions",
+    "path":"folders/Scripts/MainFunctions.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

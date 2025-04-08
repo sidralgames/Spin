@@ -2,6 +2,18 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function BossTribalStep()
 {
+	
+	if (firstAttack = false)
+	{
+		isBreakingVinyl = true;
+		warning = true;
+		firstAttack = true;
+		attack = "Roto";
+		canRoto = true;
+		contAttack = 400;
+		rotoSprite = s_rotoBossTribal;
+	}
+	
 	if (contAttack >= 0)
 	{
 		contAttack --;

@@ -8,7 +8,12 @@ function PlayerComeFromDeath()
 	{
 		instance_destroy(o_wall);
 		//instance_destroy(o_bulletBoss);
-		instance_destroy(o_bulletEnemyFather);
+		if instance_exists(o_bulletEnemyFather)
+		{
+			o_bulletEnemyFather.timeDying = true;
+			instance_destroy(o_bulletEnemyFather);
+		}
+		
 	}
 	
 	global.vinylSpin = lerp(global.vinylSpin, 0, 0.04);

@@ -15,8 +15,8 @@
   "name":"o_boss",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"Boss",
+    "path":"folders/Objetos/Boss.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"CreateMisilEnemy",
   "parent":{
-    "name":"BossStep",
-    "path":"folders/Scripts/BossStep.yy",
+    "name":"Boss",
+    "path":"folders/Scripts/Boss.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"DrawCollectionVinylStatsDefault",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"DrawCollectionVinylStatsDefault",
+  "parent":{
+    "name":"Other",
+    "path":"folders/Scripts/Other.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

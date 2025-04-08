@@ -66,14 +66,16 @@ if (global.collection)
 	
 	if (key_buttonUP)
 	{
-		_visibleCollection = !_visibleCollection
+		_visibleCollection = !_visibleCollection;
+		initialBackCol = 350;
+		initialHide = 350;
 	}
 	
 	if (initialBackY > 300)
 	{
 		vinylToPlay = ds_map_find_value(global.collectionList, o_boss.selectedVinyl);
 		
-		if (key_x) && (vinylToPlay.unlocked >= 1)
+		if (key_x) && (vinylToPlay.unlocked >= 1) && (_visibleCollection)
 		{
 			o_main.changingLevel = true;
 
@@ -107,7 +109,7 @@ if (global.collection)
 			o_main.changingLevel = true;
 			
 			_visible = true;
-			factor = 0.08;
+			factor = 0.1;
 			initialPlay =300;
 			initialHow = 330;
 			initialOption = 360;
@@ -116,7 +118,8 @@ if (global.collection)
 			initialCollectionX = 320
 			initialBackX =  320
 			initialBackY = 300
-			initialBackCol = 380;
+			initialBackCol = 350;
+			initialHide = 350;
 		}
 	}
 }

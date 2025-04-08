@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"BossExploDie",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Boss",
+    "path":"folders/Scripts/Boss.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -24,4 +24,5 @@ function AddUpgradesList()
 	AddUpgradeFasterDash();//20
 	AddUpgradeCable();
 	AddUpgrade777();
+	AddUpgradeRecoverJacks();
 }

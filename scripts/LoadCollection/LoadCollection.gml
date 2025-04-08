@@ -3,7 +3,11 @@
 function LoadCollection()
 {
 	ini_open("SpinData.ini");
-		
+	
+	
+	global.maxLevelReached = ini_read_real("stats", "maxLevel", 0);
+	
+	
 	//-------- Collection Bosses --------//
 	for (var i=0; i<global.totalNumberOfVinyls; i++)
 	{	
@@ -13,7 +17,7 @@ function LoadCollection()
 		thisBoss.deaths = ini_read_real("stats", thisBoss.deathsName, 0);
 	}
 	
-	global.maxLevelReached = ini_read_real("stats", "maxLevel", 0);
+	
 		
 	ini_close();
 }

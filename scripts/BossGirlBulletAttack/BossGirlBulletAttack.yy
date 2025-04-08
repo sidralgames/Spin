@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"BossGirlBulletAttack",
   "parent":{
-    "name":"SPIN",
-    "path":"SPIN.yyp",
+    "name":"BossBulletAttack",
+    "path":"folders/Scripts/BossBulletAttack.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

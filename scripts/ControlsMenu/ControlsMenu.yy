@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"ControlsMenu",
   "parent":{
-    "name":"SPIN",
-    "path":"SPIN.yyp",
+    "name":"MainFunctions",
+    "path":"folders/Scripts/MainFunctions.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

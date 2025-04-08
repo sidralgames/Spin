@@ -43,7 +43,7 @@ function ResetGame(_playing)
 	}
 	else
 	{
-		global.level = irandom_range(1, global.maxLevelReached-1)	
+		global.level = irandom_range(1, global.maxLevelReached)	
 	}
 	//--- RESET GLOBALS ---//
 	global.relativeSpeed = 1;
@@ -73,6 +73,8 @@ function ResetGame(_playing)
 	global.hpWallUpgrade = 0;
 	global.dobleShotUpgrade = false;
 	global.cableUpgrade = false;
+	global.recoverJacksUpgrade = false;
+	
 	global.dashSpeed = 3.2;
 	global.luckAuxUpgrade = 1;
 	global.oddsStrongConnection = 3;

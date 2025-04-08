@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"CheckCableToDestroy",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Other",
+    "path":"folders/Scripts/Other.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

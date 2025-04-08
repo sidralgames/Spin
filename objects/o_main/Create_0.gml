@@ -1,6 +1,6 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
-
+randomize();
 
 //global._fx_tint = fx_create("_filter_tintfilter");
 //fx_set_parameter(global._fx_tint, "g_TintCol", [1, 0, 0, 1]);
@@ -51,6 +51,7 @@ global.hpWallUpgrade = 0;
 global.smartBulletUpgrade = false;
 global.strongConnectionUpgrade = false;
 global.cableUpgrade = false;
+global.recoverJacksUpgrade = false;
 
 global.oddsStrongConnection = 3;
 global.luckAuxUpgrade = 1;
@@ -90,7 +91,10 @@ global.vinylSpinUpgrades = -0.09;
 global.weapon = "Gun";
 global.energyTotal = 200;
 global.superShot = 0;
-global.level = 1;
+
+
+
+
 global.wallSprite = s_wallNacho;
 
 //----- OPTIONS ----//
@@ -168,7 +172,7 @@ instance_create_layer(0,0,"Main", o_misilBluePart);
 instance_create_layer(0,0,"Main", o_misilGreenPart);
 instance_create_layer(0,0,"Main", o_misilRedPart);
 
-load = false
+
 //---- COLLECTION TRACKS - BOSSES ----//
 global.collectionList = ds_map_create();
 
@@ -194,3 +198,15 @@ AddCableWhite();
 AddCableYellow();
 AddCableRed();
 //AddCablePurple(); -> UPGRADE
+
+
+load = false;
+
+if (load = false)
+{
+	//LoadAllLocked();
+	LoadAllUnlocked();
+	LoadCollection();
+	global.level=irandom_range(1, global.maxLevelReached)
+	load = true;
+}

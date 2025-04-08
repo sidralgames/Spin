@@ -6,12 +6,6 @@
 
 
 
-if (load = false)
-{
-	//LoadAllUnlocked();
-	LoadCollection();
-	load = true;
-}
 
 if (changingLevel = true)
 {

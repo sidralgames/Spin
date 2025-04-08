@@ -1,5 +1,12 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
+
+if (global.recoverJacksUpgrade)
+{
+	RecoverJacksFromUpgrade();
+}
+
+
 x = room_width/2;
 y = room_height/2;
 

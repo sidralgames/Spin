@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"CreateMiniDemons",
   "parent":{
-    "name":"Sprites",
-    "path":"folders/Sprites.yy",
+    "name":"Boss",
+    "path":"folders/Scripts/Boss.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

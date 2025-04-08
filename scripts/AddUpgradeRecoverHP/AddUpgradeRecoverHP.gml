@@ -11,8 +11,8 @@ function AddUpgradeRecoverLives()
 		canAppear: true,
 		choosedThisTime: false,
 		unique: false,
-		timesInitial: 4,
-		times: 4
+		timesInitial: 2,
+		times: 2
 	})
 
 	global.totalNumberOfUpgrades +=1;

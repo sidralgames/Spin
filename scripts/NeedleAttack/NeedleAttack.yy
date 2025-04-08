@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"NeedleAttack",
   "parent":{
-    "name":"Sprites",
-    "path":"folders/Sprites.yy",
+    "name":"Other",
+    "path":"folders/Scripts/Other.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

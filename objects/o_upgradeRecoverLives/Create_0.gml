@@ -4,8 +4,8 @@ event_inherited();
 cx = room_width/2;
 cy = room_height/2;
 alias = "RecoverLives";
-upgradeName = "Recover 2 Lives"
-upgradeDesc = "Recover\nup to\n2 Lives";
+upgradeName = "Recover all Lives"
+upgradeDesc = "Recover\nAll\nLives";
 bossSpin = global.vinylSpin;
 totalPush = 0;
 totalMaxSpeed = 3;
