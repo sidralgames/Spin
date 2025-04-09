@@ -9,6 +9,7 @@ function AddBossUpgradesCollection()
 		offsetSong: 0,
 		keyKilledBy :"killedByUpgrades",
 		sprite: s_galletaUpgrades,
+		spriteMain: s_galletaUpgrades,
 		bside: s_bossNacho_B,
 		spriteVinyl: s_discoVinilo,
 		hpMax: 777,

@@ -9,6 +9,7 @@ function AddBossRombossCollection()
 		offsetSong: 36,
 		keyKilledBy :"killedByRomboss",
 		sprite: s_bossRomboss,
+		spriteMain: s_bossRomboss,
 		bside: s_bossNacho_B,
 		spriteVinyl: s_discoVinilo,
 		hpMax: 400,

@@ -9,6 +9,7 @@ function AddBossMixtapeCollection()
 		offsetSong: 80,
 		keyKilledBy :"killedByMixtape",
 		sprite: s_bossMixtape,
+		spriteMain: s_bossMixtape,
 		bside: s_bossNacho_B,
 		spriteVinyl: s_discoVinilo,
 		hpMax: 350,

@@ -121,17 +121,11 @@ if (global.collection)
 		{
 			if (vinylToPlay.isDLC = true)
 			{
-				draw_sprite_ext(vinylToPlay.spriteDLCTitle, 0,  __view_get( e__VW.XView, 0 )+ 120,__view_get( e__VW.YView, 0 )+90,1,1,0,image_blend,  1)	
+				draw_sprite_ext(vinylToPlay.spriteDLCTitle, 0,  __view_get( e__VW.XView, 0 )+ 520,__view_get( e__VW.YView, 0 )+90,1,1,0,image_blend,  1)	
 			}
-	
-			if (vinylToPlay.unlocked >= 1)
-			{
-				DrawCollectionVinylStats();
-			}
-			else
-			{
-				DrawCollectionVinylStatsDefault();
-			}
+
+			DrawCollectionVinylStats(vinylToPlay.unlocked);
+			
 		}
 
 		initialBackX =  lerp(initialBackX, 530,factor);

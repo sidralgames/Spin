@@ -8,10 +8,12 @@ function BossTribalBulletAttack(_attack)
 		{
 			if (canRoto)
 			{
-				BossAttackRoto(120,300);
+				BossAttackRoto(120,100);
 			}
 			else
 			{	
+				isBreakingVinyl = false;
+				contAttack = 0;
 				createRoto = false;
 				drawflashRoto = false;
 				drawflashCont = 0;

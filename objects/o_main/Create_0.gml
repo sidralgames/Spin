@@ -30,6 +30,8 @@ iconsTotal = iconsInLine + iconsInLine2 + iconsInLine3
 
 //----- FONT ----//
 display_reset(0, false);
+
+global.customFont20= font_add("chubby-choo-semi-bold.ttf", 17, false, false, 32, 128);
 global.customFont16= font_add("chubby-choo-semi-bold.ttf", 16, false, false, 32, 128);
 global.customFont15= font_add("chubby-choo-semi-bold.ttf", 15, false, false, 32, 128);
 global.customFont14= font_add("chubby-choo-semi-bold.ttf", 14, false, false, 32, 128);
@@ -205,7 +207,7 @@ load = false;
 if (load = false)
 {
 	//LoadAllLocked();
-	LoadAllUnlocked();
+	//LoadAllUnlocked();
 	LoadCollection();
 	global.level=irandom_range(1, global.maxLevelReached)
 	load = true;

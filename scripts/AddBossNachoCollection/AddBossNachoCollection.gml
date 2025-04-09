@@ -10,6 +10,7 @@ function AddBossNachoCollection()
 		deaths: 0,
 		keyKilledBy :"killedByNacho",
 		sprite: s_bossNacho,
+		spriteMain: s_bossNacho,
 		bside: s_bossNacho_B,
 		spriteVinyl: s_discoVinilo,
 		hpMax: 5,//85

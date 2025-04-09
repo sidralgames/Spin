@@ -9,6 +9,7 @@ function AddBossBigEyeCollection()
 		offsetSong: 14,
 		keyKilledBy :"killedByBigEye",
 		sprite: s_bossBigEye,
+		spriteMain: s_bossBigEye,
 		bside: s_bossNacho_B,
 		spriteVinyl: s_discoVinilo,
 		hpMax: 400,

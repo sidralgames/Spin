@@ -29,6 +29,8 @@ function BossAttackRoto(_contWarning, _contRotoTime)
 		screenShake(5,60,2)
 		if (contWarning <= 0)
 		{
+			canRoto = false; 
+			
 			for (var i=0; i<10; i++)
 			{
 				angleOff = random_range(-10,10);
@@ -41,12 +43,16 @@ function BossAttackRoto(_contWarning, _contRotoTime)
 						
 			}
 			
-			isBreakingVinyl = false;
+			
 			pickAngle = false;
-			contAttack = 0;
-			canChangeAttack = true;
+			
 			contWarning = _contWarning;
 			canRoto = false;
+			
+			warning = true;
+			isBreakingVinyl = false;
+			canChangeAttack = true;
+			contAttack = 0;
 			contRotoTime = _contRotoTime;
 			
 		}

@@ -2,10 +2,12 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function BossCollection()
 {
+	Controls_Input();
+	
 	ControlsCollection();
 	
 	vinylToPlay = ds_map_find_value(global.collectionList, selectedVinyl);
-	
+
 	alias = vinylToPlay.alias;
 	kills = vinylToPlay.kills;
 	deaths = vinylToPlay.deaths;
@@ -27,6 +29,24 @@ function BossCollection()
 		global.vinylAlpha = vinylToPlay.vinylAlpha;
 		global.vinylColor = vinylToPlay.vinylColor;
 		drawLocked = false;
+		
+		
+		if (key_buttonL) 
+		{
+			//audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
+			if (spriteBoss =  vinylToPlay.spriteMain)
+			{
+				vinylToPlay.sprite = vinylToPlay.bside;
+			}
+			else
+			{
+				vinylToPlay.sprite = vinylToPlay.spriteMain;
+			}
+			changeSongCollection = false;
+			//o_main.changingLevel = true;
+			ResetNeedle();
+		}
+		
 	}
 	else
 	{
@@ -35,8 +55,9 @@ function BossCollection()
 		global.vinylColor = c_dkgray;
 		drawLocked = true;
 	}
-			
-	sprite_index = vinylToPlay.sprite;
+	
 	spriteBoss = vinylToPlay.sprite;
+	sprite_index = spriteBoss;
+	
 	thisVinyl.sprite_index = vinylToPlay.spriteVinyl;
 }

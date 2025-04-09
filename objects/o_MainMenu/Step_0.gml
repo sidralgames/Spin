@@ -98,6 +98,13 @@ if (global.collection)
 			global.song = snd_obsession;
 			audio_play_sound_on(global.audioEmitter,global.song, true, 100);
 		
+		
+		
+			with(o_boss)
+			{
+				//--- RESET TRACK --//
+				vinylToPlay.sprite =  vinylToPlay.spriteMain
+			}
 			global.collection = false;
 			instance_destroy(o_boss);
 			instance_destroy(o_bossHP);
@@ -106,6 +113,7 @@ if (global.collection)
 			instance_create_layer(room_width/2, room_height/2, "Boss", o_boss);
 			instance_create_layer(room_width/2, room_height/2, "Vinyl", o_vinilo);
 			
+			global.level = irandom_range(1, global.maxLevelReached)	
 			o_main.changingLevel = true;
 			
 			_visible = true;

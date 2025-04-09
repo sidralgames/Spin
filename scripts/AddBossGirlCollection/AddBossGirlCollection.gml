@@ -9,6 +9,7 @@ function AddBossGirlCollection()
 		offsetSong: 40,
 		keyKilledBy :"killedByGirl",
 		sprite: s_bossGirl,
+		spriteMain: s_bossGirl,
 		bside: s_bossNacho_B,
 		spriteVinyl: s_discoVinilo,
 		hpMax: 240,

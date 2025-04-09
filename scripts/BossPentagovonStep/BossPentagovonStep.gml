@@ -24,7 +24,7 @@ function BossPentagovonStep()
 	{
 		//---- BULLET ATTACKING TIME ---//
 		
-		contAttack = random_range(400,800);
+		contAttack = random_range(400,550);
 		bulletsCreated = 0;
 		BossChooseAttackGirl(150);
 	}
@@ -39,9 +39,9 @@ function BossPentagovonStep()
 	}
 	
 	//---- ACTUAL BULLET ATTACKING TIME ---//
-	if (contAttack > 100) || (isBreakingVinyl)
+	if (contAttack < 300) || (isBreakingVinyl)
 	{
-		BossGirlBulletAttack(attack);
+		BossPentagovonBulletAttack(attack);
 	}
 	
 	//---- WALL ATTACK ----//

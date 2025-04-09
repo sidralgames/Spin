@@ -8,10 +8,12 @@ function BossRombossBulletAttack(_attack)
 		{
 			if (canRoto)
 			{
-				BossAttackRoto(100,300);
+				BossAttackRoto(100,100);
 			}
 			else
 			{	
+				isBreakingVinyl = false;
+				contAttack = 0;
 				createRoto = false;
 				drawflashRoto = false;
 				drawflashCont = 0;

@@ -9,6 +9,7 @@ function AddBossOblongCollection()
 		offsetSong: 14,
 		keyKilledBy :"killedByOblong",
 		sprite: s_bossOblong,
+		spriteMain: s_bossOblong,
 		bside: s_bossNacho_B,
 		spriteVinyl: s_discoVinilo,
 		hpMax: 400,

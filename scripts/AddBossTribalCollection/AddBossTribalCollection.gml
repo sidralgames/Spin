@@ -9,6 +9,7 @@ function AddBossTribalCollection()
 		offsetSong: 135,
 		keyKilledBy :"killedByTribal",
 		sprite: s_bossTribal,
+		spriteMain: s_bossTribal,
 		bside: s_bossNacho_B,
 		spriteVinyl: s_discoVinilo,
 		hpMax: 200,

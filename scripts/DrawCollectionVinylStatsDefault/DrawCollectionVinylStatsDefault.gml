@@ -5,12 +5,7 @@ function DrawCollectionVinylStatsDefault()
 	draw_set_halign(fa_left)
 	draw_set_font(global.customFont15)
 	
-	draw_set_color(global.lightBlue)
-	draw_text( __view_get( e__VW.XView, 0 )+ 30,__view_get( e__VW.YView, 0 )+202, string(vinylToPlay.number + 1) + ". " + "?????" + "\n" + string(vinylToPlay.albumName))
-	draw_set_color(global.yellow)
-	draw_text( __view_get( e__VW.XView, 0 )+ 30,__view_get( e__VW.YView, 0 )+201, string(vinylToPlay.number + 1) + ". " + "?????" + "\n" + string(vinylToPlay.albumName))
-	draw_set_color(global.pink)
-	draw_text( __view_get( e__VW.XView, 0 )+ 30,__view_get( e__VW.YView, 0 )+200, string(vinylToPlay.number + 1) + ". " + "?????" + "\n" + string(vinylToPlay.albumName))
+	
 	
 	draw_set_font(global.customFont14)
 	draw_set_halign(fa_left)

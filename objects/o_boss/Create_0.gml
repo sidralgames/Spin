@@ -7,8 +7,11 @@ if (global.recoverJacksUpgrade)
 }
 
 
+
 x = room_width/2;
 y = room_height/2;
+
+contWarningRoto = 100;
 
 
 //----boss big eye & oblong ---//
@@ -211,4 +214,9 @@ if instance_exists(o_aguja)
 		yIni = y;
 	}
 }
+
 image_speed = 0.4;
+
+
+//----- COLLECTION RELATED ---/
+checkSpriteBoss = false;

@@ -9,6 +9,7 @@ function AddBossDemonCollection()
 		offsetSong: 0,
 		keyKilledBy :"killedByDemon",
 		sprite: s_bossDemon,
+		spriteMain: s_bossDemon,
 		bside: s_bossNacho_B,
 		spriteVinyl: s_discoVinilo,
 		hpMax: 130,

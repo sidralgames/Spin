@@ -1,6 +1,6 @@
 // Los recursos de Script han cambiado para la v2.3.0 Consulta
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
-function BossNachoBulletAttack(_attack)
+function BossPentagovonBulletAttack(_attack)
 {
 	switch(_attack)
 	{
@@ -8,7 +8,7 @@ function BossNachoBulletAttack(_attack)
 		{
 			if (canRoto)
 			{
-				BossAttackRoto(120,100);
+				BossAttackRoto(100,100);
 			}
 			else
 			{	
@@ -26,7 +26,7 @@ function BossNachoBulletAttack(_attack)
 		{
 			if (o_tempo.contCorrupted <= 0)
 			{
-				BossAttackTempo(irandom_range(300,400), random_range(0.5,0.75), random_range(0.5,0.65));
+				BossAttackTempo(irandom_range(300,400), random_range(0.75,1), random_range(0.5,0.75));
 			}
 			else
 			{
@@ -34,12 +34,14 @@ function BossNachoBulletAttack(_attack)
 			}
 		}break;
 			
-		case "SingleBullet":{ BossAttackSingleBullet(random_range(80,140), 0, 0); }break;
+		case "SingleBullet":{ BossAttackSingleBullet(random_range(30,40), 0, 0); }break;
 				
-		case "BulletBurst":{ BossAttackBulletBurst(10, 12, 8); }break;
+		case "BulletBurst":{ BossAttackBulletBurst(8, 36, 10); }break;
 		
-		case "DobleBullet":{ BossAttackMultiBullet(random_range(80,140), irandom_range(1,2), 0, 0); }break;
+		case "DobleBullet":{ BossAttackMultiBullet(random_range(60,120), irandom_range(5,6), 0, 0); }break;
+		
+		case "BulletSpread":{ BossAttackBulletSpread(choose(20, -20), 50, 8, irandom_range(60,120)); }break;
 	
-		case "Pattern1": { BossAttackPattern(random_range(60,120), irandom_range(3,5)); }break;
+		case "Pattern1": { BossAttackPattern(random_range(60,120), irandom_range(10,20)); }break;
 	}
 }

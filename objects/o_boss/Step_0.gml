@@ -102,5 +102,6 @@ if (_hp <= 0)
 
 if (global.collection)
 {
+		
 	BossCollection();
 }

@@ -1,6 +1,6 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
-if (warning)
+if (warning) && (contWarning < contWarningRoto)
 {
 	var _alphaWarning = random_range(0.3, 0.5)
 	draw_sprite_ext(rotoSprite,0,x,y,random_range(0.99,1.01),1,angleRotoBoss, c_red, _alphaWarning);

@@ -9,6 +9,7 @@ function AddBossRataCollection()
 		offsetSong: 5,
 		keyKilledBy :"killedByRata",
 		sprite: s_bossRata,
+		spriteMain: s_bossRata,
 		bside: s_bossNacho_B,
 		spriteVinyl: s_discoVinilo,
 		hpMax: 290,

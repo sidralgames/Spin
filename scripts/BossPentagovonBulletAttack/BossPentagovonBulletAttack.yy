@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"BossPentagovonBulletAttack",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"BossPentagovonBulletAttack",
+  "parent":{
+    "name":"BossBulletAttack",
+    "path":"folders/Scripts/BossBulletAttack.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

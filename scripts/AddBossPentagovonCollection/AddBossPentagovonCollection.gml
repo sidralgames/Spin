@@ -9,6 +9,7 @@ function AddBossPentagovonCollection()
 		offsetSong: 0,
 		keyKilledBy :"killedByPentagovon",
 		sprite: s_bossPentagovon,
+		spriteMain: s_bossPentagovon,
 		bside: s_bossNacho_B,
 		spriteVinyl: s_discoVinilo,
 		hpMax: 500,

@@ -8,10 +8,12 @@ function BossBigEyeBulletAttack(_attack)
 		{
 			if (canRoto)
 			{
-				BossAttackRoto(100,250);
+				BossAttackRoto(100,150);
 			}
 			else
 			{	
+				isBreakingVinyl = false;
+				contAttack = 0;
 				createRoto = false;
 				drawflashRoto = false;
 				drawflashCont = 0;
