@@ -1,6 +1,8 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
 
+bulletDamage = (baseDamage + global.superShot) * global.damageAuxUpgrade;
+
 //---- DOBLE SHOT UPGRADE ---//
 if (global.dobleShotUpgrade)
 {

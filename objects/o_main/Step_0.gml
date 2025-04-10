@@ -17,11 +17,22 @@ if (changingLevel = true)
 			
 			if (thisBoss.alias = o_boss.alias)
 			{
+				if (thisBoss.sprite = thisBoss.spriteMain)
+				{
+					_tintCol = thisBoss.tintCol;
+					_noiseTintCol = thisBoss.noiseTintCol;
+					
+				}
+				else
+				{
+					_tintCol = thisBoss.tintColBSide;
+					_noiseTintCol = thisBoss.noiseTintColBSide;
+				}
 				
 				global.wallSprite = thisBoss.wallSprite;
 				
-				color_fx_params.g_TintCol = thisBoss.tintCol;
-				noise_fx_params.g_FractalNoiseTintColour = thisBoss.noiseTintCol
+				color_fx_params.g_TintCol = _tintCol;
+				noise_fx_params.g_FractalNoiseTintColour = _noiseTintCol
 
 				fx_set_parameters(color_fx, color_fx_params);
 				fx_set_parameters(noise_fx, noise_fx_params);

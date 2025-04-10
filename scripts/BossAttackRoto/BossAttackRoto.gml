@@ -53,7 +53,9 @@ function BossAttackRoto(_contWarning, _contRotoTime)
 			isBreakingVinyl = false;
 			canChangeAttack = true;
 			contAttack = 0;
+			attack = choose("BulletBurst", "BulletSpread","BulletBurst", "Pattern1")
 			contRotoTime = _contRotoTime;
+			
 			
 		}
 	}

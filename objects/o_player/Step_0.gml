@@ -12,6 +12,19 @@ key_escudo = gamepad_button_check(0, gp_shoulderlb)
 key_slowmo = gamepad_button_check(0, gp_shoulderrb)
 key_L1_Pressed = gamepad_button_check_pressed(0, gp_shoulderl) || keyboard_check_pressed(vk_space) ||  mouse_check_button_pressed(mb_right);
 
+if (global.bajacktroUpgrade)
+{
+	if (_hp =1)
+	{
+		global.damageAuxUpgrade = 2;
+	}
+	else
+	{
+		global.damageAuxUpgrade = 1;
+	}
+}
+
+
 //--- CHECK LEVEL SELECTOR UPGRADES ---//
 CheckUpgradesFromLevelSelector();
 

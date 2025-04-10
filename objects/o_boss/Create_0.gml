@@ -97,59 +97,13 @@ distEye = 5;
 
 if (global.level <= global.totalNumberOfVinyls)
 {
-	for (var i = 0; i < global.totalNumberOfVinyls; i++)
-	{
-
-		bossToCreate = ds_map_find_value(global.collectionList, global.level -1);
-		if (global.playing)
-		{
-			if (global.song != bossToCreate.song) 
-			{
-				audio_stop_sound(global.song);
-				global.song = bossToCreate.song;
-				audio_play_sound_on(global.audioEmitter,global.song, true, 100,,bossToCreate.offsetSong);
-			}
-		}
-	
-		//spriteBoss = choose(bossToCreate.sprite, bossToCreate.bside);
-		alias = bossToCreate.alias;
-		killsName = bossToCreate.killsName;
-		deathsName = bossToCreate.deathsName;
-		spriteBoss = bossToCreate.sprite
-		bossNumber = bossToCreate.number;
-		bossIsInCollection = bossToCreate.unlocked;
-		_hpMax = bossToCreate.hpMax;
-		_hp = _hpMax;
-		bossStep = bossToCreate.step;
-		spriteVinyl = bossToCreate.spriteVinyl;
-	}
+	bossToCreate = ds_map_find_value(global.collectionList, global.level -1);
+	CreateBoss(0,0)
 }
 else
 {
 	bossToCreate = ds_map_find_value(global.collectionList, irandom(global.totalNumberOfVinyls-1));
-	
-	if (global.playing)
-	{
-		if (global.song != bossToCreate.song) 
-		{
-			audio_stop_sound(global.song);
-			global.song = bossToCreate.song;
-			audio_play_sound_on(global.audioEmitter,global.song, true, 100,,bossToCreate.offsetSong);
-		}
-	}
-	
-	alias = bossToCreate.alias;
-	spriteBoss = bossToCreate.sprite;
-	bossNumber = bossToCreate.number;
-	bossIsInCollection = bossToCreate.unlocked;
-	_hpMax = bossToCreate.hpMax + 20*global.level;
-	_hp = _hpMax
-	bossStep = bossToCreate.step;
-	spriteVinyl = bossToCreate.spriteVinyl;
-	killsName = bossToCreate.killsName;
-	deathsName = bossToCreate.deathsName;
-	
-	
+	CreateBoss(0, 20 * global.level);
 }
 
 alarm[0] = 60;
@@ -180,7 +134,7 @@ spr_custom = -1;
 x = room_width/2;
 y = room_height/2;
 _angle = image_angle;
-
+checkSong = false
 global.vinylSpin = -0.6;
 bossVinylSpin = global.vinylSpin;
 global.spriteBoss = spriteBoss;

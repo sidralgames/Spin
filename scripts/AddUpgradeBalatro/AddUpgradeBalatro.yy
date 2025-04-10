@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"AddUpgradeBalatro",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"AddUpgradeBalatro",
+  "parent":{
+    "name":"AddUpgrade",
+    "path":"folders/Scripts/AddUpgrade.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

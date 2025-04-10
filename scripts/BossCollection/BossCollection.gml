@@ -7,7 +7,16 @@ function BossCollection()
 	ControlsCollection();
 	
 	vinylToPlay = ds_map_find_value(global.collectionList, selectedVinyl);
-
+	
+	if (checkSong = false)
+	{
+		checkSong = true;
+		_songToPlay = vinylToPlay.song;
+		thisVinyl.sprite_index = vinylToPlay.spriteVinyl;
+		global.vinylColor = vinylToPlay.vinylColor;
+		global.vinylAlpha = vinylToPlay.vinylAlpha;
+	}
+	
 	alias = vinylToPlay.alias;
 	kills = vinylToPlay.kills;
 	deaths = vinylToPlay.deaths;
@@ -16,35 +25,44 @@ function BossCollection()
 	{
 		if (changeSongCollection = false)
 		{
-			if (global.song != vinylToPlay.song)
+			if (global.song != _songToPlay)
 			{
 				audio_stop_sound(global.song);
-				global.song = vinylToPlay.song;
+				global.song = _songToPlay;
 				audio_play_sound_on(global.audioEmitter,global.song, true, 100,,0);
 				changeSongCollection = true;
 			}
 		}
 		
 		image_blend = c_white;
-		global.vinylAlpha = vinylToPlay.vinylAlpha;
-		global.vinylColor = vinylToPlay.vinylColor;
+		
+
 		drawLocked = false;
 		
-		
-		if (key_buttonL) 
+		if (vinylToPlay.kills >= vinylToPlay.minKillsBSide)
 		{
-			//audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
-			if (spriteBoss =  vinylToPlay.spriteMain)
+			if (key_buttonL) 
 			{
-				vinylToPlay.sprite = vinylToPlay.bside;
+				//audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
+				if (spriteBoss =  vinylToPlay.spriteMain)
+				{
+					vinylToPlay.sprite = vinylToPlay.spriteBSide;
+					_songToPlay = vinylToPlay.songBSide;
+					global.vinylColor = vinylToPlay.vinylColorBSide;
+					global.vinylAlpha = vinylToPlay.vinylAlphaBSide;
+				}
+				else
+				{
+					vinylToPlay.sprite = vinylToPlay.spriteMain;
+					_songToPlay = vinylToPlay.song;
+					global.vinylColor = vinylToPlay.vinylColor;
+					global.vinylAlpha = vinylToPlay.vinylAlpha;
+				}
+				
+				changeSongCollection = false;
+				o_main.changingLevel = true;
+				ResetNeedle();
 			}
-			else
-			{
-				vinylToPlay.sprite = vinylToPlay.spriteMain;
-			}
-			changeSongCollection = false;
-			//o_main.changingLevel = true;
-			ResetNeedle();
 		}
 		
 	}
@@ -58,6 +76,4 @@ function BossCollection()
 	
 	spriteBoss = vinylToPlay.sprite;
 	sprite_index = spriteBoss;
-	
-	thisVinyl.sprite_index = vinylToPlay.spriteVinyl;
 }

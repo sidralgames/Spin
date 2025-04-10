@@ -15,6 +15,8 @@ function SetColors()
 	global.greenOscRat= make_color_rgb(139, 255, 164);
 	global.purple = make_color_rgb(181, 80, 136);
 	global.orange = make_color_rgb(254, 174, 52);
+	global.pink2 = make_color_rgb(249, 43, 135); //mixtape Bside
+	global.lightBlue2 = make_color_rgb(107, 255, 233); //mixtape Bside
 
 	//Mixtape
 	global.lightPink = make_color_rgb(246,188,236);
@@ -47,6 +49,11 @@ function SetColors()
 
 	global.greenRatArray = [139/255, 255/255, 164/255, 1] 
 
-	global.greenOscRatArray = [32/255, 153/255, 164/255, 1] 
+	global.greenOscRatArray = [32/255, 153/255, 164/255, 1];
+	
+	//--- mixtape b ---//
+	global.pinkArray2 = [249/255, 43/255, 135/255, 1];
+	global.lightBlueArray2 = [107/255, 255/255, 233/255, 1]; 
+	global.lightBlueArray3 = [0/255, 255/255, 217/255, 1]; 
 
 }

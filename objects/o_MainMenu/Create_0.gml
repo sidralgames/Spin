@@ -25,3 +25,5 @@ initialFlechaR = 254;
 initialHide = 350
 
 _visibleCollection = true;
+
+xDistCollection = 40;

@@ -10,7 +10,15 @@ function BossDefeatedInRun()
 		if (thisBoss.sprite = spriteBoss)
 		{
 			thisBoss.defeatedInRun = 1;
-			thisBoss.kills += 1
+			
+			if (thisBoss.sprite = thisBoss.spriteMain)
+			{
+				thisBoss.kills += 1
+			}
+			else
+			{
+				thisBoss.killsBSide += 1
+			}
 		}
 	}
 }

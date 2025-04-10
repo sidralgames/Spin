@@ -58,6 +58,9 @@ global.recoverJacksUpgrade = false;
 global.oddsStrongConnection = 3;
 global.luckAuxUpgrade = 1;
 
+global.bajacktroUpgrade = false;
+global.damageAuxUpgrade = 1;
+
 global.energyRecharge = 0.45;
 global.speedAux = 0;
 global.fireRateAux = 0;

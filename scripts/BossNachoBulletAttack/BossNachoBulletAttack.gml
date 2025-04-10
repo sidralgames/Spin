@@ -8,7 +8,7 @@ function BossNachoBulletAttack(_attack)
 		{
 			if (canRoto)
 			{
-				BossAttackRoto(120,100);
+				BossAttackRoto(120,300);
 			}
 			else
 			{	

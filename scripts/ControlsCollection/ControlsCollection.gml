@@ -5,6 +5,7 @@ function ControlsCollection()
 	if (key_leftP)
 	{
 		//--- RESET PREV TRACK --//
+		checkSong = false;
 		vinylToPlay.sprite =  vinylToPlay.spriteMain
 		
 		audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50,0.5);
@@ -12,21 +13,23 @@ function ControlsCollection()
 		changeSongCollection = false;
 		o_main.changingLevel = true;
 		o_MainMenu.initialFlechaL = 240;
-		spriteBoss =  vinylToPlay.sprite
+		spriteBoss =  vinylToPlay.sprite;
+		_songToPlay = vinylToPlay.song;
 		ResetNeedle();
 	}
 	
 	if (key_rightP)
 	{
 		//--- RESET PREV TRACK --//
+		checkSong = false;
 		vinylToPlay.sprite =  vinylToPlay.spriteMain
-		
 		audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50,0.5);
 		selectedVinyl +=1;
 		changeSongCollection = false;
 		o_main.changingLevel = true;
 		o_MainMenu.initialFlechaR = 240;
-		spriteBoss =  vinylToPlay.sprite
+		spriteBoss =  vinylToPlay.sprite;
+		_songToPlay = vinylToPlay.song;
 		ResetNeedle();
 	}
 		

@@ -35,7 +35,9 @@ if (alertMiniDemons)
 
 //if instance_exists(o_bossHP)
 //{
-//	draw_text(x,y+50, string(bossToCreate.step))
+	//draw_text(x-100,y+50, string(bossToCreate.sprite))
+	//draw_text(x-100,y+70, string(bossToCreate.spriteMain))
+	//draw_text(x-100,y+90, string(bossToCreate.spriteBSide))
 //}
 //draw_text_color(x,y+100,string(warning),c_white,c_white,c_white,c_white,1)
 //draw_text_color(x,y+120,string(global.bossDemonCollection),c_white,c_white,c_white,c_white,1)

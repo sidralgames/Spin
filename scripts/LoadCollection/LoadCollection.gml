@@ -16,8 +16,12 @@ function LoadCollection()
 		thisBoss.unlocked = ini_read_real("bossesCollection", thisBoss.alias, 0);
 		thisBoss.kills = ini_read_real("stats", thisBoss.killsName, 0);
 		thisBoss.deaths = ini_read_real("stats", thisBoss.deathsName, 0);
+		thisBoss.killsBSide = ini_read_real("stats", thisBoss.killsNameBSide, 0);
+		thisBoss.deathsBSide = ini_read_real("stats", thisBoss.deathsNameBSide, 0);
 		global.totalDeaths += thisBoss.deaths;
+		global.totalDeaths += thisBoss.deathsBSide;
 		global.totalKills += thisBoss.kills;
+		global.totalKills += thisBoss.killsBSide;
 	}
 	
 	

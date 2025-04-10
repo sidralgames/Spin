@@ -11,23 +11,23 @@ destroying = false;
 type = collisionType.custom;
 initialSpeed = 0;
 speed = initialSpeed;
+baseDamage = 1;
+bulletDamage = 1;
 
 if (global.luckyShot)
 {
-	
-	
 	if ( global.luckyShotOdds = irandom(global.luckyShotOdds) )
 	{
-		bulletDamage = 25
+		baseDamage = 25;
 	}
 	else
 	{
-		bulletDamage = 1
+		baseDamage = 1;
 	}
 }
 else
 {
-	bulletDamage = 1;
+	baseDamage = 1;
 }
 
 image_xscale = 1 + (global.superShot * 0.5);

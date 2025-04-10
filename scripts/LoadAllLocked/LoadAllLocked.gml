@@ -11,6 +11,8 @@ function LoadAllLocked()
 		ini_write_real("bossesCollection",thisBoss.alias, 0);
 		ini_write_real("stats",thisBoss.killsName, 0);
 		ini_write_real("stats",thisBoss.deathsName, 0);
+		ini_write_real("stats",thisBoss.killsNameBSide, 0);
+		ini_write_real("stats",thisBoss.deathsNameBSide, 0);
 	}
 	
 	ini_write_real("stats","maxLevel", 1);

@@ -7,11 +7,19 @@ if (vinylSet = false)
 		{
 			bossToCreate = ds_map_find_value(global.collectionList, i);
 			
-			if (bossToCreate.sprite = o_boss.spriteBoss)
+			if (bossToCreate.alias = o_boss.alias)
 			{
-				global.vinylColor = bossToCreate.vinylColor;
-				global.vinylAlpha = bossToCreate.vinylAlpha;
-				
+				if bossToCreate.sprite = bossToCreate.spriteMain
+				{
+					global.vinylColor = bossToCreate.vinylColor;
+					global.vinylAlpha = bossToCreate.vinylAlpha;
+				}
+				else
+				{
+					global.vinylColor = bossToCreate.vinylColorBSide;
+					global.vinylAlpha = bossToCreate.vinylAlphaBSide;
+				}
+
 				vinylSet = true;
 			}
 		}

@@ -125,7 +125,6 @@ if (global.collection)
 			}
 
 			DrawCollectionVinylStats(vinylToPlay.unlocked);
-			
 		}
 
 		initialBackX =  lerp(initialBackX, 530,factor);

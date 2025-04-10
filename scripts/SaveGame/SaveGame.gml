@@ -11,6 +11,8 @@ function SaveGame()
 		ini_write_real("bossesCollection",thisBoss.alias, thisBoss.unlocked);
 		ini_write_real("stats",thisBoss.killsName, thisBoss.kills);
 		ini_write_real("stats",thisBoss.deathsName, thisBoss.deaths);
+		ini_write_real("stats",thisBoss.killsNameBSide, thisBoss.killsBSide);
+		ini_write_real("stats",thisBoss.deathsNameBSide, thisBoss.deathsBSide);
 	}
 	
 	

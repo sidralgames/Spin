@@ -12,7 +12,14 @@ if (getBossDeath = false)
 		thisBossDeath = ds_map_find_value(global.collectionList, i);
 		if (thisBossDeath.alias = o_boss.alias)
 		{
-			thisBossDeath.deaths += 1;
+			if( thisBossDeath.sprite = thisBossDeath.spriteMain)
+			{
+				thisBossDeath.deaths += 1;
+			}
+			else
+			{
+				thisBossDeath.deathsBSide += 1;	
+			}
 		}
 	}
 	

@@ -74,6 +74,8 @@ function ResetGame(_playing)
 	global.dobleShotUpgrade = false;
 	global.cableUpgrade = false;
 	global.recoverJacksUpgrade = false;
+	global.bajacktroUpgrade = false;
+	global.damageAuxUpgrade = 1;
 	
 	global.dashSpeed = 3.2;
 	global.luckAuxUpgrade = 1;
@@ -91,20 +93,7 @@ function ResetGame(_playing)
 	}
 	
 	
-	//---- RESET BOSS ---//
-	instance_destroy(o_boss);
-	instance_destroy(o_upgrades)
-	instance_destroy(o_viniloUpgrades);
-	instance_destroy(o_upgradesFather)
-	instance_destroy(o_bossHP);
-	instance_destroy(o_vinilo);
-	instance_destroy(oViniloFake);
-	instance_create_layer(room_width/2, room_height/2, "Boss", o_boss);
-	instance_create_layer(room_width/2, room_height/2, "Vinyl", o_vinilo);
 	
-	
-	//--- RESET BACKGROUNDS ---//
-	o_main.changingLevel = true;
 	
 	
 	//--- RESET MAIN ---//
@@ -112,6 +101,7 @@ function ResetGame(_playing)
 	
 	
 	//---- DESTROY FROM MEMORY AND RE-CREATE COLLECTION LIST ---//
+	
 	for (var i=0; i<=global.totalNumberOfVinyls; i++)
 	{
 		ds_map_delete(global.collectionList, i)
@@ -125,6 +115,16 @@ function ResetGame(_playing)
 	AddCollectionList();
 	LoadCollection();
 	
+	//---- RESET BOSS ---//
+	instance_destroy(o_boss);
+	instance_destroy(o_upgrades)
+	instance_destroy(o_viniloUpgrades);
+	instance_destroy(o_upgradesFather)
+	instance_destroy(o_bossHP);
+	instance_destroy(o_vinilo);
+	instance_destroy(oViniloFake);
+	instance_create_layer(room_width/2, room_height/2, "Boss", o_boss);
+	instance_create_layer(room_width/2, room_height/2, "Vinyl", o_vinilo);
 	
 	//---- DESTROY FROM MEMORY AND RE-CREATE UPGRADE LIST ---//
 	for (var i=0; i<=global.totalNumberOfUpgrades; i++)
@@ -169,6 +169,9 @@ function ResetGame(_playing)
 	AddCableWhite();
 	AddCableYellow();
 	AddCableRed();
+	
+	//--- RESET BACKGROUNDS ---//
+	o_main.changingLevel = true;
 	
 	
 	//---- RESET PARTICLES ---//

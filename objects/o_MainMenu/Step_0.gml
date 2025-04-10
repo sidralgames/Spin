@@ -40,6 +40,11 @@ if (alarm[0] <= 0)
 				{
 					audio_play_sound_on(global.audioEmitter,snd_acceptMenu,false, 50);
 					global.collection = true;
+					for (var i=0; i<global.totalNumberOfVinyls; i++)
+					{
+						boss = ds_map_find_value(global.collectionList, i)
+						boss.sprite = boss.spriteMain;
+					}
 					_visible = false;
 					o_main.changingLevel = true;
 	
@@ -63,7 +68,7 @@ if !instance_exists(o_player)
 
 if (global.collection)
 {
-	
+	//---- HIDE UI ---//
 	if (key_buttonUP)
 	{
 		_visibleCollection = !_visibleCollection;
@@ -75,6 +80,23 @@ if (global.collection)
 	{
 		vinylToPlay = ds_map_find_value(global.collectionList, o_boss.selectedVinyl);
 		
+		//---- GET MAINTRACK OR spriteBSide NAME ---//
+		if (vinylToPlay.sprite = vinylToPlay.spriteMain)
+		{
+			_songName = vinylToPlay.songName;
+			_stringBSide = "R2 to B-Side";
+			_stringKills = vinylToPlay.kills;
+			_stringDeaths = vinylToPlay.deaths;
+		}
+		else
+		{
+			_songName = vinylToPlay.songNameBSide;
+			_stringBSide = "R2 to Main Track";
+			_stringKills = vinylToPlay.killsBSide;
+			_stringDeaths = vinylToPlay.deathsBSide;
+		}
+	
+		//---- START FIGHT AGAINST SELECTED TRACK ---//
 		if (key_x) && (vinylToPlay.unlocked >= 1) && (_visibleCollection)
 		{
 			o_main.changingLevel = true;
@@ -90,6 +112,7 @@ if (global.collection)
 			instance_destroy();
 		}
 		
+		//---- BACK TO MENU ---//
 		if (key_back)
 		{
 			//--- STOP & RESET SOUNDS ---//
@@ -98,13 +121,16 @@ if (global.collection)
 			global.song = snd_obsession;
 			audio_play_sound_on(global.audioEmitter,global.song, true, 100);
 		
-		
-		
 			with(o_boss)
 			{
 				//--- RESET TRACK --//
-				vinylToPlay.sprite =  vinylToPlay.spriteMain
+				vinylToPlay.sprite =  vinylToPlay.spriteMain;
+				thisVinyl.sprite_index = vinylToPlay.spriteVinyl;
+				global.vinylColor = vinylToPlay.vinylColor;
+				spriteBoss = vinylToPlay.sprite;
+				sprite_index = spriteBoss;
 			}
+			
 			global.collection = false;
 			instance_destroy(o_boss);
 			instance_destroy(o_bossHP);
