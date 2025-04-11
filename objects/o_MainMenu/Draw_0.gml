@@ -109,10 +109,12 @@ if (global.collection)
 	if gamepad_is_connected(0)
 	{
 		imgBack = 0;
+		_stringBSideKey = "R2";
 	}
 	else
 	{
 		imgBack = 1;
+		_stringBSideKey = "B";
 	}
 	
 	if (_visibleCollection)

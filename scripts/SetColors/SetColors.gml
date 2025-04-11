@@ -17,6 +17,14 @@ function SetColors()
 	global.orange = make_color_rgb(254, 174, 52);
 	global.pink2 = make_color_rgb(249, 43, 135); //mixtape Bside
 	global.lightBlue2 = make_color_rgb(107, 255, 233); //mixtape Bside
+	global.gbc0 = make_color_rgb(15, 56, 15);
+	global.gbc1 = make_color_rgb(48, 98, 48);
+	global.gbc2 = make_color_rgb(155, 188, 15);
+	
+	
+	global.gbc0Array = [15/255, 56/255, 15/255,1];
+	global.gbc1Array = [48/255, 98/255, 48/255, 1];
+	global.gbc2Array = [155/255, 188/255, 15/255,1];
 
 	//Mixtape
 	global.lightPink = make_color_rgb(246,188,236);

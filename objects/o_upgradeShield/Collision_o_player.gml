@@ -1,7 +1,7 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
 
-if ( (canBePicked) && (key_x) ) || ((canBePicked) && (autoPicked) )
+if ( (canBePicked) && (key_X) ) || ((canBePicked) && (autoPicked) )
 {
 	
 	

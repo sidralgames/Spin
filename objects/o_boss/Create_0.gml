@@ -110,7 +110,8 @@ alarm[0] = 60;
 alarm[1] = 60;
 
 firstAttack = false;
-
+scalingUp = false;
+scalingFromCollection = false;
 bulletsToCreate = 5
 fireRateSingleBullet =  irandom_range(60,120);	
 fireRatePattern1 = irandom_range(60,180);
@@ -120,7 +121,7 @@ needleAttack = false
 dir=0;
 totWall = 2
 offset = 0;
-contAttack = 60;
+contAttack = 100;
 attack = choose("SingleBullet")
 
 

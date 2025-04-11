@@ -11,6 +11,7 @@ function BossRataStep()
 	if (contAttack <= 0) //&& (canChangeAttack) && (alarm[0] <= 0)
 	{
 		//---- BULLET ATTACKING TIME ---//
+		rotoSprite = choose(s_rotoBoss1,s_rotoBoss2,s_rotoBoss3);
 		contAttack = random_range(400,500);
 		bulletsCreated = 0;
 		BossChooseAttackRata(200);

@@ -30,7 +30,7 @@ if (alarm[0] <= 0)
 			selected = 3;	
 		}
 
-		if (key_x)
+		if (key_X)
 		{
 			audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 			switch(selected)
@@ -91,7 +91,7 @@ if (contCred >= 0)
 
 if (creditsShowing) && _visible = false && (contCred < 0)
 {
-	if (key_x)
+	if (key_X)
 	{
 		creditsShowing = !creditsShowing;
 		_visible = !_visible;

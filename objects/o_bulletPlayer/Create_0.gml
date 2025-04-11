@@ -3,7 +3,7 @@
 
 randomize();
 
-
+isLucky = false;
 precision =3.35
 _hp = 150;
 image_speed = 0;
@@ -19,6 +19,7 @@ if (global.luckyShot)
 	if ( global.luckyShotOdds = irandom(global.luckyShotOdds) )
 	{
 		baseDamage = 25;
+		isLucky = true;
 	}
 	else
 	{

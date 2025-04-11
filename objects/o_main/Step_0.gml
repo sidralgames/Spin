@@ -1,11 +1,7 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
+
 //vstick_step(0);
-
-
-
-
-
 
 if (changingLevel = true)
 {
@@ -21,15 +17,15 @@ if (changingLevel = true)
 				{
 					_tintCol = thisBoss.tintCol;
 					_noiseTintCol = thisBoss.noiseTintCol;
-					
+					global.wallSprite = thisBoss.wallSprite;
 				}
 				else
 				{
 					_tintCol = thisBoss.tintColBSide;
 					_noiseTintCol = thisBoss.noiseTintColBSide;
+					global.wallSprite = thisBoss.wallSpriteBSide;
 				}
 				
-				global.wallSprite = thisBoss.wallSprite;
 				
 				color_fx_params.g_TintCol = _tintCol;
 				noise_fx_params.g_FractalNoiseTintColour = _noiseTintCol

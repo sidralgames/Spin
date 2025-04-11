@@ -9,7 +9,8 @@ function BossDemonStep()
 	
 	if (contAttack <= 0) //&& (canChangeAttack) && (alarm[0] <= 0)
 	{
-		//---- BULLET ATTACKING TIME ---//
+		//---- BULLET ATTACKING TIME 
+		rotoSprite = choose(s_rotoBoss1,s_rotoBoss2,s_rotoBoss3);
 		contAttack = random_range(400,600);
 		bulletsCreated = 0;
 		BossChooseAttackDemon(80)

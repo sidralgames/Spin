@@ -8,7 +8,7 @@ function BossRombossBulletAttack(_attack)
 		{
 			if (canRoto)
 			{
-				BossAttackRoto(100,300);
+				BossAttackRoto(120,300);
 			}
 			else
 			{	
@@ -18,7 +18,7 @@ function BossRombossBulletAttack(_attack)
 				drawflashRoto = false;
 				drawflashCont = 0;
 				
-				_attack = choose("SingleBullet", "DobleBullet", "BulletBurst")
+				attack = choose("SingleBullet", "DobleBullet", "BulletBurst")
 			}
 		}break;
 		

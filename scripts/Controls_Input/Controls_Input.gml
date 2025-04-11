@@ -1,14 +1,15 @@
 // Los recursos de Script han cambiado para la v2.3.0 Consulta
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
-function Controls_Input(){
-//-- MOVE --//
+function Controls_Input()
+{
+	//-- MOVE PLAYER - MOVE MENU --//
 	key_left = keyboard_check(vk_left) || keyboard_check(ord("A")) || gamepad_button_check(0, gp_padl) || gamepad_axis_value(0, gp_axislh) < -0.5;
 	key_right = keyboard_check(vk_right) || keyboard_check(ord("D")) || gamepad_button_check(0, gp_padr) || gamepad_axis_value(0, gp_axislh) > 0.5;
 	key_up = keyboard_check(vk_up) || keyboard_check(ord("W")) || gamepad_button_check(0, gp_padu) || gamepad_axis_value(0, gp_axislv) < -0.5;
 	key_down = keyboard_check(vk_down) || keyboard_check(ord("S")) || gamepad_button_check(0, gp_padd) || gamepad_axis_value(0, gp_axislv) > 0.5;
 	
-	//-- ACTION - PLUG/UNPLUG --//
-	key_x = keyboard_check_pressed(ord("X")) || gamepad_button_check_pressed(0, gp_face1) || mouse_check_button_pressed(mb_right)
+	//-- ACTION - MENU --//
+	key_X = keyboard_check_pressed(ord("X")) || gamepad_button_check_pressed(0, gp_face1) || mouse_check_button_pressed(mb_right)
 	key_back =  keyboard_check_pressed(ord("Z")) || gamepad_button_check_pressed(0, gp_face2)
 	
 	
@@ -16,6 +17,11 @@ function Controls_Input(){
 	key_shoot = mouse_check_button(mb_left) || gamepad_button_check(0, gp_shoulderr)
 	key_laser = mouse_check_button(mb_left) || gamepad_button_check(0, gp_shoulderrb)
 	
+	//--- COLLECTION B-SIDE ACCESS --//
+	key_R2 =  gamepad_button_check_pressed(0, gp_shoulderrb);
+	key_B = keyboard_check_pressed(ord("B"))
+	
+	//---- HOLD TRIGGERS -
 	key_r1Down =  gamepad_button_check(0, gp_shoulderr);
 	key_l1Down =  gamepad_button_check(0, gp_shoulderl);
 	key_r2Down =  gamepad_button_check(0, gp_shoulderrb);

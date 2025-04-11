@@ -55,8 +55,6 @@ function BossAttackRoto(_contWarning, _contRotoTime)
 			contAttack = 0;
 			attack = choose("BulletBurst", "BulletSpread","BulletBurst", "Pattern1")
 			contRotoTime = _contRotoTime;
-			
-			
 		}
 	}
 }

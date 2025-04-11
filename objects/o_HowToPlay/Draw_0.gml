@@ -6,7 +6,7 @@ draw_sprite_ext(s_howToplayText, 0, __view_get( e__VW.XView, 0 )+320,__view_get(
 
 if (alarm[0] <= 0)
 {
-	if (key_x) || (key_back)
+	if (key_X) || (key_back)
 	{
 		audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 		global.howToPlay = false;

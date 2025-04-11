@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function CreateBoss(_selectedBossFromCollection, _additionalHP)
 {
-	if (_selectedBossFromCollection = 0)
+	if (_selectedBossFromCollection = 0) // False -> Normal Run
 	{
 		if (bossToCreate.kills > bossToCreate.minKillsBSide)
 		{
@@ -13,7 +13,7 @@ function CreateBoss(_selectedBossFromCollection, _additionalHP)
 			spriteBoss = bossToCreate.spriteMain;
 		}
 	}
-	else
+	else //--ASprite selected from collection
 	{
 		spriteBoss = bossToCreate.sprite;
 	}

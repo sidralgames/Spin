@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"PlayerPickUpCable",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"PlayerPickUpCable",
+  "parent":{
+    "name":"Objetos",
+    "path":"folders/Objetos.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

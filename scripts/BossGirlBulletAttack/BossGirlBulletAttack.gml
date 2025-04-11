@@ -18,7 +18,7 @@ function BossGirlBulletAttack(_attack)
 				drawflashRoto = false;
 				drawflashCont = 0;
 				
-				_attack = choose("SingleBullet", "DobleBullet", "BulletBurst")
+				attack = choose("SingleBullet", "DobleBullet", "BulletBurst")
 			}
 		}break;
 		

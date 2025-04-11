@@ -39,11 +39,14 @@ function BossCollection()
 
 		drawLocked = false;
 		
-		if (vinylToPlay.kills >= vinylToPlay.minKillsBSide)
+		if (vinylToPlay.kills >= vinylToPlay.minKillsBSide) && (vinylToPlay.haveBSide = true)
 		{
-			if (key_buttonL) 
+			if (key_R2) || (key_B)
 			{
-				//audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
+				screenShake(1,30,4)
+				scale = 0;
+				scalingFromCollection = true;
+				audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 				if (spriteBoss =  vinylToPlay.spriteMain)
 				{
 					vinylToPlay.sprite = vinylToPlay.spriteBSide;

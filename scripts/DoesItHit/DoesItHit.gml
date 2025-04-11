@@ -2,6 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function DoesItHit()
 {
+	//----- CHECK IF ADAPTER UPGRADE TRIGGERS -----//
 	if (global.strongConnectionUpgrade)
 	{
 		if ( global.oddsStrongConnection = irandom(global.oddsStrongConnection) )
@@ -18,9 +19,24 @@ function DoesItHit()
 		loseHP = true;
 	}
 	
+	//----- LOSE HP -----//
 	if (loseHP = true)
 	{
 		_hp -=1;
+		
 		CheckCableToDestroy();
+		
+		//----- CHECK BAJACKTRO UPGRADE -----//
+		if (global.bajacktroUpgrade)
+		{
+			if (_hp =1)
+			{
+				global.damageAuxUpgrade = 4;
+			}
+			else
+			{
+				global.damageAuxUpgrade = 1;
+			}
+		}
 	}
 }

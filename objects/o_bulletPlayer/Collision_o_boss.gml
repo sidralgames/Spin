@@ -6,7 +6,7 @@ if (global.playing)
 	
 	instance_destroy();
 	
-	if (bulletDamage > 1 * global.damageAuxUpgrade) && instance_exists(o_player)
+	if (isLucky) && instance_exists(o_player)
 	{
 		lucky = instance_create_layer(x,y,"Menu", o_lucky);
 	}

@@ -8,7 +8,7 @@ if (alarm[0] <= 0)
 	{
 		ControlsMenu();
 
-		if (key_x)
+		if (key_X)
 		{
 			switch(selected)
 			{
@@ -84,20 +84,20 @@ if (global.collection)
 		if (vinylToPlay.sprite = vinylToPlay.spriteMain)
 		{
 			_songName = vinylToPlay.songName;
-			_stringBSide = "R2 to B-Side";
+			_stringBSide = _stringBSideKey +" > B-Side";
 			_stringKills = vinylToPlay.kills;
 			_stringDeaths = vinylToPlay.deaths;
 		}
 		else
 		{
 			_songName = vinylToPlay.songNameBSide;
-			_stringBSide = "R2 to Main Track";
+			_stringBSide = _stringBSideKey +" > Main Track";
 			_stringKills = vinylToPlay.killsBSide;
 			_stringDeaths = vinylToPlay.deathsBSide;
 		}
 	
 		//---- START FIGHT AGAINST SELECTED TRACK ---//
-		if (key_x) && (vinylToPlay.unlocked >= 1) && (_visibleCollection)
+		if (key_X) && (vinylToPlay.unlocked >= 1) && (_visibleCollection)
 		{
 			o_main.changingLevel = true;
 

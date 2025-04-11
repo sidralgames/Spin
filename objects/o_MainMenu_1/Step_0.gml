@@ -30,7 +30,7 @@ if (alarm[0] <= 0)
 				selected = 4;	
 			}
 
-			if (key_x)
+			if (key_X)
 			{
 				//audio_play_sound_on(global.audioEmitter,snd_acceptMenu,false, 50);
 				switch(selected)

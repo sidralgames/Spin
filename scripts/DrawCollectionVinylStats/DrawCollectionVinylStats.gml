@@ -3,16 +3,30 @@
 function DrawCollectionVinylStats(_unlocked)
 {
 	//----- IF B-SIDE AVAILABLE ----//
-	if (vinylToPlay.kills >= vinylToPlay.minKillsBSide)
-	{	
-		draw_set_halign(fa_left)
-		draw_set_font(global.customFont12);
-		draw_set_color(global.lightBlue)
-		draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+32, _stringBSide)
-		draw_set_color(global.yellow)
-		draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+31, _stringBSide)
-		draw_set_color(global.pink)
-		draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+30, _stringBSide)
+	if (vinylToPlay.haveBSide = true)
+	{
+		if (vinylToPlay.kills >= vinylToPlay.minKillsBSide)
+		{	
+			draw_set_halign(fa_left)
+			draw_set_font(global.customFont13);
+			draw_set_color(global.lightBlue)
+			draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+22, _stringBSide)
+			draw_set_color(global.yellow)
+			draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+21, _stringBSide)
+			draw_set_color(global.pink)
+			draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+20, _stringBSide)
+		}
+		else
+		{
+			draw_set_halign(fa_left)
+			draw_set_font(global.customFont13);
+			draw_set_color(global.lightBlue)
+			draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection ,__view_get( e__VW.YView, 0 )+22, string(vinylToPlay.minKillsBSide - vinylToPlay.kills) + " kills to unlock B-Side" )
+			draw_set_color(global.yellow)
+			draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+21, string(vinylToPlay.minKillsBSide - vinylToPlay.kills) + " kills to unlock B-Side" )
+			draw_set_color(global.pink)
+			draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+20, string(vinylToPlay.minKillsBSide - vinylToPlay.kills) + " kills to unlock B-Side" )
+		}
 	}
 	
 	//---- DRAW TRACK INFO ---//
