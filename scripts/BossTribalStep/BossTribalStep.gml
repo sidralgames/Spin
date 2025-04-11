@@ -38,12 +38,15 @@ function BossTribalStep()
 	}
 	
 	//---- ACTUAL BULLET ATTACKING TIME ---//
-	if (contAttack > 100) || (isBreakingVinyl)
+	if (contAttack > 250) || (isBreakingVinyl)
 	{
 		BossTribalBulletAttack(attack);
 	}
 	
 	//---- WALL ATTACK ----//
-	WallAttack(0,2,choose(25,25),40,3);
+	WallAttack(0,2,choose(25,25),40,2);
+	
+	
+	CreateMisilTribal(0,0);
 
 }

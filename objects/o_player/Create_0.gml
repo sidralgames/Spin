@@ -119,7 +119,7 @@ shotgunEnergy = 5;
 
 reloading = false;
 
-slowMoEnergy = 0.6;
+slowMoEnergy = 0.5;
 tempoCorrupted = false;
 aiming = false;
 moving = false;

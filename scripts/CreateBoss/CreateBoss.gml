@@ -6,7 +6,14 @@ function CreateBoss(_selectedBossFromCollection, _additionalHP)
 	{
 		if (bossToCreate.kills > bossToCreate.minKillsBSide)
 		{
-			spriteBoss = choose(bossToCreate.spriteMain, bossToCreate.spriteBSide);
+			if (global.level <= global.totalNumberOfVinyls)
+			{
+				spriteBoss = choose(bossToCreate.spriteMain, bossToCreate.spriteBSide);
+			}
+			else
+			{
+				spriteBoss = choose(bossToCreate.spriteMain, bossToCreate.spriteBSide, bossToCreate.spriteBSide);
+			}
 		}
 		else
 		{
@@ -21,13 +28,19 @@ function CreateBoss(_selectedBossFromCollection, _additionalHP)
 	
 	if (spriteBoss = bossToCreate.spriteMain)
 	{
+		global.isBossBSide = false;
 		_songToPlay = bossToCreate.song;
 		_offsetSong = bossToCreate.offsetSong;
+		_hpMax = bossToCreate.hpMax + _additionalHP;
+		_hp = _hpMax;
 	}
 	else
 	{
+		global.isBossBSide = true;
 		_songToPlay = bossToCreate.songBSide;
 		_offsetSong = bossToCreate.offsetSongBSide;
+		_hpMax = bossToCreate.hpMax + (global.level*20) + _additionalHP;
+		_hp = _hpMax;
 	}
 		
 	if (global.playing)
@@ -48,8 +61,6 @@ function CreateBoss(_selectedBossFromCollection, _additionalHP)
 	bossToCreate.sprite = spriteBoss;
 	bossNumber = bossToCreate.number;
 	bossIsInCollection = bossToCreate.unlocked;
-	_hpMax = bossToCreate.hpMax + _additionalHP;
-	_hp = _hpMax;
 	bossStep = bossToCreate.step;
 	spriteVinyl = bossToCreate.spriteVinyl;
 }

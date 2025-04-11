@@ -15,7 +15,7 @@ function AddBossNachoCollection()
 		spriteMain: s_bossNacho,
 		spriteBSide: s_bossNacho_B,
 		spriteVinyl: s_discoVinilo,
-		hpMax: 5,//85
+		hpMax: 85,//85
 		vinylAlpha : 1,
 		vinylAlphaBSide: 0.85,
 		vinylColor : global.pink,
@@ -28,9 +28,9 @@ function AddBossNachoCollection()
 		tintCol: global.lightBlueArray,
 		noiseTintCol: global.lightPinkArray,
 		tintColBSide: global.BlueArray,
-		noiseTintColBSide: global.salmonArray,
+		noiseTintColBSide: global.redArray,
 		wallSprite: s_wallNacho,
-		wallSpriteBSide: s_wallGirl_B,
+		wallSpriteBSide: s_wallNacho_B,
 		isDLC: false,
 		spriteDLCTitle: s_elGancho_title,
 		songName: "Not-Really-Here",

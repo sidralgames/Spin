@@ -30,7 +30,7 @@ function AddBossMixtapeCollection()
 		tintColBSide: global.darkPaletteArray,
 		noiseTintColBSide: global.gbc2Array,
 		wallSprite: s_wallMixtape,
-		wallSpriteBSide: s_wallGirl_B,
+		wallSpriteBSide: s_wallMixtape_B,
 		isDLC: false,
 		spriteDLCTitle: s_elGancho_title,
 		songName: "Aries - Sayonara (SV Remix)",

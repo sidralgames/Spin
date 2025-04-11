@@ -99,7 +99,7 @@ global.superShot = 0;
 
 
 
-
+global.isBossBSide = false;
 global.wallSprite = s_wallNacho;
 
 //----- OPTIONS ----//
@@ -176,6 +176,8 @@ instance_create_layer(0,0,"Main", o_misilYellowPart);
 instance_create_layer(0,0,"Main", o_misilBluePart);
 instance_create_layer(0,0,"Main", o_misilGreenPart);
 instance_create_layer(0,0,"Main", o_misilRedPart);
+instance_create_layer(0,0,"Main", o_misilTribalPart);
+instance_create_layer(0,0,"Main", o_misilTribalPart_B);
 
 
 //---- COLLECTION TRACKS - BOSSES ----//
