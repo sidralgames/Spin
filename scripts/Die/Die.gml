@@ -68,6 +68,7 @@ function Die()
 				}
 				
 				instance_destroy();
+				global.falls += 1;
 			}
 		}
 	}

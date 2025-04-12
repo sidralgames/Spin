@@ -22,5 +22,13 @@ function SaveGame()
 		ini_write_real("stats","maxLevel", global.maxLevelReached);
 	}
 	
+	ini_write_real("stats","bulletsFired", global.bulletsFired)
+	ini_write_real("stats","cablesLost", global.cablesLost)
+	ini_write_real("stats","safeHits", global.safeHits)
+	ini_write_real("stats","dashes", global.dashes)
+	ini_write_real("stats","luckyBullets", global.luckyBullets)
+	ini_write_real("stats","cablesRecovered", global.cablesRecovered)
+	ini_write_real("stats","falls", global.falls)
+	
 	ini_close();
 }

@@ -8,4 +8,5 @@ function PlayerPickUpCable(_cableToCreate)
 	//global.numberOfCablesPlayer +=1;
 	newCable = instance_create_layer(x, y,"Cable", _cableToCreate);
 	global.damageAuxUpgrade = 1;
+	global.cablesRecovered +=1;
 }

@@ -8,6 +8,7 @@ function CheckCableToDestroy()
 		if (cableToDestroy.position > _hp)
 		{
 			instance_destroy(cableToDestroy.cable);
+			global.cablesLost +=1;
 		}
 	}	
 }

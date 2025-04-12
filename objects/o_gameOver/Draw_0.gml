@@ -27,8 +27,8 @@ else
 	
 		if (bossesDefeated.defeatedInRun = 1)
 		{
-			draw_sprite_ext(bossesDefeated.spriteVinyl, 0 ,__view_get( e__VW.XView, 0 )+ 370+ (i * 45),__view_get( e__VW.YView, 0 )+170, 0.3, 0.3,rot+ (i * 30),bossesDefeated.vinylColor, bossesDefeated.vinylAlpha)
-			draw_sprite_ext(bossesDefeated.sprite, 0, __view_get( e__VW.XView, 0 )+ 370 + (i * 45),__view_get( e__VW.YView, 0 )+170,0.3,0.3,rot+ (i * 30),c_white, 1)
+			draw_sprite_ext(bossesDefeated.spriteVinyl, 0 ,__view_get( e__VW.XView, 0 )+ 370+ (i * 40),__view_get( e__VW.YView, 0 )+170, 0.25, 0.25,rot+ (i * 30),bossesDefeated.vinylColor, bossesDefeated.vinylAlpha)
+			draw_sprite_ext(bossesDefeated.sprite, 0, __view_get( e__VW.XView, 0 )+ 370 + (i * 40),__view_get( e__VW.YView, 0 )+170,0.25,0.25,rot+ (i * 30),c_white, 1)
 		}
 	}
 }

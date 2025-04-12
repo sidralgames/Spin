@@ -6,8 +6,18 @@ function LoadCollection()
 	
 	
 	global.maxLevelReached = ini_read_real("stats", "maxLevel", 0);
+	
 	global.totalDeaths = 0;
 	global.totalKills = 0;
+	
+	global.bulletsFired = ini_read_real("stats", "bulletsFired", 0);
+	global.cablesLost = ini_read_real("stats", "cablesLost", 0);
+	global.safeHits = ini_read_real("stats", "safeHits", 0);
+	global.dashes = ini_read_real("stats", "dashes", 0);
+	global.luckyBullets = ini_read_real("stats", "luckyBullets", 0);
+	global.cablesRecovered = ini_read_real("stats", "cablesRecovered", 0);
+	global.falls = ini_read_real("stats", "falls", 0);
+	
 	
 	//-------- Collection Bosses --------//
 	for (var i=0; i<global.totalNumberOfVinyls; i++)

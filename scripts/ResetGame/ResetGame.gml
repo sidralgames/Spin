@@ -13,9 +13,10 @@ function ResetGame(_playing)
 	//--- STOP & RESET SOUNDS ---//
 	audio_stop_all();
 	audio_stop_sound(global.song);
-	global.song = snd_obsession;
+	global.song = snd_obsessionCut;
 	audio_play_sound_on(global.audioEmitter,global.song, true, 100);
 	
+	SaveGame();
 	
 	//---- DESTROY CABLES ----//
 	DestroyCablesAndJacks();
@@ -180,4 +181,6 @@ function ResetGame(_playing)
 	{
 		instance_create_layer(0,0,"Main", o_bulletPart);
 	}
+	
+	
 }

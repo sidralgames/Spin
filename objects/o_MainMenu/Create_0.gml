@@ -22,7 +22,9 @@ initialConfirm = 350;
 initialBackCol = 350;
 initialFlechaL = 254;
 initialFlechaR = 254;
-initialHide = 350
+initialHide = 350;
+_moreStats = false;
+contStats = 5;
 
 _visibleCollection = true;
 

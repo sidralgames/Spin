@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"DrawCollectionBSideAvailable",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"DrawCollectionBSideAvailable",
+  "parent":{
+    "name":"Other",
+    "path":"folders/Scripts/Other.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

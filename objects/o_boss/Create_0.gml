@@ -102,7 +102,7 @@ if (global.level <= global.totalNumberOfVinyls)
 }
 else
 {
-	bossToCreate = ds_map_find_value(global.collectionList, 1+irandom(global.totalNumberOfVinyls-1));
+	bossToCreate = ds_map_find_value(global.collectionList, irandom(global.totalNumberOfVinyls-1));
 	CreateBoss(0, 20 * global.level);
 }
 

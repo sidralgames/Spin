@@ -249,6 +249,7 @@ if (dying = false)
 					realspeed += global.dashSpeed;
 					inDash = true;
 					dashTime = 60;
+					global.dashes += 1;
 				}
 				
 			

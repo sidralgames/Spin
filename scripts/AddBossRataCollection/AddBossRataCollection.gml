@@ -6,7 +6,7 @@ function AddBossRataCollection()
 	{ 
 		alias: "bossRata",
 		song: snd_chino,
-		songBSide: snd_obsession,
+		songBSide: snd_ritual,
 		offsetSong: 5,
 		offsetSongBSide: 0,
 		keyKilledBy :"killedByRata",
@@ -35,7 +35,7 @@ function AddBossRataCollection()
 		spriteDLCTitle: s_elGancho_title,
 		songName: "ratrat",
 		albumName: "SPYYN OST",
-		songNameBSide: "ratatata (b-side)",
+		songNameBSide: "Ritual (b-side)",
 		artistName: "ESE UVE",
 		killsName: "bossRataKills",
 		deathsName: "bossRataDeaths",

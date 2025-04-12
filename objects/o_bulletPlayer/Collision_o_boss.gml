@@ -8,6 +8,7 @@ if (global.playing)
 	
 	if (isLucky) && instance_exists(o_player)
 	{
+		global.luckyBullets +=1;
 		lucky = instance_create_layer(x,y,"Menu", o_lucky);
 	}
 	

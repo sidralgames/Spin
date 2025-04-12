@@ -165,7 +165,7 @@ LPF2.q = 0;
 LPF2.bypass = true;
 delay_bus.effects[1] = LPF2;
 
-global.song = snd_obsession;
+global.song = snd_obsessionCut;
 audio_play_sound_on(global.audioEmitter,global.song, true, 100);
 
 
@@ -204,7 +204,7 @@ global.numberOfCablesPlayer = 0;
 AddCableWhite();
 AddCableYellow();
 AddCableRed();
-//AddCablePurple(); -> UPGRADE
+//AddCableBlue(); -> UPGRADE
 
 
 load = false;
@@ -214,6 +214,6 @@ if (load = false)
 	//LoadAllLocked();
 	//LoadAllUnlocked();
 	LoadCollection();
-	global.level=irandom_range(1, global.maxLevelReached)
+	global.level = irandom_range(1, global.maxLevelReached)	
 	load = true;
 }

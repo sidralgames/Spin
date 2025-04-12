@@ -76,6 +76,24 @@ if (global.collection)
 		initialHide = 350;
 	}
 	
+	//--- MORE STATS ---//
+	if  ( (key_downP) || (key_upP) ) && (_moreStats = false) && (contStats <= 0)
+	{
+		_moreStats = true;
+		contStats = 5;
+	}
+	
+	if (contStats >= 0)
+	{
+		contStats --;
+		
+	}
+	if  ( (key_downP) || (key_upP) ) && (_moreStats) && (contStats <= 0)
+	{
+		_moreStats = false;
+		contStats = 5;
+	}
+	
 	if (initialBackY > 300)
 	{
 		vinylToPlay = ds_map_find_value(global.collectionList, o_boss.selectedVinyl);
@@ -118,7 +136,7 @@ if (global.collection)
 			//--- STOP & RESET SOUNDS ---//
 			audio_stop_all();
 			audio_stop_sound(global.song);
-			global.song = snd_obsession;
+			global.song = snd_obsessionCut;
 			audio_play_sound_on(global.audioEmitter,global.song, true, 100);
 		
 			with(o_boss)
@@ -154,6 +172,8 @@ if (global.collection)
 			initialBackY = 300
 			initialBackCol = 350;
 			initialHide = 350;
+			
+			SaveGame();
 		}
 	}
 }

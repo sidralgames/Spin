@@ -140,11 +140,13 @@ if (global.collection)
 		draw_sprite_ext(s_xConfirm, 1,  __view_get( e__VW.XView, 0 )+ 540,__view_get( e__VW.YView, 0 )+initialConfirm,1,1,0,image_blend, image_alpha)
 		
 		//---- ARROWS ---//	
-		initialFlechaL= lerp(initialFlechaL, 223,factor);
-		initialFlechaR= lerp(initialFlechaR, 223,factor);
-		draw_sprite_ext(s_flechas, 0, o_boss.x - initialFlechaL ,__view_get( e__VW.YView, 0 )+180,1,1,0,image_blend,  1)	
-		draw_sprite_ext(s_flechas, 1, o_boss.x + initialFlechaR ,__view_get( e__VW.YView, 0 )+180,1,1,0,image_blend,  1)	
-	
+		if (_moreStats = false)
+		{
+			initialFlechaL= lerp(initialFlechaL, 223,factor);
+			initialFlechaR= lerp(initialFlechaR, 223,factor);
+			draw_sprite_ext(s_flechas, 0, o_boss.x - initialFlechaL ,__view_get( e__VW.YView, 0 )+180,1,1,0,image_blend,  1)	
+			draw_sprite_ext(s_flechas, 1, o_boss.x + initialFlechaR ,__view_get( e__VW.YView, 0 )+180,1,1,0,image_blend,  1)	
+		}
 	}
 	else
 	{

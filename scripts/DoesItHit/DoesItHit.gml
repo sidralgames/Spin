@@ -8,6 +8,7 @@ function DoesItHit()
 		if ( global.oddsStrongConnection = irandom(global.oddsStrongConnection) )
 		{
 			loseHP = false;
+			instance_create_layer(x,y,"Menu",o_safe)
 		}
 		else
 		{

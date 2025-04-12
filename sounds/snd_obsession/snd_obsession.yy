@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":27.350204,
+  "duration":228.911,
   "name":"snd_obsession",
   "parent":{
     "name":"SPIN",

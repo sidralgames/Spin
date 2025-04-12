@@ -3,6 +3,8 @@
 
 randomize();
 
+global.bulletsFired +=1;
+
 isLucky = false;
 precision =3.35
 _hp = 150;
