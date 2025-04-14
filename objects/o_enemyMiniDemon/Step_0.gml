@@ -1,9 +1,31 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
+if (set = false)
+{
+	switch(sprite_index)
+	{
+		case s_miniDemonEnemy:
+		{
+			_hp = 3;
+			veloSpin = 1;
+		}break;
+	
+		case s_miniDemonEnemy_B:
+		{
+			_hp = 6;
+			veloSpin = 1.5;
+			
+		}break;
+	}
+	
+	set = true;
+}
+
+
 bossSpin = global.vinylSpin;
 bossPush = bossSpin * min(1.5, global.relativeSpeed);
 
-totalPush = bossPush;
+totalPush = bossPush*veloSpin;
 totalPush = clamp(totalPush, -totalMaxSpeed, totalMaxSpeed);
 
 
@@ -25,35 +47,28 @@ if (theta <= 0)
 {
 	theta =+ 360;	
 }
-if (image_angle <= 0)
-{
-	image_angle =+ 360;	
-}
-if (image_angle >= 360)
-{
-	image_angle = 0;	
-}
 
-
-
+//current += dir;
+//if(current >= _max){
+//    current = _max;
+//    dir *= -1;
+//}
+//else if(current <= _min){
+//    current = _min;
+//    dir *= -1;
+//}
 r = point_distance(x,y,room_width/2, room_height/2);
 theta = point_direction(room_width/2, room_height/2, x, y);
 
-
-	//spinSpeed = min(2, lerp(spinSpeed, global.vinylSpin*2, 0.05) * global.relativeSpeed);
-speed = lerp(speed, 0, 0.05);
 theta += totalPush;
 
 x = cx + lengthdir_x(r, theta) 
 y = cy + lengthdir_y(r, theta)
 	
 
-
-
-
 if instance_exists(o_vinilo)
 {
-	if (!collision_circle(x,y,4,o_vinilo,true,true))
+	if (!collision_circle(x,y,5,o_vinilo,true,true))
 	{
 		contDie --;
 		if (contDie <=0)

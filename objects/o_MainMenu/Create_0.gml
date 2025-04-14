@@ -25,7 +25,11 @@ initialFlechaR = 254;
 initialHide = 350;
 _moreStats = false;
 contStats = 5;
+yStat = 210
+_alphaTitleInitial = 1;
+_alphaTitle = _alphaTitleInitial;
 
 _visibleCollection = true;
 
-xDistCollection = 40;
+xDistCollection = 50;
+xDistStats = 50;

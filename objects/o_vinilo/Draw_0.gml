@@ -4,7 +4,8 @@
 
 
 
-
+if (global.playing)
+{
 
 if !surface_exists(surface)
 {
@@ -103,5 +104,22 @@ if (surface_exists(surface))
 		surface_free(surface);
 		getImage = false;
 		viniloFake.sprite_index = spr_custom;
+	}
+}
+
+}
+else
+{
+	sprite_index = s_viniloGira;
+	oViniloFake.sprite_index = sprite_index;
+	oViniloFake.image_speed = image_speed;
+	
+	if (oViniloFake.image_index >=10)
+	{
+		oViniloFake.image_speed = 0;
+		oViniloFake.image_index = 0;
+		
+		image_speed = 0;
+		image_index = 0;
 	}
 }

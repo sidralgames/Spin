@@ -7,7 +7,6 @@ if (global.recoverJacksUpgrade)
 }
 
 
-
 x = room_width/2;
 y = room_height/2;
 
@@ -42,8 +41,8 @@ isBreakingVinyl = false;
 
 canCreateNewBoss = true;
 
-
-
+contScalingInitial = 15;
+contScaling =contScalingInitial;
 createBossRomboss = false;
 checkLimiter = false;
 vibrationRotoTime = 10;
@@ -52,7 +51,7 @@ contEnemies = 200;
 spritePurple = -1;
 changeSongCollection = false;
 drawLocked = false;
-selectedVinyl = 0;
+selectedVinyl = global.level-1;
 rotoSprite = choose(s_rotoBoss1,s_rotoBoss2,s_rotoBoss3);
 surfaceGalleta =-1
 surfaced = false;

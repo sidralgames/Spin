@@ -15,7 +15,7 @@ function AddBossNachoCollection()
 		spriteMain: s_bossNacho,
 		spriteBSide: s_bossNacho_B,
 		spriteVinyl: s_discoVinilo,
-		hpMax: 8,//85
+		hpMax: 80,//85
 		vinylAlpha : 1,
 		vinylAlphaBSide: 0.85,
 		vinylColor : global.pink,
@@ -45,7 +45,7 @@ function AddBossNachoCollection()
 		deaths: 0,
 		killsBSide: 0,
 		deathsBSide: 0,
-		minKillsBSide: 5,
+		minKillsBSide: 3,
 		
 	})
 

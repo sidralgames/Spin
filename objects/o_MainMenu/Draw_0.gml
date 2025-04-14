@@ -123,8 +123,12 @@ if (global.collection)
 		{
 			if (vinylToPlay.isDLC = true)
 			{
-				draw_sprite_ext(vinylToPlay.spriteDLCTitle, 0,  __view_get( e__VW.XView, 0 )+ 520,__view_get( e__VW.YView, 0 )+90,1,1,0,image_blend,  1)	
+				draw_sprite_ext(vinylToPlay.spriteDLCTitle, 0,  __view_get( e__VW.XView, 0 )+ xDistCollection + 470,__view_get( e__VW.YView, 0 )+90,1,1,0,image_blend,  1)	
 			}
+			//else
+			//{
+			//	draw_sprite_ext(s_title, 0,  __view_get( e__VW.XView, 0 )+ xDistCollection + 470,__view_get( e__VW.YView, 0 )+90,0.5,0.5,0,image_blend,  1)	
+			//}
 
 			DrawCollectionVinylStats(vinylToPlay.unlocked);
 		}
@@ -144,8 +148,8 @@ if (global.collection)
 		{
 			initialFlechaL= lerp(initialFlechaL, 223,factor);
 			initialFlechaR= lerp(initialFlechaR, 223,factor);
-			draw_sprite_ext(s_flechas, 0, o_boss.x - initialFlechaL ,__view_get( e__VW.YView, 0 )+180,1,1,0,image_blend,  1)	
-			draw_sprite_ext(s_flechas, 1, o_boss.x + initialFlechaR ,__view_get( e__VW.YView, 0 )+180,1,1,0,image_blend,  1)	
+			draw_sprite_ext(s_flechas, 0, __view_get( e__VW.XView, 0 )+ 320 - initialFlechaL ,__view_get( e__VW.YView, 0 )+180,1,1,0,image_blend,  1)	
+			draw_sprite_ext(s_flechas, 1, __view_get( e__VW.XView, 0 )+ 320 + initialFlechaR ,__view_get( e__VW.YView, 0 )+180,1,1,0,image_blend,  1)	
 		}
 	}
 	else

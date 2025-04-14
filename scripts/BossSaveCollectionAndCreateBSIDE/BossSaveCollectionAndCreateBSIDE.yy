@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"BossSaveCollectionAndCreateBSIDE",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"BossSaveCollectionAndCreateBSIDE",
+  "parent":{
+    "name":"Boss",
+    "path":"folders/Scripts/Boss.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

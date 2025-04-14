@@ -9,6 +9,7 @@ function DoesItHit()
 		{
 			loseHP = false;
 			instance_create_layer(x,y,"Menu",o_safe)
+			global.safeHits +=1;
 		}
 		else
 		{

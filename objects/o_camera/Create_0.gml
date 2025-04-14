@@ -27,5 +27,5 @@ wheel = 0;
 lastX = x;
 lastY = y;
 
-
+firstLerp = false;
 

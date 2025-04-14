@@ -45,7 +45,7 @@ function AddBossRataCollection()
 		deaths: 0,
 		killsBSide: 0,
 		deathsBSide: 0,
-		minKillsBSide: 9,
+		minKillsBSide: 7,
 	})
 
 	global.totalNumberOfVinyls +=1;

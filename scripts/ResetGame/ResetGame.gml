@@ -38,13 +38,20 @@ function ResetGame(_playing)
 	//---- RETRY OR GO TO MENU? ----//
 	global.playing = _playing;
 	
-	if (global.playing = true)
+	if (global.playing = true) //RETRY FROM LVL 1
 	{
 		global.level = 1;
 	}
 	else
 	{
-		global.level = irandom_range(1, global.maxLevelReached)	
+		if (global.maxLevelReached > 1) //MENU WITH RANDOM BOSS BG
+		{
+			global.level = irandom_range(1, global.maxLevelReached)	
+		}
+		else
+		{
+			global.level = 1;
+		}
 	}
 	//--- RESET GLOBALS ---//
 	global.relativeSpeed = 1;

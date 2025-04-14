@@ -15,7 +15,7 @@ function AddBossDemonCollection()
 		spriteMain: s_bossDemon,
 		spriteBSide: s_bossDemon_B,
 		spriteVinyl: s_discoVinilo,
-		hpMax: 14,
+		hpMax: 140,
 		vinylAlpha : 0.85,
 		vinylAlphaBSide: 0.875,
 		vinylColor : global.lightBlue,
@@ -45,7 +45,7 @@ function AddBossDemonCollection()
 		deaths: 0,
 		killsBSide: 0,
 		deathsBSide: 0,
-		minKillsBSide: 6,
+		minKillsBSide: 4,
 	})
 
 	global.totalNumberOfVinyls +=1;

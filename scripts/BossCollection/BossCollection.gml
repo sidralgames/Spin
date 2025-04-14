@@ -43,6 +43,10 @@ function BossCollection()
 		{
 			if (key_R2) || (key_B)
 			{
+				o_vinilo.image_angle = 5;
+				o_vinilo.image_index = 0;
+				o_vinilo.image_speed = 0.69;
+				
 				screenShake(1,30,4)
 				scale = 0;
 				scalingFromCollection = true;
@@ -53,6 +57,7 @@ function BossCollection()
 					_songToPlay = vinylToPlay.songBSide;
 					global.vinylColor = vinylToPlay.vinylColorBSide;
 					global.vinylAlpha = vinylToPlay.vinylAlphaBSide;
+					o_MainMenu._alphaTitle = -5;
 				}
 				else
 				{
@@ -60,6 +65,7 @@ function BossCollection()
 					_songToPlay = vinylToPlay.song;
 					global.vinylColor = vinylToPlay.vinylColor;
 					global.vinylAlpha = vinylToPlay.vinylAlpha;
+					o_MainMenu._alphaTitle = -5;
 				}
 				
 				changeSongCollection = false;

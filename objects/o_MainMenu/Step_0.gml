@@ -46,6 +46,7 @@ if (alarm[0] <= 0)
 						boss.sprite = boss.spriteMain;
 					}
 					_visible = false;
+					
 					o_main.changingLevel = true;
 	
 				}break;
@@ -80,6 +81,7 @@ if (global.collection)
 	if  ( (key_downP) || (key_upP) ) && (_moreStats = false) && (contStats <= 0)
 	{
 		_moreStats = true;
+		yStat = 360;
 		contStats = 5;
 	}
 	
@@ -90,6 +92,7 @@ if (global.collection)
 	}
 	if  ( (key_downP) || (key_upP) ) && (_moreStats) && (contStats <= 0)
 	{
+		yStat = 160;
 		_moreStats = false;
 		contStats = 5;
 	}
@@ -157,7 +160,14 @@ if (global.collection)
 			instance_create_layer(room_width/2, room_height/2, "Boss", o_boss);
 			instance_create_layer(room_width/2, room_height/2, "Vinyl", o_vinilo);
 			
-			global.level = irandom_range(1, global.maxLevelReached)	
+			if (global.maxLevelReached > 1)
+			{
+				global.level = irandom_range(1, global.maxLevelReached)	
+			}
+			else
+			{
+				global.level = 1;
+			}
 			o_main.changingLevel = true;
 			
 			_visible = true;
@@ -172,6 +182,8 @@ if (global.collection)
 			initialBackY = 300
 			initialBackCol = 350;
 			initialHide = 350;
+			_moreStats = false;
+			_visibleCollection=true;
 			
 			SaveGame();
 		}

@@ -22,7 +22,11 @@ chasingPlayer = false;
 distToPlayer = 0;
 
 born = false;
-_hp = 3;
+off = 0;
+_hp =3;
+veloSpin = 1;
+
+set = false;
 contDie = 5;
 dying = false;
 scaleReset = false;
@@ -33,3 +37,11 @@ bounced = false;
 image_xscale = 1;
 image_yscale = 1;
 spinSpeed = 2;
+
+
+
+
+dir = 0.5
+_min = 10;
+_max = 30;
+current = 1;

@@ -4,20 +4,22 @@ function BossReturnToScale()
 {
 	if (scalingFromCollection)
 	{
+		contScaling --;
+		
 		if (scale <= 0.2)
 		{
 			scalingUp = true;
-	
 		}
 	
-		if (scalingUp)
+		if (scalingUp) && contScaling <=0
 		{
-			scale =lerp(scale,1.4,0.22);	
-			if (scale > 1.15)
+			scale =lerp(scale,1.4,0.16);	
+			if (scale > 1.1)
 			{
 				scale = 1;
 				scalingUp = false;
 				scalingFromCollection = false;
+				contScaling =contScalingInitial;
 			}
 		}
 	}

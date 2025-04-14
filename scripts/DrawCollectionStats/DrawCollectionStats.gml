@@ -3,46 +3,50 @@
 function DrawCollectionStats()
 {
 	//---- DRAW TRACK STATS ---//
-	draw_set_font(global.customFont14);
+	
+	yStat = lerp(yStat, 210, 0.1)
+	draw_set_alpha(_alphaTitle)
+	draw_set_font(global.customFont15);
 	
 	draw_set_color(global.lightBlue);
-	draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+212, "Kills: " + string(_stringKills))
+	draw_text( __view_get( e__VW.XView, 0 )+ xDistStats,__view_get( e__VW.YView, 0 )+yStat+2, "Kills: " + string(_stringKills))
 	draw_set_color(global.yellow);
-	draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+211, "Kills: " + string(_stringKills))
+	draw_text( __view_get( e__VW.XView, 0 )+ xDistStats,__view_get( e__VW.YView, 0 )+yStat+1, "Kills: " + string(_stringKills))
 	draw_set_color(global.pink);
-	draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+210, "Kills: " + string(_stringKills))
+	draw_text( __view_get( e__VW.XView, 0 )+ xDistStats,__view_get( e__VW.YView, 0 )+yStat, "Kills: " + string(_stringKills))
 	
 
 	draw_set_color(global.lightBlue);
-	draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+232, "Deaths: " + string(_stringDeaths))
+	draw_text( __view_get( e__VW.XView, 0 )+ xDistStats,__view_get( e__VW.YView, 0 )+yStat+22, "Deaths: " + string(_stringDeaths))
 	draw_set_color(global.yellow);
-	draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+231, "Deaths: " + string(_stringDeaths))
+	draw_text( __view_get( e__VW.XView, 0 )+ xDistStats,__view_get( e__VW.YView, 0 )+yStat+21, "Deaths: " + string(_stringDeaths))
 	draw_set_color(global.pink);
-	draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+230, "Deaths: " + string(_stringDeaths))
-	
+	draw_text( __view_get( e__VW.XView, 0 )+ xDistStats,__view_get( e__VW.YView, 0 )+yStat+20, "Deaths: " + string(_stringDeaths))
+	draw_set_alpha(1)
 	
 	//---- DRAW TOTAL STATS ---//
-	draw_set_font(global.customFont13);
+	draw_set_font(global.customFont14);
 	draw_set_color(global.lightBlue);
-	draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+272, "Total Kills: " + string(global.totalKills))
+	draw_text( __view_get( e__VW.XView, 0 )+ xDistStats,__view_get( e__VW.YView, 0 )+yStat+67, "Total Kills: " + string(global.totalKills))
 	draw_set_color(global.yellow);
-	draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+271, "Total Kills: " + string(global.totalKills))
+	draw_text( __view_get( e__VW.XView, 0 )+ xDistStats,__view_get( e__VW.YView, 0 )+yStat+66, "Total Kills: " + string(global.totalKills))
 	draw_set_color(global.pink);
-	draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+270, "Total Kills: " + string(global.totalKills))
+	draw_text( __view_get( e__VW.XView, 0 )+ xDistStats,__view_get( e__VW.YView, 0 )+yStat+65, "Total Kills: " + string(global.totalKills))
 	
 	draw_set_color(global.lightBlue);
-	draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+292, "Total Deaths: " + string(global.totalDeaths))
+	draw_text( __view_get( e__VW.XView, 0 )+ xDistStats,__view_get( e__VW.YView, 0 )+yStat+87, "Total Deaths: " + string(global.totalDeaths))
 	draw_set_color(global.yellow);
-	draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+291, "Total Deaths: " + string(global.totalDeaths))
+	draw_text( __view_get( e__VW.XView, 0 )+ xDistStats,__view_get( e__VW.YView, 0 )+yStat+86, "Total Deaths: " + string(global.totalDeaths))
 	draw_set_color(global.pink);
-	draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+290, "Total Deaths: " + string(global.totalDeaths))
+	draw_text( __view_get( e__VW.XView, 0 )+ xDistStats,__view_get( e__VW.YView, 0 )+yStat+85, "Total Deaths: " + string(global.totalDeaths))
 		
 	//---- MORE STATS ---//
+	draw_set_font(global.customFont13);
 	draw_set_halign(fa_center)
 	draw_set_color(global.lightBlue);
-	draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection+80,__view_get( e__VW.YView, 0 )+322, "^ More Stats ^")
+	draw_text( __view_get( e__VW.XView, 0 )+ xDistStats+80,__view_get( e__VW.YView, 0 )+yStat + 112, "^ More Stats ^")
 	draw_set_color(global.yellow);
-	draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection+80,__view_get( e__VW.YView, 0 )+321, "^ More Stats ^")
+	draw_text( __view_get( e__VW.XView, 0 )+ xDistStats+80,__view_get( e__VW.YView, 0 )+yStat + 111, "^ More Stats ^")
 	draw_set_color(global.pink);
-	draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection+80,__view_get( e__VW.YView, 0 )+320, "^ More Stats ^")
+	draw_text( __view_get( e__VW.XView, 0 )+ xDistStats+80,__view_get( e__VW.YView, 0 )+yStat + 110, "^ More Stats ^")
 }

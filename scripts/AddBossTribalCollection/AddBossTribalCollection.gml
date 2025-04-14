@@ -45,7 +45,7 @@ function AddBossTribalCollection()
 		deaths: 0,
 		killsBSide: 0,
 		deathsBSide: 0,
-		minKillsBSide: 7,
+		minKillsBSide: 5,
 	})
 
 	global.totalNumberOfVinyls +=1;

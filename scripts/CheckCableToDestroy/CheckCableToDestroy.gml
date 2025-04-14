@@ -7,8 +7,11 @@ function CheckCableToDestroy()
 		cableToDestroy = ds_map_find_value(global.cablePlayerList, i);
 		if (cableToDestroy.position > _hp)
 		{
-			instance_destroy(cableToDestroy.cable);
-			global.cablesLost +=1;
+			if instance_exists(cableToDestroy.cable)
+			{
+				instance_destroy(cableToDestroy.cable);
+				global.cablesLost +=1;
+			}
 		}
 	}	
 }

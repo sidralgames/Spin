@@ -12,7 +12,10 @@ function ControlsCollection()
 		selectedVinyl -=1;	
 		changeSongCollection = false;
 		o_main.changingLevel = true;
-		o_MainMenu.initialFlechaL = 240;
+		o_MainMenu.initialFlechaL = 260;
+		o_MainMenu.xDistCollection = 0;
+		o_camera.x = o_camera.x + 350;
+		//o_MainMenu._alphaTitle = o_MainMenu._alphaTitleInitial;
 		spriteBoss =  vinylToPlay.sprite;
 		_songToPlay = vinylToPlay.song;
 		ResetNeedle();
@@ -27,7 +30,10 @@ function ControlsCollection()
 		selectedVinyl +=1;
 		changeSongCollection = false;
 		o_main.changingLevel = true;
-		o_MainMenu.initialFlechaR = 240;
+		o_MainMenu.initialFlechaR = 260;
+		//o_MainMenu._alphaTitle = o_MainMenu._alphaTitleInitial;
+		o_MainMenu.xDistCollection = 100;
+		o_camera.x = o_camera.x - 350;
 		spriteBoss =  vinylToPlay.sprite;
 		_songToPlay = vinylToPlay.song;
 		ResetNeedle();

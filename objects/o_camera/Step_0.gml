@@ -16,10 +16,33 @@ if instance_exists(follow) && (global.playing = true) || (global.collection = tr
 	//}
 	//else
 	//{
-		x_point_to_move_camera_to= room_width/2;
-		y_point_to_move_camera_to= room_height/2;
-		x=lerp(x,x_point_to_move_camera_to,0.05);
-		y=lerp(y,y_point_to_move_camera_to,0.05);
+	
+	
+	
+		//x_point_to_move_camera_to= room_width/2;
+		//y_point_to_move_camera_to= room_height/2;
+		//x=lerp(x,x_point_to_move_camera_to,0.05);
+		//y=lerp(y,y_point_to_move_camera_to,0.05);
+		
+		if (global.collection)
+		{
+			if (o_MainMenu._moreStats = false)
+			{
+				x=lerp(x,room_width/2,0.1);
+				y=lerp(y,room_height/2,0.1);
+			}
+			else
+			{
+				x=lerp(x,o_boss.x - 100 ,0.1);
+				y=lerp(y,room_height/2,0.1);
+			}
+		}
+		else
+		{
+			x=lerp(x,room_width/2,0.05);
+			y=lerp(y,room_height/2,0.05);
+		}
+
 	//}
 }
 else if instance_exists(o_MainMenu)

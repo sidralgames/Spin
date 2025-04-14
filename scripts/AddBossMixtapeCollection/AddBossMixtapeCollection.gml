@@ -17,9 +17,9 @@ function AddBossMixtapeCollection()
 		spriteVinyl: s_discoVinilo,
 		hpMax: 350,
 		vinylAlpha : 0.9,
-		vinylAlphaBSide: 0.95,
+		vinylAlphaBSide: 0.85,
 		vinylColor : global.lightPink,
-		vinylColorBSide: global.gbc2,
+		vinylColorBSide: global.orange,
 		number: 5,
 		defeatedInRun: 0,
 		collection: global.bossMixtapeCollection,
@@ -45,7 +45,7 @@ function AddBossMixtapeCollection()
 		deaths: 0,
 		killsBSide: 0,
 		deathsBSide: 0,
-		minKillsBSide: 10,
+		minKillsBSide: 8,
 	})
 
 	global.totalNumberOfVinyls +=1;

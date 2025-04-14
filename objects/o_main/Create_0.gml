@@ -206,14 +206,25 @@ AddCableYellow();
 AddCableRed();
 //AddCableBlue(); -> UPGRADE
 
+scaleUpgrade = 1;
+
 
 load = false;
 
 if (load = false)
 {
 	//LoadAllLocked();
-	//LoadAllUnlocked();
+	LoadAllUnlocked();
 	LoadCollection();
-	global.level = irandom_range(1, global.maxLevelReached)	
+	
+	if (global.maxLevelReached > 1)
+	{
+		global.level = irandom_range(1, global.maxLevelReached)	
+	}
+	else
+	{
+		global.level = 1;
+	}
+	
 	load = true;
 }

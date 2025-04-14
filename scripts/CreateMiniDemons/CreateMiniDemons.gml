@@ -31,6 +31,14 @@ function CreateMiniDemons()
 				"Enemies", o_enemyMiniDemon);
 				contMiniDemons = contMiniDemonsInitial;
 				miniDemonsCreated +=1;
+				if (bossToCreate.sprite = bossToCreate.spriteMain)
+				{
+					miniDemonToCreate.sprite_index = s_miniDemonEnemy;
+				}
+				else
+				{
+					miniDemonToCreate.sprite_index = s_miniDemonEnemy_B;
+				}
 				
 			}
 		}

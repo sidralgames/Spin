@@ -15,7 +15,23 @@ function LoadAllLocked()
 		ini_write_real("stats",thisBoss.deathsNameBSide, 0);
 	}
 	
-	ini_write_real("stats","maxLevel", 1);
+	global.maxLevelReached = 0;
+	global.bulletsFired = 0;
+	global.luckyBullets = 0;
+	global.safeHits = 0;
+	global.dashes = 0;
+	global.falls = 0;
+	global.cablesLost = 0;
+	global.cablesRecovered = 0;
+	
+	ini_write_real("stats","maxLevel", 0);
+	ini_write_real("stats","bulletsFired", 0);
+	ini_write_real("stats","luckyBullets", 0);
+	ini_write_real("stats","safeHits", 0);
+	ini_write_real("stats","dashes", 0);
+	ini_write_real("stats","falls", 0);
+	ini_write_real("stats","cablesLost", 0);
+	ini_write_real("stats","cablesRecovered", 0);
 	ini_write_real("bossesCollection","bossUpgrades", -4);
 	
 	ini_close();

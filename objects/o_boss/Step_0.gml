@@ -86,16 +86,27 @@ if (_hp <= 0)
 		o_player.alarm[10] = 30
 		gamepad_set_vibration(0,0.5,0.5)
 	}
+
+		if (bossToCreate.sprite = spriteBoss)
+		{
+			if (bossToCreate.haveBSide = true) && (bossToCreate.kills = bossToCreate.minKillsBSide)
+			{
+				BossSaveCollectionAndCreateBSIDE();
+			}
+			else
+			{
+				if (bossIsInCollection = 1)
+				{
+					BossDestroyAndCreateUpgrade();
+				}
+				else
+				{
+					bossIsInCollection = 1;
+					BossSaveCollectionAndCreateDef()
+				}
+			}
+		}
 	
-	if (bossIsInCollection = 1)
-	{
-		BossDestroyAndCreateUpgrade();
-	}
-	else
-	{
-		bossIsInCollection = 1;
-		BossSaveCollectionAndCreateDef()
-	}
 	
 	BossExploDie();
 }
