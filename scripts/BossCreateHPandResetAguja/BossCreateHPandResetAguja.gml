@@ -4,6 +4,8 @@ function BossCreateHPandResetAguja()
 {
 	if (createHP = false)
 	{
+		
+		
 		createHP = true;
 		
 		//---- GET BOSS IS IN COLLECTION ---//

@@ -68,7 +68,11 @@ function Die()
 				}
 				
 				instance_destroy();
-				global.falls += 1;
+				
+				if (global.playing)
+				{
+					global.falls += 1;
+				}
 			}
 		}
 	}

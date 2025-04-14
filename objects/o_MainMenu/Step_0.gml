@@ -106,15 +106,15 @@ if (global.collection)
 		{
 			_songName = vinylToPlay.songName;
 			_stringBSide = _stringBSideKey +" > B-Side";
-			_stringKills = vinylToPlay.kills;
-			_stringDeaths = vinylToPlay.deaths;
+			_stringKills = "Kills: " + string(vinylToPlay.kills);
+			_stringDeaths = "Deaths: " + string(vinylToPlay.deaths);
 		}
 		else
 		{
 			_songName = vinylToPlay.songNameBSide;
 			_stringBSide = _stringBSideKey +" > Main Track";
-			_stringKills = vinylToPlay.killsBSide;
-			_stringDeaths = vinylToPlay.deathsBSide;
+			_stringKills = "Kills B-Side: " + string(vinylToPlay.killsBSide);
+			_stringDeaths = "Deaths B-Side : " + string(vinylToPlay.deathsBSide);
 		}
 	
 		//---- START FIGHT AGAINST SELECTED TRACK ---//

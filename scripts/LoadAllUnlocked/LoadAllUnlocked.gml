@@ -9,10 +9,10 @@ function LoadAllUnlocked()
 	{	
 		thisBoss = ds_map_find_value(global.collectionList, i);
 		ini_write_real("bossesCollection",thisBoss.alias, 1);
-		ini_write_real("stats",thisBoss.killsName, 1 + irandom(20));
-		ini_write_real("stats",thisBoss.deathsName, 1 + irandom(20));
-		ini_write_real("stats",thisBoss.killsNameBSide, 1 + irandom(20));
-		ini_write_real("stats",thisBoss.deathsNameBSide, 1 + irandom(20));;
+		ini_write_real("stats",thisBoss.killsName, 1 + irandom(10));
+		ini_write_real("stats",thisBoss.deathsName, 1 + irandom(10));
+		ini_write_real("stats",thisBoss.killsNameBSide, 1 + irandom(10));
+		ini_write_real("stats",thisBoss.deathsNameBSide, 1 + irandom(10));;
 	}
 	
 	ini_write_real("stats","maxLevel", global.totalNumberOfVinyls);

@@ -16,7 +16,7 @@ function AddBossDemonCollection()
 		spriteBSide: s_bossDemon_B,
 		spriteVinyl: s_discoVinilo,
 		hpMax: 140,
-		vinylAlpha : 0.85,
+		vinylAlpha : 0.8,
 		vinylAlphaBSide: 0.875,
 		vinylColor : global.lightBlue,
 		vinylColorBSide: global.pink2,

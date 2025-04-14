@@ -11,6 +11,11 @@ if (contScaleEye <= 0)
 
 if (checkVinylForm = false)
 {
+	//if (global.playing)
+	//{
+	//	instance_create_layer(x,y,"Menu", o_bossName);
+	//}
+	
 	if instance_exists(o_vinilo)
 	{
 		o_vinilo.sprite_index = spriteVinyl;

@@ -33,6 +33,7 @@ function CreateBoss(_selectedBossFromCollection, _additionalHP)
 		_offsetSong = bossToCreate.offsetSong;
 		_hpMax = bossToCreate.hpMax + _additionalHP;
 		_hp = _hpMax;
+		_songName = bossToCreate.songName;
 	}
 	else
 	{
@@ -41,6 +42,7 @@ function CreateBoss(_selectedBossFromCollection, _additionalHP)
 		_offsetSong = bossToCreate.offsetSongBSide;
 		_hpMax = bossToCreate.hpMax + (global.level*20) + _additionalHP;
 		_hp = _hpMax;
+		_songName = bossToCreate.songNameBSide;
 	}
 		
 	if (global.playing)
@@ -52,7 +54,8 @@ function CreateBoss(_selectedBossFromCollection, _additionalHP)
 			audio_play_sound_on(global.audioEmitter,global.song, true, 100,,_offsetSong);
 		}
 	}
-		
+	_albumName = bossToCreate.albumName;
+	_artistName = bossToCreate.artistName;
 	alias = bossToCreate.alias;
 	killsName = bossToCreate.killsName;
 	deathsName = bossToCreate.deathsName;
@@ -63,4 +66,5 @@ function CreateBoss(_selectedBossFromCollection, _additionalHP)
 	bossIsInCollection = bossToCreate.unlocked;
 	bossStep = bossToCreate.step;
 	spriteVinyl = bossToCreate.spriteVinyl;
+	
 }

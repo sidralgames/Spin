@@ -214,7 +214,7 @@ load = false;
 if (load = false)
 {
 	//LoadAllLocked();
-	LoadAllUnlocked();
+	//LoadAllUnlocked();
 	LoadCollection();
 	
 	if (global.maxLevelReached > 1)

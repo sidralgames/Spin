@@ -21,7 +21,8 @@ function CheckUpgradesFromLevelSelector()
 					{ 
 						upgrade: upgToCreate.alias,
 						sprite: upgToCreate.sprite,
-						icon: upgToCreate.icon
+						icon: upgToCreate.icon,
+						debuffed: false
 					
 					})
 

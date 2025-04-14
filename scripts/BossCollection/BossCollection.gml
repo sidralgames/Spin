@@ -41,11 +41,11 @@ function BossCollection()
 		
 		if (vinylToPlay.kills >= vinylToPlay.minKillsBSide) && (vinylToPlay.haveBSide = true)
 		{
-			if (key_R2) || (key_B)
+			if ( (key_R2) || (key_B) ) && (o_vinilo.image_speed = 0)
 			{
 				o_vinilo.image_angle = 5;
 				o_vinilo.image_index = 0;
-				o_vinilo.image_speed = 0.69;
+				o_vinilo.image_speed = o_vinilo.speedImgInitial;
 				
 				screenShake(1,30,4)
 				scale = 0;

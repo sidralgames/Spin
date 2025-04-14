@@ -42,3 +42,5 @@ viniloFake.image_blend = global.vinylColor;
 changingVinylShape = false;
 changingVinylShapeCont = 120;
 chooseVinylShape = false;
+
+speedImgInitial = 0.7;

@@ -3,24 +3,24 @@
 function DrawCollectionBSideAvailable()
 {
 	draw_set_halign(fa_left)
-	draw_set_font(global.customFont13);
+	draw_set_font(global.customFont12);
 		
 	if (vinylToPlay.kills >= vinylToPlay.minKillsBSide)
 	{	
 		draw_set_color(global.lightBlue)
-		draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+22, _stringBSide)
+		draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+122, _stringBSide)
 		draw_set_color(global.yellow)
-		draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+21, _stringBSide)
+		draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+121, _stringBSide)
 		draw_set_color(global.pink)
-		draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+20, _stringBSide)
+		draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+120, _stringBSide)
 	}
 	else
 	{
 		draw_set_color(global.lightBlue)
-		draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection ,__view_get( e__VW.YView, 0 )+22, string(vinylToPlay.minKillsBSide - vinylToPlay.kills) + " kills to unlock B-Side" )
+		draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection ,__view_get( e__VW.YView, 0 )+122, string(vinylToPlay.minKillsBSide - vinylToPlay.kills) + " kills to B-Side" )
 		draw_set_color(global.yellow)
-		draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+21, string(vinylToPlay.minKillsBSide - vinylToPlay.kills) + " kills to unlock B-Side" )
+		draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+121, string(vinylToPlay.minKillsBSide - vinylToPlay.kills) + " kills to B-Side" )
 		draw_set_color(global.pink)
-		draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+20, string(vinylToPlay.minKillsBSide - vinylToPlay.kills) + " kills to unlock B-Side" )
+		draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+120, string(vinylToPlay.minKillsBSide - vinylToPlay.kills) + " kills to B-Side" )
 	}
 }

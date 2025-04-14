@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function ControlsCollection()
 {
-	if (key_leftP)
+	if (key_leftP) && (o_vinilo.image_speed = 0)
 	{
 		//--- RESET PREV TRACK --//
 		checkSong = false;
@@ -21,7 +21,7 @@ function ControlsCollection()
 		ResetNeedle();
 	}
 	
-	if (key_rightP)
+	if (key_rightP) && (o_vinilo.image_speed = 0)
 	{
 		//--- RESET PREV TRACK --//
 		checkSong = false;

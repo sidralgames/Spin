@@ -51,7 +51,7 @@ contEnemies = 200;
 spritePurple = -1;
 changeSongCollection = false;
 drawLocked = false;
-selectedVinyl = global.level-1;
+selectedVinyl = 0;
 rotoSprite = choose(s_rotoBoss1,s_rotoBoss2,s_rotoBoss3);
 surfaceGalleta =-1
 surfaced = false;
@@ -105,6 +105,8 @@ else
 	CreateBoss(0, 20 * global.level);
 }
 
+
+
 alarm[0] = 60;
 alarm[1] = 60;
 
@@ -125,7 +127,7 @@ attack = choose("SingleBullet")
 
 
 sprite_index = spriteBoss;
-image_speed = 0;
+image_speed = 0.25;
 bulletsCreated = 0;
 canChangeAttack = true;
 spinCreateHole = false

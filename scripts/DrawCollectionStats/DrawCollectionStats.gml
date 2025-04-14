@@ -9,19 +9,19 @@ function DrawCollectionStats()
 	draw_set_font(global.customFont15);
 	
 	draw_set_color(global.lightBlue);
-	draw_text( __view_get( e__VW.XView, 0 )+ xDistStats,__view_get( e__VW.YView, 0 )+yStat+2, "Kills: " + string(_stringKills))
+	draw_text( __view_get( e__VW.XView, 0 )+ xDistStats,__view_get( e__VW.YView, 0 )+yStat+2, string(_stringKills))
 	draw_set_color(global.yellow);
-	draw_text( __view_get( e__VW.XView, 0 )+ xDistStats,__view_get( e__VW.YView, 0 )+yStat+1, "Kills: " + string(_stringKills))
+	draw_text( __view_get( e__VW.XView, 0 )+ xDistStats,__view_get( e__VW.YView, 0 )+yStat+1, string(_stringKills))
 	draw_set_color(global.pink);
-	draw_text( __view_get( e__VW.XView, 0 )+ xDistStats,__view_get( e__VW.YView, 0 )+yStat, "Kills: " + string(_stringKills))
+	draw_text( __view_get( e__VW.XView, 0 )+ xDistStats,__view_get( e__VW.YView, 0 )+yStat, string(_stringKills))
 	
 
 	draw_set_color(global.lightBlue);
-	draw_text( __view_get( e__VW.XView, 0 )+ xDistStats,__view_get( e__VW.YView, 0 )+yStat+22, "Deaths: " + string(_stringDeaths))
+	draw_text( __view_get( e__VW.XView, 0 )+ xDistStats,__view_get( e__VW.YView, 0 )+yStat+22, string(_stringDeaths))
 	draw_set_color(global.yellow);
-	draw_text( __view_get( e__VW.XView, 0 )+ xDistStats,__view_get( e__VW.YView, 0 )+yStat+21, "Deaths: " + string(_stringDeaths))
+	draw_text( __view_get( e__VW.XView, 0 )+ xDistStats,__view_get( e__VW.YView, 0 )+yStat+21, string(_stringDeaths))
 	draw_set_color(global.pink);
-	draw_text( __view_get( e__VW.XView, 0 )+ xDistStats,__view_get( e__VW.YView, 0 )+yStat+20, "Deaths: " + string(_stringDeaths))
+	draw_text( __view_get( e__VW.XView, 0 )+ xDistStats,__view_get( e__VW.YView, 0 )+yStat+20, string(_stringDeaths))
 	draw_set_alpha(1)
 	
 	//---- DRAW TOTAL STATS ---//

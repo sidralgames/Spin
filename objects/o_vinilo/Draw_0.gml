@@ -110,6 +110,7 @@ if (surface_exists(surface))
 }
 else
 {
+	
 	sprite_index = s_viniloGira;
 	oViniloFake.sprite_index = sprite_index;
 	oViniloFake.image_speed = image_speed;

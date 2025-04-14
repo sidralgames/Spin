@@ -17,7 +17,8 @@ function CheckLimitedAndUniqueUpgrades()
 					{ 
 						upgrade: upgrade.alias,
 						sprite: upgrade.sprite,
-						icon: upgrade.icon
+						icon: upgrade.icon,
+						debuffed: false
 					
 					})
 					global.numberOfUpgradesPlayer +=1;
