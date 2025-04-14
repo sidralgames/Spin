@@ -94,7 +94,7 @@ if (_hp <= 0)
 
 		if (bossToCreate.sprite = spriteBoss)
 		{
-			if (bossToCreate.haveBSide = true) && (bossToCreate.kills = bossToCreate.minKillsBSide)
+			if (bossToCreate.haveBSide = true) && ((bossToCreate.kills + bossToCreate.killsBSide) = bossToCreate.minKillsBSide)
 			{
 				BossSaveCollectionAndCreateBSIDE();
 			}

@@ -41,7 +41,7 @@ isBreakingVinyl = false;
 
 canCreateNewBoss = true;
 
-contScalingInitial = 15;
+contScalingInitial = 20;
 contScaling =contScalingInitial;
 createBossRomboss = false;
 checkLimiter = false;

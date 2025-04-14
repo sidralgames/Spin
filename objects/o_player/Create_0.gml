@@ -53,7 +53,7 @@ angle = 0;
 moveDir = 0;
 haxis = 0;
 vaxis = 0;
-contDieMax = 10;
+contDieMax = 15;
 contDie = contDieMax;
 
 global.walkAccelerationH = 0.2;

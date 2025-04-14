@@ -115,7 +115,7 @@ else
 	oViniloFake.sprite_index = sprite_index;
 	oViniloFake.image_speed = image_speed;
 	
-	if (oViniloFake.image_index >=10)
+	if (oViniloFake.image_index >=11)
 	{
 		oViniloFake.image_speed = 0;
 		oViniloFake.image_index = 0;

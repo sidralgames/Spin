@@ -4,7 +4,7 @@ function CreateBoss(_selectedBossFromCollection, _additionalHP)
 {
 	if (_selectedBossFromCollection = 0) // False -> Normal Run
 	{
-		if (bossToCreate.kills > bossToCreate.minKillsBSide) && (bossToCreate.haveBSide = true)
+		if (bossToCreate.kills >= bossToCreate.minKillsBSide) && (bossToCreate.haveBSide = true)
 		{
 			if (global.level <= global.totalNumberOfVinyls)
 			{
