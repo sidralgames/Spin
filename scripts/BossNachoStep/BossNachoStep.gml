@@ -2,7 +2,19 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function BossNachoStep()
 {
-if (contAttack >= 0)
+	
+	if (firstAttack = false) && (bossToCreate.sprite = bossToCreate.spriteBSide)
+	{
+		isBreakingVinyl = true;
+		warning = true;
+		firstAttack = true;
+		attack = "Roto";
+		canRoto = true;
+		contAttack = 400;
+		rotoSprite = s_rotoBossNacho_B;
+	}
+	
+	if (contAttack >= 0)
 	{
 		contAttack --;
 	}

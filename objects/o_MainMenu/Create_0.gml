@@ -2,7 +2,7 @@
 // Puede escribir su código en este editor
 global.mainMenuX = x;
 global.mainMenuY = y;
-
+moreStatsOff = 0
 selected = 0;
 _visible = true;
 
@@ -26,6 +26,7 @@ initialHide = 350;
 _moreStats = false;
 contStats = 5;
 yStat = 210
+yStat0 =210;
 _alphaTitleInitial = 1;
 _alphaTitle = _alphaTitleInitial;
 

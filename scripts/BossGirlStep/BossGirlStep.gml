@@ -10,7 +10,14 @@ function BossGirlStep()
 		attack = "Roto";
 		canRoto = true;
 		contAttack = 400;
-		rotoSprite = s_rotoBossGirl;
+		if bossToCreate.sprite = bossToCreate.spriteMain
+		{
+			rotoSprite = s_rotoBossGirl;
+		}
+		else
+		{
+			rotoSprite = s_rotoBossGirl_B;
+		}
 	}
 	
 	

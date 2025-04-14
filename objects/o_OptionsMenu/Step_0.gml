@@ -77,10 +77,21 @@ if (alarm[0] <= 0)
 		
 		if (key_back)
 		{
+			audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 			instance_destroy();
 			o_MainMenu._visible = true;
 		}
 		
+	}
+	
+	if (creditsShowing)
+	{
+		if (key_back)
+		{
+			audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
+			creditsShowing = !creditsShowing;
+			_visible = true;
+		}
 	}
 }
 

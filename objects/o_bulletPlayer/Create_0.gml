@@ -22,6 +22,7 @@ if (global.luckyShot)
 	{
 		baseDamage = 25;
 		isLucky = true;
+		sprite_index = s_bulletPlayerLucky;
 	}
 	else
 	{

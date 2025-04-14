@@ -178,6 +178,7 @@ instance_create_layer(0,0,"Main", o_misilGreenPart);
 instance_create_layer(0,0,"Main", o_misilRedPart);
 instance_create_layer(0,0,"Main", o_misilTribalPart);
 instance_create_layer(0,0,"Main", o_misilTribalPart_B);
+instance_create_layer(0,0,"Main", o_bulletPartLucky);
 
 
 //---- COLLECTION TRACKS - BOSSES ----//

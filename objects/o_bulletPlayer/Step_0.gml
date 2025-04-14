@@ -29,9 +29,15 @@ if (_hp <= 0)
 }
 else
 {
-	part_particles_create(global.balaP_sys, x, y, global.balaP , 1)
+	if sprite_index = s_bulletPlayerLucky
+	{
+		part_particles_create(global.balaPLucky_sys, x, y, global.balaPLucky , 1)
+	}
+	else
+	{
+		part_particles_create(global.balaP_sys, x, y, global.balaP , 1)
+	}
 }
-
 if (global.relativeSpeed > 1.1)
 {
 	speed = initialSpeed * 1.1

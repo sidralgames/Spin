@@ -43,7 +43,7 @@ function BossCollection()
 		{
 			if ( (key_R2) || (key_B) ) && (o_vinilo.image_speed = 0)
 			{
-				o_vinilo.image_angle = 5;
+				o_vinilo.image_angle = 7;
 				o_vinilo.image_index = 0;
 				o_vinilo.image_speed = o_vinilo.speedImgInitial;
 				
