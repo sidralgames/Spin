@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"AddAch9999Bullets",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"AddAch9999Bullets",
+  "parent":{
+    "name":"AddBoss",
+    "path":"folders/Scripts/AddBoss.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

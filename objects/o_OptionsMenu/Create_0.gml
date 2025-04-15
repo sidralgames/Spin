@@ -4,9 +4,10 @@ selected = 0;
 _visible = true;
 creditsShowing = false;
 factor = 0.08;
-
+achievementsShowing = false;
 initialCRT = 300;
 //initialTut = 170;
+initialAch = 300;
 initialScreen = 330;
 initialCredits = 360;
 initialBack = 390;
@@ -22,4 +23,12 @@ else
 	spriteShake = s_screenshakeOFF;
 }
 
+if (global.CRTIsOn)
+{
+	spriteCRT = s_CRTON;
+}
+else
+{
+	spriteCRT = s_CRTOFF
+}
 initialOptions = 270;

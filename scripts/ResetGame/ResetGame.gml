@@ -54,6 +54,8 @@ function ResetGame(_playing)
 		}
 	}
 	//--- RESET GLOBALS ---//
+	global.BSidesInRun = true;
+	
 	global.relativeSpeed = 1;
 	global.wallSprite = s_wallNacho;
 	global.bossHpLimiterUpgrade = false;

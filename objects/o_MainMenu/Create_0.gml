@@ -2,9 +2,15 @@
 // Puede escribir su código en este editor
 global.mainMenuX = x;
 global.mainMenuY = y;
+
+key_R2 =  gamepad_button_check_pressed(0, gp_shoulderrb);
 moreStatsOff = 0
 selected = 0;
 _visible = true;
+
+_stringBSideActive = "Yes";
+_stringConfirm = "X confirm";
+bSideActive = true
 
 factor = 0.1;
 factorGuide = 0.15;

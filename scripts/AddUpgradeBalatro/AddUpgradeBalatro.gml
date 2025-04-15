@@ -4,7 +4,7 @@ function AddUpgradeBalatro()
 {
 	ds_map_add(global.upgradesList, global.totalNumberOfUpgrades,
 	{ 
-		alias: "Bajacktro",
+		alias: "Jack Jocker",
 		sprite: s_upgradeBalatro,
 		icon: s_iconUpgradeBalatro,
 		obj: o_upgradeBalatro,

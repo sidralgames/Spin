@@ -58,8 +58,25 @@ if (alarm[0] <= 0)
 				}break;
 			}
 		}
+		
+		if (selected = 0)
+		{
+			if ((key_leftP) || (key_rightP)) && (bSideActive = false)
+			{
+				audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
+				_stringBSideActive = "Yes";	
+				bSideActive = true;
+				global.BSidesInRun = true;
+			}
+			else if ((key_leftP) || (key_rightP)) && (bSideActive = true)
+			{
+				audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
+				_stringBSideActive = "No";
+				bSideActive = false;
+				global.BSidesInRun = false;
+			}
+		}
 	}
-	
 }
 
 if !instance_exists(o_player)

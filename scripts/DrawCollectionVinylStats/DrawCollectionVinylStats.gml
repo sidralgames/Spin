@@ -6,7 +6,8 @@ function DrawCollectionVinylStats(_unlocked)
 	
 	//----- IF B-SIDE AVAILABLE ----//
 	draw_set_alpha(_alphaTitle)
-	if (vinylToPlay.haveBSide = true) 
+	
+	if (vinylToPlay.haveBSide = true) && (_moreStats = false)
 	{
 		DrawCollectionBSideAvailable()
 	}
@@ -21,29 +22,29 @@ function DrawCollectionVinylStats(_unlocked)
 	if (_unlocked <= 0)
 	{
 		draw_set_color(global.lightBlue)
-		draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+32-moreStatsOff, string(vinylToPlay.number + 1) + ". " + "?????" + "\n" + string(vinylToPlay.albumName) + "\n" + string(vinylToPlay.artistName))
+		draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+27-moreStatsOff, string(vinylToPlay.number + 1) + ". " + "?????" + "\n" + string(vinylToPlay.albumName) + "\n" + string(vinylToPlay.artistName))
 		draw_set_color(global.yellow)
-		draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+31-moreStatsOff, string(vinylToPlay.number + 1) + ". " + "?????" + "\n" + string(vinylToPlay.albumName) + "\n" + string(vinylToPlay.artistName))
+		draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+26-moreStatsOff, string(vinylToPlay.number + 1) + ". " + "?????" + "\n" + string(vinylToPlay.albumName) + "\n" + string(vinylToPlay.artistName))
 		draw_set_color(global.pink)
-		draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+30-moreStatsOff, string(vinylToPlay.number + 1) + ". " + "?????" + "\n" + string(vinylToPlay.albumName) + "\n" + string(vinylToPlay.artistName))
+		draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+25-moreStatsOff, string(vinylToPlay.number + 1) + ". " + "?????" + "\n" + string(vinylToPlay.albumName) + "\n" + string(vinylToPlay.artistName))
 			
 	}
 	else if (_unlocked >= 1)
 	{
 				
 		draw_set_color(global.lightBlue)
-		draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+32-moreStatsOff, string(vinylToPlay.number + 1) + ". " + _songName + "\n" + string(vinylToPlay.albumName) + "\n" + string(vinylToPlay.artistName))
+		draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+27-moreStatsOff, string(vinylToPlay.number + 1) + ". " + _songName + "\n" + string(vinylToPlay.albumName) + "\n" + string(vinylToPlay.artistName))
 		draw_set_color(global.yellow)
-		draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+31-moreStatsOff, string(vinylToPlay.number + 1) + ". " + _songName + "\n" + string(vinylToPlay.albumName) + "\n" + string(vinylToPlay.artistName))
+		draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+26-moreStatsOff, string(vinylToPlay.number + 1) + ". " + _songName + "\n" + string(vinylToPlay.albumName) + "\n" + string(vinylToPlay.artistName))
 		draw_set_color(global.pink)
-		draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+30-moreStatsOff, string(vinylToPlay.number + 1) + ". " + _songName + "\n" + string(vinylToPlay.albumName) + "\n" + string(vinylToPlay.artistName))
+		draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+25-moreStatsOff, string(vinylToPlay.number + 1) + ". " + _songName + "\n" + string(vinylToPlay.albumName) + "\n" + string(vinylToPlay.artistName))
 			
 	}
 	draw_set_alpha(1);
 	
 	if (_moreStats = true)
 	{
-		moreStatsOff = lerp(moreStatsOff, 10, 0.15)
+		moreStatsOff = lerp(moreStatsOff, 15, 0.15)
 		DrawCollectionMoreStats();
 	}
 	else

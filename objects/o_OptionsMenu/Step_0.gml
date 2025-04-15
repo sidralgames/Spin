@@ -2,6 +2,25 @@
 // Puede escribir su código en este editor
 Controls_Input();
 
+if (global.screenshakeIsOn)
+{
+	spriteShake = s_screenshakeON;
+}
+else
+{
+	spriteShake = s_screenshakeOFF;
+}
+
+if (global.CRTIsOn)
+{
+	spriteCRT = s_CRTON;
+}
+else
+{
+	spriteCRT = s_CRTOFF
+}
+
+
 if (alarm[0] <= 0)
 {
 	
@@ -20,14 +39,14 @@ if (alarm[0] <= 0)
 		}
 		
 
-		if (selected > 3)
+		if (selected > 4)
 		{
 			selected = 0;	
 		}
 
 		if (selected < 0)
 		{
-			selected = 3;	
+			selected = 4;	
 		}
 
 		if (key_X)
@@ -36,6 +55,13 @@ if (alarm[0] <= 0)
 			switch(selected)
 			{
 				case 0:
+				{
+					achievementsShowing = !achievementsShowing;
+					_visible = !_visible;
+					contCred = 20;
+		
+				}break;
+				case 1:
 				{
 					with (obj_CRT_controller)
 					{
@@ -48,7 +74,7 @@ if (alarm[0] <= 0)
 					
 				}break;
 				
-				case 1:
+				case 2:
 				{
 					global.screenshakeIsOn = !global.screenshakeIsOn;
 					
@@ -58,7 +84,7 @@ if (alarm[0] <= 0)
 					}
 				}break;
 				
-				case 2:
+				case 3:
 				{
 					creditsShowing = !creditsShowing;
 					_visible = !_visible;
@@ -66,7 +92,7 @@ if (alarm[0] <= 0)
 		
 				}break;
 					
-				case 3:
+				case 4:
 				{
 					instance_destroy();
 					o_MainMenu._visible = true;
@@ -108,3 +134,15 @@ if (creditsShowing) && _visible = false && (contCred < 0)
 		_visible = !_visible;
 	}
 }
+
+if (achievementsShowing) && _visible = false && (contCred < 0)
+{
+	if (key_X)
+	{
+		achievementsShowing = !achievementsShowing;
+		_visible = !_visible;
+	}
+}
+
+initialBackCol = lerp(initialBackCol, 322, o_MainMenu.factorGuide)
+o_MainMenu.initialConfirm = lerp(o_MainMenu.initialConfirm, 287, o_MainMenu.factorGuide)

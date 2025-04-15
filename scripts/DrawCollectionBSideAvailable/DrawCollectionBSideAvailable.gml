@@ -8,19 +8,19 @@ function DrawCollectionBSideAvailable()
 	if (vinylToPlay.kills >= vinylToPlay.minKillsBSide)
 	{	
 		draw_set_color(global.lightBlue)
-		draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+122-moreStatsOff, _stringBSide)
+		draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+117-moreStatsOff, _stringBSide)
 		draw_set_color(global.yellow)
-		draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+121-moreStatsOff, _stringBSide)
+		draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+116-moreStatsOff, _stringBSide)
 		draw_set_color(global.pink)
-		draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+120-moreStatsOff, _stringBSide)
+		draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+115-moreStatsOff, _stringBSide)
 	}
 	else
 	{
 		draw_set_color(global.lightBlue)
-		draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection ,__view_get( e__VW.YView, 0 )+122-moreStatsOff, string(vinylToPlay.minKillsBSide - vinylToPlay.kills) + " kills to B-Side" )
+		draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection ,__view_get( e__VW.YView, 0 )+117-moreStatsOff, string(vinylToPlay.minKillsBSide - vinylToPlay.kills) + " kills to B-Side" )
 		draw_set_color(global.yellow)
-		draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+121-moreStatsOff, string(vinylToPlay.minKillsBSide - vinylToPlay.kills) + " kills to B-Side" )
+		draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+116-moreStatsOff, string(vinylToPlay.minKillsBSide - vinylToPlay.kills) + " kills to B-Side" )
 		draw_set_color(global.pink)
-		draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+120-moreStatsOff, string(vinylToPlay.minKillsBSide - vinylToPlay.kills) + " kills to B-Side" )
+		draw_text( __view_get( e__VW.XView, 0 )+ xDistCollection,__view_get( e__VW.YView, 0 )+115-moreStatsOff, string(vinylToPlay.minKillsBSide - vinylToPlay.kills) + " kills to B-Side" )
 	}
 }

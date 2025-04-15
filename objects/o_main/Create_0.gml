@@ -17,7 +17,7 @@ randomize();
 //fx_set_parameter(global._fx_distort, "g_ChromaSpreadAmount",  0.5);
 
 
-
+global.BSidesInRun = true;
 
 iconsInLine = 6;
 iconsInLine2 = 5;
@@ -39,6 +39,8 @@ global.customFont13= font_add("chubby-choo-semi-bold.ttf", 13, false, false, 32,
 global.customFont12= font_add("chubby-choo-semi-bold.ttf", 12, false, false, 32, 128);
 global.customFont11= font_add("chubby-choo-semi-bold.ttf", 11, false, false, 32, 128);
 global.customFont10= font_add("chubby-choo-semi-bold.ttf", 10, false, false, 32, 128);
+
+global.customFont7= font_add("chubby-choo-semi-bold.ttf", 15, false, false, 32, 128);
 
 
 //---- INIT GLOBALS ----// 
@@ -208,6 +210,17 @@ AddCableRed();
 //AddCableBlue(); -> UPGRADE
 
 scaleUpgrade = 1;
+
+
+global.achievementList = ds_map_create();
+global.totalNumberOfAchievements = 0;
+AddAchAllBSides();
+AddAch9999Bullets();
+AddAchAllUpgrades();
+AddAchRunWithoutFalling();
+AddAch777Lucky();
+AddAchWellPrepared();
+
 
 
 load = false;

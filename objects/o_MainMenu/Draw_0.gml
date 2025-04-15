@@ -3,6 +3,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+draw_set_alpha(1)
 initialTitle = lerp(initialTitle, 80,factor);
 
 if (global.collection = false) && (global.howToPlay = false) 
@@ -40,6 +41,8 @@ if (_visible)
 			draw_sprite_ext(s_options, 0,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialOption,0.7,0.7,0,image_blend,  0.8)	
 			draw_sprite_ext(s_collection, 0,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialCollection,0.6,0.6,0,image_blend,  0.8)	
 			draw_sprite_ext(s_quit, 0,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialQuit,0.5,0.5,0,image_blend,  0.8)	
+
+		
 		}break;
 	
 		case 1:
@@ -104,18 +107,21 @@ if (_visible)
 	}
 }
 
+if gamepad_is_connected(0)
+{
+	imgBack = 0;
+	_stringBack = "O Back";
+	_stringBSideKey = "R2";
+}
+else
+{
+	imgBack = 1;
+	_stringBack = "Z Back";
+	_stringBSideKey = "B";
+}
+
 if (global.collection)
 {
-	if gamepad_is_connected(0)
-	{
-		imgBack = 0;
-		_stringBSideKey = "R2";
-	}
-	else
-	{
-		imgBack = 1;
-		_stringBSideKey = "B";
-	}
 	
 	if (_visibleCollection)
 	{
@@ -160,15 +166,60 @@ if (global.collection)
 }
 else
 {
-	initialConfirm = lerp(initialConfirm, 340,factor);
-	draw_sprite_ext(s_xConfirm, 0,  __view_get( e__VW.XView, 0 )+ 530,__view_get( e__VW.YView, 0 )+initialConfirm,1,1,0,image_blend, image_alpha)
+	
+	if (selected = 0)
+	{
+		
+		draw_set_font(global.customFont13);
+		draw_set_halign(fa_right)
+		draw_set_color(global.lightBlue)
+		draw_text(__view_get( e__VW.XView, 0 )+ 620,__view_get( e__VW.YView, 0 )+initialConfirm +23,  "B-Sides < " + _stringBSideActive + " >")
+		draw_set_color(global.yellow)
+		draw_text(__view_get( e__VW.XView, 0 )+ 620,__view_get( e__VW.YView, 0 )+initialConfirm +21,  "B-Sides < " + _stringBSideActive + " >")
+		draw_set_color(global.pink)
+		draw_text(__view_get( e__VW.XView, 0 )+ 620,__view_get( e__VW.YView, 0 )+initialConfirm+20,   "B-Sides < " + _stringBSideActive + " >")
+	
+		initialConfirm = lerp(initialConfirm, 305,factor);
+		draw_set_halign(fa_right)
+		draw_set_color(global.lightBlue)
+		draw_text( __view_get( e__VW.XView, 0 )+ 620,__view_get( e__VW.YView, 0 )+initialConfirm+3, _stringConfirm)
+		draw_set_color(global.yellow)
+		draw_text( __view_get( e__VW.XView, 0 )+ 620,__view_get( e__VW.YView, 0 )+initialConfirm+1, _stringConfirm)
+		draw_set_color(global.pink)
+		draw_text( __view_get( e__VW.XView, 0 )+ 620,__view_get( e__VW.YView, 0 )+initialConfirm, _stringConfirm)
+	
+	
+	}
+	else
+	{
+		initialConfirm = lerp(initialConfirm, 325,factor);
+		draw_set_font(global.customFont13);
+		draw_set_halign(fa_right)
+		draw_set_color(global.lightBlue)
+		draw_text( __view_get( e__VW.XView, 0 )+ 620,__view_get( e__VW.YView, 0 )+initialConfirm+3, _stringConfirm)
+		draw_set_color(global.yellow)
+		draw_text( __view_get( e__VW.XView, 0 )+ 620,__view_get( e__VW.YView, 0 )+initialConfirm+1, _stringConfirm)
+		draw_set_color(global.pink)
+		draw_text( __view_get( e__VW.XView, 0 )+ 620,__view_get( e__VW.YView, 0 )+initialConfirm, _stringConfirm)
+	}
+	//draw_sprite_ext(s_xConfirm, 0,  __view_get( e__VW.XView, 0 )+ 530,__view_get( e__VW.YView, 0 )+initialConfirm,1,1,0,image_blend, image_alpha)
 }
 
 if instance_exists(o_HowToPlay)
 {
-	initialConfirm = lerp(initialConfirm, 300, factorGuide)
-	initialBackCol = lerp(initialBackCol, 335, factorGuide)
-	draw_sprite_ext(s_backCollection, imgBack,  __view_get( e__VW.XView, 0 )+ 530,__view_get( e__VW.YView, 0 )+initialBackCol,1,1,0,image_blend,  1)	
+	initialConfirm = lerp(initialConfirm, 287, factorGuide)
+	initialBackCol = lerp(initialBackCol, 322, factorGuide)
+	//draw_sprite_ext(s_backCollection, imgBack,  __view_get( e__VW.XView, 0 )+ 530,__view_get( e__VW.YView, 0 )+initialBackCol,1,1,0,image_blend,  1)	
+	
+	draw_set_font(global.customFont13);
+	draw_set_halign(fa_right)
+	draw_set_color(global.lightBlue)
+	draw_text( __view_get( e__VW.XView, 0 )+ 620,__view_get( e__VW.YView, 0 )+initialBackCol+3, _stringBack)
+	draw_set_color(global.yellow)
+	draw_text( __view_get( e__VW.XView, 0 )+ 620,__view_get( e__VW.YView, 0 )+initialBackCol+1, _stringBack)
+	draw_set_color(global.pink)
+	draw_text( __view_get( e__VW.XView, 0 )+ 620,__view_get( e__VW.YView, 0 )+initialBackCol, _stringBack)
+
 }
 
-
+draw_set_alpha(1)

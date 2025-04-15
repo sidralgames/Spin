@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"AddAchRunWithoutFalling",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"AddAchRunWithoutFalling",
+  "parent":{
+    "name":"AddBoss",
+    "path":"folders/Scripts/AddBoss.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

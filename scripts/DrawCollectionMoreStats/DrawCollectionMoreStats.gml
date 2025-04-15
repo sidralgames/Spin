@@ -5,21 +5,24 @@ function DrawCollectionMoreStats()
 	//---- MORE STATS ---//
 	draw_set_font(global.customFont15);;
 		
-	//draw_set_color(global.lightBlue);
-	//draw_text( __view_get( e__VW.XView, 0 )+ xDistStats,__view_get( e__VW.YView, 0 )+142, "Total Kills: " + string(global.totalKills))
-	//draw_set_color(global.yellow);
-	//draw_text( __view_get( e__VW.XView, 0 )+ xDistStats,__view_get( e__VW.YView, 0 )+141, "Total Kills: " + string(global.totalKills))
-	//draw_set_color(global.pink);
-	//draw_text( __view_get( e__VW.XView, 0 )+ xDistStats,__view_get( e__VW.YView, 0 )+140, "Total Kills: " + string(global.totalKills))
-	
-	//draw_set_color(global.lightBlue);
-	//draw_text( __view_get( e__VW.XView, 0 )+ xDistStats,__view_get( e__VW.YView, 0 )+162, "Total Deaths: " + string(global.totalDeaths))
-	//draw_set_color(global.yellow);
-	//draw_text( __view_get( e__VW.XView, 0 )+ xDistStats,__view_get( e__VW.YView, 0 )+161, "Total Deaths: " + string(global.totalDeaths))
-	//draw_set_color(global.pink);
-	//draw_text( __view_get( e__VW.XView, 0 )+ xDistStats,__view_get( e__VW.YView, 0 )+160, "Total Deaths: " + string(global.totalDeaths))
-
+	//---- DRAW TOTAL STATS ---//
 	yStat = lerp(yStat, 155, 0.15)
+	draw_set_font(global.customFont14);
+	draw_set_color(global.lightBlue);
+	draw_text( __view_get( e__VW.XView, 0 )+ xDistStats,__view_get( e__VW.YView, 0 )+yStat-40, "Total Kills: " + string(global.totalKills))
+	draw_set_color(global.yellow);
+	draw_text( __view_get( e__VW.XView, 0 )+ xDistStats,__view_get( e__VW.YView, 0 )+yStat-41, "Total Kills: " + string(global.totalKills))
+	draw_set_color(global.pink);
+	draw_text( __view_get( e__VW.XView, 0 )+ xDistStats,__view_get( e__VW.YView, 0 )+yStat-42, "Total Kills: " + string(global.totalKills))
+	
+	draw_set_color(global.lightBlue);
+	draw_text( __view_get( e__VW.XView, 0 )+ xDistStats,__view_get( e__VW.YView, 0 )+yStat-20, "Total Deaths: " + string(global.totalDeaths))
+	draw_set_color(global.yellow);
+	draw_text( __view_get( e__VW.XView, 0 )+ xDistStats,__view_get( e__VW.YView, 0 )+yStat-21, "Total Deaths: " + string(global.totalDeaths))
+	draw_set_color(global.pink);
+	draw_text( __view_get( e__VW.XView, 0 )+ xDistStats,__view_get( e__VW.YView, 0 )+yStat-22, "Total Deaths: " + string(global.totalDeaths))
+
+
 	draw_set_color(global.lightBlue);
 	draw_text( __view_get( e__VW.XView, 0 )+ xDistStats,__view_get( e__VW.YView, 0 )+yStat+2, "Best Run: LVL " + string(global.maxLevelReached))
 	draw_set_color(global.yellow);
