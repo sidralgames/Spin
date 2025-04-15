@@ -137,6 +137,30 @@ if (creditsShowing) && _visible = false && (contCred < 0)
 
 if (achievementsShowing) && _visible = false && (contCred < 0)
 {
+	if (key_downP)
+		{
+			audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
+			selectedA +=1;	
+		}
+
+		if (key_upP)
+		{
+			audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
+			selectedA -=1;	
+		}
+		
+
+		if (selectedA > global.totalNumberOfAchievements-1)
+		{
+			selectedA = 0;	
+		}
+
+		if (selectedA < 0)
+		{
+			selectedA = global.totalNumberOfAchievements-1;	
+		}
+	
+	
 	if (key_X)
 	{
 		achievementsShowing = !achievementsShowing;

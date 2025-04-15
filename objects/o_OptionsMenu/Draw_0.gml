@@ -109,35 +109,77 @@ if (achievementsShowing)
 {
 	for (var i=0; i<global.totalNumberOfAchievements; i++)
 	{
-		ach = ds_map_find_value(global.achievementList, i)
+		achlist = ds_map_find_value(global.achievementList, i)
 		
-		if (ach.unlocked = true)
+		if (achlist.unlocked = true)
 		{
-			draw_set_alpha(1)
-			draw_set_font(global.customFont15);
-			draw_set_halign(fa_center)
-			draw_set_color(global.lightBlue)
-			draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+134 + 23*i, ach.achievement)
-			draw_set_color(global.yellow)
-			draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+132 + 23*i, ach.achievement)
-			draw_set_color(global.pink)
-			draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+131 + 23*i, ach.achievement)
+			if (i = selectedA)
+			{
+				draw_set_alpha(1)
+				draw_set_font(global.customFont15);
+				draw_set_halign(fa_center)
+				draw_set_color(global.lightBlue)
+				draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+134 + 23*i, "< " + achlist.achievement + " >")
+				draw_set_color(global.yellow)
+				draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+132 + 23*i, "< " + achlist.achievement + " >")
+				draw_set_color(global.pink)
+				draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+131 + 23*i, "< " + achlist.achievement + " >")
+			}
+			else
+			{
+				draw_set_alpha(1)
+				draw_set_font(global.customFont15);
+				draw_set_halign(fa_center)
+				draw_set_color(global.lightBlue)
+				draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+134 + 23*i, achlist.achievement)
+				draw_set_color(global.yellow)
+				draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+132 + 23*i, achlist.achievement)
+				draw_set_color(global.pink)
+				draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+131 + 23*i, achlist.achievement)
+			}
 		}
 		else
 		{
-			draw_set_alpha(0.65)
-			draw_set_font(global.customFont15);
-			draw_set_halign(fa_center)
-			draw_set_color(global.darkPalette)
-			draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+134 + 23*i, ach.achievement)
-			draw_set_color(c_ltgrey)
-			draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+132 + 23*i, ach.achievement)
-			draw_set_color(c_white)
-			draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+131 + 23*i, ach.achievement)
-			draw_set_alpha(1)
+				if (i = selectedA)
+			{
+				draw_set_alpha(0.65)
+				draw_set_font(global.customFont15);
+				draw_set_halign(fa_center)
+				draw_set_color(global.darkPalette)
+				draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+134 + 23*i, "< " + achlist.achievement + " >")
+				draw_set_color(c_ltgrey)
+				draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+132 + 23*i, "< " + achlist.achievement + " >")
+				draw_set_color(c_white)
+				draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+131 + 23*i, "< " + achlist.achievement + " >")
+				draw_set_alpha(1)
+			}
+			else
+			{
+				draw_set_alpha(0.65)
+				draw_set_font(global.customFont15);
+				draw_set_halign(fa_center)
+				draw_set_color(global.darkPalette)
+				draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+134 + 23*i, achlist.achievement)
+				draw_set_color(c_ltgrey)
+				draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+132 + 23*i, achlist.achievement)
+				draw_set_color(c_white)
+				draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+131 + 23*i, achlist.achievement)
+				draw_set_alpha(1)
+			}
 		}	
 	
 	}
+	
+	ach = ds_map_find_value(global.achievementList, selectedA)
+	draw_set_alpha(1)
+			draw_set_font(global.customFont13);
+			draw_set_halign(fa_center)
+			draw_set_color(global.lightBlue)
+			draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+304, ach.desc)
+			draw_set_color(global.yellow)
+			draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+302, ach.desc)
+			draw_set_color(global.pink)
+			draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+301, ach.desc)
 	
 	//draw_sprite_ext(s_Back, 1,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialBack,0.7,0.7,0,image_blend, image_alpha)		
 }
