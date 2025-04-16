@@ -3,6 +3,12 @@
 // Puede escribir su código en este editor
 Controls_Input();
 
+if (checkAch = false)
+{
+
+	SaveAchievements();
+}
+
 rot += global.vinylSpin;
 
 if (getBossDeath = false)

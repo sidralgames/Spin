@@ -34,6 +34,13 @@ function LoadCollection()
 		global.totalKills += thisBoss.killsBSide;
 	}
 	
+	for (var i = 0; i< global.totalNumberOfAchievements; i++)
+	{
+		achievement = ds_map_find_value(global.achievementList, i);
+		achievement.unlocked = ini_read_real("achievements", achievement.alias, 0);
+	}
+		
+	
 	
 		
 	ini_close();

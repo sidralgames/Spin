@@ -101,6 +101,9 @@ if (global.playing) && !instance_exists(o_MainMenu) && !instance_exists(o_gameOv
 {
 	if keyboard_check_pressed(ord("R"))
 	{
+		bsidesInGame = 0;
+		bsidesUnlocked = 0;
+		SaveAchievements();
 		ResetGame(false);
 		instance_create_layer(x,y,"Menu",o_MainMenu);
 	}

@@ -4,9 +4,12 @@ function AddAch9999Bullets()
 {
 	ds_map_add(global.achievementList, global.totalNumberOfAchievements,
 	{ 
+		alias: "9999Bullets",
 		achievement: "Fire 9999 Bullets",
-		unlocked: false,
-		desc: "Fire 9999 Bullets"
+		unlocked: 0,
+		desc: "Fire 9999 Bullets. " + string(global.bulletsFired) + "/9999",
+		descPlaceholder: "Fire 9999 Bullets " + string(global.bulletsFired) + "/9999",
+		descUnlocked: "Fire 9999 Bullets",
 		
 	})
 

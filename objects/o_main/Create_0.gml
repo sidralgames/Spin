@@ -18,6 +18,7 @@ randomize();
 
 
 global.BSidesInRun = true;
+global.fullBSidesRun = false;
 
 iconsInLine = 6;
 iconsInLine2 = 5;
@@ -212,17 +213,21 @@ AddCableRed();
 scaleUpgrade = 1;
 
 
+LoadDefaultGlobals();
+	
+
 global.achievementList = ds_map_create();
 global.totalNumberOfAchievements = 0;
-AddAchAllBSides();
-AddAch9999Bullets();
-AddAchAllUpgrades();
-AddAchRunWithoutFalling();
-AddAch777Lucky();
-AddAchWellPrepared();
+
+AddAchievementsList();
 
 
 
+cableOk = false;
+toolBoxOk = false;
+adapterOk = false;
+shieldOk = false;
+slowMoOk = false;
 load = false;
 
 if (load = false)

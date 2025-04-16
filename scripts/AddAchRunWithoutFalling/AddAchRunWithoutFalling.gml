@@ -4,8 +4,9 @@ function AddAchRunWithoutFalling()
 {
 	ds_map_add(global.achievementList, global.totalNumberOfAchievements,
 	{ 
+		alias: "RunWithoutFalling",
 		achievement: "Afraid of heights",
-		unlocked: false,
+		unlocked: 0,
 		desc: "Complete a run without falling"
 		
 	})

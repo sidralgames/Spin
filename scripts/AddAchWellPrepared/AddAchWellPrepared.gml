@@ -4,9 +4,10 @@ function AddAchWellPrepared()
 {
 	ds_map_add(global.achievementList, global.totalNumberOfAchievements,
 	{ 
+		alias: "WellPrepared",
 		achievement: "Well Prepared",
-		unlocked: false,
-		desc: "Pick Tool Box & Blue Jack in the same run"
+		unlocked: 0,
+		desc: "In the same run\nPick Tool Box, Blue Jack and Adapter"
 		
 	})
 

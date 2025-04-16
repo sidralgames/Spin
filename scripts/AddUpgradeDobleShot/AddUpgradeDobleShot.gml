@@ -12,7 +12,8 @@ function AddUpgradeDobleShot()
 		choosedThisTime: false,
 		unique: true,
 		timesInitial: -1,
-		times: -1
+		times: -1,
+		achievementPicked: false
 	})
 
 	global.totalNumberOfUpgrades +=1;

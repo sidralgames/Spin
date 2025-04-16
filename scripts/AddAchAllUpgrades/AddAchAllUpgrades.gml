@@ -4,9 +4,10 @@ function AddAchAllUpgrades()
 {
 	ds_map_add(global.achievementList, global.totalNumberOfAchievements,
 	{ 
-		achievement: "Discover ALL Upgrades",
-		unlocked: false,
-		desc: "Pick every upgrade on the game"
+		alias: "AllUpgrades",
+		achievement: "What does this do?",
+		unlocked: 0,
+		desc: "Try every Upgrade on the game"
 		
 	})
 

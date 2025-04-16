@@ -1,5 +1,15 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
+
+checkAch = false;
+cableOk = false;
+adapterOk  = false;
+shieldOk  = false;
+toolBoxOk  = false;
+slowMoOk  = false;
+
+	bsidesInGame = 0;
+	bsidesUnlocked = 0;
 initialGameOver = 160;
 factor = 0.05;
 numBossesDefeated = 0;

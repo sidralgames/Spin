@@ -4,8 +4,9 @@ function AddAchAllBSides()
 {
 	ds_map_add(global.achievementList, global.totalNumberOfAchievements,
 	{ 
-		achievement: "Unlock ALL B-Sides",
-		unlocked: true,
+		alias: "AllBSides",
+		achievement: "Expanded Collection",
+		unlocked: 0,
 		desc: "Unlock ALL B-Sides"
 		
 	})

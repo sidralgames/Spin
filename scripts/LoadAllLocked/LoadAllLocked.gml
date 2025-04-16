@@ -15,6 +15,12 @@ function LoadAllLocked()
 		ini_write_real("stats",thisBoss.deathsNameBSide, 0);
 	}
 	
+	for (var i=0; i<global.totalNumberOfAchievements; i++)
+	{
+		achievement = ds_map_find_value(global.achievementList, i);
+		ini_write_real("achievements",achievement.alias, 0);
+	}
+	
 	global.maxLevelReached = 0;
 	global.bulletsFired = 0;
 	global.luckyBullets = 0;

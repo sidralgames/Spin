@@ -4,7 +4,7 @@ function AddUpgradeBalatro()
 {
 	ds_map_add(global.upgradesList, global.totalNumberOfUpgrades,
 	{ 
-		alias: "Jack Jocker",
+		alias: "Funny Card",
 		sprite: s_upgradeBalatro,
 		icon: s_iconUpgradeBalatro,
 		obj: o_upgradeBalatro,
@@ -12,7 +12,8 @@ function AddUpgradeBalatro()
 		choosedThisTime: false,
 		unique: true,
 		timesInitial: -1,
-		times: -1
+		times: -1,
+		achievementPicked: false
 	})
 
 	global.totalNumberOfUpgrades +=1;

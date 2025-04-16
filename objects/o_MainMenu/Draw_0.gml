@@ -4,19 +4,21 @@
 // You can write your code in this editor
 
 draw_set_alpha(1)
-initialTitle = lerp(initialTitle, 80,factor);
+
 
 if (global.collection = false) && (global.howToPlay = false) 
 {
 	if instance_exists(o_OptionsMenu)
 	{
-		if (o_OptionsMenu.creditsShowing = false)
+		initialTitle = lerp(initialTitle, 70,factor);
+		if (o_OptionsMenu.creditsShowing = false) && (o_OptionsMenu.achievementsShowing = false) 
 		{
 			draw_sprite_ext(s_title, 1,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialTitle,1,1,0,image_blend, image_alpha)
 		}
 	}
 	else
 	{
+		initialTitle = lerp(initialTitle, 80,factor);
 		draw_sprite_ext(s_title, 1,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialTitle,1,1,0,image_blend, image_alpha)
 	}
 }

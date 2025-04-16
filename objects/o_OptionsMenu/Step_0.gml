@@ -56,6 +56,14 @@ if (alarm[0] <= 0)
 			{
 				case 0:
 				{
+					bsidesInGame = 0;
+					bsidesUnlocked = 0;
+					cableOk = false;
+					toolBoxOk = false;
+					adapterOk = false;
+					shieldOk = false;
+					slowMoOk = false;
+					SaveAchievements();
 					achievementsShowing = !achievementsShowing;
 					_visible = !_visible;
 					contCred = 20;
@@ -116,6 +124,16 @@ if (alarm[0] <= 0)
 		{
 			audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 			creditsShowing = !creditsShowing;
+			_visible = true;
+		}
+	}
+	
+	if (achievementsShowing)
+	{
+		if (key_back)
+		{
+			audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
+			achievementsShowing = !achievementsShowing;
 			_visible = true;
 		}
 	}

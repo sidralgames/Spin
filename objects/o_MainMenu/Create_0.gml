@@ -40,3 +40,4 @@ _visibleCollection = true;
 
 xDistCollection = 50;
 xDistStats = 50;
+selectedBside = 1;

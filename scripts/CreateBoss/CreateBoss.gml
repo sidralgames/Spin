@@ -4,7 +4,12 @@ function CreateBoss(_selectedBossFromCollection, _additionalHP)
 {
 	if (_selectedBossFromCollection = 0) // False -> Normal Run
 	{
-		if (global.BSidesInRun = true) && (bossToCreate.haveBSide = true) 
+		if (global.fullBSidesRun = true) & (bossToCreate.haveBSide = true) 
+		&& (bossToCreate.kills >= bossToCreate.minKillsBSide)
+		{
+			spriteBoss = bossToCreate.spriteBSide;
+		}
+		else if (global.BSidesInRun = true) && (bossToCreate.haveBSide = true) 
 		&& (bossToCreate.kills >= bossToCreate.minKillsBSide)
 		{
 			if (global.level <= global.totalNumberOfVinyls)

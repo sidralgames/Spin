@@ -12,7 +12,8 @@ function AddUpgradeEnergy()
 		choosedThisTime: false,
 		unique: false,
 		timesInitial: -1,
-		times: -1
+		times: -1,
+		achievementPicked: false
 	})
 
 	global.totalNumberOfUpgrades +=1;

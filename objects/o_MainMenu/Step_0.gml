@@ -30,6 +30,7 @@ if (alarm[0] <= 0)
 				
 				case 2:
 				{
+					
 					audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 					instance_create_layer(x,y,"Menu", o_OptionsMenu);
 					_visible = false;
@@ -61,19 +62,50 @@ if (alarm[0] <= 0)
 		
 		if (selected = 0)
 		{
-			if ((key_leftP) || (key_rightP)) && (bSideActive = false)
+			if (selectedBside > 2)
 			{
+				selectedBside = 0;	
+			}
+			if (selectedBside < 0)
+			{
+				selectedBside = 2;	
+			}
+			
+			if (key_rightP)
+			{
+				selectedBside +=1;	
 				audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
-				_stringBSideActive = "Yes";	
-				bSideActive = true;
 				global.BSidesInRun = true;
 			}
-			else if ((key_leftP) || (key_rightP)) && (bSideActive = true)
+			else if (key_leftP) 
 			{
+				selectedBside -=1;	
 				audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
-				_stringBSideActive = "No";
-				bSideActive = false;
-				global.BSidesInRun = false;
+			
+			}
+			
+			switch(selectedBside)
+			{
+				case 0:
+				{
+					_stringBSideActive = "No";
+					global.BSidesInRun = false;
+					global.fullBSidesRun = false;
+				}break;
+				
+				case 1:
+				{
+					_stringBSideActive = "Yes";
+					global.BSidesInRun = true;
+					global.fullBSidesRun = false;
+				}break;
+				
+				case 2:
+				{
+					_stringBSideActive = "ALL";
+					global.BSidesInRun = true;
+					global.fullBSidesRun = true;
+				}break;
 			}
 		}
 	}

@@ -12,7 +12,8 @@ function AddUpgradeMaxHP()
 		choosedThisTime: false,
 		unique: false,
 		timesInitial: 2,
-		times: 2
+		times: 2,
+		achievementPicked: false
 	})
 
 	global.totalNumberOfUpgrades +=1;

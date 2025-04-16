@@ -2,6 +2,10 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function ResetGame(_playing)
 {
+	bsidesInGame = 0;
+	bsidesUnlocked = 0;
+	SaveAchievements();
+	
 	//--- RESET  UPGRADES ----//
 	ResetUpgrades();
 	
@@ -53,6 +57,9 @@ function ResetGame(_playing)
 			global.level = 1;
 		}
 	}
+	
+	
+	
 	//--- RESET GLOBALS ---//
 	global.BSidesInRun = true;
 	
@@ -148,6 +155,21 @@ function ResetGame(_playing)
 	global.totalNumberOfUpgrades = 0;
 	
 	AddUpgradesList();
+	
+	
+	
+	//---- DESTROY FROM MEMORY AND RE-CREATE ACHIEVEMENT LIST ---//
+	for (var i=0; i<=global.totalNumberOfAchievements; i++)
+	{
+		ds_map_delete(global.achievementList, i)
+	}
+	ds_map_clear(global.achievementList);
+	ds_map_destroy(global.achievementList);
+	
+	global.achievementList = ds_map_create();
+	global.totalNumberOfAchievements = 0;
+	
+	AddAchievementsList();
 	
 	
 	//---- DESTROY FROM MEMORY AND RE-CREATE PLAYER UPGRADE LIST---//

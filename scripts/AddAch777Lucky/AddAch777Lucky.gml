@@ -4,8 +4,9 @@ function AddAch777Lucky()
 {
 	ds_map_add(global.achievementList, global.totalNumberOfAchievements,
 	{ 
-		achievement: "Fire 777 Lucky Bullets",
-		unlocked: false,
+		alias: "777LuckyBullets",
+		achievement: "Lucky Bullet Lover",
+		unlocked: 0,
 		desc: "Fire 777 Lucky Bullets"
 		
 	})

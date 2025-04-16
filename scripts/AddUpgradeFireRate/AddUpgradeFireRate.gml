@@ -12,7 +12,8 @@ function AddUpgradeFireRate()
 		choosedThisTime: false,
 		unique: false,
 		timesInitial: 3,
-		times: 3
+		times: 3,
+		achievementPicked: false
 	})
 
 	global.totalNumberOfUpgrades +=1;

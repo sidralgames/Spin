@@ -15,5 +15,6 @@ function RecoverJacksFromUpgrade()
 
 		_hpMax = global.numberOfCablesPlayer;
 		_hp = _hpMax;
+		global.damageAuxUpgrade = 1;
 	}
 }

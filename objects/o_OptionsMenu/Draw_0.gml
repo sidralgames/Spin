@@ -15,6 +15,7 @@ if (_visible)
 		{
 			case 0:
 			{
+				initialAchT = initialAch
 				initialAch = lerp(initialAch, 205,factor);
 				initialCRT = lerp(initialCRT, 245,factor);
 				//initialTut = lerp(initialTut, 230,factor);
@@ -101,15 +102,43 @@ if (_visible)
 
 if (creditsShowing)
 {
+	
 	draw_sprite_ext(s_creditsText, 1,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+170,1,1,0,image_blend, image_alpha)		
 	//draw_sprite_ext(s_Back, 1,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialBack,0.7,0.7,0,image_blend, image_alpha)		
 }
 
 if (achievementsShowing)
 {
+	initialAch = lerp(initialAch, 37,factor);
+	initialAchT = lerp(initialAchT, 37,factor+0.05);
+	draw_sprite_ext(s_ach, 0,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialAchT,1,1,0,image_blend,1)
 	for (var i=0; i<global.totalNumberOfAchievements; i++)
 	{
 		achlist = ds_map_find_value(global.achievementList, i)
+		
+		if (achlist.alias = "Unknown")
+		{
+			if (achlist.unlocked = 0)
+			{
+				achlist.achievement = achlist.achievementPlaceholder
+			}
+			else
+			{
+				achlist.achievement = achlist.achievementUnlocked
+			}
+		}
+		
+		if (achlist.alias = "9999Bullets")
+		{
+			if (achlist.unlocked = 0)
+			{
+				achlist.desc = achlist.descPlaceholder;
+			}
+			else
+			{
+				achlist.desc = achlist.descUnlocked;
+			}
+		}
 		
 		if (achlist.unlocked = true)
 		{
@@ -119,38 +148,38 @@ if (achievementsShowing)
 				draw_set_font(global.customFont15);
 				draw_set_halign(fa_center)
 				draw_set_color(global.lightBlue)
-				draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+134 + 23*i, "< " + achlist.achievement + " >")
+				draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialAch+28 + 23*i, "- " + achlist.achievement + " -")
 				draw_set_color(global.yellow)
-				draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+132 + 23*i, "< " + achlist.achievement + " >")
+				draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialAch+26 + 23*i, "- " + achlist.achievement + " -")
 				draw_set_color(global.pink)
-				draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+131 + 23*i, "< " + achlist.achievement + " >")
+				draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialAch+25 + 23*i, "- " + achlist.achievement + " -")
 			}
 			else
 			{
-				draw_set_alpha(1)
+				draw_set_alpha(0.85)
 				draw_set_font(global.customFont15);
 				draw_set_halign(fa_center)
 				draw_set_color(global.lightBlue)
-				draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+134 + 23*i, achlist.achievement)
+				draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialAch+28 + 23*i, achlist.achievement)
 				draw_set_color(global.yellow)
-				draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+132 + 23*i, achlist.achievement)
+				draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialAch+26 + 23*i, achlist.achievement)
 				draw_set_color(global.pink)
-				draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+131 + 23*i, achlist.achievement)
+				draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialAch+25 + 23*i, achlist.achievement)
 			}
 		}
 		else
 		{
 				if (i = selectedA)
 			{
-				draw_set_alpha(0.65)
+				draw_set_alpha(0.95)
 				draw_set_font(global.customFont15);
 				draw_set_halign(fa_center)
 				draw_set_color(global.darkPalette)
-				draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+134 + 23*i, "< " + achlist.achievement + " >")
+				draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialAch+28 + 23*i, "- " + achlist.achievement + " -")
 				draw_set_color(c_ltgrey)
-				draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+132 + 23*i, "< " + achlist.achievement + " >")
+				draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialAch+26 + 23*i, "- " + achlist.achievement + " -")
 				draw_set_color(c_white)
-				draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+131 + 23*i, "< " + achlist.achievement + " >")
+				draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialAch+25 + 23*i, "- " + achlist.achievement + " -")
 				draw_set_alpha(1)
 			}
 			else
@@ -159,28 +188,28 @@ if (achievementsShowing)
 				draw_set_font(global.customFont15);
 				draw_set_halign(fa_center)
 				draw_set_color(global.darkPalette)
-				draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+134 + 23*i, achlist.achievement)
+				draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialAch+28 + 23*i, achlist.achievement)
 				draw_set_color(c_ltgrey)
-				draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+132 + 23*i, achlist.achievement)
+				draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialAch+26 + 23*i, achlist.achievement)
 				draw_set_color(c_white)
-				draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+131 + 23*i, achlist.achievement)
+				draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialAch+25 + 23*i, achlist.achievement)
 				draw_set_alpha(1)
 			}
 		}	
 	
 	}
-	
+	draw_set_valign(fa_bottom)
 	ach = ds_map_find_value(global.achievementList, selectedA)
 	draw_set_alpha(1)
 			draw_set_font(global.customFont13);
 			draw_set_halign(fa_center)
 			draw_set_color(global.lightBlue)
-			draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+304, ach.desc)
+			draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialAch+312, ach.desc)
 			draw_set_color(global.yellow)
-			draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+302, ach.desc)
+			draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialAch+311, ach.desc)
 			draw_set_color(global.pink)
-			draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+301, ach.desc)
-	
+			draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialAch+310, ach.desc)
+	draw_set_valign(fa_top)
 	//draw_sprite_ext(s_Back, 1,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialBack,0.7,0.7,0,image_blend, image_alpha)		
 }
 
