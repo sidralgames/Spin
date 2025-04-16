@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"AddAchBreakWalls",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"AddAchBreakWalls",
+  "parent":{
+    "name":"AddBoss",
+    "path":"folders/Scripts/AddBoss.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

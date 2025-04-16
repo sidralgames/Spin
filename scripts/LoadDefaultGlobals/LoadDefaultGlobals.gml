@@ -8,6 +8,7 @@ function LoadDefaultGlobals()
 
 	global.totalDeaths = 0;
 	global.totalKills = 0;
+
 	
 	global.bulletsFired = ini_read_real("stats", "bulletsFired", 0);
 	global.cablesLost = ini_read_real("stats", "cablesLost", 0);
@@ -16,5 +17,7 @@ function LoadDefaultGlobals()
 	global.luckyBullets = ini_read_real("stats", "luckyBullets", 0);
 	global.cablesRecovered = ini_read_real("stats", "cablesRecovered", 0);
 	global.falls = ini_read_real("stats", "falls", 0);
+	global.brokenWalls = ini_read_real("stats", "brokenWalls", 0);
+	global.breakWalls = ini_read_real("achievements", "BreakWalls", 0);
 	ini_close();
 }

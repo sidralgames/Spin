@@ -1,13 +1,15 @@
 // Los recursos de Script han cambiado para la v2.3.0 Consulta
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
-function AddAchRunWithoutFalling()
+function AddAchTotalKills128()
 {
 	ds_map_add(global.achievementList, global.totalNumberOfAchievements,
 	{ 
-		alias: "RunWithoutFalling",
-		achievement: "Afraid Of Heights",
+		alias: "TotalKills128",
+		achievement: "128 kbps",
 		unlocked: 0,
-		desc: "Complete a run without falling"
+		desc: "Defeat 128 Tracks",
+		descPlaceholder: "Defeat 128 Tracks\n(" + string(global.totalKills) + " / 128)",
+		descUnlocked: "Defeat 128 Tracks"
 		
 	})
 

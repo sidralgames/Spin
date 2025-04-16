@@ -41,4 +41,20 @@ function CheckAllKills()
 			}
 		}
 	}
+	
+	if (achievementCheck.alias = "TotalKills128")
+	{
+		if (global.totalKills >= 128)
+		{
+			achievementCheck.unlocked = 1;
+		}
+	}
+	
+	if (achievementCheck.alias = "TotalKills320")
+	{
+		if (global.totalKills >= 320)
+		{
+			achievementCheck.unlocked = 1;
+		}
+	}
 }

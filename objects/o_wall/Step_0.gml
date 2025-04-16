@@ -55,6 +55,7 @@ if (_hpTime <= 0) || (point_distance(x,y,global.cx, global.cy) > 180)
 
 if (_hp <= 0)
 {
+	global.brokenWalls +=1;
 	screenShake(2,10);
 	instance_destroy();	
 }

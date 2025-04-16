@@ -20,5 +20,7 @@ function CheckAchievements()
 		CheckWellPrepared();
 		
 		CheckUntouchable();
+		
+		CheckCompletionist();
 	}
 }

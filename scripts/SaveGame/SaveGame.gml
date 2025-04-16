@@ -29,6 +29,7 @@ function SaveGame()
 	ini_write_real("stats","luckyBullets", global.luckyBullets)
 	ini_write_real("stats","cablesRecovered", global.cablesRecovered)
 	ini_write_real("stats","falls", global.falls)
+	ini_write_real("stats","brokenWalls", global.brokenWalls)
 	
 	ini_close();
 }

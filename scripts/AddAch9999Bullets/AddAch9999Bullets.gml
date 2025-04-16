@@ -7,8 +7,8 @@ function AddAch9999Bullets()
 		alias: "9999Bullets",
 		achievement: "Fire 9999 Bullets",
 		unlocked: 0,
-		desc: "Fire 9999 Bullets. " + string(global.bulletsFired) + "/9999",
-		descPlaceholder: "Fire 9999 Bullets " + string(global.bulletsFired) + "/9999",
+		descPlaceholder: "Fire 9999 Bullets\n(" + string(global.bulletsFired) + " / 9999)",
+		descPlaceholder: "Fire 9999 Bullets\n(" + string(global.bulletsFired) + " / 9999)",
 		descUnlocked: "Fire 9999 Bullets",
 		
 	})

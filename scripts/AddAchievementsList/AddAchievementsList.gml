@@ -8,8 +8,12 @@ function AddAchievementsList()
 	AddAchUnknown();
 	AddAchUntouchable();
 	AddAchRunWithoutFalling();
+	AddAchTotalKills128();
 	AddAch777Lucky();
 	AddAchAllKills();
 	AddAchWellPrepared();
 	AddAchRunBSides();
+	AddAchBreakWalls();
+	AddAchCompletionist();
+	AddAchTotalKills320();
 }
