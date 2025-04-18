@@ -3,6 +3,7 @@
 function CheckAchievements()
 {
 	//----- CHECK UNLOCKED ACHIEVEMENTS ---//
+	
 	for (var j=0; j<global.totalNumberOfAchievements; j++)
 	{	
 		achievementCheck = ds_map_find_value(global.achievementList, j);
@@ -17,9 +18,14 @@ function CheckAchievements()
 		CheckAllBSides();
 		
 		//--- UPGRADES PICKED ----//
-		CheckWellPrepared();
+		if (global.playing)
+		{
+			CheckWellPrepared();
+			
+			CheckLotsOfBullets();
 		
-		CheckUntouchable();
+			CheckUntouchable();
+		}
 		
 		CheckCompletionist();
 	}

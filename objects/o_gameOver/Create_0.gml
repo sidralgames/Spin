@@ -7,9 +7,11 @@ adapterOk  = false;
 shieldOk  = false;
 toolBoxOk  = false;
 slowMoOk  = false;
+dobleShotOk = false;
+shotGunOk = false;
 
-	bsidesInGame = 0;
-	bsidesUnlocked = 0;
+bsidesInGame = 0;
+bsidesUnlocked = 0;
 initialGameOver = 160;
 factor = 0.05;
 numBossesDefeated = 0;

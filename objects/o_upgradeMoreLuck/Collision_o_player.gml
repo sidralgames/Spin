@@ -5,6 +5,8 @@ if ( (canBePicked) && (key_X) ) || ((canBePicked) && (autoPicked) )
 {
 	CheckLimitedAndUniqueUpgrades();
 	
+	global.trebolsPicked += 1;
+	
 	global.luckAuxUpgrade = 2;
 	
 	global.dobleShotOdds = round(global.dobleShotOdds / 2);

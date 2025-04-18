@@ -1,18 +1,16 @@
 // Los recursos de Script han cambiado para la v2.3.0 Consulta
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
-function SaveAchievements()
+function LoadAchievements()
 {
 
-	CheckAchievements();	
-	
 	ini_open("SpinData.ini");
-	//-------- SAVE ACHIEVEMENTS --------//
+	
+	//-------- READ ACHIEVEMENTS --------//
 	for (var i=0; i<global.totalNumberOfAchievements; i++)
 	{	
 		thisAch = ds_map_find_value(global.achievementList, i);
-		ini_write_real("achievements",thisAch.alias, thisAch.unlocked);
+		thisAch.unlocked = ini_read_real("achievements",thisAch.alias, 0);
 	}
-	
 	
 	ini_close();
 	

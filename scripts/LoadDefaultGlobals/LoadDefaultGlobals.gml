@@ -18,6 +18,8 @@ function LoadDefaultGlobals()
 	global.cablesRecovered = ini_read_real("stats", "cablesRecovered", 0);
 	global.falls = ini_read_real("stats", "falls", 0);
 	global.brokenWalls = ini_read_real("stats", "brokenWalls", 0);
+	global.trebolsPicked = ini_read_real("stats", "trebolsPicked", 0);
 	global.breakWalls = ini_read_real("achievements", "BreakWalls", 0);
+	
 	ini_close();
 }

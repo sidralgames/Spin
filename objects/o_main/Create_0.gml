@@ -228,13 +228,16 @@ toolBoxOk = false;
 adapterOk = false;
 shieldOk = false;
 slowMoOk = false;
+dobleShotOk = false;
+shotGunOk = false;
 load = false;
 
 if (load = false)
 {
-	//LoadAllLocked();
+	LoadAllLocked();
 	//LoadAllUnlocked();
 	LoadCollection();
+	LoadAchievements();
 	
 	if (global.maxLevelReached > 1)
 	{

@@ -1,28 +1,24 @@
 // Los recursos de Script han cambiado para la v2.3.0 Consulta
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
-function CheckWellPrepared()
+function CheckLotsOfBullets()
 {
-	if (achievementCheck.alias = "WellPrepared")
+	if (achievementCheck.alias = "LotsOfBullets")
 	{
 		for (var j = 0; j<global.numberOfUpgradesPlayer; j++)
 		{
 			upgradeToCheck = ds_map_find_value(global.playerUpgradesList,j)
-			if (upgradeToCheck.upgrade = "Tool Box")
+			if (upgradeToCheck.upgrade = "ShotGun")
 			{
-				toolBoxOk = true;
+				shotGunOk = true;
 			}
-					if (upgradeToCheck.upgrade = "Cable")
+			
+			if (upgradeToCheck.upgrade = "DobleShot")
 			{
-				cableOk = true;
-			}
-		
-			if (upgradeToCheck.upgrade = "StrongConnection")
-			{
-				adapterOk = true;
+				dobleShotOk = true;
 			}
 		}
 	
-		if (cableOk = true) && (toolBoxOk = true) && (adapterOk = true)
+		if (dobleShotOk = true) && (shotGunOk = true)
 		{
 			achievementCheck.unlocked = 1;
 			ini_open("SpinData.ini");

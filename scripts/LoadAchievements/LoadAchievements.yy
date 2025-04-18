@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"LoadAchievements",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"LoadAchievements",
+  "parent":{
+    "name":"DATA",
+    "path":"folders/Scripts/DATA.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

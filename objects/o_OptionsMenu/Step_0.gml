@@ -56,14 +56,7 @@ if (alarm[0] <= 0)
 			{
 				case 0:
 				{
-					bsidesInGame = 0;
-					bsidesUnlocked = 0;
-					cableOk = false;
-					toolBoxOk = false;
-					adapterOk = false;
-					shieldOk = false;
-					slowMoOk = false;
-					SaveAchievements();
+					LoadAchievements();
 					achievementsShowing = !achievementsShowing;
 					_visible = !_visible;
 					contCred = 20;
@@ -135,7 +128,7 @@ if (alarm[0] <= 0)
 		{
 			audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 			selectedPage +=1;
-			selectedA += floor(global.totalNumberOfVinyls / 2)
+			selectedA += floor(global.totalNumberOfVinyls / 3) -1
 			initialFlechaR= 243;
 		}
 
@@ -143,20 +136,20 @@ if (alarm[0] <= 0)
 		{
 			audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
 			selectedPage -=1;
-			selectedA -= floor(global.totalNumberOfVinyls / 2)
+			selectedA -= floor(global.totalNumberOfVinyls / 3) -1
 			initialFlechaL= 243;
 
 		}
 		
 
-		if (selectedPage > 1)
+		if (selectedPage > 2)
 		{
 			selectedPage = 0;	
 		}
 
 		if (selectedPage < 0)
 		{
-			selectedPage = 1;	
+			selectedPage = 2;	
 		}
 		
 		if (key_back)
@@ -198,14 +191,14 @@ if (achievementsShowing) && _visible = false && (contCred < 0)
 		}
 		
 
-		if (selectedA > floor(global.totalNumberOfAchievements /2) -1)
+		if (selectedA > round(global.totalNumberOfAchievements /3) -1)
 		{
 			selectedA = 0;	
 		}
 
 		if (selectedA < 0)
 		{
-			selectedA = floor(global.totalNumberOfAchievements /2) -1
+			selectedA = round(global.totalNumberOfAchievements /3) -1
 		}
 	
 	

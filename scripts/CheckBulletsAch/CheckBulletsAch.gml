@@ -2,6 +2,16 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function CheckBulletsAch()
 {
+	
+	if (achievementCheck.alias = "Trebol")
+	{
+		if (global.trebolsPicked >= 7)
+		{
+			achievementCheck.unlocked = 1;
+		}
+	}
+	
+	
 	//--- 9999 BULLETS ----//
 	if (achievementCheck.alias = "9999Bullets")
 	{

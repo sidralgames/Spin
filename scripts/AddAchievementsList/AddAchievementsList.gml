@@ -2,18 +2,23 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function AddAchievementsList()
 {
-	AddAchAllBSides();
 	AddAch9999Bullets();
 	AddAchAllUpgrades();
 	AddAchUnknown();
-	AddAchUntouchable();
+	AddAchUntouchable();//5
+	AddAchAllBSides();
 	AddAchRunWithoutFalling();
-	AddAchTotalKills128();
+	AddAchMoreThan100();
 	AddAch777Lucky();
-	AddAchAllKills();
+	AddAchAllKills();//10
 	AddAchWellPrepared();
-	AddAchRunBSides();
+	AddAchTotalKills128();
+	AddAchLotsOfBullets();
 	AddAchBreakWalls();
-	AddAchCompletionist();
+	AddAchAgainstSpin();//15
+	AddAchRunBSides();
+	//AddAchTrueAngel();
 	AddAchTotalKills320();
+	AddAchCompletionist();
+	AddAchTrebol();
 }

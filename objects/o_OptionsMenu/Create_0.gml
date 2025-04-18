@@ -5,7 +5,7 @@ initialFlechaL= 203;
 initialFlechaR= 203;
 
 selectedPage = 0;
-nextPageAch = round(global.totalNumberOfAchievements/ 2);
+nextPageAch = floor(global.totalNumberOfAchievements/ 3);
 achievementPages = 2;
 selected = 0;
 _visible = true;

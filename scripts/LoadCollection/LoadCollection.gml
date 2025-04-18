@@ -19,6 +19,7 @@ function LoadCollection()
 	global.falls = ini_read_real("stats", "falls", 0);
 	
 	
+	
 	//-------- Collection Bosses --------//
 	for (var i=0; i<global.totalNumberOfVinyls; i++)
 	{	
