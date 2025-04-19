@@ -7,9 +7,9 @@ function AddAchAgainstSpin()
 		alias: "AgainstSpin",
 		achievement: "Against The Spin",
 		unlocked: 0,
-		desc: "Run against the spin\nfor a whole Track (only B-Sides count)",
-		descPlaceholder: "Run against the spin\nfor a whole Track (only B-Sides count)",
-		descUnlocked: "Run against the spin\nfor a whole Track (only B-Sides count)",
+		desc:  "Run against the spin\nfor 4 min before dying (Best: " + GetTimeRunningAgainstSpin() + ")" ,
+		descPlaceholder: "Run against the spin\nfor 4 min before dying (Best: " + GetTimeRunningAgainstSpin() + ")" ,
+		descUnlocked: "Run against the spin\nfor 4 min before dying (Best: " + GetTimeRunningAgainstSpin() + ")" ,
 		
 	})
 

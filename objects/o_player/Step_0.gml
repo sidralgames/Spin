@@ -293,6 +293,7 @@ if (dying = false)
 					if (point_directionActual > point_directionPrev)
 					{
 						runningAgainstDisc = true;
+						global.runningAgainstSpinmilisecs+= (delta_time*0.000001)*room_speed;
 						realspeed = lerp(realspeed, point_distance(0 ,0, haxis, vaxis) * (_speed - abs(bossSpin * global.relativeSpeed)), 0.1); // direccionContraria
 					}
 					else

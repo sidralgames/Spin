@@ -68,12 +68,17 @@ if (image_xscale >= scaleExplo) || (_hp <=0)
 			o_vinilo.angleHole = point_direction(o_boss.x, o_boss.y,x,y)
 			o_vinilo.distHole = point_distance(x,y,o_boss.x, o_boss.y)
 			o_vinilo.holeImage = irandom(2);
-			if (_hp = 0)
+			if (_hp <= 0)
 			{
 				o_vinilo.scaleRoto = random_range(0.1,0.2)
 				screenShake(1,10,1);
 				
 				gamepad_set_vibration(0,0.2,0.2);
+				
+				if (killedByPlayer = true)
+				{
+					global.bombsDestroyed +=1;
+				}
 			}
 			else
 			{

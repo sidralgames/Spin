@@ -3,8 +3,8 @@
 event_inherited();
 cx = room_width/2;
 cy = room_height/2;
-alias = "Jack Jocker";
-upgradeName = "Jack Jocker";
+alias = "Funny Card";
+upgradeName = "Funny Card";
 upgradeDesc = "Deal\nx4 damage\nif one Jack\nremaining";
 bossSpin = global.vinylSpin;
 totalPush = 0;

@@ -4,20 +4,22 @@ function AddAchievementsList()
 {
 	AddAch9999Bullets();
 	AddAchAllUpgrades();
-	AddAchUnknown();
+	AddAchKillEnemies();
 	AddAchUntouchable();//5
 	AddAchAllBSides();
 	AddAchRunWithoutFalling();
+	AddAchBreakWalls();
 	AddAchMoreThan100();
 	AddAch777Lucky();
 	AddAchAllKills();//10
 	AddAchWellPrepared();
+	AddAchControlledExplosion();
 	AddAchTotalKills128();
 	AddAchLotsOfBullets();
-	AddAchBreakWalls();
+	AddAchTrueAngel();
 	AddAchAgainstSpin();//15
 	AddAchRunBSides();
-	//AddAchTrueAngel();
+	AddAchUnknown();
 	AddAchTotalKills320();
 	AddAchCompletionist();
 	AddAchTrebol();

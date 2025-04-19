@@ -2,6 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function PlayGame(_playing)
 {
+	global.actualRun = true;
 	global.bossesDefeatedInRun = 0;
 	instance_destroy(o_enemyFather);
 	instance_destroy(o_wall);

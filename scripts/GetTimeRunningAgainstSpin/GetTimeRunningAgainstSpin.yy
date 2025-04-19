@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"GetTimeRunningAgainstSpin",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"GetTimeRunningAgainstSpin",
+  "parent":{
+    "name":"SPIN",
+    "path":"SPIN.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,6 +1,6 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
-
+copaImg = 0;
 initialFlechaL= 203;
 initialFlechaR= 203;
 

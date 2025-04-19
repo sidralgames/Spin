@@ -15,7 +15,7 @@ initialSpeed = 0;
 speed = initialSpeed;
 baseDamage = 1;
 bulletDamage = 1;
-
+canUnlockAch = false;
 if (global.luckyShot)
 {
 	if ( global.luckyShotOdds = irandom(global.luckyShotOdds) )
@@ -36,3 +36,5 @@ else
 
 image_xscale = 1 + (global.superShot * 0.5);
 image_yscale = 1 + (global.superShot * 0.5);
+
+damageSet = false;

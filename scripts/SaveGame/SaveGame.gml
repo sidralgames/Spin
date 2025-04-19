@@ -31,6 +31,8 @@ function SaveGame()
 	ini_write_real("stats","falls", global.falls)
 	ini_write_real("stats","brokenWalls", global.brokenWalls)
 	ini_write_real("stats", "trebolsPicked", global.trebolsPicked);
+	ini_write_real("stats", "enemiesKilled", global.enemiesKilled);
+	ini_write_real("stats", "bombsDestroyed", global.bombsDestroyed);
 	
 	ini_close();
 }

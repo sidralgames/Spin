@@ -3,3 +3,7 @@
 
 other._hp = 0;
 _hp-=(other.bulletDamage + global.superShot);
+if (_hp <= 0)
+{
+	killedByPlayer = true;
+}

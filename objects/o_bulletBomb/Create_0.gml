@@ -1,6 +1,6 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
-
+killedByPlayer = false
 type = collisionType.custom
 _hp = 3;
 timeToExplodeInitial = random_range(120,200);

@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function BossSaveCollectionAndCreateDef()
 {
-	for (var i=0; i<global.totalNumberOfVinyls-1; i++)
+	for (var i=0; i<global.totalNumberOfVinyls; i++)
 	{	
 		thisBoss = ds_map_find_value(global.collectionList, i);
 		if (thisBoss.sprite = spriteBoss)

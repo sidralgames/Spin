@@ -1,7 +1,18 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
+if (damageSet = false)
+{
+	bulletDamage = (baseDamage + global.superShot) * global.damageAuxUpgrade;
+	
+	if (bulletDamage > 100)
+	{
+		canUnlockAch = true;
+	}
+	
+	damageSet = true;
+}
 
-bulletDamage = (baseDamage + global.superShot) * global.damageAuxUpgrade;
+
 
 //---- DOBLE SHOT UPGRADE ---//
 if (global.dobleShotUpgrade)

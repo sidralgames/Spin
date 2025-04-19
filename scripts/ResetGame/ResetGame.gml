@@ -2,9 +2,17 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function ResetGame(_playing)
 {
+
 	bsidesInGame = 0;
 	bsidesUnlocked = 0;
+	if (global.runningAgainstSpinmilisecs > global.runningAgainstSpinmilisecsBest)
+	{
+		global.runningAgainstSpinmilisecsBest = global.runningAgainstSpinmilisecs;
+		global.runningAgainstSpinmilisecs = 0;
+	}
 	SaveAchievements();
+	
+
 	
 	//--- RESET  UPGRADES ----//
 	ResetUpgrades();
@@ -64,9 +72,12 @@ function ResetGame(_playing)
 	global.BSidesInRun = true;
 	
 	global.relativeSpeed = 1;
+	pitch = 1;
+	audio_emitter_pitch(global.audioEmitter, pitch);
 	global.wallSprite = s_wallNacho;
 	global.bossHpLimiterUpgrade = false;
 	global.bossesDefeatedInRun = 0;
+	global.fallFromVinyl = false;
 	
 	global.maxLives = 3;
 	global.lives = global.maxLives;
@@ -93,6 +104,8 @@ function ResetGame(_playing)
 	global.recoverJacksUpgrade = false;
 	global.bajacktroUpgrade = false;
 	global.damageAuxUpgrade = 1;
+	global.wingsUpgrade = false;
+	global.wingsAux = 0;
 	
 	global.dashSpeed = 3.2;
 	global.luckAuxUpgrade = 1;
@@ -170,6 +183,7 @@ function ResetGame(_playing)
 	global.totalNumberOfAchievements = 0;
 	
 	AddAchievementsList();
+	LoadAchievements();
 	
 	
 	//---- DESTROY FROM MEMORY AND RE-CREATE PLAYER UPGRADE LIST---//

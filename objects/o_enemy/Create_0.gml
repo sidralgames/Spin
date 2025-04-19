@@ -1,6 +1,6 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
-
+killedByPlayer = false;
 type = collisionType.custom;
 cx = room_width/2;
 cy = room_height/2;

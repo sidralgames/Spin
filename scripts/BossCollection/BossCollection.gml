@@ -50,7 +50,7 @@ function BossCollection()
 				screenShake(1,30,4)
 				scale = 0;
 				scalingFromCollection = true;
-				audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
+				audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 5);
 				if (spriteBoss =  vinylToPlay.spriteMain)
 				{
 					vinylToPlay.sprite = vinylToPlay.spriteBSide;

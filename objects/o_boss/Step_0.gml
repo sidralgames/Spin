@@ -86,6 +86,45 @@ if (_hp <= 0)
 	
 	global.level+=1;
 	
+	if (global.level >= global.totalNumberOfVinyls)
+	{
+		if (global.actualRun = true)
+		{
+			global.wins +=1;
+			
+			if (global.fallFromVinyl = false)
+			{
+				for (var i = 0; i<global.totalNumberOfAchievements; i++)
+				{
+					ach = ds_map_find_value(global.achievementList, i)
+					if (ach.alias = "RunWithoutFalling")
+					{
+						ach.unlocked = 1;
+					}
+				}
+				
+				ini_open("SpinData.ini");
+				ini_write_real("achievements", "RunWithoutFalling", 1 );
+				ini_close();
+			}
+			
+			if (global.fullBSidesRun = true)
+			{
+				for (var i = 0; i<global.totalNumberOfAchievements; i++)
+				{
+					ach = ds_map_find_value(global.achievementList, i)
+					if (ach.alias = "BSidesRun")
+					{
+						ach.unlocked = 1;
+					}
+				}
+				ini_open("SpinData.ini");
+				ini_write_real("achievements", "BSidesRun", 1 );
+				ini_close();
+			}
+		}
+	}
+	
 	if instance_exists(o_player)
 	{
 		o_player.alarm[10] = 30

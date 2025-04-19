@@ -17,9 +17,9 @@ function LoadCollection()
 	global.luckyBullets = ini_read_real("stats", "luckyBullets", 0);
 	global.cablesRecovered = ini_read_real("stats", "cablesRecovered", 0);
 	global.falls = ini_read_real("stats", "falls", 0);
-	
-	
-	
+	global.enemiesKilled = ini_read_real("stats", "enemiesKilled", 0);
+	global.bombsDestroyed = ini_read_real("stats", "bombsDestroyed", 0);
+	global.runningAgainstSpinmilisecsBest= ini_read_real("stats", "runningAgainstSpinmilisecsBest", 0);
 	//-------- Collection Bosses --------//
 	for (var i=0; i<global.totalNumberOfVinyls; i++)
 	{	
@@ -35,14 +35,5 @@ function LoadCollection()
 		global.totalKills += thisBoss.killsBSide;
 	}
 	
-	for (var i = 0; i< global.totalNumberOfAchievements; i++)
-	{
-		achievement = ds_map_find_value(global.achievementList, i);
-		achievement.unlocked = ini_read_real("achievements", achievement.alias, 0);
-	}
-		
-	
-	
-		
 	ini_close();
 }

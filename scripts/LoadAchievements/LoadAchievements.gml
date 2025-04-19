@@ -4,13 +4,15 @@ function LoadAchievements()
 {
 
 	ini_open("SpinData.ini");
-	
+
 	//-------- READ ACHIEVEMENTS --------//
 	for (var i=0; i<global.totalNumberOfAchievements; i++)
 	{	
 		thisAch = ds_map_find_value(global.achievementList, i);
 		thisAch.unlocked = ini_read_real("achievements",thisAch.alias, 0);
 	}
+	
+	
 	
 	ini_close();
 	

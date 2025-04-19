@@ -27,7 +27,7 @@ function Die()
 		{
 			lastTouchedX = x;
 			lastTouchedY = y;
-			contDie = contDieMax;
+			contDie = contDieMax ;
 		}
 
 		if (dying = true)
@@ -69,6 +69,14 @@ function Die()
 				
 				instance_destroy();
 				
+				global.fallFromVinyl = true;
+				
+				if (global.runningAgainstSpinmilisecs > global.runningAgainstSpinmilisecsBest)
+				{
+					global.runningAgainstSpinmilisecsBest = global.runningAgainstSpinmilisecs;
+					global.runningAgainstSpinmilisecs = 0;
+				}
+				
 				if (global.playing)
 				{
 					global.falls += 1;
@@ -95,5 +103,11 @@ function Die()
 		}
 		
 		instance_destroy();
+		
+		if (global.runningAgainstSpinmilisecs > global.runningAgainstSpinmilisecsBest)
+		{
+			global.runningAgainstSpinmilisecsBest = global.runningAgainstSpinmilisecs;
+			global.runningAgainstSpinmilisecs = 0;
+		}
 	}
 }

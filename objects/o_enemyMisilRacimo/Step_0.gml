@@ -13,6 +13,10 @@ if (_hp <= 0) || (_hpTime <= 0)
 		o_vinilo.scaleRoto = random_range(0.1,0.15)
 		screenShake(1,10,1);
 		gamepad_set_vibration(0,0.2,0.2);
+		if (killedByPlayer)
+		{
+			global.bombsDestroyed +=1;
+		}
 		instance_destroy();
 	}
 	else

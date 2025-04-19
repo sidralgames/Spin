@@ -21,7 +21,7 @@ if (alarm[0] <= 0)
 				
 				case 1:
 				{
-					audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
+					audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 5);
 					_visible = false;
 					instance_create_layer(o_boss.x-200,o_boss.y,"Main",o_HowToPlay)
 					global.howToPlay = true;
@@ -31,7 +31,7 @@ if (alarm[0] <= 0)
 				case 2:
 				{
 					
-					audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
+					audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 5);
 					instance_create_layer(x,y,"Menu", o_OptionsMenu);
 					_visible = false;
 	
@@ -74,13 +74,13 @@ if (alarm[0] <= 0)
 			if (key_rightP)
 			{
 				selectedBside +=1;	
-				audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
+				audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 5);
 				global.BSidesInRun = true;
 			}
 			else if (key_leftP) 
 			{
 				selectedBside -=1;	
-				audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
+				audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 5);
 			
 			}
 			
@@ -104,6 +104,7 @@ if (alarm[0] <= 0)
 				{
 					_stringBSideActive = "ALL";
 					global.BSidesInRun = true;
+					//---- only if bsides unlocked ---//
 					global.fullBSidesRun = true;
 				}break;
 			}

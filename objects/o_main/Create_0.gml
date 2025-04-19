@@ -4,8 +4,8 @@ randomize();
 
 //global._fx_tint = fx_create("_filter_tintfilter");
 //fx_set_parameter(global._fx_tint, "g_TintCol", [1, 0, 0, 1]);
-
-
+global.fallFromVinyl = false;
+global.runningAgainstSpinmilisecs = 0;
 //global._fx_distort = fx_create("_filter_heathaze");
 //fx_set_single_layer(global._fx_distort, true);
 //fx_set_parameter(global._fx_distort, "g_Distort1Speed", 0.1);
@@ -16,7 +16,7 @@ randomize();
 //fx_set_parameter(global._fx_distort, "g_Distort2Amount",  14);
 //fx_set_parameter(global._fx_distort, "g_ChromaSpreadAmount",  0.5);
 
-
+global.actualRun = false;
 global.BSidesInRun = true;
 global.fullBSidesRun = false;
 
@@ -57,6 +57,8 @@ global.smartBulletUpgrade = false;
 global.strongConnectionUpgrade = false;
 global.cableUpgrade = false;
 global.recoverJacksUpgrade = false;
+global.wingsUpgrade = false;
+global.wingsAux = 0;
 
 global.oddsStrongConnection = 3;
 global.luckAuxUpgrade = 1;
@@ -219,10 +221,11 @@ LoadDefaultGlobals();
 global.achievementList = ds_map_create();
 global.totalNumberOfAchievements = 0;
 
-AddAchievementsList();
 
 
 
+wingsOk = false;
+haloOk = false;
 cableOk = false;
 toolBoxOk = false;
 adapterOk = false;
@@ -234,9 +237,13 @@ load = false;
 
 if (load = false)
 {
-	LoadAllLocked();
-	//LoadAllUnlocked();
 	LoadCollection();
+	
+	AddAchievementsList();
+
+	//LoadAllLocked();
+	//LoadAllUnlocked();
+	
 	LoadAchievements();
 	
 	if (global.maxLevelReached > 1)

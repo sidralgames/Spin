@@ -8,7 +8,7 @@ bulletDamage = 1;
 rotSpeed = 35;
 
 
-
+killedByPlayer = false;
 image_speed = 0;
 setMisil = false;
 switch(image_index)

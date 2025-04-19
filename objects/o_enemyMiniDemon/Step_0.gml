@@ -112,6 +112,12 @@ if (_hp <= 0)
 	exploEnemy.image_yscale = 0.2;
 	exploEnemy.image_speed = 0.9;
 	exploEnemy.sprite_index = s_exploBlue;
+	
+	if (killedByPlayer)
+	{
+		global.enemiesKilled +=1;
+	}
+	
 	instance_destroy();
 }
 

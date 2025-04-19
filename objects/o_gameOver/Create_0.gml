@@ -9,7 +9,8 @@ toolBoxOk  = false;
 slowMoOk  = false;
 dobleShotOk = false;
 shotGunOk = false;
-
+wingsOk = false;
+haloOk = false;
 bsidesInGame = 0;
 bsidesUnlocked = 0;
 initialGameOver = 160;

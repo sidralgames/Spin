@@ -7,9 +7,9 @@ function AddAchTrebol()
 		alias: "Trebol",
 		achievement: "The Luckiest In The Park",
 		unlocked: 0,
-		desc: "Find 7 Lucky Trebols\n(" + string(global.trebolsPicked) + " / 7)",
-		descPlaceholder: "Find 7 Lucky Clovers\n(" + string(global.trebolsPicked) + " / 7)",
-		descUnlocked: "Find 7 Lucky Clovers",
+		desc: "Find 77 Lucky Clovers",
+		descPlaceholder: "Find 77 Lucky Clovers\n(" + string(global.trebolsPicked) + " / 77)",
+		descUnlocked: "Find 77 Lucky Clovers",
 		
 	})
 

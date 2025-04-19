@@ -15,8 +15,32 @@ if (comeFromDeath)
 	draw_circle(x,y,spotRad+4, true)
 }
 
+//---- DRAW WINGS ----//
+if (global.wingsUpgrade)
+{
+	if (contDie > 15) && (contDie < contDieMax)
+	{
+		wingsImg+=0.35;
+		draw_sprite_ext(s_wings, wingsImg, x, y ,image_xscale, 1, 0,image_blend, image_alpha)
+	}
+	else if (contDie <= 15)
+	{
+		wingsImg+=0.5;
+		draw_sprite_ext(s_wings, wingsImg, x, y ,image_xscale, 1, 0, global.brightRed, image_alpha)
+	}
+	else
+	{
+		wingsImg+=0.15;
+		draw_sprite_ext(s_wings, wingsImg, x, y ,image_xscale, 1, 0, image_blend, image_alpha)
+	}
+}
+
+
+
 //---- DRAW PLAYER ----//
 draw_sprite_ext(sprite_index, 0, x, y ,image_xscale, image_yscale, image_angle, image_blend, image_alpha)
+
+
 
 //---- DRAW ENERGY CIRCULAR BAR ----//
 draw_set_alpha(0.8);

@@ -4,26 +4,27 @@ function AddUpgradesList()
 {
 	AddUpgradeEnergy();
 	AddUpgradeShotgun();
-//	AddUpgradeFireRate();
-//	AddUpgradeSpeed();
-//	AddUpgradeWalls();//5
-//	AddUpgradeSlowMo();
-//	AddUpgradeSuperShot();
-//	AddUpgradeMaxHP();
-//	AddUpgradeCheaperDash();
-//	AddUpgradeBossLimiter();//10
-//	AddUpgradeLuckyShot();
-//	AddUpgradeRecoverLives();
+	AddUpgradeFireRate();
+	AddUpgradeSpeed();
+	AddUpgradeWalls();//5
+	AddUpgradeSlowMo();
+	AddUpgradeSuperShot();
+	AddUpgradeMaxHP();
+	AddUpgradeCheaperDash();
+	AddUpgradeBossLimiter();//10
+	AddUpgradeLuckyShot();
+	AddUpgradeRecoverLives();
 	AddUpgradeStrongConnection();
-//	AddUpgradeFasterCharge();
-//	AddUpgradeShield();//15
-//	AddUpgradeHalo();
-//	AddUpgradeSmartBullets();
-//	AddUpgradeDobleShot();
-//	AddUpgradeMoreLuck();
-	//AddUpgradeFasterDash();//20
+	AddUpgradeFasterCharge();
+	AddUpgradeShield();//15
+	AddUpgradeHalo();
+	AddUpgradeSmartBullets();
+	AddUpgradeDobleShot();
+	AddUpgradeMoreLuck();
+	AddUpgradeFasterDash();//20
 	AddUpgradeCable();
-	//AddUpgrade777();
+	AddUpgrade777();
 	AddUpgradeRecoverJacks();
-	//AddUpgradeBalatro();
+	AddUpgradeBalatro();
+	AddUpgradeWings();
 }

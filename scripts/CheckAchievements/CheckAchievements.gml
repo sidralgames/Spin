@@ -25,7 +25,13 @@ function CheckAchievements()
 			CheckLotsOfBullets();
 		
 			CheckUntouchable();
+			
+			CheckTrueAngel();
+			
+			CheckRunningAgainstSpin();
 		}
+		
+		
 		
 		CheckCompletionist();
 	}

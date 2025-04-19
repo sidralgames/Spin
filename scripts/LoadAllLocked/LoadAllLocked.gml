@@ -31,8 +31,10 @@ function LoadAllLocked()
 	global.cablesRecovered = 0;
 	global.trebolsPicked = 0;
 	global.brokenWalls = 0;
+	global.wins = 0;
+	global.runningAgainstSpinmilisecsBest = 0;
 	
-	
+	ini_write_real("stats","wins", 0);
 	ini_write_real("stats","maxLevel", 0);
 	ini_write_real("stats","bulletsFired", 0);
 	ini_write_real("stats","luckyBullets", 0);
@@ -43,6 +45,9 @@ function LoadAllLocked()
 	ini_write_real("stats","cablesRecovered", 0);
 	ini_write_real("stats","brokenWalls", 0);
 	ini_write_real("stats","trebolsPicked", 0);
+	ini_write_real("stats","runningAgainstSpinmilisecsBest", 0);
+	ini_write_real("stats","enemiesKilled", 0);
+	ini_write_real("stats","bombsDestroyed", 0);
 	ini_write_real("bossesCollection","bossUpgrades", -4);
 	
 	ini_close();

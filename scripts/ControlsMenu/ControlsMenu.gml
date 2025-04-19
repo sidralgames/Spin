@@ -4,12 +4,12 @@ function ControlsMenu()
 {
 	if (key_downP)
 	{
-		audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
+		audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 5);
 		selected +=1;	
 	}
 	if (key_upP)
 	{
-		audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
+		audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 5);
 		selected -=1;	
 	}
 	

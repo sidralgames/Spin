@@ -8,7 +8,7 @@ if (alarm[0] <= 0)
 {
 	if (key_X) || (key_back)
 	{
-		audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 50);
+		audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 5);
 		global.howToPlay = false;
 		o_MainMenu._visible = true;
 		o_MainMenu.initialBackCol = 380;

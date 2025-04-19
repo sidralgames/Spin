@@ -3,6 +3,22 @@
 function CheckBulletsAch()
 {
 	
+	if (achievementCheck.alias = "KillEnemies")
+	{
+		if (global.enemiesKilled >= 250)
+		{
+			achievementCheck.unlocked = 1;
+		}
+	}
+	
+	if (achievementCheck.alias = "ControlledExplosion")
+	{
+		if (global.bombsDestroyed >= 250)
+		{
+			achievementCheck.unlocked = 1;
+		}
+	}
+	
 	if (achievementCheck.alias = "Trebol")
 	{
 		if (global.trebolsPicked >= 7)
@@ -23,7 +39,7 @@ function CheckBulletsAch()
 	
 	if (achievementCheck.alias = "BreakWalls")
 	{
-		if (global.brokenWalls >= 1000)
+		if (global.brokenWalls >= 500)
 		{
 			achievementCheck.unlocked = 1;
 		}

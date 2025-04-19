@@ -1,5 +1,7 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
+
+killedByPlayer = false;
 type = collisionType.custom;
 scale = 0;
 scaled = false

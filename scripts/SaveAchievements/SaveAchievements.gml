@@ -2,7 +2,6 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function SaveAchievements()
 {
-
 	CheckAchievements();	
 	
 	ini_open("SpinData.ini");
@@ -13,6 +12,7 @@ function SaveAchievements()
 		ini_write_real("achievements",thisAch.alias, thisAch.unlocked);
 	}
 	
+	ini_write_real("stats", "runningAgainstSpinmilisecsBest", global.runningAgainstSpinmilisecsBest);
 	
 	ini_close();
 	

@@ -7,9 +7,9 @@ function AddAchBreakWalls()
 		alias: "BreakWalls",
 		achievement: "Wrecking Ball",
 		unlocked: 0,
-		descPlaceholder: "Break 1000 Walls\n(" + string(global.brokenWalls) + " / 1000)",
-		descUnlocked: "Break 1000 Walls",
-		desc: "Break 1000 Walls"
+		descPlaceholder: "Break 500 Walls\n(" + string(global.brokenWalls) + " / 500)",
+		descUnlocked: "Break 500 Walls",
+		desc: "Break 500 Walls"
 		
 	})
 

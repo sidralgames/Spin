@@ -117,8 +117,8 @@ if (achievementsShowing)
 	draw_sprite_ext(s_flechas, 0, __view_get( e__VW.XView, 0 )+ 320 - initialFlechaL ,__view_get( e__VW.YView, 0 )+180,1,1,0,image_blend,  1)	
 	draw_sprite_ext(s_flechas, 1, __view_get( e__VW.XView, 0 )+ 320 + initialFlechaR ,__view_get( e__VW.YView, 0 )+180,1,1,0,image_blend,  1)	
 		
-	initialAch = lerp(initialAch, 70,factor);
-	initialAchDesc = lerp(initialAchDesc, 340,factor);
+	initialAch = lerp(initialAch, 65,factor);
+	initialAchDesc = lerp(initialAchDesc, 342,factor);
 	initialAchT = lerp(initialAchT, 47,factor+0.05);
 	draw_sprite_ext(s_ach, 0,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialAchT,1,1,0,image_blend,1)
 	

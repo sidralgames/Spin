@@ -1,7 +1,7 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
 type = collisionType.custom;
-
+killedByPlayer = false;
 timeDying = false;
 bulletDamage = 1;
 rotSpeed = 35;

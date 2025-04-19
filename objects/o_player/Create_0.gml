@@ -11,7 +11,7 @@
 //key_escudo = gamepad_button_check(0, gp_shoulderrb)
 //key_slowmo = gamepad_button_check(0, gp_shoulderlb)
 //key_L1_Pressed = gamepad_button_check_pressed(0, gp_shoulderl) || keyboard_check_pressed(vk_space) ||  mouse_check_button_pressed(mb_right);
-
+wingsImg=0;
 global.damageAuxUpgrade = 1;
 
 haveShield = false;
@@ -53,7 +53,7 @@ angle = 0;
 moveDir = 0;
 haxis = 0;
 vaxis = 0;
-contDieMax = 12;
+contDieMax = 12 + global.wingsAux;
 contDie = contDieMax;
 
 global.walkAccelerationH = 0.2;

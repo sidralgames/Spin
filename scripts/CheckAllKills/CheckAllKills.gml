@@ -33,12 +33,11 @@ function CheckAllKills()
 					break;
 				}
 			}
+		}
 		
-		
-			if (killAch = true)
-			{
-				achievementCheck.unlocked = 1;
-			}
+		if (killAch = true)
+		{
+			achievementCheck.unlocked = 1;
 		}
 	}
 	

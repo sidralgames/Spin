@@ -7,7 +7,7 @@ function AddAchAllKills()
 		alias: "AllKills",
 		achievement: "Defeat EVERY Track",
 		unlocked: 0,
-		desc: "Kill each boss at least once"
+		desc: "Kill each Track at least once\n(B-Sides included)"
 		
 	})
 

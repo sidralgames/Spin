@@ -7,7 +7,9 @@ function AddAch777Lucky()
 		alias: "777LuckyBullets",
 		achievement: "Lucky Bullet Lover",
 		unlocked: 0,
-		desc: "Fire 777 Lucky Bullets"
+		desc: "Fire 777 Lucky Bullets",
+		descPlaceholder: "Fire 777 Lucky Bullets\n(" + string(global.luckyBullets) + " / 777)",
+		descUnlocked: "Fire 777 Lucky Bullets",
 		
 	})
 
