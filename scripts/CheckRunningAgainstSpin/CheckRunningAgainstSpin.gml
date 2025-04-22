@@ -5,7 +5,7 @@ function CheckRunningAgainstSpin()
 	//---- ---//
 	if (achievementCheck.alias = "AgainstSpin")
 	{
-		if (global.runningAgainstSpinmilisecs/60) > 240
+		if (global.runningAgainstSpinmilisecsBest/60) > 240
 		{
 			achievementCheck.unlocked = 1;
 		}

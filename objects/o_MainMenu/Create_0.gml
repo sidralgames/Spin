@@ -41,3 +41,22 @@ _visibleCollection = true;
 xDistCollection = 50;
 xDistStats = 50;
 selectedBside = 1;
+canChooseAllBSides = false;
+optionsBsides = 1;
+atLeastOneBSide = false;
+for (var i=0; i<global.totalNumberOfVinyls; i++)
+{
+	boss = ds_map_find_value(global.collectionList, i)
+	if (boss.haveBSide)
+	{
+		if (boss.kills >= boss.minKillsBSide)
+		{
+			canChooseAllBSides = true;
+			atLeastOneBSide = true;
+		}
+		else
+		{
+			canChooseAllBSides = false;
+		}
+	}
+}

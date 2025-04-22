@@ -31,10 +31,11 @@ function CheckBulletsAch()
 	//--- 9999 BULLETS ----//
 	if (achievementCheck.alias = "9999Bullets")
 	{
-		if (global.bulletsFired >= 9999)
+		if (global.bulletsFired >= 99999)
 		{
 			achievementCheck.unlocked = 1;
 		}
+		
 	}
 	
 	if (achievementCheck.alias = "BreakWalls")

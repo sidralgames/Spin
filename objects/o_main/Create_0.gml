@@ -237,6 +237,8 @@ load = false;
 
 if (load = false)
 {
+	//LoadAllUnlocked();
+	//LoadAllLocked();
 	LoadCollection();
 	
 	AddAchievementsList();

@@ -2,6 +2,22 @@
 // Puede escribir su código en este editor
 Controls_Input();
 
+if (canChooseAllBSides)
+{
+	optionsBsides = 2;
+}
+else
+{
+	if (atLeastOneBSide)
+	{
+		optionsBsides = 1;
+	}
+	else
+	{
+		optionsBsides = 0;
+	}
+}
+
 if (alarm[0] <= 0)
 {
 	if (_visible)
@@ -62,28 +78,31 @@ if (alarm[0] <= 0)
 		
 		if (selected = 0)
 		{
-			if (selectedBside > 2)
+			
+			
+			if (selectedBside > optionsBsides)
 			{
 				selectedBside = 0;	
 			}
 			if (selectedBside < 0)
 			{
-				selectedBside = 2;	
+				selectedBside = optionsBsides;	
 			}
 			
-			if (key_rightP)
+			if (atLeastOneBSide)
 			{
-				selectedBside +=1;	
-				audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 5);
-				global.BSidesInRun = true;
-			}
-			else if (key_leftP) 
-			{
-				selectedBside -=1;	
-				audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 5);
+				if (key_rightP)
+				{
+					selectedBside +=1;	
+					audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 5);
+				}
+				else if (key_leftP) 
+				{
+					selectedBside -=1;	
+					audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 5);
 			
+				}
 			}
-			
 			switch(selectedBside)
 			{
 				case 0:

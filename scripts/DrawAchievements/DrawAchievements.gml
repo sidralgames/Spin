@@ -21,7 +21,7 @@ function DrawAchievements(_initialI, _nextPageAch, _selectedA, _offI)
 			
 		if (achlist.alias = "9999Bullets") || (achlist.alias = "BreakWalls") || (achlist.alias = "ControlledExplosion") ||
 		(achlist.alias = "KillEnemies") || (achlist.alias = "TotalKills128") || (achlist.alias = "TotalKills320") || 
-		(achlist.alias = "WellPrepared") || (achlist.alias = "777LuckyBullets") || (achlist.alias = "AgainstSpin")
+		(achlist.alias = "WellPrepared") || (achlist.alias = "777LuckyBullets") || (achlist.alias = "AgainstSpin") || (achlist.alias = "Trebol")
 		{
 			if (achlist.unlocked = 0)
 			{

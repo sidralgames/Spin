@@ -76,6 +76,10 @@ function Die()
 					global.runningAgainstSpinmilisecsBest = global.runningAgainstSpinmilisecs;
 					global.runningAgainstSpinmilisecs = 0;
 				}
+				else
+				{
+					global.runningAgainstSpinmilisecs = 0;
+				}
 				
 				if (global.playing)
 				{
@@ -107,6 +111,10 @@ function Die()
 		if (global.runningAgainstSpinmilisecs > global.runningAgainstSpinmilisecsBest)
 		{
 			global.runningAgainstSpinmilisecsBest = global.runningAgainstSpinmilisecs;
+			global.runningAgainstSpinmilisecs = 0;
+		}
+		else
+		{
 			global.runningAgainstSpinmilisecs = 0;
 		}
 	}
