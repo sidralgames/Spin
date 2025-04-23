@@ -78,6 +78,7 @@ function ResetGame(_playing)
 	global.bossHpLimiterUpgrade = false;
 	global.bossesDefeatedInRun = 0;
 	global.fallFromVinyl = false;
+	global.endlessMode = false;
 	
 	global.maxLives = 3;
 	global.lives = global.maxLives;

@@ -33,33 +33,32 @@ if (global.playing)
 	}
 	
 	
-	
-	if (global.numberOfUpgradesPlayer > 0) && (global.numberOfUpgradesPlayer < iconsInLine) 
+	if (!instance_exists(o_youWin))
 	{
-		for (var i = 0; i < global.numberOfUpgradesPlayer; ++i)
+		if (global.numberOfUpgradesPlayer > 0) && (global.numberOfUpgradesPlayer < iconsInLine) 
 		{
-			upgradeToDraw = ds_map_find_value(global.playerUpgradesList, i)
-			draw_sprite_ext(upgradeToDraw.icon,0,__view_get( e__VW.XView, 0 )+30 + (i*25),__view_get( e__VW.YView, 0 )+65,1,1,0,c_white,1)	
-		}	
-	}
+			for (var i = 0; i < global.numberOfUpgradesPlayer; ++i)
+			{
+				upgradeToDraw = ds_map_find_value(global.playerUpgradesList, i)
+				draw_sprite_ext(upgradeToDraw.icon,0,__view_get( e__VW.XView, 0 )+30 + (i*25),__view_get( e__VW.YView, 0 )+65,1,1,0,c_white,1)	
+			}	
+		}
 	
-	if (global.numberOfUpgradesPlayer >= iconsInLine)
-	{
-		for (var i = 0; i < iconsInLine; ++i)
+		if (global.numberOfUpgradesPlayer >= iconsInLine)
 		{
-			upgradeToDraw = ds_map_find_value(global.playerUpgradesList, i)
-			draw_sprite_ext(upgradeToDraw.icon,0,__view_get( e__VW.XView, 0 )+30 + (i*25),__view_get( e__VW.YView, 0 )+65,1,1,0,c_white,1)	
-		}	
+			for (var i = 0; i < iconsInLine; ++i)
+			{
+				upgradeToDraw = ds_map_find_value(global.playerUpgradesList, i)
+				draw_sprite_ext(upgradeToDraw.icon,0,__view_get( e__VW.XView, 0 )+30 + (i*25),__view_get( e__VW.YView, 0 )+65,1,1,0,c_white,1)	
+			}	
 		
-		for (var i = 0; i < global.numberOfUpgradesPlayer - iconsInLine; ++i)
-		{
-			upgradeToDraw = ds_map_find_value(global.playerUpgradesList, i + iconsInLine)
-			draw_sprite_ext(upgradeToDraw.icon,0,__view_get( e__VW.XView, 0 )+30 + (i*23),__view_get( e__VW.YView, 0 )+89,1,1,0,c_white,1)	
-		}	
+			for (var i = 0; i < global.numberOfUpgradesPlayer - iconsInLine; ++i)
+			{
+				upgradeToDraw = ds_map_find_value(global.playerUpgradesList, i + iconsInLine)
+				draw_sprite_ext(upgradeToDraw.icon,0,__view_get( e__VW.XView, 0 )+30 + (i*23),__view_get( e__VW.YView, 0 )+89,1,1,0,c_white,1)	
+			}	
+		}
 	}
-	
-
-	
 }
 
 //vstick_draw(0)

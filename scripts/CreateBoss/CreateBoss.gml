@@ -60,6 +60,7 @@ function CreateBoss(_selectedBossFromCollection, _additionalHP)
 			audio_play_sound_on(global.audioEmitter,global.song, true, 100,,_offsetSong);
 		}
 	}
+	
 	_albumName = bossToCreate.albumName;
 	_artistName = bossToCreate.artistName;
 	alias = bossToCreate.alias;
@@ -72,5 +73,4 @@ function CreateBoss(_selectedBossFromCollection, _additionalHP)
 	bossIsInCollection = bossToCreate.unlocked;
 	bossStep = bossToCreate.step;
 	spriteVinyl = bossToCreate.spriteVinyl;
-	
 }

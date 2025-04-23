@@ -15,7 +15,7 @@ function AddBossPentagovonCollection()
 		spriteMain: s_bossPentagovon,
 		spriteBSide: s_bossNacho_B,
 		spriteVinyl: s_discoVinilo,
-		hpMax: 500,
+		hpMax: 50,
 		vinylAlpha : 0.95,
 		vinylAlphaBSide: 0.75,
 		vinylColor : global.brightRed,

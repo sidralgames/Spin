@@ -67,6 +67,8 @@ _angle = image_angle;
 
 if (_hp <= 0)
 {
+	BossExploDie();
+	
 	BossDefeatedInRun();
 	
 	layer_enable_fx("Boss", false);
@@ -86,10 +88,12 @@ if (_hp <= 0)
 	
 	global.level+=1;
 	
-	if (global.level >= global.totalNumberOfVinyls)
+	if (global.level > global.totalNumberOfVinyls) && (global.endlessMode = false)
 	{
-		if (global.actualRun = true)
-		{
+		//if (global.actualRun = true)
+		//{
+			instance_create_layer(x, y, "Menu", o_youWin)
+		
 			global.wins +=1;
 			
 			if (global.fallFromVinyl = false)
@@ -122,14 +126,22 @@ if (_hp <= 0)
 				ini_write_real("achievements", "BSidesRun", 1 );
 				ini_close();
 			}
-		}
+			
+			instance_destroy();
+			instance_destroy(o_vinilo);
+			instance_destroy(oViniloFake);
+			global.vinylColor = c_white;
+			instance_create_layer(x,y,"Boss", o_bossWinner);
+			instance_create_layer(x,y,"Vinyl", o_vinilo)
+		//}
 	}
-	
-	if instance_exists(o_player)
+	else
 	{
-		o_player.alarm[10] = 30
-		gamepad_set_vibration(0,0.5,0.5)
-	}
+		if instance_exists(o_player)
+		{
+			o_player.alarm[10] = 30
+			gamepad_set_vibration(0,0.5,0.5)
+		}
 
 		if (bossToCreate.sprite = spriteBoss)
 		{
@@ -150,9 +162,7 @@ if (_hp <= 0)
 				}
 			}
 		}
-	
-	
-	BossExploDie();
+	}
 }
 
 if (global.collection)

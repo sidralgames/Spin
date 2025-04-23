@@ -111,6 +111,7 @@ global.wallSprite = s_wallNacho;
 global.standardAngleShake = 0.5;
 global.screenshakeIsOn = true;
 global.vibration=0;
+global.endlessMode = false;
 
 
 gameOverCreated = false;

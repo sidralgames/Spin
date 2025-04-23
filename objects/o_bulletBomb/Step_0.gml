@@ -18,11 +18,12 @@ else
 	scaledFirst = true;
 }
 
+bossSpin = global.vinylSpin;
+
 bossPush = bossSpin * min(1.5, global.relativeSpeed);
 
 totalPush = bossPush;
 totalPush = clamp(totalPush, -totalMaxSpeed, totalMaxSpeed);
-
 
 
 r = point_distance(x,y,room_width/2, room_height/2);

@@ -124,7 +124,6 @@ else
 
 if (global.collection)
 {
-	
 	if (_visibleCollection)
 	{
 		if (initialBackY > 305)
@@ -169,7 +168,7 @@ if (global.collection)
 else
 {
 	
-	if (selected = 0)
+	if (selected = 0) && (atLeastOneBSide)
 	{
 		
 		draw_set_font(global.customFont13);

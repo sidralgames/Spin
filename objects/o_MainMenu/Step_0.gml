@@ -78,17 +78,6 @@ if (alarm[0] <= 0)
 		
 		if (selected = 0)
 		{
-			
-			
-			if (selectedBside > optionsBsides)
-			{
-				selectedBside = 0;	
-			}
-			if (selectedBside < 0)
-			{
-				selectedBside = optionsBsides;	
-			}
-			
 			if (atLeastOneBSide)
 			{
 				if (key_rightP)
@@ -103,6 +92,17 @@ if (alarm[0] <= 0)
 			
 				}
 			}
+			
+			if (selectedBside > optionsBsides)
+			{
+				selectedBside = 0;	
+			}
+			if (selectedBside < 0)
+			{
+				selectedBside = optionsBsides;	
+			}
+			
+		
 			switch(selectedBside)
 			{
 				case 0:
@@ -123,7 +123,6 @@ if (alarm[0] <= 0)
 				{
 					_stringBSideActive = "ALL";
 					global.BSidesInRun = true;
-					//---- only if bsides unlocked ---//
 					global.fullBSidesRun = true;
 				}break;
 			}
@@ -131,11 +130,15 @@ if (alarm[0] <= 0)
 	}
 }
 
+
+//------ RESPAWN PLAYER ON MAIN MENU SCREEN -----//
 if !instance_exists(o_player)
 {
 	instance_create_layer(o_boss.x - 100,o_boss.y,"Player",o_player);	
 }
 
+
+//--------- COLLECTION RELATED --------//
 if (global.collection)
 {
 	//---- HIDE UI ---//
@@ -147,7 +150,7 @@ if (global.collection)
 	}
 	
 	//--- MORE STATS ---//
-	if  ( (key_downP) || (key_upP) ) && (_moreStats = false) && (contStats <= 0)
+	if ( (key_downP) || (key_upP) ) && (_moreStats = false) && (contStats <= 0)
 	{
 		_moreStats = true;
 		yStat = 360;
@@ -157,8 +160,8 @@ if (global.collection)
 	if (contStats >= 0)
 	{
 		contStats --;
-		
 	}
+	
 	if  ( (key_downP) || (key_upP) ) && (_moreStats) && (contStats <= 0)
 	{
 		yStat = 160;
