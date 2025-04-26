@@ -33,7 +33,7 @@ function DoesItHit()
 		{
 			if (_hp =1)
 			{
-				global.damageAuxUpgrade = 4;
+				global.damageAuxUpgrade = 3;
 			}
 			else
 			{

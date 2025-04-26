@@ -11,7 +11,12 @@ if (_hp <= 0)
 }
 else
 {
-	part_particles_create(global.balaPBoss_sys, x, y, global.balaPBoss , 1)
+	if (alarm[0] <= 0)
+	{
+		part_particles_create(global.balaPBoss_sys, x, y, global.balaPBoss , 1)
+		
+		alarm[0] = random_range(1,2);
+	}
 }
 
 if (global.relativeSpeed > 1.1)

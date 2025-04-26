@@ -2,7 +2,14 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function CheckBulletsAch()
 {
-	
+	if (achievementCheck.alias = "Nullifier")
+	{
+		if (global.bossBulletsDestroyed >= 100)
+		{
+			achievementCheck.unlocked = 1;
+		}
+	}
+
 	if (achievementCheck.alias = "KillEnemies")
 	{
 		if (global.enemiesKilled >= 250)

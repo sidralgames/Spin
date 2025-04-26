@@ -17,10 +17,15 @@ function CheckAchievements()
 		//--- ALL B-SIDES ----//
 		CheckAllBSides();
 		
+		//---- FAV TRACK ---//
+		CheckFavTrack();
+		
 		//--- UPGRADES PICKED ----//
 		if (global.playing)
 		{
 			CheckWellPrepared();
+			
+			CheckSonicSpeed();
 			
 			CheckLotsOfBullets();
 		
@@ -28,10 +33,10 @@ function CheckAchievements()
 			
 			CheckTrueAngel();
 			
+			CheckFullVolume();
+			
 			CheckRunningAgainstSpin();
 		}
-		
-		
 		
 		CheckCompletionist();
 	}

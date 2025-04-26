@@ -9,7 +9,9 @@ function AddAchControlledExplosion()
 		unlocked: 0,
 		desc: "Destroy 250 Bombs or Missiles",
 		descUnlocked: "Destroy 250 Bombs or Missiles",
-		descPlaceholder: "Destroy 250 Bombs or Missiles\n(" + string(global.bombsDestroyed) + " / 250)"
+		descPlaceholder: "Destroy 250 Bombs or Missiles\n(" + string(global.bombsDestroyed) + " / 250)",
+		haveAltDesc: true, 
+		haveAltAch: false
 		
 	})
 

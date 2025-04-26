@@ -9,7 +9,9 @@ function AddAchBreakWalls()
 		unlocked: 0,
 		descPlaceholder: "Break 500 Walls\n(" + string(global.brokenWalls) + " / 500)",
 		descUnlocked: "Break 500 Walls",
-		desc: "Break 500 Walls"
+		desc: "Break 500 Walls",
+		haveAltDesc: true, 
+		haveAltAch: false
 		
 	})
 

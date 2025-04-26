@@ -6,7 +6,7 @@
 // You can create multiple systems with different physic properties
 
 cableRoto = false;
-
+attached = false;
 changingData = false;
 contUnplugging = 0;
 deattached = false;

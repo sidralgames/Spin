@@ -10,6 +10,8 @@ function AddAchTrebol()
 		desc: "Find 77 Lucky Clovers",
 		descPlaceholder: "Find 77 Lucky Clovers\n(" + string(global.trebolsPicked) + " / 77)",
 		descUnlocked: "Find 77 Lucky Clovers",
+		haveAltDesc: true, 
+		haveAltAch: false
 		
 	})
 

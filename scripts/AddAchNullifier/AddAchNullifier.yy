@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"AddAchNullifier",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"AddAchNullifier",
+  "parent":{
+    "name":"AddBoss",
+    "path":"folders/Scripts/AddBoss.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -5,9 +5,13 @@ if instance_exists(inst)
 	x=inst.x;
 	y=inst.y;
 	
-	rope2.vertexChangeData(first,inst.x + lengthdir_x(6, inst.image_angle+200),y + lengthdir_y(6, inst.image_angle+200) )
 	
-	
+	if (attached = false)
+	{
+		rope2.vertexAttachTo(first, inst, lengthdir_x(6, inst.image_angle+200),lengthdir_y(6, inst.image_angle+200) )
+		attached = true;
+	}
+
 
 	if (inst.dying)
 	{

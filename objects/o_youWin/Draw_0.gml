@@ -11,10 +11,10 @@ draw_sprite_ext(s_youWin, 0,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__V
 draw_set_alpha(1)
 DrawTextTriColor(global.customFont15, fa_left, 220, 100, global.lightBlue, global.yellow, global.pink, 3, 1, "Tracks Defeated: " + string(numBossesDefeated))
 DrawTextTriColor(global.customFont15, fa_left, 220, 120, global.lightBlue, global.yellow, global.pink, 3, 1, "B-Sides Defeated: " + string(numBossesDefeated))
-DrawTextTriColor(global.customFont15, fa_left, 220, 140, global.lightBlue, global.yellow, global.pink, 3, 1, "Time: " + string(numBossesDefeated))
-DrawTextTriColor(global.customFont15, fa_left, 220, 160, global.lightBlue, global.yellow, global.pink, 3, 1, "Falls: " + string(numBossesDefeated))
-DrawTextTriColor(global.customFont15, fa_left, 220, 180, global.lightBlue, global.yellow, global.pink, 3, 1, "Cables Lost: " + string(numBossesDefeated))
-DrawTextTriColor(global.customFont15, fa_left, 220, 200, global.lightBlue, global.yellow, global.pink, 3, 1, "Cables Recovered: " + string(numBossesDefeated))
+DrawTextTriColor(global.customFont15, fa_left, 220, 140, global.lightBlue, global.yellow, global.pink, 3, 1, "Bullets Fired: " + string(global.runBullets))
+DrawTextTriColor(global.customFont15, fa_left, 220, 160, global.lightBlue, global.yellow, global.pink, 3, 1, "Falls: " + string(global.runFalls))
+DrawTextTriColor(global.customFont15, fa_left, 220, 180, global.lightBlue, global.yellow, global.pink, 3, 1, "Cables Lost: " + string(global.runCablesLost))
+DrawTextTriColor(global.customFont15, fa_left, 220, 200, global.lightBlue, global.yellow, global.pink, 3, 1, "Cables Recovered: " + string(global.runCablesRecovered))
 
 //if (global.bossesDefeatedInRun = 0)
 //{

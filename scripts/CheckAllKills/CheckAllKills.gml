@@ -56,4 +56,12 @@ function CheckAllKills()
 			achievementCheck.unlocked = 1;
 		}
 	}
+	
+	if (achievementCheck.alias = "GoodStreak")
+	{
+		if (global.runConsecutiveTracksDefeated >= 7)
+		{
+			achievementCheck.unlocked = 1;
+		}
+	}
 }

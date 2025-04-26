@@ -4,18 +4,26 @@ if instance_exists(inst)
 {
 	x=inst.x;
 	y=inst.y;
-	if (inst._hp = 3) 
+	
+	if (attached = false)
 	{
-		rope1.vertexChangeData(first,inst.x + lengthdir_x(4, inst.image_angle+270),y + lengthdir_y(4, inst.image_angle+270) )
+		if (inst._hp = 3) 
+		{
+			rope1.vertexAttachTo(first, inst, lengthdir_x(4, inst.image_angle+270), lengthdir_y(4, inst.image_angle+270))
+			
+		}
+		else if (inst._hp = 2) 
+		{
+				rope1.vertexAttachTo(first, inst, lengthdir_x(4, inst.image_angle+140), lengthdir_y(4, inst.image_angle+140))
+		}
+		else
+		{
+				rope1.vertexAttachTo(first, inst, lengthdir_x(4, inst.image_angle+270), lengthdir_y(4, inst.image_angle+270))
+		}
+		
+		attached = true;
 	}
-	else if (inst._hp = 2) 
-	{
-		rope1.vertexChangeData(first,inst.x + lengthdir_x(4, inst.image_angle+140),y + lengthdir_y(4, inst.image_angle+140) )
-	}
-	else
-	{
-		rope1.vertexChangeData(first,inst.x + lengthdir_x(4, inst.image_angle+270),y + lengthdir_y(4, inst.image_angle+270) )
-	}
+
 	
 	
 	if (inst.dying)

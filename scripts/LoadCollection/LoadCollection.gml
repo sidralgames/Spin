@@ -19,6 +19,9 @@ function LoadCollection()
 	global.falls = ini_read_real("stats", "falls", 0);
 	global.enemiesKilled = ini_read_real("stats", "enemiesKilled", 0);
 	global.bombsDestroyed = ini_read_real("stats", "bombsDestroyed", 0);
+	global.bossBulletsDestroyed = ini_read_real("stats", "bossBulletsDestroyed", 0);
+	global.favTrackName = ini_read_string("stats", "favTrackName", "None");
+	global.totalAchUnlocked = ini_read_real("stats", "totalAchUnlocked", 0)
 	global.runningAgainstSpinmilisecsBest= ini_read_real("stats", "runningAgainstSpinmilisecsBest", 0);
 	//-------- Collection Bosses --------//
 	for (var i=0; i<global.totalNumberOfVinyls; i++)

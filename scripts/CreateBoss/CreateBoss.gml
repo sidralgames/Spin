@@ -46,7 +46,7 @@ function CreateBoss(_selectedBossFromCollection, _additionalHP)
 		global.isBossBSide = true;
 		_songToPlay = bossToCreate.songBSide;
 		_offsetSong = bossToCreate.offsetSongBSide;
-		_hpMax = bossToCreate.hpMax + (global.level*20) + _additionalHP;
+		_hpMax = bossToCreate.hpMax + (global.level*40) + _additionalHP;
 		_hp = _hpMax;
 		_songName = bossToCreate.songNameBSide;
 	}

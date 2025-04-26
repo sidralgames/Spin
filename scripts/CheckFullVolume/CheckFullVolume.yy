@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"CheckFullVolume",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CheckFullVolume",
+  "parent":{
+    "name":"SPIN",
+    "path":"SPIN.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

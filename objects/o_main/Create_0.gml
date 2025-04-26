@@ -2,6 +2,15 @@
 // Puede escribir su código en este editor
 randomize();
 
+
+//----- RUN GLOBALS ----//
+global.runFalls = 0;
+global.runBullets = 0;
+global.runCablesLost = 0;
+global.runCablesRecovered = 0;
+global.runConsecutiveTracksDefeated = 0;
+global.haveDiedInRun = false;
+
 //global._fx_tint = fx_create("_filter_tintfilter");
 //fx_set_parameter(global._fx_tint, "g_TintCol", [1, 0, 0, 1]);
 global.fallFromVinyl = false;
@@ -222,12 +231,15 @@ LoadDefaultGlobals();
 global.achievementList = ds_map_create();
 global.totalNumberOfAchievements = 0;
 
-
-
-
+global.favTrackName = "";
+favTrackOk = false;
+speedUpOk = 0;
 wingsOk = false;
 haloOk = false;
 cableOk = false;
+_thisKills = 0;
+_maxKills = 0;
+limiterOk = 0;
 toolBoxOk = false;
 adapterOk = false;
 shieldOk = false;
@@ -235,7 +247,7 @@ slowMoOk = false;
 dobleShotOk = false;
 shotGunOk = false;
 load = false;
-
+achUnlock = 0;
 if (load = false)
 {
 	//LoadAllUnlocked();

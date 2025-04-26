@@ -9,4 +9,10 @@ function PlayerPickUpCable(_cableToCreate)
 	newCable = instance_create_layer(x, y,"Cable", _cableToCreate);
 	global.damageAuxUpgrade = 1;
 	global.cablesRecovered +=1;
+	global.runCablesRecovered +=1;
+	if instance_exists(o_cableFather)
+	{
+		o_cableFather.attached = false;
+	}
+
 }

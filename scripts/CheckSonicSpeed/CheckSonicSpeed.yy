@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"CheckSonicSpeed",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CheckSonicSpeed",
+  "parent":{
+    "name":"SPIN",
+    "path":"SPIN.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

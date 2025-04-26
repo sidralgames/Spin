@@ -2,7 +2,8 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function ResetGame(_playing)
 {
-
+	
+	achUnlock = 0;
 	bsidesInGame = 0;
 	bsidesUnlocked = 0;
 	if (global.runningAgainstSpinmilisecs > global.runningAgainstSpinmilisecsBest)
@@ -66,6 +67,13 @@ function ResetGame(_playing)
 		}
 	}
 	
+	//----- RESET RUN GLOBALS ----//
+	global.runFalls = 0;
+	global.runBullets = 0;
+	global.runCablesLost = 0;
+	global.runCablesRecovered = 0;
+	global.runConsecutiveTracksDefeated = 0;
+	global.haveDiedInRun = false;
 	
 	
 	//--- RESET GLOBALS ---//

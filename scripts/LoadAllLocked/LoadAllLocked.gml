@@ -33,6 +33,9 @@ function LoadAllLocked()
 	global.brokenWalls = 0;
 	global.wins = 0;
 	global.runningAgainstSpinmilisecsBest = 0;
+	global.bossBulletsDestroyed = 0;
+	global.favTrackName = "None";
+	global.totalAchUnlocked = 0;
 	
 	ini_write_real("stats","wins", 0);
 	ini_write_real("stats","maxLevel", 0);
@@ -45,10 +48,14 @@ function LoadAllLocked()
 	ini_write_real("stats","cablesRecovered", 0);
 	ini_write_real("stats","brokenWalls", 0);
 	ini_write_real("stats","trebolsPicked", 0);
+	ini_write_real("stats","totalAchUnlocked", 0);
 	ini_write_real("stats","runningAgainstSpinmilisecsBest", 0);
+	ini_write_real("stats","bossBulletsDestroyed", 0);
 	ini_write_real("stats","enemiesKilled", 0);
 	ini_write_real("stats","bombsDestroyed", 0);
 	ini_write_real("bossesCollection","bossUpgrades", -4);
+	ini_write_string("stats", "favTrackName", "None");
+
 	
 	ini_close();
 }

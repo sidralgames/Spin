@@ -64,6 +64,7 @@ function Die()
 					else
 					{
 						global.lives -=1;
+						global.haveDiedInRun = true;
 					}
 				}
 				
@@ -84,6 +85,8 @@ function Die()
 				if (global.playing)
 				{
 					global.falls += 1;
+					global.runFalls +=1;
+					global.runConsecutiveTracksDefeated = 0;
 				}
 			}
 		}
@@ -103,6 +106,7 @@ function Die()
 			else
 			{
 				global.lives -=1;
+				global.haveDiedInRun = true;
 			}
 		}
 		

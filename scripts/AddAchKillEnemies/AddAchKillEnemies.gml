@@ -11,7 +11,9 @@ function AddAchKillEnemies()
 		unlocked: 0,
 		desc: "Kill 250 Enemies",
 		descUnlocked: "Kill 250 Enemies",
-		descPlaceholder: "Kill 250 Enemies\n(" + string(global.enemiesKilled) + " / 250)"
+		descPlaceholder: "Kill 250 Enemies\n(" + string(global.enemiesKilled) + " / 250)",
+		haveAltDesc: true, 
+		haveAltAch: false
 		
 	})
 

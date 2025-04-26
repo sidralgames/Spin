@@ -4,6 +4,7 @@
 randomize();
 
 global.bulletsFired +=1;
+global.runBullets +=1;
 
 isLucky = false;
 precision =3.35

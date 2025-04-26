@@ -11,11 +11,17 @@ function CheckCableToDestroy()
 			{
 				instance_destroy(cableToDestroy.cable);
 				global.cablesLost +=1;
+				global.runCablesLost +=1;
+				global.runConsecutiveTracksDefeated = 0;
 			}
 		}
-	}	
+	}
+	
+	if instance_exists(o_cableFather)
+	{
+		o_cableFather.attached = false;
+	}
 }
-
 
 // ---------OLD SYSTEM ----------//
 

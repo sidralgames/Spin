@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"AddAchFullVolume",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"AddAchFullVolume",
+  "parent":{
+    "name":"AddBoss",
+    "path":"folders/Scripts/AddBoss.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

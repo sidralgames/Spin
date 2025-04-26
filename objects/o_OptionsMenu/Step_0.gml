@@ -128,7 +128,7 @@ if (alarm[0] <= 0)
 		{
 			audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 5);
 			selectedPage +=1;
-			selectedA += floor(global.totalNumberOfVinyls / 3) -1
+		
 			initialFlechaR= 243;
 		}
 
@@ -136,20 +136,28 @@ if (alarm[0] <= 0)
 		{
 			audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 5);
 			selectedPage -=1;
-			selectedA -= floor(global.totalNumberOfVinyls / 3) -1
+			
 			initialFlechaL= 243;
 
 		}
 		
-
-		if (selectedPage > 2)
+		if (selectedA > global.totalNumberOfAchievements)
+		{
+			selectedA = 0;
+		}
+		
+		if (selectedA < 0)
+		{
+			selectedA = global.totalNumberOfAchievements;
+		}
+		if (selectedPage > achievementPages)
 		{
 			selectedPage = 0;	
 		}
 
 		if (selectedPage < 0)
 		{
-			selectedPage = 2;	
+			selectedPage = achievementPages;	
 		}
 		
 		if (key_back)
@@ -191,14 +199,14 @@ if (achievementsShowing) && _visible = false && (contCred < 0)
 		}
 		
 
-		if (selectedA > round(global.totalNumberOfAchievements /3) -1)
+		if (selectedA > floor(global.totalNumberOfAchievements /4) -1)
 		{
 			selectedA = 0;	
 		}
 
 		if (selectedA < 0)
 		{
-			selectedA = round(global.totalNumberOfAchievements /3) -1
+			selectedA = floor(global.totalNumberOfAchievements /4 -1)
 		}
 	
 	

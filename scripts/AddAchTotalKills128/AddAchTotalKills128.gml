@@ -8,8 +8,10 @@ function AddAchTotalKills128()
 		achievement: "128 kbps",
 		unlocked: 0,
 		desc: "Defeat 128 Tracks",
-		descPlaceholder: "Defeat 128 Tracks\n(" + string(global.totalKills) + " / 128)",
-		descUnlocked: "Defeat 128 Tracks"
+		descPlaceholder: "Defeat 128 Tracks in total\n(" + string(global.totalKills) + " / 128)",
+		descUnlocked: "Defeat 128 Tracks",
+		haveAltDesc: true, 
+		haveAltAch: false
 		
 	})
 

@@ -5,7 +5,7 @@ function draw_circular_bar(x ,y ,value, max, colour, radius, transparency, width
 if (argument2 > 0) { // no point even running if there is nothing to display (also stops /0
     var i, len, tx, ty, val;
     
-    var numberofsections = 60 // there is no draw_get_circle_precision() else I would use that here
+    var numberofsections = 30 // there is no draw_get_circle_precision() else I would use that here
     var sizeofsection = 360/numberofsections
     
     val = (argument2/argument3) * numberofsections 

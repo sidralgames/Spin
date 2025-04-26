@@ -2,6 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function SaveGame()
 {
+	achUnlock = 0;
 	ini_open("SpinData.ini");
 	
 	//-------- BOSS COLLECTION --------//
@@ -15,6 +16,16 @@ function SaveGame()
 		ini_write_real("stats",thisBoss.deathsNameBSide, thisBoss.deathsBSide);
 	}
 	
+	for (var i=0; i<global.totalNumberOfAchievements; i++)
+	{	
+		thisAch = ds_map_find_value(global.achievementList, i);
+		if (thisAch.unlocked = 1)
+		{
+			achUnlock += 1;
+		}
+		
+		global.totalAchUnlocked = achUnlock;
+	}
 	
 	if (global.level > global.maxLevelReached)
 	{
@@ -33,6 +44,11 @@ function SaveGame()
 	ini_write_real("stats", "trebolsPicked", global.trebolsPicked);
 	ini_write_real("stats", "enemiesKilled", global.enemiesKilled);
 	ini_write_real("stats", "bombsDestroyed", global.bombsDestroyed);
+	ini_write_real("stats", "bossBulletsDestroyed", global.bossBulletsDestroyed);
+	ini_write_real("stats", "runningAgainstSpinmilisecsBest", global.runningAgainstSpinmilisecsBest);
+	ini_write_real("stats", "totalAchUnlocked", global.totalAchUnlocked);
+	ini_write_string("stats", "favTrackName", string(global.favTrackName));
+	
 	
 	ini_close();
 }

@@ -7,7 +7,9 @@ function AddAchRunWithoutFalling()
 		alias: "RunWithoutFalling",
 		achievement: "Afraid Of Heights",
 		unlocked: 0,
-		desc: "Complete a run without falling"
+		desc: "Complete a run without falling",
+		haveAltDesc: false, 
+		haveAltAch: false
 		
 	})
 

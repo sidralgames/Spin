@@ -7,7 +7,9 @@ function AddAchRunBSides()
 		alias: "BSidesRun",
 		achievement: "You like it hard, uh?",
 		unlocked: 0,
-		desc: "Complete a FULL B-SIDES run"
+		desc: "Complete a FULL B-SIDES run",
+		haveAltDesc: false, 
+		haveAltAch: false
 		
 	})
 

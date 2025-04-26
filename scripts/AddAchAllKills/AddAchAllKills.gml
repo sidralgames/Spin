@@ -7,7 +7,9 @@ function AddAchAllKills()
 		alias: "AllKills",
 		achievement: "Defeat EVERY Track",
 		unlocked: 0,
-		desc: "Kill each Track at least once\n(B-Sides included)"
+		desc: "Kill each Track at least once\n(B-Sides included)",
+		haveAltDesc: false, 
+		haveAltAch: false
 		
 	})
 

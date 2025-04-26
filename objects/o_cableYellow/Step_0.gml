@@ -4,18 +4,39 @@ if instance_exists(inst)
 {
 	x=inst.x;
 	y=inst.y;
-	if (inst._hp = 3) 
+	
+	if (attached = false)
 	{
-		rope2.vertexChangeData(first,inst.x + lengthdir_x(4, inst.image_angle+90),y + lengthdir_y(4, inst.image_angle+90) )
+		
+		if (inst._hp = 3) 
+		{
+			rope2.vertexAttachTo(first,inst, lengthdir_x(4, inst.image_angle+90), lengthdir_y(4, inst.image_angle+90) )
+		}
+		else if (inst._hp = 2) 
+		{
+			rope2.vertexAttachTo(first,inst, lengthdir_x(4, inst.image_angle+140), lengthdir_y(4, inst.image_angle+140) )
+		}
+		else
+		{
+			rope2.vertexAttachTo(first,inst, lengthdir_x(4, inst.image_angle+90), lengthdir_y(4, inst.image_angle+90) )
+		}
+		
+		attached = true;
+		//if (inst._hp = 3) 
+		//{
+		//	rope2.vertexChangeData(first,inst.x + lengthdir_x(4, inst.image_angle+90),y + lengthdir_y(4, inst.image_angle+90) )
+		//}
+		//else if (inst._hp = 2) 
+		//{
+		//	rope2.vertexChangeData(first,inst.x + lengthdir_x(4, inst.image_angle+140),y + lengthdir_y(4, inst.image_angle+140) )
+		//}
+		//else
+		//{
+		//	rope2.vertexChangeData(first,inst.x + lengthdir_x(4, inst.image_angle+90),y + lengthdir_y(4, inst.image_angle+90) )
+		//}
 	}
-	else if (inst._hp = 2) 
-	{
-		rope2.vertexChangeData(first,inst.x + lengthdir_x(4, inst.image_angle+140),y + lengthdir_y(4, inst.image_angle+140) )
-	}
-	else
-	{
-		rope2.vertexChangeData(first,inst.x + lengthdir_x(4, inst.image_angle+90),y + lengthdir_y(4, inst.image_angle+90) )
-	}
+	
+	
 	
 
 	if (inst.dying)

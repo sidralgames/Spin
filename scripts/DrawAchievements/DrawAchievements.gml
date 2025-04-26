@@ -1,12 +1,12 @@
 // Los recursos de Script han cambiado para la v2.3.0 Consulta
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
-function DrawAchievements(_initialI, _nextPageAch, _selectedA, _offI)
+function DrawAchievements(_initialI, _topI, _selectedA, _offI)
 {
-	for (var i=_initialI; i<global.totalNumberOfAchievements - _nextPageAch; i++)
+	for (var i=_initialI; i<_topI; i++)
 	{
 		achlist = ds_map_find_value(global.achievementList, i)
 	
-		if (achlist.alias = "Unknown") || (achlist.alias = "WellPrepared")
+		if (achlist.haveAltAch = true)
 		{
 			if (achlist.unlocked = 0)
 			{
@@ -19,9 +19,7 @@ function DrawAchievements(_initialI, _nextPageAch, _selectedA, _offI)
 		}
 		
 			
-		if (achlist.alias = "9999Bullets") || (achlist.alias = "BreakWalls") || (achlist.alias = "ControlledExplosion") ||
-		(achlist.alias = "KillEnemies") || (achlist.alias = "TotalKills128") || (achlist.alias = "TotalKills320") || 
-		(achlist.alias = "WellPrepared") || (achlist.alias = "777LuckyBullets") || (achlist.alias = "AgainstSpin") || (achlist.alias = "Trebol")
+		if (achlist.haveAltDesc = true)
 		{
 			if (achlist.unlocked = 0)
 			{
@@ -107,7 +105,25 @@ function DrawAchievements(_initialI, _nextPageAch, _selectedA, _offI)
 	draw_set_color(global.pink)
 	draw_text( __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialAchDesc, ach.desc)
 
-		
+	
+	
+	
+	//if (selectedPage = 0)
+	//{
+	//	DrawTextTriColor(global.customFont15, fa_center, 320,initialPageOff, global.lightBlue, global.yellow, global.pink, 3,1, "-  .  .  ." )	
+	//}
+	//if (selectedPage = 1)
+	//{
+	//	DrawTextTriColor(global.customFont15, fa_center, 320,initialPageOff, global.lightBlue, global.yellow, global.pink, 3,1, ".  -  .  ." )	
+	//}
+	//if (selectedPage = 2)
+	//{
+	//	DrawTextTriColor(global.customFont15, fa_center, 320,initialPageOff, global.lightBlue, global.yellow, global.pink, 3,1, ".  .  -  ." )	
+	//}
+	//if (selectedPage = 3)
+	//{
+	//	DrawTextTriColor(global.customFont15, fa_center, 320,initialPageOff, global.lightBlue, global.yellow, global.pink, 3,1, ".  .  .  -" )	
+	//}
 	//---- DRAW PAGE---- //
 	//draw_set_alpha(1)
 	//draw_set_font(global.customFont11);

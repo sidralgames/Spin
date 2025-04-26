@@ -14,14 +14,9 @@ function collide(xx, yy, radius) {
 
 		var inst;
 	
-		inst = instance_position(xx - radius, yy, o_parCollision);
+		inst = instance_position(xx, yy, o_parCollision);
 		if (inst != noone) return inst;
-		inst = instance_position(xx + radius, yy, o_parCollision);
-		if (inst != noone) return inst;
-		inst = instance_position(xx, yy - radius, o_parCollision);
-		if (inst != noone) return inst;
-		inst = instance_position(xx, yy + radius, o_parCollision);
-		if (inst != noone) return inst;
+		
 	}
 	return noone;
 };

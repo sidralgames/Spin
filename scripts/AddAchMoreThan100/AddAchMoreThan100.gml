@@ -7,9 +7,11 @@ function AddAchMoreThan100()
 		alias: "MoreThan100",
 		achievement: "NICE SHOT!",
 		unlocked: 0,
-		desc: "Do more than 100 damage\nwith a single bullet",
+		desc: "Do more than 50 damage\nwith a single bullet",
 		descPlaceholder: "Deal more than 100 damage\nwith a single bullet",
 		descUnlocked: "Do more than 100 damage\nwith a single bullet",
+		haveAltDesc: false, 
+		haveAltAch: false
 		
 	})
 

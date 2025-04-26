@@ -90,42 +90,29 @@ if (_hp <= 0)
 	
 	if (global.level > global.totalNumberOfVinyls) && (global.endlessMode = false)
 	{
-		//if (global.actualRun = true)
-		//{
+		if (global.actualRun = true)
+		{
 			instance_create_layer(x, y, "Menu", o_youWin)
 		
 			global.wins +=1;
 			
-			if (global.fallFromVinyl = false)
-			{
-				for (var i = 0; i<global.totalNumberOfAchievements; i++)
-				{
-					ach = ds_map_find_value(global.achievementList, i)
-					if (ach.alias = "RunWithoutFalling")
-					{
-						ach.unlocked = 1;
-					}
-				}
-				
-				ini_open("SpinData.ini");
-				ini_write_real("achievements", "RunWithoutFalling", 1 );
-				ini_close();
-			}
+			bossIsInCollection = 1;
 			
-			if (global.fullBSidesRun = true)
-			{
-				for (var i = 0; i<global.totalNumberOfAchievements; i++)
+			for (var i=0; i<global.totalNumberOfVinyls; i++)
+			{	
+				thisBoss = ds_map_find_value(global.collectionList, i);
+				if (thisBoss.sprite = spriteBoss)
 				{
-					ach = ds_map_find_value(global.achievementList, i)
-					if (ach.alias = "BSidesRun")
-					{
-						ach.unlocked = 1;
-					}
+					thisBoss.unlocked = bossIsInCollection;
 				}
-				ini_open("SpinData.ini");
-				ini_write_real("achievements", "BSidesRun", 1 );
-				ini_close();
 			}
+	
+			SaveGame();
+			
+			//---- CHECK ACHIEVEMENTS ---//
+			CheckRunWithoutFalling();
+			CheckFullBSidesRun();
+			CheckReallyHard();
 			
 			instance_destroy();
 			instance_destroy(o_vinilo);
@@ -133,7 +120,7 @@ if (_hp <= 0)
 			global.vinylColor = c_white;
 			instance_create_layer(x,y,"Boss", o_bossWinner);
 			instance_create_layer(x,y,"Vinyl", o_vinilo)
-		//}
+		}
 	}
 	else
 	{

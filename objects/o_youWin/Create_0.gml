@@ -3,9 +3,11 @@
 audio_stop_sound(global.song);
 
 instance_create_layer(x,y,"Main", o_bg);
-
+achUnlock = 0;
+speedUpOk = 0;
 checkAch = false;
 cableOk = false;
+limiterOk = 0;
 adapterOk  = false;
 shieldOk  = false;
 toolBoxOk  = false;
@@ -14,6 +16,9 @@ dobleShotOk = false;
 shotGunOk = false;
 wingsOk = false;
 haloOk = false;
+_thisKills = 0;
+_maxKills = 0;
+favTrackOk = false;
 bsidesInGame = 0;
 bsidesUnlocked = 0;
 initialGameOver = 160;

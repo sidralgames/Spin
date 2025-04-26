@@ -7,12 +7,12 @@
 
 cableRoto = false;
 
-
+attached = false
 contUnplugging = 0;
 deattached = false;
 _alpha = 1;
 
-canCollide = true;
+canCollide = false;
 fric = 0.74;
 verletSystem1 = new verletSystem(fric, 0.0);
 off = 0;

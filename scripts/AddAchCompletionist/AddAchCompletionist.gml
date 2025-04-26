@@ -5,9 +5,11 @@ function AddAchCompletionist()
 	ds_map_add(global.achievementList, global.totalNumberOfAchievements,
 	{ 
 		alias: "Completionist",
-		achievement: "Unlock Every Achievement",
+		achievement: "Completionist",
 		unlocked: 0,
-		desc: "You know what to do"
+		desc: "Unlock Every Achievement (" + string(global.totalAchUnlocked) + " / " + string(global.totalNumberOfAchievements) + ")",
+		haveAltDesc: false, 
+		haveAltAch: false
 		
 	})
 

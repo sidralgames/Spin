@@ -15,7 +15,7 @@ function AddBossBigEyeCollection()
 		spriteMain: s_bossBigEye,
 		spriteBSide: s_bossBigEye,
 		spriteVinyl: s_discoVinilo,
-		hpMax: 400,
+		hpMax: 500,
 		vinylAlpha: 0.95,
 		vinylAlphaBSide: 0.75,
 		vinylColor: global.lightPink,

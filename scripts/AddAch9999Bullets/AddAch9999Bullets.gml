@@ -10,6 +10,8 @@ function AddAch9999Bullets()
 		descPlaceholder: "Fire 99999 Bullets\n(" + string(global.bulletsFired) + " / 99999)",
 		descPlaceholder: "Fire 99999 Bullets\n(" + string(global.bulletsFired) + " / 99999)",
 		descUnlocked: "Fire 99999 Bullets",
+		haveAltDesc: true, 
+		haveAltAch: false
 		
 	})
 

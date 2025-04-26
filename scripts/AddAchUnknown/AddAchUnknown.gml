@@ -9,7 +9,9 @@ function AddAchUnknown()
 		achievementPlaceholder: "????",
 		achievement: "Spin 1000 times",
 		unlocked: 0,
-		desc: "Give it another spin"
+		desc: "Give it another spin",
+		haveAltDesc: false, 
+		haveAltAch: true
 		
 	})
 

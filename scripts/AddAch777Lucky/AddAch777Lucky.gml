@@ -10,6 +10,8 @@ function AddAch777Lucky()
 		desc: "Fire 777 Lucky Bullets",
 		descPlaceholder: "Fire 777 Lucky Bullets\n(" + string(global.luckyBullets) + " / 777)",
 		descUnlocked: "Fire 777 Lucky Bullets",
+		haveAltDesc: true, 
+		haveAltAch: false
 		
 	})
 

@@ -12,6 +12,8 @@ function AddAchWellPrepared()
 		desc: "In the same run\nPick Tool Box, Blue Jack and Adapter",
 		descUnlocked: "In the same run\nPick Tool Box, Blue Jack and Adapter",
 		descPlaceholder: "In the same run\nPick Tool Box, ???? and Adapter",
+		haveAltDesc: true, 
+		haveAltAch: true
 		
 	})
 

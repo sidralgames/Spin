@@ -2,7 +2,8 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function BossDefeatedInRun()
 {
-	global.bossesDefeatedInRun +=1;
+	global.bossesDefeatedInRun += 1;
+	global.runConsecutiveTracksDefeated += 1;
 	
 	for (var i=0; i<global.totalNumberOfVinyls; i++)
 	{	

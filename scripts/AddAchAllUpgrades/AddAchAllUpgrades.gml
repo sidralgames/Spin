@@ -7,7 +7,9 @@ function AddAchAllUpgrades()
 		alias: "AllUpgrades",
 		achievement: "What does this do?",
 		unlocked: 0,
-		desc: "Try every Upgrade on the game"
+		desc: "Try every Upgrade on the game",
+		haveAltDesc: false, 
+		haveAltAch: false
 		
 	})
 

@@ -7,7 +7,9 @@ function AddAchUntouchable()
 		alias: "Untouchable",
 		achievement: "Untouchable",
 		unlocked: 0,
-		desc: "In the same run\nPick the Shield and SlowMo"
+		desc: "In the same run\nPick the Shield and SlowMo",
+		haveAltDesc: false, 
+		haveAltAch: false
 		
 	})
 

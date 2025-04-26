@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"CheckReallyHard",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"CheckReallyHard",
+  "parent":{
+    "name":"AddBoss",
+    "path":"folders/Scripts/AddBoss.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

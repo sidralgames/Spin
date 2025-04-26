@@ -15,7 +15,7 @@ function AddBossRataCollection()
 		spriteMain: s_bossRata,
 		spriteBSide: s_bossRata_B,
 		spriteVinyl: s_discoVinilo,
-		hpMax: 290,
+		hpMax: 320,
 		vinylAlpha : 0.85,
 		vinylAlphaBSide: 0.85,
 		vinylColor : global.greenRat,

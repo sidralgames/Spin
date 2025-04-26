@@ -7,7 +7,9 @@ function AddAchTrueAngel()
 		alias: "TrueAngel",
 		achievement: "A True Angel",
 		unlocked: 0,
-		desc: "In the same run\nPick Halo and Wings"
+		desc: "In the same run\nPick Halo and Wings",
+		haveAltDesc: false, 
+		haveAltAch: false
 		
 	})
 

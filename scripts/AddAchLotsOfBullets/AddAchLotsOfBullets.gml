@@ -11,7 +11,9 @@ function AddAchLotsOfBullets()
 		unlocked: 0,
 		desc: "In the same run\nPick Shotgun and Mitosis",
 		descUnlocked: "In the same run\nPick Shotgun and Mitosis",
-		descPlaceholder: "In the same run\nPick Shotgun and ???????"
+		descPlaceholder: "In the same run\nPick Shotgun and ???????",
+		haveAltDesc: true, 
+		haveAltAch: false
 		
 	})
 

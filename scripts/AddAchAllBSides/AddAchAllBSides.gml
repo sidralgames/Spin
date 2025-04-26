@@ -7,7 +7,9 @@ function AddAchAllBSides()
 		alias: "AllBSides",
 		achievement: "Expanded Collection",
 		unlocked: 0,
-		desc: "Unlock ALL B-Sides"
+		desc: "Unlock ALL B-Sides",
+		haveAltDesc: false, 
+		haveAltAch: false
 		
 	})
 

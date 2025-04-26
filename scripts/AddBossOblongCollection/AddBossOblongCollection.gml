@@ -15,7 +15,7 @@ function AddBossOblongCollection()
 		spriteMain: s_bossOblong,
 		spriteBSide: s_bossNacho_B,
 		spriteVinyl: s_discoVinilo,
-		hpMax: 400,
+		hpMax: 600,
 		vinylAlpha : 0.95,
 		vinylAlphaBSide: 0.75,
 		vinylColor : global.orange,

@@ -43,9 +43,7 @@ draw_sprite_ext(sprite_index, 0, x, y ,image_xscale, image_yscale, image_angle, 
 
 
 //---- DRAW ENERGY CIRCULAR BAR ----//
-draw_set_alpha(0.8);
-PlayerDrawCircularBar()
-draw_set_alpha(1);
+
 
 
 if (dying = false)
@@ -98,6 +96,8 @@ if (dying = false)
 }
 
 
+PlayerDrawCircularBar()
+draw_set_alpha(1);
 
 //draw_set_halign(fa_left)
 //draw_text(x,100,"dirH: " +  string(dirH))

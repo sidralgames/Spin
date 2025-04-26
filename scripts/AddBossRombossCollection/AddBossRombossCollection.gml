@@ -15,7 +15,7 @@ function AddBossRombossCollection()
 		spriteMain: s_bossRomboss,
 		spriteBSide: s_bossNacho_B,
 		spriteVinyl: s_discoVinilo,
-		hpMax: 400,
+		hpMax: 550,
 		vinylAlpha : 0.85,
 		vinylAlphaBSide: 0.75,
 		vinylColor : global.blue,
