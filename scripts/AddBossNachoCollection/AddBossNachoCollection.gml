@@ -45,7 +45,7 @@ function AddBossNachoCollection()
 		deaths: 0,
 		killsBSide: 0,
 		deathsBSide: 0,
-		minKillsBSide: 3,
+		minKillsBSide: 4,
 		
 	})
 

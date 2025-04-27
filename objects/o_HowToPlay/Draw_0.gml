@@ -10,7 +10,7 @@ if (alarm[0] <= 0)
 	{
 		audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 5);
 		global.howToPlay = false;
-		o_MainMenu._visible = true;
+		o_OptionsMenu._visible = true;
 		o_MainMenu.initialBackCol = 380;
 		instance_destroy();
 	}

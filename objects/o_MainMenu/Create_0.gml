@@ -12,7 +12,7 @@ _stringBSideActive = "Yes";
 _stringConfirm = "X confirm";
 bSideActive = true
 
-factor = 0.1;
+factor = 0.12;
 factorGuide = 0.15;
 imgBack = 0;
 initialPlay =300;

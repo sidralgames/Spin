@@ -56,10 +56,10 @@ if (alarm[0] <= 0)
 			{
 				case 0:
 				{
-					LoadAchievements();
-					achievementsShowing = !achievementsShowing;
-					_visible = !_visible;
-					contCred = 20;
+					global.howToPlay = true;
+					audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 5);
+					instance_create_layer(x,y,"Menu", o_HowToPlay);
+					_visible = false;
 		
 				}break;
 				case 1:
@@ -122,52 +122,6 @@ if (alarm[0] <= 0)
 		}
 	}
 	
-	if (achievementsShowing)
-	{
-		if (key_rightP)
-		{
-			audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 5);
-			selectedPage +=1;
-		
-			initialFlechaR= 243;
-		}
-
-		if (key_leftP)
-		{
-			audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 5);
-			selectedPage -=1;
-			
-			initialFlechaL= 243;
-
-		}
-		
-		if (selectedA > global.totalNumberOfAchievements)
-		{
-			selectedA = 0;
-		}
-		
-		if (selectedA < 0)
-		{
-			selectedA = global.totalNumberOfAchievements;
-		}
-		if (selectedPage > achievementPages)
-		{
-			selectedPage = 0;	
-		}
-
-		if (selectedPage < 0)
-		{
-			selectedPage = achievementPages;	
-		}
-		
-		if (key_back)
-		{
-			audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 5);
-			achievementsShowing = !achievementsShowing;
-			_visible = true;
-			initialAchDesc = 390;
-		}
-	}
 }
 
 if (contCred >= 0)
@@ -181,40 +135,6 @@ if (creditsShowing) && _visible = false && (contCred < 0)
 	{
 		creditsShowing = !creditsShowing;
 		_visible = !_visible;
-	}
-}
-
-if (achievementsShowing) && _visible = false && (contCred < 0)
-{
-	if (key_downP)
-		{
-			audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 5);
-			selectedA +=1;	
-		}
-
-		if (key_upP)
-		{
-			audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 5);
-			selectedA -=1;	
-		}
-		
-
-		if (selectedA > floor(global.totalNumberOfAchievements /4) -1)
-		{
-			selectedA = 0;	
-		}
-
-		if (selectedA < 0)
-		{
-			selectedA = floor(global.totalNumberOfAchievements /4 -1)
-		}
-	
-	
-	if (key_X)
-	{
-		achievementsShowing = !achievementsShowing;
-		_visible = !_visible;
-		initialAchDesc = 390;
 	}
 }
 

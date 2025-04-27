@@ -37,10 +37,10 @@ if (alarm[0] <= 0)
 				
 				case 1:
 				{
+					LoadAchievements();
 					audio_play_sound_on(global.audioEmitter,snd_moveMenu,false, 5);
+					instance_create_layer(x,y,"Menu", o_AchievementsMenu);
 					_visible = false;
-					instance_create_layer(o_boss.x-200,o_boss.y,"Main",o_HowToPlay)
-					global.howToPlay = true;
 	
 				}break;
 				

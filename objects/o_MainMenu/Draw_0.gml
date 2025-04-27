@@ -11,7 +11,15 @@ if (global.collection = false) && (global.howToPlay = false)
 	if instance_exists(o_OptionsMenu)
 	{
 		initialTitle = lerp(initialTitle, 70,factor);
-		if (o_OptionsMenu.creditsShowing = false) && (o_OptionsMenu.achievementsShowing = false) 
+		if (o_OptionsMenu.creditsShowing = false) 
+		{
+			draw_sprite_ext(s_title, 1,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialTitle,1,1,0,image_blend, image_alpha)
+		}
+	}
+	else if instance_exists(o_AchievementsMenu)
+	{
+		initialTitle = lerp(initialTitle, 70,factor);
+		if (o_AchievementsMenu.achievementsShowing = false) 
 		{
 			draw_sprite_ext(s_title, 1,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialTitle,1,1,0,image_blend, image_alpha)
 		}
@@ -33,13 +41,13 @@ if (_visible)
 		case 0:
 		{
 			initialPlay = lerp(initialPlay, 215,factor);
-			initialHow = lerp(initialHow, 262,factor);
+			initialHow = lerp(initialHow, 260,factor);
 			initialOption = lerp(initialOption, 290 ,factor)
 			initialCollection =  lerp(initialCollection, 315,factor);
 			initialQuit = lerp(initialQuit, 335,factor);
 			
-			draw_sprite_ext(s_play, 1,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialPlay,1.2,1.2,0,image_blend, image_alpha)
-			draw_sprite_ext(s_howTo, 0,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialHow,0.7,0.7,0,image_blend,  0.8)	
+			draw_sprite_ext(s_play, 1,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialPlay,1,1,0,image_blend, image_alpha)
+			draw_sprite_ext(s_ach, 0,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialHow,0.7,0.7,0,image_blend,  0.8)	
 			draw_sprite_ext(s_options, 0,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialOption,0.7,0.7,0,image_blend,  0.8)	
 			draw_sprite_ext(s_collection, 0,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialCollection,0.6,0.6,0,image_blend,  0.8)	
 			draw_sprite_ext(s_quit, 0,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialQuit,0.5,0.5,0,image_blend,  0.8)	
@@ -56,7 +64,7 @@ if (_visible)
 			initialQuit = lerp(initialQuit, 335,factor);
 			
 			draw_sprite_ext(s_play, 0,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialPlay,0.7,0.7,0,image_blend,  0.8)
-			draw_sprite_ext(s_howTo, 0,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialHow,1.2,1.2,0,image_blend,  image_alpha)	
+			draw_sprite_ext(s_ach, 0,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialHow,1,1,0,image_blend,  image_alpha)	
 			draw_sprite_ext(s_options, 1,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialOption,0.7,0.7,0,image_blend, 0.8)	
 			draw_sprite_ext(s_collection, 0,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialCollection,0.6,0.6,0,image_blend,  0.8)
 			draw_sprite_ext(s_quit, 0,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialQuit,0.5,0.5,0,image_blend,  0.8)	
@@ -71,9 +79,9 @@ if (_visible)
 			initialQuit = lerp(initialQuit, 335,factor);
 			
 			draw_sprite_ext(s_play, 0,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialPlay,0.6,0.6,0,image_blend,  0.8)
-			draw_sprite_ext(s_howTo, 0,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialHow,0.6,0.6,0,image_blend,  0.8)	
-			draw_sprite_ext(s_options, 0,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialOption,1.2,1.2,0,image_blend,  image_alpha)	
-			draw_sprite_ext(s_collection, 0,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialCollection,0.7,0.7,0,image_blend,  0.8)
+			draw_sprite_ext(s_ach, 0,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialHow,0.6,0.6,0,image_blend,  0.8)	
+			draw_sprite_ext(s_options, 0,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialOption,1,1,0,image_blend,  image_alpha)	
+			draw_sprite_ext(s_collection, 0,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialCollection,0.6,0.6,0,image_blend,  0.8)
 			draw_sprite_ext(s_quit, 1,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialQuit,0.5,0.5,0,image_blend, 0.8)		
 		}break;
 		
@@ -81,15 +89,15 @@ if (_visible)
 		{
 			initialPlay = lerp(initialPlay, 202,factor);
 			initialHow = lerp(initialHow, 222,factor);
-			initialOption = lerp(initialOption, 245 ,factor)
+			initialOption = lerp(initialOption, 248 ,factor)
 			initialCollection =  lerp(initialCollection, 285, factor);
 			initialQuit = lerp(initialQuit, 335,factor);
 			
 			draw_sprite_ext(s_play, 0,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialPlay,0.6,0.6,0,image_blend,  0.8)
-			draw_sprite_ext(s_howTo, 0,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialHow,0.6,0.6,0,image_blend,  0.8)	
+			draw_sprite_ext(s_ach, 0,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialHow,0.6,0.6,0,image_blend,  0.8)	
 			draw_sprite_ext(s_options, 0,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialOption,0.7,0.7,0,image_blend,  0.8)	
-			draw_sprite_ext(s_collection, 0,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialCollection,1.2,1.2,0,image_blend,  image_alpha)
-			draw_sprite_ext(s_quit, 1,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialQuit,0.7,0.7,0,image_blend, 0.8)		
+			draw_sprite_ext(s_collection, 0,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialCollection,1,1,0,image_blend,  image_alpha)
+			draw_sprite_ext(s_quit, 1,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialQuit,0.6,0.6,0,image_blend, 0.8)		
 		}break;
 		
 		case 4:
@@ -101,10 +109,10 @@ if (_visible)
 			initialQuit = lerp(initialQuit, 310,factor);
 			
 			draw_sprite_ext(s_play, 0,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialPlay,0.5,0.5,0,image_blend,  0.8)
-			draw_sprite_ext(s_howTo, 0,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialHow,0.5,0.5,0,image_blend,  0.8)	
+			draw_sprite_ext(s_ach, 0,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialHow,0.5,0.5,0,image_blend,  0.8)	
 			draw_sprite_ext(s_options, 0,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialOption,0.5,0.5,0,image_blend,  0.8)	
 			draw_sprite_ext(s_collection, 0,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialCollection,0.5,0.5,0,image_blend,  0.8)
-			draw_sprite_ext(s_quit, 1,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialQuit,1.2,1.2,0,image_blend, image_alpha)		
+			draw_sprite_ext(s_quit, 1,  __view_get( e__VW.XView, 0 )+ 320,__view_get( e__VW.YView, 0 )+initialQuit,1,1,0,image_blend, image_alpha)		
 		}break;
 	}
 }
