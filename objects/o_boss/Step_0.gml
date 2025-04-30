@@ -95,6 +95,7 @@ if (_hp <= 0)
 			instance_create_layer(x, y, "Menu", o_youWin)
 		
 			global.wins +=1;
+			global.haveWon = true;
 			
 			bossIsInCollection = 1;
 			

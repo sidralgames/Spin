@@ -4,6 +4,7 @@ randomize();
 
 
 //----- RUN GLOBALS ----//
+global.haveWon = false;
 global.runFalls = 0;
 global.runBullets = 0;
 global.runCablesLost = 0;

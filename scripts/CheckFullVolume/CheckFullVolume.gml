@@ -2,22 +2,26 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function CheckFullVolume()
 {
-	if (achievementCheck.alias = "FullVolume")
+	if (global.haveWon = true)
 	{
-		for (var j = 0; j<global.numberOfUpgradesPlayer; j++)
+		if (achievementCheck.alias = "FullVolume")
 		{
-			upgradeToCheck = ds_map_find_value(global.playerUpgradesList,j)
-			if (upgradeToCheck.upgrade = "Boss Limiter")
+			for (var j = 0; j<global.numberOfUpgradesPlayer; j++)
 			{
-				limiterOk += 1;
-			}
+				upgradeToCheck = ds_map_find_value(global.playerUpgradesList,j)
+				if (upgradeToCheck.upgrade = "Boss Limiter")
+				{
+					limiterOk += 1;
+				}
 			
-			if (limiterOk = 0) && (j = global.numberOfUpgradesPlayer-1)
-			{
-				achievementCheck.unlocked = 1;
-				ini_open("SpinData.ini");
-				ini_write_real("achievements",achievementCheck.alias, 1);
-				ini_close();
+				if (limiterOk = 0) && (j = global.numberOfUpgradesPlayer-1)
+				{
+					achievementCheck.unlocked = 1;
+					ini_open("SpinData.ini");
+					ini_write_real("achievements",achievementCheck.alias, 1);
+					ini_close();
+				}
+				
 			}
 		}
 	}

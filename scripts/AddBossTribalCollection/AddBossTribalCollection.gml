@@ -15,7 +15,7 @@ function AddBossTribalCollection()
 		spriteMain: s_bossTribal,
 		spriteBSide: s_bossTribal_B,
 		spriteVinyl: s_discoVinilo,
-		hpMax: 220,
+		hpMax: 210,
 		vinylAlpha : 0.98,
 		vinylAlphaBSide: 0.95,
 		vinylColor : global.yellow,
