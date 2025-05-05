@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"BossSonicaStep",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"BossSonicaStep",
+  "parent":{
+    "name":"BossStep",
+    "path":"folders/Scripts/BossStep.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

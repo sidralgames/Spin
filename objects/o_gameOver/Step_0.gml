@@ -64,7 +64,7 @@ if (alarm[0] <= 0)
 			{
 				case 0:
 				{
-					ResetGame(true);
+					ResetGame(true, true);
 					instance_destroy();
 					instance_destroy(o_bg);
 					instance_create_layer(o_boss.x + 100, o_boss.y, "Player", o_player);
@@ -74,7 +74,7 @@ if (alarm[0] <= 0)
 				case 1:
 				{
 					instance_create_layer(global.mainMenuX,global.mainMenuY,"Menu", o_MainMenu);
-					ResetGame(false);
+					ResetGame(false, false);
 					instance_destroy(o_bg)
 					instance_destroy();
 					

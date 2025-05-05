@@ -101,7 +101,7 @@ if (global.playing) && !instance_exists(o_MainMenu) && !instance_exists(o_gameOv
 {
 	if keyboard_check_pressed(ord("R"))
 	{
-		ResetGame(false);
+		ResetGame(false, false);
 		instance_create_layer(x,y,"Menu",o_MainMenu);
 	}
 }

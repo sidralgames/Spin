@@ -28,7 +28,7 @@ function CheckBulletsAch()
 	
 	if (achievementCheck.alias = "Trebol")
 	{
-		if (global.trebolsPicked >= 7)
+		if (global.trebolsPicked >= 77)
 		{
 			achievementCheck.unlocked = 1;
 		}

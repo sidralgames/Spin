@@ -1,6 +1,6 @@
 // Los recursos de Script han cambiado para la v2.3.0 Consulta
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
-function ResetGame(_playing)
+function ResetGame(_playing, _actualRun)
 {
 	
 	achUnlock = 0;
@@ -77,7 +77,9 @@ function ResetGame(_playing)
 	
 	
 	//--- RESET GLOBALS ---//
+	global.actualRun = _actualRun;
 	global.BSidesInRun = true;
+	global.fullBSidesRun = false;
 	
 	global.relativeSpeed = 1;
 	pitch = 1;

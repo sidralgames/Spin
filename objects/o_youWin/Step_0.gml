@@ -72,7 +72,7 @@ if (alarm[0] <= 0)
 				{
 					instance_destroy(o_bg);
 					instance_create_layer(global.mainMenuX,global.mainMenuY,"Menu", o_MainMenu);
-					ResetGame(false);
+					ResetGame(false, false);
 					instance_destroy(o_bossWinner);
 					instance_destroy();
 					

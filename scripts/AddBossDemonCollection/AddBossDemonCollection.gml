@@ -20,7 +20,7 @@ function AddBossDemonCollection()
 		vinylAlphaBSide: 0.875,
 		vinylColor : global.lightBlue,
 		vinylColorBSide: global.pink2,
-		number: 1,
+		number: global.totalNumberOfVinyls,
 		defeatedInRun: 0,
 		collection: global.bossDemonCollection,
 		unlocked: 0,

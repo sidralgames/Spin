@@ -7,9 +7,9 @@
   },
   "bitDepth":1,
   "bitRate":128,
-  "compression":0,
+  "compression":1,
   "conversionMode":0,
-  "duration":7.157551,
+  "duration":34.285713,
   "name":"snd_upgradesLoop",
   "parent":{
     "name":"SPIN",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_upgradesLoop.mp3",
+  "soundFile":"snd_upgradesLoop.wav",
   "type":0,
   "volume":1.0,
 }

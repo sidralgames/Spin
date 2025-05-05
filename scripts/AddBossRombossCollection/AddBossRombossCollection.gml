@@ -20,7 +20,7 @@ function AddBossRombossCollection()
 		vinylAlphaBSide: 0.75,
 		vinylColor : global.blue,
 		vinylColorBSide: global.lightBlue,
-		number: 8,
+		number: global.totalNumberOfVinyls,
 		defeatedInRun: 0,
 		collection: global.bossRombossCollection,
 		unlocked: 0,

@@ -88,40 +88,38 @@ if (_hp <= 0)
 	
 	global.level+=1;
 	
-	if (global.level > global.totalNumberOfVinyls) && (global.endlessMode = false)
+	if (global.actualRun = true) && (global.level > global.totalNumberOfVinyls) && (global.endlessMode = false)
 	{
-		if (global.actualRun = true)
-		{
-			instance_create_layer(x, y, "Menu", o_youWin)
+
+		instance_create_layer(x, y, "Menu", o_youWin)
 		
-			global.wins +=1;
-			global.haveWon = true;
+		global.wins +=1;
+		global.haveWon = true;
 			
-			bossIsInCollection = 1;
-			
-			for (var i=0; i<global.totalNumberOfVinyls; i++)
-			{	
-				thisBoss = ds_map_find_value(global.collectionList, i);
-				if (thisBoss.sprite = spriteBoss)
-				{
-					thisBoss.unlocked = bossIsInCollection;
-				}
+		bossIsInCollection = 1;
+		
+		for (var i=0; i<global.totalNumberOfVinyls; i++)
+		{	
+			thisBoss = ds_map_find_value(global.collectionList, i);
+			if (thisBoss.sprite = spriteBoss)
+			{
+				thisBoss.unlocked = bossIsInCollection;
 			}
-	
-			SaveGame();
-			
-			//---- CHECK ACHIEVEMENTS ---//
-			CheckRunWithoutFalling();
-			CheckFullBSidesRun();
-			CheckReallyHard();
-			
-			instance_destroy();
-			instance_destroy(o_vinilo);
-			instance_destroy(oViniloFake);
-			global.vinylColor = c_white;
-			instance_create_layer(x,y,"Boss", o_bossWinner);
-			instance_create_layer(x,y,"Vinyl", o_vinilo)
 		}
+	
+		SaveGame();
+			
+		//---- CHECK ACHIEVEMENTS ---//
+		CheckRunWithoutFalling();
+		CheckFullBSidesRun();
+		CheckReallyHard();
+		
+		instance_destroy();
+		instance_destroy(o_vinilo);
+		instance_destroy(oViniloFake);
+		global.vinylColor = c_white;
+		instance_create_layer(x,y,"Boss", o_bossWinner);
+		instance_create_layer(x,y,"Vinyl", o_vinilo)
 	}
 	else
 	{

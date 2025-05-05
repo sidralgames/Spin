@@ -12,6 +12,7 @@ function AddCollectionList()
 	AddBossRataCollection();
 	AddBossMixtapeCollection();
 	AddBossUpgradesCollection();
+	AddBossSonicaCollection();
 	
 	//----- EL GANCHO DLC ----//
 	AddBossBigEyeCollection();

@@ -20,7 +20,7 @@ function AddBossBigEyeCollection()
 		vinylAlphaBSide: 0.75,
 		vinylColor: global.lightPink,
 		vinylColorBSide: global.lightBlue,
-		number: 7,
+		number: global.totalNumberOfVinyls,
 		defeatedInRun: 0,
 		collection: global.bossBigEyeCollection,
 		unlocked: 0,

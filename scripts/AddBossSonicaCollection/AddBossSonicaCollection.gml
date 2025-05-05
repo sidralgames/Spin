@@ -1,0 +1,52 @@
+// Los recursos de Script han cambiado para la v2.3.0 Consulta
+// https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
+function AddBossSonicaCollection()
+{
+	ds_map_add(global.collectionList, global.totalNumberOfVinyls,
+	{ 
+		alias: "bossSonica",
+		song: snd_mixtape,
+		songBSide: snd_obsession,
+		offsetSong: 80,
+		offsetSongBSide: 0,
+		keyKilledBy :"killedBySonica",
+		sprite: s_bossSonica,
+		haveBSide: true,
+		spriteMain: s_bossSonica,
+		spriteBSide: s_bossSonica,
+		spriteVinyl: s_discoVinilo,
+		hpMax: 450,
+		vinylAlpha : 0.85,
+		vinylAlphaBSide: 0.85,
+		vinylColor : global.brightRed,
+		vinylColorBSide: global.orange,
+		number: global.totalNumberOfVinyls,
+		defeatedInRun: 0,
+		collection: global.bossSonicaCollection,
+		unlocked: 0,
+		step: BossSonicaStep,
+		tintCol: global.brightArray,
+		noiseTintCol: global.darkPaletteArray,
+		tintColBSide: global.darkPaletteArray,
+		noiseTintColBSide: global.gbc2Array,
+		wallSprite: s_wallSonica,
+		wallSpriteBSide: s_wallSonica,
+		isDLC: false,
+		spriteDLCTitle: s_elGancho_title,
+		songName: "M.T.D.E",
+		songNameBSide: "Really-Here (b-side)",
+		albumName: "SPYYN OST",
+		artistName: "ESE UVE",
+		killsName: "bossSonicaKills",
+		deathsName: "bossSonicaDeaths",
+		killsNameBSide: "bossSonicaKillsBSide",
+		deathsNameBSide: "bossSonicaDeathsBSide",
+		kills: 0,
+		deaths: 0,
+		killsBSide: 0,
+		deathsBSide: 0,
+		minKillsBSide: 8,
+	})
+
+	global.totalNumberOfVinyls +=1;
+}

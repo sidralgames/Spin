@@ -150,7 +150,7 @@ if (global.collection)
 	}
 	
 	//--- MORE STATS ---//
-	if ( (key_downP) || (key_upP) ) && (_moreStats = false) && (contStats <= 0)
+	if ( (key_upP) ) && (_moreStats = false) && (contStats <= 0)
 	{
 		_moreStats = true;
 		yStat = 360;
@@ -162,7 +162,7 @@ if (global.collection)
 		contStats --;
 	}
 	
-	if  ( (key_downP) || (key_upP) ) && (_moreStats) && (contStats <= 0)
+	if  ( (key_downP) ) && (_moreStats) && (contStats <= 0)
 	{
 		yStat = 160;
 		_moreStats = false;

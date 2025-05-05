@@ -20,7 +20,7 @@ function AddBossMixtapeCollection()
 		vinylAlphaBSide: 0.85,
 		vinylColor : global.lightPink,
 		vinylColorBSide: global.orange,
-		number: 5,
+		number: global.totalNumberOfVinyls,
 		defeatedInRun: 0,
 		collection: global.bossMixtapeCollection,
 		unlocked: 0,

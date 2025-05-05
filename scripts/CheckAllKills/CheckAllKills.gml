@@ -59,7 +59,7 @@ function CheckAllKills()
 	
 	if (achievementCheck.alias = "GoodStreak")
 	{
-		if (global.runConsecutiveTracksDefeated >= 7)
+		if (global.runConsecutiveTracksDefeated >= 6)
 		{
 			achievementCheck.unlocked = 1;
 		}

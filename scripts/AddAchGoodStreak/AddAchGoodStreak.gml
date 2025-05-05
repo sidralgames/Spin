@@ -7,9 +7,9 @@ function AddAchGoodStreak()
 		alias: "GoodStreak",
 		achievement: "Good Streak",
 		unlocked: 0,
-		descPlaceholder: "Defeat 7 consecutive Tracks\nwithout falling or losing a cable",
-		descPlaceholder: "Defeat 7 consecutive Tracks\nwithout falling or losing a cable",
-		descUnlocked: "Defeat 7 consecutive Tracks\nwithout falling or losing a cable",
+		descPlaceholder: "Defeat 6 consecutive Tracks\nwithout falling or losing a cable",
+		descPlaceholder: "Defeat 6 consecutive Tracks\nwithout falling or losing a cable",
+		descUnlocked: "Defeat 6 consecutive Tracks\nwithout falling or losing a cable",
 		haveAltDesc: true, 
 		haveAltAch: false
 		

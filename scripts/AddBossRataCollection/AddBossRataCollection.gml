@@ -20,7 +20,7 @@ function AddBossRataCollection()
 		vinylAlphaBSide: 0.85,
 		vinylColor : global.greenRat,
 		vinylColorBSide: global.lightBlue,
-		number: 4,
+		number: global.totalNumberOfVinyls,
 		defeatedInRun: 0,
 		collection: global.bossRataCollection,
 		unlocked: 0,

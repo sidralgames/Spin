@@ -66,7 +66,9 @@ if (alarm[0] <= 0)
 				{
 					with (obj_CRT_controller)
 					{
+						
 						//var_use_border = !var_use_border;
+						
 						var_use_radial_distortion = !var_use_radial_distortion;
 						var_use_scanlines = !var_use_scanlines;
 						var_use_RGB_separation = !var_use_RGB_separation;

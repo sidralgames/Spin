@@ -20,7 +20,7 @@ function AddBossOblongCollection()
 		vinylAlphaBSide: 0.75,
 		vinylColor : global.orange,
 		vinylColorBSide: global.lightBlue,
-		number: 9,
+		number: global.totalNumberOfVinyls,
 		defeatedInRun: 0,
 		collection: global.bossBigEyeCollection,
 		unlocked: 0,

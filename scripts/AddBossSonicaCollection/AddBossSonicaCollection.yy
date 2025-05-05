@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"AddBossSonicaCollection",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"AddBossSonicaCollection",
+  "parent":{
+    "name":"AddBoss",
+    "path":"folders/Scripts/AddBoss.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -20,7 +20,7 @@ function AddBossUpgradesCollection()
 		vinylAlphaBSide: 0.85,
 		vinylColor : global.lightPink,
 		vinylColorBSide: global.pink,
-		number: 6,
+		number: global.totalNumberOfVinyls,
 		defeatedInRun: 0,
 		collection: global.bossUpgradesCollection,
 		unlocked: -4,

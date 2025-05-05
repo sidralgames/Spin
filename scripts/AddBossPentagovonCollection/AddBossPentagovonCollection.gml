@@ -20,7 +20,7 @@ function AddBossPentagovonCollection()
 		vinylAlphaBSide: 0.75,
 		vinylColor : global.brightRed,
 		vinylColorBSide: global.lightBlue,
-		number: 10,
+		number: global.totalNumberOfVinyls,
 		defeatedInRun: 0,
 		collection: global.bossPentagovonCollection,
 		unlocked: 0,
