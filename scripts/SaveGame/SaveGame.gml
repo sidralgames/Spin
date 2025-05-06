@@ -5,6 +5,17 @@ function SaveGame()
 	achUnlock = 0;
 	ini_open("SpinData.ini");
 	
+	
+	if (global.CRTIsOn = false)
+	{
+		ini_write_real("globals","CRTShader", 0);
+	}
+	else
+	{
+		ini_write_real("globals","CRTShader", 1);
+	}
+	
+	
 	//-------- BOSS COLLECTION --------//
 	for (var i=0; i<global.totalNumberOfVinyls; i++)
 	{	

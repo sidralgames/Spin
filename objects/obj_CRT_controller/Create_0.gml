@@ -1,5 +1,10 @@
+
+
+
 draw_set_color(c_white);
-global.CRTIsOn = true;
+
+
+
 //show_debug_overlay(true);
 
 ///MUST!!! disable automatic drawing of the application surface.
@@ -64,3 +69,15 @@ crt_gui_bezel_enabled = false;
 
 ///Setup the CRT shaders variables and shader uniforms
 scr_CRT_init_shader(view_camera[0], true, 0.00, true, false, true, 0.03, 80.0, 1.1, false, 0.175);
+
+if (global.CRTShader = 0)
+{
+	global.CRTIsOn = false;
+	var_use_radial_distortion = false;
+	var_use_scanlines = false;
+	var_use_RGB_separation = true;
+}
+else
+{
+	global.CRTIsOn = true;
+}

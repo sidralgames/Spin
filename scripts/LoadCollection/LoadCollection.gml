@@ -4,6 +4,7 @@ function LoadCollection()
 {
 	ini_open("SpinData.ini");
 	
+	global.CRTShader = ini_read_real("globals", "CRTShader", 1);
 	
 	global.maxLevelReached = ini_read_real("stats", "maxLevel", 0);
 	
