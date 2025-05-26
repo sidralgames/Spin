@@ -45,7 +45,7 @@ function AddBossDemonCollection()
 		deaths: 0,
 		killsBSide: 0,
 		deathsBSide: 0,
-		minKillsBSide: 4,
+		minKillsBSide: 2,
 	})
 
 	global.totalNumberOfVinyls +=1;

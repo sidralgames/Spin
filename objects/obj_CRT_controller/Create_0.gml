@@ -75,7 +75,7 @@ if (global.CRTShader = 0)
 	global.CRTIsOn = false;
 	var_use_radial_distortion = false;
 	var_use_scanlines = false;
-	var_use_RGB_separation = true;
+	var_use_RGB_separation = false;
 }
 else
 {

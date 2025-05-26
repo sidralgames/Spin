@@ -4,7 +4,7 @@ if (damageSet = false)
 {
 	bulletDamage = (baseDamage + global.superShot) * global.damageAuxUpgrade;
 	
-	if (bulletDamage > 50)
+	if (bulletDamage > 75)
 	{
 		canUnlockAch = true;
 	}

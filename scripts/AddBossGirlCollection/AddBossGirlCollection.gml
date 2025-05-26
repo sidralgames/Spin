@@ -45,7 +45,7 @@ function AddBossGirlCollection()
 		deaths: 0,
 		killsBSide: 0,
 		deathsBSide: 0,
-		minKillsBSide: 7,
+		minKillsBSide: 4,
 	})
 
 	global.totalNumberOfVinyls +=1;

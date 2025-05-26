@@ -57,7 +57,7 @@ function Die()
 				o_main.lastY = lastTouchedY;
 				if (global.playing)
 				{
-					if (global.haloUpgrade = true) && (global.lives = 1)
+					if (global.haloUpgrade = true) && (global.lives <= 1)
 					{
 						global.haloUpgrade = false;
 					}
@@ -99,7 +99,7 @@ function Die()
 		
 		if (global.playing)
 		{
-			if (global.haloUpgrade = true) && (global.lives = 1)
+			if (global.haloUpgrade = true) && (global.lives <= 1)
 			{
 				global.haloUpgrade = false;
 			}

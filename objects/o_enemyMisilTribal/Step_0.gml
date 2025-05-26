@@ -56,36 +56,37 @@ image_yscale = scale;
 _hpTime --;
 
 
-
-if (_hp <= 0) || (_hpTime <= 0)
+if instance_exists(o_boss)
 {
-	screenShake(1,10,1);
-	gamepad_set_vibration(0,0.2,0.2);
-	if (killedByPlayer)
+	if (_hp <= 0) || (_hpTime <= 0)
 	{
-		global.bombsDestroyed +=1;
+		screenShake(1,10,1);
+		gamepad_set_vibration(0,0.2,0.2);
+		if (killedByPlayer)
+		{
+			global.bombsDestroyed +=1;
+		}
+		instance_destroy();
 	}
-	instance_destroy();
-}
-else
-{
-	switch(o_boss.spriteBoss)
+	else
 	{
-		case s_bossTribal:
+		switch(o_boss.spriteBoss)
 		{
-			part_particles_create(global.misilTribalPart_sys, x, y, global.misilTribalPart , 1)
-		}
-		break;
-		case s_bossTribal_B:
-		{
-			part_particles_create(global.misilTribalPart_B_sys, x, y, global.misilTribalPart_B , 1)
-		}
-		break;
+			case s_bossTribal:
+			{
+				part_particles_create(global.misilTribalPart_sys, x, y, global.misilTribalPart , 1)
+			}
+			break;
+			case s_bossTribal_B:
+			{
+				part_particles_create(global.misilTribalPart_B_sys, x, y, global.misilTribalPart_B , 1)
+			}
+			break;
 		
+		}
+		//part_particles_create(global.misilYellowPart_sys, x + lengthdir_x(9, direction - 200), y + lengthdir_y(9, direction - 200), global.misilYellowPart , 1)
 	}
-	//part_particles_create(global.misilYellowPart_sys, x + lengthdir_x(9, direction - 200), y + lengthdir_y(9, direction - 200), global.misilYellowPart , 1)
 }
-
 
 if instance_exists(o_player)
 {

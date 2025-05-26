@@ -127,6 +127,32 @@ if (alarm[0] <= 0)
 				}break;
 			}
 		}
+		
+		if (key_buttonL)
+		{
+			o_main.contentLoaded = !o_main.contentLoaded;
+			if (o_main.contentLoaded = false)
+			{
+				
+				LoadAllLocked();
+				LoadCollection();
+				
+				AddAchievementsList();
+				
+				LoadAllLocked();
+				LoadAchievements();
+			}
+			else
+			{
+				LoadAllUnlocked();
+				LoadCollection();
+				
+				AddAchievementsList();
+				
+				LoadAllUnlocked();
+				LoadAchievements();				
+			}
+		}
 	}
 }
 

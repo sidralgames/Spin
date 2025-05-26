@@ -45,7 +45,7 @@ function AddBossUpgradesCollection()
 		deaths: 0,
 		killsBSide: 0,
 		deathsBSide: 0,
-		minKillsBSide: 10,
+		minKillsBSide: 6,
 	})
 
 	global.totalNumberOfVinyls +=1;

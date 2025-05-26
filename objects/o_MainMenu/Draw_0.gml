@@ -231,4 +231,20 @@ if instance_exists(o_HowToPlay)
 
 }
 
+draw_set_alpha(1);
+
+if (_visible)
+{
+	if (o_main.contentLoaded)
+	{
+		draw_sprite_ext(s_square,0, __view_get( e__VW.XView, 0 )+ 22,__view_get( e__VW.YView, 0 )+340, 1,1,0, image_blend, image_alpha )
+		DrawTextTriColor(global.customFont13, fa_left, 30, 325, global.lightBlue, global.yellow, global.pink, 3, 1, " Delete Data")
+	}
+	else
+	{
+		draw_sprite_ext(s_square,0, __view_get( e__VW.XView, 0 )+ 22,__view_get( e__VW.YView, 0 )+340, 1,1,0, image_blend, image_alpha )
+		DrawTextTriColor(global.customFont13, fa_left, 30, 325, global.lightBlue, global.yellow, global.pink, 3, 1, " Unlock All Tracks")
+	}
+}
+
 draw_set_alpha(1)

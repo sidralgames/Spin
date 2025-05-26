@@ -45,7 +45,7 @@ function AddBossMixtapeCollection()
 		deaths: 0,
 		killsBSide: 0,
 		deathsBSide: 0,
-		minKillsBSide: 8,
+		minKillsBSide: 5,
 	})
 
 	global.totalNumberOfVinyls +=1;

@@ -33,7 +33,7 @@ function PlayerShoot()
 						recoilGun = 15;
 						direction = aimDir - 180;
 						speed = 0.5;
-						screenShake(1,5,1);
+						screenShake(1,5,0);
 						global.vibration+=0.01;
 			
 						if (global.energy < 10)
@@ -70,7 +70,7 @@ function PlayerShoot()
 						recoilGun = 15;
 						direction = aimDir - 180;
 						speed = 0.5;
-						screenShake(1,5,1);
+						screenShake(1,5,0);
 						global.vibration+=0.01;
 			
 						if (global.energy < 10)
@@ -116,7 +116,7 @@ function PlayerShoot()
 						recoilGun = 15;
 						direction = aimDir - 180;
 						speed = 0.5;
-						screenShake(1,5,1);
+						screenShake(1,5,0);
 					
 						global.vibration+=0.02;
 			
@@ -159,7 +159,7 @@ function PlayerShoot()
 						recoilGun = 15;
 						direction = aimDir - 180;
 						speed = 0.5;
-						screenShake(1,5,1);
+						screenShake(1,5,0);
 					
 						global.vibration+=0.02;
 			

@@ -59,13 +59,14 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.11.0.179",
+    "IDEVersion":"2024.8.0.169",
   },
   "name":"SPIN",
   "resources":[
     {"id":{"name":"Virtual_Joysticks","path":"extensions/Virtual_Joysticks/Virtual_Joysticks.yy",},},
     {"id":{"name":"compatibility_report_120225_220438438","path":"notes/compatibility_report_120225_220438438/compatibility_report_120225_220438438.yy",},},
     {"id":{"name":"BombsFather","path":"objects/BombsFather/BombsFather.yy",},},
+    {"id":{"name":"BulletColFather","path":"objects/BulletColFather/BulletColFather.yy",},},
     {"id":{"name":"BulletFather","path":"objects/BulletFather/BulletFather.yy",},},
     {"id":{"name":"o_AchievementsMenu","path":"objects/o_AchievementsMenu/o_AchievementsMenu.yy",},},
     {"id":{"name":"o_aguja","path":"objects/o_aguja/o_aguja.yy",},},
@@ -613,6 +614,7 @@
     {"id":{"name":"s_settings","path":"sprites/s_settings/s_settings.yy",},},
     {"id":{"name":"s_shield","path":"sprites/s_shield/s_shield.yy",},},
     {"id":{"name":"s_shotgun","path":"sprites/s_shotgun/s_shotgun.yy",},},
+    {"id":{"name":"s_square","path":"sprites/s_square/s_square.yy",},},
     {"id":{"name":"s_tempo","path":"sprites/s_tempo/s_tempo.yy",},},
     {"id":{"name":"s_tempoMeter","path":"sprites/s_tempoMeter/s_tempoMeter.yy",},},
     {"id":{"name":"s_tempoMeterSlow","path":"sprites/s_tempoMeterSlow/s_tempoMeterSlow.yy",},},

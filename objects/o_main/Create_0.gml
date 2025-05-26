@@ -119,7 +119,7 @@ global.wallSprite = s_wallNacho;
 
 //----- OPTIONS ----//
 global.standardAngleShake = 0.5;
-global.screenshakeIsOn = true;
+
 global.vibration=0;
 global.endlessMode = false;
 
@@ -251,6 +251,8 @@ load = false;
 achUnlock = 0;
 if (load = false)
 {
+	
+	
 	//LoadAllUnlocked();
 	//LoadAllLocked();
 	LoadCollection();
@@ -264,10 +266,12 @@ if (load = false)
 	
 	if (global.maxLevelReached > 1)
 	{
+		contentLoaded = true;
 		global.level = irandom_range(1, global.maxLevelReached)	
 	}
 	else
 	{
+		contentLoaded = false;
 		global.level = 1;
 	}
 	

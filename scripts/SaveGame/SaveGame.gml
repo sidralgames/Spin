@@ -15,6 +15,15 @@ function SaveGame()
 		ini_write_real("globals","CRTShader", 1);
 	}
 	
+	if (global.screenshakeIsOn = false)
+	{
+		ini_write_real("globals","screenShake", 0);
+	}
+	else
+	{
+		ini_write_real("globals","screenShake", 1);
+	}
+	
 	
 	//-------- BOSS COLLECTION --------//
 	for (var i=0; i<global.totalNumberOfVinyls; i++)

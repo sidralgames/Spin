@@ -6,6 +6,16 @@ function LoadCollection()
 	
 	global.CRTShader = ini_read_real("globals", "CRTShader", 1);
 	
+	global.screenShake = ini_read_real("globals", "screenShake", 1);
+	if (global.screenShake = 1)
+	{
+		global.screenshakeIsOn = true;
+	}
+	else
+	{
+		global.screenshakeIsOn = false;
+	}
+	
 	global.maxLevelReached = ini_read_real("stats", "maxLevel", 0);
 	
 	global.totalDeaths = 0;
